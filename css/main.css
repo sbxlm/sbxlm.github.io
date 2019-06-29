@@ -943,6 +943,12 @@ pre .javascript .function {
 .post-body .tabs .tab-content .tab-pane.active {
   display: block;
 }
+.pdfobject-container {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 500px;
+}
 .btn {
   display: inline-block;
   padding: 0 20px;
@@ -1765,7 +1771,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #34c7ff;
+  background: #228820;
 }
 .feed-link,
 .chat {
@@ -2122,6 +2128,10 @@ pre .javascript .function {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #ccc;
+}
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -2878,13 +2888,14 @@ ul.breadcrumb li+li:last-child {
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px solid #eee;
 }
 .post-body h3 code {
   font-size: 1em;
 }
 .post-body h4 {
   font-size: 1.2em;
+  border-bottom: 1px dotted #eee;
 }
 .post-body h4 code {
   font-size: 1em;

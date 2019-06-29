@@ -28,6 +28,9 @@
 
 
 
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
 
 
 
@@ -96,14 +99,17 @@
 
 
 
-  <meta name="keywords" content="输入法, 顶屏, 顶功">
+  <meta name="description" content="以声母和笔画及其特有表示方式为基础的一系列输入法，包括声笔码、声笔捷码、声笔飞码、声笔快码、声笔拼音和声笔双拼等，运用了连续顶屏、自动码长、自动造词、字母选重等创新性的技术。">
+<meta name="keywords" content="输入法, 顶屏, 顶功">
 <meta property="og:type" content="website">
 <meta property="og:title" content="声笔系列">
 <meta property="og:url" content="http://sbxlm.github.io/index.html">
 <meta property="og:site_name" content="声笔系列">
+<meta property="og:description" content="以声母和笔画及其特有表示方式为基础的一系列输入法，包括声笔码、声笔捷码、声笔飞码、声笔快码、声笔拼音和声笔双拼等，运用了连续顶屏、自动码长、自动造词、字母选重等创新性的技术。">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔系列">
+<meta name="twitter:description" content="以声母和笔画及其特有表示方式为基础的一系列输入法，包括声笔码、声笔捷码、声笔飞码、声笔快码、声笔拼音和声笔双拼等，运用了连续顶屏、自动码长、自动造词、字母选重等创新性的技术。">
 
 
 
@@ -121,7 +127,7 @@
   };
 </script>
 
-  <title>声笔系列</title>
+  <title>声笔系列 – 顶屏先锋</title>
   
 
 
@@ -187,7 +193,7 @@
     </div>
     
       
-        <p class="site-subtitle">顶屏先锋</p>
+        <h1 class="site-subtitle" itemprop="description">顶屏先锋</h1>
       
     
     
@@ -295,7 +301,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="戴石麟">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="以声母和笔画及其特有表示方式为基础的一系列输入法，包括声笔码、声笔捷码、声笔飞码、声笔快码、声笔拼音和声笔双拼等，运用了连续顶屏、自动码长、自动造词、字母选重等创新性的技术。">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -308,13 +314,13 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
                 
                 <a href="/2019/06/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -459,7 +465,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">戴石麟</p>
-              <div class="site-description motion-element" itemprop="description"></div>
+              <div class="site-description motion-element" itemprop="description">以声母和笔画及其特有表示方式为基础的一系列输入法，包括声笔码、声笔捷码、声笔飞码、声笔快码、声笔拼音和声笔双拼等，运用了连续顶屏、自动码长、自动造词、字母选重等创新性的技术。</div>
           </div>
 
           
@@ -485,6 +491,32 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/sbxlm" title="GitHub &rarr; https://github.com/sbxlm" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:sbxlm@qq.com" title="E-Mail &rarr; mailto:sbxlm@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
           
 
           
@@ -658,8 +690,45 @@
   
 
   
+  
 
   
+  
+    
+      
+    
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
 
   
 
