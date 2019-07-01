@@ -438,6 +438,93 @@ th {
 td {
   border-bottom-width: 1px;
 }
+@media (max-width: 567px) {
+  .header-inner {
+    margin-bottom: initial !important;
+  }
+  .main-inner {
+    margin-top: initial !important;
+  }
+  .content-wrap {
+    padding: initial !important;
+  }
+  .posts-expand {
+    padding-top: 8px !important;
+    margin: initial !important;
+  }
+  .posts-expand .post-header {
+    padding: 0 18px;
+  }
+  .posts-expand .post-meta {
+    margin: 3px 0 10px 0 !important;
+  }
+  .post-block {
+    padding: 8px 0 !important;
+    margin-top: initial !important;
+  }
+  .post-body h1,
+  .post-body h2,
+  .post-body h3,
+  .post-body h4,
+  .post-body h5,
+  .post-body h6 {
+    margin: 10px 18px 8px;
+  }
+  .post-body .note h1,
+  .post-body .tabs .tab-content .tab-pane h1,
+  .post-body .note h2,
+  .post-body .tabs .tab-content .tab-pane h2,
+  .post-body .note h3,
+  .post-body .tabs .tab-content .tab-pane h3,
+  .post-body .note h4,
+  .post-body .tabs .tab-content .tab-pane h4,
+  .post-body .note h5,
+  .post-body .tabs .tab-content .tab-pane h5,
+  .post-body .note h6,
+  .post-body .tabs .tab-content .tab-pane h6 {
+    margin: 0 5px;
+  }
+  .post-body > p {
+    margin: 0 0 10px 0;
+    padding: 0 18px;
+  }
+  .post-body > ul {
+    margin-inline-end: 1em;
+  }
+  .post-body > blockquote {
+    margin: 0 18px;
+  }
+  .post-body > span.exturl {
+    margin-left: 18px;
+  }
+  .post-body > div.post-button a {
+    margin-left: 18px;
+  }
+  .post-body .note > p,
+  .post-body .tabs .tab-content .tab-pane > p {
+    padding: 0 5px;
+  }
+  .post-body .video-container .fluid-vids {
+    margin-bottom: 10px !important;
+  }
+  .post-body .note {
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .post-body .note:not(.no-icon) {
+    padding-left: 35px !important;
+  }
+  .post-body .note:not(.no-icon):before {
+    top: 8px !important;
+    left: 12px !important;
+  }
+  .post-body .tabs .tab-content .tab-pane {
+    padding: 10px 10px 0 10px !important;
+  }
+  .post-nav {
+    padding-bottom: 2px;
+  }
+}
 html,
 body {
   height: 100%;
@@ -754,22 +841,22 @@ pre .javascript .function {
   padding: 0 2px;
 }
 .post-body .label.default {
-  background-color: #f0f0f0;
+  background-color: #ececec;
 }
 .post-body .label.primary {
-  background-color: #efe6f7;
+  background-color: #ebe1f5;
 }
 .post-body .label.info {
-  background-color: #e5f2f8;
+  background-color: #dfeff6;
 }
 .post-body .label.success {
-  background-color: #e7f4e9;
+  background-color: #e2f2e4;
 }
 .post-body .label.warning {
-  background-color: #fcf6e1;
+  background-color: #fcf4dc;
 }
 .post-body .label.danger {
-  background-color: #fae8eb;
+  background-color: #f9e3e6;
 }
 .post-body .note {
   position: relative;
@@ -784,7 +871,7 @@ pre .javascript .function {
 .post-body .note h4,
 .post-body .note h5,
 .post-body .note h6 {
-  margin-top: 0;
+  margin-top: 3px;
   margin-bottom: 0;
   border-bottom: initial;
   padding-top: 0 !important;
@@ -805,6 +892,16 @@ pre .javascript .function {
 .post-body .note blockquote:last-child {
   margin-bottom: 0;
 }
+.post-body .note:not(.no-icon) {
+  padding-left: 45px;
+}
+.post-body .note:not(.no-icon):before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  font-size: larger;
+  top: 13px;
+  left: 15px;
+}
 .post-body .note.default {
   border-left-color: #777;
 }
@@ -813,6 +910,10 @@ pre .javascript .function {
 .post-body .note.default h4,
 .post-body .note.default h5,
 .post-body .note.default h6 {
+  color: #777;
+}
+.post-body .note.default:not(.no-icon):before {
+  content: "\f0a9";
   color: #777;
 }
 .post-body .note.primary {
@@ -825,6 +926,10 @@ pre .javascript .function {
 .post-body .note.primary h6 {
   color: #6f42c1;
 }
+.post-body .note.primary:not(.no-icon):before {
+  content: "\f055";
+  color: #6f42c1;
+}
 .post-body .note.info {
   border-left-color: #428bca;
 }
@@ -833,6 +938,10 @@ pre .javascript .function {
 .post-body .note.info h4,
 .post-body .note.info h5,
 .post-body .note.info h6 {
+  color: #428bca;
+}
+.post-body .note.info:not(.no-icon):before {
+  content: "\f05a";
   color: #428bca;
 }
 .post-body .note.success {
@@ -845,6 +954,10 @@ pre .javascript .function {
 .post-body .note.success h6 {
   color: #5cb85c;
 }
+.post-body .note.success:not(.no-icon):before {
+  content: "\f058";
+  color: #5cb85c;
+}
 .post-body .note.warning {
   border-left-color: #f0ad4e;
 }
@@ -855,6 +968,10 @@ pre .javascript .function {
 .post-body .note.warning h6 {
   color: #f0ad4e;
 }
+.post-body .note.warning:not(.no-icon):before {
+  content: "\f06a";
+  color: #f0ad4e;
+}
 .post-body .note.danger {
   border-left-color: #d9534f;
 }
@@ -863,6 +980,10 @@ pre .javascript .function {
 .post-body .note.danger h4,
 .post-body .note.danger h5,
 .post-body .note.danger h6 {
+  color: #d9534f;
+}
+.post-body .note.danger:not(.no-icon):before {
+  content: "\f056";
   color: #d9534f;
 }
 .post-body .tabs {
@@ -889,6 +1010,9 @@ pre .javascript .function {
   border-top: 3px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab {
@@ -1063,32 +1187,27 @@ pre .javascript .function {
   margin: 60px 20px 0;
 }
 .back-to-top {
-  box-sizing: border-box;
-  position: fixed;
-  bottom: -100px;
-  right: 30px;
-  z-index: 1050;
-  padding: 0 6px;
-  width: 24px;
-  background: #222;
+  visibility: hidden;
+  margin: 8px -10px -20px;
+  background: #eee;
   font-size: 12px;
   opacity: 0.6;
-  color: #fff;
   cursor: pointer;
   text-align: center;
-  transition-property: bottom;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
-.back-to-top.back-to-top-on {
-  bottom: 30px;
+.back-to-top:hover {
+  opacity: 0.8;
 }
 @media (max-width: 991px) {
   .back-to-top {
-    opacity: 0.8;
-    right: 20px;
+    display: none;
   }
+}
+.back-to-top.back-to-top-on {
+  visibility: visible;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 .header {
   background: transparent;
@@ -1859,7 +1978,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7effd4;
+  background: #963dff;
 }
 .feed-link,
 .chat {
@@ -2044,6 +2163,9 @@ pre .javascript .function {
 }
 .footer-inner {
   text-align: center;
+}
+#animate {
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .with-love {
   display: inline-block;
