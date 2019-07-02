@@ -1876,41 +1876,6 @@ pre .javascript .function {
 #qr p {
   text-align: center;
 }
-#qr > div:hover p {
-  animation: roll 0.1s infinite linear;
-}
-@-moz-keyframes roll {
-  from {
-    transform: rotateZ(30deg);
-  }
-  to {
-    transform: rotateZ(-30deg);
-  }
-}
-@-webkit-keyframes roll {
-  from {
-    transform: rotateZ(30deg);
-  }
-  to {
-    transform: rotateZ(-30deg);
-  }
-}
-@-o-keyframes roll {
-  from {
-    transform: rotateZ(30deg);
-  }
-  to {
-    transform: rotateZ(-30deg);
-  }
-}
-@keyframes roll {
-  from {
-    transform: rotateZ(30deg);
-  }
-  to {
-    transform: rotateZ(-30deg);
-  }
-}
 .post-widgets {
   border-top: 1px solid #eee;
   padding-top: 9px;
@@ -2103,7 +2068,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1339b1;
+  background: #f2cb65;
 }
 .feed-link,
 .chat {
