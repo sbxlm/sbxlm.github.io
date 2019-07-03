@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[使用Hexo建立Sbxlm网站]]></title>
     <url>%2F2019%2F07%2F03%2Ftest%2F</url>
-    <content type="text"><![CDATA[使用Hexo建立Sbxlm网站安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-site$ cd sbxlm-site$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-site的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
+    <content type="text"><![CDATA[安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-site$ cd sbxlm-site$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-site的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
   </entry>
   <entry>
     <title><![CDATA[我说Hello World好吗？]]></title>
