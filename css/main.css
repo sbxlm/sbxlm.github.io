@@ -585,8 +585,8 @@ pre,
   margin: 20px 0;
   padding: 0;
   font-size: 14px;
-  color: #4d4d4c;
-  background: #f7f7f7;
+  color: #ccc;
+  background: #2d2d2d;
   line-height: 1.6;
 }
 pre,
@@ -607,7 +607,7 @@ pre {
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  color: #ccc;
   background: none;
   text-shadow: none;
 }
@@ -630,7 +630,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #4d4d4c;
+  color: #ccc;
   line-height: 1em;
   margin-bottom: 1em;
   margin: 0em;
@@ -648,23 +648,23 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #4d4d4c;
+  color: #ccc;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+  border-bottom-color: #ccc;
 }
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #869194;
+  color: #999;
   text-align: right;
-  background-color: #eff2f3;
+  background-color: #1b1b1b;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #f7f7f7;
+  background-color: #2d2d2d;
 }
 .highlight .line {
   height: 20px;
@@ -682,16 +682,16 @@ pre code {
   border: none;
 }
 pre .deletion {
-  background: #fdd;
+  background: #800000;
 }
 pre .addition {
-  background: #dfd;
+  background: #008000;
 }
 pre .meta {
-  color: #8959a8;
+  color: #c9c;
 }
 pre .comment {
-  color: #8e908c;
+  color: #999;
 }
 pre .variable,
 pre .attribute,
@@ -706,7 +706,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c82829;
+  color: #f2777a;
 }
 pre .number,
 pre .preprocessor,
@@ -716,7 +716,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #f5871f;
+  color: #f99157;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -729,11 +729,11 @@ pre .ruby .symbol,
 pre .xml .cdata,
 pre .special,
 pre .formula {
-  color: #718c00;
+  color: #9c9;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #3e999f;
+  color: #6cc;
 }
 pre .function,
 pre .python .decorator,
@@ -743,11 +743,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #4271ae;
+  color: #69c;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #8959a8;
+  color: #c9c;
 }
 .posts-expand .post-body img.full-image {
   border: none;
@@ -2078,7 +2078,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d0ffaa;
+  background: #59ffc9;
 }
 .feed-link,
 .chat {
@@ -2487,6 +2487,38 @@ ul.popular-posts .popular-posts-item .popular-posts-title {
   font-size: 14px;
   margin: 0;
   line-height: 2.4;
+}
+.copy-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #333;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  user-select: none;
+  outline: 0;
+}
+.highlight-wrap .copy-btn {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  right: 4px;
+  top: 8px;
+}
+.highlight-wrap:hover .copy-btn,
+.highlight-wrap .copy-btn:focus {
+  opacity: 1;
+}
+.highlight-wrap {
+  position: relative;
 }
 .has-jax {
   overflow-x: auto;
