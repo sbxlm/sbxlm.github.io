@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-site$ cd sbxlm-site$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/">
+  <meta name="description" content="Git官方文件在Git官网上，有针对submodules的专门说明，详见Git Submodules。 比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 再如，克隆带子模块的仓库： 123$ git clone https://github.com/chaconinc/MainP">
 <meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo建立Sbxlm网站">
-<meta property="og:url" content="http://sbxlm.github.io/2019/07/03/test/index.html">
+<meta property="og:title" content="关于Git Submodules的一些技巧">
+<meta property="og:url" content="http://sbxlm.github.io/2019/07/05/Git-Submodules/index.html">
 <meta property="og:site_name" content="声笔系列码">
-<meta property="og:description" content="安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-site$ cd sbxlm-site$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/">
+<meta property="og:description" content="Git官方文件在Git官网上，有针对submodules的专门说明，详见Git Submodules。 比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 再如，克隆带子模块的仓库： 123$ git clone https://github.com/chaconinc/MainP">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-03T08:32:16.186Z">
+<meta property="og:updated_time" content="2019-07-05T08:42:45.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Hexo建立Sbxlm网站">
-<meta name="twitter:description" content="安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-site$ cd sbxlm-site$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/">
+<meta name="twitter:title" content="关于Git Submodules的一些技巧">
+<meta name="twitter:description" content="Git官方文件在Git官网上，有针对submodules的专门说明，详见Git Submodules。 比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 再如，克隆带子模块的仓库： 123$ git clone https://github.com/chaconinc/MainP">
 
 
 
@@ -122,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://sbxlm.github.io/2019/07/03/test/">
+  <link rel="canonical" href="http://sbxlm.github.io/2019/07/05/Git-Submodules/">
 
 
 
@@ -132,7 +132,7 @@
   };
 </script>
 
-  <title>使用Hexo建立Sbxlm网站 | 声笔系列码</title>
+  <title>关于Git Submodules的一些技巧 | 声笔系列码</title>
   
 
 
@@ -310,7 +310,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
 
   </li>
 
@@ -400,7 +400,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sbxlm.github.io/2019/07/03/test/">
+    <link itemprop="mainEntityOfPage" href="http://sbxlm.github.io/2019/07/05/Git-Submodules/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="丁人飞">
@@ -417,7 +417,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">使用Hexo建立Sbxlm网站<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/_posts/test.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+          <h2 class="post-title" itemprop="name headline">关于Git Submodules的一些技巧<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/_posts/Git-Submodules.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
 
               
             
@@ -443,7 +443,7 @@
                 
               
 
-              <time title="创建时间：2019-07-03 08:47:57 / 修改时间：16:32:16" itemprop="dateCreated datePublished" datetime="2019-07-03T08:47:57+08:00">2019-07-03</time>
+              <time title="创建时间：2019-07-05 16:21:04 / 修改时间：16:42:45" itemprop="dateCreated datePublished" datetime="2019-07-05T16:21:04+08:00">2019-07-05</time>
             
 
             
@@ -489,13 +489,15 @@
       
 
       
-        <h2 id="安装Nodejs和Git"><a href="#安装Nodejs和Git" class="headerlink" title="安装Nodejs和Git"></a>安装Nodejs和Git</h2><h2 id="安装Hexo-cli"><a href="#安装Hexo-cli" class="headerlink" title="安装Hexo-cli"></a>安装Hexo-cli</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化Sbxlm-site"><a href="#初始化Sbxlm-site" class="headerlink" title="初始化Sbxlm-site"></a>初始化Sbxlm-site</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init sbxlm-site</span><br><span class="line">$ <span class="built_in">cd</span> sbxlm-site</span><br><span class="line">$ git init</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h2 id="添加NexT主题"><a href="#添加NexT主题" class="headerlink" title="添加NexT主题"></a>添加NexT主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<h2 id="切换和修改NexT主题"><a href="#切换和修改NexT主题" class="headerlink" title="切换和修改NexT主题"></a>切换和修改NexT主题</h2><ul>
-<li>修改sbxlm-site的_config.yml文件，将theme从默认的landscape改为next。</li>
-<li>修改NexT的Scheme，从默认的Muse改为Gemini。</li>
-</ul>
+        <h2 id="Git官方文件"><a href="#Git官方文件" class="headerlink" title="Git官方文件"></a>Git官方文件</h2><p>在Git官网上，有针对submodules的专门说明，详见<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a>。</p>
+<p>比如，添加一个子模块DbConnector：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule add https://github.com/chaconinc/DbConnector</span><br></pre></td></tr></table></figure>
+<p>再如，克隆带子模块的仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
+<p>以上三个命令也可以用下面引命令代替：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br></pre></td></tr></table></figure>
+<h2 id="如何删除一个子模块？"><a href="#如何删除一个子模块？" class="headerlink" title="如何删除一个子模块？"></a>如何删除一个子模块？</h2><p>采用以下三个步骤：详见<a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule" target="_blank" rel="noopener">Stack Overflow</a>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule deinit -f -- a/submodule</span><br><span class="line">$ rm -rf .git/modules/a/submodule</span><br><span class="line">$ git rm -f a/submodule</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -575,8 +577,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/01/hello-world/" rel="next" title="我说Hello World好吗？">
-                <i class="fa fa-chevron-left"></i> 我说Hello World好吗？
+              <a href="/2019/07/03/Site-Building/" rel="next" title="使用Hexo建立Sbxlm网站">
+                <i class="fa fa-chevron-left"></i> 使用Hexo建立Sbxlm网站
               </a>
             
           </div>
@@ -658,7 +660,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -726,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Nodejs和Git"><span class="nav-number">1.</span> <span class="nav-text">安装Nodejs和Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo-cli"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Sbxlm-site"><span class="nav-number">3.</span> <span class="nav-text">初始化Sbxlm-site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加NexT主题"><span class="nav-number">4.</span> <span class="nav-text">添加NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换和修改NexT主题"><span class="nav-number">5.</span> <span class="nav-text">切换和修改NexT主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git官方文件"><span class="nav-number">1.</span> <span class="nav-text">Git官方文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何删除一个子模块？"><span class="nav-number">2.</span> <span class="nav-text">如何删除一个子模块？</span></a></li></ol></div>
             
 
           </div>

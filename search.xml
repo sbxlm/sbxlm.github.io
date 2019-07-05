@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Git Submodules的一些技巧]]></title>
+    <url>%2F2019%2F07%2F05%2FGit-Submodules%2F</url>
+    <content type="text"><![CDATA[Git官方文件在Git官网上，有针对submodules的专门说明，详见Git Submodules。 比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 再如，克隆带子模块的仓库： 123$ git clone https://github.com/chaconinc/MainProject$ git submodule init$ git submodule update 以上三个命令也可以用下面引命令代替： 1$ git clone --recursive git clone https://github.com/chaconinc/MainProject 如何删除一个子模块？采用以下三个步骤：详见Stack Overflow。 123$ git submodule deinit -f -- a/submodule$ rm -rf .git/modules/a/submodule$ git rm -f a/submodule]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[使用Hexo建立Sbxlm网站]]></title>
-    <url>%2F2019%2F07%2F03%2Ftest%2F</url>
-    <content type="text"><![CDATA[安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-site$ cd sbxlm-site$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-site的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
+    <url>%2F2019%2F07%2F03%2FSite-Building%2F</url>
+    <content type="text"><![CDATA[安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-hexo的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
   </entry>
   <entry>
     <title><![CDATA[我说Hello World好吗？]]></title>

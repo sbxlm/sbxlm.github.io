@@ -103,14 +103,18 @@
 
 
 
-  <meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功">
-<meta property="og:type" content="website">
-<meta property="og:title" content="声笔系列码">
-<meta property="og:url" content="http://sbxlm.github.io/index.html">
+  <meta name="description" content="安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/">
+<meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo建立Sbxlm网站">
+<meta property="og:url" content="http://sbxlm.github.io/2019/07/03/Site-Building/index.html">
 <meta property="og:site_name" content="声笔系列码">
+<meta property="og:description" content="安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-05T08:44:37.677Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="声笔系列码">
+<meta name="twitter:title" content="使用Hexo建立Sbxlm网站">
+<meta name="twitter:description" content="安装Nodejs和Git安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-site12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题1$ git submodule add https://github.com/theme-next/">
 
 
 
@@ -118,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://sbxlm.github.io/">
+  <link rel="canonical" href="http://sbxlm.github.io/2019/07/03/Site-Building/">
 
 
 
@@ -128,7 +132,7 @@
   };
 </script>
 
-  <title>声笔系列码 – 创领输入法</title>
+  <title>使用Hexo建立Sbxlm网站 | 声笔系列码</title>
   
 
 
@@ -176,8 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -219,7 +222,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -378,9 +381,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -389,156 +392,7 @@
   
 
   
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sbxlm.github.io/2019/07/05/Git-Submodules/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="丁人飞">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="声笔系列码">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/05/Git-Submodules/" class="post-title-link" itemprop="url">关于Git Submodules的一些技巧</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-05 16:21:04 / 修改时间：16:42:45" itemprop="dateCreated datePublished" datetime="2019-07-05T16:21:04+08:00">2019-07-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Git官方文件"><a href="#Git官方文件" class="headerlink" title="Git官方文件"></a>Git官方文件</h2><p>在Git官网上，有针对submodules的专门说明，详见<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a>。</p>
-<p>比如，添加一个子模块DbConnector：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule add https://github.com/chaconinc/DbConnector</span><br></pre></td></tr></table></figure>
-<p>再如，克隆带子模块的仓库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
-<p>以上三个命令也可以用下面引命令代替：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br></pre></td></tr></table></figure>
-<h2 id="如何删除一个子模块？"><a href="#如何删除一个子模块？" class="headerlink" title="如何删除一个子模块？"></a>如何删除一个子模块？</h2><p>采用以下三个步骤：详见<a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule" target="_blank" rel="noopener">Stack Overflow</a>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule deinit -f -- a/submodule</span><br><span class="line">$ rm -rf .git/modules/a/submodule</span><br><span class="line">$ git rm -f a/submodule</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -563,10 +417,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/03/Site-Building/" class="post-title-link" itemprop="url">使用Hexo建立Sbxlm网站</a>
+          <h2 class="post-title" itemprop="name headline">使用Hexo建立Sbxlm网站<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/_posts/Site-Building.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
               
             
           </h2>
@@ -624,6 +476,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -642,9 +501,7 @@
       
 
       
-        
-          
-            <h2 id="安装Nodejs和Git"><a href="#安装Nodejs和Git" class="headerlink" title="安装Nodejs和Git"></a>安装Nodejs和Git</h2><h2 id="安装Hexo-cli"><a href="#安装Hexo-cli" class="headerlink" title="安装Hexo-cli"></a>安装Hexo-cli</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+        <h2 id="安装Nodejs和Git"><a href="#安装Nodejs和Git" class="headerlink" title="安装Nodejs和Git"></a>安装Nodejs和Git</h2><h2 id="安装Hexo-cli"><a href="#安装Hexo-cli" class="headerlink" title="安装Hexo-cli"></a>安装Hexo-cli</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <h2 id="初始化Sbxlm-site"><a href="#初始化Sbxlm-site" class="headerlink" title="初始化Sbxlm-site"></a>初始化Sbxlm-site</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init sbxlm-hexo</span><br><span class="line">$ <span class="built_in">cd</span> sbxlm-hexo</span><br><span class="line">$ git init</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <h2 id="添加NexT主题"><a href="#添加NexT主题" class="headerlink" title="添加NexT主题"></a>添加NexT主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <h2 id="切换和修改NexT主题"><a href="#切换和修改NexT主题" class="headerlink" title="切换和修改NexT主题"></a>切换和修改NexT主题</h2><ul>
@@ -652,12 +509,14 @@
 <li>修改NexT的Scheme，从默认的Muse改为Gemini。</li>
 </ul>
 
-          
-        
       
     </div>
 
     
+      
+
+
+    
 
     
     
@@ -668,6 +527,30 @@
     
       
     
+    
+      <div>
+        <div id="reward-container">
+  <div>软件和文章棒棒哒，我来打赏鼓励一下。</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="丁人飞 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -676,212 +559,53 @@
       
 
       
-
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sbxlm.github.io/2019/07/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="丁人飞">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="声笔系列码">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/01/hello-world/" class="post-title-link" itemprop="url">我说Hello World好吗？</a>
-              
-            
-          </h2>
+        <div class="post-widgets">
         
 
-        <div class="post-meta">
-          <span class="post-time">
+        
 
+        
+          
+          <div class="social_share">
             
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-01 14:45:27" itemprop="dateCreated datePublished" datetime="2019-07-01T14:45:27+08:00">2019-07-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-02 17:46:59" itemprop="dateModified" datetime="2019-07-02T17:46:59+08:00">2019-07-02</time>
-              
-            
-          </span>
-
-          
-
-          
+              </div>
             
             
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
+        
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
-        
-          
-            <p>欢迎Welcome来到to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><video src="https://www.qtransmall.com/static/file/video/qtm.mp4" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
-<h3 id="Mathematic-equations"><a href="#Mathematic-equations" class="headerlink" title="Mathematic equations"></a>Mathematic equations</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;equation&#125;</span><br><span class="line">e=mc^2</span><br><span class="line">\end&#123;equation&#125;\label&#123;eq1&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">\begin{equation}
-e=mc^2
-\end{equation}\label{eq1}</script><p>Then, you can refer to this equation in your text easily by using something like:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The famous matter-energy equation $\eqref&#123;eq1&#125;$ proposed by Einstein...</span><br></pre></td></tr></table></figure>
-<h3 id="Mermaid-Examples"><a href="#Mermaid-Examples" class="headerlink" title="Mermaid Examples"></a>Mermaid Examples</h3><pre class="mermaid" style="text-align: center;">
-            graph LR
-            47(SAM.CommonFA.FMESummary)-->48(SAM.CommonFA.CommonFAFinanceBudget)
-37(SAM.CommonFA.BudgetSubserviceLineVolume)-->48(SAM.CommonFA.CommonFAFinanceBudget)
-35(SAM.CommonFA.PopulationFME)-->47(SAM.CommonFA.FMESummary)
-41(SAM.CommonFA.MetricCost)-->47(SAM.CommonFA.FMESummary)
-44(SAM.CommonFA.MetricOutliers)-->47(SAM.CommonFA.FMESummary)
-46(SAM.CommonFA.MetricOpportunity)-->47(SAM.CommonFA.FMESummary)
-40(SAM.CommonFA.OPVisits)-->47(SAM.CommonFA.FMESummary)
-38(SAM.CommonFA.CommonFAFinanceRefund)-->47(SAM.CommonFA.FMESummary)
-43(SAM.CommonFA.CommonFAFinancePicuDays)-->47(SAM.CommonFA.FMESummary)
-42(SAM.CommonFA.CommonFAFinanceNurseryDays)-->47(SAM.CommonFA.FMESummary)
-45(SAM.CommonFA.MetricPreOpportunity)-->46(SAM.CommonFA.MetricOpportunity)
-35(SAM.CommonFA.PopulationFME)-->45(SAM.CommonFA.MetricPreOpportunity)
-41(SAM.CommonFA.MetricCost)-->45(SAM.CommonFA.MetricPreOpportunity)
-41(SAM.CommonFA.MetricCost)-->44(SAM.CommonFA.MetricOutliers)
-39(SAM.CommonFA.ChargeDetails)-->43(SAM.CommonFA.CommonFAFinancePicuDays)
-39(SAM.CommonFA.ChargeDetails)-->42(SAM.CommonFA.CommonFAFinanceNurseryDays)
-39(SAM.CommonFA.ChargeDetails)-->41(SAM.CommonFA.MetricCost)
-39(SAM.CommonFA.ChargeDetails)-->40(SAM.CommonFA.OPVisits)
-35(SAM.CommonFA.PopulationFME)-->39(SAM.CommonFA.ChargeDetails)
-36(SAM.CommonFA.PremetricCost)-->39(SAM.CommonFA.ChargeDetails)
-          </pre>
-<pre class="mermaid" style="text-align: center;">
-            graph TD
-            A[Christmas] -->|Get money| B(Go shopping)
-B --> C{Let me thinksssss<br>ssssssssssssssssssssss<br>sssssssssssssssssssssssssss}
-C -->|One| D[Laptop]
-C -->|Two| E[iPhone]
-C -->|Three| F[Car]
-          </pre>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/01/hello-world/" rel="next" title="我说Hello World好吗？">
+                <i class="fa fa-chevron-left"></i> 我说Hello World好吗？
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/05/Git-Submodules/" rel="prev" title="关于Git Submodules的一些技巧">
+                关于Git Submodules的一些技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -891,14 +615,19 @@ C -->|Three| F[Car]
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -918,8 +647,17 @@ C -->|Three| F[Car]
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -993,6 +731,23 @@ C -->|Three| F[Car]
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Nodejs和Git"><span class="nav-number">1.</span> <span class="nav-text">安装Nodejs和Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo-cli"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Sbxlm-site"><span class="nav-number">3.</span> <span class="nav-text">初始化Sbxlm-site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加NexT主题"><span class="nav-number">4.</span> <span class="nav-text">添加NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换和修改NexT主题"><span class="nav-number">5.</span> <span class="nav-text">切换和修改NexT主题</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1151,6 +906,10 @@ C -->|Three| F[Car]
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -1172,33 +931,45 @@ C -->|Three| F[Car]
   
 
   
+
+  
+  
+  
+
+
+  
+
+
+  
     
-      
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'b2c58c7e8b165de55a53',
+    clientSecret: 'f5391a978553347ae67c1dd04b73b62a4ae476e5',
+    repo: 'sbxlm.github.io',
+    owner: 'sbxlm',
+    admin: ['sbxlm'],
+    id: md5(location.pathname),
     
-  
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
-  
-  
-    <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
-    <script>
-      
-        window.addEventListener('load', () => {
-      
-        quicklink({
-          timeout: 3000,
-          priority: true,
-          ignores: [uri => uri.includes('#'),uri => uri == 'http://sbxlm.github.io/',]
-        });
-      
-        });
-      
-    </script>
-  
-
-
-  
-
 
 
   
@@ -1535,57 +1306,7 @@ C -->|Three| F[Car]
 
   
   
-    
-      
-    
-      
-    
-      
-        
-      
-    
-  
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
@@ -1696,7 +1417,7 @@ if ($('body').find('pre.mermaid').length) {
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
