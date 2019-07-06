@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="声笔系列码">
 <meta property="og:description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ g">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-06T04:05:55.069Z">
+<meta property="og:updated_time" content="2019-07-06T05:49:32.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Git的一些技巧">
 <meta name="twitter:description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ g">
@@ -460,7 +460,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-06 12:05:55" itemprop="dateModified" datetime="2019-07-06T12:05:55+08:00">2019-07-06</time>
+                <time title="修改时间：2019-07-06 13:49:32" itemprop="dateModified" datetime="2019-07-06T13:49:32+08:00">2019-07-06</time>
               
             
           </span>
@@ -510,12 +510,15 @@
 <h3 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h3><p>采用以下三个步骤：详见<a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule" target="_blank" rel="noopener">Stack Overflow</a>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule deinit -f -- a/submodule</span><br><span class="line">$ rm -rf .git/modules/a/submodule</span><br><span class="line">$ git rm -f a/submodule</span><br></pre></td></tr></table></figure>
 <h2 id="使用多个账号"><a href="#使用多个账号" class="headerlink" title="使用多个账号"></a>使用多个账号</h2><p>如何在同一台计算机上使用多个Github账号？要点如下，详细方法见<a href="https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer" target="_blank" rel="noopener">Stack Overflow</a>。</p>
-<p>步骤一：生成两个RSA密钥，名字分别为git_first和git_second。</p>
+<p>步骤一：为first和second两个账号生成两个RSA密钥，名字分别为git_first和git_second。当然，这里的名字只是举例，你的名字肯定不一样。如果要用更多的账号，就需生成更多的密钥。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email-address1"</span> <span class="comment"># name it git_first when prompted</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email-address2"</span> <span class="comment"># name it git_second when prompted</span></span><br></pre></td></tr></table></figure>
+<p>生成密钥后，将公钥里的内容，在对应的Github账号中设置好。</p>
 <p>步骤二：创建config文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ touch config</span><br><span class="line">$ vim config</span><br></pre></td></tr></table></figure>
-<p>config文件的内容为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_first</span><br><span class="line">Host git_scond</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_second</span><br></pre></td></tr></table></figure>
+<p>config文件的内容如下。其中，第一个确定了默认的Host，后面的必须另外命名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_first</span><br><span class="line">Host git_second</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_second</span><br></pre></td></tr></table></figure>
+<p>步骤三、Github仓库设置、使用密钥。注意，@之后跟随的Host名称就是上面的config中设置的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:first/repo1.git</span><br><span class="line">$ git remote add origin git@git_second:second/repo2.git</span><br></pre></td></tr></table></figure>
 
       
     </div>
