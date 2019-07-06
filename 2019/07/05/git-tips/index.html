@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ g">
-<meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功">
+  <meta name="description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector">
+<meta name="keywords" content="Git,Github,技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Git的一些技巧">
 <meta property="og:url" content="http://sbxlm.github.io/2019/07/05/git-tips/index.html">
 <meta property="og:site_name" content="声笔系列码">
-<meta property="og:description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ g">
+<meta property="og:description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-06T05:56:28.950Z">
+<meta property="og:updated_time" content="2019-07-06T08:18:04.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Git的一些技巧">
-<meta name="twitter:description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ g">
+<meta name="twitter:description" content="使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector">
 
 
 
@@ -254,44 +254,6 @@
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">0</span></a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">0</span></a>
 
   </li>
         
@@ -460,7 +422,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-06 13:56:28" itemprop="dateModified" datetime="2019-07-06T13:56:28+08:00">2019-07-06</time>
+                <time title="修改时间：2019-07-06 16:18:04" itemprop="dateModified" datetime="2019-07-06T16:18:04+08:00">2019-07-06</time>
               
             
           </span>
@@ -504,6 +466,7 @@
         <h2 id="使用子模块"><a href="#使用子模块" class="headerlink" title="使用子模块"></a>使用子模块</h2><p>在Git官网上，有针对子模块的专门说明，详见<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a>。</p>
 <h3 id="添加子模块"><a href="#添加子模块" class="headerlink" title="添加子模块"></a>添加子模块</h3><p>比如，添加一个子模块DbConnector：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule add https://github.com/chaconinc/DbConnector</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="克隆带子模块的仓库"><a href="#克隆带子模块的仓库" class="headerlink" title="克隆带子模块的仓库"></a>克隆带子模块的仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
 <p>以上三个命令也可以用下面引命令代替：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br></pre></td></tr></table></figure>
@@ -519,6 +482,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_first</span><br><span class="line">Host git_second</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_second</span><br></pre></td></tr></table></figure>
 <p>步骤三、Github仓库repo1和repo2设置要使用的密钥。注意，@之后跟随的Host名称就是上面的config中设置的。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:first/repo1.git</span><br><span class="line">$ git remote add origin git@git_second:second/repo2.git</span><br></pre></td></tr></table></figure>
+<h2 id="同步上游仓库的更新"><a href="#同步上游仓库的更新" class="headerlink" title="同步上游仓库的更新"></a>同步上游仓库的更新</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your/repo</span><br><span class="line">$ git remote add upstream http://github.com/your-account/upstream-repo.git</span><br><span class="line">$ git fetch upstream</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -568,6 +532,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/Github/" rel="tag"># Github</a>
+          
+            <a href="/tags/技巧/" rel="tag"># 技巧</a>
+          
+        </div>
+      
 
       
       
@@ -598,7 +572,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/03/Site-Building/" rel="next" title="使用Hexo建立Sbxlm网站">
+              <a href="/2019/07/03/site-building/" rel="next" title="使用Hexo建立Sbxlm网站">
                 <i class="fa fa-chevron-left"></i> 使用Hexo建立Sbxlm网站
               </a>
             
@@ -690,6 +664,29 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
             </nav>
           
 
@@ -749,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用子模块"><span class="nav-number">1.</span> <span class="nav-text">使用子模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加子模块"><span class="nav-number">1.1.</span> <span class="nav-text">添加子模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆带子模块的仓库"><span class="nav-number">1.2.</span> <span class="nav-text">克隆带子模块的仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除子模块"><span class="nav-number">1.3.</span> <span class="nav-text">删除子模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用多个账号"><span class="nav-number">2.</span> <span class="nav-text">使用多个账号</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用子模块"><span class="nav-number">1.</span> <span class="nav-text">使用子模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加子模块"><span class="nav-number">1.1.</span> <span class="nav-text">添加子模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆带子模块的仓库"><span class="nav-number">1.2.</span> <span class="nav-text">克隆带子模块的仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除子模块"><span class="nav-number">1.3.</span> <span class="nav-text">删除子模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用多个账号"><span class="nav-number">2.</span> <span class="nav-text">使用多个账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步上游仓库的更新"><span class="nav-number">3.</span> <span class="nav-text">同步上游仓库的更新</span></a></li></ol></div>
             
 
           </div>
