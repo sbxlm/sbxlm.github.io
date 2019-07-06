@@ -395,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sbxlm.github.io/2019/07/05/Git-Submodules/">
+    <link itemprop="mainEntityOfPage" href="http://sbxlm.github.io/2019/07/05/git-tips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="丁人飞">
@@ -415,7 +415,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/05/Git-Submodules/" class="post-title-link" itemprop="url">关于Git Submodules的一些技巧</a>
+                <a href="/2019/07/05/git-tips/" class="post-title-link" itemprop="url">关于Git的一些技巧</a>
               
             
           </h2>
@@ -440,12 +440,24 @@
                 
               
 
-              <time title="创建时间：2019-07-05 16:21:04 / 修改时间：16:42:45" itemprop="dateCreated datePublished" datetime="2019-07-05T16:21:04+08:00">2019-07-05</time>
+              <time title="创建时间：2019-07-05 16:21:04" itemprop="dateCreated datePublished" datetime="2019-07-05T16:21:04+08:00">2019-07-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-06 12:05:55" itemprop="dateModified" datetime="2019-07-06T12:05:55+08:00">2019-07-06</time>
               
             
           </span>
@@ -481,15 +493,21 @@
       
         
           
-            <h2 id="Git官方文件"><a href="#Git官方文件" class="headerlink" title="Git官方文件"></a>Git官方文件</h2><p>在Git官网上，有针对submodules的专门说明，详见<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a>。</p>
-<p>比如，添加一个子模块DbConnector：</p>
+            <h2 id="使用子模块"><a href="#使用子模块" class="headerlink" title="使用子模块"></a>使用子模块</h2><p>在Git官网上，有针对子模块的专门说明，详见<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a>。</p>
+<h3 id="添加子模块"><a href="#添加子模块" class="headerlink" title="添加子模块"></a>添加子模块</h3><p>比如，添加一个子模块DbConnector：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule add https://github.com/chaconinc/DbConnector</span><br></pre></td></tr></table></figure>
-<p>再如，克隆带子模块的仓库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
+<h3 id="克隆带子模块的仓库"><a href="#克隆带子模块的仓库" class="headerlink" title="克隆带子模块的仓库"></a>克隆带子模块的仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
 <p>以上三个命令也可以用下面引命令代替：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br></pre></td></tr></table></figure>
-<h2 id="如何删除一个子模块？"><a href="#如何删除一个子模块？" class="headerlink" title="如何删除一个子模块？"></a>如何删除一个子模块？</h2><p>采用以下三个步骤：详见<a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule" target="_blank" rel="noopener">Stack Overflow</a>。</p>
+<h3 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h3><p>采用以下三个步骤：详见<a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule" target="_blank" rel="noopener">Stack Overflow</a>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git submodule deinit -f -- a/submodule</span><br><span class="line">$ rm -rf .git/modules/a/submodule</span><br><span class="line">$ git rm -f a/submodule</span><br></pre></td></tr></table></figure>
+<h2 id="使用多个账号"><a href="#使用多个账号" class="headerlink" title="使用多个账号"></a>使用多个账号</h2><p>如何在同一台计算机上使用多个Github账号？要点如下，详细方法见<a href="https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer" target="_blank" rel="noopener">Stack Overflow</a>。</p>
+<p>步骤一：生成两个RSA密钥，名字分别为git_first和git_second。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email-address1"</span> <span class="comment"># name it git_first when prompted</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email-address2"</span> <span class="comment"># name it git_second when prompted</span></span><br></pre></td></tr></table></figure>
+<p>步骤二：创建config文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ touch config</span><br><span class="line">$ vim config</span><br></pre></td></tr></table></figure>
+<p>config文件的内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_first</span><br><span class="line">Host git_scond</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_second</span><br></pre></td></tr></table></figure>
 
           
         

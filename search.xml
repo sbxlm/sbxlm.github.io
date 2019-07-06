@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[关于Git Submodules的一些技巧]]></title>
-    <url>%2F2019%2F07%2F05%2FGit-Submodules%2F</url>
-    <content type="text"><![CDATA[Git官方文件在Git官网上，有针对submodules的专门说明，详见Git Submodules。 比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 再如，克隆带子模块的仓库： 123$ git clone https://github.com/chaconinc/MainProject$ git submodule init$ git submodule update 以上三个命令也可以用下面引命令代替： 1$ git clone --recursive git clone https://github.com/chaconinc/MainProject 如何删除一个子模块？采用以下三个步骤：详见Stack Overflow。 123$ git submodule deinit -f -- a/submodule$ rm -rf .git/modules/a/submodule$ git rm -f a/submodule]]></content>
+    <title><![CDATA[关于Git的一些技巧]]></title>
+    <url>%2F2019%2F07%2F05%2Fgit-tips%2F</url>
+    <content type="text"><![CDATA[使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ git submodule init$ git submodule update 以上三个命令也可以用下面引命令代替： 1$ git clone --recursive git clone https://github.com/chaconinc/MainProject 删除子模块采用以下三个步骤：详见Stack Overflow。 123$ git submodule deinit -f -- a/submodule$ rm -rf .git/modules/a/submodule$ git rm -f a/submodule 使用多个账号如何在同一台计算机上使用多个Github账号？要点如下，详细方法见Stack Overflow。 步骤一：生成两个RSA密钥，名字分别为git_first和git_second。 12$ ssh-keygen -t rsa -C "email-address1" # name it git_first when prompted$ ssh-keygen -t rsa -C "email-address2" # name it git_second when prompted 步骤二：创建config文件 123$ cd ~/.ssh$ touch config$ vim config config文件的内容为： 12345678Host github.com HostName github.com User git IdentityFile ~/.ssh/git_firstHost git_scond HostName github.com User git IdentityFile ~/.ssh/git_second]]></content>
   </entry>
   <entry>
     <title><![CDATA[使用Hexo建立Sbxlm网站]]></title>
