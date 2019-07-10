@@ -9,9 +9,9 @@
         <category>技巧</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Git</tag>
         <tag>Github</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -19,10 +19,10 @@
     <url>%2F2019%2F07%2F03%2Fsite-build%2F</url>
     <content type="text"><![CDATA[安装Nodejs和Git根据不同的操作系统，按照通常的方式安装即可。 安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-hexo12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题采用子模块的方式安装，以便今后获取上游的更新。 1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-hexo的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
       <tags>
+        <tag>技巧</tag>
         <tag>Hexo</tag>
         <tag>Sbxlm</tag>
         <tag>网站</tag>
-        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
