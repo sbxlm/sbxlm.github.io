@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何关闭Wow64重定向]]></title>
+    <url>%2F2019%2F07%2F12%2Fdisable-redirect%2F</url>
+    <content type="text"><![CDATA[先参见https://blog.csdn.net/karlxzy/article/details/42170419]]></content>
+      <tags>
+        <tag>关闭</tag>
+        <tag>Wow64</tag>
+        <tag>重定向</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows下如何判断应用程序是32位的还是64位的？]]></title>
+    <url>%2F2019%2F07%2F12%2Fwin32or64%2F</url>
+    <content type="text"><![CDATA[方法一：利用任务管理器任务管理器 -&gt; 进程：进程后带有*32的是32位应用程序，否则为64位应用程序。此法仅适用于运行中的应用程序。 方法二：利用简化颜色模式鼠标右击应用程序 -&gt; 属性 -&gt; 兼容性：若设置框中的降低色彩和分辨率的选项可勾选则32位应用程序，否则为64位应用程序。 方法三：查看EXE文件头二进制方式打开应用程序，在文件头中能找到PE..L的是32位的，能找到PE..d的是64位。 来源：改编自https://blog.csdn.net/dayday3923/article/details/78597453]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>应用程序</category>
+      </categories>
+      <tags>
+        <tag>应用程序</tag>
+        <tag>32位</tag>
+        <tag>64位</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Git的一些技巧]]></title>
     <url>%2F2019%2F07%2F05%2Fgit-tips%2F</url>
     <content type="text"><![CDATA[使用子模块在Git官网上，有针对子模块的专门说明，详见Git Submodules。 添加子模块比如，添加一个子模块DbConnector： 1$ git submodule add https://github.com/chaconinc/DbConnector 克隆带子模块的仓库123$ git clone https://github.com/chaconinc/MainProject$ git submodule init$ git submodule update 以上三个命令也可以用下面引命令代替： 1$ git clone --recursive git clone https://github.com/chaconinc/MainProject 删除子模块采用以下三个步骤：详见Stack Overflow。 123$ git submodule deinit -f -- a/submodule$ rm -rf .git/modules/a/submodule$ git rm -f a/submodule 使用多个账号如何在同一台计算机上使用多个Github账号？要点如下，详细方法见Stack Overflow。 步骤一：为first和second两个账号生成两个RSA密钥，名字分别为git_first和git_second。当然，这里的名字只是举例，你的名字肯定不一样。如果要用更多的账号，就需生成更多的密钥。 12$ ssh-keygen -t rsa -C "email-address1" # name it git_first when prompted$ ssh-keygen -t rsa -C "email-address2" # name it git_second when prompted 生成密钥后，将公钥里的内容，在对应的Github账号中设置好。 步骤二：创建config文件 123$ cd ~/.ssh$ touch config$ vim config config文件的内容如下。其中，第一个确定了默认的Host，后面的必须另外命名。 12345678Host github.com HostName github.com User git IdentityFile ~/.ssh/git_firstHost git_second HostName github.com User git IdentityFile ~/.ssh/git_second 步骤三、Github仓库repo1和repo2设置要使用的密钥。注意，@之后跟随的Host名称就是上面的config中设置的。 12$ git remote add origin git@github.com:first/repo1.git$ git remote add origin git@git_second:second/repo2.git 同步上游仓库的更新1234$ cd your/repo$ git remote add upstream http://github.com/your-account/upstream-repo.git$ git fetch upstream$ git pull origin master]]></content>
