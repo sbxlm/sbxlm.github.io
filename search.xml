@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[主流输入法]]></title>
+    <url>%2F2019%2F07%2F17%2Fmain-imes%2F</url>
+    <content type="text"><![CDATA[输入法排行榜百度经验最好用的中文输入法十大排名多特输入法排行榜华军输入法排行榜 搜狗输入法搜狗输入法官方网站搜狗输入法百度百科 百度输入法百度输入法官方网站百度输入法百度百科]]></content>
+      <tags>
+        <tag>主流</tag>
+        <tag>输入法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[业界要文]]></title>
+    <url>%2F2019%2F07%2F17%2Fkey-articles%2F</url>
+    <content type="text"><![CDATA[王小川的互联网江湖：从输入法到AI背后的故事“我是1978年生的人，到今年是40岁，也是改革开放的同龄人。挺感谢这样一个大的时代背景，让自己成为了互联网飞速发展的见证者、参与者，也是受益者。” 具体请看http://news.gmw.cn/xinxi/2019-05/24/content_32864391.htm 搜狗王小川：翻译主场景不是翻译机，而是输入法与搜索从来没指望翻译机为搜狗提供支柱性收入来源，更大意义在于更多地从语言交互上实现AI落地扩展。 具体请看https://www.yicai.com/news/100096100.html 搜狗劫持百度神马等流量构成不正当竞争，3000万罚款创海淀法院同类案件最高纪录6月27日，海淀法院对奇虎公司、百度公司，以及动景公司和神马公司因搜狗输入法通过搜索候选词为搜狗搜索导流量分别起诉搜狗公司等不正当竞争纠纷三案集中宣判。法院一审认定搜狗公司构成不正当竞争，应停止不正当竞争行为，分别为三案原告公开消除影响，向奇虎公司、百度公司各赔偿经济损失500万元等，向动景公司和神马公司共赔偿2000余万元，系海淀法院同类案件罚款最高纪录。 具体请看https://www.yicai.com/news/100241684.html]]></content>
+      <tags>
+        <tag>业界</tag>
+        <tag>要文</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何关闭Wow64重定向？]]></title>
     <url>%2F2019%2F07%2F12%2Fdisable-redirect%2F</url>
     <content type="text"><![CDATA[先参见https://blog.csdn.net/karlxzy/article/details/42170419 现在声笔系列输入法的安装要先判断Windows是32位的还是64位的，再通过不同的安装程序来安装，用起来不是很方便。通过关闭Wow64重定向，就可以用一个32位程序同时解决64位和32位Windows输入法的安装问题。]]></content>
@@ -33,9 +51,9 @@
         <category>技巧</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Git</tag>
         <tag>Github</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -43,10 +61,10 @@
     <url>%2F2019%2F07%2F03%2Fsite-build%2F</url>
     <content type="text"><![CDATA[安装Nodejs和Git根据不同的操作系统，按照通常的方式安装即可。 安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-hexo12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题采用子模块的方式安装，以便今后获取上游的更新。 1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-hexo的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
       <tags>
+        <tag>技巧</tag>
         <tag>Hexo</tag>
         <tag>Sbxlm</tag>
         <tag>网站</tag>
-        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
