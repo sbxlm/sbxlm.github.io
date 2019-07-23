@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基于Rime的声笔系列码现在提供Android安装程序了]]></title>
+    <url>%2F2019%2F07%2F23%2Frime4sbxlm%2F</url>
+    <content type="text"><![CDATA[缘起在发布Weasel4sbxlm时，我就承诺过会尽快提供对Android的支持，现在就是兑现的时候了。由于增加了对Android的支持，所以名称也改为了Rime4sbxlm，意为基于Rime的声笔系列码。不过，此版程序实际上能兼容同版本号的官方小狼毫和同文，不会对已经安装的输入法方案产生影响。与官方程序的区别主要是，增加了对顶功输入法用小码集字母兼用于选择重码字词的支持。下载链接为：https://github.com/sbxlm/sbxlm.github.io/releases/download/20190723/Rime4sbxlm.rar Rime4sbxlm的主要内容本Rime4sbxlm主要包括用于Windows和Android的安装程序，以及声笔飞码、声笔快码、声笔双拼和声笔二笔码表和方案。 声笔飞码和声笔快码为二码起顶方案，强调单字的效率，同时支持sbbs二字词，但是不收录由三码及以内单字构成的二字词，这是因为这样才能充分利用狭小的二字词空间。另外，三码及以内的单字在熟练后击键率是很高的，也没有必要用二字词的方式来输入。本版飞码和快码还有一个重大改进，那就是三字词和多字词均可以用简拼的方式来输入（虽然要用一个大写字母），实现了二码顶与简拼的共存，这对输入成语等特别有帮助。 声笔快码和声笔二笔则是利用声笔技术分别对传统自然码和二笔输入法的改造，三级单字只用三键就可以输入，重码用aeiou来选择，而不是用笨拙的数字键。这样，它们不但变得更简单，而且效率还更高，操作还更容易。 安装方法在安装小狼毫和同文后，将公共部分和输入法部分的码表和方案复制到用户目录，重新部署并选择方案后就可以使用了。 下一步打算下一步会有一个重大的发布。声笔简码已经通过了长期的准备、测试和优化，也会在近期发布了。它将是在声笔码和声笔飞码后，又一次输入法的创新，综合运用了很多独创的黑科技，敬请期待。]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>声笔系列码</tag>
+        <tag>Rime</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[首个为声笔系列码定制的小狼毫输入法]]></title>
     <url>%2F2019%2F07%2F19%2Fweasel4sbxlm-0-14-3-0%2F</url>
     <content type="text"><![CDATA[热烈祝贺首个为声笔系列码定制的小狼毫输入法正式发布！顶功输入法现在虽然越来越火，但是现有的平台都有太多的局限性，无法让输入法玩家们玩出更多的花样。利用表示笔画的小码集字母aeiou进行选重是声笔系列码的黑科技之一，一直无法在RIME中实现。于是，我只得硬着头皮改了一下librime的源码，现在终于可以在小狼毫中使用了！当然，自动码长调整等其它声笔技术在RIME平台和其它输入法平台上仍然没有办法使用。不过，已经可以多一种玩法了。祝贺！祝贺！ 等不及了吗？赶快下载Weasel4Sbxlm吧。等一下！MacBook和Android怎么办了？少安毋躁，只有稍等一下了，后续再跟进。 本版输入法的主要内容公共部分 用于Windows的安装程序weasel4sbxlm-0.14.3.0.exe，增加了官方版没有字母选重的功能，仍然可以兼容官方版，不会影响已经有的输入法。 笔画码表（用于笔画反查码表）：bihua.dict.yaml和bihua.schema.yaml 拼音码表（用于拼音反查码表）：pinyin_simp.dict.yaml和pinyin_simp.schema.yaml 本文件：readme.txt 输入法部分这里的声笔飞码即原生程序中的飞码声形模式，而声笔快码则是声韵模式。以下编码格式中，s代表声母，p代表偏旁部首，b代表笔画，y代表韵母，d代表双笔，x代表选择键。 声笔飞码：sbfm.dict.yaml和sbfm.schema.yaml。它的编码格式：单字为spbbx, sbbbx；二字词为sbbsx；三字词为ssSx；多字词为sSssx。 声笔快码：sbkm.dict.yaml和sbkm.schema.yaml。它的编码格式与声笔飞码基本上相同，只需要把spbbx换为sybbx就行了。 声笔双拼：sbsp.dict.yaml和sbsp.schema.yaml。它的编码格式：单字为sybbx，二字词为sysyx，三字词为sssyx；多字词为ssssx。声笔双拼是基于自然码双拼改编的。 声笔二笔：sbvb.dict.yaml和sbvb.schema.yaml。它的编码格式：单字为sdbbx，二字词为sdsdx，三字词为sssdx；多字词为ssssx。声笔二笔是基于星空二笔改编的。 更多信息要知道更多的信息？请加入声笔系列码交流QQ群445906697。]]></content>
@@ -61,9 +72,9 @@
         <category>技巧</category>
       </categories>
       <tags>
+        <tag>技巧</tag>
         <tag>Git</tag>
         <tag>Github</tag>
-        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -71,10 +82,10 @@
     <url>%2F2019%2F07%2F03%2Fsite-build%2F</url>
     <content type="text"><![CDATA[安装Nodejs和Git根据不同的操作系统，按照通常的方式安装即可。 安装Hexo-cli1$ npm install -g hexo-cli 初始化Sbxlm-hexo12345$ hexo init sbxlm-hexo$ cd sbxlm-hexo$ git init$ npm install$ hexo server 添加NexT主题采用子模块的方式安装，以便今后获取上游的更新。 1$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next 切换和修改NexT主题 修改sbxlm-hexo的_config.yml文件，将theme从默认的landscape改为next。 修改NexT的Scheme，从默认的Muse改为Gemini。]]></content>
       <tags>
-        <tag>技巧</tag>
         <tag>Hexo</tag>
         <tag>Sbxlm</tag>
         <tag>网站</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
 </search>
