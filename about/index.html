@@ -101,18 +101,18 @@
 
 
 
-  <meta name="description" content="正则表达式变量约定“[]”在正则表达式中表示选择其包含的字符之一。“|”在正则表达式中表示“或者”。以下是在声笔系列码中特别使用的变量字母，与常量字母同形，但是根据上下文可以明确区分出来。  _表示空格，一般用于选择第一个重码字词。 s=[bpmfdtnlgkhjqxzcsrywv]，表示声母（含零声母）。 b=[aeiou]，表示笔画 x=[aeiou]，表示重码选择符 p表示偏旁部首或者双笔画">
+  <meta name="description" content="什么是声笔系列码？声笔系列码是一系列具有某些共性的输入法的统称，包括声笔简码、声笔飞码、声笔快码、声笔双拼、声笔二笔。这些输入法具有或者运用了如下一些共同的一般特征和核心技术。 一般特征 声笔表示方法：用v标识汉语拼音中以a、e、o开始零声母，并用aeiou分别表示折横竖捺撇五类笔画。在汉语拼音中，没有使用字母v，且所有音节均不以i和u开头。当使用v来标识零声母后，所有的音节便都不以aeiou这五">
 <meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功, 自动码长, 自动造词, 字母选重">
 <meta property="og:type" content="website">
 <meta property="og:title" content="声笔系列码">
 <meta property="og:url" content="http://sbxlm.github.io/about/index.html">
 <meta property="og:site_name" content="声笔系列码">
-<meta property="og:description" content="正则表达式变量约定“[]”在正则表达式中表示选择其包含的字符之一。“|”在正则表达式中表示“或者”。以下是在声笔系列码中特别使用的变量字母，与常量字母同形，但是根据上下文可以明确区分出来。  _表示空格，一般用于选择第一个重码字词。 s=[bpmfdtnlgkhjqxzcsrywv]，表示声母（含零声母）。 b=[aeiou]，表示笔画 x=[aeiou]，表示重码选择符 p表示偏旁部首或者双笔画">
+<meta property="og:description" content="什么是声笔系列码？声笔系列码是一系列具有某些共性的输入法的统称，包括声笔简码、声笔飞码、声笔快码、声笔双拼、声笔二笔。这些输入法具有或者运用了如下一些共同的一般特征和核心技术。 一般特征 声笔表示方法：用v标识汉语拼音中以a、e、o开始零声母，并用aeiou分别表示折横竖捺撇五类笔画。在汉语拼音中，没有使用字母v，且所有音节均不以i和u开头。当使用v来标识零声母后，所有的音节便都不以aeiou这五">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-27T08:29:48.531Z">
+<meta property="og:updated_time" content="2019-07-29T06:19:19.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔系列码">
-<meta name="twitter:description" content="正则表达式变量约定“[]”在正则表达式中表示选择其包含的字符之一。“|”在正则表达式中表示“或者”。以下是在声笔系列码中特别使用的变量字母，与常量字母同形，但是根据上下文可以明确区分出来。  _表示空格，一般用于选择第一个重码字词。 s=[bpmfdtnlgkhjqxzcsrywv]，表示声母（含零声母）。 b=[aeiou]，表示笔画 x=[aeiou]，表示重码选择符 p表示偏旁部首或者双笔画">
+<meta name="twitter:description" content="什么是声笔系列码？声笔系列码是一系列具有某些共性的输入法的统称，包括声笔简码、声笔飞码、声笔快码、声笔双拼、声笔二笔。这些输入法具有或者运用了如下一些共同的一般特征和核心技术。 一般特征 声笔表示方法：用v标识汉语拼音中以a、e、o开始零声母，并用aeiou分别表示折横竖捺撇五类笔画。在汉语拼音中，没有使用字母v，且所有音节均不以i和u开头。当使用v来标识零声母后，所有的音节便都不以aeiou这五">
 
 
 
@@ -406,6 +406,25 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">8</span></a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-releases">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="https://github.com/sbxlm/sbxlm.github.io/releases/" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-download"></i> <br>下载软件</a>
+
+  </li>
 
       
       
@@ -503,6 +522,9 @@
       
       
     
+      
+      
+    
     
 
   
@@ -539,31 +561,32 @@
       <div class="post-body">
         
         
-          <h2 id="正则表达式变量约定"><a href="#正则表达式变量约定" class="headerlink" title="正则表达式变量约定"></a>正则表达式变量约定</h2><p>“[]”在正则表达式中表示选择其包含的字符之一。“|”在正则表达式中表示“或者”。以下是在声笔系列码中特别使用的变量字母，与常量字母同形，但是根据上下文可以明确区分出来。</p>
-<ul>
-<li>_表示空格，一般用于选择第一个重码字词。</li>
-<li>s=[bpmfdtnlgkhjqxzcsrywv]，表示声母（含零声母）。</li>
-<li>b=[aeiou]，表示笔画</li>
-<li>x=[aeiou]，表示重码选择符</li>
-<li>p表示偏旁部首或者双笔画，在声笔飞码中21个英文字母（与s相同），在声笔二笔中为26个英文字母。</li>
-<li>y表示双拼模式里的韵母，在声笔快码中为21个英文字母（与s相同），在声笔双拼中为26个英文字母。</li>
-<li>z表示21或者26个英文字母，用于不区分p、y而进行统一描述时。</li>
-<li>‘表示此后的码位为顶屏位，即此前的码位上的字词在后接S时将被顶上屏幕；如果此前的码位上没有字词，则效果为清除已输入的编码。</li>
-<li>^表示此前的码位为动态码长调整位（简称起调位），即凡是编码长于此位的字词在输入后，其编码会自动缩短到此位，其它字词的码长也会进行相应调整。</li>
+          <h2 id="什么是声笔系列码？"><a href="#什么是声笔系列码？" class="headerlink" title="什么是声笔系列码？"></a>什么是声笔系列码？</h2><p>声笔系列码是一系列具有某些共性的输入法的统称，包括<a href="../sbjm/">声笔简码</a>、<a href="../sbfm/">声笔飞码</a>、<a href="../sbkm/">声笔快码</a>、<a href="../sbsp/">声笔双拼</a>、<a href="../sbvb/">声笔二笔</a>。这些输入法具有或者运用了如下一些共同的一般特征和核心技术。</p>
+<h3 id="一般特征"><a href="#一般特征" class="headerlink" title="一般特征"></a>一般特征</h3><ul>
+<li>声笔表示方法：用v标识汉语拼音中以a、e、o开始零声母，并用aeiou分别表示折横竖捺撇五类笔画。在汉语拼音中，没有使用字母v，且所有音节均不以i和u开头。当使用v来标识零声母后，所有的音节便都不以aeiou这五元音字母开头了。这一看似不起眼的改变，却引发了一系列重大的发明和创新。</li>
+<li>笔画反查方法：声笔系列码中的任何一款输入法都可以直接使用笔画输入汉字来反查输入码，而且不需要任何切换键引导。当然，如果加切换键的话，也可以支持用拼音等方式反查输入码，但它们不是声笔系列码所特有的。</li>
 </ul>
-<h2 id="声笔系列码的共同特征"><a href="#声笔系列码的共同特征" class="headerlink" title="声笔系列码的共同特征"></a>声笔系列码的共同特征</h2><ul>
-<li>v, a, e, i, o, u的巧妙使用。</li>
-<li>用v标识以a, e, o开头零声母。</li>
-<li>用aeiou来表示笔画并选择重码字词。</li>
-<li>具有快速的带调拼音字母输入法，并兼容英文输入。</li>
-<li>查字法：笔画查字法，用于声笔系列码中所有输入法；拼音查字法，用于声笔码和声笔飞码；声笔查字法，用于声笔飞码和声笔拼音。</li>
-<li>SHIFT在声笔系列码中的多重作用：切换输入状态、翻页、引导标调字母、调用软键盘等。</li>
+<h3 id="核心技术"><a href="#核心技术" class="headerlink" title="核心技术"></a>核心技术</h3><ul>
+<li>连续顶屏</li>
+<li>自动调长</li>
+<li>自动造词</li>
+<li>字母选重</li>
+<li>字词分流</li>
+<li>扩展编码</li>
 </ul>
-<h2 id="传统输入法的改良"><a href="#传统输入法的改良" class="headerlink" title="传统输入法的改良"></a>传统输入法的改良</h2><ul>
-<li>声笔双拼：以自然码双拼为例，其它双拼可以参此改良。变化的地方是用v表示零声母、不区分平翘舌、用aeiou追加笔画和选择重码。</li>
-<li>声笔二笔：唯一的变化是用v表示零声母、不区分平翘舌和用aeiou选择重码。以超强音形（26键）为例，其它二笔也可以参此改良。</li>
+<h2 id="声笔系列码的发展历程"><a href="#声笔系列码的发展历程" class="headerlink" title="声笔系列码的发展历程"></a>声笔系列码的发展历程</h2><p>本世纪初，声笔码，历史上第一个顶功输入法就这样诞生了。它是建立在笔者的专利发明《基于声母和笔划的汉字输入》基础之上的。</p>
+<h3 id="原创输入法"><a href="#原创输入法" class="headerlink" title="原创输入法"></a>原创输入法</h3><ul>
+<li>声笔简码：对声笔码进行了重大的改进，并重新命名，现在已经不再推荐使用原来的声笔码，详见<a href="../sbjm/">声笔简码</a>。</li>
+<li>声笔飞码：即原生飞码程序中的声形模式，但是在词组编码格式上有重大变化，详见<a href="../sbfm/">声笔飞码</a>。</li>
+<li>声笔快码：即原生飞码程序中的声韵模式，但是在词组编码格式上有重大变化，详见<a href="../sbkm/">声笔快码</a>。</li>
 </ul>
-
+<h3 id="改良输入法"><a href="#改良输入法" class="headerlink" title="改良输入法"></a>改良输入法</h3><ul>
+<li>声笔双拼：以自然码双拼为例，其它双拼可以参此改良。主要的变化是用v表示零声母、不区分平翘舌、用aeiou追加笔画和选择重码，详见<a href="../sbsp/">声笔双拼</a>。</li>
+<li>声笔二笔：以超强音形（26键）为例，其它二笔也可以参此改良。主要的变化是用v表示零声母和用aeiou选择重码，详见<a href="../sbvb/">声笔二笔</a>。</li>
+</ul>
+<h2 id="选择哪一款输入法？"><a href="#选择哪一款输入法？" class="headerlink" title="选择哪一款输入法？"></a>选择哪一款输入法？</h2><h2 id="如何安装与使用？"><a href="#如何安装与使用？" class="headerlink" title="如何安装与使用？"></a>如何安装与使用？</h2><h3 id="原生程序与RIME程序"><a href="#原生程序与RIME程序" class="headerlink" title="原生程序与RIME程序"></a>原生程序与RIME程序</h3><p>声笔系列码的实现方式分为原生程序和RIME程序两种。有的输入法仅有RIME一种实现方式（如声笔双拼和声笔二笔），有的输入法同时有两种实现方式（如声笔捷码、声笔飞码和声笔快码），但是功能上有或大或小的差异。一般来讲，原生程序功能会更加强大，在可能时请尽量使用原生程序。但是，原生程序目前只能在Windows上面运行，而RIME程序可以用于Windows、Android、MacBook和Linux。</p>
+<p>需要注意的是，为了支持声笔系列码的特殊功能如字母选重等，对官方的RIME程序进行了少量修改。官方RIME程序不支持声笔系列码，而这里提供的修改过的Rime4sbxlm却可以兼容相同版本的官方程序，不会影响已经安装的其它输入法方案。</p>
+<h2 id="如何交流与反馈？"><a href="#如何交流与反馈？" class="headerlink" title="如何交流与反馈？"></a>如何交流与反馈？</h2><h2 id="更多有用的资源"><a href="#更多有用的资源" class="headerlink" title="更多有用的资源"></a>更多有用的资源</h2>
         
       </div>
       
@@ -615,9 +638,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="丁人飞">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Veiou">
             
-              <p class="site-author-name" itemprop="name">丁人飞</p>
+              <p class="site-author-name" itemprop="name">Veiou</p>
               <div class="site-description motion-element" itemprop="description"></div>
           </div>
 
@@ -815,7 +838,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式变量约定"><span class="nav-number">1.</span> <span class="nav-text">正则表达式变量约定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码的共同特征"><span class="nav-number">2.</span> <span class="nav-text">声笔系列码的共同特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传统输入法的改良"><span class="nav-number">3.</span> <span class="nav-text">传统输入法的改良</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是声笔系列码？"><span class="nav-number">1.</span> <span class="nav-text">什么是声笔系列码？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一般特征"><span class="nav-number">1.1.</span> <span class="nav-text">一般特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心技术"><span class="nav-number">1.2.</span> <span class="nav-text">核心技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码的发展历程"><span class="nav-number">2.</span> <span class="nav-text">声笔系列码的发展历程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原创输入法"><span class="nav-number">2.1.</span> <span class="nav-text">原创输入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改良输入法"><span class="nav-number">2.2.</span> <span class="nav-text">改良输入法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择哪一款输入法？"><span class="nav-number">3.</span> <span class="nav-text">选择哪一款输入法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何安装与使用？"><span class="nav-number">4.</span> <span class="nav-text">如何安装与使用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生程序与RIME程序"><span class="nav-number">4.1.</span> <span class="nav-text">原生程序与RIME程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何交流与反馈？"><span class="nav-number">5.</span> <span class="nav-text">如何交流与反馈？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多有用的资源"><span class="nav-number">6.</span> <span class="nav-text">更多有用的资源</span></a></li></ol></div>
             
 
           </div>
@@ -845,9 +868,9 @@
       <div class="footer-inner">
         <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-heard"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">丁人飞</span>
+  <span class="author" itemprop="copyrightHolder">Veiou</span>
 
   
 
