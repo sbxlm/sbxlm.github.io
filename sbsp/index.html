@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="声笔系列码">
 <meta property="og:description" content="概述声笔双拼以自然码双拼为基础修改而成，主要的变化是用 v 表示零声母、不区分平翘舌（将 zh, ch, sh 合并到 z, c, s），并且第三、四码用 aeiou 追加笔画离散同音字，满四码后用aeiou兼做重码选择键。自然码双拼是使用最广的双拼方案，有不少其它双拼方案也与它大同小异，这些双拼用户转用声笔双拼的话，基本上不用怎么学习就可以使用。如果是声笔简码用户，升级到声笔双拼，也只需要掌握双">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T01:22:50.975Z">
+<meta property="og:updated_time" content="2019-08-10T07:55:33.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔双拼">
 <meta name="twitter:description" content="概述声笔双拼以自然码双拼为基础修改而成，主要的变化是用 v 表示零声母、不区分平翘舌（将 zh, ch, sh 合并到 z, c, s），并且第三、四码用 aeiou 追加笔画离散同音字，满四码后用aeiou兼做重码选择键。自然码双拼是使用最广的双拼方案，有不少其它双拼方案也与它大同小异，这些双拼用户转用声笔双拼的话，基本上不用怎么学习就可以使用。如果是声笔简码用户，升级到声笔双拼，也只需要掌握双">
@@ -583,8 +583,14 @@
 <li>三字词：sssyx</li>
 <li>多字词：ssssx</li>
 </ul>
-<p>其中，s表示声母，y表示韵母，b表示笔画，x表示选择键。s采用aeiou以外的21个辅音字母，y采用了所有26个英文字母，而b和x均采用aeiou这五个元音字母。</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2>
+<p>其中，s表示声母，y表示韵母，b表示笔画，x表示选择键。s采用aeiou以外的21个辅音字母，y采用了所有26个英文字母，而b和x均采用aeiou这五个元音字母。注意，声笔双拼的编码中，声母 zh、ch、sh 并入了 z、c、s 中，亦即不区分平翘舌；对于汉语拼音中以 w 和 y 开始的音节，要保持 w 和 y 不变，将音节中剩余的部分按上述表示方法来编码。例如，wan 应编码为 wj，而 yao 应编码为 yk。</p>
+<p>声笔双拼韵母的具体表达方式如下，<br><div class="note ">
+            <p>A: a<br>B：ou<br>C：iao<br>D：iang, uang<br>E: e<br>F：en<br>G：eng<br>H：ang<br>I: i<br>J：an<br>K：ao<br>L：ai<br>M：ian<br>N：in<br>O: o, uo<br>P：un<br>Q：iu<br>R：uan<br>S：iong, ong<br>T：ue, üe<br>U: u<br>V：ui, ü<br>W：ia, ua<br>X：ie<br>Y：ing, uai<br>Z：ei</p>
+          </div></p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>例如，<code>倒</code>字的声母为 d，韵母为 ao，在声笔双拼中用 k 代表 ao，所以声韵编码为 dk；<code>倒</code>字的第一笔画为撇，用 u 表示，输入到 dku 时，该字已经出来。如果后续还有要输入的字，那么在输入第一码声母时，就会把<code>倒</code>字顶上屏幕。</p>
+<p>再如，<code>坠</code>字，它的声母为 zh，韵母为 ui，因为不区分平翘舌，用 v 代表 ui，所以声韵编码为 zv；<code>坠</code>字的第一笔画为折，用 a 表示，输入倒 zva 时，该字已经出来。</p>
+<p>还举一个复杂点的例子，<code>古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。</code>这句话，在输入时是这样的：<code>古 guei 之 zio 立 lio 大 da_ 事 sie 者 zee, 不 b_ 惟 wzoo 有 yb_ 超 cke 世 sieia 之 zio 才 cl_,亦 yooea 必 bio 有 yb_ 坚 jmi 忍 rfa 不 b_ 拔 bae 之 zio 志 zieia。.</code>（在上述输入码中，用<code>_</code>表示空格）</p>
+
         
       </div>
       
