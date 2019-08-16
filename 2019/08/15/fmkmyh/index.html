@@ -104,14 +104,14 @@
   <meta name="description" content="存在的问题在8.00的飞码和快码中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。另一方面，飞码和快码的二字词空间非常有限，拥挤得很。 解决的办法将s和sb字开始的二字词房分流到sbb和sbbb空间，编码格式为s1b1b2和s1b1b2b2，码位合计有3150个。四码上的重码用aeiou来选择。不过，遗留的问题是，该空间不能支持在线造词，因为只有一套造词规则。发现有必要的词">
 <meta name="keywords" content="飞码,快码,优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="飞码和快码的优化">
+<meta property="og:title" content="飞码和快码的优化实验">
 <meta property="og:url" content="http://sbxlm.github.io/2019/08/15/fmkmyh/index.html">
 <meta property="og:site_name" content="声笔系列码">
 <meta property="og:description" content="存在的问题在8.00的飞码和快码中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。另一方面，飞码和快码的二字词空间非常有限，拥挤得很。 解决的办法将s和sb字开始的二字词房分流到sbb和sbbb空间，编码格式为s1b1b2和s1b1b2b2，码位合计有3150个。四码上的重码用aeiou来选择。不过，遗留的问题是，该空间不能支持在线造词，因为只有一套造词规则。发现有必要的词">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-15T09:08:48.156Z">
+<meta property="og:updated_time" content="2019-08-16T08:01:27.256Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="飞码和快码的优化">
+<meta name="twitter:title" content="飞码和快码的优化实验">
 <meta name="twitter:description" content="存在的问题在8.00的飞码和快码中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。另一方面，飞码和快码的二字词空间非常有限，拥挤得很。 解决的办法将s和sb字开始的二字词房分流到sbb和sbbb空间，编码格式为s1b1b2和s1b1b2b2，码位合计有3150个。四码上的重码用aeiou来选择。不过，遗留的问题是，该空间不能支持在线造词，因为只有一套造词规则。发现有必要的词">
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>飞码和快码的优化 | 声笔系列码</title>
+  <title>飞码和快码的优化实验 | 声笔系列码</title>
   
 
 
@@ -529,7 +529,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">飞码和快码的优化<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/_posts/fmkmyh.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+          <h2 class="post-title" itemprop="name headline">飞码和快码的优化实验<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/_posts/fmkmyh.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
 
               
             
@@ -555,12 +555,24 @@
                 
               
 
-              <time title="创建时间：2019-08-15 13:29:34 / 修改时间：17:08:48" itemprop="dateCreated datePublished" datetime="2019-08-15T13:29:34+08:00">2019-08-15</time>
+              <time title="创建时间：2019-08-15 13:29:34" itemprop="dateCreated datePublished" datetime="2019-08-15T13:29:34+08:00">2019-08-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-16 16:01:27" itemprop="dateModified" datetime="2019-08-16T16:01:27+08:00">2019-08-16</time>
               
             
           </span>
@@ -603,7 +615,9 @@
       
         <h2 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h2><p>在8.00的飞码和快码中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。另一方面，飞码和快码的二字词空间非常有限，拥挤得很。</p>
 <h2 id="解决的办法"><a href="#解决的办法" class="headerlink" title="解决的办法"></a>解决的办法</h2><p>将s和sb字开始的二字词房分流到sbb和sbbb空间，编码格式为s1b1b2和s1b1b2b2，码位合计有3150个。四码上的重码用aeiou来选择。不过，遗留的问题是，该空间不能支持在线造词，因为只有一套造词规则。发现有必要的词，只能修改码表，然后重新部署。</p>
-<h2 id="飞码中分流的二字词"><a href="#飞码中分流的二字词" class="headerlink" title="飞码中分流的二字词"></a>飞码中分流的二字词</h2><h2 id="快码中分流的二字词"><a href="#快码中分流的二字词" class="headerlink" title="快码中分流的二字词"></a>快码中分流的二字词</h2>
+<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p>实验发现，在不考虑s1b1b2型的时候，s1b1b2b2型的二字词只有1856个，而且常用的不到一半。然而，现有的二字词数量高达28000多个，分流效果实在太差，而且多产生一种输入模式，得不偿失。而且，sbbs空间的码位有11025个，理论上在不翻页的情况下进行字母选重的话都能容纳66150个词组。即使实际利用率只有30%，空间也足够了。况且，现在在不包括用户词组的情况下，允许的候选项为11，所以就更没有必要了。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>优化设想不成立。所以，决定保留现在的方法，将sbbbx作为声笔模式的单字输入编码，以便用户在不知道偏旁部首的情况下使用。</p>
+
       
     </div>
 
@@ -980,7 +994,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存在的问题"><span class="nav-number">1.</span> <span class="nav-text">存在的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决的办法"><span class="nav-number">2.</span> <span class="nav-text">解决的办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞码中分流的二字词"><span class="nav-number">3.</span> <span class="nav-text">飞码中分流的二字词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快码中分流的二字词"><span class="nav-number">4.</span> <span class="nav-text">快码中分流的二字词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存在的问题"><span class="nav-number">1.</span> <span class="nav-text">存在的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决的办法"><span class="nav-number">2.</span> <span class="nav-text">解决的办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">3.</span> <span class="nav-text">实验结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">4.</span> <span class="nav-text">结论</span></a></li></ol></div>
             
 
           </div>
