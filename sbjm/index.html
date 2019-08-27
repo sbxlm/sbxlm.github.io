@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="声笔系列码">
 <meta property="og:description" content="什么是声笔简码声笔简码就是建立在声笔码基础之上但比声笔码更简单的输入法，它同时基本上克服了声笔码的两个不足之处：码长不定和调头取笔。如果说声笔码是顶功的开山之作，那么声笔简码就是顶功的成熟之品，是总结声笔码、声笔飞码等顶功输入法的使用经验，并反复实验、改造的结晶，这个过程经历了漫长的十多年。在这十多年中，顶功输入法得到了蓬勃的发展，数十种顶功输入法应运而生。但是，它们都或多或少地面临类似的问题。声">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-27T06:01:57.074Z">
+<meta property="og:updated_time" content="2019-08-27T09:43:02.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔简码">
 <meta name="twitter:description" content="什么是声笔简码声笔简码就是建立在声笔码基础之上但比声笔码更简单的输入法，它同时基本上克服了声笔码的两个不足之处：码长不定和调头取笔。如果说声笔码是顶功的开山之作，那么声笔简码就是顶功的成熟之品，是总结声笔码、声笔飞码等顶功输入法的使用经验，并反复实验、改造的结晶，这个过程经历了漫长的十多年。在这十多年中，顶功输入法得到了蓬勃的发展，数十种顶功输入法应运而生。但是，它们都或多或少地面临类似的问题。声">
@@ -640,11 +640,11 @@
 <p>所以，用户应在可能的情况下尽量使用原生程序。</p>
 <h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><p>声笔简码极其简单，没有什么学习门坎。需要了解的基本内容是，用v表示零声母，用aeiou分别表示折、横、竖、点、撇五种笔画。然后，就是掌握字词的编码规则。声笔简码的RIME版和原生版的字词编码规则略有不同，而且RIME版的动态码长调整位为4，而原生版的为3。</p>
 <h3 id="声笔简码RIME版"><a href="#声笔简码RIME版" class="headerlink" title="声笔简码RIME版"></a>声笔简码RIME版</h3><p>RIME版的字词编码规则如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">单字：sbbb，即声母加前三个笔画。</span><br><span class="line">二字词：ssbb，即两字的声母加第二字的前两个笔画。</span><br><span class="line">三字词：sssb，即各字的声母加第三字的前一个笔画。</span><br><span class="line">多字词：ssss，即前三字的声母加末字的声母。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单字：sbbb，即声母加前三个笔画。</span><br><span class="line">二字词：ssbb，即两字的声母加第二字的前两个笔画。</span><br><span class="line">多字词：sssb，即前三字的声母加末字的前一个笔画。</span><br></pre></td></tr></table></figure>
 <p>其中，s表示声母，不区分平翘舌，b表示笔画。b用aeiou，s用剩余的英文字母。</p>
 <p>单字的简码分为三类，一码字需要空格上屏，二、三码字可被顶上屏。一码字有21个，它们是：b不 p平 m们 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而。二码字有105个，如：ga高 fa飞。二码字同时也是飞码（X）和快码（X）的强制性简码，在声笔系列码中有着很特殊的地位。一码字和二码字都是静态编码的强制性简码。三码字共有492个，如：jei机 dea到。三码字在RIME版中是静态的，而在原生版中是动态的。</p>
 <p>二字词的简码分为两类，二码二字词需要空格上屏，三码二字词可被顶上屏。二码二字词有441个，都是静态编码的强制性简码，如：gx关系 cj参加。三码二字词有2180个，如：sje数据 cje促进，它们在RIME版中是静态的，而在原生版中是动态的。</p>
-<p>三字词和多字词在RIME中有非强制性的简码，可用前三码加空格输入，而在原生程序中没有简码。三字词的例子如：jsje计算机 xfjo兴奋剂，多字词的例子如：fcls风餐露宿 zhrg中华人民共和国。</p>
+<p>三字词和多字词在RIME中采用相同的编码格式（统称为多字词），而在原生程序中多字词是四字及以上词组，第四码是末字声母的大写。三字词的例子如：jsj计算机，jsje接收机，多字词的例子如：fcl风餐露宿 zhri中华人民共和国。</p>
 <p>字词在输入完四码后，重码用aeiou进行选择，此时aeiou不再表示笔画，只是单纯的选择键。重码字词超过一页时，用句号和逗号进行翻页查找。第一候选项可以被顶上屏，非第一候选项在被选择一次或多次后会被调整到第一位。</p>
 <h3 id="声笔简码原生版"><a href="#声笔简码原生版" class="headerlink" title="声笔简码原生版"></a>声笔简码原生版</h3><p>原生版的字词编码规则如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">单字：sbbb(bb)，即声母加前三个笔画，加可选的第五、六笔画。</span><br><span class="line">二字词：s1s2b2b2(b1b1)，即两字的声母加第二字的前两个笔画，加可选的第一字前两笔。</span><br><span class="line">三字词：sssb，即各字的声母加第三字的前一个笔画。</span><br><span class="line">多字词：sssS，即前三字的声母加大写的末字声母。</span><br></pre></td></tr></table></figure>
