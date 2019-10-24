@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="声笔系列码">
 <meta property="og:description" content="概述声笔飞码是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码采用声母、笔画和偏旁部首来对汉字进行编码。声母不分平翘舌，零声母用v表示。横竖撇捺折五类笔画，分别用eiuoa来代表。 偏旁部首通常就是人们查字典时使用的偏旁部首。为了便于记忆，在声笔飞码中一般取偏旁部首（或其名称）的声母作为它的代码。但是，为了提高编码的效率，有的偏旁部首采取了形托">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-17T01:52:05.561Z">
+<meta property="og:updated_time" content="2019-10-24T02:11:23.544Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="概述声笔飞码是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码采用声母、笔画和偏旁部首来对汉字进行编码。声母不分平翘舌，零声母用v表示。横竖撇捺折五类笔画，分别用eiuoa来代表。 偏旁部首通常就是人们查字典时使用的偏旁部首。为了便于记忆，在声笔飞码中一般取偏旁部首（或其名称）的声母作为它的代码。但是，为了提高编码的效率，有的偏旁部首采取了形托">
@@ -232,7 +232,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>声笔首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>声笔博客</a>
 
   </li>
         
@@ -614,9 +614,9 @@
 <p>在声笔飞码中所取笔画并不一定是从汉字的第一笔开始取的，这依赖于偏旁部首是否位于字的前面。如果偏旁部首位于字的前面，即偏旁部首前没有任何其它的笔画，那么追加的笔画就除偏旁部首外的第一笔开始取，否则就从字本身的第一笔开始取。</p>
 <p>例如，<code>倒</code>字的偏旁部首<code>亻</code>是位于该字的前面的，所以追加的笔画应从除<code>亻</code>外的剩余部分即<code>到</code>的第一笔开始。再如，<code>坠</code>字的偏旁部首<code>土</code>是位于该字的后面的，不是位于字的前面，所以追加的笔画应从该字的第一笔开始。注意，有的字的偏旁部首是夹在了前后笔画的中间，如<code>戴</code>字的偏旁部首<code>戈</code>。这时，字的偏旁部首仍然不是位于字的前面，所以追加的笔画还是应从该字的第一笔开始。</p>
 <p>在声笔飞码中，对偏旁部首本身来说，第一个笔画的代码用<code>hspdz</code>而不是<code>eiuoa</code>表示；而对一般汉字来说，才用它所属偏旁部首的代码。这里的偏旁部首是指成字偏旁部首，即有读音的偏旁部首，非成字偏旁部首只能按纯笔画方式输入。为了区分常用字的重码，有几个部首字的编码没有取第一笔作为偏旁部首，这些字为<code>走敌麦香广</code>，它们都是取字的子部首。</p>
-<p>声笔飞码具有特殊的编码结构，给它的字词编码方式带来了巨大的灵活性，从而可以构造出三种类型的飞码。一是以单字输入见长的飞码S，二是以字均码长短为特点的飞码K，三是以词组输入见长的飞码X。飞码K均为静态编码，属于竞速性的盲打输入法，需要记住词组的级别才能实现高速盲打。飞码X与传统的四码定长输入法最为接近，更先进的地方是可以在线造词，动态调频和字母选重。飞码S则适合单字派使用，它以单字为主，辅以词组进行输入。当然，最好是能根据使用场景，切换使用三种类型的飞码，以充分利用它们各自的优势。</p>
+<p>声笔飞码具有特殊的编码结构，给它的字词编码方式带来了巨大的灵活性，从而可以构造出四种类型的飞码。有以单字输入见长、单字二码顶为特色的飞码S和飞码W，有以字均码长短、字词都三码顶为特点的飞码K，有以词组输入见长、类似传统四码定长输入法的飞码X。它们都可以在线造词，动态调频和字母选重。当然，最好是能根据使用场景，切换使用四种类型的飞码，以充分利用它们各自的优势。</p>
 <h2 id="声笔飞码X"><a href="#声笔飞码X" class="headerlink" title="声笔飞码X"></a>声笔飞码X</h2><h3 id="飞码X的编码格式"><a href="#飞码X的编码格式" class="headerlink" title="飞码X的编码格式"></a>飞码X的编码格式</h3><ul>
-<li>单字：<code>sb, spbbx</code>, 两码时需要加空格上屏，三码时可以顶屏</li>
+<li>单字：<code>sb, spbbx</code>, 两码时需要加空格上屏，三码时可以顶屏而省略空格</li>
 <li>二字词：<code>szszx</code>，取一、二字的前两码</li>
 <li>三字词：<code>ssszx</code>，取三字的第一码和第三字的第二码</li>
 <li>多字词：<code>ssssx</code>，取前三字的第一码和末字的第一码</li>
@@ -631,12 +631,13 @@
 <h3 id="飞码X的举例"><a href="#飞码X的举例" class="headerlink" title="飞码X的举例"></a>飞码X的举例</h3><p>例如，<code>女鬼食音见手</code>这样一些成字偏旁部首在输入时是这样的：<code>女nz_ 鬼gpi 食spo 音ydeo 见ji</code>。除其中<code>见 ji</code>是 sb 格式的字外，其它字的第一笔都要用<code>hspdz</code>的表示笔画。</p>
 <p>再如，对于<code>古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。</code>这句话，在输入时是这样的：<code>古gs_ 之zd_ 立lo_ 大de_ 事se_ 者ztu, 不b_ 惟wlu 有ya_ 超cza 世sc_ 之zd_ 才ch, 亦ywui 必bx_ 有ye_ 坚jtii 忍rxa 不b_ 拔bfeu 之zd_ 志zto。.</code>在此例中，<code>立</code>、<code>大</code>、<code>事</code>、<code>有</code>、<code>不</code>、<code>古</code>、<code>之</code>、<code>世</code>、<code>必</code>这些两码字都需要空格上屏，<code>者</code>和<code>才</code>字可被<code>,</code>顶上屏，<code>志</code>字被<code>.</code>顶上屏。</p>
 <h2 id="声笔飞码K"><a href="#声笔飞码K" class="headerlink" title="声笔飞码K"></a>声笔飞码K</h2><h3 id="飞码K的编码格式"><a href="#飞码K的编码格式" class="headerlink" title="飞码K的编码格式"></a>飞码K的编码格式</h3><ul>
-<li>单字：<code>sb</code>, <code>spbbx</code> </li>
-<li>二字词：<code>szsbx</code>，取首字的前两码、次字的声母和次字的首笔</li>
+<li>单字：<code>sb</code>, <code>spbbx</code></li>
+<li>二字词：<code>sbb</code>, <code>szsbx</code>，取首字的前两码、次字的声母和次字的首笔</li>
 <li>三字词：<code>sssbx</code>，取三字的声母和第三字的首笔</li>
 <li>多字词：<code>sssSx</code>，取前三字的声母和末字声母的大写</li>
 </ul>
 <p>其中，s表示声母，b表示笔画，z表示偏旁p或b，x表示选择键。s 和 p 均采用 aeiou 以外的 21 个辅音字母，而 b 和 x 均采用 aeiou 这几个元音字母。</p>
+<p>单字中，声母加首笔编码的<code>sb</code>字有105个，它们与声笔简码的二简字完全一样，但与飞码K的常规字有不同的输入路径，而且是强制性的。为了避免死记硬背，输入法提供了滤镜。只要打开滤镜，当输第一码时就会提示以该声母开始的五个<code>sb</code>字，如果它们不是你想要的，你再使用常规编码输，这和强制性一简字是类似的。</p>
 <h3 id="飞码K的收词原则"><a href="#飞码K的收词原则" class="headerlink" title="飞码K的收词原则"></a>飞码K的收词原则</h3><ul>
 <li>舍弃达到四码时时重码序数大于23的词组，即重码数限制在四页以内。</li>
 <li>支持自动造词和自动调频。</li>
