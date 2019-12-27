@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="声笔系列码">
 <meta property="og:description" content="简单介绍声笔拼音和传统拼音输入法非常类似，唯一的差异是以a e o开始的零声母音节的声母用v来代表。这样，在一串拼音中基本上可以完全确定音节的界线，从而可以提高拼音汉字转换的准确性。另外，由于所有的音节都不以a e i o u开头了，所以能够不加切换地用它们来进行笔画反查，这时a e i o u分别表示折 横 竖 捺 撇五种笔画。 在传统拼音输入法中，常常会产生音节的切分歧义。比如，pingan可">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-04T07:20:31.532Z">
+<meta property="og:updated_time" content="2019-12-27T05:07:46.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
 <meta name="twitter:description" content="简单介绍声笔拼音和传统拼音输入法非常类似，唯一的差异是以a e o开始的零声母音节的声母用v来代表。这样，在一串拼音中基本上可以完全确定音节的界线，从而可以提高拼音汉字转换的准确性。另外，由于所有的音节都不以a e i o u开头了，所以能够不加切换地用它们来进行笔画反查，这时a e i o u分别表示折 横 竖 捺 撇五种笔画。 在传统拼音输入法中，常常会产生音节的切分歧义。比如，pingan可">
@@ -609,9 +609,18 @@
 <p>在传统拼音输入法中，常常会产生音节的切分歧义。比如，<code>pingan</code>可以是<code>ping&#39;an</code>，也可以是<code>pin&#39;gan</code>，而在声笔拼音中<code>pingvan</code>是没有切分歧义的，只可能是<code>ping&#39;van</code>。再如，<code>斗志昂扬</code>的简拼，在传统拼音中为<code>dzay</code>，可以切分为<code>d&#39;za&#39;y</code>或者<code>d&#39;z&#39;a&#39;y</code>；而在声笔拼音中，其简拼为<code>dzvy</code>，是没有切分歧义的。又如，在传统拼音中，<code>xian</code>也可能是<code>xi&#39;an</code>，而在声笔拼音中，后者必须拼写为<code>xivan</code>，从而避免了歧义。</p>
 <p>声笔拼音还被声笔系列码的所有其它方案用来进行拼音反查，所以一定要知道它的用法，否则在拼音反查时会遇到困难。声笔拼音的收词量也是20万，与除声笔智能外的其它声笔系列方案一致，这也是为了便于进行拼音反查。</p>
 <h3 id="单字的输入"><a href="#单字的输入" class="headerlink" title="单字的输入"></a>单字的输入</h3><p>声笔拼音对21个一简单字的编码进行了固顶处理，亦即一简字的输入码是固定不变的，有利于形成条件反射，加快输入速度。它们是：<code>b不 p平 m没 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而</code>。</p>
-<p>输入全拼时，同一个编码上的首选字是动态变化的，往往您经常使用和最近使用过的字。</p>
-<p>如果要输入不常用的单字，特别是罕见字，那么往往要多次翻页查找才能成功。声笔拼音可以通过在全拼后追加笔画加速重码字的过滤，以便快速地输入罕见字。笔画仍然是用<code>a e i o u</code>分别表示<code>折 横 竖 捺 撇</code>，最多可以追加四笔。但是，追加的第一笔需要使用大写字母。</p>
-<h3 id="二字词的输入"><a href="#二字词的输入" class="headerlink" title="二字词的输入"></a>二字词的输入</h3><h3 id="三字词的输入"><a href="#三字词的输入" class="headerlink" title="三字词的输入"></a>三字词的输入</h3><h3 id="多字词的输入"><a href="#多字词的输入" class="headerlink" title="多字词的输入"></a>多字词的输入</h3>
+<p>输入全拼音节时，同一个编码上的首选字是动态变化的，它是您经常使用和最近使用过的字。例如：<code>麟</code>一般不是位于首位的，但是当您选择一次以后，下次输入可能就出现在第一位了。</p>
+<p>如果要输入不常用的单字，特别是罕见字，那么往往要多次翻页查找才能成功。声笔拼音可以通过在全拼后追加笔画加速重码字的过滤，以便快速地输入罕见字。笔画仍然是用<code>a e i o u</code>分别表示<code>折 横 竖 捺 撇</code>，最多可以追加四笔。但是，追加的第一笔需要使用大写字母。例如：<code>骐</code>字，如果不追加笔画的话，需要多次翻页才能找到，而且很容易看漏，而加上前三笔后就过滤到第一页的首位了，非常快捷。</p>
+<h3 id="二字词的输入"><a href="#二字词的输入" class="headerlink" title="二字词的输入"></a>二字词的输入</h3><p>由于中文里，二字词的数量是最多的，而它们的使用频率又大不一样，加之拼音输入法的灵活多变，如何找到最佳的输入路径就成了一件十分讲究的事情。</p>
+<p>有的初学者全部使用简拼，而有的又走另一个极端，全部使用全拼。这两条路径都是不太好的，不推荐这样使用。全部使用简拼的话，虽然高频词的码长很短，但是其它字可能需要多次翻页寻找才能找到，总体效率反而低下。全部使用全拼的话，虽然重码大大减少，但是用键太多，效率也不高。</p>
+<p>因此，我们推荐的是以下两条输入路径：路径之一是简拼优先，然后追加第二字的韵母；路径之二是混拼优先，然后追加第二字的韵母。而最佳策略是将路径一和路径二结合起来使用。用户首先预估待输入二字词的使用频率，如果是高频的就采用路径一，如果是低频的就采用路径二。由于低频的词组在输入一次后，其权重会快速提高，所以重复输入的时候就可以采用路径二了。</p>
+<h3 id="三字词的输入"><a href="#三字词的输入" class="headerlink" title="三字词的输入"></a>三字词的输入</h3><p>中文里的三字词数量比二字词少得多，而且编码信息更丰富，所以重码大量减少。在一般情况下，采用简拼进行输入就行了，必要时追加末字的韵母。如果预计待输入的三字词重码可能太多，那么可以第一字使用全拼，以便离散重码。</p>
+<h3 id="多字词的输入"><a href="#多字词的输入" class="headerlink" title="多字词的输入"></a>多字词的输入</h3><p>在中文里，虽然多字词数量也是很大的，其中还有大量的成语和谚语，但是编码信息非常丰富，重码很少，所以单纯采用简拼输入就够了。个别情况下，可以追加末字的韵母。</p>
+<h3 id="生词的输入"><a href="#生词的输入" class="headerlink" title="生词的输入"></a>生词的输入</h3><p>无论一款输入法收录了多少词组，生词都是不可避免的，声笔拼音也不例外。最佳的生词输入方式与已有词组是大不相同的。用户首先需要对生词有一个预判，然后采用不同的输入路径。如果预判为生词，无论是几字词，都要采用全拼，然后通过选择单字和词组的重码来组词。例如，预估<code>声笔拼音</code>为生词，那么就输入<code>shengbipinyin</code>，然后依次选择<code>声</code>、<code>笔</code>和<code>拼音</code>，就可以将它们组合成词。下次输入时，就可以直接用<code>sbpy</code>来输入<code>声笔拼音</code>了。</p>
+<h3 id="短语的输入"><a href="#短语的输入" class="headerlink" title="短语的输入"></a>短语的输入</h3><p>采用字词方式输入的时候，在末尾都需要添加空格键上屏。为了节约空格键，可以将多个字词组合成短语来输入。但是，这种方法要谨慎使用，因为用不好的话，往往会弄巧成拙，不能如愿，结果导致烦人的回改。特别是简拼和混拼组合输入短语时，常常得不到你想要的结果。推荐的做法是，仅仅将短语输入方式用于一些常用字词的组合，例如<code>就行了</code>、<code>就可以</code>、<code>这就是说</code>等。</p>
+<h3 id="整句的输入"><a href="#整句的输入" class="headerlink" title="整句的输入"></a>整句的输入</h3><p>使用声笔拼音时，并不推荐采用整句模式，虽然如果采用全拼的话，效果也会不错的。这是因为，一方面全拼用键太多，效率不高；另一方面在输入一长串拼音时，出错的概率会成指数级的增长，而且纠错的成本也要高得多。虽然声笔拼音提供了快速定位的手段，可以在一定程度上降低纠错成本，但是仍然有点得不偿失。</p>
+<h3 id="快速定位"><a href="#快速定位" class="headerlink" title="快速定位"></a>快速定位</h3><p>在短语输入、整句输入和生词输入时，往往需要对字、词进行定位，以便选择重码和追加笔画，一般拼音输入法是通过移动光标来定位的。存在的问题是，常常需要多次移动，效率底下。而声笔拼音提供了一种快速定位的方法，可以利用数字<code>67890</code>将光标一次性地定位到待定的第1至5个音节之后，只有<code>12345</code>用于选择重码。</p>
+
         
       </div>
       
@@ -919,7 +928,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍"><span class="nav-number">1.</span> <span class="nav-text">简单介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单字的输入"><span class="nav-number">1.1.</span> <span class="nav-text">单字的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二字词的输入"><span class="nav-number">1.2.</span> <span class="nav-text">二字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三字词的输入"><span class="nav-number">1.3.</span> <span class="nav-text">三字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多字词的输入"><span class="nav-number">1.4.</span> <span class="nav-text">多字词的输入</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍"><span class="nav-number">1.</span> <span class="nav-text">简单介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单字的输入"><span class="nav-number">1.1.</span> <span class="nav-text">单字的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二字词的输入"><span class="nav-number">1.2.</span> <span class="nav-text">二字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三字词的输入"><span class="nav-number">1.3.</span> <span class="nav-text">三字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多字词的输入"><span class="nav-number">1.4.</span> <span class="nav-text">多字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生词的输入"><span class="nav-number">1.5.</span> <span class="nav-text">生词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#短语的输入"><span class="nav-number">1.6.</span> <span class="nav-text">短语的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整句的输入"><span class="nav-number">1.7.</span> <span class="nav-text">整句的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速定位"><span class="nav-number">1.8.</span> <span class="nav-text">快速定位</span></a></li></ol></li></ol></div>
             
 
           </div>
