@@ -111,7 +111,9 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.github.io/images/bushou.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/sbfmzj.jpg">
-<meta property="og:updated_time" content="2019-12-27T05:29:06.093Z">
+<meta property="og:image" content="http://sbxlm.github.io/images/fmts.jpg">
+<meta property="og:image" content="http://sbxlm.github.io/images/fmxc.jpg">
+<meta property="og:updated_time" content="2020-01-06T08:56:01.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="概述声笔飞码是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码采用声母、笔画和偏旁部首来对汉字进行编码。声母不分平翘舌，零声母用v表示。横竖撇捺折五类笔画，分别用eiuoa来代表。 偏旁部首通常就是人们查字典时使用的偏旁部首。为了便于记忆，在声笔飞码中一般取偏旁部首（或其名称）的声母作为它的代码。但是，为了提高编码的效率，有的偏旁部首采取了形托">
@@ -255,25 +257,6 @@
     
 
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-star"></i> <br>总体介绍</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-terms">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/terms/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>术语解释</a>
 
   </li>
         
@@ -569,9 +552,6 @@
       
       
     
-      
-      
-    
     
 
   
@@ -626,15 +606,33 @@
 <li>多字词 <code>s1s2s3s0x</code></li>
 </ul>
 <p>其中，<code>^</code>表示起始顶屏码位，数字表示词组中的第几个字，0特别地表示末字；s表示声母，p表示偏旁部首，b和f表示笔画，x表示选择键，z表示p或b；s 和 p 均采用 aeiou 以外的 21 个英文字母，而 b 和 x 均采用 aeiou 这几个元音字母，f采用<code>&#39;,;./</code>。</p>
-<h2 id="声笔飞码的输入例解"><a href="#声笔飞码的输入例解" class="headerlink" title="声笔飞码的输入例解"></a>声笔飞码的输入例解</h2><p><strong>例1:</strong><code>女鬼食音见手</code><br>输入：<code>女nz_ 鬼gpi 食spo 音ydeo 见ji 手su</code><br>以上例1是一些成字偏旁部首，除<code>见ji 手su</code>和是 sb 格式的字外，其它字的第一笔都要用<code>hspdz</code>的表示笔画。</p>
-<p><strong>例2:</strong><code>古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。</code><br>输入：<code>古gs_ 之zd_ 立lo 大de 事se 者ztu, 不b_ 惟wlu 有ye 超cza 世sc_ 之zd_ 才ch, 亦ywui 必bx_ 有ye 坚jtii 忍rxa 不b_ 拔bfeu 之zd_ 志zto。.</code></p>
-<p><strong>例3:</strong><code>我们都喜欢研究输入法</code><br>输入：<code>我们w/ 都dv_ 喜欢xthy 研究ysjx 输入法srfd</code></p>
 <h2 id="声笔飞码的收词原则"><a href="#声笔飞码的收词原则" class="headerlink" title="声笔飞码的收词原则"></a>声笔飞码的收词原则</h2><ul>
 <li>一共收录了16万4千词组，基于微软拼音、现代汉语词典、新华字典、成语词典和搜狗词库，并综合采用了北语词频和搜狗词频；</li>
 <li>不收录按单字输入时只需四键的二字词，即不收录126个sb（含声母+空格）字构成的二字词；</li>
 <li>收录了105个超高频率的两键二字词，其编码格式为<code>s1f2</code>，它们在输入第一码后是有提示的，不用死记；</li>
 <li>利用其空闲的<code>spb</code>编码空间收录了高频的<code>s1s2b2</code>格式二字词63个，列于本文后的附录中。</li>
 </ul>
+<h2 id="单字的输入"><a href="#单字的输入" class="headerlink" title="单字的输入"></a>单字的输入</h2><p>声笔飞码的单字，除了传统四码输入法的一简字、二简字、三简字和全码字而外，还有特殊的105个声笔字。</p>
+<h3 id="一简字和声笔字"><a href="#一简字和声笔字" class="headerlink" title="一简字和声笔字"></a>一简字和声笔字</h3><p>一简字有21个，用声母加空格输入，所以又称为声空字。声空字和声笔字都只需要两键就可以输入，故合称为两键字，共有126个。这126个两键字在声笔简码和声笔快码中也是完全一样的。两键字在声笔飞码中占有非常重要的地位，需要形成条件反射才能用好飞码，因为在输入二字词时要通过它们来判断采用哪种输入方式。其中，21个声空字为：<code>不平没发的他你了个可和就去下在出是人而一我</code>；105个声笔字如下：</p>
+<div class="note primary no-icon">
+            <p>如同孔明自快话，开口正道无怕经，二双公民来前线<br>年内安然回南国，若说阿维当农夫，片上方家暗笑她<br>进得高中好体面，心想事成且大为，别看晚儿那小子<br>强力对手也头破，从此把着全日用，除非白天会给还<br>部分次品立飞过，让利几起眼皮边，名们里外有意见</p>
+          </div>
+<p>由于以上105个声笔字与其它字有着不同的输入路径，而且是强制性的简码，为了减轻用户的记忆负担，在输入声母后，就对它们进行了提示，如下图所示。这样，初学者只有在观察到提示中没有想要的单字时才输入后面的编码。</p>
+<p><img src="/images/fmts.jpg" alt="声笔飞码提示"></p>
+<p>声笔飞码的单字效率之所以比五笔字型、自然码和小鹤音形之类的四码输入法高，原因之一就是多了这105个声笔字，它们占了单字累计频率的22%。</p>
+<h3 id="二简字和三简字"><a href="#二简字和三简字" class="headerlink" title="二简字和三简字"></a>二简字和三简字</h3><p>与传统输入法一样，声笔飞码的二简字前两码加空格来输入，例如：<code>解jj_ 所sj_ 摸_</code>等等，其中<code>_</code>表示空格。当然，如果后接的是数字、标点符号等非编码字符时，这个空格仍然是可以省略的。</p>
+<p>与传统输入法不一样的是，声笔飞码的三简字在连续输入时是无需空格键的，例如：<code>慕mxe 覆fxu 您nxu</code>等等。当然，如果没有后续的输入而要马上上屏的时候，仍然需要空格。但是，这种情况在正常的输入过程中是很少的。三简字不需要空格上屏是声笔飞码单字比传统输入法高效的另一个重要原因。</p>
+<h3 id="全码字"><a href="#全码字" class="headerlink" title="全码字"></a>全码字</h3><p>声笔飞码的全码也是四码，这点与传统四码输入法是一样的。但是，在出现重码字时，声笔飞码采用了更加快捷的选择方式，不是用数字键，而是用<code>aeiou</code>来进行选择，例如：</p>
+<p><img src="/images/fmxc.jpg" alt="声笔飞码选重"></p>
+<h2 id="词组的输入"><a href="#词组的输入" class="headerlink" title="词组的输入"></a>词组的输入</h2><p>声笔飞码在输入词组的时候，二字词是很特殊的，三字词和多字词与传统输入法类似。在有重码的时候，与单字全码输入时一样，通过<code>aeiou</code>来选择重码。</p>
+<h3 id="二字词的输入"><a href="#二字词的输入" class="headerlink" title="二字词的输入"></a>二字词的输入</h3><h4 id="超级简码"><a href="#超级简码" class="headerlink" title="超级简码"></a>超级简码</h4><p>为了提高输入效率，声笔飞码为二字词设计了105个非强制性的超级简码，其输入方法是首字的声母加第二字的首笔，不过是用<code>&#39;,;./</code>代替<code>aeiou</code>来表示笔画的，如下图所示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">b &apos;不好 ,不过 ;宝贝 .北京 /必须</span><br><span class="line">c &apos;除了 ,出来 ;此时 .成为 /出手</span><br><span class="line">d &apos;弟子 ,第一 ;但是 .地方 /当然</span><br><span class="line">f &apos;发展 ,发现 ;非常 .方法 /发生</span><br><span class="line">g &apos;姑娘 ,过去 ;共同 .国家 /工作</span><br><span class="line">h &apos;孩子 ,还有 ;还是 .会议 /忽然</span><br><span class="line">j &apos;继续 ,今天 ;就是 .经济 /进行</span><br><span class="line">k &apos;可以 ,看到 ;可是 .科学 /看看</span><br><span class="line">l &apos;领导 ,离开 ;历史 .立刻 /老人</span><br><span class="line">m &apos;面对 ,没有 ;美国 .目前 /明白</span><br><span class="line">n &apos;女子 ,那样 ;那些 .难道 /你们</span><br><span class="line">p &apos;旁边 ,朋友 ;贫困 .漂亮 /脾气</span><br><span class="line">q &apos;妻子 ,起来 ;企业 .情况 /其他</span><br><span class="line">r &apos;人民 ,然而 ;如果 .认为 /如何</span><br><span class="line">s &apos;所以 ,市场 ;世界 .说道 /什么</span><br><span class="line">t &apos;提出 ,通过 ;同时 .提高 /他们</span><br><span class="line">v &apos;儿子 ,案板 ;而且 .欧洲 /爱人</span><br><span class="line">w &apos;为了 ,武功 ;问题 .无法 /我们</span><br><span class="line">x &apos;系统 ,现在 ;心中 .希望 /先生</span><br><span class="line">y &apos;已经 ,一样 ;一点 .因为 /一个</span><br><span class="line">z &apos;自己 ,这样 ;中国 .知道 /这个</span><br></pre></td></tr></table></figure>
+<h4 id="sbbb型词组"><a href="#sbbb型词组" class="headerlink" title="sbbb型词组"></a>sbbb型词组</h4><p>声笔飞码有一类非常特别的二字词，即sbbb型词组，更确切的格式为s1b1b2^b2，意为：首字声母和首笔（或空格）加第二字的前两笔，从第三码开始顶屏。也就是说，凡是两键字（含声空字和声笔字）打头的二字词都要采用这种格式来输入。要注意的是，如果二字词中的两个字都是两键字的话，声笔飞码是不收录的，所以就要用单字来输入，因为这样效率更高，同时还节约了编码空间。</p>
+<p>之所以要设计这类二字词，一方面是为了能够只用两键来输入声笔字，另一方面还可以增加525个s1b1b2型的三键二字词，有助于同时提高声笔飞码的单字和二字词效率，虽然在一定程度上增加了二字词输入的复杂性也是很值得的。</p>
+<h4 id="szsz型词组"><a href="#szsz型词组" class="headerlink" title="szsz型词组"></a>szsz型词组</h4><h3 id="三字词的输入"><a href="#三字词的输入" class="headerlink" title="三字词的输入"></a>三字词的输入</h3><h3 id="多字词的输入"><a href="#多字词的输入" class="headerlink" title="多字词的输入"></a>多字词的输入</h3><h2 id="综合输入示例"><a href="#综合输入示例" class="headerlink" title="综合输入示例"></a>综合输入示例</h2><p><strong>例1:</strong><code>女鬼食音见手</code><br>输入：<code>女nz_ 鬼gpi 食spo 音ydeo 见ji 手su</code><br>以上例1是一些成字偏旁部首，除<code>见ji 手su</code>和是 sb 格式的字外，其它字的第一笔都要用<code>hspdz</code>的表示笔画。</p>
+<p><strong>例2:</strong><code>古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。</code><br>输入：<code>古gs_ 之zd_ 立lo 大de 事se 者ztu, 不b_ 惟wlu 有ye 超cza 世sc_ 之zd_ 才ch, 亦ywui 必bx_ 有ye 坚jtii 忍rxa 不b_ 拔bfeu 之zd_ 志zto。.</code></p>
+<p><strong>例3:</strong><code>我们大家都喜欢研究输入法</code><br>输入：<code>我们w/ 大de 家jo 都dv_ 喜欢xthy 研究ysjx 输入法srfd</code></p>
+<h2 id="词组的管理"><a href="#词组的管理" class="headerlink" title="词组的管理"></a>词组的管理</h2><h3 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h3><h3 id="词组的删除"><a href="#词组的删除" class="headerlink" title="词组的删除"></a>词组的删除</h3><h2 id="动态调频"><a href="#动态调频" class="headerlink" title="动态调频"></a>动态调频</h2><p>当四码字词有重码的时候，如果选择了某个非首位的字词，那么它的频率权重就会提高，在下次输入的时候，其排序就会提前。一般通过一、两次选择就可以提前到首位，从而就能利用顶屏来节约一次按键。</p>
 <h2 id="附录：spb型高频二字词"><a href="#附录：spb型高频二字词" class="headerlink" title="附录：spb型高频二字词"></a>附录：<code>spb</code>型高频二字词</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">胆敢	dga</span><br><span class="line">吩咐	ffi</span><br><span class="line">法国	fgi</span><br><span class="line">覆盖	fgo</span><br><span class="line">愤慨	fko</span><br><span class="line">风流	flo</span><br><span class="line">飞跑	fpi</span><br><span class="line">附图	fti</span><br><span class="line">房屋	fwa</span><br><span class="line">反响	fxi</span><br><span class="line">放心	fxo</span><br><span class="line">宫娥	gva</span><br><span class="line">姮娥	hva</span><br><span class="line">考验	kya</span><br><span class="line">空中	kzi</span><br><span class="line">毛病	mbo</span><br><span class="line">女兵	nbu</span><br><span class="line">能够	ngu</span><br><span class="line">女仆	npu</span><br><span class="line">泥土	nte</span><br><span class="line">牛蛙	nwi</span><br><span class="line">凝望	nwo</span><br><span class="line">女性	nxo</span><br><span class="line">男装	nzo</span><br><span class="line">旁观	pga</span><br><span class="line">苹果	pgi</span><br><span class="line">批量	pli</span><br><span class="line">咆哮	pxi</span><br><span class="line">入编	rba</span><br><span class="line">日光	rgi</span><br><span class="line">乳虎	rhi</span><br><span class="line">容量	rli</span><br><span class="line">乳品	rpi</span><br><span class="line">任凭	rpu</span><br><span class="line">软驱	rqa</span><br><span class="line">容器	rqi</span><br><span class="line">热气	rqu</span><br><span class="line">嚷嚷	rri</span><br><span class="line">入睡	rsi</span><br><span class="line">融通	rta</span><br><span class="line">入团	rti</span><br><span class="line">人啊	rvi</span><br><span class="line">任务	rwu</span><br><span class="line">仁兄	rxi</span><br><span class="line">认罪	rzi</span><br><span class="line">驼绒	tra</span><br><span class="line">堂屋	twa</span><br><span class="line">同学	txo</span><br><span class="line">二队	vda</span><br><span class="line">爱国	vgi</span><br><span class="line">谙练	vla</span><br><span class="line">爱恋	vlo</span><br><span class="line">安宁	vno</span><br><span class="line">鞍辔	vpa</span><br><span class="line">矮胖	vpu</span><br><span class="line">爱屋	vwa</span><br><span class="line">耳闻	vwo</span><br><span class="line">儿戏	vxa</span><br><span class="line">恶心	vxo</span><br><span class="line">案子	vza</span><br><span class="line">按照	vzi</span><br><span class="line">外婆	wpo</span><br><span class="line">外衣	wyo</span><br></pre></td></tr></table></figure>
 
         
@@ -944,7 +942,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔飞码的编码格式"><span class="nav-number">2.</span> <span class="nav-text">声笔飞码的编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔飞码的输入例解"><span class="nav-number">3.</span> <span class="nav-text">声笔飞码的输入例解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔飞码的收词原则"><span class="nav-number">4.</span> <span class="nav-text">声笔飞码的收词原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：spb型高频二字词"><span class="nav-number">5.</span> <span class="nav-text">附录：spb型高频二字词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔飞码的编码格式"><span class="nav-number">2.</span> <span class="nav-text">声笔飞码的编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔飞码的收词原则"><span class="nav-number">3.</span> <span class="nav-text">声笔飞码的收词原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单字的输入"><span class="nav-number">4.</span> <span class="nav-text">单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一简字和声笔字"><span class="nav-number">4.1.</span> <span class="nav-text">一简字和声笔字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二简字和三简字"><span class="nav-number">4.2.</span> <span class="nav-text">二简字和三简字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全码字"><span class="nav-number">4.3.</span> <span class="nav-text">全码字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词组的输入"><span class="nav-number">5.</span> <span class="nav-text">词组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二字词的输入"><span class="nav-number">5.1.</span> <span class="nav-text">二字词的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#超级简码"><span class="nav-number">5.1.1.</span> <span class="nav-text">超级简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sbbb型词组"><span class="nav-number">5.1.2.</span> <span class="nav-text">sbbb型词组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#szsz型词组"><span class="nav-number">5.1.3.</span> <span class="nav-text">szsz型词组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三字词的输入"><span class="nav-number">5.2.</span> <span class="nav-text">三字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多字词的输入"><span class="nav-number">5.3.</span> <span class="nav-text">多字词的输入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#综合输入示例"><span class="nav-number">6.</span> <span class="nav-text">综合输入示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词组的管理"><span class="nav-number">7.</span> <span class="nav-text">词组的管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动造词"><span class="nav-number">7.1.</span> <span class="nav-text">自动造词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词组的删除"><span class="nav-number">7.2.</span> <span class="nav-text">词组的删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态调频"><span class="nav-number">8.</span> <span class="nav-text">动态调频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：spb型高频二字词"><span class="nav-number">9.</span> <span class="nav-text">附录：spb型高频二字词</span></a></li></ol></div>
             
 
           </div>
@@ -972,7 +970,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
