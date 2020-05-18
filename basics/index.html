@@ -121,7 +121,7 @@
 <meta property="og:image" content="http://sbxlm.github.io/images/ljts.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/ljkz01.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/ljkz02.png">
-<meta property="og:updated_time" content="2020-05-11T08:56:09.127Z">
+<meta property="og:updated_time" content="2020-05-18T00:11:07.331Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基本操作">
 <meta name="twitter:description" content="本章叙述声笔系列码各款输入法的一些具有共性的基本操作。如果要详细了解某一款输入法，请进一步阅读具体的章节。 安装与卸载声笔系列码的卸载很简单。在Windows上，通过控制面板里的卸载程序功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。 声笔系列码的安装是比较麻烦的，因运行的平台而异，以下详细介绍声笔系列码在各种平台上的安装方法。 在Wind">
@@ -359,7 +359,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">55</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">57</span></a>
 
   </li>
         
@@ -397,7 +397,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">25</span></a>
 
   </li>
         
@@ -941,15 +941,14 @@
 </tbody>
 </table>
 </div>
-<h3 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h3><p>一个输入法，不管自身收录了多少词组，在用户使用的时候总会多多少少地发现有缺词的现象。目前，声笔简码采用了RIME的空格造词功能来进行自动造词，即在需要组词的字词后加空格结束，系统就会将这些字词组合成词。但是，需要注意以下几点：</p>
+<h3 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h3><p>一个输入法，不管自身收录了多少词组，在用户使用的时候总会多多少少地发现有缺词的现象。目前，声笔简码已经实现了全自动造词，系统会将连续输入的字词按枚举方式组合成新的词组，默认的组词长度限制为5。虽然这个限制可以在方案里放宽，但是可能会影响输入法的性能，所以要谨慎为之。需要注意以下几点：</p>
 <ul>
 <li>汉字对应的所有组词码都会进行组合造词，例如<code>系</code>字在声笔简码中的组词码为<code>xua</code>和<code>jua</code>，那么这两个组词码都会枚举式地参与组词；</li>
-<li>所有连续地以空格结束的字词都会按排列组合成新词，如果依次输入了<code>声 笔 系列 码</code>这些字词，那么就会组合成<code>声笔 声笔系列 声笔系列码 笔系列码 系列码</code>这些词组；</li>
+<li>所有连续输入的字词都会按排列组合成新词，如果依次输入了<code>声 笔 系列 码</code>这些字词，那么就会组合成<code>声笔 声笔系列 声笔系列码 笔系列码 系列码</code>这些词组；</li>
 <li>所有新组合成的词组都是带太极符的临时词组，在重码词中的位置是排列在后面的，只有在被选择一次以后才会成为正式的用户词组，才会增加权重而往前排列；</li>
 <li>新造的词组如果马上用退格键删除，那么系统将不会记录这些词组；</li>
-<li>中途有标点、数字、被顶的字词等，组词过程就会中断。</li>
+<li>中途有标点、数字等，组词过程就会中断，它们之前和之后的字词不会参与组词。</li>
 </ul>
-<p>从以上描述可以看出，如果要造长词的话，将会产生组合爆炸，从而影响系统的性能，所以声笔简码限制了组词最大长度不超过五个字；同时，RIME的字词可能产生废词，而且要选择过至少一次后才能缩短码长或者调频到重码的前面。</p>
 <h3 id="词组删除"><a href="#词组删除" class="headerlink" title="词组删除"></a>词组删除</h3><p>在电脑上，通过箭头键左右移动到待删除的词组，再按Control + Delete；在手机上，通过左右滑动空格键移动到待删除的词组，再上滑空格键。当然，具体用哪个键来执行删除功能，是可以通过键绑定来修改的。</p>
 <p>注意，只有自造的用户词组才可以删除，系统词组只有编辑Dict文件才能修改。而且，当用户词组用过一遍，不带太极符时，需要删除两次才能完全删除；第一次删除后，只是恢复太极符而成为临时词组。当然，即使一个词组被完全删除了，也可以通过重新造词将其恢复。实际上，系统并没有真正在物理上删除，只是做了删除标记，连权重都是保留了下来的，恢复的时候则去掉删除标记。</p>
 <h3 id="词库同步"><a href="#词库同步" class="headerlink" title="词库同步"></a>词库同步</h3><p>在用户同时使用多种设备，如台电脑、手机等时，新造的词组，码长调整和频率调整的结果都需要同步。RIME提供了同步用户词组的功能，可以满足这种需求。</p>
@@ -1020,7 +1019,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1172,7 +1171,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
