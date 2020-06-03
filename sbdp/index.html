@@ -117,7 +117,7 @@
 <meta property="og:image" content="http://sbxlm.github.io/images/sjjc.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/dplz1.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/dplz2.gif">
-<meta property="og:updated_time" content="2020-06-03T07:21:15.813Z">
+<meta property="og:updated_time" content="2020-06-03T08:22:06.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔顶拼">
 <meta name="twitter:description" content="概述声笔顶拼属于拼音为主的输入法。实际上，在声笔系列码中，还有两型以拼音为主的输入法，它们是声笔拼音和声笔顶整。声笔顶拼是这三型中效率最高的一型，也是极力推荐大家使用的一型。所以，本文将详细讲解声笔顶拼的使用方法，仅在末尾用两节来介绍声笔拼音和声笔顶拼。 声笔顶拼的目的是让现有的拼音输入法用户以最小的学习代价就能大大地提升输入的效率。它通过对汉语拼音的简化和巧妙的字词编码，在保持易学的前提下，既能">
@@ -604,7 +604,7 @@
 <p>再如，<code>逝世</code>的初始输入码为<code>ssieie</code>，如果输入了<code>逝世</code>，那么它的输入码可能缩短为<code>ssi</code>或<code>ssie</code>，具有相同前缀的<code>实施</code>、<code>事实</code>和<code>损失</code>的输入码就可能会跟着发生相应的变化。</p>
 <h3 id="空位词组"><a href="#空位词组" class="headerlink" title="空位词组"></a>空位词组</h3><p>从编码的角度来讲，汉语拼音的编码效率是很低的。声笔顶拼对汉语拼音进行了适当的简化和压缩，但是二码单字码位仍然有七个空闲的。为了把这些空码位充分利用起来，在上面安排了常见的词组。为了避免死记，对这类词组进行了提示，如下图中的<code>口水</code>一词。</p>
 <p><img src="/images/dpkwc.png" alt="顶拼空位词"></p>
-<p>以下列出了所有七个顶拼空位词组。</p>
+<p>以下列出了所有七个顶拼空位词组。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">防止	fi</span><br><span class="line">赶紧	gi</span><br><span class="line">何时	hi</span><br><span class="line">口水	ki</span><br><span class="line">安上	vi</span><br><span class="line">而今	vu</span><br><span class="line">违背	wi</span><br></pre></td></tr></table></figure>
 <h2 id="三字词的输入"><a href="#三字词的输入" class="headerlink" title="三字词的输入"></a>三字词的输入</h2><p>声笔顶拼没有静态的三字词，所有三字词均是动态的，可以有三至六码。常用的三字词，输入前三码就够了。如果你需要的三字词还没有出来，追加一个韵母，还是没有出来，就追加首字的笔画。三码就出来的三字词，不能用后续的声母顶屏，需要用空格上屏，当然标点符号仍然是可以顶屏的。</p>
 <p>例如，<code>计算机</code>的完全编码为<code>jsjioa</code>，而其初始输入码长为三。如果输入了与<code>计算机</code>前四码相同的词，比如<code>接收机</code>，那么<code>jsj</code>这个输入码上的字就可能变为<code>计算机</code>，而<code>计算机</code>的输入码被动态地调整为<code>jsji</code>。</p>
@@ -622,7 +622,7 @@
 <h2 id="重码筛选"><a href="#重码筛选" class="headerlink" title="重码筛选"></a>重码筛选</h2><p>声笔顶拼在输入完编码中的拼音部分后，如果还没有见到所需的字词，则可以直接追加首字的笔画来进行筛选。搜狗拼音也可以通过笔画来筛选重码字，但是必须先按TAB后再加笔画，而且对词组无效。</p>
 <p>例如，第一次输入<code>珍</code>字时，声笔顶拼的输入码为<code>zenee</code>，而搜狗拼音为<code>zhen{Tab}hh</code>，其中<code>{Tab}</code>表示Tab键。</p>
 <p>再如，第一次输入<code>拘束</code>时，声笔顶拼的输入码为<code>jsuei</code>，可以追加两个首字笔画，而搜狗拼音在输入<code>jshu</code>后只能翻页查找。</p>
-<h3 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h3><p>声笔顶拼支持全自动造词。凡是前面输入过的字词，其连续的组合都可以当成词组来输入。</p>
+<h3 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h3><p>声笔顶拼支持全自动造词。凡是前面输入过的字词，其连续的组合都可以当成词组来输入。默认的组词长度限制为五，可以通过修改Schema文件放宽，但是建议不要超过七。</p>
 <p>例如，假设您预估系统中没有<code>声笔简码</code>一词，或者您把它当成词组输入时打空了，那么您就可以用单字和/或小于其长度的词组，比如<code>声</code>、<code>笔</code>和<code>简码</code>进行输入。接下来再要输入<code>声笔简码</code>时，您就可以使用<code>sbjm</code>来输入了。如果输入四码后是其它词，则可以追加首字笔画。实际上，<code>声笔</code>这个词也同时造好了。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。</p>
 <h2 id="数选字词"><a href="#数选字词" class="headerlink" title="数选字词"></a>数选字词</h2><p>为了提高输入效率，声笔顶拼为高级用户提供了数选字词。所谓数选字词，是指用数字键来选择的简码单字和词组。为了减少记忆量，数字的使用并不是随机的，而是用23789来代替aeuio表示笔画。</p>
 <p>为什么用23789，而不用传统的12345呢？这一方面是因为23789比12345更加容易操作，另一方面是23789可以与aeuio在键盘上位子形成近乎完美的映射，除2外正好位于相应笔画字母上一排相同的位置，非常容易记住，如下图所示。</p>
