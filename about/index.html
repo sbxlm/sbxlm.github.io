@@ -120,7 +120,10 @@
 <meta property="og:image" content="http://sbxlm.github.io/images/SbjmInstall09.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/SbjmInstall10.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/SbjmInstall11.png">
-<meta property="og:updated_time" content="2020-08-03T06:23:38.704Z">
+<meta property="og:image" content="http://sbxlm.github.io/images/zdycd.png">
+<meta property="og:image" content="http://sbxlm.github.io/images/bsgz.jpg">
+<meta property="og:image" content="http://sbxlm.github.io/images/bhlx.jpg">
+<meta property="og:updated_time" content="2020-08-04T00:28:16.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="总体介绍">
 <meta name="twitter:description" content="本章先回顾中文输入所经历的艰难历程和近年来取得的成就，指出中文输入仍然面临的一些问题，然后介绍声笔系列码怎么样革命性地解决这些问题。最后介绍如何选择和学习声笔系列码的具体方案和如何获取、安装与卸载声笔系列码。 中文输入的艰难与辉煌历程在英文机械打字机普及以前，中文和英文的输入是没有什么差别的，都是手写。而且，在钢笔出现以前，中国的文房四宝比西方的书写工具先进。 早在1714年，就开始相继有英、美、">
@@ -613,6 +616,364 @@
 <p><img src="/images/SbjmInstall11.png" alt="声笔系列码的安装"></p>
 <h4 id="扩展包的安装"><a href="#扩展包的安装" class="headerlink" title="扩展包的安装"></a>扩展包的安装</h4><p>声笔简整、声笔快整和声笔飞整是以扩展包的方式发布的。要使用扩展包，首先确认已经安装好了基础程序，然后将扩展包解压，把其中的内容复制到用户文件夹中，启用新的方案，或者直接编辑default.custom.yaml文件来加入新的方案，并重新部署一下即可。注意，Windows上的用户文件夹名称为Rime，而Android上的用户文件夹名称为sbxlm。</p>
 <h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。</p>
+<h2 id="声笔系列码基础知识"><a href="#声笔系列码基础知识" class="headerlink" title="声笔系列码基础知识"></a>声笔系列码基础知识</h2><h3 id="笔画反查方法"><a href="#笔画反查方法" class="headerlink" title="笔画反查方法"></a>笔画反查方法</h3><p>在汉语拼音中，没有使用字母v，且所有音节均不以i和u开头。当使用v来标识零声母后，所有的音节便都不以<code>aeuio</code>这五元音字母开头了，于是正好可以用<code>aeuio</code>来分别表示汉字的<code>折横撇竖捺</code>五种笔画。这里在称呼这五个元音字母的时候，采用了<code>QWERT</code>键盘上从左到右的排列顺序，而不是传统的<code>横竖撇捺折</code>笔画顺序，也不是英文字母的顺序，目的是让用户在记住后容易建立与键盘上对应按键之间的关系，便于形成操作上的条件反射。声笔系列码的重码在用<code>aeuio</code>选择时，也是按这个顺序排列的。</p>
+<p>对于不知道读音的汉字，可以直接按笔顺输入笔画来反查汉字的拼音。对于没有读音的偏旁部首，也可以直接用笔画来输入。笔画不足时，可以反复补充末笔。例如，若不知道「鬯」字的拼音，就可以直接输入它的前几笔<code>uooo</code>，代表<code>撇点点点点</code>，它就会出现在首页，并在它的后面标注了读音<code>chang</code>，注意笔画<code>点</code>是归到笔画<code>捺</code>中的。再如，单人旁「亻」可以用<code>uiii</code>代表<code>撇竖竖竖</code>来输入，这里补充了两个末笔。</p>
+<h3 id="拼音反查方法"><a href="#拼音反查方法" class="headerlink" title="拼音反查方法"></a>拼音反查方法</h3><p>在使用声笔系列码的非拼音输入法声笔简码、声笔快码和声笔飞码时，如果不知道编码，可以用a引导拼音来进行编码反查。但是，有一点要特别注意，即以<code>a e o</code>开始的零声母音节需要用v作为其声母，如<code>a ao er ong</code>分别变为<code>va vao ver vong</code>。</p>
+<h3 id="翻页方法"><a href="#翻页方法" class="headerlink" title="翻页方法"></a>翻页方法</h3><p>重码字词超过一页时，可用Tab和Enter键进行翻页查找。在造新词的时候，可以在没有进行过翻页时用Tab直接跳到最后一页，这在重码很多时特别有用，能够避免用Enter按顺序多次翻页。</p>
+<h3 id="中英文混合输入"><a href="#中英文混合输入" class="headerlink" title="中英文混合输入"></a>中英文混合输入</h3><p>许多用户不仅仅需要方便、快速地输入中文，而且需要混合输入大量的英文。由于键盘及其布局的差异，在电脑上和在手机上的操作方法是不一样，而且随各输入法的设置而定。下面介绍的是声笔系列码默认设置情况下的使用方法，要特别注意在电脑上和在手机上的差异。</p>
+<p>在电脑上，在中文状态下，按<code>CAPSLOCK</code>则可以锁定大写来输入英文，此前若编码窗口已有输入则会被清空。当编码窗口已经有输入时，若要直接上屏编码，则按<code>Control + Enter</code>；若要上屏中文并同时切换到英文状态，则按右<code>Shift</code>键；若要保留编码并进入临时英文状态，则按左<code>Shift</code>键。在临时英文状态的可以接收空格和标点，完成后用回车或者右<code>Shift</code>上屏缓冲区的英文，并同时切换回中文状态。当编码窗口没有输入时，可以单击左或右<code>Shift</code>来切换中英文输入状态。</p>
+<p>在手机上，在中文状态下，没有输入编码时，长按<code>Shift</code>可以锁定大写来输入英文，单击<code>Shift</code>可以输入单个英文字母后自动切换回中文状态。当前已经有输入时，若要直接上屏编码，则按上滑退格键；若要上屏编码并同时切换到英文状态，则按上滑空格键；若要保留编码并进入临时英文状态，则按上滑<code>Shift</code>键。在临时英文状态的可以接收空格和标点，完成后单击回车或者上滑退格键上屏缓冲区的英文，并保留在英文状态；若要同时切换到中文状态，则上滑空格键来上屏临时英文。当编码窗口没有输入时，可以长按空格键或上滑<code>Shift</code>来切换中英文输入状态。</p>
+<h3 id="手机上的特殊操作"><a href="#手机上的特殊操作" class="headerlink" title="手机上的特殊操作"></a>手机上的特殊操作</h3><p>手机上，除了上文介绍的长按G切换是否显示助记以及中英文混合输入的方法外，还有一些特殊操作：在没有编码时左滑退格键可以收折键盘，上滑左下角的符号键可以切换输入法方案和进行输入法设置，上滑Enter键可以切换主题。其它的特殊操作，如全选、剪切、复制、粘贴等，在健面上已经写得很明确，就不再赘述。</p>
+<h3 id="标点"><a href="#标点" class="headerlink" title="标点"></a>标点</h3><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在半角状态下的定义如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">按键</th>
+<th style="text-align:center">标点</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">按键</th>
+<th style="text-align:center">标点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">,</td>
+<td style="text-align:center">，</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">.</td>
+<td style="text-align:center">。</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">《, 〈, «, ‹, &lt;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">》, 〉, », ›, &gt;</td>
+</tr>
+<tr>
+<td style="text-align:center">‘</td>
+<td style="text-align:center">‘, ’</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">“</td>
+<td style="text-align:center">“, ”</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">、, /, ／, ÷</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">~</td>
+<td style="text-align:center">~, ～, ˜, ≈, ≋, ≃, ≅, ≇, ∽, ⋍, ≌, ﹏, ﹋, ﹌</td>
+</tr>
+<tr>
+<td style="text-align:center">&#124;</td>
+<td style="text-align:center">·, &#124;, ｜, §, ¦, ‖,・</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#96;</td>
+<td style="text-align:center">&#96;， ′, ″, ‴, ‵, ‶, ‷, ⁗</td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:center">@, ©, ®, ℗</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">#</td>
+<td style="text-align:center">#, №</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">%, ％, °, ℃, ‰, ‱, ℉</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$</td>
+<td style="text-align:center">￥, $, €, £, ¥, ¢, ¤, ₩</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">……, ^</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">_</td>
+<td style="text-align:center">——, _</td>
+</tr>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:center">=, 々, 〃</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*, ＊, ·, ×, ※, ❂, ⁂, ☮, ☯, ☣, ・</td>
+</tr>
+<tr>
+<td style="text-align:center">[</td>
+<td style="text-align:center">「, 【, 〔, [</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">]</td>
+<td style="text-align:center">」, 】, 〕, ]</td>
+</tr>
+<tr>
+<td style="text-align:center">{</td>
+<td style="text-align:center">『, 〖, {</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">}</td>
+<td style="text-align:center">』, 〗, }</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>上表中没有列出按键和标点完全一致的，如<code># %</code>等。在全角状态下，标点符号的定义几乎与半角状态下相同，只是有的半角字符变成了对应的全角字符，如<code>＆ ＠</code>等。</p>
+<h3 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h3><p>另外，通过<code>\</code>引导，还可以输入各类特殊的符号，源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的改为了<code>v</code>或者省略，具体类别大致如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">编码</th>
+<th style="text-align:center">类别</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">编码</th>
+<th style="text-align:center">类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\fh</td>
+<td style="text-align:center">符号</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\dn</td>
+<td style="text-align:center">电脑</td>
+</tr>
+<tr>
+<td style="text-align:center">\xq</td>
+<td style="text-align:center">象棋</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\mj</td>
+<td style="text-align:center">麻将</td>
+</tr>
+<tr>
+<td style="text-align:center">\sz</td>
+<td style="text-align:center">色子</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\pk</td>
+<td style="text-align:center">扑克</td>
+</tr>
+<tr>
+<td style="text-align:center">\bq</td>
+<td style="text-align:center">表情</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\tq</td>
+<td style="text-align:center">天气</td>
+</tr>
+<tr>
+<td style="text-align:center">\yy</td>
+<td style="text-align:center">音乐</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\lx</td>
+<td style="text-align:center">两性</td>
+</tr>
+<tr>
+<td style="text-align:center">\bg</td>
+<td style="text-align:center">八卦</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\bgm</td>
+<td style="text-align:center">八卦名</td>
+</tr>
+<tr>
+<td style="text-align:center">\lssg</td>
+<td style="text-align:center">六十四挂</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\lssgm</td>
+<td style="text-align:center">六十四挂名</td>
+</tr>
+<tr>
+<td style="text-align:center">\txj</td>
+<td style="text-align:center">太玄经</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\tt</td>
+<td style="text-align:center">天体</td>
+</tr>
+<tr>
+<td style="text-align:center">\xz</td>
+<td style="text-align:center">星座</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\xzm</td>
+<td style="text-align:center">星座名</td>
+</tr>
+<tr>
+<td style="text-align:center">\sg</td>
+<td style="text-align:center">十二座</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\xh</td>
+<td style="text-align:center">星号</td>
+</tr>
+<tr>
+<td style="text-align:center">\fk</td>
+<td style="text-align:center">方块</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\jh</td>
+<td style="text-align:center">几何</td>
+</tr>
+<tr>
+<td style="text-align:center">\jt</td>
+<td style="text-align:center">箭头</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\sx</td>
+<td style="text-align:center">数学</td>
+</tr>
+<tr>
+<td style="text-align:center">\szq</td>
+<td style="text-align:center">数字+圈</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\szh</td>
+<td style="text-align:center">数字+弧</td>
+</tr>
+<tr>
+<td style="text-align:center">\szd</td>
+<td style="text-align:center">数字+点</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\zmq</td>
+<td style="text-align:center">字母+圈</td>
+</tr>
+<tr>
+<td style="text-align:center">\zmh</td>
+<td style="text-align:center">字母+弧</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\0~10</td>
+<td style="text-align:center">数字</td>
+</tr>
+<tr>
+<td style="text-align:center">\fs</td>
+<td style="text-align:center">分数</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\szm</td>
+<td style="text-align:center">苏州码</td>
+</tr>
+<tr>
+<td style="text-align:center">\lm</td>
+<td style="text-align:center">罗马数字小写</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\lmd</td>
+<td style="text-align:center">罗马数字大写</td>
+</tr>
+<tr>
+<td style="text-align:center">\sb</td>
+<td style="text-align:center">上标</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\xb</td>
+<td style="text-align:center">下标</td>
+</tr>
+<tr>
+<td style="text-align:center">\xl</td>
+<td style="text-align:center">希腊字母</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\ey</td>
+<td style="text-align:center">俄语</td>
+</tr>
+<tr>
+<td style="text-align:center">\yf</td>
+<td style="text-align:center">月份</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\rq</td>
+<td style="text-align:center">日期</td>
+</tr>
+<tr>
+<td style="text-align:center">\yr</td>
+<td style="text-align:center">曜日</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\sj</td>
+<td style="text-align:center">时间</td>
+</tr>
+<tr>
+<td style="text-align:center">\tg</td>
+<td style="text-align:center">天干</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\dz</td>
+<td style="text-align:center">地支</td>
+</tr>
+<tr>
+<td style="text-align:center">\gz</td>
+<td style="text-align:center">干支</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\jq</td>
+<td style="text-align:center">节气</td>
+</tr>
+<tr>
+<td style="text-align:center">\dw</td>
+<td style="text-align:center">单位</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\hb</td>
+<td style="text-align:center">货币</td>
+</tr>
+<tr>
+<td style="text-align:center">\jg</td>
+<td style="text-align:center">结构</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\pp</td>
+<td style="text-align:center">偏旁</td>
+</tr>
+<tr>
+<td style="text-align:center">\kx</td>
+<td style="text-align:center">康熙部首</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\bh</td>
+<td style="text-align:center">笔画</td>
+</tr>
+<tr>
+<td style="text-align:center">\bd</td>
+<td style="text-align:center">标点</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\bdz</td>
+<td style="text-align:center">标点直行</td>
+</tr>
+<tr>
+<td style="text-align:center">\py</td>
+<td style="text-align:center">拼音</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\pyd</td>
+<td style="text-align:center">拼音大写</td>
+</tr>
+<tr>
+<td style="text-align:center">\sd</td>
+<td style="text-align:center">声调</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\hzq</td>
+<td style="text-align:center">汉字+圈</td>
+</tr>
+<tr>
+<td style="text-align:center">\hzh</td>
+<td style="text-align:center">汉字+弧</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\jm</td>
+<td style="text-align:center">假名</td>
+</tr>
+<tr>
+<td style="text-align:center">\pjm</td>
+<td style="text-align:center">平假名</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\jmq</td>
+<td style="text-align:center">假名+圈</td>
+</tr>
+<tr>
+<td style="text-align:center">\jmbj</td>
+<td style="text-align:center">假名半角</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\hw</td>
+<td style="text-align:center">韩文</td>
+</tr>
+<tr>
+<td style="text-align:center">\hwq</td>
+<td style="text-align:center">韩文+圈</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\hwh</td>
+<td style="text-align:center">韩文+弧</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="词库同步"><a href="#词库同步" class="headerlink" title="词库同步"></a>词库同步</h3><p>在用户同时使用多种设备，如台电脑、手机等时，新造的词组，码长调整和频率调整的结果都需要同步，才能避免重复的工作。RIME提供了同步用户词组的功能，可以满足这种需求，具体方法参见RIME官方网站<a href="https://github.com/rime/home/wiki/UserGuide" target="_blank" rel="noopener">说明书</a>的用户资料同步一节。</p>
+<h3 id="自定义词典"><a href="#自定义词典" class="headerlink" title="自定义词典"></a>自定义词典</h3><p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求。</p>
+<p>由于声笔系列码在不少情况下是不允许重码的，所以用户自定义的词组不能放在系统词组的编码空间里，否则可能造成冲突而影响输入法的正常使用。经过仔细考量，决定采用<code>u</code>引导来解决用户自定义词组的输入问题，此处的<code>u</code>意为「用户」，因为它是英语的<code>user</code>的首字母，而声笔系列码的各种方案都不会使用<code>u</code>作为正常中文编码的首码，不会产生编码冲突。</p>
+<p>自定义词典随声笔简码和声笔简整一道包含在为声笔系列码定制的小狼毫和同文基础安装包里。它在里面体现为一个方案，但是独立使用的价值不大，只是为其它方案服务的。它是一个<code>dict</code>型而非<code>txt</code>型的词典，当收录的词条数量大时也具有很快的查找速度。</p>
+<p><img src="/images/zdycd.png" alt="自定义词典"></p>
+<p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间，必须是以制表符TAB分隔，不能是空格，否则会定制词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。</p>
+<h2 id="附件：笔画的国家规范"><a href="#附件：笔画的国家规范" class="headerlink" title="附件：笔画的国家规范"></a>附件：笔画的国家规范</h2><p>声笔系列码对笔画的使用完全遵从国家的有关规范，这对纠正使用者的错误笔顺和识别正确的笔画类型是很有帮助的。</p>
+<h3 id="笔顺规则"><a href="#笔顺规则" class="headerlink" title="笔顺规则"></a>笔顺规则</h3><p><img src="/images/bsgz.jpg" alt="笔顺规则"></p>
+<h3 id="笔画类型"><a href="#笔画类型" class="headerlink" title="笔画类型"></a>笔画类型</h3><p><img src="/images/bhlx.jpg" alt="笔画类型"></p>
 
         
       </div>
@@ -943,7 +1304,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入的艰难与辉煌历程"><span class="nav-number">1.</span> <span class="nav-text">中文输入的艰难与辉煌历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入仍面临的问题"><span class="nav-number">2.</span> <span class="nav-text">中文输入仍面临的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码的解决方案"><span class="nav-number">3.</span> <span class="nav-text">声笔系列码的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入方法"><span class="nav-number">3.1.</span> <span class="nav-text">输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心技术"><span class="nav-number">3.2.</span> <span class="nav-text">核心技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何选择和学习声笔系列码方案"><span class="nav-number">4.</span> <span class="nav-text">如何选择和学习声笔系列码方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取、安装与卸载"><span class="nav-number">5.</span> <span class="nav-text">获取、安装与卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取"><span class="nav-number">5.1.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">5.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准包的安装"><span class="nav-number">5.2.1.</span> <span class="nav-text">标准包的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展包的安装"><span class="nav-number">5.2.2.</span> <span class="nav-text">扩展包的安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载"><span class="nav-number">5.3.</span> <span class="nav-text">卸载</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入的艰难与辉煌历程"><span class="nav-number">1.</span> <span class="nav-text">中文输入的艰难与辉煌历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入仍面临的问题"><span class="nav-number">2.</span> <span class="nav-text">中文输入仍面临的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码的解决方案"><span class="nav-number">3.</span> <span class="nav-text">声笔系列码的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入方法"><span class="nav-number">3.1.</span> <span class="nav-text">输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心技术"><span class="nav-number">3.2.</span> <span class="nav-text">核心技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何选择和学习声笔系列码方案"><span class="nav-number">4.</span> <span class="nav-text">如何选择和学习声笔系列码方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取、安装与卸载"><span class="nav-number">5.</span> <span class="nav-text">获取、安装与卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取"><span class="nav-number">5.1.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">5.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准包的安装"><span class="nav-number">5.2.1.</span> <span class="nav-text">标准包的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展包的安装"><span class="nav-number">5.2.2.</span> <span class="nav-text">扩展包的安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载"><span class="nav-number">5.3.</span> <span class="nav-text">卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码基础知识"><span class="nav-number">6.</span> <span class="nav-text">声笔系列码基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#笔画反查方法"><span class="nav-number">6.1.</span> <span class="nav-text">笔画反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼音反查方法"><span class="nav-number">6.2.</span> <span class="nav-text">拼音反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#翻页方法"><span class="nav-number">6.3.</span> <span class="nav-text">翻页方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中英文混合输入"><span class="nav-number">6.4.</span> <span class="nav-text">中英文混合输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机上的特殊操作"><span class="nav-number">6.5.</span> <span class="nav-text">手机上的特殊操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标点"><span class="nav-number">6.6.</span> <span class="nav-text">标点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#符号"><span class="nav-number">6.7.</span> <span class="nav-text">符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词库同步"><span class="nav-number">6.8.</span> <span class="nav-text">词库同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义词典"><span class="nav-number">6.9.</span> <span class="nav-text">自定义词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附件：笔画的国家规范"><span class="nav-number">7.</span> <span class="nav-text">附件：笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#笔顺规则"><span class="nav-number">7.1.</span> <span class="nav-text">笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笔画类型"><span class="nav-number">7.2.</span> <span class="nav-text">笔画类型</span></a></li></ol></li></ol></div>
             
 
           </div>
