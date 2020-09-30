@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://sbxlm.github.io/images/fmkwc.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/sbfz1.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/sbfz2.gif">
-<meta property="og:updated_time" content="2020-09-03T03:14:28.733Z">
+<meta property="og:updated_time" content="2020-09-23T01:54:35.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习难度">
@@ -282,7 +282,7 @@
       
     
 
-    <a href="/sbpy/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>声笔拼音</a>
+    <a href="/sbpy/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔拼音</a>
 
   </li>
         
@@ -340,6 +340,25 @@
     
 
     <a href="/sbfm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-typer">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/typer/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>打字练习</a>
 
   </li>
         
@@ -415,7 +434,7 @@
       
     
 
-    <a href="https://github.com/sbxlm/sbxlm.github.io/releases/" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-download"></i> <br>下载软件</a>
+    <a href="https://gitee.com/sbxlm/sbxlm/releases" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-download"></i> <br>下载软件</a>
 
   </li>
 
@@ -484,6 +503,9 @@
             
 
     
+    
+      
+      
     
       
       
@@ -613,7 +635,7 @@
 <p><img src="/images/fmkwc.png" alt="飞码空位词"></p>
 <p>以下列出的是一些常见飞码空位词组。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">不可能	bka</span><br><span class="line">让我们	rwu</span><br><span class="line">你知道	nzo</span><br><span class="line">没办法	mbo</span><br><span class="line">发现该	fxo</span><br><span class="line">多功能	dga</span><br><span class="line">那个人	ngu</span><br><span class="line">公安局	gva</span><br><span class="line">控制器	kzi</span><br></pre></td></tr></table></figure>
-<h2 id="词组的管理"><a href="#词组的管理" class="headerlink" title="词组的管理"></a>词组的管理</h2><p>声笔飞码目前自带16万4千个词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，需要添加新的词组，而且对于不满意的词组可能还想删除。另外，在有重码时，重码词排列的顺序不一定是用户所希望的，需要进行动态的调整。声笔飞码就提供了这些能力。如果觉得词组太少，还可以下载48万的扩展词库来替换主程序自带的词库。</p>
+<h2 id="词组的管理"><a href="#词组的管理" class="headerlink" title="词组的管理"></a>词组的管理</h2><p>声笔飞码目前自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，需要添加新的词组，而且对于不满意的词组可能还想删除。另外，在有重码时，重码词排列的顺序不一定是用户所希望的，需要进行动态的调整。声笔飞码就提供了这些能力。如果觉得词组太少，还可以下载48万的扩展词库来替换主程序自带的词库。</p>
 <h3 id="动态调频"><a href="#动态调频" class="headerlink" title="动态调频"></a>动态调频</h3><p>当四码词组有重码的时候，如果选择了某个非首位的词组，那么它的频率权重就会提高，在下次输入的时候，其排序就会提前。一般通过一、两次选择就可以提前到首位，从而就能利用顶屏来节约一次按键。例如：第一次输入<code>诉讼sysy</code>时如果它是排在第二位，用<code>a</code>选择上屏后，下次输入就可能排在首位了，于是可以利用顶屏节约一次选择键。</p>
 <p>但是，作为专业性的输入法，飞码的单字是不参与调频的，即单字的重码位置是固定的，这有利于对单字进行快速盲打。如果用户连词组都不希望调频，那也做得到。方法是，将sbfm.schema.yaml文件中Translator项下的enable_user_dict子项的值由true改为false，并重新部署一下即可。</p>
 <h3 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h3><p>飞码的造词是在输入过程中自动进行的。例如：输入<code>声st 笔bpu</code>后，下次输入<code>stbp</code>时就会有该词了，只是如果有重码的话，新造的词会排在后面。如果重码太多，可以用Tab一次性地跳到最后，以避免多次翻页；前提是你还没有进行过翻页操作，否则会被当作向前翻页处理。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。</p>

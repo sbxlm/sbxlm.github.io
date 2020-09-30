@@ -116,7 +116,7 @@
 <meta property="og:image" content="http://sbxlm.github.io/images/dphx.png">
 <meta property="og:image" content="http://sbxlm.github.io/images/Bhszys.jpg">
 <meta property="og:image" content="http://sbxlm.github.io/images/vjjc.png">
-<meta property="og:updated_time" content="2020-09-03T01:28:39.732Z">
+<meta property="og:updated_time" content="2020-09-29T03:39:56.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
 <meta name="twitter:description" content="声笔拼音是对传统拼音输入法的改良，它明确了音节界线，简化了拼写形式，能够直接笔画筛重，输入效率得到了提高。在声笔拼音之后，讲解了基于声笔拼音的顶功方案——声笔顶拼，它利用顶功大大提高了拼音输入法的效率，是推荐的拼音输入方式。有关软件的安装与卸载、笔画反查、翻页、标点、符号、词库同步、自定义词典、中英文混合输入、手机操作等声笔系列码共有的内容，请阅读《总体介绍》中的相关部分，这里就不再赘述。 声笔拼">
@@ -278,7 +278,7 @@
       
     
 
-    <a href="/sbpy/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>声笔拼音</a>
+    <a href="/sbpy/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔拼音</a>
 
   </li>
         
@@ -336,6 +336,25 @@
     
 
     <a href="/sbfm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-typer">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/typer/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>打字练习</a>
 
   </li>
         
@@ -411,7 +430,7 @@
       
     
 
-    <a href="https://github.com/sbxlm/sbxlm.github.io/releases/" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-download"></i> <br>下载软件</a>
+    <a href="https://gitee.com/sbxlm/sbxlm/releases" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-download"></i> <br>下载软件</a>
 
   </li>
 
@@ -480,6 +499,9 @@
             
 
     
+    
+      
+      
     
       
       
@@ -599,7 +621,7 @@
 <p>再如，若连续输入<code>汉字</code>和<code>输入法</code>，使用声笔顶拼时输入码为<code>hziosrfa</code>，使用拼音整句时输入码可能为<code>hanzi srf</code>。也就是说，即使<code>汉字</code>通过调频而处在重码的首选，也是需要用空格上屏的，而声笔顶拼是不需要空格的。</p>
 <p>由于在实际的中文输入过程中，传统字词模式输入法使用空格的频率非常高，所以声笔顶拼通过省略这些空格可以大大地提高输入效率。</p>
 <h3 id="歧义处理"><a href="#歧义处理" class="headerlink" title="歧义处理"></a>歧义处理</h3><p>在用声笔顶拼进行输入的时候，在个别情况下会产生编码歧义。</p>
-<p>例如，<code>jan</code>可能是<code>jan件</code>，也可能是<code>ja家n你</code>；<code>sjin</code>可能是<code>sjin神经</code>，也可能是<code>sji世纪n你</code>。如果用退格键删除n，再用空格键上屏「家」或「世纪」，然后再输入n的话，就非常低效。为此，声笔定制程序专门提供了快捷键<code>Shift+BackSpace</code>来一键完成前述三个动作。在手机上，用左滑<code>BackSpace</code>键来代替<code>Shift+BackSpace</code>即可。为了操作更加方便，还可以通过RIME的键绑定功能设置更方便的操作键，例如：可以将Tab键设置为在未进行过翻页时等同于<code>Shift+BackSpace</code>。</p>
+<p>例如，<code>jan</code>可能是<code>jan件</code>，也可能是<code>ja家n你</code>；<code>sjin</code>可能是<code>sjin神经</code>，也可能是<code>sji世纪n你</code>。如果用退格键删除n，再用空格键上屏「家」或「世纪」，然后再输入n的话，就非常低效。为此，声笔定制程序专门提供了快捷键<code>Shift+BackSpace</code>来一键完成前述三个动作。在手机上，用左滑<code>BackSpace</code>键来代替<code>Shift+BackSpace</code>即可。为了操作更加方便，还通过RIME的键绑定功能设置了更方便的操作键，在未进行过翻页时按Tab键等同于按<code>Shift+BackSpace</code>，手机上也是一样的。这样，只有在有重码的时候才需要用<code>Shift+BackSpace</code>组合键，其它时候都可以用Tab键来代替。</p>
 <p>以上歧义发生在元音后接n时，另一种歧义的情况是n后接g。例如，<code>jang</code>可能是<code>jan件g个</code>，也可能是<code>jang将</code>。这时， 同样可以用以上快捷方法来快速更正。</p>
 <h3 id="字母选重"><a href="#字母选重" class="headerlink" title="字母选重"></a>字母选重</h3><p>声笔顶拼在输入六码后，如果有重码，那么可以用<code>aeuio</code>来进行选择，比搜狗拼音等传统输入法用数字键选择更方便、快捷。</p>
 <p>例如，声笔顶拼输入<code>ssieie</code>后，其候选窗的状态可能会如下图所示。</p>
@@ -607,7 +629,7 @@
 <h3 id="重码筛选"><a href="#重码筛选" class="headerlink" title="重码筛选"></a>重码筛选</h3><p>声笔顶拼在输入完编码中的拼音部分后，如果还没有见到所需的字词，则可以直接追加首字的笔画来进行筛选。搜狗拼音也可以通过笔画来筛选重码字，但是必须先按TAB后再加笔画，而且对词组无效。</p>
 <p>例如，第一次输入<code>珍</code>字时，声笔顶拼的输入码为<code>zenee</code>，而搜狗拼音为<code>zhen{Tab}hh</code>，其中<code>{Tab}</code>表示Tab键。</p>
 <p>再如，第一次输入<code>拘束</code>时，声笔顶拼的输入码为<code>jsuei</code>，可以追加两个首字笔画，而搜狗拼音在输入<code>jshu</code>后只能翻页查找。</p>
-<h3 id="词组的管理"><a href="#词组的管理" class="headerlink" title="词组的管理"></a>词组的管理</h3><p>声笔顶拼目前自带16万4千个词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，而且对于不满意的词组可能还想删除。</p>
+<h3 id="词组的管理"><a href="#词组的管理" class="headerlink" title="词组的管理"></a>词组的管理</h3><p>声笔顶拼目前自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，而且对于不满意的词组可能还想删除。</p>
 <h4 id="自动造词"><a href="#自动造词" class="headerlink" title="自动造词"></a>自动造词</h4><p>顶拼的造词是在输入过程中自动进行的。例如：输入<code>声seng 笔biu</code>后，下次输入<code>声笔sbieie</code>时就会有该词了，只是如果有重码的话，新造的词会排在后面。如果重码太多，可以用Tab一次性地跳到最后，以避免多次翻页；前提是你还没有进行过翻页操作，否则会被当作向前翻页处理。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。</p>
 <h4 id="词组的删除"><a href="#词组的删除" class="headerlink" title="词组的删除"></a>词组的删除</h4><p>对于不需要的词组，可以先将光标移动到该词上面，再按<code>Control + Delete</code>键来删除。注意，如果是非临时词组，需要删除两次才能彻底删除。第一次删除时只是把它变成了临时词组。在安卓手机上，声笔顶拼的删除方法是：用左右滑动空格定位词组，再用删词键来删除。</p>
 <h3 id="数选简词"><a href="#数选简词" class="headerlink" title="数选简词"></a>数选简词</h3><p>为了提高输入效率，声笔顶拼为高级用户提供了数选简词。所谓数选简词，是指用数字键来选择的高频词组。为了减少记忆量，数字的使用并不是随机的，而是用23789来代替aeuio表示笔画。</p>
