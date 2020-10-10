@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/zdycd.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2020-10-09T07:59:55.927Z">
+<meta property="og:updated_time" content="2020-10-10T08:18:01.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="总体介绍">
 <meta name="twitter:description" content="本章先回顾中文输入所经历的艰难历程和近年来取得的成就，指出中文输入仍然面临的一些问题，然后介绍声笔系列码怎么样革命性地解决这些问题。接下来，介绍如何选择和学习声笔系列码的具体方案和如何获取、安装与卸载声笔系列码。本篇最后，有关笔画反查、翻页、标点、符号、词库同步、自定义词典、中英文混合输入、手机操作的内容也是使用其它声笔系列码方案的基础，在其它方案的介绍中就没有重复论述了。 中文输入的艰难与辉煌历">
@@ -993,9 +993,56 @@
 <p>自定义词典随声笔简码和声笔简整一道包含在为声笔系列码定制的小狼毫和同文基础安装包里。它在里面体现为一个方案，但是独立使用的价值不大，只是为其它方案服务的。它是一个<code>dict</code>型而非<code>txt</code>型的词典，当收录的词条数量大时也具有很快的查找速度。</p>
 <p><img src="/images/zdycd.png" alt="自定义词典"></p>
 <p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间，必须是以制表符TAB分隔，不能是空格，否则会定制词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。</p>
-<h2 id="附件：笔画的国家规范"><a href="#附件：笔画的国家规范" class="headerlink" title="附件：笔画的国家规范"></a>附件：笔画的国家规范</h2><p>声笔系列码对笔画的使用完全遵从国家的有关规范，这对纠正使用者的错误笔顺和识别正确的笔画类型是很有帮助的。</p>
+<h2 id="附件一：笔画的国家规范"><a href="#附件一：笔画的国家规范" class="headerlink" title="附件一：笔画的国家规范"></a>附件一：笔画的国家规范</h2><p>声笔系列码对笔画的使用完全遵从国家的有关规范，这对纠正使用者的错误笔顺和识别正确的笔画类型是很有帮助的。</p>
 <h3 id="笔顺规则"><a href="#笔顺规则" class="headerlink" title="笔顺规则"></a>笔顺规则</h3><p><img src="/images/bsgz.jpg" alt="笔顺规则"></p>
 <h3 id="笔画类型"><a href="#笔画类型" class="headerlink" title="笔画类型"></a>笔画类型</h3><p><img src="/images/bhlx.jpg" alt="笔画类型"></p>
+<h2 id="附件二：声笔系列码近期升级历程"><a href="#附件二：声笔系列码近期升级历程" class="headerlink" title="附件二：声笔系列码近期升级历程"></a>附件二：声笔系列码近期升级历程</h2><ul>
+<li>20101010: 1. 拼音反查兼容顶拼方式；2. Shift + Enter（手机上滑BackSpace）上屏不带空格的编码。</li>
+<li>20201009: 1. 优化声笔拼音的单字输入；2. 小狼毫默认字体大小改为12。</li>
+<li>20200923: 修改主程序；字词型方案默认收词量由16万增加至48万；增加声笔快简、声笔快速、声笔飞简、声笔飞速四个输入法方案。</li>
+<li>20200901: 支持用shift+backspace上屏前n-1码首选项，主要用于声笔顶拼快速更正歧义音节；重复输入历史选项重码数限制为5；更新手机皮肤，以支持用左滑backspace来模拟shift+backspace。</li>
+<li>20200826: 用飞讯和快讯分别代替飞单和快单，取消短期实验过的飞简、快简、飞速和快速方案。</li>
+<li>20200801: 修改声笔飞码和声笔快码的sbbb格式为sbbs格式，优化和简化发布打包形式。</li>
+<li>20200729: 让声笔顶拼和声笔简码支持简拼词组。</li>
+<li>20200709: 更新声笔系列码定制小狼毫安装程序。</li>
+<li>20200706: 修订声笔系列码教程，取消声笔顶拼和声笔简码的三键数选字词，更新APK执行程序，增加声笔定制同文和小狼毫的安装指南。</li>
+<li>20200629: 重新规划发布形式，将声笔简码也单独发布，基础包内只包含声笔拼音；统一声笔顶拼和声笔顶整的拼音反查为a引导；各压缩包中加入各自的PDF教程；优化Symbols.yaml中的符号输入方式。</li>
+<li>20200619: 就修改了一个拼音错误，「责」字的读音只有zhai，最常见的ze弄掉了。</li>
+<li>20200617: 符号尽量保持与同文一致， \引导的符号编码非首码去掉了aeuio， 消除了RIME程序中对句号和冒号特殊处理时的BUG，优化了中英文混合输入的方法；优化了声笔顶拼和声笔简码的数选字词。</li>
+<li>20200608: 禁止简码和顶拼删除单字；为所有方案添加自定义词典，以手动管理特殊字词。</li>
+<li>20200606: 解决飞码和快码的一码时有些标点符号不能顶屏的问题；解决所有方案在有编码时用\顶屏输入符号的问题。</li>
+<li>20200605: 解决了简码和顶拼的可以删除静态字词的严重BUG；安卓主题的增加长按退格键删除用户词组的功能；所有方案默认不再提示数选字词。</li>
+<li>20200603: 将声笔顶拼单字和二字词的动态码长调整位改为第三码。</li>
+<li>20200602: 更新了安装程序，使其不覆盖已经安装的Rime目录；修改了Weasel.yaml，使得在候选项前不出现难看的点。</li>
+<li>20200601: 纠正声笔顶拼词库的个别错误，解决声笔顶整和声笔简整的助记显示问题。</li>
+<li>20200531: 修正声笔简码三码为空码时新造多字词的显示问题，声笔简整和声笔顶整支持两码模糊。</li>
+<li>20200528: 声笔简扩并入声笔简码，多字词编码规则优化，更符合人们使用习惯，编码空间扩大。</li>
+<li>20200525: 增加声笔简扩，恢复声笔拼音，整句模式词组从48万增加到150多万，声笔系列变为四款十二型。</li>
+<li>20200523: 修正顶拼中的拼音错误，简化快码和飞码的重码选择方法，分基础包和扩展包发布软件。</li>
+<li>20200522: 增加声笔顶整，优化压缩包，取消扩展包，至此声笔系列已有四款十型。</li>
+<li>20200520: 增加声笔顶拼。</li>
+<li>20200515: 增加简码、飞码和快码的整句模式，作为扩展包单独发布。</li>
+<li>20200506: 取消声笔拼音，优化飞码和快码的sbbb型词组。</li>
+<li>20200423: 实现小狼毫一键安装，并做细微的核心程序优化。</li>
+<li>20200326: 取消扩展包，增加声笔飞单和声笔快单。</li>
+<li>20200301: 增加一个扩展包，包括声笔快码K、声笔快码S、声笔飞码K和声笔飞码S四个方案。</li>
+<li>20200113: 修正了自动码长和扩展编码的几个BUG；取消声笔智能输入法，声笔简码不再使用大写字母。</li>
+<li>20191225: 声笔简码实现了自动码长和扩展编码，功能上已经与原生简码几乎相同。</li>
+<li>20191205: 飞码和快码不再分型，单字改为二三顶，二字词三四顶；简码增加简词；去除快码中缺少lue和nue音词组的BUG；声笔智能的拼音反查统一为以a引导，纠正trime中luna, ink第几个配色问题；增加拼音和智能的笔画过滤。</li>
+<li>20191127: 新的S型取代W型；手机改为30键皮肤；声笔系列码升级为9.0版。</li>
+<li>20191116: 精减声笔体系，取消声笔双拼和声笔星二；取消飞码S和快码S；修改Android程序皮肤，增加编码提示功能。</li>
+<li>20191108: 更换输入法图标；在重码数&lt;6时，做翻页键的字母或者符号仍然可以顶屏；飞码S和快码S简码二字词优化。</li>
+<li>20191030: 优化声笔智能和声笔拼音，支持快速定位修改；声笔智能支持字母选重。</li>
+<li>20191028: 增加声笔智能和声笔拼音，实现开滤镜提示也不影响造词，同时可以一键快速定位新造的词组。</li>
+<li>20191013: 增加了声笔双拼K和声笔星二K。</li>
+<li>20190925: 增加了飞码W和快码W，还增加了各款输入法的整句方案。</li>
+<li>20190914: 增加了声笔飞码K、S和声笔快码K、S，词库容量增加到20万。</li>
+<li>20190821: 增加了声笔飞码X和声笔快码X，并优化了所有方案的码表。</li>
+<li>20190815: 在声笔双拼和声笔快码空闲空间中增加了声笔简码的二字词。</li>
+<li>20190810: 更正了声笔双拼中xiang音的编码错误。</li>
+<li>20190809: 为声笔系列码增加了一键部署的同文安装包，无需繁琐的配置就可以在Android手机上使用声笔系列码。</li>
+<li>20190807: 优化了声笔简码的二字词库，以避免造词时频繁翻页。修正了压缩包解压时的错误。加入了同文输入法的三个必备文件。</li>
+</ul>
 
         
       </div>
@@ -1332,7 +1379,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入的艰难与辉煌历程"><span class="nav-number">1.</span> <span class="nav-text">中文输入的艰难与辉煌历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入仍面临的问题"><span class="nav-number">2.</span> <span class="nav-text">中文输入仍面临的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码的解决方案"><span class="nav-number">3.</span> <span class="nav-text">声笔系列码的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入方法"><span class="nav-number">3.1.</span> <span class="nav-text">输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心技术"><span class="nav-number">3.2.</span> <span class="nav-text">核心技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何选择和学习声笔系列码方案"><span class="nav-number">4.</span> <span class="nav-text">如何选择和学习声笔系列码方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取、安装与卸载"><span class="nav-number">5.</span> <span class="nav-text">获取、安装与卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取"><span class="nav-number">5.1.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">5.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主程序的安装"><span class="nav-number">5.2.1.</span> <span class="nav-text">主程序的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展包的安装"><span class="nav-number">5.2.2.</span> <span class="nav-text">扩展包的安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载"><span class="nav-number">5.3.</span> <span class="nav-text">卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码基础知识"><span class="nav-number">6.</span> <span class="nav-text">声笔系列码基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#笔画反查方法"><span class="nav-number">6.1.</span> <span class="nav-text">笔画反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼音反查方法"><span class="nav-number">6.2.</span> <span class="nav-text">拼音反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#翻页方法"><span class="nav-number">6.3.</span> <span class="nav-text">翻页方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中英文混合输入"><span class="nav-number">6.4.</span> <span class="nav-text">中英文混合输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机上的特殊操作"><span class="nav-number">6.5.</span> <span class="nav-text">手机上的特殊操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标点"><span class="nav-number">6.6.</span> <span class="nav-text">标点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#符号"><span class="nav-number">6.7.</span> <span class="nav-text">符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词库同步"><span class="nav-number">6.8.</span> <span class="nav-text">词库同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义词典"><span class="nav-number">6.9.</span> <span class="nav-text">自定义词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附件：笔画的国家规范"><span class="nav-number">7.</span> <span class="nav-text">附件：笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#笔顺规则"><span class="nav-number">7.1.</span> <span class="nav-text">笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笔画类型"><span class="nav-number">7.2.</span> <span class="nav-text">笔画类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入的艰难与辉煌历程"><span class="nav-number">1.</span> <span class="nav-text">中文输入的艰难与辉煌历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入仍面临的问题"><span class="nav-number">2.</span> <span class="nav-text">中文输入仍面临的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码的解决方案"><span class="nav-number">3.</span> <span class="nav-text">声笔系列码的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入方法"><span class="nav-number">3.1.</span> <span class="nav-text">输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心技术"><span class="nav-number">3.2.</span> <span class="nav-text">核心技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何选择和学习声笔系列码方案"><span class="nav-number">4.</span> <span class="nav-text">如何选择和学习声笔系列码方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取、安装与卸载"><span class="nav-number">5.</span> <span class="nav-text">获取、安装与卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取"><span class="nav-number">5.1.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">5.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主程序的安装"><span class="nav-number">5.2.1.</span> <span class="nav-text">主程序的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展包的安装"><span class="nav-number">5.2.2.</span> <span class="nav-text">扩展包的安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载"><span class="nav-number">5.3.</span> <span class="nav-text">卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码基础知识"><span class="nav-number">6.</span> <span class="nav-text">声笔系列码基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#笔画反查方法"><span class="nav-number">6.1.</span> <span class="nav-text">笔画反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼音反查方法"><span class="nav-number">6.2.</span> <span class="nav-text">拼音反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#翻页方法"><span class="nav-number">6.3.</span> <span class="nav-text">翻页方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中英文混合输入"><span class="nav-number">6.4.</span> <span class="nav-text">中英文混合输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机上的特殊操作"><span class="nav-number">6.5.</span> <span class="nav-text">手机上的特殊操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标点"><span class="nav-number">6.6.</span> <span class="nav-text">标点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#符号"><span class="nav-number">6.7.</span> <span class="nav-text">符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#词库同步"><span class="nav-number">6.8.</span> <span class="nav-text">词库同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义词典"><span class="nav-number">6.9.</span> <span class="nav-text">自定义词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附件一：笔画的国家规范"><span class="nav-number">7.</span> <span class="nav-text">附件一：笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#笔顺规则"><span class="nav-number">7.1.</span> <span class="nav-text">笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笔画类型"><span class="nav-number">7.2.</span> <span class="nav-text">笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附件二：声笔系列码近期升级历程"><span class="nav-number">8.</span> <span class="nav-text">附件二：声笔系列码近期升级历程</span></a></li></ol></div>
             
 
           </div>
