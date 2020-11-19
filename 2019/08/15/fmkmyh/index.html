@@ -111,7 +111,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sb105prompt1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sb105prompt2.jpg">
-<meta property="og:updated_time" content="2019-08-21T03:56:12.365Z">
+<meta property="og:updated_time" content="2020-11-19T00:27:17.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="飞码（X）和快码（X）的优化实验">
 <meta name="twitter:description" content="存在的问题在8.00的飞码（X）和快码（X）中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。特别是在新增的飞码X和快码X中，因为没有sbbs型的二字词，sbb是只需要三键的短码空间，不好好利用的话，实在可惜。同时，飞码（X）中有少量spb短码空间是空闲的，而在快码（X）中存在着不少的sy和大量的syb短码空闲空间。 RIME版飞码（X）和快码（X）面临的另一个问题是，10">
@@ -575,7 +575,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-21 11:56:12" itemprop="dateModified" datetime="2019-08-21T11:56:12+08:00">2019-08-21</time>
+                <time title="修改时间：2020-11-19 08:27:17" itemprop="dateModified" datetime="2020-11-19T08:27:17+08:00">2020-11-19</time>
               
             
           </span>
@@ -618,8 +618,8 @@
       
         <h2 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h2><p>在8.00的飞码（X）和快码（X）中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。特别是在新增的飞码X和快码X中，因为没有sbbs型的二字词，sbb是只需要三键的短码空间，不好好利用的话，实在可惜。同时，飞码（X）中有少量spb短码空间是空闲的，而在快码（X）中存在着不少的sy和大量的syb短码空闲空间。</p>
 <p>RIME版飞码（X）和快码（X）面临的另一个问题是，105个sb型简码字没有原生版那样的提示，初学者必须死记。</p>
-<h2 id="短码空间的利用"><a href="#短码空间的利用" class="headerlink" title="短码空间的利用"></a>短码空间的利用</h2><h3 id="飞码（X）"><a href="#飞码（X）" class="headerlink" title="飞码（X）"></a>飞码（X）</h3><p>首先，利用spb空闲空间。从声笔简码的二字词中抽出高频的填入该空间，脚本如下。</p>
 <a id="more"></a>
+<h2 id="短码空间的利用"><a href="#短码空间的利用" class="headerlink" title="短码空间的利用"></a>短码空间的利用</h2><h3 id="飞码（X）"><a href="#飞码（X）" class="headerlink" title="飞码（X）"></a>飞码（X）</h3><p>首先，利用spb空闲空间。从声笔简码的二字词中抽出高频的填入该空间，脚本如下。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select zici = rtrim(zici), bianma = left(bianma,3), chupin = case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu = 3 and left(bianma,3) not in (</span><br><span class="line">select bianma = left(a.bianma,3)</span><br><span class="line">from spdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,3) = left(b.bianma,3)</span><br><span class="line">where a.changdu = 3 and b.changdu = 3)</span><br><span class="line">order by chupin desc</span><br></pre></td></tr></table></figure>
 <p>一共抽取了67个ssb型的二字词，罗列其中的前10条如下。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">那个	ngu	169294</span><br><span class="line">儿子	vza	61768</span><br><span class="line">任务	rwu	57310</span><br><span class="line">不好	bha	54085</span><br><span class="line">放心	fxo	46543</span><br><span class="line">若是	rsi	39942</span><br><span class="line">空中	kzi	25849</span><br><span class="line">吩咐	ffi	25347</span><br><span class="line">内心	nxo	25231</span><br><span class="line">暗中	vzi	23181</span><br></pre></td></tr></table></figure>
