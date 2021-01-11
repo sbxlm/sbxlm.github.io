@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
-<meta property="og:updated_time" content="2021-01-08T05:14:27.563Z">
+<meta property="og:updated_time" content="2021-01-11T09:13:25.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
@@ -646,7 +646,7 @@
 <p>在声笔飞码中所取笔画并不一定是从汉字的第一笔开始取的，这依赖于偏旁部首是否位于字的前面。如果偏旁部首位于字的前面，即偏旁部首前没有任何其它的笔画，那么追加的笔画就除偏旁部首外的第一笔开始取，否则就从字本身的第一笔开始取。</p>
 <p>例如，<code>倒</code>字的偏旁部首<code>亻</code>是位于该字的前面的，所以追加的笔画应从除<code>亻</code>外的剩余部分即<code>到</code>的第一笔开始。再如，<code>坠</code>字的偏旁部首<code>土</code>是位于该字的后面的，不是位于字的前面，所以追加的笔画应从该字的第一笔开始。注意，有的字的偏旁部首是夹在了前后笔画的中间，如<code>戴</code>字的偏旁部首<code>戈</code>。这时，字的偏旁部首仍然不是位于字的前面，所以追加的笔画还是应从该字的第一笔开始。</p>
 <p>在声笔飞码中，对偏旁部首本身来说，第一个笔画的代码用<code>zhpsd</code>而不是<code>aeuio</code>表示；而对一般汉字来说，才用它所属偏旁部首的代码。这里的偏旁部首是指成字偏旁部首，即有读音的偏旁部首，非成字偏旁部首只能按纯笔画方式输入。</p>
-<p>为了区分常用字的重码，有几个部首字的编码没有取第一笔作为偏旁部首，这些字为<code>走麦广</code>，它们都是取字的子部首。另外，<code>敌</code>字的部首没有取<code>舌</code>而取了<code>攵</code>，<code>或</code>字的部首没有取<code>戈</code>而取了<code>一</code>，算是例外。还有，为了提高离散，有的字没有取常规的部首；例如，<code>重 垂</code>取的是最下面的<code>二</code>而不是首笔撇；再如，<code>奏 三</code>取的是上面的<code>二</code>。</p>
+<p>为了区分常用字的重码，有几个部首字的编码没有取第一笔作为偏旁部首，这些字为<code>走麦广</code>，它们都是取字的子部首。另外，<code>敌</code>字的部首没有取<code>舌</code>而取了<code>攵</code>，<code>或</code>字的部首没有取<code>戈</code>而取了<code>一</code>，算是例外。还有，为了提高离散，有的字没有取常规的部首；例如，<code>重 垂</code>取的是最下面的<code>二</code>而不是首笔撇；<code>奏 三</code>取的是上面的<code>二</code>；<code>某</code>取的<code>艹</code>而不是<code>木</code>。</p>
 <p>与传统四码输入法一样，飞码在形式上也有一、二、三级简码和全码，分别对应一简字、二简字、三简字和全码字。但是，在实质上是有很大区别的，其中最大的区别是，飞码的三简字可以被顶上屏幕，全码字的重码是用<code>aeuio</code>来选择而不是用难以击打的数字键。另外，飞码采用的出简不出全策略，有简码的字就不会有全码，以便节约有限的编码空间，并强制用户采用最高效的输入方式，形成快速的条件反射。</p>
 <h4 id="1-一简字"><a href="#1-一简字" class="headerlink" title="(1) 一简字"></a>(1) 一简字</h4><p>飞码有21个一简字：<code>不平没发的他你了个可和就去下在出是人而一我</code>，又称为声空字或<code>s_字</code>，其中<code>_</code>表示空格。它们是强制性的简码字，没有对应的全码，都是使用频率极高的字，使用一段时间后用户就会自然地形成条件反射。</p>
 <p>一简字一般需要用声母加空格输入，但是在后接非编码字符时是可以省略空格的。例如，<code>我是一个人。</code>的输入码为<code>w_s_y_g_r.</code>，其中<code>_</code>表示空格，最后的「人」字，被句号顶上屏幕而省略空格。</p>
