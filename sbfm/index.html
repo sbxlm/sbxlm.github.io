@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
-<meta property="og:updated_time" content="2021-01-13T08:28:06.745Z">
+<meta property="og:updated_time" content="2021-01-18T06:43:59.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
@@ -672,7 +672,7 @@
 <p>飞码的数选简词在电脑上的提示方式如下。</p>
 <p><img src="/images/fmvjjc.png" alt="飞码数选简词"></p>
 <p>如果用户不喜欢横向提示，那么可以在sbfm.schema中将Style-&gt;Horizontal一项改为false就可以纵向提示了。</p>
-<h4 id="2-声笔笔词"><a href="#2-声笔笔词" class="headerlink" title="(2) 声笔笔词"></a>(2) 声笔笔词</h4><p>飞码声笔笔词的编码格式为<code>s1b1b2</code>，即首字的声母和首笔加第二字的首笔，所以又称为sbb词。它们是在排除了上述数选简词后，按频率优先的顺序选取的高频二字词，共计625个，以下是少数最常用的。这些词在有后续的输入时一般不需要空格，可以被顶上屏幕，记熟其中的常见者对输入效率的提高是很有帮助的。</p>
+<h4 id="2-声笔笔词"><a href="#2-声笔笔词" class="headerlink" title="(2) 声笔笔词"></a>(2) 声笔笔词</h4><p>飞码声笔笔词的编码格式为<code>s1b1b2</code>，即首字的声母和首笔加第二字的首笔，所以又称为sbb词。它们是在排除了上述数选简词后，按频率优先的顺序选取的高频二字词，共计630个，以下是少数最常用的。这些词在有后续的输入时一般不需要空格，可以被顶上屏幕，记熟其中的常见者对输入效率的提高是很有帮助的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">公司	gua</span><br><span class="line">内容	nio</span><br><span class="line">我的	w_u</span><br><span class="line">开始	kea</span><br><span class="line">的人	d_u</span><br><span class="line">上海	sio</span><br><span class="line">中心	zio</span><br><span class="line">用户	yuo</span><br><span class="line">个人	g_u</span><br><span class="line">一些	y_i</span><br><span class="line">大家	deo</span><br><span class="line">你的	n_u</span><br><span class="line">国际	gia</span><br><span class="line">来自	leu</span><br><span class="line">一下	y_e</span><br><span class="line">人员	r_i</span><br></pre></td></tr></table></figure>
 <h4 id="3-常规词组"><a href="#3-常规词组" class="headerlink" title="(3) 常规词组"></a>(3) 常规词组</h4><p>除数选简词和声笔笔词而外的所有二字词都是常规词组，其编码格式为<code>s1z1s2z2</code>。一言蔽之，就是取两字的前两码，有重码时用<code>aeuio</code>选择重码词。但是，细究起来又可以分为几种情况，特别是以下两种情况要加以注意。</p>
 <p>由126个声空字和声笔字构成的二字词是相当特殊的，它们的编码是唯一的，不会有重码，是完全确定的，例如：<code>大家dejo 不然b_ru 是的s_d_ 还是hes_</code>等。另外，声空字和声笔字的两两组合即使不是词组，也可以按词组的方式来打，例如：<code>我没w_m_ 事你sen_ 家进joje</code>等。</p>
