@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-  <item language="Chinese" value="duanwen">趣味短文</item>
   <item language="Chinese" value="sbqhlx">声笔强化练习</item>
+  <item language="Chinese" value="duanwen">趣味短文</item>
   <item language="Chinese" value="jppxdz">降频单字练习</item>
   <item language="Chinese" value="gdsw">古典赛文选</item>
   <item language="Chinese" value="hhsw">混合赛文选</item>
