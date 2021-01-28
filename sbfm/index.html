@@ -112,6 +112,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/fmfc.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/fmzhlf.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/fmts.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmts2.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bushou.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfmzj.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ljsp.png">
@@ -123,7 +124,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
-<meta property="og:updated_time" content="2021-01-25T00:42:52.096Z">
+<meta property="og:updated_time" content="2021-01-28T07:41:31.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
@@ -637,8 +638,11 @@
 <div class="note primary no-icon">
             <p>如同孔明自快话，开口正道无怕经，二双公民来前线<br>年内安然回南国，若说阿维当农夫，片上方家暗笑她<br>进得高中好体面，心想事成且大为，别看晚儿那小子<br>强力对手也头破，从此把着全日用，除非白天会给还<br>部分次品立飞过，让利几起眼皮边，名门里外有意见</p>
           </div>
+<p>输入声笔字时，一般是不需要空格上屏的，因为它可以被后续的字词顶上屏幕，例如：<code>二双公民来前线</code>的输入码为<code>vesagumaleqoxa</code>。声笔字都是使用频率很高的字，所以飞码可以节约许多空格，，使得它有相当高的单字输入效率。</p>
 <p>由于声笔字与其它字有着不同的输入路径，为了减轻用户的记忆负担，在输入声母后，就对它们进行了提示，如下图所示。这样，初学者只有在观察到提示中没有想要的单字时才输入后面的编码。</p>
 <p><img src="/images/fmts.png" alt="声笔飞码提示"></p>
+<p>声笔字不仅在第一码后有提示，在第三码后也是有提示的，只是提示的方法不一样，如下所示。</p>
+<p><img src="/images/fmts2.png" alt="声笔飞码提示2"></p>
 <h3 id="2-普通字"><a href="#2-普通字" class="headerlink" title="2. 普通字"></a>2. 普通字</h3><p>飞码中采用<code>spb^b</code>格式的字称为普通字，即声母加偏旁部首加剩余部分的前两笔。</p>
 <p>飞码的偏旁部首通常就是人们查字典时使用的偏旁部首。为了便于记忆，在声笔飞码中一般取偏旁部首（或其名称）的声母作为它的代码。但是，为了提高编码的效率，有的偏旁部首采取了<code>形托</code>和<code>归类</code>的方法来确定其代码。同时，在归部时字典中一般将偏旁部首归于其自身，而声笔飞码将偏旁部首归于其首笔画，这一方面提高了编码的效率，另一方面也突出了偏旁部首的作用，有助于用户建立起识别偏旁部首的条件反射。还有，字典中一个字可以归于几个部，而声笔飞码中一个字只能归于一个部，一般是取书写顺序的第一个部，但有时要兼顾直观和<code>义部优先</code>等因素。</p>
 <p>偏旁部首的具体键位定义如下，</p>
@@ -656,8 +660,7 @@
 <p>与传统输入法不同，飞码的一简字所加的空格是作为编码来对待的。如果没有后续编码而需要将其上屏的时候，就需要连续两次空格键。为了避免这个问题，特设置可以用数字4将一简字直接选择上屏，以便节约一次按键。这在一简字因组合输入出现在第三码时也是适用的，这时还可以避免双击空格误上屏不需要的词组，因为当四码有重码且组合的二字串不是首选项时，「行了」不在首选，双击空格时上屏的将不是「行了」而是「形成了」，如下图所示。</p>
 <p><img src="/images/ljsp.png" alt="立即上屏"></p>
 <h4 id="2-二简字"><a href="#2-二简字" class="headerlink" title="(2) 二简字"></a>(2) 二简字</h4><p>飞码的二简字有441个，其格式为<code>sp</code>，所以又称为<code>sp字</code>或者声偏字，其中的大多数也是相当常用的，例如：<code>加jl 尽js 量lq</code>等。</p>
-<p>与传统输入法一样，声笔飞码的二简字，无论是声笔字还是声偏字，一般需要加空格上屏。例如，<code>飞fa_ 开ke_ 解jj_ 所sj_ 摸mf_</code>等等，其中<code>_</code>表示空格。当然，如果后接的是数字、标点符号等非编码字符时，这个空格仍然是可以省略的。</p>
-<p>与传统输入法不同的是，在实际输入过程中，二简字往往可以与其前后的二简字、声笔字和一简字组合输入而省略空格，这种组合不一定是词组。这是因为，飞码的105个声笔字和前述的21个一简字，其编码在后续其它编码字符时不再是其它任何字的输入码，使得这126个字的任意两两组合的编码是唯一的。例如，<code>开飞kefa 就面j_me 南没nem_ 是我s_w_</code>这类组合，虽然不是词组，但是却可以组合起来进行输入，而且是没有重码的，具有完全的确定性。另外，在这126个字与声偏字进行二字组合的时候，产生重码的概率也是比较低的，所以也能节约不少的空格，如<code>开声kest 没张m_zg 施说sfso 放可ffk_</code>等。后面讲到词组时，还会进一步阐述这个问题。</p>
+<p>与传统输入法一样，声笔飞码的二简字一般需要加空格上屏。例如，<code>解jj_ 所sj_ 摸mf_</code>等等，其中<code>_</code>表示空格。当然，如果后接的是数字、标点符号等非编码字符时，这个空格仍然是可以省略的。</p>
 <h4 id="3-三简字"><a href="#3-三简字" class="headerlink" title="(3) 三简字"></a>(3) 三简字</h4><p>飞码的三简字格式为<code>spb</code>，所以又称为<code>spb字</code>或者声偏笔字，例如：<code>慕mxe 覆fxu 您nxu</code>等等。这类字数量庞大，在GBK二万字集中有2135个，其中不乏常见的字。传统输入法的三简字一般是需要空格上屏的，而飞码的三简字在连续输入时是无需空格键的，可以被后续的编码顶上屏幕。当然，如果没有后续的输入而要马上上屏的时候，仍然需要空格。但是，这种情况在正常的输入过程中是很少的。三简字不需要空格上屏是声笔飞码的单字输入比传统输入法高效的一个重要原因。</p>
 <h4 id="4-全码字"><a href="#4-全码字" class="headerlink" title="(4) 全码字"></a>(4) 全码字</h4><p>声笔飞码的全码是四码，编码格式为<code>spbb</code>，即声母加偏旁部首再加剩余部分的前两个笔画，例如：<code>码msaa 巨jkae 瞄mmei</code>等。但是，在出现重码字时，声笔飞码采用了更加快捷的选择方式，不是用数字键，而是用<code>aeuio</code>来进行选择，如下所示。</p>
 <p><img src="/images/fmxc.png" alt="声笔飞码选重"></p>
@@ -674,11 +677,9 @@
 <p>如果用户不喜欢横向提示，那么可以在sbfm.schema中将Style-&gt;Horizontal一项改为false就可以纵向提示了。</p>
 <h4 id="2-声笔笔词"><a href="#2-声笔笔词" class="headerlink" title="(2) 声笔笔词"></a>(2) 声笔笔词</h4><p>飞码声笔笔词的编码格式为<code>s1b1b2</code>，即首字的声母和首笔加第二字的首笔，所以又称为sbb词。它们是在排除了上述数选简词后，按频率优先的顺序选取的高频二字词，共计630个，以下是少数最常用的。这些词在有后续的输入时一般不需要空格，可以被顶上屏幕，记熟其中的常见者对输入效率的提高是很有帮助的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">公司	gua</span><br><span class="line">内容	nio</span><br><span class="line">我的	w_u</span><br><span class="line">开始	kea</span><br><span class="line">的人	d_u</span><br><span class="line">上海	sio</span><br><span class="line">中心	zio</span><br><span class="line">用户	yuo</span><br><span class="line">个人	g_u</span><br><span class="line">一些	y_i</span><br><span class="line">大家	deo</span><br><span class="line">你的	n_u</span><br><span class="line">国际	gia</span><br><span class="line">来自	leu</span><br><span class="line">一下	y_e</span><br><span class="line">人员	r_i</span><br></pre></td></tr></table></figure>
-<h4 id="3-常规词组"><a href="#3-常规词组" class="headerlink" title="(3) 常规词组"></a>(3) 常规词组</h4><p>除数选简词和声笔笔词而外的所有二字词都是常规词组，其编码格式为<code>s1z1s2z2</code>。一言蔽之，就是取两字的前两码，有重码时用<code>aeuio</code>选择重码词。但是，细究起来又可以分为几种情况，特别是以下两种情况要加以注意。</p>
-<p>由126个声空字和声笔字构成的二字词是相当特殊的，它们的编码是唯一的，不会有重码，是完全确定的，例如：<code>大家dejo 不然b_ru 是的s_d_ 还是hes_</code>等。另外，声空字和声笔字的两两组合即使不是词组，也可以按词组的方式来打，例如：<code>我没w_m_ 事你sen_ 家进joje</code>等。</p>
-<p>声空字、声笔字和声偏字这三种字与声空字和声笔字这两种字组成的非词二字串也是比较特殊的，它们发生重码的概率不大，确定性也比较高，而且易于判断，例如：<code>困一kky_ 放是ffs_ 难大nyde 实无sgwe</code>等。飞码收录了这些字的组合，所以是绝对不会打空的。即使这种组合与真正的词组重码也没有关系，根本不用回改，因为它会被作为重码词排在最后，只需用<code>aeuio</code>选择上屏即可。</p>
-<p>利用飞码的以上特性，可以在输入的过程中节约大量的空格，但是需要掌握一些技巧，才不至于让这种连续的输入如脱缰的野马一样失去控制，导致频繁的回改。例如，<code>你是n_s_一个y7非常f8固执gkzf的人。d_r.</code>，其中的<code>你是n_s_ 的人d_r</code>都不是常规的二字词，只能算是二字串，但却可以当成二字词来打。</p>
-<p>在必要的时候，可将一简字用数字4立刻选择上屏，以免影响输入的节奏。例如，<code>我们w7是s4中国人zgr_</code>，其中的「是」字就是用4立即上屏的，不宜采用<code>我们w7是中s_zi国人gir_</code>这种不符合分词习惯的打法。非词的二字组合只有在不影响流畅性的情况下才建议采用，这需要经验的积累才能做好。</p>
+<h4 id="3-常规词组"><a href="#3-常规词组" class="headerlink" title="(3) 常规词组"></a>(3) 常规词组</h4><p>除数选简词和声笔笔词而外的所有二字词都是常规词组，而常规词组又分为sbbb型和spsz型，有重码时用<code>aeuio</code>选择重码词。前述声笔笔词实际上也可以归为sbbb型的二字词。之所以要这样设计，一方面是为了实现部分单字能够二码顶，提高单字效率，另一方面也是为了避免一简字用双空格才能输入的低效和打词组出错。</p>
+<p>由21个声空字和105声笔字开头的二字词为sbbb型，其编码方法为第一字的前两码加第二字的前两笔，例如：<code>不能b_ao 下台x_ao 大汉deoo 心爱xouo</code>等。这类词在以「大」「一」等开头时重码比较多，这时建议若第二字码长不超过三，则在第一次输入时就用单字方式，重复输入时再用词组方式，利用动态调频将其提前。例如，「大修」一词，如果第一次输入就用<code>deui</code>，那么重码会很多，需要翻页查找，而在用<code>dexri</code>输入一次后再用<code>deui</code>，该词就会在候选的首位了。另一种避免翻页的办法是采用扩展编码，具体方法见扩展编码一节。</p>
+<p>若二字词首字的前两码为声母加偏旁部首，那么就是spsz型的，其第二字的前两码可能为声母加偏旁部首或笔画或空格，例如：<code>常规cjgj 电脑dqnv 洞见ddji 健全jrqu 统一tjy_ 淹没ydm_</code>等。另外，为了输入方便，飞码还收录了第二字为声空字和声笔字的不是词的字串，例如：<code>困一kky_ 放是ffs_ 难大nyde 实无sgwe</code>等。如果这种字串与真正的词组重码也没有关系，它会被作为重码词排在最后，只需用<code>aeuio</code>选择上屏即可。</p>
 <h3 id="2-三字词"><a href="#2-三字词" class="headerlink" title="2. 三字词"></a>2. 三字词</h3><p>飞码三字词的编码格式为<code>s1s2s3z3</code>，即前两字的前一码加第三字的前两码。需要注意的是，若第三字为声空字，那么格式为<code>s1s2s3_</code>，例如：<code>埃及人vjr_ 被告人bgr_</code>等；若第三字为声笔字，那么格式为<code>s1s2s3b3</code>。也就是说，声空字和声笔字在词组中的形式是不变的。一般的三字词格式为<code>s1s2s3p3</code>，例如：<code>计算机jsjm 大无畏dwwt</code>等。</p>
 <h3 id="3-多字词"><a href="#3-多字词" class="headerlink" title="3. 多字词"></a>3. 多字词</h3><p>声笔飞码的多字词为前三字的第一码加末字的第一码，与传统四码输入法完全一样，例如：<code>丰富多彩ffdc 中华人民共和国zhrg</code>等等。</p>
 <h3 id="4-空位词"><a href="#4-空位词" class="headerlink" title="4. 空位词"></a>4. 空位词</h3><p>虽然飞码的单字编码离散很好，两码码位已经占满，但是仍然65个三码的空码位。为了把这些空码位充分利用起来，在上面安排了常见的三字词，称之为空位词，其编码方法是：前两字的声母加第三字的首笔。在输入前两码后，对空位词组进行了提示，以避免死记，如下图所示。</p>
@@ -710,7 +711,7 @@
 <p>飞讯与飞码的差异很小。可以说，只要学会了飞码，也就基本上学会了飞讯，无需太多额外的学习，了解一下规则就行了。关键是，要形成不同的输入习惯，这就需要一定的时间。如果想能自如的在不同场合切换飞讯和飞码来使用，那就需要更多的时间来适应了。</p>
 <p>飞讯的单字输入与飞码几乎完全一样，唯一的差别是二简字由三码顶变成了二码顶。例如，「飞」的输入码，飞码为<code>fa_</code>，而飞讯为<code>fa</code>；「入」的输入码，飞码为<code>rp_</code>，而飞讯为<code>rp</code>。</p>
 <p>在词组输入方面，飞讯的<code>s1n2</code>和<code>s1b1b2</code>型简词与飞码是完全一样的。对于其它词组的编码，若为二字词和三字词，只需将第四码换成末字的前两个笔画即可；若为多字词，则追加末字的首笔即可，不过这时的笔画要用<code>23789</code>来表示，与<code>s1n2</code>型简词中笔画的表示方法相同。</p>
-<p>具体来说，飞讯二字词的编码格式为<code>s1z1s2b2b2</code>，例如：<code>简码jpmeu 半角bdjua 蝴蝶hcdia 奔驰bdcaa</code>等。由于飞讯的词组输入需要五码，所以在用单字输入的时候不超过五码的二字词是不能用词组的方式来输入的，目的是强制用户使用高效的方式，同时减少二字词的重码。记住单字的简码应该是飞讯用户的基本功，这样便于训练出键速，靠快速的条件反射来提高输入速度。</p>
+<p>具体来说，飞讯二字词的编码格式为<code>s1z1s2b2b2</code>，例如：<code>简码jpmeu 半角bdjua 蝴蝶hcdia 奔驰bdcaa</code>等。由于飞讯的词组输入需要五码，所以在用单字输入的时候不超过五码的二字词是不能用词组的方式来输入的，目的是强制用户使用高效的方式，同时减少二字词的重码。记住单字的简码应该是飞讯用户的基本功，这样便于训练出键速，靠快速的条件反射来提高输入速度。需要注意的是，飞讯没有飞码中的sbbb型二字词，该型变成了sbsz，即第二字取前两码就可以了，例如：<code>一直y_zei 大佬delui</code>等。</p>
 <p>飞讯三字词的编码格式为<code>s1s2s3b3b3</code>，例如：<code>计算机jsjei 新世纪xsjaa 大无畏dwwia</code>等。三字词采用词组可以节约用键，建议使用词组的方式来输入。可能的例外情况是一、二简字构成的三字词如<code>好起来 不知道</code>等，它们用单字输入也才六键，而键速可能更快，因为单字更容易形成条件反射。具体怎么打好，就看用户自己的使用习惯了。</p>
 <p>飞讯多字词的编码格式为<code>s1s2s3s0n0</code>，其中的0表示末字，而n为用数字表示的笔画，例如：<code>呼风唤雨hfhy3 风雨同舟fytz7 生龙活虎slhh8</code>等。多字词应尽量采用词组来输入，可以大大地提高效率。飞讯的多字词空间非常大，可以容纳巨量的词组，重码也不多。</p>
 <p>需要注意的是，在输入四码后，飞讯逐码提示只提示正式的词组，不会提示自动造词生成的临时词组，只有在输入一次，变成正式词组后才会提示，这是为了避免提示信息太杂乱。另外，飞讯是不支持扩展编码的，因为它的重码很少，没有这个必要。</p>
