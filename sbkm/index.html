@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbkmZyzyoe.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkz2.gif">
-<meta property="og:updated_time" content="2021-01-28T08:58:10.963Z">
+<meta property="og:updated_time" content="2021-02-02T07:03:10.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔快码">
 <meta name="twitter:description" content="一、概述声笔快码，简称快码，是一款类双拼输入法，它采用了一种特殊的双拼加笔画编码，同时又融合的105个高频声笔字，通过顶功实现了比一般双拼类音形码高的效率。快码的历史可以追溯到2004年，与声笔码（现已演化为声笔简码）同时产生，当时称为音笔码。在2005年声笔飞码出现后，就同声笔飞码一同演进，采用与其相同的编码模式，直至今日。在快码的基础上，还衍生出了主单的快讯和整句型的快整两个输入法方案。 本文">
@@ -635,7 +635,7 @@
 <p>输入声笔字时，一般是不需要空格上屏的，因为它可以被后续的字词顶上屏幕，例如：<code>二双公民来前线</code>的输入码为<code>vesagumaleqoxa</code>。声笔字都是使用频率很高的字，所以快码可以节约许多空格，使得它有相当高的单字输入效率。</p>
 <p>由于声笔字与其它字有着不同的输入路径，为了减轻用户的记忆负担，在输入声母后，就对它们进行了提示，如下图所示。这样，初学者只有在观察到提示中没有想要的单字时才输入后面的编码。</p>
 <p><img src="/images/fmts.png" alt="声笔快码提示"></p>
-<p>声笔字不仅在第一码后有提示，在第三码后也是有提示的，只是提示的方法不一样，如下所示。</p>
+<p>声笔字不仅在第一码后有提示，在第三码后也是有提示的，只是提示的方法不一样，如下所示，其中前两码为前一字对应的编码，第三码为第二字的第一码。这上面列出的两个字不一定是一个词，仅仅是为了提示声笔字而已。</p>
 <p><img src="/images/kmts2.png" alt="声笔快码提示2"></p>
 <h3 id="2-普通字"><a href="#2-普通字" class="headerlink" title="2. 普通字"></a>2. 普通字</h3><p>快码中采用<code>syb^b</code>格式的字称为普通字，即声母加双拼韵母加前两个笔画。声母不分平翘舌，零声母用v表示。横竖撇捺折五类笔画，分别用eiuoa来代表。声笔快码的双拼韵母比较特殊，只使用了21个字母，具体表达方式如下。</p>
 <div class="note primary no-icon">
@@ -665,11 +665,9 @@
 <p>快码的数选简词在电脑上的提示方式如下。</p>
 <p><img src="/images/fmvjjc.png" alt="快码数选简词"></p>
 <p>如果用户不喜欢横向提示，那么可以在sbkm.schema中将Style-&gt;Horizontal一项改为false就可以纵向提示了。</p>
-<h4 id="2-声笔笔词"><a href="#2-声笔笔词" class="headerlink" title="(2) 声笔笔词"></a>(2) 声笔笔词</h4><p>快码声笔笔词的编码格式为<code>s1b1b2</code>，即首字的声母和首笔加第二字的首笔，所以又称为sbb词。它们是在排除了上述数选简词后，按频率优先的顺序选取的高频二字词，共计630个，以下是少数最常用的。这些词在有后续的输入时一般不需要空格，可以被顶上屏幕，记熟其中的常见者对输入效率的提高是很有帮助的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">公司	gua</span><br><span class="line">内容	nio</span><br><span class="line">我的	w_u</span><br><span class="line">开始	kea</span><br><span class="line">的人	d_u</span><br><span class="line">上海	sio</span><br><span class="line">中心	zio</span><br><span class="line">用户	yuo</span><br><span class="line">个人	g_u</span><br><span class="line">一些	y_i</span><br><span class="line">大家	deo</span><br><span class="line">你的	n_u</span><br><span class="line">国际	gia</span><br><span class="line">来自	leu</span><br><span class="line">一下	y_e</span><br><span class="line">人员	r_i</span><br></pre></td></tr></table></figure>
-<h4 id="3-常规词组"><a href="#3-常规词组" class="headerlink" title="(3) 常规词组"></a>(3) 常规词组</h4><p>除数选简词和声笔笔词而外的所有二字词都是常规词组，而常规词组又分为sbbb型和sysz型，有重码时用<code>aeuio</code>选择重码词。前述声笔笔词实际上也可以归为sbbb型的二字词。之所以要这样设计，一方面是为了实现部分单字能够二码顶，提高单字效率，另一方面也是为了避免一简字用双空格才能输入的低效和打词组出错。</p>
-<p>由21个声空字和105声笔字开头的二字词为sbbb型，其编码方法为第一字的前两码加第二字的前两笔，例如：<code>不能b_ao 下台x_ao 大汉deoo 心爱xouo</code>等。这类词在以「大」「一」等开头时重码比较多，这时建议若第二字码长不超过三，则在第一次输入时就用单字方式，重复输入时再用词组方式，利用动态调频将其提前。例如，「大修」一词，如果第一次输入就用<code>deui</code>，那么重码会很多，需要翻页查找，而在用<code>dexg_</code>输入一次后再用<code>deui</code>，该词就会在候选的 首位了。另一种避免翻页的办法是采用扩展编码，具体方法见扩展编码一节。</p>
-<p>若二字词首字的前两码为声母加韵母，那么就是sysz型的，其第二字的前两码可能为声母加韵母或笔画或空格，例如：<code>常规ckgs 电脑dxnt 洞见drji 健全jxqu 统一try_ 淹没ylm_</code>等。另外，为了输入方便，快码还收录了第二字为声空字和声笔字的不是词的字串，例如：<code>困一kcy_ 放是fks_ 难大nlde 时无sywe</code>等。如果这种字串与真正的词组重码也没有关系，它会被作为重码词排在最后，只需用<code>aeuio</code>选择上屏即可。</p>
+<h4 id="2-常规词组"><a href="#2-常规词组" class="headerlink" title="(2) 常规词组"></a>(2) 常规词组</h4><p>除数选简词和声笔笔词而外的所有二字词都是常规词组，而常规词组又分为sbbb型和sysz型。之所以要这样设计，一方面是为了实现部分单字能够二码顶，提高单字效率，另一方面也是为了增强打词的顺畅感和避免一简字用双空格。</p>
+<p>由21个声空字和105声笔字开头的二字词为sbbs型，其编码方法为第一字的前两码加第二字的前一笔再加第二字的声母，例如：<code>不能b_an 下台x_an 大汉deoh 心爱xouv</code>等。若二字词首字的前两码为声母加韵母，那么就是sysz型的，其第二字的前两码可能为声母加韵母或笔画或空格，例如：<code>常规ckgs 电脑dxnt 洞见drji 健全jxqu 统一try_ 淹没ylm_</code>等。</p>
+<p>另外，为了输入方便，快码还收录了第二字为声空字和声笔字的不是词的字串，例如：<code>困一kcy_ 放是fks_ 难大nlde 时无sywe</code>等。如果这种字串与真正的词组重码也没有关系，它会被作为重码词排在最后，只需用<code>aeuio</code>选择上屏即可。为了增加确定性，在第二码为声空字时，可以在输入三码后用4直接上屏，例如：<code>困一kcy4 放是fks4</code>，以避免在有重码时进行选重。</p>
 <h3 id="2-三字词"><a href="#2-三字词" class="headerlink" title="2. 三字词"></a>2. 三字词</h3><p>快码三字词的编码格式为<code>s1s2s3z3</code>，即前两字的前一码加第三字的前两码。需要注意的是，若第三字为声空字，那么格式为<code>s1s2s3_</code>，例如：<code>埃及人vjr_ 被告人bgr_</code>等；若第三字为声笔字，那么格式为<code>s1s2s3b3</code>。也就是说，声空字和声笔字在词组中的形式是不变的。一般的三字词格式为<code>s1s2s3y3</code>，例如：<code>计算机jsjy 大无畏dwwf</code>等。</p>
 <h3 id="3-多字词"><a href="#3-多字词" class="headerlink" title="3. 多字词"></a>3. 多字词</h3><p>声笔快码的多字词为前三字的第一码加末字的第一码，与传统四码输入法完全一样，例如：<code>丰富多彩ffdc 中华人民共和国zhrg</code>等等。</p>
 <h3 id="4-空位词"><a href="#4-空位词" class="headerlink" title="4. 空位词"></a>4. 空位词</h3><p>快码的单字编码离散不太好，两码码位都还有95个空位，三码码位更是多达570个空位。为了把这些空码位充分利用起来，在上面分别安排了常见的二字词和三字词，称之为空位词。其中，二字词的编码方法是取两字的声母，三字词的编码方法是前两字的声母加第三字的首笔，以下是一些常见的空位词。</p>
@@ -699,7 +697,7 @@
 <p>例3中，<code>我们w7</code>采用了数选简词来提高效率，若用正码则为<code>我们w_mg</code>。</p>
 <h2 id="九、声笔快讯"><a href="#九、声笔快讯" class="headerlink" title="九、声笔快讯"></a>九、声笔快讯</h2><p>声笔快讯，简称快讯，是基于快码的衍生方案，其特点是二简字在输入的时候可因为顶功而省略空格键，因此具有更短的单字平均码长，而词组的码长相对较长，所以属于主单的输入方案，擅长离散文本的录入。为了让词组的输入更顺畅，快讯采用了延迟顶屏，具体来说延迟了两码来顶单字，属于五二顶的范畴。但是，快讯与传统四码输入法改造而成的五二顶如徐码五二顶相比有很大的差异。</p>
 <p>快讯与快码的差异很小。可以说，只要学会了快码，也就基本上学会了快讯，无需太多额外的学习，了解一下规则就行了。关键是，要形成不同的输入习惯，这就需要一定的时间。如果想能自如的在不同场合切换快讯和快码来使用，那就需要更多的时间来适应了。</p>
-<p>快讯的单字输入与快码几乎完全一样，唯一的差别是二简字由三码顶变成了二码顶。例如，「快」的输入码，快码为<code>ko_</code>，而快讯为<code>ko</code>；「入」的输入码，快码为<code>rv_</code>，而快讯为<code>rv</code>。</p>
+<p>快讯的单字输入与快码几乎完全一样，唯一的差别是<code>syb^b</code>格式的普通字由三码顶变成了二码顶。例如，「入」的输入码，快码为<code>rv_</code>，而快讯为<code>rv</code>。</p>
 <p>在词组输入方面，快讯的<code>s1n2</code>和<code>s1b1b2</code>型简词与快码是完全一样的。对于其它词组的编码，若为二字词和三字词，只需将第四码换成末字的前两个笔画即可；若为多字词，则追加末字的首笔即可，不过这时的笔画要用<code>23789</code>来表示，与<code>s1n2</code>型简词中笔画的表示方法相同。</p>
 <p>具体来说，快讯二字词的编码格式为<code>s1z1s2b2b2</code>，例如：<code>简码jxmeu 半角bljua 蝴蝶hvdia 奔驰bgcaa</code>等。由于快讯的词组输入需要五码，所以在用单字输入的时候不超过五码的二字词是不能用词组的方式来输入的，目的是强制用户使用高效的方式，同时减少二字词的重码。记住单字的简码应该是快讯用户的基本功，这样便于训练出键速，靠快速的条件反射来提高输入速度。需要注意的是，快讯没有快码中的sbbb型二字词，该型变成了sbsz，即第二字取前两码就可以了，例如：<code>一直y_zei 大佬delui</code>等。</p>
 <p>快讯三字词的编码格式为<code>s1s2s3b3b3</code>，例如：<code>计算机jsjei 新世纪xsjaa 大无畏dwwia</code>等。三字词采用词组可以节约用键，建议使用词组的方式来输入。可能的例外情况是一、二简字构成的三字词如<code>好起来 不知道</code>等，它们用单字输入也才六键，而键速可能更快，因为单字更容易形成条件反射。具体怎么打好，就看用户自己的使用习惯了。</p>
@@ -719,14 +717,14 @@
 <h2 id="附录一：快码和快讯的编码格式"><a href="#附录一：快码和快讯的编码格式" class="headerlink" title="附录一：快码和快讯的编码格式"></a>附录一：快码和快讯的编码格式</h2><p>为了便于用户总结和记忆快码的基本内容，现将快码字词的编码格式总结如下。</p>
 <ul>
 <li>单字 <code>sb, syb^b</code></li>
-<li>二字词 <code>s1n2, s1b1b2, s1z1s2z2^&#39;b1b1</code></li>
+<li>二字词 <code>s1n2, s1b1b2s2^&#39;b1b1, s1z1s2z2^&#39;b1b1</code></li>
 <li>三字词 <code>s1s2s3z3^&#39;b1b1</code></li>
 <li>多字词 <code>s1s2s3s0^&#39;b1b1</code></li>
 </ul>
 <p>快讯的编码格式，单字与快码几乎完全一样，只是从三码起顶变为二码起顶了。但是，快讯的词组编码格式变化较大，现在总结如下。</p>
 <ul>
 <li>单字 <code>sb, sy^bb</code></li>
-<li>二字词 <code>s1n2, s1b1b2, s1z1s2b2b2</code></li>
+<li>二字词 <code>s1n2, s1p1s2b2b2</code></li>
 <li>三字词 <code>s1s2s3b3b3</code></li>
 <li>多字词 <code>s1s2s3s0n0</code></li>
 </ul>
@@ -744,7 +742,6 @@
 <li>126高频单字：包括21个一简字和105个声笔字。</li>
 <li>335声韵单字：即335个由声母和双拼韵母编码的两码字。</li>
 <li>105声数词组：即105个由第一字声母加第二字数字首笔编码的高频二字词。</li>
-<li>630声笔笔词：即630个由第一字声母和首笔加第二字首笔编码的二字词，其中大部分都是常用词。</li>
 <li>655空码词组：即在二简和三简单字空码位上安排的655个高频词组。</li>
 <li>最高频500字：即现代中文里出现频率最高的500个字。</li>
 <li>次高频500字：即现代中文里出现频率次高的500个字。</li>
@@ -1091,7 +1088,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、概述"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、单字的输入"><span class="nav-text">二、单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-声笔字"><span class="nav-text">1. 声笔字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-普通字"><span class="nav-text">2. 普通字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-一简字"><span class="nav-text">(1) 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-二简字"><span class="nav-text">(2) 二简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-三简字"><span class="nav-text">(3) 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-全码字"><span class="nav-text">(4) 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-条件顶"><span class="nav-text">(5) 条件顶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、词组的输入"><span class="nav-text">三、词组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-二字词"><span class="nav-text">1. 二字词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-数选简词"><span class="nav-text">(1) 数选简词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-声笔笔词"><span class="nav-text">(2) 声笔笔词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-常规词组"><span class="nav-text">(3) 常规词组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-三字词"><span class="nav-text">2. 三字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-多字词"><span class="nav-text">3. 多字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-空位词"><span class="nav-text">4. 空位词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、字词分流"><span class="nav-text">四、字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、扩展编码"><span class="nav-text">五、扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、动态码长"><span class="nav-text">六、动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、自动词组"><span class="nav-text">七、自动词组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-自动造词"><span class="nav-text">1. 自动造词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-词组删除"><span class="nav-text">2. 词组删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、综合输入示例"><span class="nav-text">八、综合输入示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、声笔快讯"><span class="nav-text">九、声笔快讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、声笔快整"><span class="nav-text">十、声笔快整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：快码和快讯的编码格式"><span class="nav-text">附录一：快码和快讯的编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：快码和快讯的强化训练"><span class="nav-text">附录二：快码和快讯的强化训练</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、概述"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、单字的输入"><span class="nav-text">二、单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-声笔字"><span class="nav-text">1. 声笔字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-普通字"><span class="nav-text">2. 普通字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-一简字"><span class="nav-text">(1) 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-二简字"><span class="nav-text">(2) 二简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-三简字"><span class="nav-text">(3) 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-全码字"><span class="nav-text">(4) 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-条件顶"><span class="nav-text">(5) 条件顶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、词组的输入"><span class="nav-text">三、词组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-二字词"><span class="nav-text">1. 二字词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-数选简词"><span class="nav-text">(1) 数选简词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-常规词组"><span class="nav-text">(2) 常规词组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-三字词"><span class="nav-text">2. 三字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-多字词"><span class="nav-text">3. 多字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-空位词"><span class="nav-text">4. 空位词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、字词分流"><span class="nav-text">四、字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、扩展编码"><span class="nav-text">五、扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、动态码长"><span class="nav-text">六、动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、自动词组"><span class="nav-text">七、自动词组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-自动造词"><span class="nav-text">1. 自动造词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-词组删除"><span class="nav-text">2. 词组删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、综合输入示例"><span class="nav-text">八、综合输入示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、声笔快讯"><span class="nav-text">九、声笔快讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、声笔快整"><span class="nav-text">十、声笔快整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：快码和快讯的编码格式"><span class="nav-text">附录一：快码和快讯的编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：快码和快讯的强化训练"><span class="nav-text">附录二：快码和快讯的强化训练</span></a></li></ol></div>
             
 
           </div>
