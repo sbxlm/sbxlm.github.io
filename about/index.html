@@ -124,7 +124,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2021-03-01T08:23:21.349Z">
+<meta property="og:updated_time" content="2021-03-02T07:00:43.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="总体介绍">
 <meta name="twitter:description" content="本章先回顾中文输入所经历的艰难历程和近年来取得的成就，指出中文输入仍然面临的一些问题，然后介绍声笔系列码怎么样革命性地解决这些问题。接下来，介绍如何选择和学习声笔系列码的具体方案和如何获取、安装与卸载声笔系列码。本篇最后「声笔系列码基础知识」一节，论述了一些跨输入方案的共同内容，如反查、翻页、标点、符号、词库同步、自定义词典、中英文混合输入、手机上的一般操作，在具体方案的介绍中可能就没有重复这些内">
@@ -1057,6 +1057,8 @@
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>(2) 自动删词阈值</p>
 <p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于1000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你输入了多少个字词。该选项也能用于非声笔系列的方案。</p>
+<p>(3) 多字词过滤</p>
+<p>声笔系列中的简码、飞讯和快讯有一个开启多字词过滤的选项enable_filtering。这个选项默认的情况下为false，即未开启。未开启多字词过滤时，简码的sssb编码、飞讯和快讯的szsbb编码会将多字词也查找出来，而开启（即将enable_filtering设置为true）的时候则会过滤掉多字词，从而减少重码，这时多字词就只能采用sssS的形式来输入。</p>
 <h2 id="附录一：笔画的国家规范"><a href="#附录一：笔画的国家规范" class="headerlink" title="附录一：笔画的国家规范"></a>附录一：笔画的国家规范</h2><p>声笔系列码对笔画的使用完全遵从国家的有关规范，这对纠正使用者的错误笔顺和识别正确的笔画类型是很有帮助的。</p>
 <h3 id="1-笔顺规则"><a href="#1-笔顺规则" class="headerlink" title="1. 笔顺规则"></a>1. 笔顺规则</h3><p><img src="/images/bsgz.jpg" alt="笔顺规则"></p>
 <h3 id="2-笔画类型"><a href="#2-笔画类型" class="headerlink" title="2. 笔画类型"></a>2. 笔画类型</h3><p><img src="/images/bhlx.jpg" alt="笔画类型"></p>
