@@ -1,0 +1,22 @@
+body { font-size: 14px;	font-style: normal;	font-variant: normal; font-weight: normal; line-height: 1.5;}
+.over { background-color: #B5D5FF; }
+.erro { background-color: #FF0000; }
+.dzwrap { width: 800px; height:580px; background:F5FAFF; border:1px solid #99BBDD;
+	padding:4px; overflow:hidden; margin-left: auto; margin-right: auto;
+	}
+.banner { height: 42px; font-size: 24px; font-weight: bold;	text-align: center;	line-height: 2.0; border-bottom:0px solid #ccc;}
+.toolbar { height: 20px; padding: 5px 0 5px 0; margin: 0pt; border-bottom:0px solid #ccc;}
+.orgtxt {line-height: 24px; font-size: 16px; font-family: Times New Roman; font-weight: normal; height:238px; 
+	letter-spacing: 0px; padding: 0pt; margin: 0pt; width: 800px; background-color:#DCF5CC; overflow: hidden;
+	border-bottom:1px solid #ccc; border-top:1px solid #ccc;
+	}
+.usertxt { line-height: 24px; font-size:16px; font-family: Times New Roman; font-weight: normal; height: 238px; 
+	letter-spacing: 0px; padding: 0pt; margin: 0pt; width: 800px; background-color:#DCF5BB;
+	color: Blue; border-style: none; overflow: hidden; border-bottom:1px solid #ccc; border-top:1px solid #ccc;
+    }
+.confirm { display: none }
+.nocheating {display: none }
+.errtxt { display: none }
+.rectify { display: none; text-decoration: none; color: Red }
+.rectifying { display: none; color: Red }
+

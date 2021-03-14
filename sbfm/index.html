@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css">
+
+
+
+
+
+
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.1.2">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
+<meta name="keywords" content="声笔,飞码,飞讯,顶功">
+<meta property="og:type" content="website">
+<meta property="og:title" content="声笔飞码">
+<meta property="og:url" content="http://sbxlm.gitee.io/sbfm/index.html">
+<meta property="og:site_name" content="声笔系列码">
+<meta property="og:description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmfc.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmzhlf.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmts.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmts2.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/bushou.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbfmzj.jpg">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/ljsp.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmxc.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Bhszys.jpg">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/fmvjjc.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxx.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
+<meta property="og:updated_time" content="2021-03-13T10:50:31.996Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="声笔飞码">
+<meta name="twitter:description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
+<meta name="twitter:image" content="http://sbxlm.gitee.io/images/fmfc.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://sbxlm.gitee.io/sbfm/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>声笔飞码 | 声笔系列码</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">声笔系列码</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">QQ群：445906697</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-star"></i> <br>总体介绍</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbjm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbkm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbkm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔快码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbfm menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbfm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbpy">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbpy/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔拼音</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbzr">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbzr/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔自然</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbxh">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbxh/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔小鹤</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-typer">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/typer/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>打字练习</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">62</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">31</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-releases">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="https://gitee.com/sbxlm/sbxlm/releases" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-download"></i> <br>下载软件</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/sbxlm" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h2 class="post-title" itemprop="name headline">声笔飞码<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/sbfm/index.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+</h2>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。</p>
+<p>声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习难度也比五笔字型小得多，这让许多人难以相信，但却是千真万确的事实。虽然绝大多数人开始时都对声笔飞码的效率持怀疑态度，但是通过了解声笔飞码的编码原理和输入原理，人们都领悟了其中的奥妙。于是，许多知名的输入法论坛“大侠”给予声笔飞码以高度的评价，更有不少人积极地实践，用声笔飞码的技术来改进和创制新的高效输入法。</p>
+<p>受声笔飞码的直接或接间影响，现在已经产生出了许多顶功输入法。化外愚民先生在声笔飞码的基础上取消飞码的词组，增加几个标点符号进行编码，以进一步增强飞码的单字能力，形成了“西风瘦码”，使纯单字输入时的平均码长从飞码的2.4键左右降到了2.3键左右，成为单字派的利器，也成为后起单字派输入法追赶的目标。</p>
+<p>目前在互联网上，有关顶功输入法的讨论更是非常热烈，各种顶功思路层出不穷，令人眼花缭乱、应接不暇。除了早期的声笔码、声笔飞码、声笔快码和西风瘦码外，后来出现的有一码起顶的左飞1811，二码起顶的小兮码、灵形速影、左飞双拼、顶功雅歌，三码起顶的左飞三码、听雨三码，二四顶屏的顶功希码，星空学系列的星空两笔、星空键道及其变种，采用四二顶的C42，采用五二顶的徐码五二顶等等。</p>
+<p>后起的顶功输入法，最初都非常追求单字的效率，甚至达到了偏执的程度，于是采用无理码的风气盛行一时。但是，在二码顶的基础上，试图采用增加一定的码元、增加编码的复杂规则和增加无理码来大幅度缩短码长，收效都是不大的，这是汉字的统计特性所决定的。顶功输入并不意味着就是单字输入，词组的作用在顶功输入法中也是非常重要的。顶功和单字没有必然的联系，顶功输入法既以单字为主的，也有以词组为主的。</p>
+<p>声笔飞码经过了十多年的发展和创新，从1.00版到现在的9.50版，尝试了各种各样的顶功模式，终于确定下了现在主词的飞码。在飞码的基础上，还衍生出了主单的飞讯和整句型的飞整两个输入法方案。最新版的飞讯又取得了重大的突破，将主单的输入法带到了一个前所未有的新高度，让主单的顶功输入法同时具有了强大的词组输入能力，深受极客打字用户的欢迎。</p>
+<p>本文将详细讲解飞码，然后对照飞码，花两节的篇幅来讲解飞讯和飞整，只讲有区别的地方，以免赘述。有关软件的安装与卸载、笔画反查、翻页、标点、符号、词库同步、自定义词典、中英文混合输入、手机操作等声笔系列码共有的内容，请阅读<a href="../about/">总体介绍</a>中的相关部分。</p>
+<h2 id="二、单字的输入"><a href="#二、单字的输入" class="headerlink" title="二、单字的输入"></a>二、单字的输入</h2><p>单字是输入法的基础，词组的编码是由单字的编码衍生出来的，所以必须对单字的编码有深刻的理解才能学好输入法。声笔飞码采用声母、笔画和偏旁部首来对汉字进行编码。声母不分平翘舌，零声母用v表示。横竖撇捺折五类笔画，分别用eiuoa来代表。</p>
+<p>声笔飞码一共收录了GBK的2万多单字，单字编码格式有两种，它们是<code>sb</code>和<code>spb^b</code>。其中，<code>sb</code>这种格式是比较特殊的，只有105个高频字采用它。它一方面增加了一点编码的复杂性，而另一方面又增强了飞码的离散能力，更重要的是给飞码带来了巨大的灵活性，为后起的优秀主单方案——飞讯的诞生创造了条件。除了105个高频字采用<code>sb</code>格式外，其它字都是采用的<code>spb^b</code>格式，前者称为声笔字，后者称为普通字。</p>
+<p>在学习飞码之初，往往会遇到不会打的字。怎么办呢？系统提供了丰富的反查手段，可以通过笔画、拼音和声笔来反查编码和部首。在完全不知道读音的时候直接用<code>aeuio</code>按顺序输入笔画进行反查，在不知道字形时用a引导拼音反查（注意零声母要用v），在知道声母但不知道部首时直接用声母和笔画输入四码进行反查。反查的结果不仅会显示编码，而且会显示拆分的部首，以方便理解。以下是几个反查的例子。</p>
+<p><img src="/images/fmfc.png" alt="飞码反查"></p>
+<p>另外，通过i引导的拼音还支持用字海两分法来进行反查， 支持查找八万多汉字，一般用于难读而易于两分的字进行反查或者GBK以外字的输入。GBK以外的字，飞码不提供正常编码，不能按正常方式输入，只能在两分查找到后选择输入。下面是字海两分法查找的例子。</p>
+<p><img src="/images/fmzhlf.png" alt="飞码字海两分"></p>
+<h3 id="1-声笔字"><a href="#1-声笔字" class="headerlink" title="1. 声笔字"></a>1. 声笔字</h3><p>飞码中采用<code>sb</code>格式的字称为声笔字，用声母和首笔来编码。声笔字只有105个，为了便于记忆和练习，把它们编成口诀如下：</p>
+<div class="note primary no-icon">
+            <p>如同孔明自快话，开口正道无怕经，二双公民来前线<br>年内安然回南国，若说阿维当农夫，片上方家暗笑她<br>进得高中好体面，心想事成且大为，别看晚儿那小子<br>强力对手也头破，从此把着全日用，除非白天会给还<br>部分次品立飞过，让利几起眼皮边，名门里外有意见</p>
+          </div>
+<p>输入声笔字时，一般是不需要空格上屏的，因为它可以被后续的字词顶上屏幕，例如：<code>二双公民来前线</code>的输入码为<code>vesagumaleqoxa</code>。声笔字都是使用频率很高的字，所以飞码可以节约许多空格，，使得它有相当高的单字输入效率。</p>
+<p>由于声笔字与其它字有着不同的输入路径，为了避免用户的死记，在输入声母后，就对它们进行了提示，如下图所示。这样，初学者只需观察提示中没有想要的单字，没有时才输入后面的编码。</p>
+<p><img src="/images/fmts.png" alt="声笔飞码提示"></p>
+<p>声笔字不仅在第一码后有提示，在第三码后也是有提示的，只是提示的方法不一样，如下所示，其中前两码为前一字对应的编码，第三码为第二字的第一码。这上面列出的两个字不一定是一个词，仅仅是为了提示声笔字而已。</p>
+<p><img src="/images/fmts2.png" alt="声笔飞码提示2"></p>
+<h3 id="2-普通字"><a href="#2-普通字" class="headerlink" title="2. 普通字"></a>2. 普通字</h3><p>飞码中采用<code>spb^b</code>格式的字称为普通字，即声母加偏旁部首加剩余部分的前两笔。</p>
+<p>飞码的偏旁部首通常就是人们查字典时使用的偏旁部首。为了便于记忆，在声笔飞码中一般取偏旁部首（或其名称）的声母作为它的代码。但是，为了提高编码的效率，有的偏旁部首采取了<code>形托</code>和<code>归类</code>的方法来确定其代码。同时，在归部时，字典中一般将偏旁部首归于其自身，而声笔飞码将偏旁部首归于其首笔画，这一方面提高了编码的效率，另一方面也突出了偏旁部首的作用，有助于用户建立起识别偏旁部首的条件反射。还有，字典中一个字可以归于几个部，而声笔飞码中一个字只能归于一个部，一般是取书写顺序的第一个部，但有时要兼顾直观和<code>义部优先</code>等因素。</p>
+<p>偏旁部首的具体键位定义如下，</p>
+<p><img src="/images/bushou.png" alt="bushou"></p>
+<p>为了减轻初学者的记忆负担，手机上提供了助记皮肤，如下图所示，可以长按上<code>N</code>键打开或者关闭助记。</p>
+<p><img src="/images/sbfmzj.jpg" alt="声笔飞码助记"></p>
+<p>以上偏旁部首中，需要注意的有<code>勹</code>（包字头）、<code>忄</code>（像小写字母 l）、<code>廴辶</code>（像 L）、<code>灬</code>（烈字底）、<code>衤礻止</code>（形状勉强像 N）、<code>廾</code>（弄字底）、<code> 丿彡</code>（撇起笔）、<code>攴</code>（敲字旁）、<code>攵（夂 夊）</code>（反文旁）、<code>亠</code>（文字头）、<code>彐</code>（寻字头）、疋（音为 ya）、<code>罒</code>（置字头）、<code>镸</code>（长字音）、<code>巛</code>（甾）字头；可以通过以上不同的方式来辅助记忆它们的代码。</p>
+<p>在声笔飞码中所取笔画并不一定是从汉字的第一笔开始取的，这依赖于偏旁部首是否位于字的前面。如果偏旁部首位于字的前面，即偏旁部首前没有任何其它的笔画，那么追加的笔画就除偏旁部首外的第一笔开始取，否则就从字本身的第一笔开始取。</p>
+<p>例如，<code>倒</code>字的偏旁部首<code>亻</code>是位于该字的前面的，所以追加的笔画应从除<code>亻</code>外的剩余部分即<code>到</code>的第一笔开始。再如，<code>坠</code>字的偏旁部首<code>土</code>是位于该字的后面的，不是位于字的前面，所以追加的笔画应从该字的第一笔开始。注意，有的字的偏旁部首是夹在了前后笔画的中间，如<code>戴</code>字的偏旁部首<code>戈</code>。这时，字的偏旁部首仍然不是位于字的前面，所以追加的笔画还是应从该字的第一笔开始。</p>
+<p>在声笔飞码中，若偏旁部首本身是一个成字，那么就取它的第一个笔画作为部首，并用<code>zhpsd</code>来编码。非成字偏旁部首没有常规编码，只能按笔画反查方式输入。</p>
+<p>为了区分常用字的重码，有几个成字偏旁部首没有取其第一笔作为偏旁部首，这些字为<code>走麦广</code>，它们都是取字的子部首。另外，<code>敌</code>字的部首没有按顺序取<code>舌</code>而取了<code>攵</code>，<code>或</code>字的部首没有取<code>戈</code>而取了<code>一</code>。还有的字没有取常规的部首，例如：<code>重 垂</code>取的是最下面的<code>二</code>而不是首笔撇；<code>奏 三</code>取的是上面的<code>二</code>；<code>某</code>取的<code>艹</code>而不是<code>木</code>，<code>世</code>和<code>甘</code>取的<code>艹</code>而不是<code>一</code>，<code>半</code>取的<code>丶</code>而不是<code>八</code>，<code>东</code>取的<code>一</code>而不是<code>小</code>，<code>点</code>取的<code>卜</code>而不是<code>灬</code>，等等。这些都是为了增强编码的离散而采取的变通取法。</p>
+<p>与传统四码输入法一样，飞码在形式上也有一、二、三级简码和全码，分别对应一简字、二简字、三简字和全码字。但是，在实质上是有很大区别的，其中最大的区别是，飞码的三简字可以被顶上屏幕，全码字的重码是用<code>aeuio</code>来选择而不是用难以击打的数字键。</p>
+<p>另外，与传统高效输入法一样，飞码采用的出简不出全策略，有简码的字就不会有全码，以便节约有限的编码空间，并强制用户采用最高效的输入方式，形成快速的条件反射。所以，一定要注意，飞码输入汉字时，“过了这个村就没有这个店了”，不能输完四码再看有没有你要的字。初学的时候一定要每输入一码就看有没有你要的字，没有的话才能输入后面的编码，否则就可能错过你要的字。当然，在你在使用中记住了字的码长，形成条件反射后，是完全可以不看提示行的。</p>
+<h4 id="1-一简字"><a href="#1-一简字" class="headerlink" title="(1) 一简字"></a>(1) 一简字</h4><p>飞码有21个一简字：<code>不平没发的他你了个可和就去下在出是人而一我</code>，又称为声空字或<code>s_字</code>，其中<code>_</code>表示空格。它们是强制性的简码字，没有对应的全码，都是使用频率极高的字，使用一段时间后用户就会自然地形成条件反射。</p>
+<p>与传统输入法不同，飞码的一简字所加的空格是作为编码来对待的，输入空格后，一简字不会立刻上屏，但是在连续输入过程中会被后面字词的首码「顶」上屏幕。例如，<code>我是一个人。</code>的输入码为<code>w_s_y_g_r.</code>，其中<code>_</code>表示空格。</p>
+<p>在极个别情况下，需要单独输入一简字并将其立刻上屏的时候，就需要连续两次空格键。为了避免这个问题，可以用数字4将一简字直接选择上屏，以便节约一次按键。这在一简字因组合输入出现在第三码时也是适用的，这时还可以避免双击空格误上屏不需要的词组，因为当四码有重码且组合的二字串不是首选项时，「行了」不在首选，双击空格时上屏的可能就不是「行了」而是「形成了」，如下图所示。</p>
+<p><img src="/images/ljsp.png" alt="立即上屏"></p>
+<h4 id="2-二简字"><a href="#2-二简字" class="headerlink" title="(2) 二简字"></a>(2) 二简字</h4><p>飞码的二简字有441个，其格式为<code>sp</code>，所以又称为<code>sp字</code>或者声偏字，其中的大多数也是相当常用的，例如：<code>加jl 尽js 量lq</code>等。</p>
+<p>与传统输入法一样，声笔飞码的二简字一般需要加空格上屏。例如，<code>解jj_ 所sj_ 摸mf_</code>等等，其中<code>_</code>表示空格。当然，如果后接的是数字、标点符号等非编码字符时，这个空格仍然是可以省略的。</p>
+<h4 id="3-三简字"><a href="#3-三简字" class="headerlink" title="(3) 三简字"></a>(3) 三简字</h4><p>飞码的三简字格式为<code>spb</code>，所以又称为<code>spb字</code>或者声偏笔字，例如：<code>慕mxe 覆fxu 您nxu</code>等等。这类字数量庞大，在GBK二万字集中有2135个，其中不乏常见的字。传统输入法的三简字一般是需要空格上屏的，而飞码的三简字在连续输入时是无需空格键的，可以被后续的编码顶上屏幕。当然，如果没有后续的输入而要马上上屏的时候，仍然需要空格。但是，这种情况在正常的输入过程中是很少的。三简字不需要空格上屏是声笔飞码的单字输入比传统输入法高效的一个重要原因。</p>
+<h4 id="4-全码字"><a href="#4-全码字" class="headerlink" title="(4) 全码字"></a>(4) 全码字</h4><p>声笔飞码的全码是四码，编码格式为<code>spbb</code>，即声母加偏旁部首再加剩余部分的前两个笔画，例如：<code>码msaa 巨jkae 瞄mmei</code>等。但是，在出现重码字时，声笔飞码采用了更加快捷的选择方式，不是用数字键，而是用<code>aeuio</code>来进行选择，如下所示。</p>
+<p><img src="/images/fmxc.png" alt="声笔飞码选重"></p>
+<h4 id="5-条件顶"><a href="#5-条件顶" class="headerlink" title="(5) 条件顶"></a>(5) 条件顶</h4><p>飞码的单字除了三码字可以被顶上屏幕外，其声空字和二码字也可以在一定条件下被顶上屏幕，这是一种非常奇特的能力，是从飞讯反向借鉴过来的。飞码条件顶是指在输入二字词的时候，若第一字正确而第二字不对时，可以追加第二字的第三码，将第一字顶上屏幕，前提是追加的第三码与选择键没有冲突。例如，在输入「声笔」的时候，发现系统没有该词，而且「笔」字的第三码u又没有被重码词占用，那么在输入u的时候就会将「声」字顶上屏幕，留下「bpu」，对应的字正是「笔」。这样，就不必用退格键来清除「bp」两码，用空格先上屏「声」字，再输入「笔」字了。</p>
+<h2 id="三、词组的输入"><a href="#三、词组的输入" class="headerlink" title="三、词组的输入"></a>三、词组的输入</h2><p>词组，特别是二字词，在现代汉语中是占主导地位的，任何输入法都不能忽视。飞码对二字词特别重视，致力于提高其输入效率。飞码词组按其组成字的多少分为二字词、三字词和多字词，现分述如下。</p>
+<h3 id="1-二字词"><a href="#1-二字词" class="headerlink" title="1. 二字词"></a>1. 二字词</h3><p>飞码的二字词输入功能强大，其二字词被进一步分为常规词组和数选简词两类。</p>
+<h4 id="1-常规词组"><a href="#1-常规词组" class="headerlink" title="(1) 常规词组"></a>(1) 常规词组</h4><p>飞码的常规二字词又分为sbbs型和spsz型。之所以要这样设计，就是为了声笔字能够二码顶，以提高单字效率，使它的单字效率优于其它主词的顶功输入法。</p>
+<p>由21个声空字和105声笔字开头的二字词为sbbs型，其编码方法为第一字的前两码加第二字的前一笔再加第二字的声母，例如：<code>不能b_an 下台x_at 大汉deoh 心爱xouv</code>等。若二字词首字的前两码为声母加偏旁部首，那么就是spsz型的，其第二字就是取相应单字的前两码，例如：<code>常规cjgj 电脑dqnv 洞见ddji 健全jrqu 统一tjy_ 淹没ydm_</code>等。</p>
+<p>另外，为了输入方便，飞码在第三码时提示了前两码对应的单字和第三码开始的一简字和声笔字，例如：<code>困一kky_ 放是ffs_ 难大nyde 实无sgwe</code>等。如果这种字串与真正的词组重码也没有关系，它会被作为重码词排在最后，只需用<code>aeuio</code>选择上屏即可。为了增加确定性，在第二码为声空字时，可以在输入三码后用4直接上屏，例如：<code>困一kky4 放是ffs4</code>，以避免在有重码时进行选重。</p>
+<h4 id="2-数选简词"><a href="#2-数选简词" class="headerlink" title="(2) 数选简词"></a>(2) 数选简词</h4><p>为了提高输入效率，飞码提供了数选简词，但不是强制使用的，它们仍然有对应的正常编码词组。所谓数选简词，是指用数字键来选择的简码词组。为了减少记忆量，数字的使用并不是随机的，而是用23789代替aeuio来表示笔画。</p>
+<p>为什么用23789，而不用传统的12345呢？这一方面是因为23789比12345更加容易操作，另一方面是23789可以与aeuio在键盘上位子形成近乎完美的映射，除2外正好位于相应笔画字母上一排相同的位置，非常容易记住，如下图所示。</p>
+<p><img src="/images/Bhszys.jpg" alt="笔画数字映射"></p>
+<p>数选简词分为sn型和szn型两种。飞码sn型的数选简词一共有105个，其具体编码格式为<code>s1n2</code>，即首字的声母加第二字的数字首笔，例如：<code>不能b2 发生f7 就是j8 科学k9</code>等。这些简词在声笔系列的所有字词型方案中都是一样的，使用频率很高，应该尽量采用。</p>
+<p>飞码的szn型的数选简词很多，多达2792个，其具体编码格式为<code>s1z1n2</code>，即首字的前两码加第二字的数字首笔，例如：<code>究竟jx9 大师de8 一阵y_2 到达dl3 面向me7</code>等。当首字为一简字或者声笔字时，第三码也可以用<code>aeuio</code>输入，但是就需要空格上屏了。</p>
+<p>飞码的数选简词在电脑上的提示方式如下。</p>
+<p><img src="/images/fmvjjc.png" alt="飞码数选简词"></p>
+<h3 id="2-三字词"><a href="#2-三字词" class="headerlink" title="2. 三字词"></a>2. 三字词</h3><p>飞码三字词的编码格式为<code>s1s2s3z3</code>，即前两字的前一码加第三字的前两码。需要注意的是，若第三字为声空字，那么格式为<code>s1s2s3_</code>，例如：<code>埃及人vjr_ 被告人bgr_</code>等；若第三字为声笔字，那么格式为<code>s1s2s3b3</code>。也就是说，声空字和声笔字在词组中的形式是不变的。一般的三字词格式为<code>s1s2s3p3</code>，例如：<code>计算机jsjm 大无畏dwwt</code>等。</p>
+<h3 id="3-多字词"><a href="#3-多字词" class="headerlink" title="3. 多字词"></a>3. 多字词</h3><p>声笔飞码的多字词为前三字的第一码加末字的第一码，与传统四码输入法完全一样，例如：<code>丰富多彩ffdc 中华人民共和国zhrg</code>等等。</p>
+<h3 id="4-空位词"><a href="#4-空位词" class="headerlink" title="4. 空位词"></a>4. 空位词</h3><p>虽然飞码的单字编码离散很好，两码码位已经占满，但是仍然65个三码的空码位。为了把这些空码位充分利用起来，在上面安排了常见的三字词，称之为空位词，其编码方法是：前两字的声母加第三字的首笔。这种词不必刻意使用，能用就用，不用也无妨，按正常编码输入就行了。</p>
+<p>以下列出的是一些常见飞码空位词组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">不可能	bka</span><br><span class="line">让我们	rwu</span><br><span class="line">你知道	nzo</span><br><span class="line">没办法	mbo</span><br><span class="line">发现该	fxo</span><br><span class="line">多功能	dga</span><br><span class="line">那个人	ngu</span><br><span class="line">公安局	gva</span><br><span class="line">控制器	kzi</span><br></pre></td></tr></table></figure>
+<h2 id="四、字词分流"><a href="#四、字词分流" class="headerlink" title="四、字词分流"></a>四、字词分流</h2><p>在传统输入法如五笔字型中，四码的字、词是混合编码的，它们共享同一个编码空间。在发生重码时，究竟把单字排在前面，还是把词组排在前面，面临艰难的决策。当收录的单字和词组数量增大时，这个问题会变得更加突出。</p>
+<p>在声笔飞码中，单字和词组各自有不同的编码格式，单字的第三码肯定是笔画，而词组的第三码肯定是声母。所以，它们享有不同的编码空间，不会发生冲突，不存在单字和词组那个优先的问题。例如，四码单字<code>校jmoe 码msaa 暮mqei 渊yduo</code>，四码词组<code>答应dpyg 进步jebn 估计grjy 理想lwxe</code>，它们之间是绝对不会重码的。</p>
+<h2 id="五、扩展编码"><a href="#五、扩展编码" class="headerlink" title="五、扩展编码"></a>五、扩展编码</h2><p>声笔飞码词组的四码空间容量与传统四码输入法如五笔字型是差不多的。但是，由于声笔系列收词量高达48万之多，虽然飞码的离散很好，但是在个别情况下重码现象也会比较严重，可能需要多次翻页查找。于是，飞码采用了与声笔简码类似的扩展编码，通过追加首字的前两个笔画，迅速扩大编码空间为四码时的25倍，可以快速筛选出所需的重码词组。结合后述动态码长的使用，完美地兼顾了编码空间与输入效率，既能享有巨大的编码空间，又能具有较短的平均码长，两全其美。</p>
+<p>比如，「音乐学」一词在第一次输入时，输入<code>yyxx</code>后需要在第四页才能找到，如下图所示。每一页，都需要用眼睛扫视 6 个选项，人机交互频繁，效率很低。</p>
+<p><img src="/images/SbfmYyxx.png" alt="声笔飞码Yyxx"></p>
+<p>然而，如果再追加首字前两个笔画<code>oe</code>的话，「音乐学」就出现在第一页上，只需用<code>u</code>选择上屏就可以了，如下图所示。</p>
+<p><img src="/images/SbfmYyxxoe.png" alt="声笔飞码Yyxxoe"></p>
+<p>需要注意的是，声笔飞码的单字没有设计扩展编码，因为对于常用字来说，其重码现象并不严重。</p>
+<h2 id="六、动态码长"><a href="#六、动态码长" class="headerlink" title="六、动态码长"></a>六、动态码长</h2><p>动态码长不仅是码长的调整，也包括重码顺序的调整，实际上都是因为对频率的调整而引起的。但是，作为专业性的输入法，飞码只有词组参与调频，其单字是不参与调频的，即单字的重码位置是固定的，这有利于对单字进行快速盲打。</p>
+<p>当四码词组有重码的时候，如果选择了某个非首位的词组，那么它的频率权重就会提高，在下次输入的时候，其排序就会提前。一般通过一、两次选择就可以提前到首位，从而就能利用顶屏来节约一次按键。</p>
+<p>例如：第一次输入<code>针织zjzj</code>时如果它是排在第三位 ，用<code>e</code>选择上屏后，下次输入就可能排在首位了，于是可以利用顶屏节约一次选择键。如果在输入的时候采用了扩展编码，比如用<code>yyxxoe</code>输入了「音乐学」，那么在下次输入的时候一般就只需要<code>yyxx</code>就可以了，码长得到了缩短。</p>
+<h2 id="七、词组的管理"><a href="#七、词组的管理" class="headerlink" title="七、词组的管理"></a>七、词组的管理</h2><p>声笔飞码目前自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，需要添加新的词组，而且对于不满意的词组可能还想删除。另外，在有重码时，重码词排列的顺序不一定是用户所希望的，需要进行动态的调整。声笔飞码就提供了这些能力。</p>
+<h3 id="1-自动造词"><a href="#1-自动造词" class="headerlink" title="1. 自动造词"></a>1. 自动造词</h3><p>飞码的造词是在输入过程中自动进行的，无需用户干预。例如：输入<code>声st 笔bpu</code>后，下次输入<code>stbp</code>时就会有该词了，只是如果有重码的话，新造的词会排在后面。如果重码太多，可以追加首字前两笔或者用Tab一次性地跳到最后，以避免多次翻页。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。</p>
+<p>需要注意的是，在进行枚举自动造词的时候，是以编码对应的字、词为单位来进行组合的，并不是以单字为单位的。例如，在输入<code>声笔stbp 系列xxld 码msaa</code>后，生成的词组为「声笔系列码」「声笔系列」「系列码」，而不会生成「声笔系」「笔系列」「列码」等。另外，如果之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
+<h3 id="2-词组删除"><a href="#2-词组删除" class="headerlink" title="2. 词组删除"></a>2. 词组删除</h3><p>由于飞码是采用的自动造词策略，在提供方便的同时也会产生大量的废词，所以系统提供了废词清理功能，能够将用户几乎不使用的新造临时词组自动清除。对于少量暂时还未被清理的废词，用户不必理会，到时限后就会被自动删除。在必要的时候，如用户错误地确认了临时词组，系统也提供了手动删除的手段，方法是先将光标移动到该词上面，再按<code>Control + Delete</code>键来删除。注意，如果是非临时词组，需要删除两次才能删除。第一次删除时只是把它变成了临时词组。在安卓手机上的删除方法是，用左右滑动空格定位词组，再用删词键来删除。</p>
+<h2 id="八、综合输入示例"><a href="#八、综合输入示例" class="headerlink" title="八、综合输入示例"></a>八、综合输入示例</h2><p><strong>例1:</strong><code>女nz_ 鬼gpi 食spo 音ydeo 见ji_ 手su_</code></p>
+<p>例1是一些成字偏旁部首，除<code>见ji_ 手su_</code>是<code>sb</code> 格式的字外，其它字的第一笔都要用<code>zhpsd</code>的表示笔画。</p>
+<p><strong>例2:</strong><code>古gs_ 之zd_ 立lo_ 大事dese 者ztu, 不b4 惟有wlye 超cza 世sc_ 之zd_ 才，ch, 亦ywui 必有bxye 坚忍不拔jrbb 之志。zdzta.</code></p>
+<p>例2中，<code>不b4</code>采用了数字4将「不」字选择上屏，以避免使用两次空格键，而<code>才，ch,</code>和<code>之志。zdzta.</code>采用了标点顶屏来节约空格。</p>
+<p><strong>例3:</strong><code>我们w7 大家dejo 都dv_ 喜欢xt2 研究ys9 输入法。srfd.</code></p>
+<p>例3中，<code>我们w7 喜欢xt2 研究ys9</code>采用了数选简词来提高效率，若用正码则为<code>我们w_mr 喜欢xthy 研究ysjx</code>。</p>
+<h2 id="九、声笔飞讯"><a href="#九、声笔飞讯" class="headerlink" title="九、声笔飞讯"></a>九、声笔飞讯</h2><p>声笔飞讯，简称飞讯，是基于飞码的衍生方案，其特点是所有二简字在输入的时候可因为顶功而省略空格键，因此具有更短的单字平均码长，而词组的码长相对较长，所以属于主单的输入方案，擅长离散文本的录入。为了让词组的输入更顺畅，飞讯采用了延迟顶屏，具体来说延迟了一至两码来顶单字，属于42和52混合延迟顶的范畴。</p>
+<p>飞讯与飞码的差异很小。可以说，只要学会了飞码，也就基本上学会了飞讯，无需太多额外的学习，了解一下规则就行了。关键是，要形成不同的输入习惯，这就需要一定的时间。如果想能自如的在不同场合切换飞讯和飞码来使用，那就需要更多的时间来适应了。</p>
+<p>飞讯的单字输入与飞码几乎完全一样，唯一的差别是输入<code>sp</code>字时，飞码一般需要空格上屏，而飞讯则可以省略空格。例如，输入「入」字时，飞码的用键为<code>rp_</code>，而飞讯的用键为<code>rp</code>。</p>
+<p>飞讯的词组编码，只需将飞码词组的第四码换成末字的前两个笔画即可。飞讯的<code>s1n2</code>和<code>s1z1b2</code>型数选简词与飞码是完全一样的。对于<code>s1z1b2</code>型数选简词，当首字为一简字或者声笔字时，第三码也可以用<code>aeuio</code>输入，而且还支持顶屏。</p>
+<p>具体来说，飞讯二字词的编码格式为<code>s1z1s2b2b2</code>，例如：<code>简码jpmeu 半角bdjua 蝴蝶hcdia 奔驰bdcaa</code>等。由于飞讯的词组输入需要五码，所以在用单字输入的时候不超过五码的二字词是不能用词组的方式来输入的，目的是强制用户使用高效的方式，同时减少二字词的重码。记住单字的简码应该是飞讯用户的基本功，这样才便于训练出键速，靠快速的条件反射来提高输入速度。需要注意的是，飞讯没有飞码中的sbbs型二字词，该型被统一成了sbsbb，所以规则更加简单，例如：<code>一直y_zei 大佬delui</code>等。</p>
+<p>飞讯三字词的编码格式为<code>s1s2s3b3b3</code>，例如：<code>计算机jsjei 新世纪xsjaa 大无畏dwwia</code>等。三字词一般建议使用词组的方式来输入，以便节约用键。可能的例外情况是由两键字（一、二简字和声笔字）构成的三字词如<code>好起来 不知道</code>等，它们用单字输入也才六键，而键速可能更快，因为单字更容易形成条件反射。具体怎么打好，就看用户自己的使用习惯了。</p>
+<p>飞讯多字词的编码格式为<code>s1s2s3b0b0</code>，其中的0表示末字，例如：<code>呼风唤雨hfhei 风雨同舟fytuu 生龙活虎slhie</code>等。考虑到有的成语用字比较生僻，飞讯也支持第四码用声母，但是得用大写来输入，例如：<code>呼风唤雨hfhY 风雨同舟fytZ 生龙活虎slhH</code>等。</p>
+<p>另外，飞讯的词组也是支持扩展编码的，在重码多的时候，可以追加首字的前两笔来快速区分重码，但是多字词第四码用大写输入时不能使用扩展编码。</p>
+<h2 id="十、声笔飞整"><a href="#十、声笔飞整" class="headerlink" title="十、声笔飞整"></a>十、声笔飞整</h2><p>声笔飞整是声笔飞码的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了。但是，它的缺点是，在输入发生错误后回改的成本高，离散程度高的文本尤其如此。所以，声笔飞整仅适合录入简单的连续文本，或者供声笔飞码的初学者使用，熟练的用户应当使用声笔飞码和声笔飞讯。</p>
+<p>下面举例说明一下声笔飞整的输入方法。</p>
+<p><strong>例1:</strong><code>我们大家都喜欢研究输入法</code></p>
+<p><img src="/images/sbfz1.png" alt="飞整例子1"></p>
+<p>在例1中，<code>我w_</code>是一简字，需要用空格作为第二码；<code>大de 家jo</code>是声笔字，其余的都使用声部形式（声母加部首的形式）。这个例子按照规则输入后就完全正确了，不用任何回改。</p>
+<p>可以看出，在转换完全正确，不需要回改的时候，输入过程是非常流畅和舒服的。相比搜狗拼音之类的双拼整句方式，声笔飞整的转换准确率会更高，因为一简字和声笔字是固定不变的，而且飞码前两码离散重码的能力本身就很强。</p>
+<p>但是，并不总是这么幸运的，如下例动画所示。</p>
+<p><strong>例2:</strong><code>声笔系列码的顶功特色</code></p>
+<p><img src="/images/sbfz2.gif" alt="飞整例子2"></p>
+<p>在例2中，<code>bp</code>、<code>ms</code>和<code>dygg</code>转换的结果并不是<code>笔</code>、<code>码</code>和<code>顶功</code>而是<code>八</code>、<code>目</code>和<code>定工</code>，需要连续按两次7将<code>声笔</code>、<code>系列</code>确定，按三次8将<code>码的</code>、<code>顶</code>和<code>功</code>确定，最后按空格或者6上屏<code>特色</code>两字。在这个例子中，需要多次选择操作才能把要上屏的内容修改正确。</p>
+<p>声笔飞整提供了一种快速定位的手段，可以用<code>12345</code>一键定位到待确定的第一至五个音节前，也可以用TAB键从后向前逐个移动音节进行定位。对于声部字，还可以追加一至两个笔画来筛选重码，提高转换的准确率。同时，在以非声部字结尾时，还可以用<code>aeuio</code>代替<code>67890</code>进行重码选择，在操作上更加便捷。</p>
+<h2 id="附录一：飞码和飞讯的编码格式"><a href="#附录一：飞码和飞讯的编码格式" class="headerlink" title="附录一：飞码和飞讯的编码格式"></a>附录一：飞码和飞讯的编码格式</h2><p>为了便于用户总结和记忆飞码的基本内容，现将飞码字词的编码格式总结如下。</p>
+<ul>
+<li>单字 <code>sb, spb^b</code></li>
+<li>二字词 <code>s1n2, s1z1n2, s1b1b2s2^&#39;b1b1, s1z1s2z2^&#39;b1b1</code></li>
+<li>三字词 <code>s1s2s3z3^&#39;b1b1</code></li>
+<li>多字词 <code>s1s2s3s0^&#39;b1b1</code></li>
+</ul>
+<p>飞讯的编码格式，单字与飞码几乎完全一样，只是从二、三码混合顶变为全二码起顶了。但是，飞讯的常规词组编码格式变化较大，数选简词与飞码完全一样，现在总结如下。</p>
+<ul>
+<li>单字 <code>sb, sp^bb</code></li>
+<li>二字词 <code>s1n2, s1z1n2, s1z1s2b2b2^&#39;b1b1</code></li>
+<li>三字词 <code>s1s2s3b3b3^&#39;b1b1</code></li>
+<li>多字词 <code>s1s2s3b0b0^&#39;b1b1|s1s2s3S0</code></li>
+</ul>
+<p>其中：</p>
+<ul>
+<li>z = <code>p|b|_</code></li>
+<li>s = p = [qwrtsdfgzxcvbyphjklnm]</li>
+<li>b = [aeuio]</li>
+<li>n = [23789]</li>
+</ul>
+<p><strong>说明：</strong><code>^</code>表示起始顶屏码位，字母后的数字表示词组中的第几个字，0特别地表示末字；<code>&#39;</code>表示码长调整位；s表示声母（大写时表示用大写字母输入），p表示偏旁部首，b表示笔画，<code>|</code>表示或者，<code>_</code>表示空格，z表示p或b或<code>_</code>, n为用数字表示的笔画。s 和 p 均采用 aeuio 以外的 21 个英文字母，b采用 aeuio 这几个元音字母，而n采用23789这几个数字。</p>
+<h2 id="附录二：飞码和飞讯的强化训练"><a href="#附录二：飞码和飞讯的强化训练" class="headerlink" title="附录二：飞码和飞讯的强化训练"></a>附录二：飞码和飞讯的强化训练</h2><p>飞码和飞讯的定位是专业型的输入法方案，它们不仅用于一般的工作和生活中，而且也适用于竞速和打字比赛。飞码是主词的，而飞讯是主单的，最好两者都同时掌握，根据不同的使用场景快速切换使用。为了提高打字速度，在比赛中取得好的成绩，往往需要高强度的训练，对常用字词的输入形成条件反射。为了配合这种训练，特准备了强化训练文本，供打字训练软件使用。</p>
+<p>飞码和飞讯的强化训练步骤都差不多，可以按以下步骤进行。强化练习文本可在声笔系列码QQ群445906697的共享文件夹下载。</p>
+<ol>
+<li>126高频单字：包括21个一简字和105个声笔字。</li>
+<li>441声部单字：即441个由声母和偏旁部首编码的两码字。</li>
+<li>105声数词组：即105个由第一字声母加第二字数字首笔编码的高频二字词。</li>
+<li>65空位词组：即在三简单字空码位上安排的65个高频词组。</li>
+<li>最高频500字：即现代中文里出现频率最高的500个字。</li>
+<li>次高频500字：即现代中文里出现频率次高的500个字。</li>
+<li>最高频800词：即现代中文里出现频率最高的800个词组。</li>
+<li>次高频800词：即现代中文里出现频率次高的800个词组。</li>
+<li>单字编码提示：用于打字练习时在打字软件中提示单字的编码。</li>
+<li>去跟打群实战：即各大QQ跟打群和网络打字平台。</li>
+</ol>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.svg" alt="Vaeuio">
+            
+              <p class="site-author-name" itemprop="name">Vaeuio</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">31</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/sbxlmdsl" title="GitHub &rarr; https://github.com/sbxlmdsl" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:sbxlm@qq.com" title="E-Mail &rarr; mailto:sbxlm@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://jq.qq.com/?_wv=1027&k=5EQP3ON" title="QQ群 &rarr; https://jq.qq.com/?_wv=1027&k=5EQP3ON" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/sbxlm/" title="https://www.cnblogs.com/sbxlm/" rel="noopener" target="_blank">博客园之吾思语</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://input.foruto.com/" title="http://input.foruto.com/" rel="noopener" target="_blank">中文输入法世界</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://corpus.zhonghuayuwen.org/" title="http://corpus.zhonghuayuwen.org/" rel="noopener" target="_blank">中文语料库在线</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/studyzy/imewlconverter" title="https://github.com/studyzy/imewlconverter" rel="noopener" target="_blank">深蓝词库转换</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.sogou.com/labs/" title="https://www.sogou.com/labs/" rel="noopener" target="_blank">搜狗实验室</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.onlinedown.net/" title="https://www.onlinedown.net/" rel="noopener" target="_blank">华军软件园</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.pc6.com/" title="http://www.pc6.com/" rel="noopener" target="_blank">PC6下载站</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、概述"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、单字的输入"><span class="nav-text">二、单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-声笔字"><span class="nav-text">1. 声笔字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-普通字"><span class="nav-text">2. 普通字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-一简字"><span class="nav-text">(1) 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-二简字"><span class="nav-text">(2) 二简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-三简字"><span class="nav-text">(3) 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-全码字"><span class="nav-text">(4) 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-条件顶"><span class="nav-text">(5) 条件顶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、词组的输入"><span class="nav-text">三、词组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-二字词"><span class="nav-text">1. 二字词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-常规词组"><span class="nav-text">(1) 常规词组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-数选简词"><span class="nav-text">(2) 数选简词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-三字词"><span class="nav-text">2. 三字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-多字词"><span class="nav-text">3. 多字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-空位词"><span class="nav-text">4. 空位词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、字词分流"><span class="nav-text">四、字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、扩展编码"><span class="nav-text">五、扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、动态码长"><span class="nav-text">六、动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、词组的管理"><span class="nav-text">七、词组的管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-自动造词"><span class="nav-text">1. 自动造词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-词组删除"><span class="nav-text">2. 词组删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、综合输入示例"><span class="nav-text">八、综合输入示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、声笔飞讯"><span class="nav-text">九、声笔飞讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、声笔飞整"><span class="nav-text">十、声笔飞整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：飞码和飞讯的编码格式"><span class="nav-text">附录一：飞码和飞讯的编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：飞码和飞讯的强化训练"><span class="nav-text">附录二：飞码和飞讯的强化训练</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vaeuio</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.2"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.2"></script>
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+  
+  
+
+
+  
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('5');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "topCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+
+  
+
+  
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script>pangu.spacingPage();</script>
+
+
+  
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js"></script>
+  <script>
+  
+    bookmark.loadBookmark();
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
