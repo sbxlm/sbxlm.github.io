@@ -123,8 +123,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmJua.gif">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmSjo.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmSxzc.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbjz2.gif">
-<meta property="og:updated_time" content="2021-04-01T00:15:37.869Z">
+<meta property="og:updated_time" content="2021-04-06T00:28:23.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔简码">
 <meta name="twitter:description" content="一、概述声笔简码建立在声笔码基础之上，基本上克服了声笔码的两个不足之处：码长不定和调头取笔。如果说声笔码是顶功的开山之作，那么声笔简码就是顶功的成熟之品，是总结声笔码、声笔飞码等顶功输入法的使用经验，并反复实验、改造的结晶，这个过程经历了漫长的十多年。在这十多年中，顶功输入法得到了蓬勃的发展，数十种顶功输入法应运而生。但是，它们都或多或少地面临类似的问题。声笔简码的成功经验，也可以用于克服声笔飞码">
@@ -350,25 +349,6 @@
         
         
           
-          <li class="menu-item menu-item-sbkm">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbkm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔快码</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-sbfm">
 
     
@@ -582,9 +562,6 @@
       
       
     
-      
-      
-    
     
 
   
@@ -623,7 +600,6 @@
         
           <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>声笔简码建立在声笔码基础之上，基本上克服了声笔码的两个不足之处：码长不定和调头取笔。如果说声笔码是顶功的开山之作，那么声笔简码就是顶功的成熟之品，是总结声笔码、声笔飞码等顶功输入法的使用经验，并反复实验、改造的结晶，这个过程经历了漫长的十多年。在这十多年中，顶功输入法得到了蓬勃的发展，数十种顶功输入法应运而生。但是，它们都或多或少地面临类似的问题。声笔简码的成功经验，也可以用于克服声笔飞码等顶功输入法的不足，而且很容易用来简化传统输入法的规则并提高传统输入法的效率。</p>
 <p>声笔简码引领的是顶功输入法向传统的一种回归，但又不是简单的回归，而是革命性的回归，是螺旋式的上升。它使得顶功输入法更接近传统输入法，但又不失顶功的效率，是传统与现代的完美结合。可以预计，它将再一次对输入法的发展方向产生深远的影响。</p>
-<p>本文除了讲解声笔简码外，还将在章末介绍声笔简整。声笔简整是基于声笔简码的整句方案，在使用上比声笔简码还简单得多。理解了声笔简码就很容易理解它，所以仅仅花费少量篇幅介绍就行了。</p>
 <p>有关软件的安装与卸载、翻页方法、标点、符号、词库同步、自定义词典、中英文混合输入、手机操作等声笔系列码共有的内容，请阅读《总体介绍》中的相关部分，这里就不再赘述。</p>
 <h2 id="二、优势"><a href="#二、优势" class="headerlink" title="二、优势"></a>二、优势</h2><p>声笔简码的优势可以总结为：简单性、高效性和知识性。它比拼音更简单，比五笔更高效，还有利于人们巩固语文知识。</p>
 <h3 id="1-比拼音更简单"><a href="#1-比拼音更简单" class="headerlink" title="1. 比拼音更简单"></a>1. 比拼音更简单</h3><p>声笔简码非常简单，具有易学、易用的优点，只需要知道用v表示零声母，用aeuio分别表示折、横、撇、竖、捺五种笔画，便可以上手使用了。与搜狗拼音、百度拼音等拼音输入法相比，它不用区分平、翘舌，不需要知道韵母，没有区分前、后鼻音等的烦恼。</p>
@@ -798,17 +774,6 @@
 <p>对声笔简码来说，在默认情况下，多字词有<code>s1s2s3b0</code>和<code>s1s2s3S0</code>两种输入方式，其中<code>s1s2s3b0</code>与三字词的编码空间是重叠的，有时重码现象比较严重。如果希望多字词只用<code>s1s2s3S0</code>方式输入，那么就可以将Translator下的enable_filtering选项设置为true，以过滤掉<code>s1s2s3b0</code>上的多字词。这样，三字词和多字词之间就实现了编码空间的分离。</p>
 <p>(2) 小写模式</p>
 <p>对声笔简码来说，在默认情况下，多字词的第四码可以用大写字母来输入，而传统上是用小写字母来输入的。如果希望第四码用小写字母，那么可以将lower_case选项设置为true。不过，这样的话，三字词就不能三码起顶屏了，三码时需要空格才能上屏。一般会配合词组过滤选项使用，实现三字词和多字词独立享用不同的编码空间，主要用于多字词的使用比三字词更加频繁的时候。</p>
-<h2 id="十二、声笔简整"><a href="#十二、声笔简整" class="headerlink" title="十二、声笔简整"></a>十二、声笔简整</h2><p>声笔简整是声笔简码的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了，比已经非常简单的声笔简码还要简单。但是，它的缺点是用键较多，在输入发生错误后回改的成本高，离散程度高的文本尤其如此。所以，声笔简整仅适合录入简单的连续文本，或者供声笔简码的初学者使用。</p>
-<p>声笔简整固定了21个最常用的一简字，只需要一码，其它字可以采用二至六码。既可以使用词组，也可以使用短语来输入，但是尽量不要使用长句。这样，编码空间得到了有效的利用，重码也得到了有效的离散，还能减少回改的概率。</p>
-<p>问题是，在什么时候用两码，什么时候用三码，什么时候又用四、五、六码呢？什么时候用词组，什么时候又用短语呢？一般来说，越常用的字词，码长可以用得越短；越不常见的字词，码长应当越长。容易发生歧义的地方，就应该常用词组及时上屏，以避免已经输入的正确内容被篡改。如何把握火候，就需要经验的积累了。</p>
-<p>声笔简整还提供了快速定位的手段，可以利用数字<code>1234</code>将光标一次性地定位到待定的第1至4个音节之前，用<code>5</code>将光标定位到最后，而TAB可以快速从当前位置向前逐个音节移动。</p>
-<p>下面举例说明一下声笔简整的输入方法。注意您的输入结果很可能是不一样的，因为用户数积累的用户词汇和字词调频会影响转换的结果。</p>
-<p><strong>例1:</strong><code>我们大家都喜欢研究输入法</code></p>
-<p>输入：<code>我们wm_ 大家dj_ 都喜欢deixhao_ 研究yjo_ 输入法srf_</code></p>
-<p>在上例中，<code>我们</code>、<code>大家</code>和<code>输入法</code>都使用了简拼，<code>都喜欢</code>和<code>研究</code>的采用了简拼和声笔的混合编码。当然，以上的输入方式不是唯一的。</p>
-<p><strong>例2:</strong><code>声笔系列码的顶功特色</code></p>
-<p><img src="/images/sbjz2.gif" alt="简整例子"></p>
-<p>在例2中，由于<code>声笔系列码</code>和<code>顶功</code>这两个短语和词组在系统词库中是不存在的，可以先按每字声母加两个笔画的方式输入，用<code>12345</code>进行快速定位回改，待系统造好短语和词组后，再用更简便的方式来输入。这个例子一次输入了十个字，虽然每个字都用了三码，回改的地方还是比较多，回改成本是比较高的，不是推荐的方法，应采用词组或短语为单位来输入，就可以增加确定性，减少回改量。</p>
 <h2 id="附录：声笔简码的编码格式"><a href="#附录：声笔简码的编码格式" class="headerlink" title="附录：声笔简码的编码格式"></a>附录：声笔简码的编码格式</h2><p>为了便于用户总结和记忆声笔简码的基本内容，现将其字词的编码格式以浓缩的表达式方式总结如下。</p>
 <ul>
 <li>单字：<code>sb^b&#39;b(bb)x</code>，即声母加前三个笔画，可选地加第四、五笔，然后选择重码。</li>
@@ -1155,7 +1120,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、概述"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、优势"><span class="nav-text">二、优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-比拼音更简单"><span class="nav-text">1. 比拼音更简单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-比五笔更高效"><span class="nav-text">2. 比五笔更高效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-便于巩固中文"><span class="nav-text">3. 便于巩固中文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、快速入门"><span class="nav-text">三、快速入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、连续顶屏"><span class="nav-text">四、连续顶屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、字词分流"><span class="nav-text">五、字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、字母选重"><span class="nav-text">六、字母选重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、扩展编码"><span class="nav-text">七、扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、动态码长"><span class="nav-text">八、动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、自动词组"><span class="nav-text">九、自动词组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、数选简词"><span class="nav-text">十、数选简词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、设置选项"><span class="nav-text">十一、设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、声笔简整"><span class="nav-text">十二、声笔简整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：声笔简码的编码格式"><span class="nav-text">附录：声笔简码的编码格式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、概述"><span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、优势"><span class="nav-text">二、优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-比拼音更简单"><span class="nav-text">1. 比拼音更简单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-比五笔更高效"><span class="nav-text">2. 比五笔更高效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-便于巩固中文"><span class="nav-text">3. 便于巩固中文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、快速入门"><span class="nav-text">三、快速入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、连续顶屏"><span class="nav-text">四、连续顶屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、字词分流"><span class="nav-text">五、字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、字母选重"><span class="nav-text">六、字母选重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、扩展编码"><span class="nav-text">七、扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、动态码长"><span class="nav-text">八、动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、自动词组"><span class="nav-text">九、自动词组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、数选简词"><span class="nav-text">十、数选简词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、设置选项"><span class="nav-text">十一、设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：声笔简码的编码格式"><span class="nav-text">附录：声笔简码的编码格式</span></a></li></ol></div>
             
 
           </div>
