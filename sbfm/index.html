@@ -123,7 +123,9 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/set_pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
-<meta property="og:updated_time" content="2021-05-27T06:53:36.944Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
+<meta property="og:updated_time" content="2021-05-28T02:46:09.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="一、概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提高了35%，而且其学习">
@@ -703,11 +705,15 @@
 <p>如上所述，要想在飞讯2中用好二字词，前提是对单字的码长要非常熟悉。所以，在对一个二字词拿不准应该打单还是打词的时候，就应该尽量打单，打单时发现超过了五码，则记住下次可以打词即可。</p>
 <h2 id="十二、声笔飞整"><a href="#十二、声笔飞整" class="headerlink" title="十二、声笔飞整"></a>十二、声笔飞整</h2><p>声笔飞整是声笔飞码的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了，而且每个字都可以用2-4码，能大大地提高转换的准确性。但是，它的缺点是，在输入发生错误后回改的成本高，对离散程度高的文本尤其如此。所以，声笔飞整仅适合录入简单的连续文本，或者供声笔飞码和声笔飞讯的初学者使用。</p>
 <p>下面举例说明一下声笔飞整的输入方法。</p>
-<p><strong>例1:</strong><code>我们大家都喜欢研究输入法wg mr de jo dv xt hy ys jx sc rp fd</code></p>
-<p>在例1中，连续每个字的前两码后，就完全转换正确了，不用任何回改。</p>
-<p><strong>例2:</strong><code>声笔系列输入法st bpu xx ld sc rp fd</code></p>
-<p>在例2中，「笔」用了三码，也能完全转换正确。</p>
-<p>可以看出，在转换完全正确，不需要回改的时候，输入过程是非常流畅和舒服的。相比搜狗拼音之类的双拼整句方式，声笔飞整的转换准确率会更高，因为声笔字是固定不变的。即使需要回改，声笔飞整也提供了一种快速定位的手段，可以利用数字<code>1234</code>将光标一次性地定位到待定的第1至4个音节之前，用<code>5</code>将光标定位到最后，而TAB可以快速从当前位置向前逐个音节移动。对于声偏字，还可以追加一至两个笔画来筛选重码，提高转换的准确率。同时，在以声笔字结尾时，在两码后就可以用<code>aeuio</code>代替<code>67890</code>进行重码选择，在操作上更加便捷。</p>
+<p><strong>例1:</strong><code>我们大家都喜欢研究输入法</code></p>
+<p><img src="/images/sbfz1.png" alt="飞整例子1"></p>
+<p>在例1中，<code>我w_</code>是一简字，需要用空格作为第二码；<code>大de 家jo</code>是声笔字，其余的都使用声部形式（声母加部首的形式）。这个例子按照规则输入后就完全正确了，不用任何回改。</p>
+<p>可以看出，在转换完全正确，不需要回改的时候，输入过程是非常流畅和舒服的。相比搜狗拼音之类的双拼整句方式，声笔飞整的转换准确率会更高，因为一简字和声笔字是固定不变的，而且飞码前两码离散重码的能力本身就很强。</p>
+<p>但是，并不总是这么幸运的，如下例动画所示。</p>
+<p><strong>例2:</strong><code>声笔系列码的顶功特色</code></p>
+<p><img src="/images/sbfz2.gif" alt="飞整例子2"></p>
+<p>在例2中，<code>bp</code>、<code>ms</code>和<code>dygg</code>转换的结果并不是<code>笔</code>、<code>码</code>和<code>顶功</code>而是<code>八</code>、<code>目</code>和<code>定工</code>，需要连续按两次7将<code>声笔</code>、<code>系列</code>确定，按三次8将<code>码的</code>、<code>顶</code>和<code>功</code>确定，最后按空格或者6上屏<code>特色</code>两字。在这个例子中，需要多次选择操作才能把要上屏的内容修改正确。</p>
+<p>在需要回改时，声笔飞整提供了一种快速定位的手段，可以利用数字<code>1234</code>将光标一次性地定位到待定的第1至4个音节之前，用<code>5</code>将光标定位到最后，而TAB可以快速从当前位置向前逐个音节移动。对于声偏字，还可以追加一至两个笔画来筛选重码，提高转换的准确率。同时，在以声笔字结尾时，在两码后就可以用<code>aeuio</code>代替<code>67890</code>进行重码选择，在操作上更加便捷。</p>
 <h2 id="附录一：飞码和飞讯的编码格式"><a href="#附录一：飞码和飞讯的编码格式" class="headerlink" title="附录一：飞码和飞讯的编码格式"></a>附录一：飞码和飞讯的编码格式</h2><p>为了便于用户总结和记忆飞码的基本内容，现将飞码字词的编码格式总结如下。</p>
 <ul>
 <li>单字 <code>sb, spb^b</code></li>
