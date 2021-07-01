@@ -114,7 +114,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/dpzhlf.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/dpkwc.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/dphx.png">
-<meta property="og:updated_time" content="2021-06-30T09:20:58.594Z">
+<meta property="og:updated_time" content="2021-07-01T02:05:24.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
 <meta name="twitter:description" content="目前，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞提供，功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。  音节界线不清 拼写形式过长 字词重码过多 回溯修改麻烦  这些问题在声笔拼音中都得到了较好的解决。声笔拼音明确了音节界线，简化了拼写形式，支持模糊后缀查找，能够直接用笔画筛选重码，基本上兼容一般拼音输入法，可以实现零成本迁移，但是输入效">
@@ -409,7 +409,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">68</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">70</span></a>
 
   </li>
         
@@ -447,7 +447,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
 
   </li>
 
@@ -605,7 +605,7 @@
 <ul>
 <li>将声母zh、ch、sh合并到z、c、s，即不分平舌和翘舌；例如，传统拼音里的<code>shi si</code>在声笔拼音里均为<code>si</code>。</li>
 <li>将韵母er合并到e，ü合并到u，ê合并到e，例如：<code>er</code>可以变成<code>ve</code>（前面加<code>v</code>是因为<code>er</code>为零声母音节），而<code>nü</code>可以变成<code>nu</code>。特别注意，ü没有像传统拼音那样用v来代替。</li>
-<li>声母j、q、x后接韵母ia、ie、iao、ian、iang、iong时，要省略i；例如，传统拼音里的<code>jie qiong xiang</code>在声笔拼音里可以变成<code>je qong xang</code>。</li>
+<li>声母j、q、x后接韵母ia、ie、iao、ian、iang、iong时，可省略i；例如，传统拼音里的<code>jie qiong xiang</code>在声笔拼音里可以变成<code>je qong xang</code>。</li>
 </ul>
 <p>以上拼式简化，只有第一项是强制的，后面两项是可选的。</p>
 <h3 id="3-模糊后缀匹配法"><a href="#3-模糊后缀匹配法" class="headerlink" title="3. 模糊后缀匹配法"></a>3. 模糊后缀匹配法</h3><p>声笔拼音输入时，不必输入完整的音节，也就是说可以模糊掉后缀，例如：<code>前qa 便bi 编码biam 贡献goxa</code>等，这样有利于提高输入的效率，同时也降低了拼音输入法的门槛。除了21个一简字是静态的、固定的外，其它码位上的字都会根据语境和使用情况动态调整，以便提高输入效率。</p>
@@ -639,19 +639,19 @@
 <h4 id="1-静态词组"><a href="#1-静态词组" class="headerlink" title="(1) 静态词组"></a>(1) 静态词组</h4><p>声笔顶拼的二码词组有441个，如：<code>bb并不 pj平静 mn美女 fx发现</code>等，一般需要空格上屏。声笔顶拼的二码词组与声笔简码的二码词组是一模一样的。</p>
 <h4 id="2-动态词组"><a href="#2-动态词组" class="headerlink" title="(2) 动态词组"></a>(2) 动态词组</h4><p>例如，<code>真是</code>的完全编码为<code>zsieii</code>，而其初始输入码为<code>zsi</code>，没有附加笔画。如果输入了与<code>真是</code>前三码相同的词，比如<code>正式</code>，那么<code>zsi</code>这个输入码上的词就可能变为<code>正式</code>，而<code>真是</code>的输入码可能被动态地调整为<code>zsie</code>。同时，还可能影响其它后缀相同的词的优先级别。</p>
 <p>再如，<code>逝世</code>的初始输入码为<code>ssieie</code>，如果输入了<code>逝世</code>，那么它的输入码可能缩短为<code>ssi</code>或<code>ssie</code>，具有相同前缀的<code>实施</code>、<code>事实</code>和<code>损失</code>的输入码就可能会跟着发生相应的变化。</p>
-<h4 id="3-空位词组"><a href="#3-空位词组" class="headerlink" title="(3) 空位词组"></a>(3) 空位词组</h4><p>从编码的角度来讲，汉语拼音的编码效率是很低的。声笔顶拼对汉语拼音进行了适当的简化和压缩，但是二码单字码位仍然有七个空闲的。为了把这些空码位充分利用起来，在上面安排了常见的词组。为了避免死记，对这类词组进行了提示，如下图中的<code>口水</code>一词。</p>
+<h4 id="3-空位词组"><a href="#3-空位词组" class="headerlink" title="(3) 空位词组"></a>(3) 空位词组</h4><p>从编码的角度来讲，汉语拼音的编码效率是很低的。声笔顶拼对汉语拼音进行了适当的简化和压缩，但是二码单字码位仍然有七个空闲的。为了把这些空码位充分利用起来，在上面安排了常见的词组。为了避免死记，对这类词组进行了提示，如下图中的<code>开口</code>一词。</p>
 <p><img src="/images/dpkwc.png" alt="顶拼空位词"></p>
 <p>以下列出了所有七个顶拼空位词组。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">否则	fi</span><br><span class="line">工业	gi</span><br><span class="line">和尚	hi</span><br><span class="line">开口	ki</span><br><span class="line">按照	vi</span><br><span class="line">安全	vu</span><br><span class="line">文明	wi</span><br></pre></td></tr></table></figure>
 <h3 id="4-三字词的输入"><a href="#4-三字词的输入" class="headerlink" title="4. 三字词的输入"></a>4. 三字词的输入</h3><p>声笔顶拼没有静态的三字词，所有三字词均是动态的，可以有三至六码。常用的三字词，输入前三码就够了。如果你需要的三字词还没有出来，追加一个韵母，还是没有出来，就追加首字的笔画。三码就出来的三字词，不能用后续的声母顶屏，需要用空格上屏，当然标点符号仍然是可以顶屏的。</p>
-<p>例如，<code>计算机</code>的完全编码为<code>jsjioa</code>，而其初始输入码长为三。如果输入了与<code>计算机</code>前四码相同的词，比如<code>接收机</code>，那么<code>jsj</code>这个输入码上的字就可能变为<code>计算机</code>，而<code>计算机</code>的输入码被动态地调整为<code>jsji</code>。</p>
+<p>例如，<code>计算机</code>的完全编码为<code>jsjioa</code>，而其初始输入码长为三。如果输入了与<code>计算机</code>前四码相同的词，比如<code>接收机</code>，那么<code>jsj</code>这个输入码上的字就可能变为<code>接收机</code>，而<code>计算机</code>的输入码被动态地调整为<code>jsji</code>。</p>
 <p>再如，<code>输入法</code>的初始输入码为<code>srfa</code>。如果输入了<code>输入法</code>，那么它的输入码可能缩短为<code>srf</code>，具有相同前缀的<code>杀人犯</code>的输入码就会变成<code>srfa</code>。</p>
 <h3 id="5-多字词的输入"><a href="#5-多字词的输入" class="headerlink" title="5. 多字词的输入"></a>5. 多字词的输入</h3><p>声笔顶拼没有静态的多字词，所有多字词均是动态的，可以有四至六码。在一般情况下，输入前四码就够了。如果有重码，而且你需要的多字词还没有出来，就可以追加首字的笔画。</p>
 <p>例如，<code>将计就计</code>的初始输入码为<code>jjjj</code>。如果输入了与<code>将计就计</code>前四码相同的词，比如<code>斤斤计较</code>，那么<code>jjjj</code>这个输入码上的字就可能变为<code>斤斤计较</code>，而<code>将计就计</code>的输入码被动态地调整为<code>jjjju</code>。</p>
 <p>再如，<code>技术交流</code>的初始输入码为<code>jsjle</code>。如果输入了<code>技术交流</code>，那么它的输入码可能缩短为<code>jsjl</code>，具有相同前缀的<code>计算机网络</code>的输入码就会变成<code>jsjlo</code>。</p>
 <h3 id="6-连续顶屏"><a href="#6-连续顶屏" class="headerlink" title="6. 连续顶屏"></a>6. 连续顶屏</h3><p>顶功输入法最显著的特征就是可以连续顶屏，声笔顶拼也不例外。传统四码输入法如五笔字型和自然码等，在输入四码后，如果再输入下一字词的时候，首选项可以被顶上屏幕而节约空格，否则必须用空格上屏首选项后才能输入下一字词。拼音整句则在任何时候都需要空格来上屏首选项，唯一的另外是后接非编码非数字的符号时。</p>
 <p>例如，若以单字方式输入<code>声笔</code>，使用声笔顶拼时输入码为<code>sengbiu</code>，使用拼音整句时输入码可能为<code>sheng3bi3</code>或<code>sheng bi3</code>。也就是说，即使<code>声</code>通过调频而处在重码的首选，也是需要用空格上屏的，而声笔顶拼是不需要空格的。</p>
-<p>再如，若连续输入<code>汉字</code>和<code>输入法</code>，使用声笔顶拼时输入码为<code>hziosrfa</code>，使用拼音整句时输入码可能为<code>hanzi srf</code>。也就是说，即使<code>汉字</code>通过调频而处在重码的首选，也是需要用空格上屏的，而声笔顶拼是不需要空格的。</p>
+<p>再如，若连续输入<code>汉字</code>和<code>输入法</code>，使用声笔顶拼时输入码为<code>hziosrf</code>，使用拼音整句时输入码可能为<code>hanzi srf</code>。也就是说，即使<code>汉字</code>通过调频而处在重码的首选，也是需要用空格上屏的，而声笔顶拼是不需要空格的。</p>
 <p>由于在实际的中文输入过程中，传统字词模式输入法使用空格的频率非常高，所以声笔顶拼通过省略这些空格可以大大地提高输入效率。</p>
 <h3 id="7-歧义处理"><a href="#7-歧义处理" class="headerlink" title="7. 歧义处理"></a>7. 歧义处理</h3><p>在用声笔顶拼进行输入的时候，在个别情况下会产生编码歧义。</p>
 <p>例如，<code>jan</code>可能是<code>jan件</code>，也可能是<code>ja家n你</code>；<code>sjin</code>可能是<code>sjin神经</code>，也可能是<code>sji世纪n你</code>。如果用退格键删除n，再用空格键上屏「家」或「世纪」，然后再输入n的话，就非常低效。为此，声笔定制程序专门提供了快捷键<code>Shift+BackSpace</code>来一键完成前述三个动作。在手机上，用左滑<code>BackSpace</code>键来代替<code>Shift+BackSpace</code>即可。</p>
@@ -737,7 +737,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -915,7 +915,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">61</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">63</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
