@@ -115,6 +115,8 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel3.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel4.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20210803102740222.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20210803103143913.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall07.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall08.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall09.png">
@@ -125,7 +127,7 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel6.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbtwpz.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbtwpz2.png">
-<meta property="og:updated_time" content="2021-07-27T09:46:31.062Z">
+<meta property="og:updated_time" content="2021-08-03T02:34:35.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="基于Rime的声笔系列码安装配置是比较复杂的。这一方面有Rime的原因，另一方面声笔系列的方案众多，体系庞大，也是原因之一。在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式的强大和灵活。闯过这一关，前途就光明无限！本文就是帮助用户克服困难，过关斩将的。 目前，声笔系列码可以在Windows和Andro">
@@ -674,13 +676,12 @@
 <h3 id="2-软件构成"><a href="#2-软件构成" class="headerlink" title="2. 软件构成"></a>2. 软件构成</h3><p>新版声笔系列码的实现是建立在 RIME 输入法平台之上的。但是，为了支持声笔系列码的特殊功能，如连续顶屏、字母选重、扩展编码、自动码长等，对官方的 RIME 程序进行了特别的定制。不过，声笔定制程序可以兼容相同版本的官方程序，仍然可以在定制程序上使用其它的 RIME 输入法方案。</p>
 <p>目前，声笔系列码只提供了 Windows 和 Android 的定制安装程序，Windows 版本至少要求 XP，Andoid 版本至少要求 8.0。软件的构成如下，名称后的日期为发布日期。你下载的文件日期可能是不一样的，不要紧，是正常的，因为软件是在不断更新的。</p>
 <ul>
-<li>主程序：除了主程序外，还内置了声笔简码和声笔简整两个输入方案，其中声笔简码为默认输入方案。<ul>
+<li>主程序：除了主程序外，还内置了声笔简码、声笔简整、声笔拼音和声笔顶拼四个输入方案，其中声笔简码为默认输入方案。<ul>
 <li>声笔系列WIN版</li>
 <li>声笔系列安卓版</li>
 </ul>
 </li>
 <li>扩展包<ul>
-<li>声笔拼音扩展包：内含声笔拼音和声笔顶拼两个输入方案</li>
 <li>声笔自然扩展包：内含声笔自然和声笔自整两个输入方案</li>
 <li>声笔小鹤扩展包：内含声笔小鹤和声笔鹤整两个输入方案</li>
 <li>声笔快码扩展包：内含声笔快码、声笔快讯和声笔快整三个输入方案</li>
@@ -698,6 +699,9 @@
 <p><img src="/images/Sbxlm4Weasel3.png" alt="小狼毫声笔定制版安装"></p>
 <p>在输入法设定中启用新的方案，并重新部署一下即可用F4或者Ctrl+~来切换使用新方案了。</p>
 <p><img src="/images/Sbxlm4Weasel4.png" alt="小狼毫声笔定制版安装"></p>
+<p>(3) 安装错误处理</p>
+<p>安装后无法使用一般都是由于没有删除以前的版本或者安装不全造成的。最简单的办法就是将用户文件夹Rime更名后重新安装一下主程序，然后再把需要的数据从备份中复制过来。遇到用户文件夹无法更名时，可以停用小狼毫算法服务以后再更名，但是要记住更名后重新启动小狼毫算法服务，否则是不能打中文的。</p>
+<p><img src="/images/image-20210803102740222.png" alt="image-20210803102740222"><img src="/images/image-20210803103143913.png" alt="image-20210803103143913"></p>
 <h3 id="2-安卓版的安装"><a href="#2-安卓版的安装" class="headerlink" title="2. 安卓版的安装"></a>2. 安卓版的安装</h3><p>(1) 安装主程序</p>
 <p>在Android手机上，则可以用声笔系列安卓版一键安装包进行安装。步骤如下：</p>
 <ol>
@@ -717,6 +721,8 @@
 <p>在MT管理器的一边打开主程序安装的文件夹（/storage/emulated/0/sbxlm），在另一边打开下载的扩展包（位于/storage/emulated/0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/中），选择所有的文件复制到右边。打开声笔系列码APP重新部署一下，选择输入，再选择方案。</p>
 <p><img src="/images/rjxzwz3.png" alt="QQ群下载位置"></p>
 <p>要在使用过程中切换不同的声笔方案，如声笔简码切换到声笔飞码，只需要上滑左下角的「方案选单」键进行选择即可。</p>
+<p>(3) 安装错误处理</p>
+<p>安装后无法使用一般都是由于没有删除以前的版本或者安装不全造成的。最简单的办法就是将用户文件夹sbxlm更名后重新安装一下主程序，然后再把需要的数据从备份中复制过来。</p>
 <h3 id="3-卸载"><a href="#3-卸载" class="headerlink" title="3. 卸载"></a>3. 卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。</p>
 <p>如果遇到卸载不了或者卸载不干净的输入法，可以下载使用群文件软件工具里的「输入法删除工具」来解决。此工具无需安装，直接运行就可以了。</p>
 <h2 id="三、配置与定制"><a href="#三、配置与定制" class="headerlink" title="三、配置与定制"></a>三、配置与定制</h2><p>Rime的图形界面能做的事情是有限的，在Rime的世界里是文本为王，通过编辑适当的yaml文件可以配置和定制输入法的方方面面，比传统输入法灵活和强大得多。要编辑yaml文件就需要有一个好的编辑器。在Windows上建议使用Notepad++或者Vscode，千万不要用记事本，更不要用Word。在安装上，建议使用MT管理器。</p>
