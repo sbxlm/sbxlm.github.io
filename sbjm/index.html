@@ -122,9 +122,10 @@
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmZzeiea.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmJua.gif">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmSjo.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20210818102219434.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmFilter.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbjz2.gif">
-<meta property="og:updated_time" content="2021-08-18T02:01:35.683Z">
+<meta property="og:updated_time" content="2021-08-18T02:23:00.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔简码">
 <meta name="twitter:description" content="一、概述声笔简码通过巧妙的顶功编码技术，在保持输入法极度简单的情况下，取得了输入的高效率，达到了「比全拼还易学，比五笔更高效」的理想目标，而且能够以最小的代价克服「提笔忘字和见字忘音」的难题，是广大一般用户输入中文的最佳选择。 本文除了讲解声笔简码外，还将在章末介绍声笔简整。声笔简整是基于声笔简码的整句方案，在使用上比声笔简码还简单得多，但是效率上损失较大，适合习惯智能整句的用户在向声笔简码过渡时">
@@ -836,7 +837,8 @@
 <p>当然，在用户不知道系统中有某个词组的时候，如果按照词组的方式来输入，就可能因为系统没有该词而找不到想要的词组，即发生所谓打空的情况。此时，建议用<code>ESC</code>键一次清楚编码，拆开打一次就能够自动造出想要的词组，供下次使用。</p>
 <p>需要注意的是，为了避免发生组合爆炸，产生太多的垃圾词组，系统默认限制了自动造词的最大长度为5，且不能有非汉字字符。另外，在进行枚举式自动造词的时候，是以编码对应的字、词为单位来进行组合的，并不是以单字为单位的。例如，在输入<code>声笔sbu 系列xleu 码meu</code>后，生成的词组为「声笔系列码」「声笔系列」「系列码」，而不会生成「声笔系」「笔系列」「列码」等。另外，如果造词之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
 <h2 id="十、设置选项"><a href="#十、设置选项" class="headerlink" title="十、设置选项"></a>十、设置选项</h2><p>(2) 小写模式</p>
-<p>对声笔简码来说，在默认情况下，多字词的第四码可以用小写字母来输入，与传统习惯一致。但是，这时如果输入的只有三码的三字词时就需要加空格上屏，在使用三字词比较多的情况下对输入效率有所影响。如果希望节约输入常用三字词的空格键，那么可以将lower_case选项设置为false。不过，这样的话，多字词的第四码就需要用大写字母来输入了。如果用户能够熟练地操作大写字母，在这种模式下可能会提高输入效率。</p>
+<p>对声笔简码来说，在默认情况下，多字词的第四码可以用小写字母来输入，与传统习惯一致。但是，这时如果输入的只有三码的三字词时就需要加空格上屏，在使用三字词比较多的情况下对输入效率有所影响。如果希望节约输入常用三字词的空格键，那么可以将lower_case选项设置为false。不过，这样的话，多字词的第四码就需要用大写字母来输入了。如果用户能够熟练地操作大写字母，在这种模式下可能会提高输入效率。注意，需要同时交换下图中的注释项，即将#号换到上面一行，三字词顶屏才会生效。</p>
+<p><img src="/images/image-20210818102219434.png" alt="交换注释"></p>
 <p>(1) 词组过滤</p>
 <p>对声笔简码来说，在默认情况下，多字词有只能按<code>s1s2s3s0</code>格式输入，而三字词是独享<code>s1s2s3b0</code>编码空间的。在将小写模式设置为false时，如果不习惯第四码用大写字母来输入多字词，那么就可以将Translator下的enable_filtering选项设置由下图中的true改为false，这样就可以以<code>s1s2s3b0</code>的格式输入多字词。不过，这时三字词和多字词共享同一个编码空间，重码率会大大增加。</p>
 <p><img src="/images/SbjmFilter.png" alt="声笔简码Filter"></p>
