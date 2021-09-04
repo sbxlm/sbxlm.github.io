@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css">
+
+
+
+
+
+
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.1.2">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="一、基于RIME的声笔系列码发展历程历程 20210825: 修正拼音反查的一些读音错误。 20210818: 声笔简码默认设置改为多字词第四码用小写字母，sssb由三字词独享，更加接近传统习惯。 20210803: 将声笔拼音内置于主程序中，以免去大众用户安装扩展包的烦恼。 20210707: 优化声笔WIN版和声笔安卓版的图标。 20210629：1.进一步优化ss词组，完全按照词频来选择；2">
+<meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功, 自动码长, 自动造词, 字母选重">
+<meta property="og:type" content="website">
+<meta property="og:title" content="发展历程">
+<meta property="og:url" content="http://sbxlm.gitee.io/fzlc/index.html">
+<meta property="og:site_name" content="声笔输入法">
+<meta property="og:description" content="一、基于RIME的声笔系列码发展历程历程 20210825: 修正拼音反查的一些读音错误。 20210818: 声笔简码默认设置改为多字词第四码用小写字母，sssb由三字词独享，更加接近传统习惯。 20210803: 将声笔拼音内置于主程序中，以免去大众用户安装扩展包的烦恼。 20210707: 优化声笔WIN版和声笔安卓版的图标。 20210629：1.进一步优化ss词组，完全按照词频来选择；2">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-09-04T00:37:25.321Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="发展历程">
+<meta name="twitter:description" content="一、基于RIME的声笔系列码发展历程历程 20210825: 修正拼音反查的一些读音错误。 20210818: 声笔简码默认设置改为多字词第四码用小写字母，sssb由三字词独享，更加接近传统习惯。 20210803: 将声笔拼音内置于主程序中，以免去大众用户安装扩展包的烦恼。 20210707: 优化声笔WIN版和声笔安卓版的图标。 20210629：1.进一步优化ss词组，完全按照词频来选择；2">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://sbxlm.gitee.io/fzlc/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>发展历程 | 声笔输入法</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">声笔输入法</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">QQ群：445906697</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-star"></i> <br>总体介绍</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-vzpz">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/vzpz/" rel="section"><i class="menu-item-icon fa fa-fw fa-gear"></i> <br>安装配置</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbjc">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbjc/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag"></i> <br>声笔基础</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbjm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbpy">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbpy/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔拼音</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbzr">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbzr/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔自然</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbxh">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbxh/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔小鹤</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbkm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbkm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔快码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbfm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbfm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞码</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-fzlc menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/fzlc/" rel="section"><i class="menu-item-icon fa fa-fw fa-history"></i> <br>发展历程</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-faq">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/faq/" rel="section"><i class="menu-item-icon fa fa-fw fa-question"></i> <br>常见问题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">68</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">4</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/sbxlm" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h2 class="post-title" itemprop="name headline">发展历程<a href="https://github.com/sbxlm/sbxlm-hexo/edit/master/source/fzlc/index.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+
+</h2>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <h2 id="一、基于RIME的声笔系列码发展历程历程"><a href="#一、基于RIME的声笔系列码发展历程历程" class="headerlink" title="一、基于RIME的声笔系列码发展历程历程"></a>一、基于RIME的声笔系列码发展历程历程</h2><ul>
+<li>20210825: 修正拼音反查的一些读音错误。</li>
+<li>20210818: 声笔简码默认设置改为多字词第四码用小写字母，sssb由三字词独享，更加接近传统习惯。</li>
+<li>20210803: 将声笔拼音内置于主程序中，以免去大众用户安装扩展包的烦恼。</li>
+<li>20210707: 优化声笔WIN版和声笔安卓版的图标。</li>
+<li>20210629：1.进一步优化ss词组，完全按照词频来选择；2. 优化快码（快讯）的ss空位词提示方式；3. 支持飞码（快码）在五码时用大写顶二码字上屏；4. 所以方案默认重置为半角，且不显示全半角状态；5. 更新强化练习文本，以反映修改内容。</li>
+<li>20210623: 1. 进一步优化简码和顶拼的二简词，还有声笔快码的ss型空位词；2. 为飞码和快码分别在sbb自定义词典中增加sbbb型兼容码，以缩短五键字；3. 修改默认主题，在最下排增加两个键，以方便顿号和问号的输入；4. 解决全角状态下标点顶屏多出空格的问题；5. 更新强化练习文本，以反映二简词的变化；6. 消除6月16日版声笔小狼毫安装程序的BUG。</li>
+<li>20210616: 1. 取消所有方案的数选简词，并修改安卓主题；2. 所有方案的临时词组删除阈值改为由1000改为10000；3. 优化简码和顶拼的二简词；4. 更改飞码和快码的声笔字提示方式；5. 优化声笔小鹤和声笔自然的字词。</li>
+<li>20210601: 优化飞码和快码的整句方案，恢复用空格作为一简字的编码，以简化输入和提高转换的准确率。</li>
+<li>20210527: 增加竞速方案sbfx2；从声笔小狼毫安装包里删除Rime的默认方案；优化一些标点的打法。</li>
+<li>20210525: 在所有方案的schema中增加auto_inline选项，用于控制在中文状态下首字母大写是否进入临时英文状态。</li>
+<li>20210520: 打包优化，将声笔拼音作为单独的扩展包发布，主程序中只留声笔简码，而且默认不启用声笔简整。</li>
+<li>20210519: 优化声笔简码和声笔顶拼的二简词，将「武林」改为「网络」，「武功」改为「无关」，将「真的」「手机」「下载」的默认词频调高。</li>
+<li>20210508: 修正声笔拼音和声笔顶拼中「钻」等多音字的读音问题。</li>
+<li>20210423: 消除快码无法用正常编码打出部分多字词的BUG。</li>
+<li>20210418: 1.飞码（飞讯）和快码（快讯）增加「词组/单字」选项，可以快速切换，单字模式时仍可通过第三码大写来支持词组；2.字词模式支持数选直接上屏；3.小狼毫候选项目默认为水平显示。</li>
+<li>20210415: 彻底消除首字母大写自动进入临时英文状态时遇到的BUG。</li>
+<li>20210413: 1.中文状态下，首字母大写时，自动进入临时英文状态；2.新造词组为已有词组时，不对该词增加频度；3.飞讯和快讯恢复默认为支持五码词的延迟顶方式；4.纠正几个方案Schema中的小错误。</li>
+<li>20210412: 1.开放飞码和快码的sbb字词，可由用户定制，但是sbb字词不能参与自动造词；2.优化声笔字滤镜的提示格式；3.优化声笔顶拼的歧义处理方式。</li>
+<li>20210410: 1.彻底解决飞码和快码双空格的难题；2.飞码和快码的sbb上安排常见的五码字作为缩减码；3.飞讯和快讯默认为只能使用简词的即时顶主单方式；4.二字词打单时码长更短或者相当时不再强制打单；5.简码只保留sn简词，取消szn简词。</li>
+<li>20210329: 1.声笔拼音整句模式强制使用翘舌音声母模糊；2.因为技术问题无法同步更新，所以删除MAC定制程序包。</li>
+<li>20210327: 1.纠正「色」「澄」在某些词里的读音；2.在整句模式下，可以用5定位到编码末尾；3.消除在整句模式下可以删除单字的重大BUG。</li>
+<li>20210323: 1.优化所有整句方案的单字排序；2.修改默认皮肤以显示翻页符号。</li>
+<li>20210320: 1.使声笔拼音除零声母外，均兼容标准拼音；2.将声笔拼音并入主程序；3.将所有整句方案的词数减少到48万；4.强化练习中删除空位词，加入声笔笔词、声部数词和声韵数词。</li>
+<li>20210316: 修正标点顶屏时不能自动造词的BUG。</li>
+<li>20210313: 1.修正三码时有些标点不能顶屏的bug；2.改正「澄清」一词的读音错误；3.将自定义词典作为主方案的依赖，以方便词典的修改。</li>
+<li>20210309: 将安卓的目标sdk版本改为30，以适应安卓11。</li>
+<li>20210308: 消除快讯（飞讯）三码字有时不能顶屏的BUG。</li>
+<li>20210307: 1. 修正飞码「缣」字编码错误，修改「叛」的编码为pbe，相关字词也进行修改；2. 去除飞码和快码不能删除声笔字开始的二字词的BUG；3. 优化Wins主程序，解决win7可能出现复制文件失败的问题；4. 优化安卓主程序，采用安卓11进行编译；5. 修改trime.yaml，加宽空格键，以减少误触。</li>
+<li>20210226: 修正快讯词库的BUG；修改所有方案的schema，去掉single_selection和简码的strong_mode选项；修改trime.yaml；更新在线教程。</li>
+<li>20210223: 去除飞讯和快讯52顶时的BUG；修正快讯词库多空格的BUG；修改所有方案的schema，去掉single_selection和简码的strong_mode选项。</li>
+<li>20210220: 1. 飞码、飞讯、快码、快讯增加szn简词；2. 飞讯、快讯多字词改为s1s2s3b0b0输入，同时所有词组支持扩展编码；3. 修改所有字词方案schema，采用强制一级选重。</li>
+<li>20210210: 实现安卓皮肤悬浮窗完美利用选择栏的空间，完全彻底解决了遮挡问题。</li>
+<li>20210209: 1. 全面优化安卓皮肤，整合磐石与凉秋作为默认皮肤，原默认皮肤改为风花絮声笔作为候选；2. 优化简码和顶拼的二简词，包括简码的二简数选字词；3. 优化定制程序，以更好地支持魔改简词。</li>
+<li>20210203: 1.飞码和快码的sbbb二字词格式改为sbbs；2.取消飞码和快码的sbb词组；3.字海两得反查改为由i引导；4. 修正声笔小鹤和声笔自然中「姆」字拼音错误，清除编码错误的词汇；5.消除全角状态时无法正常输入的BUG；6.更新赛码表，以保持与新的编码一致；7.更新强化练习文本；8.更新在线教程。</li>
+<li>20210128: 1. 恢复飞码和快码的sbbb二字词，以解决一简字双空格的问题；2. 纠正声笔顶拼缺词的BUG。</li>
+<li>20210125: 1. 声笔简码、声笔小鹤、声笔自然增加105个声笔简词，其它系统词表和赛码表做相应调整；2. 同文默认皮肤修改；3. 主程序只包括简码，其它输入法均作为扩展包。</li>
+<li>20210122: 1. 简码增加声笔数选简字和声声笔数选简词；2. 简码增加强顶strong_mode选项和多字词第四码小写lower_case选项；3. 打包变更：主程序只包括简码和飞讯两个明星方案，其它均作为扩展包。</li>
+<li>20210120: 增加single_selection选项；简码sss不含多字词；主程序包只含声笔简码；方案schema增加定制选项。</li>
+<li>20210118: 将飞讯和快讯词库改为用户词库，以便可以手动删除主词库的词条。</li>
+<li>20210115: 优化快码和飞码的词库，调低szsb组合的优先级。</li>
+<li>20210114: 支持用字海两分法来进行反查， 支持查找八万多汉字，用于难读而易于两分的字进行反查或者GBK以外字的输入。</li>
+<li>20210111: 1. 优化飞码（飞讯）和快码（快讯）的简词；2. 优化简码和顶拼的简词；3. 支持通过拼音反查不带编码的词组。</li>
+<li>20210108: 删除飞讯和快讯中低效的二字词。</li>
+<li>20201229: 增加自动删除过时临时词组功能，提供delete_threshold、forced_selection和enable_filtering三个设置选项。</li>
+<li>20201228: 增加声笔系列思维导图。</li>
+<li>20201226: 增加声笔系列MAC版程序包。</li>
+<li>20201225: 提供一个 stop_change 设置选项，用于停止或者开启自动调频与自动造词。</li>
+<li>20201223: 小狼毫声笔定制程序集成LUA支持，并修改相应方案配方。</li>
+<li>20201216: 为声笔小鹤、声笔自然增加ss和ssb空位词组，并进行提示。</li>
+<li>20201211: 为声笔小鹤、声笔自然、声笔快码和声笔飞码增加扩展编码支持。</li>
+<li>20201207: 修正声笔自然的词典错误。</li>
+<li>20201202: 增加声笔小鹤（包括其整句方案声笔鹤整）和声笔自然（包括其整句方案声笔自整）。</li>
+<li>20201130: 1. 声笔简码三字词和多字词改为三码起顶，以便进一步缩短平均码长，提高打字效率；2. 多字词第四码可以用末字首笔，也可以用末字声母，但声母要用大写。手机上的大写字母用上滑相应字母输入。</li>
+<li>20201119: 1. 取消所有方案用逗号重复历史选项的功能；2. 声笔拼音恢复一简字固顶。</li>
+<li>20201026: 1. 修正在拼音反查时可能误删SS词组的BUG；2. 修正「捘」和「儶」在声笔拼音里的拼写错误。</li>
+<li>20201020: 1. 修正「征」字在声笔拼音中的编码错误；2. 修正「征」在各方案中拼音反查时的错误。</li>
+<li>20201013: 1. 进一步优化声笔拼音的字词排序；2. 修正声笔拼音组词时的BUG。</li>
+<li>20201010: 1. 拼音反查兼容顶拼方式；2. Shift + Enter（手机上滑BackSpace）上屏不带空格的编码</li>
+<li>20201009: 1. 优化声笔拼音的单字输入；2. 小狼毫默认字体大小改为12。</li>
+<li>20200923: 修改主程序；字词型方案默认收词量由16万增加至48万；增加声笔快简、声笔快速、声笔飞简、声笔飞速四个输入法方案。</li>
+<li>20200901: 支持用shift+backspace上屏前n-1码首选项，主要用于声笔顶拼快速更正歧义音节；重复输入历史选项重码数限制为5；更新手机皮肤，以支持用左滑backspace来模拟shift+backspace。</li>
+<li>20200826: 用飞讯和快讯分别代替飞单和快单，取消短期实验过的飞简、快简、飞速和快速方案。</li>
+<li>20200801: 修改声笔飞码和声笔快码的sbbb格式为sbbs格式，优化和简化发布打包形式。</li>
+<li>20200729: 让声笔顶拼和声笔简码支持简拼词组。</li>
+<li>20200709: 更新声笔系列码定制小狼毫安装程序。</li>
+<li>20200706: 修订声笔系列码教程，取消声笔顶拼和声笔简码的三键数选字词，更新APK执行程序，增加声笔定制同文和小狼毫的安装指南。</li>
+<li>20200629: 重新规划发布形式，将声笔简码也单独发布，基础包内只包含声笔拼音；统一声笔顶拼和声笔顶整的拼音反查为a引导；各压缩包中加入各自的PDF教程；优化Symbols.yaml中的符号输入方式。</li>
+<li>20200619: 就修改了一个拼音错误，「责」字的读音只有zhai，最常见的ze弄掉了。</li>
+<li>20200617: 符号尽量保持与同文一致， \引导的符号编码非首码去掉了aeuio， 消除了RIME程序中对句号和冒号特殊处理时的BUG，优化了中英文混合输入的方法；优化了声笔顶拼和声笔简码的数选字词。</li>
+<li>20200608: 禁止简码和顶拼删除单字；为所有方案添加自定义词典，以手动管理特殊字词。</li>
+<li>20200606: 解决飞码和快码的一码时有些标点符号不能顶屏的问题；解决所有方案在有编码时用\顶屏输入符号的问题。</li>
+<li>20200605: 解决了简码和顶拼的可以删除静态字词的严重BUG；安卓主题的增加长按退格键删除用户词组的功能；所有方案默认不再提示数选字词。</li>
+<li>20200603: 将声笔顶拼单字和二字词的动态码长调整位改为第三码。</li>
+<li>20200602: 更新了安装程序，使其不覆盖已经安装的Rime目录；修改了Weasel.yaml，使得在候选项前不出现难看的点。</li>
+<li>20200601: 纠正声笔顶拼词库的个别错误，解决声笔顶整和声笔简整的助记显示问题。</li>
+<li>20200531: 修正声笔简码三码为空码时新造多字词的显示问题，声笔简整和声笔顶整支持两码模糊。</li>
+<li>20200528: 声笔简扩并入声笔简码，多字词编码规则优化，更符合人们使用习惯，编码空间扩大。</li>
+<li>20200525: 增加声笔简扩，恢复声笔拼音，整句模式词组从48万增加到150多万，声笔系列变为四款十二型。</li>
+<li>20200523: 修正顶拼中的拼音错误，简化快码和飞码的重码选择方法，分基础包和扩展包发布软件。</li>
+<li>20200522: 增加声笔顶整，优化压缩包，取消扩展包，至此声笔系列已有四款十型。</li>
+<li>20200520: 增加声笔顶拼，是“一种附加笔画的汉语拼音输入法”专利的一种实现。</li>
+<li>20200418: 申请“一种附加笔画的汉语拼音输入法”发明专利。</li>
+<li>20200515: 增加简码、飞码和快码的整句模式，作为扩展包单独发布。</li>
+<li>20200506: 取消声笔拼音，优化飞码和快码的sbbb型词组。</li>
+<li>20200423: 实现小狼毫一键安装，并做细微的核心程序优化。</li>
+<li>20200326: 取消扩展包，增加声笔飞单和声笔快单。</li>
+<li>20200301: 增加一个扩展包，包括声笔快码K、声笔快码S、声笔飞码K和声笔飞码S四个方案。</li>
+<li>20200113: 修正了自动码长和扩展编码的几个BUG；取消声笔智能输入法，声笔简码不再使用大写字母。</li>
+<li>20191225: 声笔简码实现了自动码长和扩展编码，功能上已经与原生简码几乎相同。</li>
+<li>20191205: 飞码和快码不再分型，单字改为二三顶，二字词三四顶；简码增加简词；去除快码中缺少lue和nue音词组的BUG；声笔智能的拼音反查统一为以a引导，纠正trime中luna, ink第几个配色问题；增加拼音和智能的笔画过滤。</li>
+<li>20191127: 新的S型取代W型；手机改为30键皮肤；声笔系列码升级为9.0版。</li>
+<li>20191116: 精减声笔体系，取消声笔双拼和声笔星二；取消飞码S和快码S；修改Android程序皮肤，增加编码提示功能。</li>
+<li>20191108: 更换输入法图标；在重码数&lt;6时，做翻页键的字母或者符号仍然可以顶屏；飞码S和快码S简码二字词优化。</li>
+<li>20191030: 优化声笔智能和声笔拼音，支持快速定位修改；声笔智能支持字母选重。</li>
+<li>20191028: 增加声笔智能和声笔拼音，实现开滤镜提示也不影响造词，同时可以一键快速定位新造的词组。</li>
+<li>20191013: 增加了声笔双拼K和声笔星二K。</li>
+<li>20190925: 增加了飞码W和快码W，还增加了各款输入法的整句方案。</li>
+<li>20190914: 增加了声笔飞码K、S和声笔快码K、S，词库容量增加到20万。</li>
+<li>20190821: 增加了声笔飞码X和声笔快码X，并优化了所有方案的码表。</li>
+<li>20190815: 在声笔双拼和声笔快码空闲空间中增加了声笔简码的二字词。</li>
+<li>20190810: 更正了声笔双拼中xiang音的编码错误。</li>
+<li>20190809: 为声笔系列码增加了一键部署的同文安装包，无需繁琐的配置就可以在Android手机上使用声笔系列码。</li>
+<li>20190807: 优化了声笔简码的二字词库，以避免造词时频繁翻页。修正了压缩包解压时的错误。加入了同文输入法的三个必备文件。</li>
+<li>20190804: 基于RIME的声笔简码重磅发布发布。</li>
+<li>20190723: 为声笔系列码定制的同文毫输入法（Android手机端）首次发布。</li>
+<li>20190719: 为声笔系列码定制的小狼毫输入法（Windows电脑端）首次发布。</li>
+</ul>
+<h2 id="二、原生声笔系列码发展历程"><a href="#二、原生声笔系列码发展历程" class="headerlink" title="二、原生声笔系列码发展历程"></a>二、原生声笔系列码发展历程</h2><ul>
+<li>2019年8月4日，发布了“声笔简码8.00版”，是“优化声母和笔画编码汉字输入法”的首版实现。</li>
+<li>2019年4月13日，申请“优化声母和笔画编码汉字输入法”发明专利。</li>
+<li>2016年7月至9月，发布了“声笔码7.00版”和“声笔飞码7.00版”，与6.00版相比的主要变化为：(1) 去除注册后才能长期使用的限制，用户可以不用注册就长期免费使用；(2) 增加了对64位程序的支持，能够在64位WINDOWS的记事本、资源管理器等程序中输入汉字了；(3) 增加了纯英文小写方式，将原来的带调拼音字母方式分离出来作为一个选项供用户使用；(4) s声笔码词组的动态码长调整位由第4位改成了第3位，单字的码长由静态改成了从第4位开始动态码长调整，提高了输入效率；(5) 飞码增加了一种类似双拼的声韵模式，相当于恢复了声笔系列码3.5中的声笔快码，不过是以新的面貌出现；(6) 在保持飞码6.00版强大单字能力的基础上，大大地增强了它的词组能力，使其成为字词并重的顶功输入法，二字词更是提供了简短和扩展两种模式，具有无可匹敌的字词综合效率；(7) 增加了后码提示功能，可以设置提示后续的编码，也可以用数字选择重码；(8) 增加了学习辅助功能，使得初学者能够更加方便的在使用中熟悉笔画的对应字母。</li>
+<li>2008年1月8日，发布了“声笔码6.00版”。与声笔码5.00版相比，声笔码6.00版具有下面一些新的特性：(1) 对笔画的表示方式进行了调整。原来是用字母“aeiou”分别表示笔划“横竖撇点折”，而现在改用“eioua”表示“横竖撇捺折”。这样，改变的结果是使得连续输入笔划时形成更多的左右手交叉击键的动作，增加输入时的舒适度，提高击键率。(2) 增大的系统词库的容量，由原来的5万多增加到现在的10万左右。(3) 增加了是否关闭状态窗口、是否自动造词、是否调整码长的编码式快捷方式。同时还增加了各种软键盘的编码式快速调用方式。</li>
+<li>2007年5月28日，发布了“声笔码5.00版”。与声笔码4.00版相比，声笔码5.00版具有下面一些新的特性：(1) 增加了与声笔码相对应的在电脑小键盘上使用的声笔数码。声笔码用户只需要熟悉字母和数字的对应关系后就可以毫无障碍地使用声笔数码，享受单手输入中文的快乐了。声笔数码可以和声笔码实现完全的字词库共享，也就是说您在声笔码中所创建的词组在声笔数码中立刻就可以使用，同时您在声笔数码中创建的词组也立刻可以在声笔数码中使用，输入规则完全一样。声笔数码还完美地解决了在小键盘中英文字母和汉语拼音的输入问题。(2) 增加了数码拼音查字、数码笔画查字、声笔数码模糊输入等新的功能，极大地方便了用户在遇到输字困难时及时地自行解决问题。(3) 令人惊喜的是，以上新增加的各种输入法、查字法和原有的声笔数码、笔画查字、拼音查字等功能被完全地集成在了一起，除了拼音查字外，其它都可以不加切换地随时使用。(4) 完全改写了输入法引擎和数据结构，在不增加程序和数据体积的同时增强了程序的功能和增大了数据的容量。(5) 应用户的要求，增加了对火狐浏览器、Visio等特殊程序的支持，以便在其中输入汉字。(6) 应用户的要求，改正了在冒险岛Online等游戏中输入数字时出现重复数字的问题。(7) 应用户的要求，更换了显示字体字号，以便用户在输入或查询时能看清楚笔画多而复杂的汉字。</li>
+<li>2006年11月4日，发布了“声笔码4.00版”，鉴于用户对简单快捷的声笔码反响热烈和有些用户反映声笔码不能输入GB2312以外的汉字，所以声笔码利用这次升级将它从声笔系列中剥离了出来单独发布，方便大家使用。声笔码4.00版的新特性包括：(1) 所能输入的字符集由GB2313的6763个汉字和符号扩大到了GBK的20903个，还能输入特殊汉字“〇”。(2) 声笔码4.00从声笔系列输入法中独立了出来，单独安装运行，以免因扩大字符集而造成空间占用的急剧增长，也避免对声笔系列的不同输入法产生混淆。(3) 增加了一种新的查字方法 – 声笔查字，可以利用部分声笔输入码进行模糊查询和输入。(4) 支持用右Shift键向下翻页，用左Shift键向上，以寻找重码字词；而以前只能用Shift（不分左右）单向循环翻页。(5) 在笔画查字时进行单项提示，而不是以前的多项提示，缩短了响应时间。现在，只有在用户按Shift键翻页时才进行多项提示。(6) 改进了拼音查字时汉字的排序方式，让常用的字排在前面，以方便用户查找。</li>
+<li>2006年3月28日，发布了“声笔系列3.5版”，和声笔系列3.0版一样，包括了三种相互关联的输入法：声笔码、声笔快码和声笔飞码。在这个版本中，声笔码没有任何变化，但对声笔快码和声笔飞码的编码方法做了改进，而且不再区分单字方式和非单字方式，这样既首先保证了单字的高速盲打，又可再用词组来进一步提高输入速度。另外，在声笔快码和声笔飞码中还增加了利用声母加笔画快速查询汉字输入码的功能，使它们的易学性和易用性得到了进一步的提高。</li>
+<li>2006年2月18日，发布了声笔系列3.0版，取消了不怎么受用户欢迎的“神变五笔”，去掉了声笔快码中的偏旁部首，增加了采用声笔加偏旁部首的“声笔飞码”，并为声笔码、声笔快码和声笔飞码都提供了单字方式选项。</li>
+<li>2006年1月18日，发布了声笔系列2.5版，对声笔系列码2.0版中的声笔码和声笔快码两种输入法进行了大量的优化，禁止对单字编码进行码长调整，对所有输入法都增加了手动调整码长的功能，并且可以选择是否进行自动码长调整和自动造词，增大了词组的编码空间，将系统词组的数量从3万多增加到了6万多，同时取消了学习难度较大的声笔快码单字方式，简化了声笔快码的输入方法。另外，声笔系列码2.5版还增加了一种用声笔技术改造过的五笔字型——“神变五笔”。</li>
+<li>2005年12月18日，发布了声笔系列2.0版，将声笔码作为输入法之一包含于其中，另外加入了一种称为“声笔快码”的输入法,还专门提供了声笔快码的单字方式以快速按单字进行汉字输入。2.0版中的声笔快码，使用了声母、韵母和偏旁部首对汉字进行编码，这一点和声笔系列3.0版以后中的声笔快码是不一样的，因为后者只使用声母和韵母。</li>
+<li>2005年12月3日，声笔系列输入法的第一个产品是声笔码1.5版发布，它采用的一系列新颖的输入法编码和编程技术打破了传统输入法的框框，在汉字输入法学术论坛上引起了汉字编码输入法爱好者的热烈讨论和强烈反响。</li>
+<li>2004年，申请“基于声母和笔划的汉字输入法”发明专利，专利号为ZL2004100920715。</li>
+</ul>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.svg" alt="Vaeuio">
+            
+              <p class="site-author-name" itemprop="name">Vaeuio</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/sbxlmdsl" title="GitHub &rarr; https://github.com/sbxlmdsl" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:sbxlm@qq.com" title="E-Mail &rarr; mailto:sbxlm@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://jq.qq.com/?_wv=1027&k=5EQP3ON" title="QQ群 &rarr; https://jq.qq.com/?_wv=1027&k=5EQP3ON" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/sbxlm/" title="https://www.cnblogs.com/sbxlm/" rel="noopener" target="_blank">博客园之吾思语</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://input.foruto.com/" title="http://input.foruto.com/" rel="noopener" target="_blank">中文输入法世界</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://corpus.zhonghuayuwen.org/" title="http://corpus.zhonghuayuwen.org/" rel="noopener" target="_blank">中文语料库在线</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/studyzy/imewlconverter" title="https://github.com/studyzy/imewlconverter" rel="noopener" target="_blank">深蓝词库转换</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.pc6.com/" title="http://www.pc6.com/" rel="noopener" target="_blank">PC6下载站</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://mixkit.co/" title="https://mixkit.co/" rel="noopener" target="_blank">mixkit</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.pexels.com/" title="https://www.pexels.com/" rel="noopener" target="_blank">pexels</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://pixabay.com/" title="https://pixabay.com/" rel="noopener" target="_blank">pixabay</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://videezy.com/" title="http://videezy.com/" rel="noopener" target="_blank">videezy</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://freesound.org/" title="https://freesound.org/" rel="noopener" target="_blank">freesound</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基于RIME的声笔系列码发展历程历程"><span class="nav-text">一、基于RIME的声笔系列码发展历程历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、原生声笔系列码发展历程"><span class="nav-text">二、原生声笔系列码发展历程</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vaeuio</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.2"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.2"></script>
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+  
+  
+
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('5');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "topCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+
+  
+
+  
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script>pangu.spacingPage();</script>
+
+
+  
+  
+  
+    
+  
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js"></script>
+  <script>
+  
+    bookmark.loadBookmark();
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
