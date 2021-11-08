@@ -121,13 +121,13 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="description" content="目前，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞提供，功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。  音节界线不清 拼写形式过长 字词重码过多 回溯修改麻烦  这些问题在声笔拼音中都得到了较好的解决。声笔拼音明确了音节界线，简化了拼写形式，支持模糊后缀查找，能够直接用笔画筛选重码，基本上兼容一般拼音输入法，可以实现零成本迁移，但是输入效">
+  <meta name="description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见总体介绍。有关下载、安装和配置的方法，请参见安装配置。有关声笔系列码的发展历程，请参见发展历程。对于一些参见问题的解答，请参见常见问题。声笔系列码的其它">
 <meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功, 自动码长, 自动造词, 字母选重">
 <meta property="og:type" content="website">
 <meta property="og:title" content="声笔拼音">
 <meta property="og:url" content="http://sbxlm.gitee.io/sbpy/index.html">
 <meta property="og:site_name" content="声笔输入法">
-<meta property="og:description" content="目前，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞提供，功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。  音节界线不清 拼写形式过长 字词重码过多 回溯修改麻烦  这些问题在声笔拼音中都得到了较好的解决。声笔拼音明确了音节界线，简化了拼写形式，支持模糊后缀查找，能够直接用笔画筛选重码，基本上兼容一般拼音输入法，可以实现零成本迁移，但是输入效">
+<meta property="og:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见总体介绍。有关下载、安装和配置的方法，请参见安装配置。有关声笔系列码的发展历程，请参见发展历程。对于一些参见问题的解答，请参见常见问题。声笔系列码的其它">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sougoulizi7.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sougoulizi8.png">
@@ -141,10 +141,10 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi7.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi8.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/dphx.png">
-<meta property="og:updated_time" content="2021-09-06T02:14:31.456Z">
+<meta property="og:updated_time" content="2021-11-08T00:46:05.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
-<meta name="twitter:description" content="目前，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞提供，功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。  音节界线不清 拼写形式过长 字词重码过多 回溯修改麻烦  这些问题在声笔拼音中都得到了较好的解决。声笔拼音明确了音节界线，简化了拼写形式，支持模糊后缀查找，能够直接用笔画筛选重码，基本上兼容一般拼音输入法，可以实现零成本迁移，但是输入效">
+<meta name="twitter:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见总体介绍。有关下载、安装和配置的方法，请参见安装配置。有关声笔系列码的发展历程，请参见发展历程。对于一些参见问题的解答，请参见常见问题。声笔系列码的其它">
 <meta name="twitter:image" content="http://sbxlm.gitee.io/images/sougoulizi7.png">
 
 
@@ -682,16 +682,39 @@ var _hmt = _hmt || [];
       <div class="post-body">
         
         
-          <p>目前，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞提供，功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。</p>
+          <p>声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。</p>
+<p>本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见<a href="../about/">总体介绍</a>。有关下载、安装和配置的方法，请参见<a href="../vzpz/">安装配置</a>。有关声笔系列码的发展历程，请参见<a href="../fzlc/">发展历程</a>。对于一些参见问题的解答，请参见<a href="../faq/">常见问题</a>。声笔系列码的其它输入方案详见各自的专题。</p>
+<h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2><p>本节说明声笔拼音的适用人群，即它的目标用户是哪些人；相比现有的拼音输入法，它有什么优势。</p>
+<h3 id="1-1-适用人群"><a href="#1-1-适用人群" class="headerlink" title="1.1 适用人群"></a>1.1 适用人群</h3><p>声笔拼音是对现有拼音输入法的优化和改进，所以它适用于正在用拼音输入中文的所有人，可以仅花费极小的代价就获得高得多的中文输入效率，而不必花更多的时间和精力去学习双拼甚至五笔等。</p>
+<p>由于目前的声笔拼音是针对简体字进行优化的，再加上习惯上的一些差异，所以并不适合输入以输入繁体字为主的人，虽然声笔拼音是支持GBK字符集的，对付零星的繁体字输入是没有问题的。</p>
+<p>如果您的拼音非常糟糕，对韵母的掌握一塌糊涂，声母也分不清平翘舌什么的，同时又想有一个简单高效的输入方案，那么强烈建议您使用声笔系列码中的<a href="../sbjm/">声笔简码</a>，它仅使用不分平翘舌的声母和五个笔画，就能取得比声笔拼音还高的输入效率。</p>
+<h3 id="1-2-比较优势"><a href="#1-2-比较优势" class="headerlink" title="1.2 比较优势"></a>1.2 比较优势</h3><p>目前，在输入简体中文时，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞几家大公司提供，在功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。</p>
 <ul>
 <li>音节界线不清</li>
 <li>拼写形式过长</li>
 <li>字词重码过多</li>
 <li>回溯修改麻烦</li>
 </ul>
-<p>这些问题在声笔拼音中都得到了较好的解决。声笔拼音明确了音节界线，简化了拼写形式，支持模糊后缀查找，能够直接用笔画筛选重码，基本上兼容一般拼音输入法，可以实现零成本迁移，但是输入效率得到了较大提高。</p>
-<p>在声笔拼音之后，讲解了基于声笔拼音的顶功方案——声笔顶拼，它利用顶功大大提高了拼音输入法的效率，是推荐的拼音输入方式。</p>
-<h2 id="一、声笔拼音"><a href="#一、声笔拼音" class="headerlink" title="一、声笔拼音"></a>一、声笔拼音</h2><p>(1) 音节歧义</p>
+<p>这些问题在声笔拼音中都得到了很好的解决。声笔拼音明确了音节界线，简化了拼写形式，降低了学习难度，还能能够直接用笔画筛选重码。对于现行拼音输入法用户来说，迁移成本很低，而输入效率可以得到很大提高。声笔拼音将彻底改变人们对拼音输入时重码多、效率低的刻板印象，是最佳的拼音输入法升级方案。</p>
+<h3 id="1-3-注意事项"><a href="#1-3-注意事项" class="headerlink" title="1.3 注意事项"></a>1.3 注意事项</h3><h2 id="2-单字"><a href="#2-单字" class="headerlink" title="2 单字"></a>2 单字</h2><p>本节介绍声笔拼音所使用的编码元素，即用汉字的什么要素来编码；编码的方法是什么；编码在实际输入的时候是怎么运用的；在不知道编码的时候怎么样快速反查出编码。</p>
+<h3 id="2-1-编码元素"><a href="#2-1-编码元素" class="headerlink" title="2.1 编码元素"></a>2.1 编码元素</h3><p>声笔拼音的编码元素为声母、韵母和笔画，具体表示方法与现行拼音输入法有一定的差异。</p>
+<p>在声笔拼音中，用v表示零声母，即作为以a e o开头的音节在形式上的声母，例如：ai ei ou就变成了vai vei vou。同时，不区分平、翘舌音，即省略zh ch sh中的h，例如：zhou chao shi就变成了zou cao si。</p>
+<p>在韵母方面，前后鼻音中的n和ng都通过重复之前的元音字母来编码，例如：wan yin bang zong就变成了waa yii baa zoo。另外，将韵母 er 合并到 e，ü 合并到 u，ê 合并到 e，例如：er 变成 ve，而 nü 变成 nu。特别注意，ü 没有像传统拼音输入法那样用 v 来代替。</p>
+<p>在声韵相拼的时候，声母 j、q、x 后接韵母 ia、ie、iao、ian、iang、iong 时，要省略 i；例如，传统拼音里的 jie qiong xiang 在声笔拼音里则变成 je qoo xaa。</p>
+<p>在笔画方面，同其它声笔方案一样，用aeuio来表示折横撇竖捺五个笔画，而不是传统上的12345。</p>
+<blockquote>
+<p><em>习题：</em></p>
+<ol>
+<li>请给出下列汉语拼音音节在声笔拼音中的编码：</li>
+<li>请给出下列汉字在声笔拼音中的笔画表示方式：</li>
+</ol>
+</blockquote>
+<h3 id="2-2-编码方法"><a href="#2-2-编码方法" class="headerlink" title="2.2 编码方法"></a>2.2 编码方法</h3><p>在声笔拼音中，单字的编码规则很简单，就是拼音加笔画，全码为6码，笔画不足时重复末笔来补足。一个6位的编码，具体来说，又分为两个部分：前面4位为基本编码，后面2位为扩展编码。当然，这里的拼音是指经过声笔改造后的拼音。</p>
+<p>例如，</p>
+<h3 id="2-3-输入方法"><a href="#2-3-输入方法" class="headerlink" title="2.3 输入方法"></a>2.3 输入方法</h3><h3 id="2-4-反查方法"><a href="#2-4-反查方法" class="headerlink" title="2.4 反查方法"></a>2.4 反查方法</h3><h2 id="三、词组"><a href="#三、词组" class="headerlink" title="三、词组"></a>三、词组</h2><p>讲述在声笔拼音中怎么通过单字的编码推演出词组的编码；在实际输入中，怎样灵活使用这些编码；词组是如何自动管理的，包括自动生成新的词组和自动淘汰长久不用的新造词组。</p>
+<h3 id="1-编码方法"><a href="#1-编码方法" class="headerlink" title="1. 编码方法"></a>1. 编码方法</h3><h3 id="2-输入方法"><a href="#2-输入方法" class="headerlink" title="2. 输入方法"></a>2. 输入方法</h3><h3 id="3-自动管理"><a href="#3-自动管理" class="headerlink" title="3. 自动管理"></a>3. 自动管理</h3><h3 id="4-词组练习"><a href="#4-词组练习" class="headerlink" title="4. 词组练习"></a>4. 词组练习</h3><h2 id="四、设置"><a href="#四、设置" class="headerlink" title="四、设置"></a>四、设置</h2><p>强制简码，又称为出简不出全，</p>
+<h2 id="五、整句"><a href="#五、整句" class="headerlink" title="五、整句"></a>五、整句</h2><p>前面的单字、词组和设置三节都是在讲字词型的声笔拼音输入方案，而本节专门讲整句型声笔拼音方案。字词型的为默认方案，直接采用了声笔拼音之名，而整句型的为备选方案，另外起名叫声笔拼整，即声笔拼音整句的意思。请用户注意这种在命名上容易引起混淆的微妙之处。虽然声笔拼音实际上包括了字词型和整句型两种方案，但是除非特别指明，那么声笔拼音一词通常是特指字词型的。</p>
+<p>(1) 音节歧义</p>
 <p>拼音输入法面临的第一个问题就是音节划分歧义。例如，在全拼的时候<code>xian</code>还可能是<code>xi&#39;an</code>；在简拼的时候<code>dzay</code>可能是<code>d&#39;za&#39;y</code>，也可能是<code>d&#39;z&#39;a&#39;y</code>。为了明确音节界线，在电脑上需要加隔音符<code>&#39;</code>，在手机上则需要用专门的分词键。然而用户在使用时，往往不清楚何时是可以省略的，有可能忘记加隔音符或者分词键，从而产生输入错误。</p>
 <p><img src="/images/sougoulizi7.png" alt="搜狗例子7"></p>
 <p>如果上例采用混合显示也基本上能解决问题的话，那么下例就完全不管用了。这两例都是用的搜狗拼音，图中上面的是加了分隔符的，下面的是没有加的。没有加分隔符时，简拼就失效了。</p>
@@ -1115,7 +1138,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、声笔拼音"><span class="nav-text">一、声笔拼音</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、声笔顶拼"><span class="nav-text">二、声笔顶拼</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-引言"><span class="nav-text">1 引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-适用人群"><span class="nav-text">1.1 适用人群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2 比较优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-注意事项"><span class="nav-text">1.3 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-单字"><span class="nav-text">2 单字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-编码元素"><span class="nav-text">2.1 编码元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码方法"><span class="nav-text">2.2 编码方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-输入方法"><span class="nav-text">2.3 输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-反查方法"><span class="nav-text">2.4 反查方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、词组"><span class="nav-text">三、词组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-编码方法"><span class="nav-text">1. 编码方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-输入方法"><span class="nav-text">2. 输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-自动管理"><span class="nav-text">3. 自动管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-词组练习"><span class="nav-text">4. 词组练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、设置"><span class="nav-text">四、设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、整句"><span class="nav-text">五、整句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、声笔顶拼"><span class="nav-text">二、声笔顶拼</span></a></li></ol></div>
             
 
           </div>
