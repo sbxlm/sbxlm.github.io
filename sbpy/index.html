@@ -121,31 +121,131 @@ var _hmt = _hmt || [];
 
 
 
-  <meta name="description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见总体介绍。有关下载、安装和配置的方法，请参见安装配置。有关声笔系列码的发展历程，请参见发展历程。对于一些参见问题的解答，请参见常见问题。声笔系列码的其它">
+  <meta name="description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 通常，为了在使用拼音的情况下提升输入效率，人们首先想到的可能就是采用双拼。但是，双拼的门槛还是不低，需要记住30来个韵母、3个翘舌声母和零声母的表示形式，而且仍然不能解决重码多的问题。 声笔拼音另辟蹊径，以全拼为基础，进行适当的变形，只需花费比双拼小得多">
 <meta name="keywords" content="输入法, 创新, 引领, 顶屏, 顶功, 自动码长, 自动造词, 字母选重">
 <meta property="og:type" content="website">
 <meta property="og:title" content="声笔拼音">
 <meta property="og:url" content="http://sbxlm.gitee.io/sbpy/index.html">
 <meta property="og:site_name" content="声笔输入法">
-<meta property="og:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见总体介绍。有关下载、安装和配置的方法，请参见安装配置。有关声笔系列码的发展历程，请参见发展历程。对于一些参见问题的解答，请参见常见问题。声笔系列码的其它">
+<meta property="og:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 通常，为了在使用拼音的情况下提升输入效率，人们首先想到的可能就是采用双拼。但是，双拼的门槛还是不低，需要记住30来个韵母、3个翘舌声母和零声母的表示形式，而且仍然不能解决重码多的问题。 声笔拼音另辟蹊径，以全拼为基础，进行适当的变形，只需花费比双拼小得多">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sougoulizi7.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sougoulizi8.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi1.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sougoulizi9.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi2.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi3.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi4.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpyfc.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpyzhlf.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/sbpyzj.jpg">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120064658859.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120065358587.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121161656105.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121161951102.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120071430095.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120071538558.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121084635743.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121084714538.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121084752630.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121102356125.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121104729491.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121105341246.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120103634307.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120114341884.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120115857337.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121070053129.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120123304742.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120123516711.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211120123707423.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121111457117.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121111541724.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121111633345.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121111740791.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121124853307.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121124925582.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121125123339.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121125326321.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121125516620.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121132440814.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121132515467.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121134502442.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121134538622.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121135551615.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121135634005.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121135717689.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121134946472.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121135011443.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121135757229.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121141401327.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121141540096.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121141715202.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121141734235.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211121155222082.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211123073141246.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211123073737481.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211123073758643.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211123073823982.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211123073850585.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211123074018171.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124064402027.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124064454676.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124064915359.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124064955179.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124065529848.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124065554186.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124065628381.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211125071349269.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211125071425081.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211125071444251.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211125071518720.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124072703027.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211124072930643.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-27_06-58-13.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-11-54.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-19-28.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-32-59.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-34-28.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-37-14.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-41-23.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_12-51-25.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_16-43-47.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_17-03-25.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_17-04-25.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_17-12-01.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_17-11-18.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204074051291.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_16-11-23.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_16-19-24.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_16-20-43.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-11-28_16-21-53.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204081307898.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204081910993.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204083554148.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204084127418.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204084243800.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204084958632.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204085032965.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204085115409.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204085235153.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204085303500.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204093807608.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204093425449.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204094429082.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204094450587.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204094505228.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211204142349946.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205074028183.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205074228757.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205073829020.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205075537151.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205081725508.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205081806418.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205083745187.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211205073915968.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi5.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi6.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi7.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbpylizi8.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/dphx.png">
-<meta property="og:updated_time" content="2021-11-08T00:46:05.456Z">
+<meta property="og:updated_time" content="2021-12-06T08:53:44.261Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
-<meta name="twitter:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见总体介绍。有关下载、安装和配置的方法，请参见安装配置。有关声笔系列码的发展历程，请参见发展历程。对于一些参见问题的解答，请参见常见问题。声笔系列码的其它">
-<meta name="twitter:image" content="http://sbxlm.gitee.io/images/sougoulizi7.png">
+<meta name="twitter:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 通常，为了在使用拼音的情况下提升输入效率，人们首先想到的可能就是采用双拼。但是，双拼的门槛还是不低，需要记住30来个韵母、3个翘舌声母和零声母的表示形式，而且仍然不能解决重码多的问题。 声笔拼音另辟蹊径，以全拼为基础，进行适当的变形，只需花费比双拼小得多">
+<meta name="twitter:image" content="http://sbxlm.gitee.io/images/sbpyfc.png">
 
 
 
@@ -683,69 +783,308 @@ var _hmt = _hmt || [];
         
         
           <p>声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。</p>
-<p>本文只涉及声笔系列码中的声笔拼音，分为引言、单字、词组、设置、整句几节。有关声笔系列码的总体情况请参见<a href="../about/">总体介绍</a>。有关下载、安装和配置的方法，请参见<a href="../vzpz/">安装配置</a>。有关声笔系列码的发展历程，请参见<a href="../fzlc/">发展历程</a>。对于一些参见问题的解答，请参见<a href="../faq/">常见问题</a>。声笔系列码的其它输入方案详见各自的专题。</p>
-<h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2><p>本节说明声笔拼音的适用人群，即它的目标用户是哪些人；相比现有的拼音输入法，它有什么优势。</p>
-<h3 id="1-1-适用人群"><a href="#1-1-适用人群" class="headerlink" title="1.1 适用人群"></a>1.1 适用人群</h3><p>声笔拼音是对现有拼音输入法的优化和改进，所以它适用于正在用拼音输入中文的所有人，可以仅花费极小的代价就获得高得多的中文输入效率，而不必花更多的时间和精力去学习双拼甚至五笔等。</p>
-<p>由于目前的声笔拼音是针对简体字进行优化的，再加上习惯上的一些差异，所以并不适合输入以输入繁体字为主的人，虽然声笔拼音是支持GBK字符集的，对付零星的繁体字输入是没有问题的。</p>
+<p>通常，为了在使用拼音的情况下提升输入效率，人们首先想到的可能就是采用双拼。但是，双拼的门槛还是不低，需要记住30来个韵母、3个翘舌声母和零声母的表示形式，而且仍然不能解决重码多的问题。</p>
+<p>声笔拼音另辟蹊径，以全拼为基础，进行适当的变形，只需花费比双拼小得多的代价，就可以取得相当于或者高于双拼的输入效率。</p>
+<p>声笔拼音提供了两种解决方案。一种是默认的方案，它与现有的拼音输入法非常类似，都采用了智能整句模式，过渡起来很容易。另一种是，进一步演变而产生的字词型方案——声笔顶拼，它以稍高的门槛换来了更高的输入效率。</p>
+<p>值得注意的是，声笔拼音一词有广义和狭义之分。狭义的声笔拼音特指整句型方案，而广义的声笔拼音包括了整句型和字词型两种方案。读者从上下文应该容易区分出来，不要搞混淆了。</p>
+<p>声笔拼音适合什么样的人使用呢？声笔拼音是对现有拼音输入法的优化和改进，所以它适用于正在用拼音输入中文的所有人，可以仅花费极小的代价就获得高得多的中文输入效率，而不必花更多的时间和精力去学习双拼甚至五笔等。声笔拼音将彻底改变人们对拼音输入时重码多、效率低的刻板印象，是最佳的拼音输入法升级方案。</p>
 <p>如果您的拼音非常糟糕，对韵母的掌握一塌糊涂，声母也分不清平翘舌什么的，同时又想有一个简单高效的输入方案，那么强烈建议您使用声笔系列码中的<a href="../sbjm/">声笔简码</a>，它仅使用不分平翘舌的声母和五个笔画，就能取得比声笔拼音还高的输入效率。</p>
-<h3 id="1-2-比较优势"><a href="#1-2-比较优势" class="headerlink" title="1.2 比较优势"></a>1.2 比较优势</h3><p>目前，在输入简体中文时，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞几家大公司提供，在功能上大同小异。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。</p>
+<p>本文只涉及声笔系列码中的声笔拼音，含声笔顶拼。有关声笔系列码的总体情况请参见<a href="../about/">总体介绍</a>。有关下载、安装和配置的方法，请参见<a href="../vzpz/">安装配置</a>。有关声笔系列码的发展历程，请参见<a href="../fzlc/">发展历程</a>。对于一些常见问题的解答，请参见<a href="../faq/">常见问题</a>。声笔系列码的其它输入方案详见各自的专题。</p>
+<h2 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1 预备知识"></a>1 预备知识</h2><p>本节介绍声笔拼音所使用的编码元素，即用汉字的什么要素来编码；编码的方法是什么；在不知道编码的时候怎么样快速反查出编码；编码在实际输入的时候是怎么运用的。</p>
+<h3 id="1-1-编码元素"><a href="#1-1-编码元素" class="headerlink" title="1.1 编码元素"></a>1.1 编码元素</h3><p>声笔拼音的编码元素为声母、韵母和笔画，具体表示方法与现行拼音输入法有一定的差异，请注意以下几点。</p>
+<ul>
+<li>用v表示零声母，即作为以a e o开头的音节在形式上的声母。例如，ai ei ou就变成了vai vei vou。</li>
+<li>不区分平、翘舌音，即省略zh ch sh中的h。例如，zhou chao shi就变成了zou cao si。</li>
+<li>前后鼻音中的n和ng都通过重复之前的元音字母来编码。例如，wan yin bang zong就变成了waa yii baa zoo。</li>
+<li>将韵母 er 合并到 e，ü 合并到 u，ê 合并到 e。例如，er 变成 ve，nü 变成 nu，而ê变成ve。特别注意，ü 没有像传统拼音输入法那样用 v 来代替。</li>
+<li>在声韵相拼的时候，声母 j、q、x 后接以ia、ie、io开头的韵母如 ia、ie、iao、ian、iang、iong 时，要省略 i。例如，传统拼音里的 jie qiong xiang 在声笔拼音里则变成 je qoo xaa。</li>
+<li>音节长度超过3时，则截断为3。例如，biao变成bia，而guan变成gua。</li>
+<li>在笔画方面，同其它声笔方案一样，横竖撇捺折五个笔画用eiuoa来表示，而不是传统上的12345或者hspnz。</li>
+</ul>
+<p>通过以上简单的改造，就可以取得以下奇特的效果。</p>
+<ul>
+<li>音节之间具有明确的界限，在连续拼写的时候不再需要使用隔音符排除歧义。例如，xi’anshi变成了xivaasi。</li>
+<li>降低了学习门槛，不再需区分平翘舌和前后鼻音。虽然现有拼音输入法也可以设置模糊音，但是会影响汉字转换的准确性，而在声笔拼音中不会有这个问题。</li>
+<li>拼写形式得到了缩短。例如，zhuang变成了zua，miao变成了mia。这种对音节形式的压缩方式虽然会产生一些归并重码，但是声笔拼音可以通过直接追加笔画的方式来进行快速筛选，所以并不会成为一个问题。</li>
+</ul>
+<h3 id="1-2-编码方法"><a href="#1-2-编码方法" class="headerlink" title="1.2 编码方法"></a>1.2 编码方法</h3><p>在声笔拼音中，单字的编码规则很简单，就是拼音加笔画，全码为6码，笔画不足时重复末笔来补足。例如，「笔」的拼音为bi，追加前4个笔画后编码为biueou。又如，「将」的音节编码为jaa，追加前三个笔画后单字的编码为jaaoei。再如，「乙」的音节编码为yi，而「乙」只有一个笔画，所以要重复三次才能形成单字编码yiaaaa。</p>
+<p>对于词组的编码来说，整句型和字词型的方案是大不相同的，会在本文的后面两节详细论述。</p>
+<h3 id="1-3-反查方法"><a href="#1-3-反查方法" class="headerlink" title="1.3 反查方法"></a>1.3 反查方法</h3><p>在输入过程中，往往会遇到不认识的字或者不会用声笔拼音编码的字词，这时反查功能就派上大用场了。如果每当这种时候都要去百度的话，那就太耽误时间了。声笔拼音提供了多种快捷的反查手段，大大加快了查找编码的速度。</p>
+<p>在不知道读音的时候直接用<code>aeuio</code>按顺序输入笔画进行反查，在不知道笔画时用a引导拼音反查。注意，这里的拼音反查零声母要用v。以下是几个反查的例子。</p>
+<p><img src="/images/sbpyfc.png" alt="笔画拼音反查"></p>
+<p>另外，通过i引导的拼音还支持用字海两分法来进行反查， 支持查找八万多汉字，一般用于难读而易于两分的字进行反查或者GBK以外字的输入。GBK以外的字，声笔拼音不提供正常编码，不能按正常方式输入，只能在两分查找到后选择输入。下面是字海两分法查找的例子。</p>
+<p><img src="/images/sbpyzhlf.png" alt="字海两分反查"></p>
+<h3 id="1-4-助记方法"><a href="#1-4-助记方法" class="headerlink" title="1.4 助记方法"></a>1.4 助记方法</h3><p>虽然声笔拼音已经简单，基本上没有什么学习门槛，但是为了进一步减轻初学者的记忆负担，在手机上提供了助记皮肤，可以长按<code>N</code>键打开或者关闭助记。在打开时，给出了笔画和零声母用键（<code>aeuio</code>和<code>v</code>）的提示，如下图所示。如果是在电脑上，则可以把该图放在电脑桌面上，在打字的时候帮助记忆，一般几分钟就记住了。</p>
+<p><img src="/images/sbpyzj.jpg" alt="声笔拼音助记"></p>
+<h3 id="1-5-输入方法"><a href="#1-5-输入方法" class="headerlink" title="1.5 输入方法"></a>1.5 输入方法</h3><p>声笔拼音的整句型方案和字词型方案，在输入的时候，虽然都是基于相同的单字编码，但是在具体的运用上是大不相同的。读者先通过以下练习巩固一下预备知识。在接下来的两节会分别对字词型和整句型的输入方法进行详细论述，这里就不再赘述。</p>
+<blockquote>
+<h4 id="预备知识习题："><a href="#预备知识习题：" class="headerlink" title="预备知识习题："></a><em>预备知识习题：</em></h4><ol>
+<li>请给出下列汉语拼音音节在声笔拼音中的编码<ul>
+<li>ang tin jiao qiong</li>
+<li>er lue lü kuai</li>
+<li>nu chuang qiu jiang</li>
+</ul>
+</li>
+<li>请给出下列汉字的前四笔在声笔拼音中的编码<ul>
+<li>床前明月光</li>
+<li>疑是地上霜</li>
+</ul>
+</li>
+<li>请给出下列汉字在声笔拼音中的单字编码形式<ul>
+<li>举头望明月</li>
+<li>低头思故乡</li>
+</ul>
+</li>
+<li>请用纯笔画反查出下列汉字在声笔拼音中的编码<ul>
+<li>人之初</li>
+<li>性本善</li>
+</ul>
+</li>
+<li>请用常规拼音反查下列汉字在声笔拼音中的编码<ul>
+<li>太极八卦</li>
+<li>阴阳五行</li>
+</ul>
+</li>
+<li>请用字海二分法输入下列汉字<ul>
+<li>皕𩇴</li>
+<li>𠓗𠔣</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="2-声笔拼音"><a href="#2-声笔拼音" class="headerlink" title="2 声笔拼音"></a>2 声笔拼音</h2><p>注意，本节讲的声笔拼音是狭义的，即特指整句型的方案。</p>
+<p>目前，在输入中文时，绝大多数人使用的都是全拼输入法，主要由搜狗、百度和讯飞几家大公司提供，在功能上大同小异，都是智能整句输入法。虽然随着技术的发展，全拼输入法已经取得了长足的进步，但是仍然存在以下严重问题。</p>
 <ul>
 <li>音节界线不清</li>
 <li>拼写形式过长</li>
 <li>字词重码过多</li>
 <li>回溯修改麻烦</li>
 </ul>
-<p>这些问题在声笔拼音中都得到了很好的解决。声笔拼音明确了音节界线，简化了拼写形式，降低了学习难度，还能能够直接用笔画筛选重码。对于现行拼音输入法用户来说，迁移成本很低，而输入效率可以得到很大提高。声笔拼音将彻底改变人们对拼音输入时重码多、效率低的刻板印象，是最佳的拼音输入法升级方案。</p>
-<h3 id="1-3-注意事项"><a href="#1-3-注意事项" class="headerlink" title="1.3 注意事项"></a>1.3 注意事项</h3><h2 id="2-单字"><a href="#2-单字" class="headerlink" title="2 单字"></a>2 单字</h2><p>本节介绍声笔拼音所使用的编码元素，即用汉字的什么要素来编码；编码的方法是什么；编码在实际输入的时候是怎么运用的；在不知道编码的时候怎么样快速反查出编码。</p>
-<h3 id="2-1-编码元素"><a href="#2-1-编码元素" class="headerlink" title="2.1 编码元素"></a>2.1 编码元素</h3><p>声笔拼音的编码元素为声母、韵母和笔画，具体表示方法与现行拼音输入法有一定的差异。</p>
-<p>在声笔拼音中，用v表示零声母，即作为以a e o开头的音节在形式上的声母，例如：ai ei ou就变成了vai vei vou。同时，不区分平、翘舌音，即省略zh ch sh中的h，例如：zhou chao shi就变成了zou cao si。</p>
-<p>在韵母方面，前后鼻音中的n和ng都通过重复之前的元音字母来编码，例如：wan yin bang zong就变成了waa yii baa zoo。另外，将韵母 er 合并到 e，ü 合并到 u，ê 合并到 e，例如：er 变成 ve，而 nü 变成 nu。特别注意，ü 没有像传统拼音输入法那样用 v 来代替。</p>
-<p>在声韵相拼的时候，声母 j、q、x 后接韵母 ia、ie、iao、ian、iang、iong 时，要省略 i；例如，传统拼音里的 jie qiong xiang 在声笔拼音里则变成 je qoo xaa。</p>
-<p>在笔画方面，同其它声笔方案一样，用aeuio来表示折横撇竖捺五个笔画，而不是传统上的12345。</p>
-<blockquote>
-<p><em>习题：</em></p>
-<ol>
-<li>请给出下列汉语拼音音节在声笔拼音中的编码：</li>
-<li>请给出下列汉字在声笔拼音中的笔画表示方式：</li>
-</ol>
-</blockquote>
-<h3 id="2-2-编码方法"><a href="#2-2-编码方法" class="headerlink" title="2.2 编码方法"></a>2.2 编码方法</h3><p>在声笔拼音中，单字的编码规则很简单，就是拼音加笔画，全码为6码，笔画不足时重复末笔来补足。一个6位的编码，具体来说，又分为两个部分：前面4位为基本编码，后面2位为扩展编码。当然，这里的拼音是指经过声笔改造后的拼音。</p>
-<p>例如，</p>
-<h3 id="2-3-输入方法"><a href="#2-3-输入方法" class="headerlink" title="2.3 输入方法"></a>2.3 输入方法</h3><h3 id="2-4-反查方法"><a href="#2-4-反查方法" class="headerlink" title="2.4 反查方法"></a>2.4 反查方法</h3><h2 id="三、词组"><a href="#三、词组" class="headerlink" title="三、词组"></a>三、词组</h2><p>讲述在声笔拼音中怎么通过单字的编码推演出词组的编码；在实际输入中，怎样灵活使用这些编码；词组是如何自动管理的，包括自动生成新的词组和自动淘汰长久不用的新造词组。</p>
-<h3 id="1-编码方法"><a href="#1-编码方法" class="headerlink" title="1. 编码方法"></a>1. 编码方法</h3><h3 id="2-输入方法"><a href="#2-输入方法" class="headerlink" title="2. 输入方法"></a>2. 输入方法</h3><h3 id="3-自动管理"><a href="#3-自动管理" class="headerlink" title="3. 自动管理"></a>3. 自动管理</h3><h3 id="4-词组练习"><a href="#4-词组练习" class="headerlink" title="4. 词组练习"></a>4. 词组练习</h3><h2 id="四、设置"><a href="#四、设置" class="headerlink" title="四、设置"></a>四、设置</h2><p>强制简码，又称为出简不出全，</p>
-<h2 id="五、整句"><a href="#五、整句" class="headerlink" title="五、整句"></a>五、整句</h2><p>前面的单字、词组和设置三节都是在讲字词型的声笔拼音输入方案，而本节专门讲整句型声笔拼音方案。字词型的为默认方案，直接采用了声笔拼音之名，而整句型的为备选方案，另外起名叫声笔拼整，即声笔拼音整句的意思。请用户注意这种在命名上容易引起混淆的微妙之处。虽然声笔拼音实际上包括了字词型和整句型两种方案，但是除非特别指明，那么声笔拼音一词通常是特指字词型的。</p>
-<p>(1) 音节歧义</p>
-<p>拼音输入法面临的第一个问题就是音节划分歧义。例如，在全拼的时候<code>xian</code>还可能是<code>xi&#39;an</code>；在简拼的时候<code>dzay</code>可能是<code>d&#39;za&#39;y</code>，也可能是<code>d&#39;z&#39;a&#39;y</code>。为了明确音节界线，在电脑上需要加隔音符<code>&#39;</code>，在手机上则需要用专门的分词键。然而用户在使用时，往往不清楚何时是可以省略的，有可能忘记加隔音符或者分词键，从而产生输入错误。</p>
-<p><img src="/images/sougoulizi7.png" alt="搜狗例子7"></p>
-<p>如果上例采用混合显示也基本上能解决问题的话，那么下例就完全不管用了。这两例都是用的搜狗拼音，图中上面的是加了分隔符的，下面的是没有加的。没有加分隔符时，简拼就失效了。</p>
-<p><img src="/images/sougoulizi8.png" alt="搜狗例子8"></p>
+<p>这些问题在声笔拼音中都得到了很好的解决。声笔拼音明确了音节界线，简化了拼写形式，降低了学习难度，还能能够直接用笔画筛选重码，出错以后也能快速定位修改。</p>
+<p>虽然名称是智能整句，但并不是必须要以整句为单位进行输入，只是说可以以整句为单位输入而已。具有讽刺意义的是，人们在使用智能整句输入法的时候，绝大多数人都是以字词为单位输入，而不是以句子为单位输入的。为什么会发生这种奇怪的现象呢？有关这个问题，还可以参见<a href="/2021/07/01/拼音输入宝典/">拼音输入宝典</a>一文。注意，这里的声笔拼音与《拼音输入宝典》中提到的声笔拼音相比，已经有了一些变化，做了进一步的优化。若有差异，请以此处的为准。</p>
+<p>在预备知识中讲到，声笔拼音的单字编码有6位之多。但是，在实际输入的时候，绝大多数情况下都是不会用到6位的，一般只会用到1至4位。下面将按输入单位从小到大的顺序来讲解声笔拼音的输入方法。</p>
+<h3 id="2-1-单字的输入"><a href="#2-1-单字的输入" class="headerlink" title="2.1 单字的输入"></a>2.1 单字的输入</h3><p>在中文里，有数以万计的汉字，而拼音音节只有400来个，所以同音字是非常多的。故而，单字的输入，对于传统拼音输入法来说，是一个非常头痛和痛苦的事情，可以说是想尽了一切办法企图来解决这个问题。</p>
+<p>搜狗和百度之类的拼音输入法利用巨型互联网词库，在输入一般性的文本时，可以大大减少对单字输入的依赖。但是，单字的输入始终是不可避免的，在有的场合还用得比较多。这时，绝大多数人是通过翻页查找的方式来定位和选择同音字。在遇到输入同音现象严重的非常见字时，往往需要翻页数次，每页都要查看多个选项，严重影响输入效率。少数有经验的人，可能知道通过以词定字的方式来输入单字，或者通过加TAB后追加笔画或者部件来筛选重码字。然而，以词定字只是一种权宜之计，不是普适性的，有时候根本想不到适合的词。TAB后加码的方式是具有普适性的，但是操作很不方便，而且还增加了码长。另外，由于用得很少，偶而使用的时候，显得很生疏，无法做到快速操作。</p>
+<h4 id="2-1-1-重码问题"><a href="#2-1-1-重码问题" class="headerlink" title="2.1.1 重码问题"></a>2.1.1 重码问题</h4><p>例如，在用搜狗拼音输入「疫」字时，可以在输入yi以后按TAB键再输入笔画dhpn，「疫」字就出现在当页的选项中了。</p>
+<p><img src="/images/image-20211120064658859.png" alt="image-20211120064658859"></p>
+<p>现在，对比一下声笔拼音在输入「疫」字时的情况。在输入yi后，无需难操作的TAB而是直接输入笔画oeu，「疫」字就出现在当页选项中。而且，在声笔拼音中，笔画的使用是非常频繁的，用户容易对aeuio表示的笔画形成条件反射，从而加快操作速度。</p>
+<p><img src="/images/image-20211120065358587.png" alt="image-20211120065358587"></p>
+<p>把单字重码问题暴露得最充分的，当数赵元任先生的「施氏食狮史」了，以下分别用搜狗拼音和声笔拼音将标题里的这五个字输入一下，进行对比，以目标字出现在首页为度。</p>
+<p><img src="/images/image-20211121161656105.png" alt="image-20211121161656105"></p>
+<p><img src="/images/image-20211121161951102.png" alt="image-20211121161951102"></p>
+<p>显然，声笔拼音（下图）比搜狗拼音（上图）要便捷得多，特别是每个字都节约了难操作的TAB键。</p>
+<h4 id="2-1-2-码长问题"><a href="#2-1-2-码长问题" class="headerlink" title="2.1.2 码长问题"></a>2.1.2 码长问题</h4><p>搜狗拼音输入「幢」字时，在输入zhuang后按TAB再输入该字的首笔竖，可以把它定位在首页。然而，zhuang这个音节有6个字母之多，加上额外的TAB键，码长非常不理想。</p>
+<p><img src="/images/image-20211120071430095.png" alt="image-20211120071430095"></p>
+<p>相比之下，用声笔拼音输入「幢」字的话，只需在zua之后直接追加该字的首笔竖，就可以把它定位在首页。可见，从码长上来说，节约了四键，效率的提升是极为显著的。</p>
+<p><img src="/images/image-20211120071538558.png" alt="image-20211120071538558"></p>
+<h4 id="2-1-3-固顶问题"><a href="#2-1-3-固顶问题" class="headerlink" title="2.1.3 固顶问题"></a>2.1.3 固顶问题</h4><p>在现代拼音输入法中，所有字的编码都是动态变化的。这样的好处是，可以适应用户的使用习惯来尽量缩短码长，减少用键。</p>
+<p>例如，使用百度拼音输入了g后，本来的选项如下：</p>
+<p><img src="/images/image-20211121084635743.png" alt="image-20211121084635743"></p>
+<p>这时，如果继续输入gao后，选项如下：</p>
+<p><img src="/images/image-20211121084714538.png" alt="image-20211121084714538"></p>
+<p>在用空格上屏「高」字后（有时需要输入多次），再输入g的话，选项就可能变成：</p>
+<p><img src="/images/image-20211121084752630.png" alt="image-20211121084752630"></p>
+<p>但是，这只是问题的一个方面。问题的另一个方面是，人作为生物是具有记忆特性的，经常重复的行为，就会形成条件反射。如果在首码上固定了某个高频字，那么经过一段时间的使用，用户就可以不假思索地将该字打出来，而不必观察提示行，这样就减少了人机交互时间，提高了击键速度，从而增加了打字效率。在码长和键速之间如何进行选择？这是输入法设计随时都会遇到的问题。不同的输入方案会有不同的选择。但是，长期的实践证明，对于拼音输入法来说，首码高频字是肯定应该固定的，就是对于一般用户来讲，得到的击键提升都比码长的节约有划算。</p>
+<p>所以，在声笔拼音中，首码高频字（又称一简字）是固定的。这些字一共有21个，它们是：<code>b不 p平 m没 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而</code>。这些字在输入的时候，其码长不会出现在百度拼音里那种震荡现象，便于对它们实现盲打。</p>
+<h4 id="2-1-4-模糊问题"><a href="#2-1-4-模糊问题" class="headerlink" title="2.1.4 模糊问题"></a>2.1.4 模糊问题</h4><p>在拼音输入法中，一般都有模糊拼音设置。比如，在搜狗拼音中，模糊拼音的设置如下：</p>
+<p><img src="/images/image-20211121102356125.png" alt="image-20211121102356125"></p>
+<p>对于南方人来说，很多都会设置为模糊前三对平翘舌音，因为他们的普通话可能不太标准。有的人还会有鼻音和边音不准的问题。还有的人就是前后鼻音问题了。设置模糊音后，不管输入哪一个音都能够打出来，相对于降低了学习门槛。但是，这样做也有副作用，那就是牺牲了编码空间，同时也增多了重码。</p>
+<p>在声笔拼音中，也采用了模糊音，但是其目的不仅仅至于降低学习门槛，而且还在于提高输入效率，所以它的模糊是强制的。声笔拼音对韵母的模糊更加激进，韵母的长度不会超过2。例如，biao会截断为bia，xiong会变为xoo，shuang会不变为sua。不过，l与n，f与h，r与l，这几对是没有模糊的。另外，在输入编码的时候会显示出前缀相同的所有字。例如，输入bi后，还可能出现bian、bie、bing等发音的字。这有利于缩短常用字的码长。</p>
+<p><img src="/images/image-20211121104729491.png" alt="image-20211121104729491"></p>
+<p>而在搜狗拼音中，输入bi后只会出现发音相同的字，而有的字并不一定常见。</p>
+<p><img src="/images/image-20211121105341246.png" alt="image-20211121105341246"></p>
+<h3 id="2-2-二字词的输入"><a href="#2-2-二字词的输入" class="headerlink" title="2.2 二字词的输入"></a>2.2 二字词的输入</h3><p>二字词在现代中文里是最常见的。根据北京航空航天大学等单位承担的“七五”国家重点科技攻关项目“现代汉语词频统计”所得的结果，二字词所占累计字数比例超过了一半，高达53.32%。</p>
+<p><img src="/images/image-20211120103634307.png" alt="image-20211120103634307"></p>
+<p>在使用全拼的情况下，由于汉语的音节只有400来个，所以二字词的编码空间大概有400×400=160,000个码位。这个空间看起来还是不小了，但是因为分布极不均匀，因而重码现象也是相当严重的。随着收词数量的增加，当量级到达数十万甚至上百万时，重码现象还会越来越严重。         </p>
+<h4 id="2-2-1-重码问题"><a href="#2-2-1-重码问题" class="headerlink" title="2.2.1 重码问题"></a>2.2.1 重码问题</h4><p>例如，用搜狗拼音输入「时势」，会出现在第五页的最后一项。由于重码词的顺序会有动态调整，不同的用户的结果可能会有所差异，但是不会影响我们理解这个事实的存在。</p>
+<p><img src="/images/image-20211120114341884.png" alt="image-20211120114341884"></p>
+<p>为了避免多次翻页查找，搜狗拼音提供了一种通过笔画过滤重码的方法，即先用TAB引导，再输入首字的笔画，这样可以将「时势」提前到首页，如下所示。</p>
+<p><img src="/images/image-20211120115857337.png" alt="image-20211120115857337"></p>
+<p>这种过滤重码的方式比起翻页查找要好得多，但是仍然不理想，因为TAB不好操作，而且增加了一次击键。另外，如果重码词首字的前几个笔画是一样的话，过滤效果就不好。</p>
+<p>反观声笔拼音。如果不增加笔画的话，重码现象会更加严重，因为它是不分平翘舌的，「时势」一词会出现在第七页的第二项。当然声笔拼音的重码顺序也是动态变化的，可能你的结果会有差异，但是不会影响我们对原理的理解。</p>
+<p><img src="/images/image-20211121070053129.png" alt="image-20211121070053129"></p>
+<p>正是因为有了极为方便的直接笔画筛选功能，才使得声笔拼音无需为重码而发愁，而且码长更短。它在筛选重码加笔画时，无需TAB引导，而且既可加在首字后面，也可加在末字后面，还可以同时加在首字和末字后面，非常灵活方便和快捷，如下所示。</p>
+<p><img src="/images/image-20211120123304742.png" alt="image-20211120123304742"></p>
+<p><img src="/images/image-20211120123516711.png" alt="image-20211120123516711"></p>
+<p><img src="/images/image-20211120123707423.png" alt="image-20211120123707423"></p>
+<h4 id="2-2-2-输入格式"><a href="#2-2-2-输入格式" class="headerlink" title="2.2.2 输入格式"></a>2.2.2 输入格式</h4><p>拼音输入法在输入二字词的时候，格式可以非常灵活，可以都用全拼，可以简拼加全拼，可以全拼加简拼，也可以都用简拼。下面，以输入「创新」一词为例来说明这个问题。</p>
+<p>在搜狗拼音中，至少可以用以下几种格式来输入。注意，用cx时的结果是经过一次翻页的。</p>
+<p><img src="/images/image-20211121111457117.png" alt="image-20211121111457117"></p>
+<p><img src="/images/image-20211121111541724.png" alt="image-20211121111541724"></p>
+<p><img src="/images/image-20211121111633345.png" alt="image-20211121111633345"></p>
+<p><img src="/images/image-20211121111740791.png" alt="image-20211121111740791"></p>
+<p>在声笔拼音中，由于能在任意字后添加笔画，任意字都可以使用1至6码，所以可用的格式就更加丰富了。值得注意的是，由于声笔拼音对拼式进行了压缩，产生了归并重码，所以使用不当的话，会需要更多的翻页查找。</p>
+<p><img src="/images/image-20211121124853307.png" alt="image-20211121124853307"></p>
+<p><img src="/images/image-20211121124925582.png" alt="image-20211121124925582"></p>
+<p><img src="/images/image-20211121125123339.png" alt="image-20211121125123339"></p>
+<p><img src="/images/image-20211121125326321.png" alt="image-20211121125326321"></p>
+<p><img src="/images/image-20211121125516620.png" alt="image-20211121125516620"></p>
+<p>那么，问题来了。面对如此灵活的输入格式，有的高效，有的低效，用户该怎么选择运用呢？通过对拼音输入法用户使用方法的长期观察和总结，我归纳了以下启发式的原则。</p>
+<p>首先预判待输入二字词的常用程度。如果是很常用的词，那么就先输入两字的首码，即全用简拼。如果当页命中就选择上屏，否则继续输入第二字的韵母。例如，要输入「才行」一词，预判觉得它挺常用的，但首页没有，需要继续输入韵母。</p>
+<p>在搜狗拼音中，输入的情况如下。在加入韵母后，「才行」出现在首页的首位了。</p>
+<p><img src="/images/image-20211121132440814.png" alt="image-20211121132440814"></p>
+<p><img src="/images/image-20211121132515467.png" alt="image-20211121132515467"></p>
+<p>但是，如果想要输入的是「成形」而不是「才行」的话，就需要翻页几次才能找到了。</p>
+<p><img src="/images/image-20211121134502442.png" alt="image-20211121134502442"></p>
+<p><img src="/images/image-20211121134538622.png" alt="image-20211121134538622"></p>
+<p><img src="/images/image-20211121135551615.png" alt="image-20211121135551615"></p>
+<p><img src="/images/image-20211121135634005.png" alt="image-20211121135634005"></p>
+<p><img src="/images/image-20211121135717689.png" alt="image-20211121135717689"></p>
+<p>所以，预判不准的代价有时候是比较大的。不过，在声笔拼音，可以有更多的办法，输入韵母后还可以再追加笔画，如下所示。</p>
+<p><img src="/images/image-20211121134946472.png" alt="image-20211121134946472"></p>
+<p><img src="/images/image-20211121135011443.png" alt="image-20211121135011443"></p>
+<p><img src="/images/image-20211121135757229.png" alt="image-20211121135757229"></p>
+<p>运气好的话，可能加一个笔画就出来了。但是，运气不好的时候，还是需要多加笔画，此后都可能还是需要多次翻页。预判不准的成本仍然是很高的。</p>
+<p>因而，除非特别有把握，一般的人倾向于先输入首字全拼加第二字简拼。如果当页命中就选择上屏，否则继续输入第二字的韵母。这样的话，可以大大地提高命中率，但是付出了增加码长的代价。现在，以输入「双唇」一词为例说明一下。</p>
+<p>在搜狗拼音中，输入的情况如下。在加入韵母后，「双唇」出现在首页的首位了。</p>
+<p><img src="/images/image-20211121141401327.png" alt="image-20211121141401327"></p>
+<p><img src="/images/image-20211121141540096.png" alt="image-20211121141540096"></p>
+<p>在声笔拼音中，情况是类似的。</p>
+<p><img src="/images/image-20211121141715202.png" alt="image-20211121141715202"></p>
+<p><img src="/images/image-20211121141734235.png" alt="image-20211121141734235"></p>
+<p>但是，可以看出，声笔拼音的码长短了很多。这得益于声笔拼音采用的压缩编码和前缀模糊特性。</p>
+<p>即使是不常见的二字词，如果刚按照上述方式输入过了，那么在当前的局部语境下，仍然可以采用先输入简拼的形式来输入，能够节约用键。比如，上例中的「双唇」，在最近输入过以后，只用sc就可以了。</p>
+<p><img src="/images/image-20211121155222082.png" alt="image-20211121155222082"></p>
+<h4 id="2-2-3-模糊问题"><a href="#2-2-3-模糊问题" class="headerlink" title="2.2.3 模糊问题"></a>2.2.3 模糊问题</h4><p>模糊拼音的作用在词组中的体现比在单字中更加充分。在声笔拼音中，不仅可以像一般拼音输入法那样模糊平翘舌声母和前后鼻音，而且是强制性的，必须模糊，以便提高编码空间的利用率，也便于简化输入规则。更进一步，声笔拼音采用了激进的前缀模糊法，即每个字输入1-6码都可以，远比一般拼音输入法灵活多样。</p>
+<p>例如，输入「疫情」一词时，采用的输入码形式最多可以有6×6=36种之多，包括yq yqii yiq yiqii yiqi yioq等等。但是，并不是任何一种形式在任何情况下都是同等的有效。弄清楚在哪种形式下适合采用哪种形式，是一个非常关键的问题。建议采用上一小节介绍的启发式原则，结合自己的使用经验来加以灵活运用。对于「疫情」一词来说，第一次输入的时候，采用yioq是最有效的。</p>
+<p><img src="/images/image-20211123073141246.png" alt="image-20211123073141246"></p>
+<p>而采用类似全拼的yiqii输入则会有很多重码，第四页才有「疫情」出现。</p>
+<p><img src="/images/image-20211123073737481.png" alt="image-20211123073737481"></p>
+<p><img src="/images/image-20211123073758643.png" alt="image-20211123073758643"></p>
+<p><img src="/images/image-20211123073823982.png" alt="image-20211123073823982"></p>
+<p><img src="/images/image-20211123073850585.png" alt="image-20211123073850585"></p>
+<p>不过，这时声笔拼音仍然比一般拼音有更加便利的手段来挽救，因为可以再追加一个末字的笔画，就可以把「疫情」提前到首页。这就是前缀模糊法的强大之处。除此之外，还可以通过2.2.5小节讲的定位修改来纠正。</p>
+<p><img src="/images/image-20211123074018171.png" alt="image-20211123074018171"></p>
+<h4 id="2-2-4-隔音问题"><a href="#2-2-4-隔音问题" class="headerlink" title="2.2.4 隔音问题"></a>2.2.4 隔音问题</h4><p>在一般拼音输入法中，有的拼写形式是有歧义的。为了明确音节界线，在电脑上需要加隔音符<code>&#39;</code>，在手机上则需要用专门的分词键。</p>
+<p>例如，在全拼的时候<code>xian</code>还可能是<code>xi&#39;an</code>。使用搜狗拼音时的输入情况入下：</p>
+<p><img src="/images/image-20211124064402027.png" alt="image-20211124064402027"></p>
+<p><img src="/images/image-20211124064454676.png" alt="image-20211124064454676"></p>
+<p>如果上例采用混合显示也基本上能解决问题的话，那么下例就完全不管用了。这两例都是用的搜狗拼音，图中上面的是没手动加分隔符的，下面的是手动加了的。没有手动加分隔符时，简拼就失效了。</p>
+<p><img src="/images/image-20211124064915359.png" alt="image-20211124064915359"></p>
+<p><img src="/images/image-20211124064955179.png" alt="image-20211124064955179"></p>
 <p>我们分析一下就知道，上文前一个例子的音节歧义是由零声母音引起的，而后一个例子的音节歧义是由翘舌音引起的。如何才能分清音节界限呢？声笔拼音的解决办法是，用v来表示零声母，同时将翘舌音归并到平舌音，即<code>zh ch sh</code>分别归并到<code>z c s</code>。这样以上两例的输入将变为如下图所示，在输入的时候就一定明确了音节界限，无论是全拼还是简拼都是这样。</p>
-<p><img src="/images/sbpylizi1.png" alt="声笔拼音例子1"></p>
-<p>(2) 拼式过长</p>
-<p>拼式过长是影响拼音输入法效率的主要原因之一。搜狗、百度等拼音输入法缩短码长的主要办法是使用简拼，另外采用模糊拼音也能起到一定缩短码长的作用，以下是搜狗的输入例子。</p>
-<p><img src="/images/sougoulizi9.png" alt="搜狗例子9"></p>
-<p>在声笔拼音中，简拼的使用方法是类似的，但是平翘舌的模糊是必须的，同时还有以下可选的缩减规则。</p>
-<ul>
-<li>将韵母er合并到e，ü合并到u，ê合并到e，例如：<code>er</code>可以变成<code>ve</code>（前面加<code>v</code>是因为<code>er</code>为零声母音节），而<code>nü</code>可以变成<code>nu</code>。特别注意，ü没有像传统拼音那样用v来代替。</li>
-<li>声母j、q、x后接韵母ia、ie、iao、ian、iang、iong时，可省略i；例如，传统拼音里的<code>jie qiong xiang</code>在声笔拼音里可以变成<code>je qong xang</code>。</li>
-<li>韵母可以不完全输入，这比传统拼音的后鼻音模糊的码长缩减效果更加明显；例如，传统拼音里的<code>qiong xiang</code>在声笔拼音里可以变成<code>qo xa</code>。</li>
-</ul>
-<p>以下是声笔拼音的一些输入实例，与搜狗拼音的输入方式进行了对比。</p>
-<p><img src="/images/sbpylizi2.png" alt="声笔拼音例子2"></p>
-<p>(3) 重码过滤</p>
-<p>在中文里，单字和二字词的同音现象特别严重，为了避免过多翻页，传统拼音通过按Tab后加辅助码的方法来快速过滤重码，称之为间接辅助码，因为不加Tab的话，就会发生歧义。在声笔拼音中，由于采用v表示零声母，基本上解决了音节歧义的问题，同时以不与声母重叠的元音字母aeuio表示折横撇竖捺五种笔画，所以可以不用Tab引导而直接加笔画辅助码，这不仅少用了编码字母，缩短了码长，还使得操作更加容易。以下举几个例子来对比一下声笔拼音和搜狗拼音的输入情况。</p>
-<p>例1：采用拼音加笔画辅助码输入「疫」字。声笔拼音可以直接加笔画，而搜狗拼音必须用Tab引导。</p>
-<p><img src="/images/sbpylizi3.png" alt="声笔拼音例子3"></p>
-<p>例2：采用拼音加笔画辅助码输入「质子」一词。声笔拼音可以在第一个字后面加笔画，再接着输入第二个字，而搜狗拼音必须在输入完两字的拼音后按Tab再添加第一个字的笔画。</p>
-<p><img src="/images/sbpylizi4.png" alt="声笔拼音例子4"></p>
-<p>(4) 回改定位</p>
-<p>在发生输入错误而需要定位修改时，一般拼音输入法是通过用箭头键移动光标或者Ctrl+音节首字母来定位的，但是这些方法效率低、操作难度大。声笔拼音提供了一种快速、方便的定位方法，可以利用数字 1234 将光标一次性地定位到待定的第 1 至 4 个音节之前，用 5 将光标定位到最后，而 TAB 可以快速从当前位置向前逐个音节移动。</p>
-<p>(5) 重码选择</p>
-<p>声笔拼音选择重码时，使用 67890，这一点与传统拼音输入法是不一样的。之所以这么设计，是因为 12345 已经用于快速定位， 也因为在声笔拼音输入时左手的负担已经很重，改用 67890 后，让右手承担重码选择的任务，可以平衡用键。在传统拼音输入法中，67890一般是闲置未用的，造成了按键资源的浪费。</p>
-<p>(6) 简码固定</p>
-<p>搜狗、百度等拼音输入法是全动态的，连简码字也完全不固定，不利于用户对高频字形成条件反射，用户必须通过自定义短语来固定所需的字。声笔拼音的一简字是固定不变的，便于用户盲打它们，以便提高键速，从而提高输入效率。例如，在单字输入时，「和」的简码始终为h，「就」的简码始终为j，不会发生变化。</p>
-<h2 id="二、声笔顶拼"><a href="#二、声笔顶拼" class="headerlink" title="二、声笔顶拼"></a>二、声笔顶拼</h2><p>声笔顶拼的目的是在声笔拼音的基础上进一步提高拼音输入的效率。它通过对汉语拼音的简化和巧妙的字词编码，在保持易学的前提下，既能充分利用简拼来缩短词组的码长，又能通过追加韵母来延长编码，还能用 aeuio 分别代表折横撇竖捺直接追加笔画来筛选重码字词。</p>
-<p>(1) 精简拼式</p>
+<p><img src="/images/image-20211124065529848.png" alt="image-20211124065529848"></p>
+<p><img src="/images/image-20211124065554186.png" alt="image-20211124065554186"></p>
+<p><img src="/images/image-20211124065628381.png" alt="image-20211124065628381"></p>
+<h4 id="2-2-5-定位修改"><a href="#2-2-5-定位修改" class="headerlink" title="2.2.5 定位修改"></a>2.2.5 定位修改</h4><p>在发生输入错误而需要定位修改时，一般拼音输入法是通过用箭头键移动光标或者Ctrl+音节首字母来定位的，但是这些方法效率低、操作难度大。声笔拼音提供了一种快速、方便的定位方法，可以利用数字 1234 将光标一次性地定位到待定的第 1 至 4 个音节之前，用 5 将光标定位到最后，而 TAB 可以快速从当前位置向前逐个音节移动。</p>
+<p>例如：如果本来想输入「御用」，但是输成了yiyoo，发现有错，用退格键删除四个字母后进行修改的话成本太高，用Esc键清提示行重新输入也不划算。</p>
+<p><img src="/images/image-20211125071349269.png" alt="image-20211125071349269"></p>
+<p>于是按2定位到第2音节yoo之前（即第1音节yi之后）。</p>
+<p><img src="/images/image-20211125071425081.png" alt="image-20211125071425081"></p>
+<p>接着，按一次退格键删除i，再输入u。</p>
+<p><img src="/images/image-20211125071444251.png" alt="image-20211125071444251"></p>
+<p>最后，按5定位到编码的末尾，就完成了修改。</p>
+<p><img src="/images/image-20211125071518720.png" alt="image-20211125071518720"></p>
+<h3 id="2-3-三字词的输入"><a href="#2-3-三字词的输入" class="headerlink" title="2.3 三字词的输入"></a>2.3 三字词的输入</h3><p>使用拼音输入三字词时，与输入单字和二字词相比，面临着很不一样的问题。</p>
+<h4 id="2-3-1-重码问题"><a href="#2-3-1-重码问题" class="headerlink" title="2.3.1 重码问题"></a>2.3.1 重码问题</h4><p>对于三字词而言，如果采用全拼，那么编码信息已经足够丰富了，重码已经不是一个问题。这时，问题的症结在于码长太长而导致的效率低下。</p>
+<p>例如，「互联网」一词，用搜狗全拼的话，需要10码，加上空格的话需要11键才能上屏。</p>
+<p><img src="/images/image-20211124072703027.png" alt="image-20211124072703027"></p>
+<p>即使采用声笔拼音，拼写形式得到了一些压缩，仍然需要8码。</p>
+<p><img src="/images/image-20211124072930643.png" alt="image-20211124072930643"></p>
+<p>所以，为了提高三字词的输入效率，人们在实践中往往采用其它输入格式来缩短码长。 </p>
+<h4 id="2-3-2-输入格式"><a href="#2-3-2-输入格式" class="headerlink" title="2.3.2 输入格式"></a>2.3.2 输入格式</h4><p>声笔拼音输入三字词时的格式可以多达6×6×6=216种，采用哪种格式最好呢？推荐的方法是，先采用全简拼输入。查看当前页的候选项是否命中，没有则逐码追加末字的编码并观察候选项的变化。有则选择上屏，若已有二字词或单字候选项出现，那么说明系统中没有该词。这时，要用2或3定位到第二、三字前，对前一、二字进行修改，补充编码以输入正确的字词，选择上屏后，光标回到末字后。重复以上操作直至完全正确为止。</p>
+<p>例如，要输入「计算机」一词，一般只需要输入jsj，该词就会出现在首位或者当前候选页，可以用数字键选择上屏。</p>
+<p><img src="/images/Snipaste_2021-11-27_06-58-13.png" alt="Snipaste_2021-11-27_06-58-13"></p>
+<p>但是，若要输入的是「教书匠」，输入jsj后在当页候选中没有。这时，再补充一码，该词就出现了，可以用9选择上屏。</p>
+<p><img src="/images/Snipaste_2021-11-28_12-11-54.png" alt="Snipaste_2021-11-28_12-11-54"></p>
+<p>可是，再假设要输入的是「鉴赏家」，输入jsja后在当页候选中仍然没有。这时，再补充一码末字的首笔，该词就出现了，可以用7选择上屏。</p>
+<p><img src="/images/Snipaste_2021-11-28_12-19-28.png" alt="Snipaste_2021-11-28_12-19-28"></p>
+<p>然而，如果要输入的是「建设奖」，输入到jsjaao后在当页候选中仍然没有。这时，判断前两字是一个常见的二字词，于是用3定位到第三字前，准备修改前两字。</p>
+<p><img src="/images/Snipaste_2021-11-28_12-32-59.png" alt="Snipaste_2021-11-28_12-32-59"></p>
+<p><img src="/images/Snipaste_2021-11-28_12-34-28.png" alt="Snipaste_2021-11-28_12-34-28"></p>
+<p>接着在jj后追加「设」字的韵母e，前两字就便成了「建设」。</p>
+<p><img src="/images/Snipaste_2021-11-28_12-37-14.png" alt="Snipaste_2021-11-28_12-37-14"></p>
+<p>此时，「奖」已经在当前页，用8选择上屏即可。这样，也就同时造好了这个系统中原本不存在的三字词。</p>
+<p><img src="/images/Snipaste_2021-11-28_12-41-23.png" alt="Snipaste_2021-11-28_12-41-23"></p>
+<p>以后，接下来用jsj就可以输入「建设奖」了。</p>
+<p><img src="/images/Snipaste_2021-11-28_12-51-25.png" alt="Snipaste_2021-11-28_12-51-25"></p>
+<h4 id="2-3-3-模糊问题"><a href="#2-3-3-模糊问题" class="headerlink" title="2.3.3 模糊问题"></a>2.3.3 模糊问题</h4><p>声笔拼音特有的前缀模糊法在上一小节追加末字编码时已经有所运用。前缀模糊在输入三字词时的另一种用途是，你觉得重码可能会很多，可能会不出现在首页，于是首字可以用2、3码，而不是1码。</p>
+<p>比如，声笔拼音输入「军事家」可以只用jusj，其中「军」的拼式只有前面两码，同样提示了这个词。</p>
+<p> <img src="/images/Snipaste_2021-11-28_16-43-47.png" alt="Snipaste_2021-11-28_16-43-47"></p>
+<p>但是，对于搜狗拼音来说，前缀模糊在多数情况下是不管用的，输入jusj后，不能提示「军事家」。</p>
+<p> <img src="/images/Snipaste_2021-11-28_17-03-25.png" alt="Snipaste_2021-11-28_17-03-25"></p>
+<p>只有在输入完整的拼式jun后，才会提示「军事家」，如下所示。</p>
+<p> <img src="/images/Snipaste_2021-11-28_17-04-25.png" alt="Snipaste_2021-11-28_17-04-25"></p>
+<h4 id="2-3-4-隔音问题"><a href="#2-3-4-隔音问题" class="headerlink" title="2.3.4 隔音问题"></a>2.3.4 隔音问题</h4><p>声笔拼音的音节界线是完全确定、毫不含糊的，零声母必须用v来表示，不会产生音节混淆的问题，因此也就用不着使用隔音符。</p>
+<p>比如，声笔拼音输入「公安局」，用简拼为gvj，清晰明了。</p>
+<p><img src="/images/Snipaste_2021-11-28_17-12-01.png" alt="Snipaste_2021-11-28_17-12-01"></p>
+<p>然而，在百度拼音中，是无法用简拼gaj来输入「公安局」的。</p>
+<p><img src="/images/Snipaste_2021-11-28_17-11-18.png" alt="Snipaste_2021-11-28_17-11-18"></p>
+<p>必须在a之前手动地加入隔音符’，而且「安」字的拼式要输入完整，才能提示「公安局」一词。</p>
+<p><img src="/images/image-20211204074051291.png" alt="image-20211204074051291"></p>
+<h4 id="2-3-5-定位修改"><a href="#2-3-5-定位修改" class="headerlink" title="2.3.5 定位修改"></a>2.3.5 定位修改</h4><p>对于三字词来说，定位修改除了用于出错时而外，还常常用于你预估系统中没有你将要输入的三字词时。这时，最好是三个字都用全拼。比如，假设你知道系统中没有「三字词」，你就可以先使用这三个字的全拼。</p>
+<p><img src="/images/Snipaste_2021-11-28_16-11-23.png" alt="Snipaste_2021-11-28_16-11-23"></p>
+<p>由于系统确实没有你要的词组，于是按2定位到「支持」之前。</p>
+<p><img src="/images/Snipaste_2021-11-28_16-19-24.png" alt="Snipaste_2021-11-28_16-19-24"></p>
+<p>按7选择「三」字上屏后，光标回到末字后面。</p>
+<p><img src="/images/Snipaste_2021-11-28_16-20-43.png" alt="Snipaste_2021-11-28_16-20-43"></p>
+<p>再追加末字的首笔，首选项即变成了「字词」，于是用空格上屏就完成了新词的输入。</p>
+<p><img src="/images/Snipaste_2021-11-28_16-21-53.png" alt="Snipaste_2021-11-28_16-21-53"></p>
+<h3 id="2-4-多字词的输入"><a href="#2-4-多字词的输入" class="headerlink" title="2.4 多字词的输入"></a>2.4 多字词的输入</h3><h4 id="2-4-1-重码问题"><a href="#2-4-1-重码问题" class="headerlink" title="2.4.1 重码问题"></a>2.4.1 重码问题</h4><p>对于四及以上字构成的多字词而言，如果采用全拼，那么编码信息比三字词更加丰富，几乎没有重码问题。但是，码长太长而导致的效率低下问题则突显了出来。</p>
+<p>例如，输入「风光无限」，若使用全拼，肯定是没有重码的，但是即使用声笔拼音也需要11码之多，效率堪忧。</p>
+<p><img src="/images/image-20211204081307898.png" alt="image-20211204081307898"></p>
+<p> 所以，这时要考虑要更紧凑的输入格式来提高输入效率才行。</p>
+<h4 id="2-4-2-输入格式"><a href="#2-4-2-输入格式" class="headerlink" title="2.4.2 输入格式"></a>2.4.2 输入格式</h4><p>在输入已知的多字词时，应首先考虑用简拼格式来进行输入。同样是输入「风光无限」一词，使用简拼的话，四码就够了。</p>
+<p><img src="/images/image-20211204081910993.png" alt="image-20211204081910993"></p>
+<h4 id="2-4-3-模糊问题"><a href="#2-4-3-模糊问题" class="headerlink" title="2.4.3 模糊问题"></a>2.4.3 模糊问题</h4><p>对于多字词来说，采用前缀模糊来输入的意义不大，用键仍然过多，对增加确定性的作用也不大。</p>
+<p><img src="/images/image-20211204083554148.png" alt="image-20211204083554148"></p>
+<h4 id="2-4-4-隔音问题"><a href="#2-4-4-隔音问题" class="headerlink" title="2.4.4 隔音问题"></a>2.4.4 隔音问题</h4><p>由于多字词一般采用简拼来输入，声笔拼音拼式的明确性体现的优势就特别明显。</p>
+<p>例如，「斗志昂扬」一词，用声笔拼音的简拼是没有歧义的。</p>
+<p><img src="/images/image-20211204084127418.png" alt="image-20211204084127418"></p>
+<p>而使用百度拼音时，则成了下面这样了。只能通过在a之前加隔音符来解决，但是有时候会忘记加隔音符，回改起来很麻烦。</p>
+<p><img src="/images/image-20211204084243800.png" alt="image-20211204084243800"></p>
+<h4 id="2-4-5-定位修改"><a href="#2-4-5-定位修改" class="headerlink" title="2.4.5 定位修改"></a>2.4.5 定位修改</h4><p>在输入新的多字词时，经常会用到定位修改。这时一般先用全拼输入，如果转换不正确，再进行修改。</p>
+<p>例如，首次输入「声笔拼音」时，按照全拼试输，发现末字只输入y就行了。</p>
+<p><img src="/images/image-20211204084958632.png" alt="image-20211204084958632"></p>
+<p>用2定位在首字之后，用8将可以选择「声」上屏。</p>
+<p><img src="/images/image-20211204085032965.png" alt="image-20211204085032965"></p>
+<p>光标回到编码的末尾。</p>
+<p><img src="/images/image-20211204085115409.png" alt="image-20211204085115409"></p>
+<p>再用2定位到第一个未转换的音节之后，补充「笔」字的首笔u（撇）。</p>
+<p><img src="/images/image-20211204085235153.png" alt="image-20211204085235153"></p>
+<p>用空格上屏「笔」字后，「声笔拼音」一词就确定了，再次可用空格整体上屏。</p>
+<p><img src="/images/image-20211204085303500.png" alt="image-20211204085303500"></p>
+<h3 id="2-5-语句的输入"><a href="#2-5-语句的输入" class="headerlink" title="2.5 语句的输入"></a>2.5 语句的输入</h3><p>现代拼音输入法设计的初衷就是希望能以语句为单位进行输入，所以又称为整句输入法。虽然现在有大数据的支撑和人工智能的助力，在效果上有确实也很大的进步，但是真正的整句输入仍然面临巨大的问题，以至于绝大多数人还是以字词为单位在使用整句输入法。为什么会如此呢？究其原因，有以下几个方面。</p>
+<p>(1) 编码效率低</p>
+<p>拼音作为编码来说，编码效率太低，导致平均码长过长，超过了三码。汉语拼音的设计初衷是用于注音识读，所以遵循了音素化和国际化的原则。在这些原则的指导下，由于普通话自身的特点，使得拼音字母的利用效率很低，存在大量冗余。从编码的角度来说，用 26 个字母表达 400 个音节，每个音节只需要不到 2 个字母，因为 26×26=676，可用的编码空间远远大于 400，而汉语拼音却用了超过 3 个字母，所以效率会低。</p>
+<p>(2) 确认成本高</p>
+<p>整句的转换结果在输入的过程中可能会不断地发生变化，所以不到输入结束是不能判断其正误的，能够判断正误的只有输入的拼音串，拼音串不会发生变化。然而拼音并不是文字，人们对它的识读能力是很弱的，最多只能快速找出刚才输入的一两个音节的错误。因此，在输入过程中，最多只能做到输入的拼音串尽量不要出错。在一句话输入完成后，用户不通读一遍转换结果，是无法知道对错的，即使结果完全正确，这一步都是少不了的，而且句子越长判别正误的成本越高。</p>
+<p>(3) 回改成本高</p>
+<p>如果在上屏前确认时发现了错误，就需要进行回改。错误可能发生在一句话的任何位置，可能是转换结果有错，也可能是输入的拼音串有错。发现错误的位置后，需要先定位才能修改，其定位方法一般是用左箭头键逐个音节向前移动，用右箭头键逐个字母向后移动。箭头键的位置远离本位键，操作跨度大，缓慢、费时。还有一个少用的方法是用 Ctrl 加字母键来定位，其特点是用键次数少，但是操作难度大。</p>
+<p>(4) 残错概率大</p>
+<p>不少人习惯于在输入过程中监视转换结果，在输入最后一个字词时就不再观察转换结果，然而可能会正是这最后一个字词又导致前面已有的结果发生变化，导致错误。这种错误，用户往往不容易发现，使得残错率升高，因为他不自觉地会认为，前面是正确的，最后一个选择也正确的话，就不会有错了。另一种情况是，明明知道还有错误，但是因为觉得修改太麻烦了，就不愿意修改而直接上屏了；这在打字比赛之类的紧急场合和聊天之类的不严肃场合是很常见的。</p>
+<p>声笔拼音通过巧妙的编码设计，对拼音进行了大幅度的压缩，同时可以利用快速的数字定位修改来降低回改的成本，但是仍然不能彻底解决以语句为单位进行输入时面临的严重挑战。</p>
+<p><img src="/images/image-20211204093807608.png" alt="image-20211204093807608"> </p>
+<p><img src="/images/image-20211204093425449.png" alt="image-20211204093425449"></p>
+<p>同样是输入「中国文化真是博大精深」，声笔拼音比搜狗拼音节约了一些用键，但是码长太长导致的效率低下问题仍然存在。相比下面的以词为单位的输入，使用了太多的按键。</p>
+<p><img src="/images/image-20211204094429082.png" alt="image-20211204094429082"></p>
+<p><img src="/images/image-20211204094450587.png" alt="image-20211204094450587"></p>
+<p><img src="/images/image-20211204094505228.png" alt="image-20211204094505228"></p>
+<p>既然拼音输入以字词为单位效率更高，而且也是绝大多数人采用的方式，那么是否有更好的方式来提高字词的输入效率呢？答案是肯定的，声笔顶拼就是这样一种比较完美的解决方案。</p>
+<h2 id="2-声笔顶拼"><a href="#2-声笔顶拼" class="headerlink" title="2 声笔顶拼"></a>2 声笔顶拼</h2><p>声笔顶拼的目的是在声笔拼音的基础上进一步提高拼音输入的效率。它充分利用了声笔简码的研究成果，采用了与之相同的编码模式，首创了拼音的字词输入顶功方案，取得了非常好的输入效果，使得全拼用户也能享受到高效的输入方法。</p>
+<h3 id="2-1-单字的输入-1"><a href="#2-1-单字的输入-1" class="headerlink" title="2.1 单字的输入"></a>2.1 单字的输入</h3><p>在声笔顶拼中，少数高频字的输入码是固定的，而其它字的输入码是动态变化的；前者称为静态字，而后者称为动态字。</p>
+<h4 id="2-1-1-静态字"><a href="#2-1-1-静态字" class="headerlink" title="2.1.1 静态字"></a>2.1.1 静态字</h4><p>声笔顶拼的静态字有一码的，也有两码的；前者叫做一简字，后者叫做二简字。</p>
+<p>一简字有21个，只使用单字6位完全编码的第一码，它们是：<code>b不 p平 m没 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而</code>。一简字一般需要用空格上屏，但是在后接非编码字符时，仍然可以顶屏而省略空格。比如，输入「了。」时，可以用l.而非<code>l_.</code>，其中<code>_</code>表示空格。</p>
+<p>二简字有98个，只使用单字6位完全编码的前两码，例如：<code>je接 ma马 gu国 ya要 we为 co从 di地</code>等等。注意，je的常规拼音是jie，必须省略中间的i；而<code>gu ya co</code>都只取了拼音的前缀。在后接其它字词即后接声母的时候，二简字可以被顶上屏幕，从而省略空格。</p>
+<p>比如，用单字输入「中国人」时的用键为<code>zogur_</code>，只有后面的一简字「人」需要空格上屏。这种连续的输入方式，表面上类似拼音的整句输入，实质上却有重大区别，因为这里的连续输入是完全确定的，可以不需要人机交互，而整句输入的转换结果可能发生变化，需要监视其正确性。</p>
+<p>另外，利用前两位编码的7个空位安排了7个高频的二字词，它们是：<code>vu安全 vi按照 fi否则 gi工业 hi和尚 ki开口 wi文明</code>，也只需要两键就可以输入，要尽量加以使用。为了避免死记，在输入首码的时候，对它们进行了提示，如下所示。</p>
+<p><img src="/images/image-20211204142349946.png" alt="image-20211204142349946"></p>
+<p>以上126个静态字词，在使用一段时间后就很容易记住而形成条件反射，可以实现盲打，从而有利于提高打字速度。  </p>
+<h4 id="2-1-2-动态字"><a href="#2-1-2-动态字" class="headerlink" title="2.1.2 动态字"></a>2.1.2 动态字</h4><p>在声笔顶拼中，除了119个静态字外，其它字都是动态字。动态字的输入码是可变的，能动态适应输入者的使用习惯，这和一般的拼音输入法类似。但是，声笔顶拼的单字编码可以直接追加笔画，并且最大码长被规范为6码，从而更加灵活、高效。</p>
+<p>现在，以「态」字的输入过程为例来说明动态字的输入详情，如下图所示。在输入1、2、3码时，候选项都不是所需的「态」字。声笔顶拼只有一个候选项，而且前两码对应的都是静态字，熟练以后是完全能够记住的，所以只有在第三码的时候才需要观察那个唯一的候选项是不是命中了。如果命中了，则继续输入后面的字词，该字就会被自动顶上屏幕，无需使用空格上屏。</p>
+<p><img src="/images/image-20211205074028183.png" alt="image-20211205074028183"></p>
+<p><img src="/images/image-20211205074228757.png" alt="image-20211205074228757"></p>
+<p><img src="/images/image-20211205073829020.png" alt="image-20211205073829020"></p>
+<p>反观整句拼音输入法，包括声笔拼音，会列出同音字供用户用数字选择，即使是首选项也是需要用空格或者数字来上屏的。比如，使用搜狗拼音时，输入前三码的情况如下。每输入一码都有5个候选项可以选择。输入三码后，「态」字并没有出现。</p>
+<p><img src="/images/image-20211205075537151.png" alt="image-20211205075537151"></p>
+<p><img src="/images/image-20211205081725508.png" alt="image-20211205081725508"></p>
+<p><img src="/images/image-20211205081806418.png" alt="image-20211205081806418"></p>
+<p>这时，「态」的拼音已经输完。怎么办呢？重大的区别出现了！对于搜狗拼音来说，一般就是采用翻页查找的方式。而对于声笔拼音来说，则是补充「态」字的首笔横（e）。</p>
+<p><img src="/images/image-20211205083745187.png" alt="image-20211205083745187"></p>
+<p><img src="/images/image-20211205073915968.png" alt="image-20211205073915968"></p>
+<p>现在，不管是搜狗拼音还是声笔顶拼，「态」字都出现在了候选项中。如何进行选择呢？另一个重大的区别出现了！对于搜狗拼音来说，重码用数字键来选择，并且选择后立刻就上屏了。对于声笔顶拼来说，重码不用数字而用aeuio来选择，这时它们不再代表笔画，而仅仅是作为无理的选择键，但是比数字键操作更方便。同时，由于数字也没有参与编码，所以在输入数字的时候还可以顶屏，将首选字词顶上屏幕，从而节约按键。</p>
+<p>另外，在输入四码后用aeuio选择重码的时候，不会立刻上屏，要等待后续字词来顶。这样做的好处是可以支持另一个声笔的重要技术手段——扩展编码，以便快速过滤重码，否则重码多的时候需要进行多次翻页查找，人机交互过多，效率很低。</p>
+<h3 id="2-2-二字词的输入-1"><a href="#2-2-二字词的输入-1" class="headerlink" title="2.2 二字词的输入"></a>2.2 二字词的输入</h3><h3 id="2-3-三字词的输入-1"><a href="#2-3-三字词的输入-1" class="headerlink" title="2.3 三字词的输入"></a>2.3 三字词的输入</h3><h3 id="2-4-多字词的输入-1"><a href="#2-4-多字词的输入-1" class="headerlink" title="2.4 多字词的输入"></a>2.4 多字词的输入</h3><h3 id="2-5-可选项的设置"><a href="#2-5-可选项的设置" class="headerlink" title="2.5 可选项的设置"></a>2.5 可选项的设置</h3><p>(1) 精简拼式</p>
 <p>为了支持顶功和缩短码长，在声笔顶拼中，拼音形式的所有简化都是强制性的，这与整句模式的声笔拼音是不一样的，后者只有零声母的表示和翘舌音的简化是必须的。而且更重要的是，各种类型的字词都必须遵循固定的编码格式，以强制用户使用最高效的输入方式，避免用户养成不良的输入习惯。</p>
 <p>a. 单字的编码是拼音加笔画，最长6码。例如，「汉」为han，「字」为zioo，前者无须加笔画，后者加了前两笔。</p>
 <p><img src="/images/sbpylizi5.png" alt="声笔拼音例子5"></p>
@@ -778,9 +1117,6 @@ var _hmt = _hmt || [];
 <p>b. 词组的删除</p>
 <p>顶拼能够将用户几乎不使用的新造词组自动清除。对于少量暂时还未被清理的废词，用户不必理会，到时限后就会被自动删除。在必要的时候，如用户错误地确认了临时词组，系统也提供了手动删除的手段，方法是先将光标移动到该词上面，再按 Control + Delete 键来删除。注意，如果是非临时词组，需要删除两次才能删除。第一次删除时只是把它变成了临时词组。在安卓手机上的删除方法是，用左右滑动空格定位词组，再用删词键来删除。</p>
 <p>(6) 简码固定</p>
-<p>在码长短的时候采用静态编码，易于让常见字词的输入形成条件反射。声笔顶拼的一、二简字和二简词都是固定不变的。</p>
-<p>一简单字有21个：<code>b不 p平 m没 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而</code>，一般需要用空格上屏。一简单字在声笔系列码的所有输入法中都是一模一样的。</p>
-<p>二简单字有98个，其常用程度仅次于一简单字，一般可被顶上屏幕而节约空格。二简单字的例子有<code>ku快 re任 fu夫 te特 xa小 je接</code>等。值得注意的是，二简单字的拼音并不一定是完整的，这样有利于缩短码长。在上述例子中，<code>快</code>的输入码是<code>ku</code>而不是<code>kuai</code>，<code>任</code>的输入码是<code>re</code>而不是<code>ren</code>。用户在开始使用声笔顶拼的时候，遇到这类字常常会打过头，需要注意观察提示行。</p>
 <p>声笔顶拼的二简词有441个，都是二字词，如：<code>bb并不 pj平静 mn美女 fx发现</code>等，一般需要空格上屏。</p>
 
         
@@ -1138,7 +1474,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-引言"><span class="nav-text">1 引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-适用人群"><span class="nav-text">1.1 适用人群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2 比较优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-注意事项"><span class="nav-text">1.3 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-单字"><span class="nav-text">2 单字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-编码元素"><span class="nav-text">2.1 编码元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码方法"><span class="nav-text">2.2 编码方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-输入方法"><span class="nav-text">2.3 输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-反查方法"><span class="nav-text">2.4 反查方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、词组"><span class="nav-text">三、词组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-编码方法"><span class="nav-text">1. 编码方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-输入方法"><span class="nav-text">2. 输入方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-自动管理"><span class="nav-text">3. 自动管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-词组练习"><span class="nav-text">4. 词组练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、设置"><span class="nav-text">四、设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、整句"><span class="nav-text">五、整句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、声笔顶拼"><span class="nav-text">二、声笔顶拼</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-预备知识"><span class="nav-text">1 预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-编码元素"><span class="nav-text">1.1 编码元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-编码方法"><span class="nav-text">1.2 编码方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-反查方法"><span class="nav-text">1.3 反查方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-助记方法"><span class="nav-text">1.4 助记方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-输入方法"><span class="nav-text">1.5 输入方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#预备知识习题："><span class="nav-text">预备知识习题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-声笔拼音"><span class="nav-text">2 声笔拼音</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-单字的输入"><span class="nav-text">2.1 单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-重码问题"><span class="nav-text">2.1.1 重码问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-码长问题"><span class="nav-text">2.1.2 码长问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-固顶问题"><span class="nav-text">2.1.3 固顶问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-模糊问题"><span class="nav-text">2.1.4 模糊问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-二字词的输入"><span class="nav-text">2.2 二字词的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-重码问题"><span class="nav-text">2.2.1 重码问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-输入格式"><span class="nav-text">2.2.2 输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-模糊问题"><span class="nav-text">2.2.3 模糊问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-隔音问题"><span class="nav-text">2.2.4 隔音问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-定位修改"><span class="nav-text">2.2.5 定位修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-三字词的输入"><span class="nav-text">2.3 三字词的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-重码问题"><span class="nav-text">2.3.1 重码问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-输入格式"><span class="nav-text">2.3.2 输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-模糊问题"><span class="nav-text">2.3.3 模糊问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-隔音问题"><span class="nav-text">2.3.4 隔音问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-定位修改"><span class="nav-text">2.3.5 定位修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-多字词的输入"><span class="nav-text">2.4 多字词的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-重码问题"><span class="nav-text">2.4.1 重码问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2-输入格式"><span class="nav-text">2.4.2 输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3-模糊问题"><span class="nav-text">2.4.3 模糊问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-4-隔音问题"><span class="nav-text">2.4.4 隔音问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-5-定位修改"><span class="nav-text">2.4.5 定位修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-语句的输入"><span class="nav-text">2.5 语句的输入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-声笔顶拼"><span class="nav-text">2 声笔顶拼</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-单字的输入-1"><span class="nav-text">2.1 单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-静态字"><span class="nav-text">2.1.1 静态字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-动态字"><span class="nav-text">2.1.2 动态字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-二字词的输入-1"><span class="nav-text">2.2 二字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-三字词的输入-1"><span class="nav-text">2.3 三字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-多字词的输入-1"><span class="nav-text">2.4 多字词的输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-可选项的设置"><span class="nav-text">2.5 可选项的设置</span></a></li></ol></li></ol></div>
             
 
           </div>
