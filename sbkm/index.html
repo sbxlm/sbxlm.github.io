@@ -143,7 +143,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkz2.gif">
-<meta property="og:updated_time" content="2021-12-11T00:35:33.243Z">
+<meta property="og:updated_time" content="2021-12-13T13:23:34.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔快码">
 <meta name="twitter:description" content="1 概述声笔快码，简称快码，是一款类双拼输入法，它采用了一种特殊的双拼加笔画编码，同时又融合的105个高频声笔字，通过顶功实现了比一般双拼类音形码高的效率。快码的历史可以追溯到2004年，与声笔码（现已演化为声笔简码）同时产生，当时称为音笔码。在2005年声笔飞码出现后，就同声笔飞码一同演进，采用与其相同的编码模式，直至今日。在快码的基础上，还衍生出了主单的快速和快讯以及整句型的快整几个输入方案。">
@@ -772,6 +772,7 @@ var _hmt = _hmt || [];
 <p>快讯多字词的编码格式为<code>s1s2s3b0b0</code>，其中的0表示末字，例如：<code>呼风唤雨hfhei 风雨同舟fytuu 生龙活虎slhie</code>等。考虑到有的成语用字比较生僻，快讯也支持第四码用声母，但是得用大写来输入，例如：<code>呼风唤雨hfhY 风雨同舟fytZ 生龙活虎slhH</code>等。</p>
 <p>如果用户习惯一直用第四码大写来输入多字词，那么就可以将快讯schema文件中Translator下的enable_filtering选项设置为true，以过滤掉<code>sssbb</code>上的多字词，以减少重码，如下图所示。</p>
 <p><img src="/images/SbfxFilter.png" alt="声笔快讯Filter"></p>
+<p>在简词方面，快讯的标点简词与快码是完全一样的。</p>
 <p>另外，快讯的词组也是支持扩展编码的，在重码多的时候，可以追加首字的前两笔来快速区分重码，但是多字词第四码用大写输入时不能使用扩展编码。</p>
 <p>还有，在快讯延迟顶的位置，是无法使用sbb词典中的字词的，因为后三码被当作五码词组的一部分了，sbb字词只有处于编码的开始位置才是有效的。</p>
 <p>如果用户不喜欢延迟顶，而且希望随时能使用sbb字词，可以切换到单字状态，或者设置为单字状态，切换和设置方法与快码相同。但是，这样的话就不能使用常规的五码词组了。</p>
