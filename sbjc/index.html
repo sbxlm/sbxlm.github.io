@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2021-12-11T00:50:23.309Z">
+<meta property="og:updated_time" content="2021-12-17T23:03:19.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声母和用aeuio表示五个笔画，是声笔系列码迈向顶功关键一步。声笔系列码中的所有输入法都体现了对声母和笔画的灵活、巧妙运用。实际上，声笔系列码的图标就是在说明零声母与笔画的表示方法，如下所示。  图上倒三角的下面两边就是V的形状，蕴涵了零声母之意。之所以标注的是大写字母，是因为其形状可以用来帮助记忆笔画：A去掉中间的短横后形状像折，所以表示">
@@ -1044,17 +1044,13 @@ var _hmt = _hmt || [];
 <p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间，必须是以制表符TAB分隔，不能是空格，否则使自定义词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。</p>
 <h3 id="9-2-其它可定制的词典"><a href="#9-2-其它可定制的词典" class="headerlink" title="9.2 其它可定制的词典"></a>9.2 其它可定制的词典</h3><p>除了u引导的自定义词典外，其它可定制词典都是无需引导的，以下罗列出它们，说明其适用的子系列或者方案。具体的用法，会在相应的方案里详细论述。</p>
 <ul>
-<li>fmsbb和kmsbb: 飞码系和快码系使用的sbb词典，包含一些重码字和四码字的缩减形式</li>
 <li>sf: 声母标点简词，共用于除声笔拼音和声笔简码以外的所有方案</li>
 <li>sbf: 声笔标点简词，共用于飞码系和快码系</li>
 <li>spf: 声偏标点简词，适用于飞码系</li>
 <li>syf: 声韵标点简词，适用于快码系</li>
-<li>spsf: 声偏声标点简词，特用于飞讯和飞讯2</li>
-<li>sysf: 声韵标点简词，特用于快讯</li>
-<li>sbfx2: 飞讯2的主词典，可用户定制</li>
 <li>shf: 声韵标点简词，适用于声笔小鹤和声笔鹤速</li>
 <li>szf: 声韵标点简词，适用于声笔自然和声笔自速</li>
-<li>sbfd: 声笔飞单——可定制的纯单字飞码方案</li>
+<li>sbfd: 声笔飞单，是可定制的单字飞码方案，内含sbb字</li>
 </ul>
 <h2 id="10-LUA脚本"><a href="#10-LUA脚本" class="headerlink" title="10 LUA脚本"></a>10 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。注意，如果有多个选项，o引导的LUA脚本输入选项是不能用<code>aeuio</code>来选择的，在电脑上可以用箭头移动光标来选择，在手机上可以滑动空格键来选择，然后用空格上屏。</p>
 <h2 id="11-设置选项"><a href="#11-设置选项" class="headerlink" title="11 设置选项"></a>11 设置选项</h2><p>(1) 停止调频与造词</p>
