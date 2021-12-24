@@ -269,8 +269,10 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211219124006226.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211219124122713.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Animation2021-12-19130856.gif">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211219174124193.png">
-<meta property="og:updated_time" content="2021-12-20T00:56:27.723Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/SbdpFilter.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-12-22_13-23-46.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/Snipaste_2021-12-22_13-19-46.png">
+<meta property="og:updated_time" content="2021-12-22T05:34:45.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
 <meta name="twitter:description" content="声笔拼音是一种非常「奇特」的拼音输入法，它完全颠覆了人们对拼音输入法的认识，平均码长被腰斩，重码大幅度减少，翻页键很少用得着，输入效率大大提升。 通常，为了在使用拼音的情况下提升输入效率，人们首先想到的可能就是采用双拼。但是，双拼的门槛还是不低，需要记住30来个韵母、3个翘舌声母和零声母的表示形式，而且仍然不能解决重码多的问题。 声笔拼音另辟蹊径，以全拼为基础，进行适当的变形，只需花费比双拼小得多">
@@ -1185,9 +1187,11 @@ var _hmt = _hmt || [];
 <p>为了避免自动造词产生太多的废词，系统默认将造词长度限制为不超过5，用户可以通过修方案的Schema来调整该阈值。</p>
 <h3 id="2-5-设置选项"><a href="#2-5-设置选项" class="headerlink" title="2.5 设置选项"></a>2.5 设置选项</h3><p>(1) 词组过滤</p>
 <p>在默认情况下，多字词有只能按<code>s1s2s3s0</code>格式输入，在输入<code>s1s2s3</code>时是不会搜索多字词的。如果希望在输入<code>s1s2s3</code>时，同时也搜索多字词，那么就可以将Translator下的enable_filtering选项设置由下图中的true改为false。这样，用户常用的多字词也可只用三码就打出来。</p>
-<p><img src="/images/image-20211219174124193.png" alt="image-20211219174124193"></p>
-<p>(2) 小写模式</p>
-<p>在默认情况下，多字词的第四码用小写字母来输入，与传统习惯一致。这时，只有三码的词是需要加空格上屏的，在这类词比较多的情况下对输入效率有所影响。这时，如果希望节约这类词的空格键，那么可以将lower_case选项设置为false。不过，这样的话，多字词的第四码就需要用大写字母来输入了。如果用户能够熟练地操作大写字母，在这种模式下可能会提高输入效率。注意，需要同时交换下图中的注释项，即将#号换到上面一行，词的三码起顶屏才会生效。</p>
+<p><img src="/images/SbdpFilter.png" alt="SbdpFilter]"></p>
+<p>(2) 三顶状态</p>
+<p>在默认情况下，多字词的第四码用小写字母来输入，与传统习惯一致。这时，只有三码的词是需要加空格上屏的，在这类词比较多的情况下对输入效率有所影响。这时，如果希望节约这类词的空格键，那么临时切换为三顶状态，或者将third_pop项的默认值reset设置为1。不过，这样的话，多字词的第四码就需要用大写字母来输入了。如果用户能够熟练地操作大写字母，在这种模式下可能会提高输入效率。</p>
+<p><img src="/images/Snipaste_2021-12-22_13-23-46.png" alt="Snipaste_2021-12-22_13-23-46]"></p>
+<p><img src="/images/Snipaste_2021-12-22_13-19-46.png" alt="Snipaste_2021-12-22_13-19-46]"></p>
 <h2 id="附录：声笔顶拼的编码格式"><a href="#附录：声笔顶拼的编码格式" class="headerlink" title="附录：声笔顶拼的编码格式"></a>附录：声笔顶拼的编码格式</h2><p>为了便于用户总结和记忆声笔顶拼的基本内容，现将在默认设置时的字词编码格式以浓缩的表达式方式总结如下。</p>
 <ul>
 <li>单字：<code>sy..(bb)</code>，即声母加韵母再加笔画，最长6码。</li>
