@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZiziuu.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbzz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbzz2.gif">
-<meta property="og:updated_time" content="2021-12-18T04:21:32.623Z">
+<meta property="og:updated_time" content="2021-12-25T01:12:40.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔自然">
 <meta name="twitter:description" content="1 概述自然码是中文输入历史上影响最大的双拼音形输入法，不少后来的双拼都或多或少地受到它的影响。但是，由于需要同时掌握双音和双形，学习难度还是相当大的。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让自然码用户也享受顶功技术带来的红利。声笔自然就是对自然码的顶功改造，并且取得了非常好的效果。 对于自然码用户来说">
@@ -702,8 +702,8 @@ var _hmt = _hmt || [];
 <p>当一个字有多种不同的读音且声母不同时，则可以用多种方法输入该字。例如，「盛」对应的拼音有<code>cheng</code>和<code>sheng</code>，对应了c和s两个不同的声母，因而它在声笔自然中也会有两个编码，分别是<code>cgeu</code>和<code>sgeu</code>。</p>
 <p>对于非成字偏旁部首，一般取其名称首字的声母作为它的声母进行编码。例如，「亻」的名称为单人旁，取「单」字的声母d作为「亻」的声母，可以用<code>djui</code>输入「亻」。不知道非成字偏旁部首的名称也没有关系，因始终可以用纯笔画的方式输入。比如，「亻」可以用<code>uiiii</code>输入。</p>
 <p>另外，声笔自然利用了单字的空码位安排了一些词组，分为声笔词、声声词、声声笔词。声笔词只有21个，如<code>人民ra 发现fe 今天je 情况qo 现在xe</code>，它们的编码方式是首字的声母+次字的首笔，在后接声母时可以被顶上屏幕，因此一般只需要两键。声声词有166个，如<code>出现cx_ 完全wq_ 认为rw_ 结果jg_ 什么sm_</code>，它们的编码方式是首字的声母+次字的声母，在后接声母时无法被顶上屏幕，因此一般需要空格上屏。声声笔词有928个，如<code>播放器bfi 分数线fsa 打电话ddo 更年期gne</code>，它们的编码方式是首字的声母+次字的声母+第三字的首笔，在后接声母时可以被顶上屏幕，因此一般只需要三键。为了减轻记忆负担，在输入第一码后，会提示出声笔词和声声词；在输入前两码后，会提示出声声笔词，如下图所示。</p>
-<p><img src="/images/sbzrjc.png" alt="声笔自然简词"></p>
-<p>再有，声笔自然三码词组码位上设置了许多非强制的简码词，它们虽然一般需要空格上屏，用键数是一样的，但是当它与其它常见词组重码的时候，可以用来离散重码，避免选重，例如：<code>实施sis 事实sisi</code>和<code>制作ziz 执着zizo</code>等等。</p>
+<p><img src="/images/sbzrjc.png" alt="声笔自然三简"></p>
+<p>再有，声笔自然三简码位上设置了二简字词和一简字的组合，大部分都不是真正的词，例如：<code>给是gws 时是sis 反应就fyj 谁是sws</code>等等，掌握规律后是能够充分使用的。正常的词组则以一律采用四码。这种安排比在三简码位上放置正常词组的简码更好，能够更有效地利用编码空间，确定性也更高。</p>
 <h2 id="4-编码反查"><a href="#4-编码反查" class="headerlink" title="4 编码反查"></a>4 编码反查</h2><p>在学习声笔自然之初，往往会遇到不会打的字。怎么办呢？系统提供了用笔画或拼音来反查编码的手段。在完全不知道读音的时候直接用<code>aeuio</code>按顺序输入笔画进行反查，在不知道笔画时用a引导拼音反查（注意零声母要用v）。</p>
 <p>以下是几个反查的例子。左边是笔画反查的例子，右边是拼音反查的例子。在笔画反查的例子中，直接输入uuao后，出现了以这四个笔画开头的字；第一项是<code>反fj</code>，表示「反」字的编码为fj；第二项为<code>般bju bo pjuu</code>，说明「般」是个多音字，有三个编码。在拼音反查的例子中，是用字母a引导的，所以实际的输入为afang和avan，只是没有显示引导字母而已，其中an前还加了v，因为an是零声母音。</p>
 <p><img src="/images/sbzrfc.png" alt="声笔自然反查"></p>
