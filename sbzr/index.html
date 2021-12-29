@@ -138,9 +138,12 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbzrYiyh.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZizi.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZiziuu.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226155600441.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226121515468.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226154907799.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbzz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbzz2.gif">
-<meta property="og:updated_time" content="2021-12-21T07:44:48.147Z">
+<meta property="og:updated_time" content="2021-12-27T00:48:57.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔自然">
 <meta name="twitter:description" content="1 概述自然码是中文输入历史上影响最大的双拼音形输入法，不少后来的双拼都或多或少地受到它的影响。但是，由于需要同时掌握双音和双形，学习难度还是相当大的。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让自然码用户也享受顶功技术带来的红利。声笔自然就是对自然码的顶功改造，并且取得了非常好的效果。 对于自然码用户来说">
@@ -740,20 +743,29 @@ var _hmt = _hmt || [];
 <h3 id="10-1-自动造词"><a href="#10-1-自动造词" class="headerlink" title="10.1 自动造词"></a>10.1 自动造词</h3><p>声笔自然的造词是在输入过程中自动进行的。例如：输入<code>声sge 笔biu</code>后，下次输入<code>sgbi</code>时就会有该词了，只是如果有重码的话，新造的词会排在后面。如果重码太多，可以追加首字前两笔或者用Tab一次性地跳到最后，以避免多次翻页。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。</p>
 <p>需要注意的是，在进行枚举自动造词的时候，是以编码对应的字、词为单位来进行组合的，并不是以单字为单位的。例如，在输入<code>声笔sgbi 系列xilx 码mae</code>后，生成的词组为「声笔系列码」「声笔系列」「系列码」，而不会生成「声笔系」「笔系列」「列码」等。另外，如果之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
 <h3 id="10-2-词组删除"><a href="#10-2-词组删除" class="headerlink" title="10.2 词组删除"></a>10.2 词组删除</h3><p>对于不需要的词组，可以先将光标移动到该词上面，再按<code>Control + Delete</code>键来删除。注意，如果是非临时词组，需要删除两次才能彻底删除。第一次删除时只是把它变成了临时词组。在安卓手机上，声笔自然的删除方法是：用左右滑动空格定位词组，再用删词键来删除。</p>
-<h2 id="11-声笔自简"><a href="#11-声笔自简" class="headerlink" title="11 声笔自简"></a>11 声笔自简</h2><p>声笔自简是声笔自然的一个衍生方案，其单字的编码输入方法与声笔自然完全一样，区别在于词组的编码和输入。</p>
+<h2 id="11-标点简词"><a href="#11-标点简词" class="headerlink" title="11 标点简词"></a>11 标点简词</h2><p>为了缩短常用词组的码长，提高输入效率，特为声笔自然提供了一些备用的标点简词，只要将方案的Schema文件中如下图里的相关注释行打开，即去掉行首的#号，重新部署一下就可以使用了。</p>
+<p><img src="/images/image-20211226155600441.png" alt="image-20211226155600441"></p>
+<p>声笔自然可以使用的标点简词有两种，分别称为sf和szf简词，它们基本上都是高频或者常用的二字词。其中，f为表示笔画的标点符号<code>&#39;,/;.</code>，<code>/</code>像撇，<code>;</code>像竖，<code>.</code>就是点（捺），只有<code>,</code>代表横和<code>&#39;</code>代表折需要记一下。</p>
+<p>sf简词的编码方法为首字声母加末字首笔，它们都是高频二字词，在输入首码的时候会有提示。</p>
+<p><img src="/images/image-20211226121515468.png" alt="image-20211226121515468"></p>
+<p> szf简词的编码方法为首字声母和韵母加末字首笔，它们大都是常用二字词，在输入前两码的时候会有提示。</p>
+<p><img src="/images/image-20211226154907799.png" alt="image-20211226154907799"></p>
+<p>需要注意的是，标点简词对输入效率的提高也是有代价的。付出的代价是，用户得查看和记住要使用的简词才能取得应有的效果，同时表示笔画的这几个标点符号失去了顶一、二简字的能力。</p>
+<p>如果用户觉得系统提供的标点简词不理想，还可以对它们进行定制。定制的方法是，将相应的词典文件复制到用户文件夹中，对其进行所需的修改，重新部署一下就可以生效。在修改的时候，一定要按照词典的格式进行，首列为词条，第二列为编码，两者之间以制表符分隔。</p>
+<h2 id="12-声笔自简"><a href="#12-声笔自简" class="headerlink" title="12 声笔自简"></a>12 声笔自简</h2><p>声笔自简是声笔自然的一个衍生方案，其单字的编码输入方法与声笔自然完全一样，区别在于词组的编码和输入。</p>
 <p>自简二、三字词的编码在声笔自然的基础上将第四码改成了末字首笔。二字词的例子有<code>关系grxu 参加cjja 正确zgqe 模范mofe 答应dayo</code>。三字词的例子有<code>示范区sfqe 想不到xbde 处理器clqi 宪兵队xbda</code>。</p>
 <p>自简多字词的编码则是在声笔自然的基础上将第四码改成了大写。多字词的例子有<code>爱因斯坦vysT 有限公司yxgS 人民共和国rmgG 声东击西sdjX</code>。</p>
 <p>在输入的时候，自简从第三码起就开始检索词组了，经过一段时间的动态调频，用户经常使用的词组都能获得尽可能短的输入码。在默认词库的情况下，就有很多词组是只需要三码的，例如：<code>关系 参加 想不到 爱因斯坦 有限公司</code>。</p>
 <p>由于自简以词组输入为主，自简的动态平均码长比声笔自然更短，但是动态性更强，词组的确定性较差，因此适合词汇量不大且相对固定的应用场景。</p>
 <p>在简词方面，自简与声笔自然是完全一样的。另外，自简的词组也是支持扩展编码的，在重码多的时候，可以追加首字的前两笔来快速区分重码。</p>
-<h2 id="12-声笔自速"><a href="#12-声笔自速" class="headerlink" title="12 声笔自速"></a>12 声笔自速</h2><p>声笔自速是声笔自然的一个衍生方案，其特点是二顶单、四顶词，即：单字二码起顶，词组四码起顶。比起声笔自然的单字三码起顶，自速的单字码长更短，但是词组相对弱一些。</p>
+<h2 id="13-声笔自速"><a href="#13-声笔自速" class="headerlink" title="13 声笔自速"></a>13 声笔自速</h2><p>声笔自速是声笔自然的一个衍生方案，其特点是二顶单、四顶词，即：单字二码起顶，词组四码起顶。比起声笔自然的单字三码起顶，自速的单字码长更短，但是词组相对弱一些。</p>
 <p>自速的单字输入与声笔自然几乎完全一样，唯一的差别是输入两码字时，声笔自然一般需要空格上屏，而自速则可以省略空格。例如，输入「如」和「双」字时，声笔自然的用键为<code>ru_</code>和<code>sd_</code>，而自速的用键为<code>ru</code>和<code>sd</code>，不过上屏会延迟一码。</p>
 <p>自速的二、三字词编码方法和多字词的不同。</p>
 <p>二、三字词的编码在声笔自然的基础上将第四码改成了末字首笔，并用<code>&#39;,/;.</code>代替<code>aeuio</code>所代表的折横撇竖捺。<code>/</code>像撇，<code>;</code>像竖，<code>.</code>就是点（捺），只有<code>,</code>代表横和<code>&#39;</code>代表折需要记一下。二字词的例子有<code>关系grx／ 参加cjj&#39; 正确zgq, 模范mof, 答应day.</code>。三字词的例子有<code>示范区sfq, 想不到xbd, 处理器clq; 宪兵队xbd&#39;</code>。</p>
 <p>多字词的编码则是在声笔自然的基础上将第四码改成了大写。多字词的例子有<code>爱因斯坦vysT 有限公司yxgS 人民共和国rmgG 声东击西sdjX</code>。</p>
 <p>所以，自速的动态平均码长比声笔自然更短，但是操作难度更大，词组的动态性更强。</p>
 <p>在简词方面，自速的数选简词和三码标点简词与声笔自然是完全一样的。另外，自速的词组也是支持扩展编码的，在重码多的时候，可以追加首字的前两笔来自速区分重码。</p>
-<h2 id="13-声笔自整"><a href="#13-声笔自整" class="headerlink" title="13 声笔自整"></a>13 声笔自整</h2><p>声笔自整是声笔自然的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了。但是，它的缺点是，在输入发生错误后回改的成本高，离散程度高的文本尤其如此。所以，声笔自整仅适合录入简单的连续文本，或者供声笔自然的初学者使用，熟练的用户应当使用声笔自然。</p>
+<h2 id="14-声笔自整"><a href="#14-声笔自整" class="headerlink" title="14 声笔自整"></a>14 声笔自整</h2><p>声笔自整是声笔自然的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了。但是，它的缺点是，在输入发生错误后回改的成本高，离散程度高的文本尤其如此。所以，声笔自整仅适合录入简单的连续文本，或者供声笔自然的初学者使用，熟练的用户应当使用声笔自然。</p>
 <p>下面举例说明一下声笔自整的输入方法。</p>
 <p><strong>例1:</strong><code>我们大家都喜欢研究输入法</code></p>
 <p><img src="/images/sbzz1.png" alt="自整例子1"></p>
@@ -1152,7 +1164,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-编码反查"><span class="nav-text">4 编码反查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-连续顶屏"><span class="nav-text">5 连续顶屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-字词分流"><span class="nav-text">6 字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-字母选重"><span class="nav-text">7 字母选重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-扩展编码"><span class="nav-text">8 扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-动态码长"><span class="nav-text">9 动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-自动词组"><span class="nav-text">10 自动词组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-自动造词"><span class="nav-text">10.1 自动造词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-词组删除"><span class="nav-text">10.2 词组删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-声笔自简"><span class="nav-text">11 声笔自简</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-声笔自速"><span class="nav-text">12 声笔自速</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-声笔自整"><span class="nav-text">13 声笔自整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：声笔自然及其衍生方案的编码格式"><span class="nav-text">附录：声笔自然及其衍生方案的编码格式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-编码反查"><span class="nav-text">4 编码反查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-连续顶屏"><span class="nav-text">5 连续顶屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-字词分流"><span class="nav-text">6 字词分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-字母选重"><span class="nav-text">7 字母选重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-扩展编码"><span class="nav-text">8 扩展编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-动态码长"><span class="nav-text">9 动态码长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-自动词组"><span class="nav-text">10 自动词组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-自动造词"><span class="nav-text">10.1 自动造词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-词组删除"><span class="nav-text">10.2 词组删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-标点简词"><span class="nav-text">11 标点简词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-声笔自简"><span class="nav-text">12 声笔自简</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-声笔自速"><span class="nav-text">13 声笔自速</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-声笔自整"><span class="nav-text">14 声笔自整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：声笔自然及其衍生方案的编码格式"><span class="nav-text">附录：声笔自然及其衍生方案的编码格式</span></a></li></ol></div>
             
 
           </div>
