@@ -144,7 +144,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220115164658237.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbhz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbhz2.gif">
-<meta property="og:updated_time" content="2022-01-15T08:51:16.332Z">
+<meta property="og:updated_time" content="2022-01-15T10:49:38.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔小鹤">
 <meta name="twitter:description" content="1 概述小鹤音形是目前比较有人气、也比较优秀的双拼音形输入法，在打字比赛爱好者中很受欢迎。但是，由于需要同时掌握双音和双形，学习难度还是相当大的，而且只支持不到一万字的汉字和几万个词组，实用性受到比较大的限制。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让小鹤用户也享受顶功技术带来的红利。声笔小鹤就是对小鹤音">
@@ -695,6 +695,7 @@ var _hmt = _hmt || [];
 <p>更强大是因为：首先，声笔小鹤实现了字词分离，不再纠结是字优先还是词优先，可以支持GBK字符集超两万的汉字；其次，词组支持扩展编码，可以支持48万词组并快速离散重码；最后，具有自动词组功能，没有的词组拆开打过一次后就能自动造好。</p>
 <h2 id="3-快速入门"><a href="#3-快速入门" class="headerlink" title="3 快速入门"></a>3 快速入门</h2><p>为了减轻初学者的记忆负担，在手机上提供了助记皮肤，可以长按<code>N</code>键打开或者关闭助记。在打开时，给出了韵母、笔画和零声母用键的提示，如下图所示。如果是在电脑上，则可以把该图并放在电脑桌面上，在打字的时候帮助记忆。</p>
 <p><img src="/images/sbxhzj.jpg" alt="声笔小鹤助记"></p>
+<p>注意，「嗯n」[呣m」「嘸m」「呒m」这几个字是没有韵母的，这时用v作为韵母，称为零韵母。</p>
 <p>声笔小鹤的编码规则和示例如下。其中，s表示声母，不区分平翘舌；y表示韵母；b表示笔画。b为<code>aeuio</code>，s为b之外的21个英文字母，数字表示第几字（其中0表示末字），<code>_</code>表示空格。注意，您输入时，四码词组的候选顺序可能有变化，这是因为动态码长调整的缘故（后面在动态码长一节会专门讲这一点）。</p>
 <ul>
 <li>单字：<code>sybb</code>，即声母加韵母前再加两个笔画。一码字的例子有<code>就j_ 我w_ 没m_</code>，二码字的例子有<code>从cs_ 此ci_ 起qi_ 来ld_</code>，三码字的例子有<code>节jpe 未wwe 凝nko 管gru</code>，四码字的例子有<code>觉jnoo 钱qmue 貌mcuo 缘yraa</code>。注意，三码字的第三码和四码字后两码都是采用的顺序单笔画，而不是小鹤音形里复杂的双形，学习难度大大降低。</li>
