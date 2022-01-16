@@ -146,9 +146,10 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/set_pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220116113205583.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
-<meta property="og:updated_time" content="2022-01-15T10:37:57.237Z">
+<meta property="og:updated_time" content="2022-01-16T03:39:44.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="1 飞码概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。 1.1 发展历史声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提">
@@ -828,7 +829,11 @@ var _hmt = _hmt || [];
 <p>如果用户习惯一直用第四码大写来输入多字词，那么就可以将飞讯schema文件中Translator下的enable_filtering选项设置为true，以过滤掉<code>sssbb</code>上的多字词，以减少重码，如下图所示。</p>
 <p><img src="/images/SbfxFilter.png" alt="声笔飞讯Filter"></p>
 <p>在标点简词方面，飞讯与飞码是完全一样的。另外，飞讯的词组也是支持扩展编码的，在重码多的时候，可以追加首字的前两笔来快速区分重码，但是多字词第四码用大写输入时不能使用扩展编码。</p>
-<p>还有，在飞讯延迟顶的位置，是无法使用sbb字的，因为后三码被当作五码词组的一部分了，sbb字只有处于编码的开始位置才是有效的。如果用户不喜欢延迟顶，而且希望随时能使用sbb字，可以切换到单字状态，或者设置为单字状态，切换和设置方法与飞码相同。但是，这样的话就不能使用常规的五码词组了。</p>
+<p>还有，在飞讯延迟顶的位置，是无法使用sbb字的，因为后三码被当作五码词组的一部分了，sbb字只有处于编码的开始位置才是有效的。</p>
+<p>比如，在输入「狂kq」「喘cia」时，「kqcia」是常规词组的空间，上面往往会有其它词存在，产生冲突，从而无法将「狂」字顶上屏幕，如下图所示。</p>
+<p><img src="/images/image-20220116113205583.png" alt="image-20220116113205583"></p>
+<p>为了解决这个问题，特提供了巧妙的办法。分为两种情况，一是没有后续字词，需要立即上屏；二是有后续字词，可以利用顶屏。在第一种情况下，可以采用 AEUIO 中的任一大写字母将「狂喘」招回并选择上屏。在第二种情况下，可以大写后续字词的第一码将「狂喘」招回并顶上屏幕。</p>
+<p>如果用户不喜欢延迟顶，而且希望随时能使用sbb字，可以切换到单字状态，或者设置为单字状态，切换和设置方法与飞码相同。但是，这样的话就不能使用常规的五码词组了。</p>
 <h3 id="6-4-声笔飞单"><a href="#6-4-声笔飞单" class="headerlink" title="6.4 声笔飞单"></a>6.4 声笔飞单</h3><p>飞单可以看成是只有单字和标点简词且可自定义主码表的飞码。在飞码系的所有方案中，飞单是唯一能够修改主码表的方案，其配方也简单得多，修改起来非常容易，没有其它非必要项的干扰。如果不想对主码表进行修改的话，使用飞单和使用飞码的单字模式没有什么区别。一些有想法、有能力的用户很需要这种定制能力，希望完全掌控码表，随心所欲，改得来完全适合自己的习惯。</p>
 <p>如何对飞单进行定制呢？这属于Rime输入法平台的一般内容了，请参见Rime的官方网站<a href="https://rime.im/" target="_blank" rel="noopener">Rime官网</a>，上面有详细的讲解。</p>
 <h3 id="6-5-声笔飞整"><a href="#6-5-声笔飞整" class="headerlink" title="6.5 声笔飞整"></a>6.5 声笔飞整</h3><p>声笔飞整是声笔飞码的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了，而且每个字都可以用2-4码，能大大地提高转换的准确性。但是，它的缺点是，在输入发生错误后回改的成本高，对离散程度高的文本尤其如此。所以，声笔飞整仅适合录入简单的连续文本，或者供声笔飞码和声笔飞讯的初学者使用。</p>

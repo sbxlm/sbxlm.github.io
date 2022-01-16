@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-01-03T00:54:10.057Z">
+<meta property="og:updated_time" content="2022-01-16T04:47:35.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -736,7 +736,10 @@ var _hmt = _hmt || [];
 <li>长按则可以选择配色。</li>
 </ul>
 <p>其它的特殊操作，如全选、剪切、复制、粘贴、键盘、助记、删词等，在键面上已经写得很明确，就不再赘述。</p>
-<h2 id="5-标点符号"><a href="#5-标点符号" class="headerlink" title="5 标点符号"></a>5 标点符号</h2><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在半角状态下的定义如下：</p>
+<h2 id="5-大写顶屏"><a href="#5-大写顶屏" class="headerlink" title="5 大写顶屏"></a>5 大写顶屏</h2><p>在用声笔输入法的各种字词方案输入的时候，如果不能顶屏，那么就需要先用空格上屏前面的字词后才能输入后续字词的首码。但是，通过大写后续字词的首码就仍然可以实现顶屏，相当于用一个大写字母代替空格和一个小写字母。这对于在电脑上能够熟练使用大写字母的人来说，可以实现更快捷的操作。而在触屏手机上的作用就更大了，因为声笔输入法是通过上滑操作来输入大写字母的；经过适当训练后，上滑操作相当便捷，同时手机是按空格键很不方便。</p>
+<p>例如，用声笔简码输入「在幸福的时候」，一般的用键是「z_xf_d_sh」，而采用大写顶屏后，用键就变成「zXfDSh」，可以完全不操作空格键。</p>
+<p>当然，大写顶屏只是一个可以选用的功能，用不惯的用户可以忽略不用就是了。</p>
+<h2 id="6-标点符号"><a href="#6-标点符号" class="headerlink" title="6 标点符号"></a>6 标点符号</h2><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在半角状态下的定义如下：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -830,7 +833,7 @@ var _hmt = _hmt || [];
 </table>
 </div>
 <p>上表中没有列出按键和标点完全一致的，如<code># %</code>等。在全角状态下，标点符号的定义几乎与半角状态下相同，只是有的半角字符变成了对应的全角字符，如<code>＆ ＠</code>等。</p>
-<h2 id="6-特殊符号"><a href="#6-特殊符号" class="headerlink" title="6 特殊符号"></a>6 特殊符号</h2><p>另外，通过<code>\</code>引导，还可以输入各类特殊符号，输入习惯源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的编码改为<code>v</code>或者省略，以便支持用<code>aeuio</code>选择重目，具体符号类别大致如下：</p>
+<h2 id="7-特殊符号"><a href="#7-特殊符号" class="headerlink" title="7 特殊符号"></a>7 特殊符号</h2><p>另外，通过<code>\</code>引导，还可以输入各类特殊符号，输入习惯源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的编码改为<code>v</code>或者省略，以便支持用<code>aeuio</code>选择重目，具体符号类别大致如下：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -1077,13 +1080,13 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 </div>
-<h2 id="7-词库同步"><a href="#7-词库同步" class="headerlink" title="7 词库同步"></a>7 词库同步</h2><p>在用户同时使用多种设备，如台电脑、手机等时，新造的词组，码长调整和频率调整的结果都需要同步，才能避免重复的工作。RIME提供了同步用户词组的功能，可以满足这种需求，具体方法参见RIME官方网站<a href="https://github.com/rime/home/wiki/UserGuide" target="_blank" rel="noopener">说明书</a>的用户资料同步一节。</p>
-<h2 id="8-自定义词典"><a href="#8-自定义词典" class="headerlink" title="8 自定义词典"></a>8 自定义词典</h2><p>声笔提供了多种可定制的词典，以满足不同用户的个性化需求。有的可定制词典是声笔的所有方案共用的，有的是某个子系列共用的，而有的是某个方案专用的。为了让同时安装的多种方案在显示的时候避免受到干扰，声笔的所有自定义词典是单独放在一个扩展包（称为声笔可定制词典）里的。需要进行定制的用户要下载该扩展包，把所需的文件复制到用户文件夹，然后按一定的改范进行修改。修改后，重新部署一下就生效了。</p>
-<h3 id="8-1-用u引导的自定义词典"><a href="#8-1-用u引导的自定义词典" class="headerlink" title="8.1 用u引导的自定义词典"></a>8.1 用u引导的自定义词典</h3><p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求。</p>
+<h2 id="8-词库同步"><a href="#8-词库同步" class="headerlink" title="8 词库同步"></a>8 词库同步</h2><p>在用户同时使用多种设备，如台电脑、手机等时，新造的词组，码长调整和频率调整的结果都需要同步，才能避免重复的工作。RIME提供了同步用户词组的功能，可以满足这种需求，具体方法参见RIME官方网站<a href="https://github.com/rime/home/wiki/UserGuide" target="_blank" rel="noopener">说明书</a>的用户资料同步一节。</p>
+<h2 id="9-自定义词典"><a href="#9-自定义词典" class="headerlink" title="9 自定义词典"></a>9 自定义词典</h2><p>声笔提供了多种可定制的词典，以满足不同用户的个性化需求。有的可定制词典是声笔的所有方案共用的，有的是某个子系列共用的，而有的是某个方案专用的。为了让同时安装的多种方案在显示的时候避免受到干扰，声笔的所有自定义词典是单独放在一个扩展包（称为声笔可定制词典）里的。需要进行定制的用户要下载该扩展包，把所需的文件复制到用户文件夹，然后按一定的改范进行修改。修改后，重新部署一下就生效了。</p>
+<h3 id="9-1-用u引导的自定义词典"><a href="#9-1-用u引导的自定义词典" class="headerlink" title="9.1 用u引导的自定义词典"></a>9.1 用u引导的自定义词典</h3><p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求。</p>
 <p>由于声笔系列码在不少情况下是不允许重码的，所以用户自定义的词组不能放在系统词组的编码空间里，否则可能造成冲突而影响输入法的正常使用。经过仔细考量，决定采用<code>u</code>引导来解决用户自定义词组的输入问题，此处的<code>u</code>意为「用户」，因为它是英语的<code>user</code>的首字母，而声笔系列码的各种方案都不会使用<code>u</code>作为正常中文编码的首码，不会产生编码冲突。</p>
 <p><img src="/images/zdycd.png" alt="自定义词典"></p>
 <p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间，必须是以制表符TAB分隔，不能是空格，否则使自定义词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。</p>
-<h3 id="8-2-其它可定制的词典"><a href="#8-2-其它可定制的词典" class="headerlink" title="8.2 其它可定制的词典"></a>8.2 其它可定制的词典</h3><p>除了u引导的自定义词典外，其它可定制词典都是无需引导的，以下罗列出它们，说明其适用的子系列或者方案。具体的用法，会在相应的方案里详细论述。</p>
+<h3 id="9-2-其它可定制的词典"><a href="#9-2-其它可定制的词典" class="headerlink" title="9.2 其它可定制的词典"></a>9.2 其它可定制的词典</h3><p>除了u引导的自定义词典外，其它可定制词典都是无需引导的，以下罗列出它们，说明其适用的子系列或者方案。具体的用法，会在相应的方案里详细论述。</p>
 <ul>
 <li>sf: 声母标点简词，共用于除声笔拼音和声笔简码以外的所有方案</li>
 <li>sbf: 声笔标点简词，共用于飞码系和快码系</li>
@@ -1093,8 +1096,8 @@ var _hmt = _hmt || [];
 <li>szf: 声韵标点简词，适用于声笔自然和声笔自速</li>
 <li>sbfd: 声笔飞单，是可定制的单字飞码方案，内含sbb字</li>
 </ul>
-<h2 id="9-LUA脚本"><a href="#9-LUA脚本" class="headerlink" title="9 LUA脚本"></a>9 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。注意，如果有多个选项，o引导的LUA脚本输入选项是不能用<code>aeuio</code>来选择的，在电脑上可以用箭头移动光标来选择，在手机上可以滑动空格键来选择，然后用空格上屏。</p>
-<h2 id="10-设置选项"><a href="#10-设置选项" class="headerlink" title="10 设置选项"></a>10 设置选项</h2><p>(1) 停止调频与造词</p>
+<h2 id="10-LUA脚本"><a href="#10-LUA脚本" class="headerlink" title="10 LUA脚本"></a>10 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。注意，如果有多个选项，o引导的LUA脚本输入选项是不能用<code>aeuio</code>来选择的，在电脑上可以用箭头移动光标来选择，在手机上可以滑动空格键来选择，然后用空格上屏。</p>
+<h2 id="11-设置选项"><a href="#11-设置选项" class="headerlink" title="11 设置选项"></a>11 设置选项</h2><p>(1) 停止调频与造词</p>
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>(2) 自动删词阈值</p>
@@ -1468,7 +1471,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码反查"><span class="nav-text">2 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-笔画反查"><span class="nav-text">2.1 笔画反查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-拼音反查"><span class="nav-text">2.2 拼音反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-翻页方法"><span class="nav-text">3 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英文混合输入"><span class="nav-text">4 中英文混合输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-标点符号"><span class="nav-text">5 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-特殊符号"><span class="nav-text">6 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-词库同步"><span class="nav-text">7 词库同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-自定义词典"><span class="nav-text">8 自定义词典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-用u引导的自定义词典"><span class="nav-text">8.1 用u引导的自定义词典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-其它可定制的词典"><span class="nav-text">8.2 其它可定制的词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-LUA脚本"><span class="nav-text">9 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-设置选项"><span class="nav-text">10 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码反查"><span class="nav-text">2 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-笔画反查"><span class="nav-text">2.1 笔画反查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-拼音反查"><span class="nav-text">2.2 拼音反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-翻页方法"><span class="nav-text">3 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英文混合输入"><span class="nav-text">4 中英文混合输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-大写顶屏"><span class="nav-text">5 大写顶屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-标点符号"><span class="nav-text">6 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-特殊符号"><span class="nav-text">7 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-词库同步"><span class="nav-text">8 词库同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-自定义词典"><span class="nav-text">9 自定义词典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-用u引导的自定义词典"><span class="nav-text">9.1 用u引导的自定义词典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-其它可定制的词典"><span class="nav-text">9.2 其它可定制的词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-LUA脚本"><span class="nav-text">10 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-设置选项"><span class="nav-text">11 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
             
 
           </div>
