@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-01-28T10:44:14.196Z">
+<meta property="og:updated_time" content="2022-02-06T02:31:07.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -694,7 +694,7 @@ var _hmt = _hmt || [];
 <h2 id="3-翻页技巧"><a href="#3-翻页技巧" class="headerlink" title="3 翻页技巧"></a>3 翻页技巧</h2><p>重码字词超过一页时，用Tab正向翻页，用Shift+Tab为反向翻页。而且，翻页操作在电脑上和手机上都是一样的。不过，手机上的Tab位于键盘的左下角，仅在有编码时起作用，上滑该键则相当于Shift+Tab。</p>
 <p>在定位新造词的时候，可以在没有进行过翻页时，用Shift+Tab直接跳到最后一页，这在重码很多时特别有用。如果只用Tab的话，就需要按顺序多次翻页，因为新造的词都是排在重码词中尾部的位置。</p>
 <p>注意，声笔系列码没有像一般输入法那样用逗号和句号来翻页，这是因为声笔系列码使用翻页键的情况是比较少或者很少的，无需占用常用的逗号键和句号键而使它们丧失顶屏的能力。</p>
-<h2 id="4-编码变换"><a href="#4-编码变换" class="headerlink" title="4 编码变换"></a>4 编码变换</h2><p>为了在输入中文时节约用键和避免回改，声笔输入法提供了巧妙的编码变换方法，主要通过Enter键（回车键）和Tab键（制表键）来实现。这样做，实际上也分化了重码，增加了确定性。</p>
+<h2 id="4-编码变换"><a href="#4-编码变换" class="headerlink" title="4 编码变换"></a>4 编码变换</h2><p>为了在输入中文时节约用键和避免回改，声笔输入法提供了巧妙的编码变换方法，主要通过Enter键（回车键）和Tab键（制表键）来实现。这样做，实际上也分化了重码，增加了确定性。大量不是词的组合都可以通过这种方式来进行输入，从而有效地利用编码空间。注意，这个时候是没有提示的，需要用户对简字和简词非常熟习才行。</p>
 <p>声笔方案默认情况下均用26个字母编码，但是在开启标点字词的时候，标点<code>&#39;,/;.</code>被用来代替<code>aeuio</code>作为笔画的编码，用在输入码的末尾。在以下叙述中，为了简洁起见，字母编码用x表示，标点编码用f表示，而<code>_</code>代表空格键。</p>
 <h3 id="4-1-用Enter键"><a href="#4-1-用Enter键" class="headerlink" title="4.1 用Enter键"></a>4.1 用Enter键</h3><ul>
 <li>使<code>xx</code>变成<code>x_x_</code>并立即上屏。用于输入两个一简字时节约用键，因为两个空格键变成了一个回车键，适用于声笔系列码的所有字词型方案。例如，用js+Enter可以输入「就」「是」两个字。</li>
