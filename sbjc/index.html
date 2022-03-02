@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-02-06T02:31:07.747Z">
+<meta property="og:updated_time" content="2022-03-01T12:20:23.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -1124,6 +1124,7 @@ var _hmt = _hmt || [];
 <li>szf: 声韵标点简词，适用于声笔自然和声笔自速</li>
 <li>sbfd: 声笔飞单，是可定制的单字飞码方案，内含sbb字</li>
 </ul>
+<p>在表示笔画的标点符号<code>&#39;,/;.</code>中，<code>/</code>像撇，<code>;</code>像竖，<code>.</code>就是点（捺），只有<code>,</code>代表横和<code>&#39;</code>代表折需要记一下。</p>
 <h2 id="11-LUA脚本"><a href="#11-LUA脚本" class="headerlink" title="11 LUA脚本"></a>11 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。注意，如果有多个选项，o引导的LUA脚本输入选项是不能用<code>aeuio</code>来选择的，在电脑上可以用箭头移动光标来选择，在手机上可以滑动空格键来选择，然后用空格上屏。</p>
 <h2 id="12-设置选项"><a href="#12-设置选项" class="headerlink" title="12 设置选项"></a>12 设置选项</h2><p>(1) 停止调频与造词</p>
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
