@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-05-03T09:24:13.329Z">
+<meta property="og:updated_time" content="2022-05-18T17:12:43.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -1124,6 +1124,7 @@ var _hmt = _hmt || [];
 <li>shf: 声韵标点简词，适用于声笔小鹤和声笔鹤速；</li>
 <li>szf: 声韵标点简词，适用于声笔自然和声笔自速；</li>
 <li>sbfd: 完全可定制的声笔飞单词典（含sbb字）。</li>
+<li>fmsbbtz：声笔飞码sbb字调整词典。</li>
 </ol>
 <p>在表示笔画的标点符号<code>&#39;,/;.</code>中，<code>/</code>像撇，<code>;</code>像竖，<code>.</code>就是点（捺），只有<code>,</code>代表横和<code>&#39;</code>代表折需要记一下。</p>
 <h2 id="11-LUA脚本"><a href="#11-LUA脚本" class="headerlink" title="11 LUA脚本"></a>11 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。</p>
