@@ -130,7 +130,6 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="1 概述小鹤音形是目前比较有人气、也比较优秀的双拼音形输入法，在打字比赛爱好者中很受欢迎。但是，由于需要同时掌握双音和双形，学习难度还是相当大的，而且只支持不到一万字的汉字和几万个词组，实用性受到比较大的限制。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让小鹤用户也享受顶功技术带来的红利。声笔小鹤就是对小鹤音">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/3A8F10DB4B46B873CF3EBA128C100A1E.jpg">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbxhjc.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbxhfc.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220124141559046.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
@@ -142,7 +141,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226154907799.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbhz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbhz2.gif">
-<meta property="og:updated_time" content="2022-04-22T14:24:11.028Z">
+<meta property="og:updated_time" content="2022-05-27T21:34:09.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔小鹤">
 <meta name="twitter:description" content="1 概述小鹤音形是目前比较有人气、也比较优秀的双拼音形输入法，在打字比赛爱好者中很受欢迎。但是，由于需要同时掌握双音和双形，学习难度还是相当大的，而且只支持不到一万字的汉字和几万个词组，实用性受到比较大的限制。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让小鹤用户也享受顶功技术带来的红利。声笔小鹤就是对小鹤音">
@@ -704,8 +703,7 @@ var _hmt = _hmt || [];
 <p>我们再来看一个综合的例子：<code>我们womf 大家dajx 都dz_ 喜欢xihr 研究yjjq 中文zswf 输入法srfa</code>。</p>
 <p>当一个字有多种不同的读音且声母不同时，则可以用多种方法输入该字。例如，「盛」对应的拼音有<code>cheng</code>和<code>sheng</code>，对应了c和s两个不同的声母，因而它在声笔小鹤中也会有两个编码，分别是<code>cgeu</code>和<code>sgeu</code>。</p>
 <p>对于非成字偏旁部首，一般取其名称首字的声母作为它的声母进行编码。例如，「亻」的名称为单人旁，取「单」字的声母d作为「亻」的声母，可以用<code>djui</code>输入「亻」。不知道非成字偏旁部首的名称也没有关系，因始终可以用纯笔画的方式输入。比如，「亻」可以用<code>uiiii</code>输入。</p>
-<p>另外，声笔小鹤利用了单字的空码位安排了一些词组，分为声笔词、声声词、声声笔词。声笔词只有21个，如<code>人民ra 发现fe 今天je 情况qo 现在xe</code>，它们的编码方式是首字的声母+次字的首笔，在后接声母时可以被顶上屏幕，因此一般只需要两键。声声词有166个，如<code>出现cx_ 代表db_ 认为rw_ 身边sb_ 什么sm_</code>，它们的编码方式是首字的声母+次字的声母，在后接声母时无法被顶上屏幕，因此一般需要空格上屏。声声笔词有928个，如<code>百分点bfi 差不多cbu 大部分dbu 更年期gne</code>，它们的编码方式是首字的声母+次字的声母+第三字的首笔，在后接声母时可以被顶上屏幕，因此一般只需要三键。为了减轻记忆负担，在输入第一码后，会提示出声笔词和声声词；在输入前两码后，会提示出声声笔词，如下图所示。</p>
-<p><img src="/images/sbxhjc.png" alt="声笔小鹤三简"></p>
+<p>另外，声笔小鹤利用了单字的空码位安排了一些词组，分为声笔词、声声词、声声笔词。声笔词只有21个，如<code>人民ra 发现fe 今天je 情况qo 现在xe</code>，它们的编码方式是首字的声母+次字的首笔，在后接声母时可以被顶上屏幕，因此一般只需要两键。声声词有166个，如<code>出现cx_ 代表db_ 认为rw_ 身边sb_ 什么sm_</code>，它们的编码方式是首字的声母+次字的声母，在后接声母时无法被顶上屏幕，因此一般需要空格上屏。声声笔词有928个，如<code>百分点bfi 差不多cbu 大部分dbu 更年期gne</code>，它们的编码方式是首字的声母+次字的声母+第三字的首笔，在后接声母时可以被顶上屏幕，因此一般只需要三键。</p>
 <p>再有，声笔自然三简码位上设置一些常用二字词和三字词，例如：<code>给谁gws 实施sis 复印件fyj 事务所sws</code>等等。这种词一般需要空格上屏，所以并不能节约用键，但是在重码的情况下可以用来区分重码。</p>
 <h2 id="4-编码反查"><a href="#4-编码反查" class="headerlink" title="4 编码反查"></a>4 编码反查</h2><p>在学习声笔小鹤之初，往往会遇到不会打的字。怎么办呢？系统提供了用笔画或拼音来反查编码的手段。在不知道读音的时候直接用<code>aeuio</code>按顺序输入笔画进行反查，在不知道笔画时用a引导拼音反查（注意零声母要用v）。</p>
 <p>以下是几个反查的例子。左边是笔画反查的例子，右边是拼音反查的例子。在笔画反查的例子中，直接输入uuao后，出现了以这四个笔画开头的字；第一项是<code>反fj</code>，表示「反」字的编码为fj；第二项为<code>般bju bo pjuu</code>，说明「般」是个多音字，有三个编码。在拼音反查的例子中，是用字母a引导的，所以实际的输入为afang和avan，只是没有显示引导字母而已，其中an前还加了v，因为an是零声母音。</p>
