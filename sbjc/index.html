@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-07-04T23:31:02.193Z">
+<meta property="og:updated_time" content="2022-07-13T23:02:50.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -1112,10 +1112,10 @@ var _hmt = _hmt || [];
 <p>除了u引导的自定义词典外，其它可定制词典都是无需引导的。以下罗列出所有可定制的词典，说明其适用的子系列或者方案。具体的用法，会在相应的方案里详细论述。</p>
 <ol>
 <li>sbzdy: 用 u 引导的自定义词典，共用于声笔的所有方案；</li>
-<li>sn, snts: 声母数选简词，共用于除声笔拼音和声笔简码以外的所有方案；</li>
-<li>jmn, jmnts: 简码数选字词，适用于声笔简码；</li>
-<li>sbfd: 完全可定制的声笔飞单词典（含 sbb 字）；</li>
-<li>fmsbbtz：声笔飞码 sbb 字调整词典。</li>
+<li>sn1, sn2: 数选简词，用于快码和飞码的字词型方案；</li>
+<li>sbfd: 可完全定制的声笔飞单（含sbb字）；</li>
+<li>kmsbbtz：快码的sbb字调整词典；</li>
+<li>fmsbbtz：飞码的sbb字调整词典。</li>
 </ol>
 <h2 id="11-LUA脚本"><a href="#11-LUA脚本" class="headerlink" title="11 LUA脚本"></a>11 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。</p>
 <h2 id="12-设置选项"><a href="#12-设置选项" class="headerlink" title="12 设置选项"></a>12 设置选项</h2><p>(1) 停止调频与造词</p>

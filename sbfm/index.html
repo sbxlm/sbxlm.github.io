@@ -138,17 +138,16 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/WmdpFm.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxx.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226121515468.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226121718217.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20211226121838864.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220115162608678.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714061653392.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714062014384.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714063351656.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/set_pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220116113205583.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbfz2.gif">
-<meta property="og:updated_time" content="2022-07-02T12:41:05.239Z">
+<meta property="og:updated_time" content="2022-07-13T23:00:08.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="1 飞码概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。 1.1 发展历史声笔飞码有着「悠久」的历史，同时又在不断的进化、发展，一直处在高效顶功输入法的前沿，探索并创造新的顶功编码模式。 声笔飞码在2005年首次发布时引起了输入法圈子内巨大的震动，因为其纯单字的输入效率，在使用26个字母编码的前提下，比当时效率最高的五笔字型提">
@@ -786,19 +785,21 @@ var _hmt = _hmt || [];
 <p>需要注意的是，在进行枚举自动造词的时候，是以编码对应的字、词为单位来进行组合的，并不是以单字为单位的。例如，在输入<code>声笔stbp 系列xxld 码msaa</code>后，生成的词组为「声笔系列码」「声笔系列」「系列码」，而不会生成「声笔系」「笔系列」「列码」等。另外，如果之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
 <p>(2) 词组删除</p>
 <p>由于飞码是采用的自动造词策略，在提供方便的同时也会产生大量的废词，所以系统提供了废词清理功能，能够将用户几乎不使用的新造临时词组自动清除。对于少量暂时还未被清理的废词，用户不必理会，到时限后就会被自动删除。在必要的时候，如用户错误地确认了临时词组，系统也提供了手动删除的手段，方法是先将光标移动到该词上面，再按<code>Control + Delete</code>键来删除。注意，如果是非临时词组，需要删除两次才能删除。第一次删除时只是把它变成了临时词组。在安卓手机上的删除方法是，用左右滑动空格定位词组，再用删词键来删除。</p>
-<h3 id="5-5-增强模式"><a href="#5-5-增强模式" class="headerlink" title="5.5 增强模式"></a>5.5 增强模式</h3><p>为了缩短常用词组的码长，提高输入效率，特为飞码提供了一些备用的数选简词，可以在增强模式下使用。</p>
+<h3 id="5-5-增强模式"><a href="#5-5-增强模式" class="headerlink" title="5.5 增强模式"></a>5.5 增强模式</h3><p>为了缩短常用词组的码长，提高输入效率，特为飞码提供了210高频数选简词，可以在增强模式下使用。</p>
 <p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbfm.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
-<p>飞码可以使用的数选简词有三种，分别称为sn、sbn和spn简词，它们基本上都是高频或者常用的二字词，其中spn包含部分三字词。数字<code>23789</code>为有理编码，它们与<code>aeuio</code>一一对应，代表五个笔画，而数字<code>14560</code>为无理选择，不与笔画对应。</p>
-<p>sn简词的编码方法为首字声母加数字，它们都是高频二字词，在输入首码的时候会有提示。 </p>
-<p><img src="/images/image-20211226121515468.png" alt="image-20211226121515468"></p>
-<p> sbn简词的编码方法为首字声母和首笔加数字，它们都是常用二字词，在输入前两码的时候会有提示。 </p>
-<p><img src="/images/image-20211226121718217.png" alt="image-20211226121718217"></p>
-<p> spn简词的编码方法为对于二字词来说是首字声母和偏旁部首加数字，对于三字词来说是前两字的声母加数字，在输入前两码的时候会有提示。</p>
-<p><img src="/images/image-20211226121838864.png" alt="image-20211226121838864"> </p>
-<p>需要注意的是，数选简词对输入效率的提高也是有代价的。付出的代价是，用户得查看和记住要使用的简词才能取得应有的效果，数字在二三码时失去了顶屏能力。</p>
-<p>打开数选简词时，偶而会遇到误顶的问题。比如，在要「没3」时，正常的方法是在「m」后用空格上屏「没」再输入3，即输入「m_3」；但是，由于使用顶屏的惯性可能导致用户忘记这一点而输入成了「m3」。然而，「m3」是与数选简词「没有」产生冲突，从而无法将「m」字顶上屏幕，如下图所示。 </p>
-<p><img src="/images/image-20220115162608678.png" alt="image-20220115162608678"></p>
-<p>这时，需要先用退格键删除3，然后再用空格上屏「没」。为了解决这个问题，可以用回车招回「没」并上屏3。</p>
+<p>（1）编码方式</p>
+<p>数选简词的编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些简词进行了提示，第二组默认需要用Tab翻页才能显示，如下所示。</p>
+<p><img src="/images/image-20220714061653392.png" alt="image-20220714061653392"></p>
+<p><img src="/images/image-20220714062014384.png" alt="image-20220714062014384"></p>
+<p>建议用户在初学数选简词的时候，仅练习和使用第一组就行了，否则难度太大。待第一组数选简词完全掌握后，再学习第二组。此时，可以修改一下方案的schema文件，将sn2的initial_quality调整为12，高于sn1的10，这样第二组就会在第一页显示。</p>
+<p><img src="/images/image-20220714063351656.png" alt="image-20220714063351656"></p>
+<p>（2）数选顶屏</p>
+<p>数选简词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
+<p>例如，在输入w7后，「我们」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「我们」就会被顶上屏幕。</p>
+<p>另一方面，当数选简词接在其它字词后面时，还可以通过延迟顶屏来省略空格。</p>
+<p>例如，在输入「我今天」时，通常得用w<em>j3（其中</em>表示空格），但是由于有了延迟顶屏，其中的空格是可以省略的，即只用wj3就可以输入「我今天」了。</p>
+<p>再如，在输入「要考虑」时，通常得用yx_k8，但是由于有了延迟顶屏，就只用yxk8就可以输入「要考虑」了。</p>
+<p>（3）修改定制</p>
 <p>如果用户觉得系统提供的数选简词不理想，还可以对它们进行定制。定制的方法是，将相应的词典文件复制到用户文件夹中，对其进行所需的修改，重新部署一下就可以生效。在修改的时候，一定要按照词典的格式进行，首列为词条，第二列为编码，两者之间以制表符分隔。注意，还需要同时修改提示文件，以显示正确的候选项。</p>
 <h3 id="5-6-单字模式"><a href="#5-6-单字模式" class="headerlink" title="5.6 单字模式"></a>5.6 单字模式</h3><p>如果在输入的时候，突然遇到离散大的文字，需要以单字为主来输入，那么在电脑上可以按Ctrl+~或者F4快速切换到单字模式，在手机上则简单地点击状态栏的相应状态即可，如下图所示。此时，若第三码用大写，则仍然可以输入常规四码词组。</p>
 <p><img src="/images/pro_char.png" alt="单字模式切换"></p>
