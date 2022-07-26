@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-07-13T23:02:50.987Z">
+<meta property="og:updated_time" content="2022-07-26T21:36:57.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -695,53 +695,40 @@ var _hmt = _hmt || [];
 <h2 id="3-翻页技巧"><a href="#3-翻页技巧" class="headerlink" title="3 翻页技巧"></a>3 翻页技巧</h2><p>重码字词超过一页时，声笔用Tab正向翻页，用Shift+Tab反向翻页。而且，翻页操作在电脑上和手机上都是一样的。不过，手机上的Tab位于键盘的左下角，仅在有编码时起作用，上滑该键则相当于Shift+Tab。</p>
 <p>在定位新造词的时候，可以在没有进行过翻页时，用Shift+Tab直接跳到最后一页，这在重码很多时特别有用。如果只用Tab的话，就需要按顺序多次翻页，因为新造的词都是排在重码词中尾部的位置。</p>
 <p>注意，声笔系列码没有像一般输入法那样用逗号和句号来翻页，这是因为声笔系列码使用翻页键的情况是比较少或者很少的，无需占用常用的逗号键和句号键而使它们丧失顶屏的能力。</p>
-<h2 id="4-编码变换"><a href="#4-编码变换" class="headerlink" title="4 编码变换"></a>4 编码变换</h2><p>为了在输入中文时节约用键和避免回改，声笔输入法提供了巧妙的编码变换方法，主要通过Enter键（回车键）和Tab键（制表键）来实现。这样做，实际上也分化了重码，增加了确定性。大量不是词的组合都可以通过这种方式来进行输入，从而有效地利用编码空间和提高击键速度。注意，这个时候是没有提示的，需要用户对简字和简词非常熟习才能运用自如。</p>
-<p>声笔方案默认情况下均用26个字母编码，但是在开启增强模式的时候，可用数字作为笔画或者选择键，用在输入码的末尾。在以下叙述中，为了简洁起见，字母编码用x表示，而<code>_</code>代表空格键。</p>
+<h2 id="4-中英文混合输入"><a href="#4-中英文混合输入" class="headerlink" title="4 中英文混合输入"></a>4 中英文混合输入</h2><p>许多用户不仅仅需要方便、快速地输入中文，而且需要混合输入大量的英文。由于键盘及其布局的差异，声笔中英文混输时，在电脑上和在手机上的操作方法是不一样，而且随各输入方案的设置而定。下面介绍的是声笔系列码默认设置情况下的使用方法，要特别注意在电脑上和在手机上的差异。</p>
+<h3 id="4-1-在电脑上"><a href="#4-1-在电脑上" class="headerlink" title="4.1 在电脑上"></a>4.1 在电脑上</h3><p>若目前处于小狼毫的中文状态下，</p>
 <ul>
-<li>用Enter键使<code>xx</code>变成<code>x_x_</code>并立即上屏。用于输入两个一简字时节约用键，因为两个空格键变成了一个回车键。该技巧适用于声笔系列码的所有字词型方案。例如，用js+Enter可以输入「就」「是」两个字。</li>
-<li>用Enter键使<code>xxx</code>变成<code>x_xx_</code>并立即上屏，用于输入一个一简字和一个二简字词。例如，在声笔简码中，用jyg+Enter可以输入「就」「应该」，节约了一次按键。</li>
-<li>用Tab键使<code>xxx</code>变成<code>xx_x_</code>并立即上屏，用于输入一个二简字词和一个一简字。例如，想用声笔简码输入「它们是」，在键入tms后出来的可能是「托马斯」，这时就可以用Tab键将其变换为「它们」「是」。</li>
-<li>用Enter键使<code>xxxx</code>变成<code>xx_xx_</code>并立即上屏，用于输入两个二简字词。例如，在声笔飞码中，用skty+Enter可以输入「四」「题」，这两个字的组合并不是真正的词组。再如，在声笔简码中，用sfgx+Enter可以输入「十分」「高兴」。</li>
-</ul>
-<h2 id="5-中英文混合输入"><a href="#5-中英文混合输入" class="headerlink" title="5 中英文混合输入"></a>5 中英文混合输入</h2><p>许多用户不仅仅需要方便、快速地输入中文，而且需要混合输入大量的英文。由于键盘及其布局的差异，声笔中英文混输时，在电脑上和在手机上的操作方法是不一样，而且随各输入方案的设置而定。下面介绍的是声笔系列码默认设置情况下的使用方法，要特别注意在电脑上和在手机上的差异。</p>
-<h3 id="5-1-在电脑上"><a href="#5-1-在电脑上" class="headerlink" title="5.1 在电脑上"></a>5.1 在电脑上</h3><p>在中文状态下，按<code>CAPSLOCK</code>则可以锁定大写来输入英文，此前若编码窗口已有输入则会被清空。</p>
-<ul>
-<li>当编码窗口没有输入时，可以单击左或右<code>Shift</code>来切换中英文输入状态。</li>
-<li>当编码窗口没有输入且处于中文状态时，首码用大写字母则自动切换到临时英文状态。</li>
+<li>按<code>CAPSLOCK</code>则可以锁定大写来输入英文，此前若编码窗口已有输入则会被清空；</li>
+<li>当编码窗口没有输入时，可以单击左或右<code>Shift</code>来切换中英文输入状态；</li>
+<li>当编码窗口没有输入时，首码用大写字母则自动切换到临时英文状态；</li>
 <li>当编码窗口已经有输入时，<ul>
-<li>若要直接上屏编码，则按<code>Shift + Enter</code>；</li>
-<li>若要上屏中文并同时切换到英文状态，则按右<code>Shift</code>键；</li>
-<li>若要保留编码并进入临时英文状态，则按左<code>Shift</code>键；在临时英文状态下，可以接收空格和标点，完成后用回车或者右<code>Shift</code>上屏缓冲区的英文，并同时切换回中文状态。</li>
+<li>若要上屏编码且保持在中文状态，则按<code>Shift+回车</code>或者<code>Control+回车</code>；</li>
+<li>若要上屏编码且并切换到英文状态，则单按左<code>Control</code>键；</li>
+<li>若要保留编码并进入临时英文状态，则单按左<code>Shift</code>键；</li>
+<li>若要上屏中文并切换到英文状态，则单按右<code>Shift</code>键；</li>
 </ul>
 </li>
 </ul>
-<h3 id="5-2-在手机上"><a href="#5-2-在手机上" class="headerlink" title="5.2 在手机上"></a>5.2 在手机上</h3><p>无论在中文还是英文状态下，短按左下角第二个键就可以切换中英文输入状态。</p>
+<p>在临时英文状态下，可以接收空格和标点。完成后，用回车或者右<code>Shift</code>上屏原样英文；若用<code>Shift+回车</code>则将首字母转换为小写；若用<code>Control+回车</code>则会把所有字母都转换为大写。同时，会切换回中文状态。</p>
+<h3 id="4-2-在手机上"><a href="#4-2-在手机上" class="headerlink" title="4.2 在手机上"></a>4.2 在手机上</h3><p>短按上排状态栏的左边第一个键，或者左下角第二个键，就可以切换中英文输入状态。</p>
 <p>在中文状态下，没有输入编码时，</p>
 <ul>
-<li>单按<code>Shift</code>后，输入首个字母为大写，且自动切换到临时英文状态；</li>
+<li>单按<code>Shift</code>后，则输入的首个字母为大写，且自动切换到临时英文状态；</li>
 <li>上滑或者下滑字母键输入大写字母，且自动切换到临时英文状态；</li>
 <li>长按<code>Shift</code>锁定大写，在提示行上输入大写字母，然后用Enter上屏；</li>
 </ul>
 <p>在中文状态下，已经有编码输入时，<code>Shift</code>的显示会变为<code>Esc</code></p>
 <ul>
-<li>单按<code>Esc</code>则清除已经输入的编码；</li>
-<li>若要直接上屏编码，则按上滑Enter键；</li>
-<li>若要保留编码并进入临时英文状态，则上滑<code>Esc</code>键；</li>
-<li>若要上屏编码并同时切换到英文状态，则上滑退格键；</li>
+<li>若要清除已经输入的编码，则单按<code>Esc</code>；</li>
+<li>若要直接上屏编码，则按上滑Enter键或者退格键；</li>
+<li>若要保留编码并进入临时英文状态，则按<code>中文</code>键或者上滑<code>Esc</code>键；</li>
 <li>当有重码时，左右滑动空格可以定位重码，然后用单击空格上屏。</li>
 </ul>
-<p>在临时英文状态下，可以接收空格和标点，完成后</p>
+<p>在临时英文状态下，可以接收空格和标点，按下述方式上屏。不过，如果首字母大写进入临时英文的，则会切换到中文状态；而如果是已经有编码时按中文键切换到临时英文的，则会切换到英文状态。</p>
 <ul>
-<li>如果首字母大写进入临时英文的，则<ul>
-<li>若要上屏临时英文并切换回中文状态，则单击Enter键；</li>
-<li>若要上屏临时英文并进入到英文状态，则上滑退格键；</li>
-</ul>
-</li>
-<li>如果是已经有编码时切换到临时英文的，则<ul>
-<li>若要上屏临时英文并切换回中文状态，则上滑退格键；</li>
-<li>若要上屏临时英文并进入到英文状态，则单击Enter键。</li>
-</ul>
-</li>
+<li>若要原样上屏临时英文，则单击Enter键；</li>
+<li>若要变首字母为小写后上屏，则上滑Enter键；</li>
+<li>若将所有英文转换为大写后上屏，则上滑退格键。</li>
 </ul>
 <p>另外，</p>
 <ul>
@@ -749,18 +736,10 @@ var _hmt = _hmt || [];
 <li>下滑退格键可以删除选中词组，但是简词是不能删除的；</li>
 <li>长按右下角Enter键选择配色；</li>
 <li>长按左下角123键则进入选单，可以完成切换主题、切换方案、切换输入法和重新部署等；</li>
-<li>长按左下角第二个键就可以快速切换输入方案；</li>
+<li>长按左下角第二个键（中文键）可以快速切换输入方案；</li>
 <li>其它的特殊操作，如全选、剪切、复制、粘贴、键盘、助记、编辑等，在键面上已经写得很明确，就不再赘述。</li>
 </ul>
-<h2 id="6-大写巧用"><a href="#6-大写巧用" class="headerlink" title="6 大写巧用"></a>6 大写巧用</h2><h3 id="6-1-大写顶屏"><a href="#6-1-大写顶屏" class="headerlink" title="6.1 大写顶屏"></a>6.1 大写顶屏</h3><p>在用声笔输入法的各种字词方案输入的时候，如果不能顶屏，那么就需要先用空格上屏前面的字词后才能输入后续字词的首码。但是，通过大写后续字词的首码就仍然可以实现顶屏，相当于用一个大写字母代替空格和一个小写字母。这对于在电脑上能够熟练使用大写字母的人来说，可以实现更快捷的操作。而在触屏手机上的作用就更大了，因为声笔输入法是通过上滑操作来输入大写字母的；经过适当训练后，上滑操作相当便捷，而手机上按空格键很不方便。</p>
-<p>例如，用声笔简码输入「幸福的生活」，一般的用键是「xf_d_sh」，而采用大写顶屏后，用键就变成「xfDSh」，可以完全不操作空格键。当然，有的用户可能觉得大写很难操作，所以大写顶屏只是一个可以选用的功能，用不惯的用户可以忽略不用就是了。</p>
-<p>需要注意的是，大写顶屏在大写作为编码的时候是无效的，这就是下面讲的大写续码。</p>
-<h3 id="6-2-大写续码"><a href="#6-2-大写续码" class="headerlink" title="6.2 大写续码"></a>6.2 大写续码</h3><p>在声笔输入法的有些方案中，大写可以作为编码来使用。</p>
-<p>例如，在声笔飞码的单字模式下，第三码大写是作为编码用来输入词组的，此时不能顶前面的两码。</p>
-<p>再如，在声笔飞讯中，输入多字词时第四码可以用大写。</p>
-<h3 id="6-3-大写上屏"><a href="#6-3-大写上屏" class="headerlink" title="6.3 大写上屏"></a>6.3 大写上屏</h3><p>在有些情况下，为了解决编码冲突，避免回改，采用了大写上屏的策略。</p>
-<p>例如，在讯型方案如声笔飞讯中，sbb字可能与词组的编码发生冲突。如果要输入「它喘」，但忘记了在tg后加空格上屏，就输入成了<code>tgcia</code>，这时出现的是其它词组。为了避免回改，就可以用AEUIO中的任一字母将<code>tgcia</code>转换为<code>tg_cia_</code>，相当于按单字输入了「它」「喘」。</p>
-<h2 id="7-标点符号"><a href="#7-标点符号" class="headerlink" title="7 标点符号"></a>7 标点符号</h2><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在半角状态下的定义如下：</p>
+<h2 id="5-标点符号"><a href="#5-标点符号" class="headerlink" title="5 标点符号"></a>5 标点符号</h2><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在半角状态下的定义如下：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -854,7 +833,7 @@ var _hmt = _hmt || [];
 </table>
 </div>
 <p>上表中没有列出按键和标点完全一致的，如<code># %</code>等。在全角状态下，标点符号的定义几乎与半角状态下相同，只是有的半角字符变成了对应的全角字符，如<code>＆ ＠</code>等。</p>
-<h2 id="8-特殊符号"><a href="#8-特殊符号" class="headerlink" title="8 特殊符号"></a>8 特殊符号</h2><p>另外，通过<code>\</code>引导，还可以输入各类特殊符号，输入习惯源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的编码改为<code>v</code>或者省略，以便支持用<code>aeuio</code>选择重目，具体符号类别大致如下：</p>
+<h2 id="6-特殊符号"><a href="#6-特殊符号" class="headerlink" title="6 特殊符号"></a>6 特殊符号</h2><p>另外，通过<code>\</code>引导，还可以输入各类特殊符号，输入习惯源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的编码改为<code>v</code>或者省略，以便支持用<code>aeuio</code>选择重目，具体符号类别大致如下：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -1101,8 +1080,8 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 </div>
-<h2 id="9-词库同步"><a href="#9-词库同步" class="headerlink" title="9 词库同步"></a>9 词库同步</h2><p>在用户同时使用多种设备，如台电脑、手机等时，新造的词组，码长调整和频率调整的结果都需要同步，才能避免重复的工作。RIME提供了同步用户词组的功能，可以满足这种需求，具体方法参见RIME官方网站<a href="https://github.com/rime/home/wiki/UserGuide" target="_blank" rel="noopener">说明书</a>的用户资料同步一节。</p>
-<h2 id="10-自定义词典"><a href="#10-自定义词典" class="headerlink" title="10 自定义词典"></a>10 自定义词典</h2><p>声笔提供了多种可定制的词典，以满足不同用户的个性化需求。有的可定制词典是声笔的所有方案共用的，有的是某个子系列共用的，而有的是某个方案专用的。为了让同时安装的多种方案在显示的时候避免受到干扰，声笔的所有自定义词典是单独放在一个扩展包（称为声笔可定制词典）里的。需要进行定制的用户要下载该扩展包，把所需的文件复制到用户文件夹，然后按一定的改范进行修改。修改后，重新部署一下就生效了。</p>
+<h2 id="7-词库同步"><a href="#7-词库同步" class="headerlink" title="7 词库同步"></a>7 词库同步</h2><p>在用户同时使用多种设备，如台电脑、手机等时，新造的词组，码长调整和频率调整的结果都需要同步，才能避免重复的工作。RIME提供了同步用户词组的功能，可以满足这种需求，具体方法参见RIME官方网站<a href="https://github.com/rime/home/wiki/UserGuide" target="_blank" rel="noopener">说明书</a>的用户资料同步一节。</p>
+<h2 id="8-自定义词典"><a href="#8-自定义词典" class="headerlink" title="8 自定义词典"></a>8 自定义词典</h2><p>声笔提供了多种可定制的词典，以满足不同用户的个性化需求。有的可定制词典是声笔的所有方案共用的，有的是某个子系列共用的，而有的是某个方案专用的。为了让同时安装的多种方案在显示的时候避免受到干扰，声笔的所有自定义词典是单独放在一个扩展包（称为声笔可定制词典）里的。需要进行定制的用户要下载该扩展包，把所需的文件复制到用户文件夹，然后按一定的改范进行修改。修改后，重新部署一下就生效了。</p>
 <p>(1) 用u引导的自定义词典</p>
 <p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求。</p>
 <p>由于声笔系列码在不少情况下是不允许重码的，所以用户自定义的词组不能放在系统词组的编码空间里，否则可能造成冲突而影响输入法的正常使用。经过仔细考量，决定采用<code>u</code>引导来解决用户自定义词组的输入问题，此处的<code>u</code>意为「用户」，因为它是英语的<code>user</code>的首字母，而声笔系列码的各种方案都不会使用<code>u</code>作为正常中文编码的首码，不会产生编码冲突。</p>
@@ -1117,8 +1096,8 @@ var _hmt = _hmt || [];
 <li>kmsbbtz：快码的sbb字调整词典；</li>
 <li>fmsbbtz：飞码的sbb字调整词典。</li>
 </ol>
-<h2 id="11-LUA脚本"><a href="#11-LUA脚本" class="headerlink" title="11 LUA脚本"></a>11 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。</p>
-<h2 id="12-设置选项"><a href="#12-设置选项" class="headerlink" title="12 设置选项"></a>12 设置选项</h2><p>(1) 停止调频与造词</p>
+<h2 id="9-LUA脚本"><a href="#9-LUA脚本" class="headerlink" title="9 LUA脚本"></a>9 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。</p>
+<h2 id="10-设置选项"><a href="#10-设置选项" class="headerlink" title="10 设置选项"></a>10 设置选项</h2><p>(1) 停止调频与造词</p>
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>(2) 自动删词阈值</p>
@@ -1492,7 +1471,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码反查"><span class="nav-text">2 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-笔画反查"><span class="nav-text">2.1 笔画反查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-拼音反查"><span class="nav-text">2.2 拼音反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-翻页技巧"><span class="nav-text">3 翻页技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-编码变换"><span class="nav-text">4 编码变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-中英文混合输入"><span class="nav-text">5 中英文混合输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-在电脑上"><span class="nav-text">5.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-在手机上"><span class="nav-text">5.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-大写巧用"><span class="nav-text">6 大写巧用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-大写顶屏"><span class="nav-text">6.1 大写顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-大写续码"><span class="nav-text">6.2 大写续码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-大写上屏"><span class="nav-text">6.3 大写上屏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-标点符号"><span class="nav-text">7 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-特殊符号"><span class="nav-text">8 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-词库同步"><span class="nav-text">9 词库同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-自定义词典"><span class="nav-text">10 自定义词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-LUA脚本"><span class="nav-text">11 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-设置选项"><span class="nav-text">12 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码反查"><span class="nav-text">2 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-笔画反查"><span class="nav-text">2.1 笔画反查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-拼音反查"><span class="nav-text">2.2 拼音反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-翻页技巧"><span class="nav-text">3 翻页技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英文混合输入"><span class="nav-text">4 中英文混合输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-标点符号"><span class="nav-text">5 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-特殊符号"><span class="nav-text">6 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-词库同步"><span class="nav-text">7 词库同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-自定义词典"><span class="nav-text">8 自定义词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-LUA脚本"><span class="nav-text">9 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-设置选项"><span class="nav-text">10 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
             
 
           </div>
