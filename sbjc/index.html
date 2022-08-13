@@ -134,9 +134,11 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220813101142909.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220813101840041.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-07-26T21:36:57.083Z">
+<meta property="og:updated_time" content="2022-08-13T02:47:34.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、编码反查、翻页方法、中英混输、标点符号、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，">
@@ -702,20 +704,23 @@ var _hmt = _hmt || [];
 <li>当编码窗口没有输入时，可以单击左或右<code>Shift</code>来切换中英文输入状态；</li>
 <li>当编码窗口没有输入时，首码用大写字母则自动切换到临时英文状态；</li>
 <li>当编码窗口已经有输入时，<ul>
-<li>若要上屏编码且保持在中文状态，则按<code>Shift+回车</code>或者<code>Control+回车</code>；</li>
+<li>若码长为1时按回车，则进入临时英文状态；</li>
+<li>若要上屏编码且保持在中文状态，则按<code>Shift+回车</code>；</li>
+<li>若要将编码转换为大写后上屏，则按<code>Control+回车</code>；</li>
 <li>若要上屏编码且并切换到英文状态，则单按左<code>Control</code>键；</li>
 <li>若要保留编码并进入临时英文状态，则单按左<code>Shift</code>键；</li>
-<li>若要上屏中文并切换到英文状态，则单按右<code>Shift</code>键；</li>
+<li>若要上屏中文并切换到英文状态，则单按右<code>Shift</code>键。</li>
 </ul>
 </li>
 </ul>
-<p>在临时英文状态下，可以接收空格和标点。完成后，用回车或者右<code>Shift</code>上屏原样英文；若用<code>Shift+回车</code>则将首字母转换为小写；若用<code>Control+回车</code>则会把所有字母都转换为大写。同时，会切换回中文状态。</p>
+<p>在临时英文状态下，可以接收空格和标点。完成后，用回车或者右<code>Shift</code>上屏原样英文；若用<code>Shift+回车</code>则改变首字母的大小写状态后上屏，若用<code>Control+回车</code>则会把所有字母都转换为大写后上屏，并会切换回中文状态。</p>
 <h3 id="4-2-在手机上"><a href="#4-2-在手机上" class="headerlink" title="4.2 在手机上"></a>4.2 在手机上</h3><p>短按上排状态栏的左边第一个键，或者左下角第二个键，就可以切换中英文输入状态。</p>
 <p>在中文状态下，没有输入编码时，</p>
 <ul>
 <li>单按<code>Shift</code>后，则输入的首个字母为大写，且自动切换到临时英文状态；</li>
-<li>上滑或者下滑字母键输入大写字母，且自动切换到临时英文状态；</li>
-<li>长按<code>Shift</code>锁定大写，在提示行上输入大写字母，然后用Enter上屏；</li>
+<li>首码上滑或者下滑则输入大写字母，且自动切换到临时英文状态；</li>
+<li>首码后按回车，则进入临时英文状态；</li>
+<li>长按<code>Shift</code>锁定大写，在提示行上输入大写字母，然后用Enter上屏。</li>
 </ul>
 <p>在中文状态下，已经有编码输入时，<code>Shift</code>的显示会变为<code>Esc</code></p>
 <ul>
@@ -727,7 +732,7 @@ var _hmt = _hmt || [];
 <p>在临时英文状态下，可以接收空格和标点，按下述方式上屏。不过，如果首字母大写进入临时英文的，则会切换到中文状态；而如果是已经有编码时按中文键切换到临时英文的，则会切换到英文状态。</p>
 <ul>
 <li>若要原样上屏临时英文，则单击Enter键；</li>
-<li>若要变首字母为小写后上屏，则上滑Enter键；</li>
+<li>若改变首字母的大小写状态后上屏，则上滑Enter键；</li>
 <li>若将所有英文转换为大写后上屏，则上滑退格键。</li>
 </ul>
 <p>另外，</p>
@@ -1097,17 +1102,23 @@ var _hmt = _hmt || [];
 <li>fmsbbtz：飞码的sbb字调整词典。</li>
 </ol>
 <h2 id="9-LUA脚本"><a href="#9-LUA脚本" class="headerlink" title="9 LUA脚本"></a>9 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。</p>
-<h2 id="10-设置选项"><a href="#10-设置选项" class="headerlink" title="10 设置选项"></a>10 设置选项</h2><p>(1) 停止调频与造词</p>
+<h2 id="10-设置选项"><a href="#10-设置选项" class="headerlink" title="10 设置选项"></a>10 设置选项</h2><p>声笔系列码也有传统输入法的中英文输入状态、中英文标点状态、简繁体状态，但是取消了现在已经没有意义的全半角状态。同时，增加了即时与缓冲状态，增强与常规状态，词组与单字状态，三顶与四顶状态等。另外，还有一些没有界面，只能通过修改配置文件的设置选项。这里只讲述比较声笔特有的、各方案通用的设置选项，方案特有的设置选项会在具体方案中讲述。</p>
+<p>(1) 停止调频与造词</p>
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>(2) 自动删词阈值</p>
 <p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于10000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你输入了多少个字词。该选项也能用于非声笔系列的方案。</p>
 <p>(3) 多字词过滤</p>
-<p>声笔系列中的简码、飞讯和快讯有一个开启多字词过滤的选项enable_filtering。这个选项默认的情况下为false，即未开启。未开启多字词过滤时，飞讯和快讯的szsbb编码会将多字词也查找出来，而开启（即将enable_filtering设置为true）的时候则会过滤掉多字词，从而减少重码，这时多字词就只能采用sssS的形式来输入。</p>
+<p>声笔系列中的简码、飞讯和快讯有一个开启多字词过滤的选项enable_filtering。这个选项默认的情况下为false，即未开启。未开启多字词过滤时，飞讯和快讯的szsbb编码或简码在三码时会将多字词也查找出来，而开启（即将enable_filtering设置为true）的时候则会过滤掉多字词，这时多字词就只能采用sssS的形式来输入。</p>
 <p><img src="/images/SbfxFilter.png" alt="多字词过滤"></p>
 <p>(4) 临时英文选项</p>
 <p>所有声笔方案都有auto_inline选项，用于控制在中文状态下首字母大写是否进入临时英文状态。默认是进入，想改为不进入的话，需要将该项下的1改为0。</p>
 <p><img src="/images/auto_inline.png" alt="临时英文选项"></p>
+<p>(5) 即时与缓冲状态</p>
+<p>即时状态是默认的输入状态，按空格会上屏首选项，而在缓冲状态下，按空格只是确认选择，各次选择会拼接起来作为待上屏的内容，再次按空格后，才会把内容作为一个整体上屏。</p>
+<p><img src="/images/image-20220813101142909.png" alt="image-20220813101142909"></p>
+<p>在手机上，可以直接按状态栏上的相应文字来切换即时与缓冲状态。在电脑上，则按F4或者<code>Ctrl+~</code>进行切换。如果要修改默认状态，则需要将schema文件中的<code>is_buffered</code>项由0改为为1。</p>
+<p><img src="/images/image-20220813101840041.png" alt="image-20220813101840041"></p>
 <h2 id="附录一、笔画的国家规范"><a href="#附录一、笔画的国家规范" class="headerlink" title="附录一、笔画的国家规范"></a>附录一、笔画的国家规范</h2><p>声笔系列码对笔画的使用完全遵从国家的有关规范，这对纠正使用者的错误笔顺和识别正确的笔画类型是很有帮助的。</p>
 <h3 id="1-笔顺规则"><a href="#1-笔顺规则" class="headerlink" title="1. 笔顺规则"></a>1. 笔顺规则</h3><p><img src="/images/bsgz.jpg" alt="笔顺规则"></p>
 <h3 id="2-笔画类型"><a href="#2-笔画类型" class="headerlink" title="2. 笔画类型"></a>2. 笔画类型</h3><p><img src="/images/bhlx.jpg" alt="笔画类型"></p>
