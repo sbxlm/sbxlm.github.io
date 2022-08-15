@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>飞码和快码新增W型</title>
+    <url>/2019/09/18/AddModeW/</url>
+    <content><![CDATA[<p>现有飞码S和快码S都是主单的输入法，在输入二字词和三字词时，重码很多，常常会有翻页操作，影响了用户的体验。在没有实现动态码长的情况下，是没有办法解决这个问题的。另一个问题是，有的用户不喜欢S型用大写字母参与编码。</p>
+<a id="more"></a>
+<p>群友尛羴提议将二字词的编码改为sbbsz五码，促发了我设计W型的飞码和快码。飞码W的编码格式具体如下。</p>
+<p>单字：sb, spbbbx，两码起顶，含105个sb字<br>二字词：s1b2b2s2z2x，不收录用单字可以在五码及以内输入的二字词<br>三字词：s1b2b2s3z3x<br>多字词：s1b2b2s3s0x</p>
+<p>其中，z表示p或者b，0表示末字。快码W的编码格式与飞码W完全相同，只需将部首p换为韵母y就行了。</p>
+<p>因为无论单字还是词组都是采用五码，所以用“五”的拼音首字母来命名此型输入法。它支持自动造词和字词重码的调频，有重码的时候，用aeiou进行字母选重。</p>
+]]></content>
+      <tags>
+        <tag>飞码</tag>
+        <tag>快码</tag>
+        <tag>W型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码新增声笔飞简和声笔快简</title>
+    <url>/2020/08/08/blogpost20200808/</url>
+    <content><![CDATA[<p>在今天QQ群内部发布的声笔系列码更新里，包括了如下内容：</p>
+<ol>
+<li>新增了两个新的输入法方案——声笔飞简和声笔快简；</li>
+<li>声笔简码和声笔顶拼里的ss型二字词采用高频优先的原则，不再排除sn型词组；</li>
+<li>声笔系列码中的所有方案默认关闭数选词组，需要它们的用户可以自己修改schemma文件来打开；</li>
+<li>声笔快码和声笔飞码增加spsz组合二字词，优先度比其它词组低。</li>
+</ol>
+<a id="more"></a>
+<h2 id="声笔飞简和声笔快简"><a href="#声笔飞简和声笔快简" class="headerlink" title="声笔飞简和声笔快简"></a>声笔飞简和声笔快简</h2><p>声笔飞简和声笔快简分别简称为飞简和快简。飞简和快简的模式完全一样，现仅以飞简为例加以介绍，快简参此理解便可。</p>
+<p>飞简的单字输入方式与飞码完全一样，词组的编码将飞码词组的末码改为末字的前三个笔画即可，重码用<code>aeuio</code>选择。飞简实现了词组三码起顶屏和三码起动态调整码长，因而相比飞码可以大幅度缩短码长。同时，也支持自动造词。飞码用户几乎不用学习，上手就可以使用飞简，只是对笔画要很熟悉而且对动态码长要能适应才能用好。</p>
+<p>飞简的词组编码词如下，其中<code>_</code>表示空格，数字表示第几字，s表示声母，b表示笔画，^表示起始顶屏位，‘表示起始码长调整位，x表示用<code>aeuio</code>无理选择重码。括号中的两个笔画为可选的扩展编码，如果四码的重码多，可用于快速过滤重码。</p>
+<p>二字词有三种格式，它们是：</p>
+<ol>
+<li>格式一：<code>s1_b2^&#39;b2(b2b2)x</code>，用于一简字开头的二字词。例如，<code>可贵k_i 发霉f_eo</code>等。</li>
+<li>格式二：<code>s1b1b2^&#39;b2(b2b2)x</code>，用于声笔字开头的二字词。例如，<code>方圆foi 面庞meoe</code>等。</li>
+<li>格式三：<code>s1p1b2^&#39;b2(b2b2)x</code>，用于声部字开头的二字词。例如，<code>保暖brn 洪水hdsi</code>等。</li>
+</ol>
+<p>三字词的编码格式为：<code>s1s2s3^&#39;b3(b3b3)x</code>。例如，<code>解决jjj 计算机jsje 输入法srfo</code>等。</p>
+<p>多字词的编码格式为：<code>s1s2s3^&#39;b0(b0b0)x</code>，其中0表示末字的笔画。例如，<code>呼风唤雨hfhe 大势所趋dsse</code>等。</p>
+<p>以上几种格式的例子都有超过三码的，下次再输入它们时可能就只需要三码了，例如<code>发霉f_e 输入法srf 呼风唤雨hfh</code>。</p>
+<p>在输入四码后，会进行重码提示，如下所示。这时，可以直接用<code>aeuio</code>选择重码。当用户需要的字词不在首页时，可以翻页查找，也可以再追加两个笔画来快速过滤重码。</p>
+<p><img src="/images/SbfjSl.png" alt="声笔飞简示例"></p>
+<h2 id="简码和顶拼ss型二字词优化"><a href="#简码和顶拼ss型二字词优化" class="headerlink" title="简码和顶拼ss型二字词优化"></a>简码和顶拼ss型二字词优化</h2><p>在此前的简码和顶拼中，声母+声母的ss型二字词收录的是声母+笔画的sn数选简词以外的词组，使得ss型词包括了一下并不常见的二字词，如<code>武林wl</code>等。在关闭数选简词后，ss型词组的作用受到很大的影响，对大多数不使用数选简词的人很不友好。所以，对ss型二简词重新按高频优先的原则进行了安排，以便用户对真正的高频词形成条件反射。</p>
+<h2 id="默认关闭数选词组"><a href="#默认关闭数选词组" class="headerlink" title="默认关闭数选词组"></a>默认关闭数选词组</h2><p>在此前的声笔系列码中，默认是开启了数选简词的。这对初学者造成了很大的困惑，觉得输入法的难度太大了，或者觉得无所适从，所以现在默认关闭了数选简词。对于需要数选简词的熟练用户，自己修改相应输入法方案的schema文件，将其中的@gd副翻译器一行前面的注释去掉并重新部署即可。</p>
+<h2 id="快码和飞码增加spsz组合二字词"><a href="#快码和飞码增加spsz组合二字词" class="headerlink" title="快码和飞码增加spsz组合二字词"></a>快码和飞码增加spsz组合二字词</h2><p>快码和飞码中的二码字组合只有少量的是作为词组收录了，按词组方式打到这种非词组组合的时候就会打空。为了避免打空，现在将所有二码字的组合都作为「词组」进行了收录，但其优先顺序不高，在有其它字词的时候会排在后面。这样，既解决了这类打空问题，又不会抢占正常词组的位置。</p>
+]]></content>
+      <tags>
+        <tag>声笔飞简</tag>
+        <tag>声笔快简</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列重大更新</title>
+    <url>/2020/08/26/SbxlmRevamp/</url>
+    <content><![CDATA[<p>最近一个月，声笔系列进行了一系列的创新探索，在发布了飞简和快简之后，又先后进行了飞速、快速、飞讯、快讯方案的实践，最终确定采用飞讯和快讯来分别取代原来声笔体系中的飞单和快单，同时取消飞简、快简、飞速和快速。</p>
+<a id="more"></a>
+<p>飞简和快简的动态码长虽然很短，但是不适合用于专业性的输入法，因为过于动态后会影响击键率的提高，不利于形成条件反射，虽然刚正式发布不久就决定放弃了。飞速和快速在第四码时采用数字笔画，导致无法兼容数选简词，四码词组空间狭小，虽然可以通过扩展编码来扩大空间并通过动态码长来缩短平均码长，但又会导致击键率下降，所以没有正式发布被放弃了。</p>
+<p>最后是飞讯和快讯取得了非常满意的效果，在支持单字延迟二码顶的同时又具有庞大的词组空间，字词输入时能做到无缝衔接，没有飞单和快单输入词组时二码后加空格的「阻断感」，在两码字后误击了空格也没有关系，多字词还能采用自然的简拼。因此，重新修正了声笔系列的体系结构，用飞讯取代了飞单，用快讯取代了快单。这算是声笔系列体系上的重大更新。至此，声笔系列已日臻成熟和完善。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列</tag>
+        <tag>重大更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为各款输入法增加整句模式</title>
+    <url>/2019/09/19/SentenceModes/</url>
+    <content><![CDATA[<p>现代主流的拼音输入法都采用整句模式，其特点是，没有复杂的编码规则，输入方式灵活多变，因而学习门坎非常低。当然，所谓的整句是指可以按整句来输入，不是说只能输入整句，以字词为单位输入也是可以的，不过使用空格来上屏的情况就很多了。按字词输入，用空格上屏对全拼来说是很自然的，但是对双拼来说就显得笨拙。</p>
+<a id="more"></a>
+<p>全拼整句可兼容简拼和混拼，可以设置模糊音。但是，音节的准确切分是一个比较大的问题。另一个更大的问题是用户可能养成不良的输入习惯。比如，有的用户只知道采用单字加联想来进行输入；有的用户输入二字词时习惯用一、二字的声母，然后就进行分页选重操作。殊不知，这些简单易用的操作方式，在进行大量的文本输入的时候，效率是非常低下的。并且，一旦形成习惯，就很难纠正，同时也没有人提醒他们那是低效的方式，他们的自我感觉还很好，因为他们根本就不知道还有更好的方式。考虑到输入法使用的频繁程度，这类用户在输入方面的时间浪费是惊人的。</p>
+<p>双拼整句，可以比较自由地自定义声母和韵的组合方式，一方面可以缩短码长，另一方面可以改善手感。同时，也可以增加形码辅助或笔画筛选，从而减少重码。双拼整句也有自己的问题。首先，需要记忆双拼的翘舌声母、零声母和韵母的表示方法；如果采用形辅，则还要记忆形辅的编码。其次，不加形辅的话，重码很多，而加了形辅又会造成字码切分问题。</p>
+<p>顶功编码做成整句输入法，即使随时添加任意个笔画辅助码都可以完全避免字码切分岐义。如果正常输入按照一字两键的方式，那么飞码和快码的126个两键字是完全确定的，可以在很大的程度上提高整句输入的准确性。简码可以构造两型整句方案，一型可以任意输入1至4码，另一型确定一、二简字，正常输入三码，必要时可用四码。声笔双拼和声笔星二可以确定一简字，正常按照一字两键输入，可以用1至2笔画进行辅助去重，也比一般的两码连打方案效果要好。</p>
+<p>所以，声笔系列码现在增加了飞码整句、快码整句、简码整句1型、简码整句2型、声双整句和声二整句。</p>
+<p>2019年9月24日，通过修改RIME程序实现了整句模式下的字母选重。所以，整句方案也做了一些调整，以便充分利用这个新的特性。简码整句的单字编码均改为sbb，1型可以任意输入1至3码，2型确定一简字和二简字，其它字用三码输入；两型简码整句都在三码时用aeiou来进行字母选重。其它非简码的整句输入方案，均采用两码一字的简便方法；有重码时，不再追加笔画辅助，而是直接利用aeiou来选择重码。</p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>整句模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔简码重磅发布</title>
+    <url>/2019/08/04/ReleaseSbjm/</url>
+    <content><![CDATA[<p>声笔简码已经通过了长期的准备、测试和优化，现在终于发布了！</p>
+<p>它是在声笔码和声笔飞码后，又一次输入法的创新，综合运用了很多独创的黑科技，包括连续字词混合顶屏、自动动态码长调整、精准自动造词、快捷字母选重、字词扩展编码、静态高频字词、字词编码分流、无切换码表反查等。</p>
+<p>声笔简码也是对10多年顶功类输入法创新的综合运用，它将再一次对输入法的发展方向产生深远的影响。</p>
+<p>更多详情，请移步<a href="https://sbxlm.github.io/sbjm/" target="_blank" rel="noopener">声笔简码</a>，或者直接<a href="https://github.com/sbxlm/sbxlm.github.io/releases/tag/Sbjm" target="_blank" rel="noopener">下载原生程序</a>或<a href="https://github.com/sbxlm/sbxlm.github.io/releases/tag/20190723" target="_blank" rel="noopener">RIME程序</a>。</p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>声笔简码</tag>
+        <tag>顶功</tag>
+        <tag>字母选重</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何关闭Wow64重定向？</title>
+    <url>/2019/07/12/disable-redirect/</url>
+    <content><![CDATA[<p>先参见<a href="https://blog.csdn.net/karlxzy/article/details/42170419" target="_blank" rel="noopener">https://blog.csdn.net/karlxzy/article/details/42170419</a></p>
+<p>现在声笔系列输入法的安装要先判断Windows是32位的还是64位的，再通过不同的安装程序来安装，用起来不是很方便。通过关闭Wow64重定向，就可以用一个32位程序同时解决64位和32位Windows输入法的安装问题。<br><a id="more"></a></p>
+]]></content>
+      <tags>
+        <tag>关闭</tag>
+        <tag>Wow64</tag>
+        <tag>重定向</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码的词库优化实验</title>
+    <url>/2019/08/29/cikuyh/</url>
+    <content><![CDATA[<h2 id="面临的问题"><a href="#面临的问题" class="headerlink" title="面临的问题"></a>面临的问题</h2><p>此前的声笔系列码词库是基于微软拼音、现代汉语词典、新华字典和成语词典，并采用了北语词频。结果，在约14万词中，只有约5万匹配上的频度，剩余的词组被赋与了-1的频度。虽然，北语词频做得很科学，有分类词频，也有综合词频。但是，北语词频比较陈旧，不能很好都反应词频的变化情况。另外，使用的以上词典数据年代比较久远，很多新的词汇都缺乏。</p>
+<a id="more"></a>
+<h2 id="解决的方案"><a href="#解决的方案" class="headerlink" title="解决的方案"></a>解决的方案</h2><p>为了解决以上问题，我又结合了相对较新的（2012年的）搜狗词频数据。搜狗词频大于0的约有15万条词组，与原来的声笔系列码词组合并去重后，得到约20万词组。这些词组的具体情况为：二字词90330条，多字词110273条，共计200603条。将这些词组按北语词频和搜狗词频联合排序，并以北语词频为优先，在北语词频相同时再以搜狗词频排序。在最终码表中用的是搜狗词频，表现出的效果是：简码按联合频率设置，重码按搜狗频率排序。</p>
+<h2 id="具体的实施"><a href="#具体的实施" class="headerlink" title="具体的实施"></a>具体的实施</h2><h3 id="声笔简码"><a href="#声笔简码" class="headerlink" title="声笔简码"></a>声笔简码</h3><p>首先将这20万词组用于声笔简码，四码重码数限制在29以内，即5页以内，并留最后一个空码位以便加快造词过程。按联合词频的顺序舍弃词频最低的词组后得到二字词78098条，多字词110210条，共计188308条。为什么要对重码数进行限制呢？这是因为翻页过多会严重影响键速，而且RIME的在线造词产生的词组都是放在最后的，选择起来非常麻烦。</p>
+<h3 id="声笔飞码X"><a href="#声笔飞码X" class="headerlink" title="声笔飞码X"></a>声笔飞码X</h3><p>声笔飞码X的词组没有截断简码，只有半有理的简码。它的词组编码与传统四码输入法类似，所以具有很大的四码空间，只需把重码数限制在11以内就行了。按搜狗词频舍弃低频词后，得到199923条词组。另外，在sbb空间安排与飞码K相同的525个三键高频二字词，并在此之外利用syb空闲空间安排69个高频二字词。最后，在sbs空间上放置1840个非强制的二字词，在sss空间上放置8100个非强制的三字词。</p>
+<h3 id="声笔飞码K"><a href="#声笔飞码K" class="headerlink" title="声笔飞码K"></a>声笔飞码K</h3><p>声笔飞码K的词组采用分级收录的方法，不收录用单字输入时效率更高的词组，最长码为5，没有作重码数的限制，收二字词40082条。三字词和四字词不分级，分别收录45276条和64953条。另外，利用spb空闲空间安排69高频二字词。由于sb字开始的二字词按s1b1b2的规则只有523个，有两个空码位fei和qia，所以在它们上面分别安放“否则”和“曲线”两个不规则词，以充分利用空间。</p>
+<h3 id="声笔飞码S"><a href="#声笔飞码S" class="headerlink" title="声笔飞码S"></a>声笔飞码S</h3><p>声笔飞码S在收录词组时，把重码数限制在11以内，收词151036条，包括二字词46287条，三字词39798条，多字词64951条。另外，利用spb空闲空间安排69高频二字词。</p>
+<h3 id="声笔快码X"><a href="#声笔快码X" class="headerlink" title="声笔快码X"></a>声笔快码X</h3><p>声笔快码X的词组没有截断简码，只有半有理的简码。它的词组编码与传统四码输入法类似，所以具有很大的四码空间，只需把重码数限制在11以内就行了。按搜狗词频舍弃低频词后，得到197459条词组。另外，在sbb空间安排与飞码K相同的525个三键高频二字词，并在此之外利用sy和syb空闲空间分别安排95个和589个高频二字词。最后，在sbs空间上放置1840个非强制的二字词，在sss空闲空间上放置8100个非强制的三字词。</p>
+<h3 id="声笔快码K"><a href="#声笔快码K" class="headerlink" title="声笔快码K"></a>声笔快码K</h3><p>声笔快码K的词组采用分级收录的方法，不收录用单字输入时效率更高的词组，最长码为5，没有作重码数的限制，收二字词77909条。三字词和四字词不分级，分别收录45243条和57734条。在sbb空间安排与飞码K相同的525个三键高频二字词，并在此之外利用sy和syb空闲空间分别安排95个和589个高频二字词。</p>
+<h3 id="声笔快码S"><a href="#声笔快码S" class="headerlink" title="声笔快码S"></a>声笔快码S</h3><p>声笔快码S在收录词组时，把重码数限制在11以内，收词152420条，包括二字词47671条，三字词39798条，多字词64951条。另外，利用sy和syb空闲空间分别安排95个和589个高频二字词。</p>
+<h3 id="声笔双拼"><a href="#声笔双拼" class="headerlink" title="声笔双拼"></a>声笔双拼</h3><p>声笔双拼是对传统自然码双拼的改造，它收四码词197456条，并利用sy和syb空闲空间安排了各166和963个高频二字词。最后，在sbs空间上放置XXXX个非强制的二字词，在sss空闲空间上放置8105个非强制的三字词。</p>
+<h3 id="声笔星二"><a href="#声笔星二" class="headerlink" title="声笔星二"></a>声笔星二</h3><p>声笔星二的词组是对星二的改造，它收四码词组198797条，把重码数限制在11以内，并利用sd和sdb空闲空间安排了各62和517个高频二字词。最后，在sbs空间上放置1848个非强制的二字词，在sss空闲空间上放置8097个非强制的三字词。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>词库</tag>
+        <tag>优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>飞码（X）和快码（X）的优化实验</title>
+    <url>/2019/08/15/fmkmyh/</url>
+    <content><![CDATA[<h2 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h2><p>在8.00的飞码（X）和快码（X）中，sbb和sbbb只是简单地放了声笔字，实际上几乎没投入使用，非常浪费。特别是在新增的飞码X和快码X中，因为没有sbbs型的二字词，sbb是只需要三键的短码空间，不好好利用的话，实在可惜。同时，飞码（X）中有少量spb短码空间是空闲的，而在快码（X）中存在着不少的sy和大量的syb短码空闲空间。</p>
+<p>RIME版飞码（X）和快码（X）面临的另一个问题是，105个sb型简码字没有原生版那样的提示，初学者必须死记。</p>
+<a id="more"></a>
+<h2 id="短码空间的利用"><a href="#短码空间的利用" class="headerlink" title="短码空间的利用"></a>短码空间的利用</h2><h3 id="飞码（X）"><a href="#飞码（X）" class="headerlink" title="飞码（X）"></a>飞码（X）</h3><p>首先，利用spb空闲空间。从声笔简码的二字词中抽出高频的填入该空间，脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,3), chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu &#x3D; 3 and left(bianma,3) not in (</span><br><span class="line">select bianma &#x3D; left(a.bianma,3)</span><br><span class="line">from spdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,3) &#x3D; left(b.bianma,3)</span><br><span class="line">where a.changdu &#x3D; 3 and b.changdu &#x3D; 3)</span><br><span class="line">order by chupin desc</span><br></pre></td></tr></table></figure>
+<p>一共抽取了67个ssb型的二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">那个	ngu	169294</span><br><span class="line">儿子	vza	61768</span><br><span class="line">任务	rwu	57310</span><br><span class="line">不好	bha	54085</span><br><span class="line">放心	fxo	46543</span><br><span class="line">若是	rsi	39942</span><br><span class="line">空中	kzi	25849</span><br><span class="line">吩咐	ffi	25347</span><br><span class="line">内心	nxo	25231</span><br><span class="line">暗中	vzi	23181</span><br></pre></td></tr></table></figure>
+<p>其次，利用sbb空间。对于飞码和飞码X，利用的方式是不一样的。</p>
+<p>对于飞码，在sbb上安排非强制性二字词简码，其取码规则为s1b1b1，SQL脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select text&#x3D;rtrim(zici), code&#x3D;left(bianma,3)</span><br><span class="line">from spciz</span><br><span class="line">where xuhao in (</span><br><span class="line">select xuhao from (</span><br><span class="line">select bianma&#x3D;left(bianma,3), xuhao&#x3D;min(xuhao) </span><br><span class="line">from spciz</span><br><span class="line">where len(rtrim(zici)) &#x3D; 2</span><br><span class="line">group by left(bianma,3)</span><br><span class="line">) tmp)</span><br></pre></td></tr></table></figure>
+<p>一共抽取了451个二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">告诉	gue</span><br><span class="line">声音	sei</span><br><span class="line">眼睛	yia</span><br><span class="line">一切	yee</span><br><span class="line">改革	gae</span><br><span class="line">朋友	pua</span><br><span class="line">研究	yeu</span><br><span class="line">代表	dui</span><br><span class="line">不禁	beu</span><br><span class="line">支持	zei</span><br></pre></td></tr></table></figure>
+<p>对于飞码X，在为sbb空间安排二字词时，不能包含已经为其抽取的spb型二字词，脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,1) + substring(bianma,3,2), </span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where xuhao in (</span><br><span class="line">select xuhao from</span><br><span class="line">(select bianma &#x3D; left(bianma,1) + substring(bianma,3,2), xuhao &#x3D; min(xuhao) from sbjerz</span><br><span class="line">where rtrim(zici) not in (</span><br><span class="line">select zici from (</span><br><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,3), </span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu &#x3D; 3 and left(bianma,3) not in (</span><br><span class="line">select bianma &#x3D; left(a.bianma,3)</span><br><span class="line">from spdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,3) &#x3D; left(b.bianma,3)</span><br><span class="line">where a.changdu &#x3D; 3 and b.changdu &#x3D; 3)</span><br><span class="line">) tmp)</span><br><span class="line">group by left(bianma,1) + substring(bianma,3,2)) tmp2)</span><br></pre></td></tr></table></figure>
+<p>一共抽取了525个s1b2b2型的二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个	yuo	997773</span><br><span class="line">没有	meu	826617</span><br><span class="line">我们	wui	812417</span><br><span class="line">他们	tui	791018</span><br><span class="line">什么	sua	742524</span><br><span class="line">自己	zae	741012</span><br><span class="line">知道	zou	574771</span><br><span class="line">可以	kao	432546</span><br><span class="line">这个	zuo	404217</span><br><span class="line">就是	jia	376685</span><br></pre></td></tr></table></figure>
+<h3 id="快码（X）"><a href="#快码（X）" class="headerlink" title="快码（X）"></a>快码（X）</h3><p>首先，利用sy空闲空间。从声笔简码的二字词中抽出高频的填入该空间，脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,2), chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu &#x3D; 2 and left(bianma,2) not in (</span><br><span class="line">select bianma &#x3D; left(a.bianma,2)</span><br><span class="line">from ybdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,2) &#x3D; left(b.bianma,2)</span><br><span class="line">where a.changdu &#x3D; 2 and b.changdu &#x3D; 2)</span><br></pre></td></tr></table></figure>
+<p>一共抽取了95个ss型的二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">可以	ky	432546</span><br><span class="line">已经	yj	325164</span><br><span class="line">发展	fz	323016</span><br><span class="line">问题	wt	279209</span><br><span class="line">一定	yd	201525</span><br><span class="line">可能	kn	185841</span><br><span class="line">今天	jt	173941</span><br><span class="line">觉得	jd	172314</span><br><span class="line">姑娘	gn	168226</span><br><span class="line">一些	yx	165456</span><br></pre></td></tr></table></figure>
+<p>第二，利用syb空闲空间。从声笔简码的二字词中抽出高频的填入该空间，脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,3), chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu &#x3D; 3 and left(bianma,3) not in (</span><br><span class="line">select bianma &#x3D; left(a.bianma,3)</span><br><span class="line">from ybdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,3) &#x3D; left(b.bianma,3)</span><br><span class="line">where a.changdu &#x3D; 3 and b.changdu &#x3D; 3)</span><br><span class="line">order by chupin desc</span><br></pre></td></tr></table></figure>
+<p>一共抽取了587个ssb型的二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个	ygu	997773</span><br><span class="line">我们	wmu	812417</span><br><span class="line">起来	qle	330495</span><br><span class="line">还有	hye	191450</span><br><span class="line">一点	ydi	189033</span><br><span class="line">而且	vqi	176585</span><br><span class="line">一下	yxe	167905</span><br><span class="line">之间	zjo	139129</span><br><span class="line">下来	xle	134533</span><br><span class="line">眼睛	yji	133992</span><br></pre></td></tr></table></figure>
+<p>第三，利用sbb空间。对于快码和快码X，利用的方式是不一样的。</p>
+<p>对于快码，在sbb上安排非强制性二字词简码，其取码规则为s1b1b1，SQL脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select text&#x3D;rtrim(zici), code&#x3D;left(bianma,3)</span><br><span class="line">from ybciz</span><br><span class="line">where xuhao in (</span><br><span class="line">select xuhao from (</span><br><span class="line">select bianma&#x3D;left(bianma,3), xuhao&#x3D;min(xuhao) </span><br><span class="line">from ybciz</span><br><span class="line">where len(rtrim(zici)) &#x3D; 2</span><br><span class="line">group by left(bianma,3)</span><br><span class="line">) tmp)</span><br></pre></td></tr></table></figure>
+<p>一共抽取了454个二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">经济	jaa</span><br><span class="line">社会	soa</span><br><span class="line">世界	sei</span><br><span class="line">市场	soe</span><br><span class="line">开始	kee</span><br><span class="line">技术	jei</span><br><span class="line">希望	xuo</span><br><span class="line">表示	bee</span><br><span class="line">改革	gae</span><br><span class="line">国际	gia</span><br></pre></td></tr></table></figure>
+<p>对于快码X，在为sbb空间安排二字词时，不能包含已经为其抽取的sy和syb型二字词，脚本如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,1) + substring(bianma,3,2),</span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where xuhao in (</span><br><span class="line">select xuhao from</span><br><span class="line">(select bianma &#x3D; left(bianma,1) + substring(bianma,3,2), xuhao &#x3D; min(xuhao) from sbjerz</span><br><span class="line">where rtrim(zici) not in (</span><br><span class="line">select zici from (</span><br><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,2),</span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu &#x3D; 2 and left(bianma,2) not in (</span><br><span class="line">select bianma &#x3D; left(a.bianma,2)</span><br><span class="line">from ybdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,2) &#x3D; left(b.bianma,2)</span><br><span class="line">where a.changdu &#x3D; 2 and b.changdu &#x3D; 2)</span><br><span class="line">union</span><br><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,3),</span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end from sbjerz</span><br><span class="line">where changdu &#x3D; 3 and left(bianma,3) not in (</span><br><span class="line">select bianma &#x3D; left(a.bianma,3)</span><br><span class="line">from ybdanz a</span><br><span class="line">right join sbjerz b on left(a.bianma,3) &#x3D; left(b.bianma,3)</span><br><span class="line">where a.changdu &#x3D; 3 and b.changdu &#x3D; 3)</span><br><span class="line">) tmp)</span><br><span class="line">group by left(bianma,1) + substring(bianma,3,2)) tmp2)</span><br></pre></td></tr></table></figure>
+<p>一共抽取了525个s1b2b2型的二字词，罗列其中的前10条如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">没有	meu	826617</span><br><span class="line">他们	tui	791018</span><br><span class="line">什么	sua	742524</span><br><span class="line">自己	zae	741012</span><br><span class="line">知道	zou	574771</span><br><span class="line">这个	zuo	404217</span><br><span class="line">就是	jia	376685</span><br><span class="line">中国	zia	336314</span><br><span class="line">这样	zei	328523</span><br><span class="line">因为	you	317518</span><br></pre></td></tr></table></figure>
+<h3 id="公共"><a href="#公共" class="headerlink" title="公共"></a>公共</h3><p>无论是飞码（X）还是快码（X），都还要利用sbbbx空间。将sbbb空间用于声笔单字输入，只有1、2级强制简码，重码字用aeiou来选择。声笔单字供用户在不知道偏旁部首或韵母时使用。‸</p>
+<p>对于非X型的，脚本如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,changdu),</span><br><span class="line">chupin, stem &#x3D; left(bianma,4) + upper(left(bianma,1))</span><br><span class="line">from sbdanz where changdu &lt;&#x3D; 2</span><br><span class="line">union</span><br><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,4),</span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end,</span><br><span class="line">stem &#x3D; left(bianma,4) + upper(left(bianma,1))</span><br><span class="line">from sbdanz where changdu &gt; 2</span><br><span class="line">order by chupin desc</span><br></pre></td></tr></table></figure>
+<p>对于X型的，由于正码的单字码表中已经包含了1、2级简码，并且不再需要构词码，所以脚本如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select zici &#x3D; rtrim(zici), bianma &#x3D; left(bianma,4),</span><br><span class="line">chupin &#x3D; case chupin when -1 then 0 else chupin end</span><br><span class="line">from sbdanz where changdu &gt; 2</span><br></pre></td></tr></table></figure>
+<h2 id="105个sb简码字的提示"><a href="#105个sb简码字的提示" class="headerlink" title="105个sb简码字的提示"></a>105个sb简码字的提示</h2><p>制作一个滤镜供飞码（X）和快码（X）使用，包括sb105.txt和sb105.json，放在Rime的OpenCC子文件夹中。</p>
+<p>sb105.txt的内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不	&amp;nbsp边a&amp;nbsp把e&amp;nbsp别i&amp;nbsp部o&amp;nbsp白u&amp;nbsp</span><br><span class="line">出	&amp;nbsp除a&amp;nbsp成e&amp;nbsp此i&amp;nbsp次o&amp;nbsp从u&amp;nbsp</span><br><span class="line">的	&amp;nbsp对a&amp;nbsp大e&amp;nbsp当i&amp;nbsp道o&amp;nbsp得u&amp;nbsp</span><br><span class="line">发	&amp;nbsp飞a&amp;nbsp夫e&amp;nbsp非i&amp;nbsp方o&amp;nbsp分u&amp;nbsp</span><br><span class="line">个	&amp;nbsp给a&amp;nbsp过e&amp;nbsp国i&amp;nbsp高o&amp;nbsp公u&amp;nbsp</span><br><span class="line">和	&amp;nbsp好a&amp;nbsp还e&amp;nbsp回i&amp;nbsp话o&amp;nbsp会u&amp;nbsp</span><br><span class="line">就	&amp;nbsp经a&amp;nbsp进e&amp;nbsp见i&amp;nbsp家o&amp;nbsp几u&amp;nbsp</span><br><span class="line">可	&amp;nbsp孔a&amp;nbsp开e&amp;nbsp口i&amp;nbsp快o&amp;nbsp看u&amp;nbsp</span><br><span class="line">了	&amp;nbsp力a&amp;nbsp来e&amp;nbsp里i&amp;nbsp立o&amp;nbsp利u&amp;nbsp</span><br><span class="line">们	&amp;nbsp民a&amp;nbsp面e&amp;nbsp明i&amp;nbsp没o&amp;nbsp么u&amp;nbsp</span><br><span class="line">你	&amp;nbsp那a&amp;nbsp南e&amp;nbsp内i&amp;nbsp农o&amp;nbsp年u&amp;nbsp</span><br><span class="line">平	&amp;nbsp皮a&amp;nbsp破e&amp;nbsp品i&amp;nbsp怕o&amp;nbsp片u&amp;nbsp</span><br><span class="line">去	&amp;nbsp强a&amp;nbsp起e&amp;nbsp且i&amp;nbsp前o&amp;nbsp全u&amp;nbsp</span><br><span class="line">人	&amp;nbsp如a&amp;nbsp若e&amp;nbsp日i&amp;nbsp让o&amp;nbsp然u&amp;nbsp</span><br><span class="line">是	&amp;nbsp双a&amp;nbsp事e&amp;nbsp上i&amp;nbsp说o&amp;nbsp手u&amp;nbsp</span><br><span class="line">他	&amp;nbsp她a&amp;nbsp天e&amp;nbsp同i&amp;nbsp头o&amp;nbsp体u&amp;nbsp</span><br><span class="line">而	&amp;nbsp阿a&amp;nbsp二e&amp;nbsp暗i&amp;nbsp安o&amp;nbsp儿u&amp;nbsp</span><br><span class="line">我	&amp;nbsp维a&amp;nbsp无e&amp;nbsp晚i&amp;nbsp为o&amp;nbsp外u&amp;nbsp</span><br><span class="line">下	&amp;nbsp线a&amp;nbsp想e&amp;nbsp小i&amp;nbsp心o&amp;nbsp笑u&amp;nbsp</span><br><span class="line">一	&amp;nbsp也a&amp;nbsp有e&amp;nbsp眼i&amp;nbsp意o&amp;nbsp用u&amp;nbsp</span><br><span class="line">在	&amp;nbsp子a&amp;nbsp正e&amp;nbsp中i&amp;nbsp着o&amp;nbsp自u&amp;nbsp</span><br></pre></td></tr></table></figure>
+<p>sb105.json的内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;sb105&quot;,</span><br><span class="line">  &quot;segmentation&quot;: &#123;</span><br><span class="line">    &quot;type&quot;: &quot;mmseg&quot;,</span><br><span class="line">    &quot;dict&quot;: &#123;</span><br><span class="line">      &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">      &quot;file&quot;: &quot;sb105.txt&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;conversion_chain&quot;: [&#123;</span><br><span class="line">    &quot;dict&quot;: &#123;</span><br><span class="line">      &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">      &quot;file&quot;: &quot;sb105.txt&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外，再创建为飞码、飞码X、快码和快码X分别创建一个配置文件：sbfm.custom.yaml, sbfmx.custom.yaml, sbkm.custom.yaml和sbkmx.custom.yaml，放在Rime文件夹中。这个几个文件的内容完全一样，如下所示。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">patch:</span><br><span class="line">  &quot;switches&#x2F;@next&quot;: </span><br><span class="line">    name: sb105</span><br><span class="line">    reset: 1 #初始状态,0关1开</span><br><span class="line"></span><br><span class="line">  &quot;engine&#x2F;filters&#x2F;@next&quot;: simplifier@sb105</span><br><span class="line">  sb105:</span><br><span class="line">    opencc_config: sb105.json</span><br><span class="line">    option_name: sb105</span><br><span class="line">    show_in_comment: true #开启编码滤镜</span><br><span class="line">    comment_format:  #编码滤镜正则处理</span><br><span class="line">      - &quot;xform&#x2F;&lt;br&gt;&#x2F;\n&#x2F;&quot; #编码滤镜内容换行</span><br><span class="line">      - &quot;xform&#x2F;&amp;nbsp&#x2F; &#x2F;&quot; #编码滤镜内容显示空格</span><br><span class="line">    tags:</span><br><span class="line">      - abc</span><br><span class="line">    tips: char #none无注释,char单字注释,all全部注释</span><br></pre></td></tr></table></figure>
+<p>完成以上步骤后，重新部署就可以生效。</p>
+<p>在计算机上的声笔字提示效果如下：</p>
+<p><img src="/images/sb105prompt1.png" alt="电脑上的声笔字提示"></p>
+<p>在手机上的声笔字提示效果效果如下：</p>
+<p><img src="/images/sb105prompt2.jpg" alt="电脑上的声笔字提示"></p>
+<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p>使用发现，开滤镜提示sb字后，导致一简字不能参与造词。还没有找到解决办法，只能暂时放弃滤镜。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>保留码表优化结果，暂时放弃用滤镜提示声笔字的功能。</p>
+]]></content>
+      <tags>
+        <tag>飞码</tag>
+        <tag>快码</tag>
+        <tag>优化</tag>
+        <tag>飞码X</tag>
+        <tag>快码X</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于Git的一些技巧</title>
+    <url>/2019/07/05/git-tips/</url>
+    <content><![CDATA[<h2 id="使用子模块"><a href="#使用子模块" class="headerlink" title="使用子模块"></a>使用子模块</h2><p>在Git官网上，有针对子模块的专门说明，详见<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Submodules</a>。</p>
+<h3 id="添加子模块"><a href="#添加子模块" class="headerlink" title="添加子模块"></a>添加子模块</h3><p>比如，添加一个子模块DbConnector：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule add https://github.com/chaconinc/DbConnector</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="克隆带子模块的仓库"><a href="#克隆带子模块的仓库" class="headerlink" title="克隆带子模块的仓库"></a>克隆带子模块的仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/chaconinc/MainProject</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
+<p>以上三个命令也可以用下面引命令代替：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> --recursive https://github.com/chaconinc/MainProject</span><br></pre></td></tr></table></figure>
+<h3 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h3><p>采用以下三个步骤：详见<a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule" target="_blank" rel="noopener">Stack Overflow</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule deinit -f -- a/submodule</span><br><span class="line">$ rm -rf .git/modules/a/submodule</span><br><span class="line">$ git rm -f a/submodule</span><br></pre></td></tr></table></figure>
+<h2 id="使用多个账号"><a href="#使用多个账号" class="headerlink" title="使用多个账号"></a>使用多个账号</h2><p>如何在同一台计算机上使用多个Github账号？要点如下，详细方法见<a href="https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer" target="_blank" rel="noopener">Stack Overflow</a>。</p>
+<p>步骤一：为first和second两个账号生成两个RSA密钥，名字分别为git_first和git_second。当然，这里的名字只是举例，你的名字肯定不一样。如果要用更多的账号，就需生成更多的密钥。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email-address1"</span> <span class="comment"># name it git_first when prompted</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email-address2"</span> <span class="comment"># name it git_second when prompted</span></span><br></pre></td></tr></table></figure>
+<p>生成密钥后，将公钥里的内容，在对应的Github账号中设置好。</p>
+<p>步骤二：创建config文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ touch config</span><br><span class="line">$ vim config</span><br></pre></td></tr></table></figure>
+<p>config文件的内容如下。其中，第一个确定了默认的Host，后面的必须另外命名。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~&#x2F;.ssh&#x2F;git_first</span><br><span class="line">Host git_second</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~&#x2F;.ssh&#x2F;git_second</span><br></pre></td></tr></table></figure>
+<p>步骤三、Github仓库repo1和repo2设置要使用的密钥。注意，@之后跟随的Host名称就是上面的config中设置的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:first/repo1.git</span><br><span class="line">$ git remote add origin git@git_second:second/repo2.git</span><br></pre></td></tr></table></figure>
+<h2 id="同步上游仓库的更新"><a href="#同步上游仓库的更新" class="headerlink" title="同步上游仓库的更新"></a>同步上游仓库的更新</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your/repo</span><br><span class="line">$ git remote add upstream http://github.com/your-account/upstream-repo.git</span><br><span class="line">$ git fetch upstream</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>Github</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔简码扩展编码优化</title>
+    <url>/2019/10/03/jmkzmsyh/</url>
+    <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在用声笔简码输入单字和二字词时，常常会有很多重码，初学者往往通过翻页来查找需要的字词。他们对声笔简码不熟悉，键速很慢，翻页和查找所占的时间比例不大，不会感到什么不方便。当用户对声笔简码逐步熟悉后，就会觉得翻页和查找占的时间比例越来越大，而宁可使用扩展编码。</p>
+<a id="more"></a>
+<p>然而，此前的声笔简码使用扩展编码时，仅仅显示那些在第四码时第一页没有显示的字词。所以，必须先确定四码时候选窗口中确实没有想要的字词，再使用扩展编码。当候选项比较多时，眼睛的频繁扫视仍然是很费时间和精力的。</p>
+<h2 id="措施"><a href="#措施" class="headerlink" title="措施"></a>措施</h2><p>对于熟手来说，只需要看编码窗口中的一项就行了。如果该项不是想要的字词，就直接追加两个笔画，基本上就没有重码选择的顾虑了。如果是嵌入显示的，用户只需要看插入光标处的内容即可。</p>
+<p>本次的优化做到了在使用扩展编码进行重码过滤时，仅仅排除了第四码时显示的第一项，所以用户只需要判断这第一项是否是所需要的就行了，从而可以大大地加快用户的操作速度。</p>
+]]></content>
+      <tags>
+        <tag>声笔简码</tag>
+        <tag>优化</tag>
+        <tag>扩展编码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主流拼音输入法存在的问题及其解决</title>
+    <url>/2021/04/21/pywtjj/</url>
+    <content><![CDATA[<p>现在的主流拼音输入法，造成的问题比解决的问题多。</p>
+<ul>
+<li>弹窗、广告、隐私忧患这些东西，你不用这些输入法还好，用了就跟随而来，而且请神容易送神难，常常还有七大姑八大姨的随之蜂拥而至。</li>
+<li>正事没有干好，花里胡哨的功能一大堆，换肤、斗图、表情不断地来烦你，还常常惦记着你的垃圾是不是太多了，你的浏览器是不是该换了，有什么新词你还不知道，就是不停地刷存在感，还让别人正常输入文字吗。</li>
+</ul>
+<p>我们再来看看当前的拼音输入法存在的主要问题是什么？</p>
+<a id="more"></a>
+<ul>
+<li>音节界线不清：比如，<code>pingan</code>可能是<code>ping&#39;an</code>，也可能是<code>pin&#39;gan</code>；<code>xian</code>也可能是<code>xi&#39;an</code>；<code>dzay</code>，可以切分为<code>d&#39;za&#39;y</code>或者<code>d&#39;z&#39;a&#39;y</code>。</li>
+<li>拼写形式过长：<code>zhuang</code>、<code>chuang</code>、<code>jiong</code>、<code>xiang</code>等等非常影响输入效率。</li>
+<li>字词重码过多：<code>yi</code>、<code>shi</code>等音节有上百个同音字；<code>yiyi</code>、<code>shishi</code>等也有大量的同音词；即使利用整句上下文也无法避免频繁选择重码。搜狗拼音虽然有TAB后加辅助码的方法，但是非常低效，而且只能为首字加辅助码。</li>
+<li>回溯修改麻烦：在需要回改的时候，往往需要从头逐个选择重码，非常烦琐。</li>
+</ul>
+<p>这些问题在<a href="/sbpy/">声笔拼音</a>中都得到了较好的解决。声笔拼音明确了音节界线，简化了拼写形式，支持模糊后缀查找，能够直接用笔画筛选重码，基本上兼容一般拼音输入法，可以实现零成本迁移，但是输入效率得到了较大提高。还有，它绝对没有弹窗、广告、隐私忧患，没有花里胡哨的无用功能，专心为你的输入助力，而且还开源透明，没有猫腻，让你明白放心。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>两种截然不同的汉字输入场景</title>
+    <url>/2020/01/08/hzsrcj/</url>
+    <content><![CDATA[<p>汉字输入法有两种截然不同的应用场景，一种是大众应用，另一种是专业应用。所谓大众应用，是指一般的人使用汉字输入法来满足日常的工作和生活需要，比如写作、聊天等。所谓专业应用，是指打字员、参与打字比赛的人等使用汉字输入法来快速录入汉字。</p>
+<a id="more"></a>
+<h2 id="大众应用"><a href="#大众应用" class="headerlink" title="大众应用"></a>大众应用</h2><p>大众应用时，输入的文本类型是有限或者非常有限的。聊天是最常见的汉字输入大众应用场景。每个人所聊的话题都是有限的，使用的单字和词组数量多不大，而且行文要求比较随意，不太注意语法和用词，网络流行词汇用得很频繁。公文和论文写作是另一种常见的汉字输入大众应用。每个人的工作和研究都局限于一定的领域，因而所用的字、词也相对固定和有限。用专业的话来说就是，这类文本的信息熵小，冗余度大，有很大的压缩余地。另外，大众用户很少会专门花费大量的时间来学习输入法。</p>
+<p>现代的汉语拼音输入法很好地适应了这种情况，所以成为了现代汉字输入的绝对主流。一方面，现在大多数人都有比较好的拼音基础，因为汉语拼音是小学的必学内容。另一方面，拼音输入法可以通过简拼和混拼来压缩编码，从而在一定彻底上弥补全拼输入时码长过长而带来的效率底下问题。拼音输入还提供了方便的组词功能，可以不断的在输入过程中增加新的词汇，从而进一步压缩编码，缩短码长，提高效率。巨型的云词库则减轻了人们组词的负担。</p>
+<p>声笔系列码中的声笔拼音和声笔简码都是面向大众应用的汉字输入法，但是在难度和效率上有所不同，为用户提供了更多的选择。声笔拼音和一般的拼音输入法最接近，只是增加了用v来作为以<code>a e o</code>开始的音节的零声母，克服了音节切分上的歧义。声笔简码则是一种简单、快捷的字词型输入法，对于一般的连续文本，其字均码长比五笔字型还短得多，具有最高的投入产出比，是绝大多数人进行汉字输入的最佳选择。</p>
+<h2 id="专业应用"><a href="#专业应用" class="headerlink" title="专业应用"></a>专业应用</h2><p>专业应用时，输入的文本类型是很广泛的。专业打字员曾经是专业应用的主力，而五笔字型则是专业打字的主流。文本类型繁多（打字员不知道自己会遇到什么样的文本）、照稿打字（只看需要录入的原稿）、时间紧迫（有规定的交稿时间）是专业应用的显著特征，所以对盲打的要求比较高，否则在看稿和看屏幕之间来回移动头部是很累的，而且低效，容易出错。</p>
+<p>五笔字型重码率比较低，字、词的输入码固定，而且通常是静态的、不变的，经过强化训练以后就可以形成条件反射，从而基本上实现盲打，所以很适合专业应用场景。曾几何时，在祖国的大江南北，遍地都是打字店和五笔打字培训班，几乎每个有点规模的单位都有专职打字员。但是，随着计算机和智能手机及其应用的普及，打字成为每个人必备的基本技能。汉字输入都是由作者自己来完成的了，输入的模式也都是想打而不是照稿打字，没有盲打的必要。专业打字员，作为一个职业，已经几乎失去了意义。于是，打字店消失了，单位上也没有打字员了，五笔字型的用户数也快速萎缩，新生代很少有再学习五笔字型的了，因为投入与产出太不成比例。</p>
+<p>喜欢参加打字比赛的打字爱好者是专业应用的另一股力量，当然学成以后可以不仅仅用于打字比赛。这些人比以前的专业打字员更追求极致的打字速度，但不一定是盲打的速度，因为打赛文是看着屏幕打字的，可以方便地看提示行。现在有很多能够满足这种专业应用的输入法，除了五笔字型、二笔和双拼等传统输入法外，另一类迅速崛起的输入法是顶功输入法。顶功输入法通过特殊的编码可以省略大量的空格键，从而大大地缩短码长，提高输入效率。</p>
+<p>声笔系列码是顶功输入法的开创者，其中的声笔快码和声笔飞码都是面向专业应用的。它们不但具有较低的重码率，而且还比五笔字型简单、高效。对“音”敏感的用户可以选择声笔快码，而对“形”敏感的用户可以选择声笔飞码。而且，如果从声笔简码升级到声笔快码或者声笔飞码的话，学习成本会大大地降低，因为它们是建立在声笔简码基础之上的。</p>
+]]></content>
+      <tags>
+        <tag>汉字</tag>
+        <tag>输入</tag>
+        <tag>场景</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>业界要文</title>
+    <url>/2019/07/17/key-articles/</url>
+    <content><![CDATA[<h2 id="王小川的互联网江湖：从输入法到AI背后的故事"><a href="#王小川的互联网江湖：从输入法到AI背后的故事" class="headerlink" title="王小川的互联网江湖：从输入法到AI背后的故事"></a>王小川的互联网江湖：从输入法到AI背后的故事</h2><p>“我是1978年生的人，到今年是40岁，也是改革开放的同龄人。挺感谢这样一个大的时代背景，让自己成为了互联网飞速发展的见证者、参与者，也是受益者。”</p>
+<p>具体请看<a href="http://news.gmw.cn/xinxi/2019-05/24/content_32864391.htm" target="_blank" rel="noopener">http://news.gmw.cn/xinxi/2019-05/24/content_32864391.htm</a></p>
+<a id="more"></a>
+<h2 id="搜狗王小川：翻译主场景不是翻译机，而是输入法与搜索"><a href="#搜狗王小川：翻译主场景不是翻译机，而是输入法与搜索" class="headerlink" title="搜狗王小川：翻译主场景不是翻译机，而是输入法与搜索"></a>搜狗王小川：翻译主场景不是翻译机，而是输入法与搜索</h2><p>从来没指望翻译机为搜狗提供支柱性收入来源，更大意义在于更多地从语言交互上实现AI落地扩展。</p>
+<p>具体请看<a href="https://www.yicai.com/news/100096100.html" target="_blank" rel="noopener">https://www.yicai.com/news/100096100.html</a></p>
+<h2 id="搜狗劫持百度神马等流量构成不正当竞争，3000万罚款创海淀法院同类案件最高纪录"><a href="#搜狗劫持百度神马等流量构成不正当竞争，3000万罚款创海淀法院同类案件最高纪录" class="headerlink" title="搜狗劫持百度神马等流量构成不正当竞争，3000万罚款创海淀法院同类案件最高纪录"></a>搜狗劫持百度神马等流量构成不正当竞争，3000万罚款创海淀法院同类案件最高纪录</h2><p>6月27日，海淀法院对奇虎公司、百度公司，以及动景公司和神马公司因搜狗输入法通过搜索候选词为搜狗搜索导流量分别起诉搜狗公司等不正当竞争纠纷三案集中宣判。法院一审认定搜狗公司构成不正当竞争，应停止不正当竞争行为，分别为三案原告公开消除影响，向奇虎公司、百度公司各赔偿经济损失500万元等，向动景公司和神马公司共赔偿2000余万元，系海淀法院同类案件罚款最高纪录。</p>
+<p>具体请看<a href="https://www.yicai.com/news/100241684.html" target="_blank" rel="noopener">https://www.yicai.com/news/100241684.html</a></p>
+]]></content>
+      <tags>
+        <tag>业界</tag>
+        <tag>要文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主流输入法</title>
+    <url>/2019/07/17/main-imes/</url>
+    <content><![CDATA[<h2 id="输入法排行榜"><a href="#输入法排行榜" class="headerlink" title="输入法排行榜"></a>输入法排行榜</h2><p><a href="https://jingyan.baidu.com/article/7c6fb428cca68880652c9048.html" target="_blank" rel="noopener">百度经验最好用的中文输入法十大排名</a><br><a href="https://www.duote.com/sort/2_59_wdow_0_1_.html" target="_blank" rel="noopener">多特输入法排行榜</a><br><a href="http://soft.onlinedown.net/zt/60003/" target="_blank" rel="noopener">华军输入法排行榜</a></p>
+<a id="more"></a>
+<h2 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h2><p><a href="https://pinyin.sogou.com/" target="_blank" rel="noopener">搜狗输入法官方网站</a><br><a href="https://baike.baidu.com/item/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95/2877793?fr=aladdin" target="_blank" rel="noopener">搜狗输入法百度百科</a></p>
+<h2 id="百度输入法"><a href="#百度输入法" class="headerlink" title="百度输入法"></a>百度输入法</h2><p><a href="https://shurufa.baidu.com/" target="_blank" rel="noopener">百度输入法官方网站</a><br><a href="https://baike.baidu.com/item/%E7%99%BE%E5%BA%A6%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/5393011?fr=aladdin" target="_blank" rel="noopener">百度输入法百度百科</a></p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>主流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于Rime的声笔系列码现在提供Android安装程序了</title>
+    <url>/2019/07/23/rime4sbxlm/</url>
+    <content><![CDATA[<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>在发布Weasel4sbxlm时，我就承诺过会尽快提供对Android的支持，现在就是兑现的时候了。由于增加了对Android的支持，所以名称也改为了Rime4sbxlm，意为基于Rime的声笔系列码。不过，此版程序实际上能兼容同版本号的官方小狼毫和同文，不会对已经安装的输入法方案产生影响。与官方程序的区别主要是，增加了对顶功输入法用小码集字母兼用于选择重码字词的支持。</p>
+<h2 id="Rime4sbxlm的主要内容"><a href="#Rime4sbxlm的主要内容" class="headerlink" title="Rime4sbxlm的主要内容"></a>Rime4sbxlm的主要内容</h2><a id="more"></a>
+<p>本Rime4sbxlm主要包括用于Windows和Android的安装程序，以及声笔飞码、声笔快码、声笔双拼和声笔星二码表和方案。</p>
+<p>声笔飞码和声笔快码为二码起顶方案，强调单字的效率，同时支持sbbs二字词，但是不收录由三码及以内单字构成的二字词，这是因为这样才能充分利用狭小的二字词空间。另外，三码及以内的单字在熟练后击键率是很高的，也没有必要用二字词的方式来输入。本版飞码和快码还有一个重大改进，那就是三字词和多字词均可以用简拼的方式来输入（虽然要用一个大写字母），实现了二码顶与简拼的共存，这对输入成语等特别有帮助。</p>
+<p>声笔双拼和声笔星二则是利用声笔技术分别对传统自然码和二笔输入法的改造，三级单字只用三键就可以输入，重码用aeiou来选择，而不是用笨拙的数字键。这样，它们不但变得更简单，而且效率还更高，操作还更容易。</p>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>在安装小狼毫和同文后，将公共部分和输入法部分的码表和方案复制到用户目录，重新部署并选择方案后就可以使用了。</p>
+<h2 id="下一步打算"><a href="#下一步打算" class="headerlink" title="下一步打算"></a>下一步打算</h2><p>下一步会有一个重大的发布。声笔简码已经通过了长期的准备、测试和优化，也会在近期发布了。它将是在声笔码和声笔飞码后，又一次输入法的创新，综合运用了很多独创的黑科技，敬请期待。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>输入法</tag>
+        <tag>Rime</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码成功实现全自动造词</title>
+    <url>/2020/05/16/qzdzc/</url>
+    <content><![CDATA[<p>原版声笔系列码具有方便的自动造词功能，但是移植到RIME后，造词变得很不方便。要么需要每个字词以空格上屏，或者选择上屏后，才能触发造词；要么需要用引导符，并将空格换成分隔符，才能造词。这是由于RIME本身对顶功输入法支持不好所造成的。现在已经通过修改定制程序彻底解决了这个问题。顶功输入法的造词也非常方便快捷了。不仅声笔系列码能用，其它顶功输入法也可以受益。</p>
+<a id="more"></a>
+<p>例如，原来造【声笔飞码】一词的时候，需要在【笔 bpu】【飞 fa】【码 msaa】的后面都加上空格才行。而现在这些空格都可以省略掉，即可以按照顶功的标准打法输入就行了。由于RIME是采用的枚举方式造词，会不会产生过多的废词呢？是的，的确会产生很多不需要的词。不过，新造好的词组都是临时的，会排列在重码词组的最后。只有手动选择后成会成为正式的词组而提到前面，所以这种担心是不必要的。如果今后在使用中发现RIME处理临时词组的办法不好，再想法优化就行了。自动造词的功能是绝对需要的，也是声笔系列码的精髓之一。不过就是要看得惯太极符号才行，不要眼睛里容不下沙子:)</p>
+]]></content>
+      <tags>
+        <tag>声笔</tag>
+        <tag>自动</tag>
+        <tag>造词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔简码RIME版重大升级</title>
+    <url>/2019/12/25/sbjmzdsj/</url>
+    <content><![CDATA[<p>声笔简码的RIME版，相比原生程序而言，在功能上一直存在严重的不足，不能自动调整码长，不能使用扩展编码。而原生程序又只能在Windows上运行，而不能用于安卓手机、苹果手机和MAC电脑等。这一对矛盾长期烦扰着声笔简码用户。</p>
+<a id="more"></a>
+<p>通过不懈的努力，对RIME进行不断地改进，现在的RIME版声笔简码已经实现了完美的自动码长和扩展编码，使用体验大大增强，可谓取得了重大突破。至今，除了不能精准造词和自动淘汰废词而外，RIME版声笔简码已经完全实现了声笔简码的专利特性。RIME版声笔简码在输入过程中需要经常翻页的历史一去不复返了！</p>
+<p>另外，这次升级还对声笔系列码收录的20万词组进行了进一步的优化，删除了3万多北语和搜狗词频均为-1的词组，剩下了比较精准的16万4千词组，包括声笔简码在内的全系列输入法均加以采用。</p>
+]]></content>
+      <tags>
+        <tag>声笔简码</tag>
+        <tag>升级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RIME版声笔双拼优化实验</title>
+    <url>/2019/08/13/sbspyh/</url>
+    <content><![CDATA[<h2 id="利用单字的短码空闲空间"><a href="#利用单字的短码空闲空间" class="headerlink" title="利用单字的短码空闲空间"></a>利用单字的短码空闲空间</h2><p>由于现在的声笔双拼只考虑了规则编码，所以单字编码在码长为2和3时都有不少的短码空间是空闲的，非常浪费。利用这种空间的办法是，将声笔简码的ss和ssb型二字词插入到该空间中。这种词现在有1098个，频度最高的一些二字词及其编码和频度如下。</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">一个	ygu	997773</span><br><span class="line">我们	wmu	812417</span><br><span class="line">什么	sm	742524</span><br><span class="line">起来	qle	330495</span><br><span class="line">因为	yw	317518</span><br><span class="line">现在	xz	315893</span><br><span class="line">怎么	zm	294900</span><br><span class="line">问题	wt	279209</span><br><span class="line">经济	jj	257865</span><br><span class="line">这么	zmu	225697</span><br><span class="line">这些	zx	225430</span><br><span class="line">一定	yd	201525</span><br><span class="line">如此	rci	194183</span><br><span class="line">一点	ydi	189033</span><br><span class="line">关系	gx	188400</span><br><span class="line">可能	kn	185841</span><br><span class="line">而且	vqi	176585</span><br><span class="line">心中	xzi	176312</span><br><span class="line">地方	df	173581</span><br><span class="line">姑娘	gn	168226</span><br></pre></td></tr></table></figure>
+<p>如果能充分使用上述简码二字词的话，对输入效率的提升是有帮助的，只是编码格式不一样，需要记忆。</p>
+<p>另外，还有少量的sb和sbb型空间没有利用，如何利用？现在还没有考虑好。</p>
+<h2 id="利用词组的三码空闲空间"><a href="#利用词组的三码空闲空间" class="headerlink" title="利用词组的三码空闲空间"></a>利用词组的三码空闲空间</h2><p>目前，声笔双拼中，编码sss是空闲的。优化的措施是，把最常见的词组取前三码作为其简码放在sss空间中，同时也保留它们的全码。也就是说，这种简码不是强制性的。不过，如果用户利用了简码，并且如果四码上有重码词组的话，在选择重码后，重码的词组就可以提前，就会多产生一个四键词组，从而提高输入效率。这种简码词组共有一万多条，下面是一些例子。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">没有	mzy	826617</span><br><span class="line">什么	sfm	742524</span><br><span class="line">自己	zij	741012</span><br><span class="line">知道	zid	574771</span><br><span class="line">可以	key	432546</span><br><span class="line">这个	zeg	404217</span><br><span class="line">中国	zsg	336314</span><br><span class="line">起来	qil	330495</span><br><span class="line">这样	zey	328523</span><br><span class="line">已经	yij	325164</span><br><span class="line">发展	faz	323016</span><br><span class="line">因为	ynw	317518</span><br><span class="line">现在	xmz	315893</span><br><span class="line">怎么	zfm	294900</span><br><span class="line">工作	gsz	287827</span><br><span class="line">问题	wft	279209</span><br><span class="line">经济	jyj	257865</span><br><span class="line">还是	hls	238983</span><br><span class="line">出来	cul	238047</span><br><span class="line">如果	rug	234912</span><br><span class="line">只是	zis	234730</span><br><span class="line">爱因斯坦	vys	233485</span><br></pre></td></tr></table></figure>
+<h2 id="升级办法"><a href="#升级办法" class="headerlink" title="升级办法"></a>升级办法</h2><p>将新的sbsp.dict.yaml文件复制的用户文件夹覆盖原来的同名文件，然后将sbsp.userdb文件夹删除，再重新部署，就可以使用了。注意，删除sbsp.userdb文件夹后，你之前所造的词组和产生的调频信息就丢失了，只有重新再来一遍。因为码表有破坏性的变更，与用户数据不一致了，可能产生冲突，无法利用原有的用户数据，非常遗憾。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>声笔顶拼正式发布</title>
+    <url>/2020/05/20/sbdp/</url>
+    <content><![CDATA[<p>声笔顶拼经过长期的酝酿和实验探索，现在终于修成正果，得以正式发布了！</p>
+<p>声笔顶拼是声笔系列码中与传统拼音输入法最接近的一款输入法，其目的是让现有的拼音输入法用户以最小的学习代价就能大大地提升输入的效率，是拼音输入法提速的捷径。它通过对汉语拼音的简化和巧妙的字词编码，在保持易学的前提下，既能充分利用简拼来缩短词组的码长，又能通过追加韵母来延长编码，还能用 a、e、u、i、o 代表折、横、撇、竖、捺直接追加笔画来筛选重码字词。</p>
+<a id="more"></a>
+<p>同时，字词的编码自带了明确的边界，当后接声母时，可以将前面的字词顶上屏幕而省略空格，从而大大提高输入效率。在码长短的时候采用静态编码，易于让常见字词的输入形成条件反射；在码长长的时候进行动态码长调整，有利于缩短平均码长。采用 a、e、u、i、o 选择重码字词，能避免使用不便击打的数字键。</p>
+]]></content>
+      <tags>
+        <tag>顶功</tag>
+        <tag>声笔</tag>
+        <tag>拼音</tag>
+        <tag>顶拼</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码体系修改</title>
+    <url>/2019/10/17/sbxlmxg/</url>
+    <content><![CDATA[<h2 id="整句方案调整"><a href="#整句方案调整" class="headerlink" title="整句方案调整"></a>整句方案调整</h2><p>将简码整句1更名为声笔智能，并取消其它所有整句类型，包括简码整句2、飞码整句、快码整句、声双整句和声二整句，因为它们与声笔智能的简单、高效相比，已经失去了存在的意义。这么做的目的是突显声笔智能输入法的地位，同时也表明它的本质特征不是整句，而是智能。</p>
+<a id="more"></a>
+<p>虽然声笔智能是基于声笔码和声笔简码的，但是与它们又有较大的区别，因为它没有利用顶功技术，而是充分利用了声笔编码的弹性特点，同时融合了现代拼音输入法的智能技术，产生了非常奇特的效果。这种奇特的效果是，比拼音智能输入法更加灵活，而且还更加简单、快捷。如果能够像搜狗拼音那样利用云端的大数据的话，那么就会如虎添翼。</p>
+<p>声笔智能还可以选择采用语句流的方式，以便利用aeiou来执行搜索、查询词典、翻译等操作，具有很大的发展利用和空间，将大大地优于现在的各种拼音输入法。</p>
+<h2 id="增加声笔拼音"><a href="#增加声笔拼音" class="headerlink" title="增加声笔拼音"></a>增加声笔拼音</h2><p>声笔拼音和其它拼音输入法非常类似，主要的差异是以<code>a e o</code>开始的零声母音节的声母用v来代表。这样，在一串拼音中基本上可以完全确定音节的界线，从而可以提高拼音汉字转换的准确性。另外，由于所有的音节都不以<code>a e i o u</code>开头了，所以可以不加切换地用它们来进行笔画反查，这时<code>a e i o u</code>分别表示<code>折 横 竖 捺 撇</code>五种笔画。</p>
+<p>声笔拼音还被声笔系列码的所有其它方案用来进行拼音反查，所以一定要知道它的用法，否则在拼音反查时会遇到困难。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>体系</tag>
+        <tag>修改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码9.0开发计划与开发实录</title>
+    <url>/2019/11/21/sbxlm9-0/</url>
+    <content><![CDATA[<h2 id="写在前头"><a href="#写在前头" class="headerlink" title="写在前头"></a>写在前头</h2><p>自从今年7月中旬首次发布声笔系列码的小狼毫定制程序以来，声笔系列码经历了多次快速地迭代。它的功能不断增强，体系几经变化。方案从少到多，从单一的声笔简码到包含声笔拼音、声笔智能、声笔飞码、声笔快码、声笔双拼、声笔星二共七款二十多型输入法的庞大体系，再到目前精减后的声笔拼音、声笔智能、声笔简码、声笔快码、声笔飞码共五款九型输入法。</p>
+<a id="more"></a>
+<p>声笔系列码的发展，版本从8.0到现在的8.5，已经逐渐地成熟起来，而且吸引了一些用户在使用。为了进一步完善声笔系列码，增加开发工作的透明度，便于阶段性成果内测工作的开展，有必要对下一步的开发工作有个计划，同时对开发过程做一个记录。</p>
+<h2 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h2><p>声笔系列码9.0版的开发工作，计划分以下两步来完成。</p>
+<p>1 进一步缩短快码和飞码的字均码长，提高输入效率；快码和飞码的W型用S型来取代，以增加各型之间的共性，共享sb字的二码顶和sbb二字词的三码顶，共享s1b1b2b2格式的二字词，以便用户切换使用同款而不同型的方案。但是，这样一来，二字词就出现了两种编码格式，又遇到RIME平台的瓶颈。所以，第一步只能部分使用自动造词功能，sb字都不能参与造词。各型飞码和快码的编码格式如下，其中z表示飞码的部首或者快码的韵母，<code>^</code>表示起始顶屏码位。</p>
+<ul>
+<li>X型的编码格式：单字 <code>sb, szb^b</code>；二字词 <code>s1b1b2^b2, szsz</code>；三字词 <code>sssz</code>；多字词 <code>ssss</code></li>
+<li>K型的编码格式：单字 <code>sb, szb^b</code>；二字词 <code>s1b1b2^b2, szs^b</code>；三字词 <code>sss^b</code>；多字词 <code>sss^S</code></li>
+<li>S型的编码格式：单字 <code>sb, sz^bb</code>；二字词 <code>s1b1b2^b2, szSz</code>；三字词 <code>ssSz</code>；多字词 <code>ssSs</code></li>
+</ul>
+<p>2 修改RIME源代码，以便让sb字也参与自动造词；这项工作是比较艰巨的，可能要花费不少的时间和精力。</p>
+<p>3 经过短时间的试用，发现在采用了sf型简词以后，已经没有必要保留X K S三型了，于是以X型为基础，将其多字词的编码格式加以改进，统一为单一的飞码和快码，不再分型了，其格式如下：</p>
+<p>   单字 <code>sb, szb^b</code>；二字词 <code>s1b1b2^b2, szsz</code>；三字词 <code>sssz</code>；多字词 <code>sssS</code></p>
+<h2 id="开发实录"><a href="#开发实录" class="headerlink" title="开发实录"></a>开发实录</h2><p>开发工作从11月18日起，截止11月20日为止，已经完成了飞码的第一步工作。在声笔系列码9.0版的字词型输入法中，都不再设三码非强制性简码词，以减少人机交互，加快操作速度，这是总结输入实践经验后得出的结论。另外，将拼音反查的方法改为了以<code>a</code>引导，使得操作更加方便；删除了供声笔快码和声笔飞码用的声笔反查功能；将声笔智能的词组数量也统一为20万，和其它方案完全一样。</p>
+<p>第二项工作的进度比预想的要快得多，截至11月23已经基本上解决了算法上的问题。但是，在如何判断当前使用的方案时遇到了棘手的问题。截止11月26日，解决了所有程序难题。另外，增加了s_b和sf简词及其滤镜提示。在词库中交换了“并不”和“叭叭”两词的北语频度。而手机上，皮肤改为支持31键，同时设Tab和Return来解决翻页问题。电脑上也改为采用这种方式翻页，以便两者的用法统一起来。这样，标点符号就可以随时顶屏了。</p>
+<p>到29日为止已经完成了三步开发计划，进入全面测试和文档修改阶段了。截止12月5日改为多字词第四码不用大写；声笔简码也支持sf简词；声笔拼音和声笔智能增加单字笔画过滤。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>开发</tag>
+        <tag>计划</tag>
+        <tag>实录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码的整句模式重新袭来</title>
+    <url>/2020/05/16/sbxlzj/</url>
+    <content><![CDATA[<p>在声笔系列中，原来就尝试过整句模式，包括前一阵常试过的声笔智能。当时希望通过追加辅助码的方式来离散重码，结果使得整句模式的学习难度增大了,而且未能利用顶功大小编码集的优势。声笔智能试图模仿拼音输入法的灵活多变，也没有利用好顶功。现在终于想到了简单有效的办法，实现了优化的简码、快码和飞码的整句模式，分别称为简整、快整和飞整。</p>
+<a id="more"></a>
+<p>这个简单有效的办法就是，尽量保持单字编码简单,可以用12345来定位尚未确定的编码位置，以便进行快速修改和选择，重码随时可用67890选择。同时，充分利用顶功的特点，尽量采用小编码集的aeuio代替67890来选择重码。快整和飞整的单字都只取前面两码，一简用空格补齐，实现两码连打；偶数码长时可用aeuio来选择重码。简整的单字一、二简形式不变，最长三码；三码时可用aeuio来选择重码。</p>
+<p>这些整句方案都比对应的字词方案简单易学，只是在输入出错的时候回改比较麻烦，适合初学者或者对速度要求不高的人使用。由于输入时的编码过程简单，在不出错的时候，用户的键速一般是比较快的。所以，在输入简单文本时，整句模式还是有一定优势的。</p>
+<p>为了提高转换的准确性，整句模式收录的词组有48万之多，比字词模式多出了32万。为了避免基础安装包过大，整句模式的方案是单独发布的。要使用整句模式的话，在安装基础包后，下载整句的扩展包，将其中的文件复制的相应的安装目录，在default.custom.yaml中加入对应的方案，重新部署一下就可以使用了。</p>
+]]></content>
+      <tags>
+        <tag>声笔</tag>
+        <tag>整句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hexo建立Sbxlm网站</title>
+    <url>/2019/07/03/site-build/</url>
+    <content><![CDATA[<h2 id="安装Nodejs和Git"><a href="#安装Nodejs和Git" class="headerlink" title="安装Nodejs和Git"></a>安装Nodejs和Git</h2><p>根据不同的操作系统，按照通常的方式安装即可。</p>
+<h2 id="安装Hexo-cli"><a href="#安装Hexo-cli" class="headerlink" title="安装Hexo-cli"></a>安装Hexo-cli</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="初始化Sbxlm-hexo"><a href="#初始化Sbxlm-hexo" class="headerlink" title="初始化Sbxlm-hexo"></a>初始化Sbxlm-hexo</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init sbxlm-hexo</span><br><span class="line">$ <span class="built_in">cd</span> sbxlm-hexo</span><br><span class="line">$ git init</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="添加NexT主题"><a href="#添加NexT主题" class="headerlink" title="添加NexT主题"></a>添加NexT主题</h2><p>采用子模块的方式安装，以便今后获取上游的更新。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule add https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h2 id="切换和修改NexT主题"><a href="#切换和修改NexT主题" class="headerlink" title="切换和修改NexT主题"></a>切换和修改NexT主题</h2><ul>
+<li>修改sbxlm-hexo的_config.yml文件，将theme从默认的landscape改为next。</li>
+<li>修改NexT的Scheme，从默认的Muse改为Gemini。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>技巧</tag>
+        <tag>Hexo</tag>
+        <tag>Sbxlm</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码体系重大修改</title>
+    <url>/2019/11/17/sbxmtxxg/</url>
+    <content><![CDATA[<p>声笔双拼和声笔星二在声笔系列码的体系中定位不是很清楚，当初设计它们的目的也仅仅是为了说明声笔简码的技术还可以用来改造其它输入法，使它们也可以使用字母选重等，从而变得更加好用和高效。</p>
+<a id="more"></a>
+<p>它们在易学性上不如声笔拼音、声笔智能和声笔简拼，而在效率上又不如声笔快码和声笔飞码，处于比较尴尬的境地，而且似乎并不太受到用户的青睐，我本人对它们也不是很熟悉。</p>
+<p>但是每一款输入法都需要花费大量的精力来维护和优化，随着定制功能的增多和词库的增大，我越来越感觉到力不从心了。</p>
+<p>所以，现在决定放弃声笔双拼和声笔星二的维护，把它们从声笔系列码中去除，以便专心致志地改进声笔拼音、声笔智能、声笔简码、声笔快码和声笔飞码这五款从简单到复制，从低效到高效的体系严密、特色鲜明的输入法。</p>
+<p>另外，在新的体系中，也放弃了声笔快码S和声笔飞码S，因为它的三字词和四字词在不同的位置使用了大写字母，而且二字词的编码空间也很小，重码太多，对高效型的输入法是不适合的。同时，它主单的定位也已经被更好的声笔快码W和声笔飞码W取代了。</p>
+<p>最后，声笔智能的词库也从150万词缩小为统一的20万词，与其它方案一样。</p>
+<p>这样一来，安装程序包也大大地缩小，更方便用户下载使用。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>体系</tag>
+        <tag>修改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码增加共享自定义词典</title>
+    <url>/2020/06/15/shared-dict/</url>
+    <content><![CDATA[<p>声笔系列码的字词模式方案，如声笔简码、声笔顶拼、声笔快码和声笔飞码，包括主单的声笔快单和声笔飞单，都自带了16万多条系统词组，而且都具有方便的自动造词功能。声笔系列码的整句模式方案，如声笔简整、声笔顶整、声笔快整和声笔飞整，更是自带了150多万的系统词组，并且能在使用过程中自动组词。</p>
+<a id="more"></a>
+<p>但是，还是有不少用户提出了自定义词典的需求。因为，他们需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。</p>
+<p>由于声笔系列码在不少情况下是不允许重码的，所以用户自定义的词组不能放在系统词组的编码空间里，否则可能造成冲突而影响输入法的正常使用。经过仔细考量，决定采用<code>u</code>引导来解决用户自定义词组的输入问题，此处的<code>u</code>意为「用户」，因为它是英语的<code>user</code>的首字母。这不但解决了独立编码空间的问题，还解决了声笔系列码各方案共享自定义词组的问题。这是因为这些方案都不会使用<code>aeuio</code>作为正常中文编码的首码。目前，声笔系列码可以直接输入<code>aeuio</code>来通过笔画反查字词的编码，还可以通过<code>a</code>引导来进行拼音反查字词的编码。现在只是利用空闲首字母来增加了自定义词典功能而已。</p>
+<p>自定义词典随声笔简码和声笔简整一道包含在为声笔系列码定制的小狼毫和同文基础安装包里。它在里面体现为一个方案，但是独立使用的价值不大，只是为其它方案服务的。它是一个<code>dict</code>型而非<code>txt</code>型的词典，当收录的词条数量大时也具有很快的查找速度。</p>
+<p><img src="/images/zdycd.png" alt="自定义词典"></p>
+<p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间，必须是以制表符TAB分隔，不能是空格，否则会定制词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。</p>
+]]></content>
+      <tags>
+        <tag>词典</tag>
+        <tag>自定义</tag>
+        <tag>共享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>输入法究竟是用来干什么的？</title>
+    <url>/2021/04/27/srfgsm/</url>
+    <content><![CDATA[<p>这个问题的答案还不简单吗？输入法不就是用来输入文字的。但是，实际情况确远比这个复杂。或者说，本来很简单的问题，被御用媒体和自媒体们的“对比测试”弄得复杂透顶。</p>
+<a id="more"></a>
+<p>一方面，你会看到那些“专家”们、“深度用户”们连篇累牍的、千篇一律的、不着边际的测试，评论区里各自的托儿们的附和或者反对。另一方面，你会看到广大普通用户的各种吐槽，他们想要的没有，无用的东西一大堆。广告的骚扰，数据和隐私的泄漏，已经成为公众的焦点问题。</p>
+<p>你在这些输入法评测中几乎看不到对输入法在输入文字时的基本指标如简单性、高效性等的评测。它们评测的对象是网络流行词、联想词、AI斗图、个性主题皮肤、凌空手写、神句配图等等，是为了某种目的而量身定制的“评测”。</p>
+<p>网络流行词有多少用户会用？即使要用，只要有方便的造词功能，什么词造不出来？为什么把造词的能力弄得那么鸡肋？是有意为之的，以便你对云词库形成依赖？</p>
+<p>联想词本来就是一个非常初级的输入法功能，而且熟练的用户是不推荐使用的。为什么要鼓吹这个功能？无非是为了便于输入法嫁接广告，是为了广告商的利益，而不是输入用户的利益。</p>
+<p>为什么会热衷于做AI斗图、个性主题皮肤、凌空手写、神句配图等与输入法的文字输入基本目标不相关的功能？是黔驴技穷，没有可创新的东西了？还是纯粹为了增加用户粘性的无奈之举？</p>
+<p>输入法的研究和开发是不是应该回归它为直接用户服务的本质？如果回归本质，那么输入法提供商怎么样收回成本和赢得利润？这个局如何破解？</p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>顶功与上屏方式</title>
+    <url>/2020/07/27/spfs/</url>
+    <content><![CDATA[<p>在顶功输入法逐步兴盛的今天，不少的输入法爱好者都来蹭顶功的热度，滥用「顶」字的现象非常普遍，造成了许多混乱，不利于人们进行有效的交流，有必要对相关的概念进行梳理，以正其名。古人云：“名正则言顺，名不正则言不顺”，此之谓也。</p>
+<a id="more"></a>
+<p>在输入法中，所谓「顶」是指，在不用空格的情况下，通过后续的输入将前一字词顶上屏幕，所以又称之为「顶屏」。具有顶屏的能力，就称为具有「顶功」。「顶屏」是「上屏」方式的一种，上屏就是待输入的文字离开输入法窗口插入到目标程序的插入点处。</p>
+<p>中文编码输入的上屏方式着丰富多彩，分为选择上屏、唯一上屏和顶功上屏三大类。其中，选择上屏和顶功上屏又细分为很多子类，红色字体部分为现代顶功输入法所特有的，如下图所示。</p>
+<p><img src="/images/spfs.png" alt="上屏方式"></p>
+<p>在智能拼音输入法如搜狗拼音中，是用空格键、数字键或回车键来选择上屏的，其它非码元的字符键则可以顶屏。在字词型的输入法如五笔字型中，除了前述上屏方式外还可能有定长顶屏、唯一上屏和空码顶屏。声笔系列码则首创了现代顶功输入法的规则顶屏和复用字母选重，可以省略大量的空格键和提高键速，从而极大地提高输入法的效率。</p>
+<p>以下就各种上屏方式，结合输入实例，进行进一步的说明。</p>
+<h2 id="选择上屏"><a href="#选择上屏" class="headerlink" title="选择上屏"></a>选择上屏</h2><p>选择上屏的特点是，选择键本身失去了原来的作用而专用于选择。选择上屏所选择的一般是选择窗口里显示的唯一选项或者首选项，不过理论上讲也可以指定为选择候选项里的任意一项。</p>
+<h3 id="空格上屏"><a href="#空格上屏" class="headerlink" title="空格上屏"></a>空格上屏</h3><p>用空格键来上屏是最常见的上屏方式。特别是在现代流行的拼音输入法里，几乎所有字、词、短语、句子都需要有空格来上屏，只有一些标点符号可以顶屏。在传统的字词型输入法如五笔字型中，在输入简码字词时，一般也是需要空格上屏的。</p>
+<h3 id="回车上屏"><a href="#回车上屏" class="headerlink" title="回车上屏"></a>回车上屏</h3><p>用回车键来上屏通常用在真正的整句输入法中。这种整句输入法参照英文的做法，为了提高中文转换的准确性，是用空格来分词的，上屏则改用回车键，简称为「空格分词，回车上屏」。</p>
+<h3 id="选重上屏"><a href="#选重上屏" class="headerlink" title="选重上屏"></a>选重上屏</h3><p>在候选项不止一个的时候，如果要上屏非第一选项或者默认选项，就需要选重上屏。所谓选重，就是选择重码字词的意思。</p>
+<p>最常见的是用数字来选重。数字选重时，老式拼音输入法采用所有10个数字，而现代拼音输入法一般只采用其中的5个数字，选项太多会导致费眼，使眼睛容易疲劳，容易看漏。</p>
+<p>但是，由于数字击打不太方便，于是有的输入法改用或者同时支持使用<code>;</code>和<code>&#39;</code>等标点符号来选重，甚至采用左右<code>Shift</code>键来选重。另外，在现代拼音输入法中，一般用回车键来上屏英文或者编码，也相当于选重。</p>
+<p>为了更加便于选择重码，有的输入法还提供了字母选重的选项。例如，搜狗输入法在设置「按空格出字」的前提下，可以再设置「按字母选词」，如下图所示。但是，这样会使得所有字词的选择多按一次空格键，所以采用的人很少。</p>
+<p><img src="/images/sgzmxc.png" alt="搜狗字母选重"></p>
+<p>在声笔系列之类的输入法中，由于首码是声母，并且用<code>v</code>来表示<code>a e o</code>的零声母，所以不会有正常的编码以<code>aeuio</code>开头，当达到最大码长时，就可以用<code>aeuio</code>兼做重码选择键，代替传统的数字键选重，在操作上更加方便。在声笔简码中，更可以进行两级选重，即在第四码时既可以用单个的<code>aeuio</code>无理选择重码，也可以再追加两个笔画（即所谓的扩展编码）进一步筛选重码，然后再次用<code>aeuio</code>无理选择重码。一级选重简单易学，适用于初学者；而追加笔画后重码少，适用于熟练者，可以尽量减少翻页操作。</p>
+<h2 id="唯一上屏"><a href="#唯一上屏" class="headerlink" title="唯一上屏"></a>唯一上屏</h2><p>唯一上屏是指在编码唯一且追加任何编码字符都是空码的时候，自动将对应的字词送上屏幕，无需进行选择。在传统输入法如五笔字型中，当没有达到最大码长时，唯一上屏能够节约一个空格键，但是由于用户往往不知道哪个字词的编码是唯一的，只有通过上屏来判断，因此当操作很快时，往往会打过头。所以，并不是所有的用户都喜欢设置唯一上屏。</p>
+<h2 id="顶功上屏"><a href="#顶功上屏" class="headerlink" title="顶功上屏"></a>顶功上屏</h2><p>顶功上屏，简称顶屏，是指通过后续的输入将前一字词顶上屏幕，从而省去选择键，通常是空格键。顶屏的前提是被顶的字词已经完全确定。在有多个选项的时候，被顶的往往是第一个选项，当然理论上也可以将其它某一选项作为被顶的对象。</p>
+<p>顶功上屏和选择上屏的区别是，前者的顶屏键其原来的作用不会发生变化，而后者的选择键失去了其原来的作用。比如，如果用「;」顶屏，那么在顶出字词的同时也输入了「;」，而在用「;」来选重的时候，在上屏所选的字词后，「;」本身就被“吃掉”了，就消失了。</p>
+<h3 id="定长顶屏"><a href="#定长顶屏" class="headerlink" title="定长顶屏"></a>定长顶屏</h3><p>定长顶屏是指达到最大码长时发生的顶屏，传统的字词型输入法都具备这种顶屏方式。比如，五笔字型就是在达到四码时，如果再输入编码，就会把第一个候选项顶上屏幕。搜狗拼音之类的智能整句输入法是不具备定长顶屏功能的，只可能用逗号、句号等非编码键来顶屏，否则一定需要选择才能上屏，通常是用空格键或者数字键选择。</p>
+<h3 id="非码顶屏"><a href="#非码顶屏" class="headerlink" title="非码顶屏"></a>非码顶屏</h3><p>非码顶屏就是用非编码字符顶屏。非编码字符是指不参与编码的字符，例如搜狗拼音只有26个小写英文字母参与编码。另外，用于选择重码和翻页的字符也是不可能顶屏的，比如搜狗拼音里的阿拉伯数字和<code>+-</code>等。</p>
+<h3 id="空码顶屏"><a href="#空码顶屏" class="headerlink" title="空码顶屏"></a>空码顶屏</h3><p>空码顶屏是指，当输入某个编码字符时，如果与前面已经输入的编码字符一起构成了空码，则将前面某个非空码对应的字词顶上屏幕，同时留下导致空码的字符。空码顶屏分为自由顶屏和规则顶屏，自由顶屏建设不规则的顶屏。</p>
+<h4 id="自由顶屏"><a href="#自由顶屏" class="headerlink" title="自由顶屏"></a>自由顶屏</h4><p>由于自由顶屏是不规则的，无法简单地预知可顶的位置，所以操作起来是很困难的，基本上没有实用性，也未见到有输入法使用。</p>
+<h4 id="规则顶屏"><a href="#规则顶屏" class="headerlink" title="规则顶屏"></a>规则顶屏</h4><p>规则顶屏是真正的顶功输入法顶屏方式。传统输入法虽然可能有一些顶的成分，如定长顶屏和非码顶屏，但是称不上顶功输入法。实际上，顶功输入法可以定义为具有规则顶屏能力的输入法，其典型代表是声笔系列码。</p>
+<p>对于规则顶屏，在N码时为空码，如果将其之前的N-1码对应的字词顶上屏幕，则称为即时顶，或称延迟1码上屏；如果将其之前的<code>N-K(1&lt;K&lt;N)</code>码对应的字词顶上屏幕，则称为延迟K-1码顶，或称延迟K码上屏。例如，C42就是延迟1码顶或延迟2码上屏，是通过第四码顶前两码对应的字上屏，留下第三、四码作为新的第一、二码。</p>
+<p>一个输入法，如果从第N码开始顶屏，则称为N码顶输入法，最著名的是单字二码顶，如声笔飞讯和声笔快讯。一个输入法还可能同时存在多种顶屏模式，比如声笔简码就是单字二码顶，二字词三码顶，三字词和多字词四码顶，这种输入法称为混合顶输入法。</p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>顶功</tag>
+        <tag>上屏方式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码全面升级到8.5版</title>
+    <url>/2019/09/10/upgrade8-5/</url>
+    <content><![CDATA[<p>在声笔系列码定制版RIME支持字母选重后，现在完成了对声笔系列码的全面升级，并将版本号统一确定为8.5。这次升级的要点总结如下。</p>
+<a id="more"></a>
+<h2 id="增加输入法的类型"><a href="#增加输入法的类型" class="headerlink" title="增加输入法的类型"></a>增加输入法的类型</h2><p>声笔飞码和声笔快码进一步细分为X、K和S三型。X型的以词组为主，单字三码起顶；K型的以字均码长短为特点，sb单字二码起顶，其它单字三码起顶；S型以单字为主，辅以词组，单字均二码起顶。X型和S型均支持自动造词和动态调频，而K型不支持自动造词，但仍支持动态调频。从易学性来讲，X型是最简单的，其次是S型的，最难的是K型。K型是用于竞速的，需要记住词组的级别才能实现高速盲打。日常使用的话，词组派的可能认为X型更舒服些，而单字派可能觉得S型更舒服些。当然，最好是能根据使用场景，切换使用三种类型的飞码，以充分利用它们各自的优势。</p>
+<h2 id="改变两个单字简码"><a href="#改变两个单字简码" class="headerlink" title="改变两个单字简码"></a>改变两个单字简码</h2><p>在声笔系列码中，一简字“m们”和二简字“mu么”几乎没有组词能力，不利于提高词组的离散性能，所以将它们改为了“m没”和“m名”，并将其它相关字的编码进行了调整。同时，将所有输入法的词组重新生成。对于声笔星二，则恢复其原来的单字编码方法，它的m上原来就是放的“没”字。</p>
+<h2 id="词库增加到20万"><a href="#词库增加到20万" class="headerlink" title="词库增加到20万"></a>词库增加到20万</h2><p>此前的声笔系列码词库是基于微软拼音、现代汉语词典、新华字典和成语词典，并采用了北语词频。结果，在约14万词中，只有约5万匹配上的频度，剩余的词组被赋与了-1的频度。虽然，北语词频做得很科学，有分类词频，也有综合词频。但是，北语词频比较陈旧，不能很好都反应词频的变化情况。另外，使用的以上词典数据年代比较久远，很多新的词汇都缺乏。</p>
+<p>为了解决以上问题，我结合使用了相对较新的（2012年的）搜狗词频数据。搜狗词频大于0的约有15万条词组，与原来的声笔系列码词组合并去重后，得到约20万词组。这些词组的具体情况为：二字词90330条，多字词110273条，共计200603条。将这些词组按北语词频和搜狗词频联合排序，并以北语词频为优先，在北语词频相同时再以搜狗词频排序。在最终码表中用的是搜狗词频，表现出的效果是：简码按联合频率设置，重码按搜狗频率排序。</p>
+<p>声笔系列码各款输入法的具体收词情况，请移步<a href="https://sbxlm.github.io/2019/08/29/cikuyh/#more" target="_blank" rel="noopener">声笔系列码的词库优化实验</a>。</p>
+<h2 id="升级声笔简码原生程序"><a href="#升级声笔简码原生程序" class="headerlink" title="升级声笔简码原生程序"></a>升级声笔简码原生程序</h2><p>修改声笔简码原生程序，与RIME程序同步反映一简字“们”和二简字“么”的变化，词库增大到20万，版本号改为8.5。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>升级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声笔系列码RIME定制程序最新优化</title>
+    <url>/2019/11/08/update191108/</url>
+    <content><![CDATA[<h2 id="为声笔系列码定制图标"><a href="#为声笔系列码定制图标" class="headerlink" title="为声笔系列码定制图标"></a>为声笔系列码定制图标</h2><p>RIME默认的图标不能体现出声笔系列码定制程序的特点，一些网友提议把定制程序的图标改一下。我之前设计了一个声笔系列码的图标，目前在官网上使用。此次更新就把这个图标用上了。它形似一颗钻石，由几根简单的线条组成。</p>
+<a id="more"></a>
+<p><img src="/images/sbxl.png" alt="SbxlmIcon"></p>
+<p>但是，这些线条体现了声笔系列码的共同特点：五个笔画和零声母的表示方法，如下标注上字母，含义就更清楚了。</p>
+<p><img src="/images/sbxl2.png" alt="SbxlmIcon"></p>
+<p>从上到下按笔画顺序<code>横竖撇捺折</code>（分别用<code>EIUOA</code>表示）写出来就可以形成这个图标，其中最后的折笔同时代表了零声母V。记住了这幅图，你就掌握了声笔系列码的核心知识，同时也就基本上会使用声笔系列码中的声笔拼音、声笔智能和声笔简码三款输入法了。加上双拼韵母，你就可以掌握声笔快码和声笔双拼；加上部首，你就可以掌握声笔飞码；加上星空二笔的笔对和字根，你就可以掌握声笔星二。</p>
+<p>该图标在Android上的效果如下：</p>
+<p><img src="/images/AndroidIcon.png" alt="Icon on Android"></p>
+<p>在Windows 10上的效果如下：</p>
+<p><img src="/images/Win10Icon.png" alt="Icon on Windows 10"></p>
+<h2 id="优化翻页键的顶屏功能"><a href="#优化翻页键的顶屏功能" class="headerlink" title="优化翻页键的顶屏功能"></a>优化翻页键的顶屏功能</h2><p>在声笔系列码中，默认用逗号和句号来作向前和向后的翻页键。但是，逗号和句号本身在中文里也使用得很频繁，如果不能顶屏的话，损失是很大的。在之前的定制程序里，实现了当没有重码时，仍然可以用逗号和句号顶屏的功能，算是一个进步。本次升级则进行了进一步的优化：当重码数小于6时都可以用逗号和句号顶屏。这样，对于重码少的输入法如飞码等，能顶屏的概率就大大增加了。</p>
+<h2 id="修改飞码X和快码X的简码二字词"><a href="#修改飞码X和快码X的简码二字词" class="headerlink" title="修改飞码X和快码X的简码二字词"></a>修改飞码X和快码X的简码二字词</h2><p>发现飞码X和快码X中遗漏了很多sbb型的简码二字词，造成无法输入后续的编码，这次更新已经补上了，去除了这个BUG。</p>
+]]></content>
+      <tags>
+        <tag>声笔系列码</tag>
+        <tag>优化</tag>
+        <tag>定制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>首个为声笔系列码定制的小狼毫输入法</title>
+    <url>/2019/07/19/weasel4sbxlm-0-14-3-0/</url>
+    <content><![CDATA[<h2 id="热烈祝贺首个为声笔系列码定制的小狼毫输入法正式发布！"><a href="#热烈祝贺首个为声笔系列码定制的小狼毫输入法正式发布！" class="headerlink" title="热烈祝贺首个为声笔系列码定制的小狼毫输入法正式发布！"></a>热烈祝贺首个为声笔系列码定制的小狼毫输入法正式发布！</h2><p>顶功输入法现在虽然越来越火，但是现有的平台都有太多的局限性，无法让输入法玩家们玩出更多的花样。利用表示笔画的小码集字母aeiou进行选重是声笔系列码的黑科技之一，一直无法在RIME中实现。于是，我只得硬着头皮改了一下librime的源码，现在终于可以在小狼毫中使用了！当然，自动码长调整等其它声笔技术在RIME平台和其它输入法平台上仍然没有办法使用。不过，已经可以多一种玩法了。祝贺！祝贺！</p>
+<p>等不及了吗？赶快下载<a href="https://github.com/sbxlm/sbxlm.github.io/releases/download/weasel4sbxlm-0.14.3.0/weasel4sbxlm-0.14.3.0.rar" target="_blank" rel="noopener">Weasel4Sbxlm</a>吧。等一下！MacBook和Android怎么办了？少安毋躁，只有稍等一下了，后续再跟进。</p>
+<a id="more"></a>
+<h2 id="本版输入法的主要内容"><a href="#本版输入法的主要内容" class="headerlink" title="本版输入法的主要内容"></a>本版输入法的主要内容</h2><h3 id="公共部分"><a href="#公共部分" class="headerlink" title="公共部分"></a>公共部分</h3><ul>
+<li>用于Windows的安装程序weasel4sbxlm-0.14.3.0.exe，增加了官方版没有字母选重的功能，仍然可以兼容官方版，不会影响已经有的输入法。</li>
+<li>笔画码表（用于笔画反查码表）：bihua.dict.yaml和bihua.schema.yaml</li>
+<li>拼音码表（用于拼音反查码表）：pinyin_simp.dict.yaml和pinyin_simp.schema.yaml</li>
+<li>本文件：readme.txt</li>
+</ul>
+<h3 id="输入法部分"><a href="#输入法部分" class="headerlink" title="输入法部分"></a>输入法部分</h3><p>这里的声笔飞码即原生程序中的飞码声形模式，而声笔快码则是声韵模式。以下编码格式中，s代表声母，p代表偏旁部首，b代表笔画，y代表韵母，d代表双笔，x代表选择键。</p>
+<ul>
+<li>声笔飞码：sbfm.dict.yaml和sbfm.schema.yaml。它的编码格式：单字为spbbx, sbbbx；二字词为sbbsx；三字词为ssSx；多字词为sSssx。</li>
+<li>声笔快码：sbkm.dict.yaml和sbkm.schema.yaml。它的编码格式与声笔飞码基本上相同，只需要把spbbx换为sybbx就行了。</li>
+<li>声笔双拼：sbsp.dict.yaml和sbsp.schema.yaml。它的编码格式：单字为sybbx，二字词为sysyx，三字词为sssyx；多字词为ssssx。声笔双拼是基于自然码双拼改编的。</li>
+<li>声笔星二：sbxv.dict.yaml和sbxv.schema.yaml。它的编码格式：单字为sdbbx，二字词为sdsdx，三字词为sssdx；多字词为ssssx。声笔星二是基于星空二笔改编的。</li>
+</ul>
+<h3 id="更多信息"><a href="#更多信息" class="headerlink" title="更多信息"></a>更多信息</h3><p>要知道更多的信息？请加入声笔系列码交流QQ群445906697。</p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>声笔系列</tag>
+        <tag>小狼毫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows下如何判断应用程序是32位的还是64位的？</title>
+    <url>/2019/07/12/win32or64/</url>
+    <content><![CDATA[<h2 id="方法一：利用任务管理器"><a href="#方法一：利用任务管理器" class="headerlink" title="方法一：利用任务管理器"></a>方法一：利用任务管理器</h2><p>任务管理器 -&gt; 进程：进程后带有*32的是32位应用程序，否则为64位应用程序。此法仅适用于运行中的应用程序。</p>
+<h2 id="方法二：利用简化颜色模式"><a href="#方法二：利用简化颜色模式" class="headerlink" title="方法二：利用简化颜色模式"></a>方法二：利用简化颜色模式</h2><p>鼠标右击应用程序 -&gt; 属性 -&gt; 兼容性：若设置框中的降低色彩和分辨率的选项可勾选则32位应用程序，否则为64位应用程序。</p>
+<a id="more"></a>
+<h2 id="方法三：查看EXE文件头"><a href="#方法三：查看EXE文件头" class="headerlink" title="方法三：查看EXE文件头"></a>方法三：查看EXE文件头</h2><p>二进制方式打开应用程序，在文件头中能找到PE..L的是32位的，能找到PE..d的是64位。</p>
+<p>来源：改编自<a href="https://blog.csdn.net/dayday3923/article/details/78597453" target="_blank" rel="noopener">https://blog.csdn.net/dayday3923/article/details/78597453</a></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>应用程序</category>
+      </categories>
+      <tags>
+        <tag>应用程序</tag>
+        <tag>32位</tag>
+        <tag>64位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小狼毫声笔专版一键部署程序制作完成</title>
+    <url>/2020/04/22/xlhyjbs/</url>
+    <content><![CDATA[<p>小狼毫声笔系列码专版的安装一直是一件让人心烦的事情。虽然在教程中详细说明了安装方法，用户还是经常将声笔系列码的文件复制到了错误的文件夹，导致无法正常使用。为了解决这个突出的矛盾，经过一段时间的探索，终于在Windows上实现了一键安装部署声笔系列码。从此，小狼毫声笔专版的安装就变得与安卓上同文声笔专版的安装一样方便了。</p>
+<a id="more"></a>
+<p>把您下载的压缩包解压，在解压后的文件夹中找到小狼毫安装程序如Weasel4sbxlm-0.14.3.0，名称中的版本号可能发生变化；以管理员的身份执行该安装程序。如果以前安装过小狼毫，那么安装程序会提示您在安装时将卸载以前程序，按<code>确定</code>即可。安装完成后，您就可以打开各种应用程序，用声笔系列码输入汉字了。在输入的过程中，您还可以用F4或者Ctrl+~切换使用不同的方案。</p>
+<p>如果以前安装过小狼毫，那么已有的Rime目录会备份在RimeBak目录中，以保留用户的数据。特别注意，如果已经存在RimeBak目录，则会被替代。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>拼音输入宝典</title>
+    <url>/2021/07/01/%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E5%AE%9D%E5%85%B8/</url>
+    <content><![CDATA[<p>拼音输入法是目前进行中文输入的最主要方式，据估计用户占比高达99%以上，基本上由搜狗和百度两分天下，各占43.6%以上，第三位的讯飞只占8.8%，其它则微不足道。拼音输入法分为全拼和双拼，其中全拼又是绝对的主流，大多数人根本没有听说过双拼。</p>
+<a id="more"></a>
+<p><img src="/images/pysrfzb.jpg" alt="拼音输入法占比"></p>
+<p>令人吃惊的是，对于拥有数亿用户的拼音输入法，虽然五花八门的功能一大堆，但是几乎没有人论述其核心功能的使用技巧，使用户陷入一种非常无助的境地。</p>
+<h2 id="一、拼音用户的无助"><a href="#一、拼音用户的无助" class="headerlink" title="一、拼音用户的无助"></a>一、拼音用户的无助</h2><p>我们看一下影响最大的搜狗输入法，进入它的官网帮助中心，呈现的是以下景象。</p>
+<p><img src="/images/sgbzzx.png" alt="搜狗帮助中心"></p>
+<p>在众多的菜单项中，涉及核心功能使用技巧的内容只有「全拼」和「简拼」两项。对于全拼的论述不足100字（如上图所示右边），而简拼的论述也只有可怜的四段（如下图所示）。</p>
+<p><img src="/images/sgjpsm.png" alt="搜狗简拼说明"></p>
+<p>我们再来看看，百度输入法提供了哪些帮助？答案是，完全没有！里面有不少的问题和解答，但是我还没有看到一个有关核心功能使用技巧的。</p>
+<p><img src="/images/bdwtbz.png" alt="百度问题帮助"></p>
+<p>接下来看看讯飞输入法提供的帮助。更加可怜！</p>
+<p><img src="/images/xfsrbz.png" alt="讯飞输入帮助"></p>
+<p>难道真的是用户已经熟习了核心功能的最佳使用方法，完全没有什么问题了吗？非也。事实上，大多数用户没有能够以高效的方式来使用拼音输入法，更为严重的是他们往往意识不到自己的输入方式存在什么问题！</p>
+<p>由于拼音输入法的输入方式非常灵活，用户又一般都有拼音的基础，所以入门上手使用是非常容易的，给人以不用学习就能用好的假象。但是，能够使用是一回事，能够用好又完全是另外一回事。这和键盘打字时的指法有类似之处。由于缺乏指导和入门太容易，造成许多人养成低效的拼音输入方式，结果浪费了大量宝贵的时间还浑然不知。</p>
+<p>在知乎上介绍拼音输入技巧的人一般就是介绍什么u模式、v模式等辅助功能，这些在搜狗的官网上也有详细介绍了。只有极少数人在思考如何提高拼音输入在正常打字时的效率。例如，在知乎上就有人从分词的角度回答了以下问题。</p>
+<p><img src="/images/zhpywt3.png" alt="知乎拼音问题"></p>
+<p>当然，拼音输入的核心技巧不只是分词的问题，还有不少的其它重要问题，后面会详细讨论。</p>
+<h2 id="二、拼音输入的误区"><a href="#二、拼音输入的误区" class="headerlink" title="二、拼音输入的误区"></a>二、拼音输入的误区</h2><p>初学者在使用拼音输入法时，因为缺乏指导、随意输入，使得不少人养成了不好的输入习惯，陷入了拼音输入的一些误区，比如整句误区、联想误区和简拼误区。现在将对这些误区进行逐一剖析，以求规避之道。</p>
+<h3 id="1-整句误区"><a href="#1-整句误区" class="headerlink" title="1. 整句误区"></a>1. 整句误区</h3><p>现在的拼音输入法常常被称为智能整句输入法。人们在描述输入法发展历史的时候，也常常说从字到词到句。从理论上来说，更大的语境更有利于提高音字转换的正确性。从算法上来说，通过长期的积累，已经有成熟的隐马尔科夫模型。从硬件上来说，CPU、内存、硬盘等性能大幅提升，价格大幅下降，已经不是问题。加上互联网的成熟，更可以利用大厂服务器的资源和大数据来提升智能整句输入法的能力。从用户的角度来说，使用整句输入可以没有分词的负担，还可以少按大量的空格，只需要练熟400来个音节拼式，只管一个劲地击键就行了。似乎一切都完美了！</p>
+<p>然而，实际情况却让人大跌眼镜，绝大部分人并没有以整句为单位来输入，真正采用整句输入的人其输入的效率也并不高。最能称得上整句输入法的微软拼音整句模式，可以算是技术上的精品了，但是采用的人并不多。微软拼音在面对搜狗、百度等利用搜索引擎和网络词库的次整句输入法时，显得力不从心，用户数量越来越少。所谓次整句输入法是指它遇到空格和标点符号就会上屏默认转换结果，而并不是要等到一句话输入完成才确定转换结果，介于整句模式与字词模式之间。为什么会出现次整句输入法大行其道的局面？这难道不是一种倒退吗？难道用户都这么愚昧吗？整句输入的问题出在哪里？问题出在以下几个地方。</p>
+<p>(1) 编码效率低</p>
+<p>拼音作为编码来说，编码效率太低，导致平均码长过长，超过了三码。汉语拼音的设计初衷是用于注音识读，所以遵循了音素化和国际化的原则。在这些原则的指导下，由于普通话自身的特点，使得拼音字母的利用效率很低，存在大量冗余。从编码的角度来说，用26个字母表达400个音节，每个音节只需要不到2个字母，因为26×26=676，可用的编码空间远远大于400，而汉语拼音却用了超过3个字母，所以效率会低。</p>
+<p>(2) 确认成本高</p>
+<p>整句的转换结果在输入的过程中可能会不断地发生变化，所以不到输入结束是不能判断其正误的，能够判断正误的只有输入的拼音串，拼音串不会发生变化。然而拼音并不是文字，人们对它的识读能力是很弱的，最多只能快速找出刚才输入的一两个音节的错误。因此，在输入过程中，最多只能做到输入的拼音串尽量不要出错。在一句话输入完成后，用户不通读一遍转换结果，是无法知道对错的，即使结果完全正确，这一步都是少不了的，而且句子越长判别正误的成本越高。</p>
+<p>(3) 回改成本高</p>
+<p>如果在上屏前确认时发现了错误，就需要进行回改。错误可能发生在一句话的任何位置，可能是转换结果有错，也可能是输入的拼音串有错。发现错误的位置后，需要先定位才能修改，其定位方法一般是用左箭头键逐个音节向前移动，用右箭头键逐个字母向后移动。箭头键的位置远离本位键，操作跨度大，缓慢、费时。还有一个少用的方法是用Ctrl加字母键来定位，其特点是用键次数少，但是操作难度大。</p>
+<p>(4) 残错概率大</p>
+<p>不少人习惯于在输入过程中监视转换结果，在输入最后一个字词时就不再观察转换结果，然而可能会正是这最后一个字词又导致前面已有的结果发生变化，导致错误。这种错误，用户往往不容易发现，使得残错率升高，因为他不自觉地会认为，前面是正确的，最后一个选择也正确的话，就不会有错了。另一种情况是，明明知道还有错误，但是因为觉得修改太麻烦了，就不愿意修改而直接上屏了；这在打字比赛之类的紧急场合和聊天之类的不严肃场合是很常见的。</p>
+<p>有鉴于以上原因，拼音输入应该以字词为单位而不是以句子为单位。实际上，除了极少数死心塌地的整句派，大多数人也是这么做的。先进行正确的分词，然后按字词进行输入，可以在一定程度上同时克服以上四个问题。在输入字词时可以适时地使用简拼，从而缩短码长，提高编码效率。字词的长度一般不会超过四个字，确认和回改的成本会大大降低，错误更容易发现和修改，残错率也会减小。</p>
+<p>我们现在举两个例子来加以说明，使用的是搜狗输入法。都采用两种方式来输入，一种以整句为单位，另一种以字词为单位，后者不便于截图就没有附图了。在拼音串中，阿拉伯数字表示选择，<code>_</code>表示空格，<code>.</code>表示翻页。</p>
+<p>例子1（22字）：中文输入法是在信息社会必须使用的重要工具之一<br>整句（65键）：<code>zhongwenshurufashizaixinxishehuibixushiyongdezhongyaogongjuzhiyi2</code><br>字词（55键）：<code>zhongw_srf_s_z_xinx_sheh_bix_shiy_d_zhongy_gongj_zhiyi_</code></p>
+<p><img src="/images/sougoulizi1.png" alt="搜狗例子1"></p>
+<p>例子2（16字）：声笔系列码是顶功输入法的典型代表<br>整句（64键）：<code>shengbixiliemashidinggongshurufadedianxingdaibiao.2..32..4.3..23</code><br>字词（52键）：<code>shengbi.43_xil_ma.2s_dinggong.42srf_d_dianxing_daib_</code></p>
+<p><img src="/images/sougoulizi2.png" alt="搜狗例子2"></p>
+<p>可以看出，即使在例子1完全输入和转换正确的情况下，整句方式的用键都更多；在例子2转换错误比较多的情况下，就更是如此了。如果例子1中【在】字的拼音误输成了za，那么麻烦就大了。</p>
+<p><img src="/images/sougoulizi3.png" alt="搜狗例子3"></p>
+<p>这时，要么按15次左箭头键定位到za之后追加i，要么先选中za之前正确的【中文】【输入法】【是】三个词再想法修改，此时显然后者划算一点，按此操作后的情况如下。</p>
+<p><img src="/images/sougoulizi4.png" alt="搜狗例子4"></p>
+<p>此时，按Home键先定位到za之前，再按两次右箭头键定位到za之后，追加i后，总算是修改正确了。</p>
+<p><img src="/images/sougoulizi5.png" alt="搜狗例子5"></p>
+<p>可见，定位修改过程之繁琐。更可悲的是，许多人还根本不知道这种定位修改法，搜狗的官网帮助都没有介绍。于是使用者往往是将错就错，或者是上屏后再来修改。如果是以字词为单位输入，那么在输入【在】字时一般只用声母加空格就行了，或者在输入za后立刻就可以发现错误、进行纠正了，绝不会变得如此积重难返。</p>
+<p>搜狗、百度等输入法还都支持按住Ctrl键+字母来进行音节首字母定位，重复按加按同一个字母则定位下一个以此字母开头的音节。这样，上例只需要按Ctrl+x就可以定位在za的后面了，可以少许多次按键。</p>
+<p><img src="/images/sougoulizi6.png" alt="搜狗例子6"></p>
+<p>然而，对一般的人来说，加Ctrl的复合键操作难度是很大的，很容易按错键，也不是很实用，不能改变整句方式不好用的本质。</p>
+<h3 id="2-联想误区"><a href="#2-联想误区" class="headerlink" title="2. 联想误区"></a>2. 联想误区</h3><p>在使用默认开启联想的输入法（例如百度手机输入法）时，有的用户不自觉地会养成单字加联想的输入习惯。在没有指导的情况下，对于初学者来说，逐字输入，选择重码上屏后，根据联想来再次选择所需要的字词是最为轻松的路径。这种输入方式在不用分词这一点上与整句输入是类似的，是初学者喜欢的原因之一。</p>
+<p>不少初学者觉得，汉字输入不就是输入汉字吗？于是，输入一个音节后就看看有没有自己要的字，没有的话翻页再找直到找到为止，然后选择上屏。上屏后发现输入法居然提示了自己想要的字词，心中大喜，毫不犹豫地再次选择上屏，就这样逐步对联想产生了依赖。由于依赖的缘故，即使在当前页没有提示出自己想要的字词，即使输入法没有收录，也会不自觉的翻页去查找，在尝试多次找不到以后，才会重新输入字的拼音。以上过程周而复始地进行，便陷入了联想的误区。</p>
+<p>现在以百度手机输入法举例来说明一下单字加联想的输入方式。由于单字重码多，而且联想的内容也可能很多，所以需要大量费时的查找选择操作，输入效率很低。</p>
+<p>例子：联想误区<br>操作：在输入lian后，首页找到了「联」字。</p>
+<p><img src="/images/baidulizi1.jpg" alt="百度例子1"></p>
+<p>选择上屏后，在首页又找到了「想」字，再次选择上屏。</p>
+<p><img src="/images/baidulizi2.jpg" alt="百度例子2"></p>
+<p>在输入了wu后，首页并没有「误」字，需要下拉翻页才能找到。</p>
+<p><img src="/images/baidulizi3.jpg" alt="百度例子3"></p>
+<p>选择「误」上屏后，首页找不到「区」字，需要滑动翻页查看才能找到。</p>
+<p><img src="/images/baidulizi4.jpg" alt="百度例子4"></p>
+<p>实际上，以上例子直接用词组来输入是非常简单快捷的。输入lianx，在首页就出现了「联想」。</p>
+<p><img src="/images/baidulizi5.jpg" alt="百度例子5"></p>
+<p>输入wuqu，在首页就出现了「误区」。</p>
+<p><img src="/images/baidulizi6.jpg" alt="百度例子6"></p>
+<p>可喜的是，大多数拼音输入法已经意识到了这种联想输入方式带来的问题，所以默认大都不会开启联想功能，有的甚至取消了这个功能。不过，一定要提醒用户，注意避开这个误区。</p>
+<h3 id="3-简拼误区"><a href="#3-简拼误区" class="headerlink" title="3. 简拼误区"></a>3. 简拼误区</h3><p>有些比较聪明的初学者，特别是那些韵母掌握不太好的，会陷入简拼的误区。他们发现许多词组只要输入声母就可以出来，于是希望尽量利用这个“窍门”来节约用键，避免输入韵母，养成了只打声母，然后进行查找选择的习惯。</p>
+<p>我们以百度PC端拼音输入法为例来说明。</p>
+<p>在输入「我们」「他们」「可以」之类的词组时，一般都只需要输入两个字的声母就出来了，而且往往是首选。</p>
+<p><img src="/images/baidulizi7.png" alt="百度例子7"></p>
+<p>但是，如果输入「简拼」，只输入声母的话，重码太多，在第16页上还是没有发现。</p>
+<p><img src="/images/baidulizi8.png" alt="百度例子8"></p>
+<p>即使补全「拼」字的韵母后，也要在第4页上才会出现。</p>
+<p><img src="/images/baidulizi9.png" alt="百度例子9"></p>
+<p>所以，虽然简拼有的时候能够大大节约用键，提高输入效率，但是运用不好的话，也可能适得其反，更不能教条化地无条件使用。至于如何正确使用，我们将在讲到拼音输入技巧时详细论述。</p>
+<h2 id="三、拼音输入的技巧"><a href="#三、拼音输入的技巧" class="headerlink" title="三、拼音输入的技巧"></a>三、拼音输入的技巧</h2><p>采用拼音来进行中文输入，并不是随心所欲就能做好的，需要掌握不少的技巧，才能提高效率。作为键盘输入法来说，首先要确定使用多少键的键盘，然后就是采用什么样的指法，最后也是最重要的是以什么为单位来输入以及怎么输入。</p>
+<h3 id="1-键盘类型"><a href="#1-键盘类型" class="headerlink" title="1. 键盘类型"></a>1. 键盘类型</h3><p>如果是使用电脑或者PAD，那么毫无疑问，肯定是采用26键的键盘，没有什么选择余地。但是，在手机上，情况就变得非常复杂了,现代触屏手机上改变键盘就是换一个皮肤那么简单，于是花样百出，9键、13键、14键、17键、26键等，让人目不暇接，不过最主要的还是26键和9键两种。</p>
+<p>在摩托罗拉和诺基亚主宰世界的功能机时代，手机用户只能使用T9输入法，形成了使用9键的习惯，导致他们不少人在现代大触屏手机上沿用了下来，不愿意付出学习26键输入法的成本，这是9键还有不少用户的重要原因，而新的用户基本上都是采用26键的。固执的9键用户列出的其它原因还有：26键太小，容易误触；9键可以单手操作，另一只手可以同时干其它事情。其实，说26键容易误触，完全是由于缺乏训练造成的，因为大量的人在使用26键，都没有觉得有什么严重的误触问题。至于单手操作，用在当前的手机上是很不方便的，因为手机越来越大，也越来越重，单手操作是很累人的；另一只手干其它事情就更不应该了，因为在人们想尽量避免被手机绑架的今天，既然不方便双手操作，就最好暂时不要用手机打字，离开手机休息一下，等方便的时候再使用。</p>
+<p><img src="/images/jp26vs9.png" alt="26键与9键"></p>
+<p>所以，无论用电脑还是用手机，用户都应该使用26键的键盘，而不是9键，更不是14键、17键等。即使是9键输入法的老用户，付出一定的学习成本来熟悉26键输入法，也是非常值得的，正所谓磨刀不误砍柴工。在电脑和手机上使用统一的键盘布局，只需要形成一套输入习惯，可以大大地节约学习时间。用26键输入也比用9键输入使用的平均码长更短，选重码的概率更低，而且在熟悉以后击键率也可能不输9键。即使键速稍微次一点，前两项带来的效率提升也会大过9键击键率稍高带来的好处。另外，用9键能使用的输入法有限，基本上仅限于拼音和笔画，不便于在必要时迁移到其它更专业的输入法。</p>
+<h3 id="2-击键指法"><a href="#2-击键指法" class="headerlink" title="2. 击键指法"></a>2. 击键指法</h3><p>要提高打字效率，击键时的指法是非常重要的。而实际情况却令人担忧，有的人一指禅，有的人二指禅，有的人乱指禅，只有少数人严格遵循标准指法进行过练习。练习标准指法的人前期比较痛苦而且速度还不如随心所欲地乱按快。然而，经过一段时间，练标准指法的人其击键速度就会大大高于随心所欲的人，通过短期的付出来获得长期的收获。</p>
+<p>电脑打字有成熟的标准指法，十个手指分工明确，各司其职，如下所示。</p>
+<p><img src="/images/bzjpzf.jpg" alt="标准键盘指法"></p>
+<p>手机打字虽然还没有明确的标准，但是双手拇指分工操作，大致各分管一半的按键，其它手指握住手机，已经成为快速打字的成熟操作方法。</p>
+<p><img src="/images/sjdzzf.jpg" alt="手机打字指法"></p>
+<h3 id="3-输入单位"><a href="#3-输入单位" class="headerlink" title="3. 输入单位"></a>3. 输入单位</h3><p>在前面论述拼音输入误区的时候，已经得出结论：以整句为单位来输入中文是不可取的，而且单字加联想的方式也是应该避免的，简拼也不要不分青红皂白地使用。那么，正确的方式是应该以字词为单位来进行输入，并且综合利用各种技巧。字词再加细分，又可以分为单字、二字词、三字词和多字词，以下分别论述其正确的输入方法。</p>
+<p>(1) 单字</p>
+<p>汉字的同音字现象很严重，单字输入时重码多，码长长，人机交互频繁，不利于提高输入速度，所以要尽量避免，只有在不能组词的情况下才使用单字。在输入单字时，又分超高频单字、一般单字和局部重复使用的单字几种情况而有不同的输入方式。</p>
+<p>a. 超高频单字</p>
+<p>超高频单字是指少数使用频率非常高的单字，如「的」「一」「是」「了」等，它们一般只需要用一码就行了。这类字很容易形成条件反射，不假思索地就打声母加空格了。但是，在主流的拼音输入法中，拼音首字母上的字不是固定的，会随着你的使用发生变化，这就容易造成误输入。例如，用百度PC端输入法，在输入h后，就可能有以下不同的结果。</p>
+<p><img src="/images/baidulizi10.png" alt="百度例子10"></p>
+<p>对于初学者来说，这种动态调整也许是有益的，可以尽量减少用户的按键操作，因为输入法是根据该字的使用频度和已经输入的字词来排列一简字的。但是，稍微熟练点的用户就会希望将拼音首字母上的超高频字固定下来，因为人会对高频反复的动作形成条件反射。固定一简字后，可以对一简字进行盲打，提高击键速度，比之频繁的人机交互更能提高打字速度。固定超高频字的方法是利用输入法的自定义短语功能为你选定的超高频字固定一个字母。</p>
+<p>在键入首字母后，除了作为首选项的一简字，还有一些其它字可以直接用数字选择上屏。初学者常常会去选择它们，因为可以节约用键啊。一定要抵抗住这种诱惑，否则会养成坏的习惯。为什么呢？因为那些字是动态变化的，扫描这些选项来找到需要的字是很费时间的。而且，数字键不好操作，容易按错，对初学者更是如此。</p>
+<p>还有一种诱惑更要抵抗住，那就是输入第一码后通过翻页去找后面的字，除非你不知道韵母。这是一种效率极低的输入方法，有太多的人机交互，不但会导致击键缓慢，而且用不了多久，眼睛就会疲乏倦怠而受不了。</p>
+<p>b. 一般单字</p>
+<p>一般单字是指一简字之外的其它单字。这种字一般是采用全拼输入。如果有重码就用数字键来选择。通常默认有五个选项，分别用12345作为选择键，首选项可以用空格上屏，而且一定要用空格上屏才能提高效率。选项的数量虽然可以通过设置调整为最多10个，但是不建议这么做，因为选项过多会加重人机交互的负担，效率反而降低。</p>
+<p>如果所要的字没有出现在当前页，一般人都是进行翻页查找，这对于高频字可能没有问题，其它字就可能需要很多次翻页查找。例如，「译」字，就需要六次翻页，在第七页才出现，而且如果不仔细看的话很可能看漏。如果要输入「疫」字，那么需要的翻页次数就更多了。</p>
+<p><img src="/images/baidulizi11.png" alt="百度例子11"></p>
+<p>怎么避免翻页呢？答案是添加辅助码，其方法是，先按Tab键，然后输入笔画或者部件名称的首字母。横竖撇捺折五种笔画分别用hsbnz来表示。部件的名称有的时候不好琢磨，比如「疫」的两个部件辅助码为bs，很少有人知道「殳」的读音为shu。下图所示是输入「疫」字时分别加笔画和部件辅助码的情况。</p>
+<p><img src="/images/baidulizi12.png" alt="百度例子12"></p>
+<p>在手机上的操作方式是类似的。在输入拼音后，下拉翻页，再点击笔画来过滤。不过，手机上只有笔画辅助码，没有部件辅助码，而且笔画也只能使用首笔。每页有多达二十个选项，当页没有的话，还可以再下拉翻页。操作过程如下图所示。</p>
+<p><img src="/images/baidulizi13.png" alt="百度例子13"></p>
+<p>c. 局部重复单字</p>
+<p>对于刚才输入过的字，即局部重复的字，输入法会动态的将其提前。例如，上例中的「疫」字，在输入过一次以后，只要输入它的拼音首字母，它就会出现在首位。</p>
+<p><img src="/images/baidulizi14.png" alt="百度例子14"></p>
+<p>当然，如果你已经将一个超高频字比如「一」通过自定义短语固定给了y，那么就需要输入yi才会有「疫」出现在首选。</p>
+<p>(2) 二字词</p>
+<p>二字词在中文里是使用得最多的词组，数量很大，同音词现象非常严重，掌握其输入技巧是极为重要的。与单字的情况类似，也可以分为高频词、一般词和重复词三种情况。如何判断一个词是否为高频词，没有一个简单的规则可用，只能凭借经验和直觉了。</p>
+<p>a. 高频词</p>
+<p>对于使用频率很高的二字词，应该采用简拼来输入。例如，「我们」可以用wm，「非常」一般用fc即可。</p>
+<p><img src="/images/baidulizi15.png" alt="百度例子15"></p>
+<p>如果首页没有你要的词，一定不要翻页查找，而是应该继续输入第二字的韵母。例如，「文明」在输入wm后，如果没有，就补全为wming。</p>
+<p><img src="/images/baidulizi16.png" alt="百度例子16"></p>
+<p>这时如果要输入的是「亡命」，又怎么办呢？一种方法是，按左箭头键一次将光标向前移动一个音节到w后，补充输入「亡」的韵母ang，然后按End键将光标移动到最后。</p>
+<p><img src="/images/baidulizi17.png" alt="百度例子17"></p>
+<p>更好的方法是，不移动光标，而按Tab后添加首字前两笔的笔画辅助码，「亡命」就出现了。</p>
+<p><img src="/images/baidulizi18.png" alt="百度例子18"></p>
+<p>如果要输入的词不存在，也可以通过以上方式来造词，而不是用Esc清除后重新输入，造成浪费。比如，输入「声笔」的情况如下。在输入sbi后，当前页没有，按Tab键追加首字的四个笔画hshz，「声」字出现在首位，按空格上屏后，「笔」字也出现了。</p>
+<p><img src="/images/baidulizi19.png" alt="百度例子19"></p>
+<p>b. 一般词</p>
+<p>如果用户判断要输入的二字词不是特别常见，那么第一个字就要采用全拼，第二个字先用简拼。这种方式的用键比较多，优点是确定性更好。例如，要输入「撞针」，则先输入zhuangz，发现没有，于是再补全第二字的拼音，该词就出现了。</p>
+<p><img src="/images/baidulizi20.png" alt="百度例子20"></p>
+<p>如果遇到不存在的词，则按Tab键添加首字笔画或者部件的声母，逐个选择输入单字来造词。还是以「声笔」一词为例，输入过程如下。</p>
+<p><img src="/images/baidulizi21.png" alt="百度例子21"></p>
+<p>这里需要注意的问题仍然是，要避免陷入翻页查找的误区。虽然有的时候翻页一次就能找到，但是也会常常遇到多次翻页都找不到的情况，总体平均下来成本会更高。</p>
+<p>如果已经估计到一个二字词在输入法中不存在，那么还是用全拼来输入后造词是最好的。</p>
+<p>c. 重复词</p>
+<p>对于上文刚出现过的二字词，一般可以直接采用简拼来输入。比如，上文才输入了「撞针」和「声笔」，那么分别用zz和sb就可以输入它们了，可以节约大量的用键。</p>
+<p><img src="/images/baidulizi22.png" alt="百度例子22"></p>
+<p>(3) 三字词</p>
+<p>在中文里，三字词的数量比二字词少得多，而且三字词拼音提供的编码信息量大，所以效率最高并能避免浪费的输入方式是，先用简拼，未出现则补全末字的拼音，再未出现则按Tab键后追加首字的笔画。例如，输入「浆纱机」的过程如下。</p>
+<p><img src="/images/baidulizi23.png" alt="百度例子23"></p>
+<p>对比以下可能的其它方式。可以看出，提供的拼音越全面，确定性也就越高，但是用键也越多。</p>
+<p><img src="/images/baidulizi24.png" alt="百度例子24"></p>
+<p>对于「浆纱机」一词的输入来说，以上的第一种方式用键还更省，而且不用追加笔画，似乎是更好的。但是，这些方式不能以最简的方式来输入「计算机」「教师节」等词组，总体说来还是不划算的。如果上文才输入过「浆纱机」，那么用简拼就是理所当然的事了，与推荐的方法也是吻合的。</p>
+<p>如果我们觉得输入法应该有的词，按照简拼优先的方式输入后发现没有，那么仍然可以Tab追加笔画来造词，比如输入「声笔佬」的过程如下。</p>
+<p><img src="/images/baidulizi25.png" alt="百度例子25"></p>
+<p>还是要强调一下，如果明明知道某个词在输入法中没有的话，那么还是用全拼来造词是最好的。</p>
+<p>(4) 多字词</p>
+<p>多字词是指四字及以上的词，它们数量虽然非常大，但是简拼能够提供的信息也足够丰富，所以应该以简拼作为最佳输入手段。例如，「欣欣向荣」「天王盖地虎」，输入前四个字的简拼后就出来了。</p>
+<p><img src="/images/baidulizi26.png" alt="百度例子26"></p>
+<p>与其它类型词组不同的是，如果通过简拼没有找到所需的词，那么最好就不要用补全末字拼音和追加笔画的方式来造词了，而应该用Esc键清除编码后，改用全拼输入来造词，这是因为已经输入的编码并不多，而追加韵母和笔画造词又太繁琐。</p>
+<h2 id="四、拼音输入的改进"><a href="#四、拼音输入的改进" class="headerlink" title="四、拼音输入的改进"></a>四、拼音输入的改进</h2><p>前面我们讲到，在使用拼音输入法的时候，要避免陷入整句误区、联想误区和简拼误区，要采用26键键盘，要学会标准指法，要在科学分词的基础上针对单字、二字词、三字词和多字词利用不同的输入技巧来提高效率。但是，即使都这么做了，还是会有不少不尽人意的地方。这些不是用户的问题，而是输入法本身有缺陷而造成的。</p>
+<p>怎么样对现有拼音输入法进行改进，克服其的缺陷呢？有的人推荐双拼。但是，双拼对于很多人来说，付出的成本太高，而且仍然不能解决重码多的问题，所以愿意采用的人并不多。有没有学习成本更低的改进方法呢？答案是肯定的。声笔拼音和声笔顶拼就是两种低成本的解决方案。前者与传统拼音非常接近，转移成本极低，而后者效果更明显，但是付出的成本也相对高一点。如果不介意多使用笔画的话，那么还有一种只需声母和笔画的更加简单高效的解决方案——声笔简码。因为声笔简码不是拼音，这里不介绍它了，感兴趣的人可以参见<a href="../sbjm/">声笔简码</a>。</p>
+<h3 id="1-声笔拼音"><a href="#1-声笔拼音" class="headerlink" title="1. 声笔拼音"></a>1. 声笔拼音</h3><p>(1) 音节歧义</p>
+<p>拼音输入法面临的第一个问题就是音节划分歧义。例如，在全拼的时候<code>xian</code>还可能是<code>xi&#39;an</code>；在简拼的时候<code>dzay</code>可能是<code>d&#39;za&#39;y</code>，也可能是<code>d&#39;z&#39;a&#39;y</code>。为了明确音节界线，在电脑上需要加隔音符<code>&#39;</code>，在手机上则需要用专门的分词键。然而用户在使用时，往往不清楚何时是可以省略的，有可能忘记加隔音符或者分词键，从而产生输入错误。</p>
+<p><img src="/images/sougoulizi7.png" alt="搜狗例子7"></p>
+<p>如果上例采用混合显示也基本上能解决问题的话，那么下例就完全不管用了。这两例都是用的搜狗拼音，图中上面的是加了分隔符的，下面的是没有加的。没有加分隔符时，简拼就失效了。</p>
+<p><img src="/images/sougoulizi8.png" alt="搜狗例子8"></p>
+<p>我们分析一下就知道，上文前一个例子的音节歧义是由零声母音引起的，而后一个例子的音节歧义是由翘舌音引起的。如何才能分清音节界限呢？声笔拼音的解决办法是，用v来表示零声母，同时将翘舌音归并到平舌音，即<code>zh ch sh</code>分别归并到<code>z c s</code>。这样以上两例的输入将变为如下图所示，在输入的时候就一定明确了音节界限，无论是全拼还是简拼都是这样。</p>
+<p><img src="/images/sbpylizi1.jpg" alt="声笔拼音例子1"></p>
+<p>(2) 拼式过长</p>
+<p>拼式过长是影响拼音输入法效率的主要原因之一。搜狗、百度等拼音输入法缩短码长的主要办法是使用简拼，另外采用模糊拼音也能起到一定缩短码长的作用，以下是搜狗的输入例子。</p>
+<p><img src="/images/sougoulizi9.png" alt="搜狗例子9"></p>
+<p>在声笔拼音中，简拼的使用方法是类似的，但是平翘舌的模糊是必须的，同时还有以下可选的缩减规则。</p>
+<ul>
+<li>将韵母er合并到e，ü合并到u，ê合并到e，例如：<code>er</code>可以变成<code>ve</code>（前面加<code>v</code>是因为<code>er</code>为零声母音节），而<code>nü</code>可以变成<code>nu</code>。特别注意，ü没有像传统拼音那样用v来代替。</li>
+<li>声母j、q、x后接韵母ia、ie、iao、ian、iang、iong时，可省略i；例如，传统拼音里的<code>jie qiong xiang</code>在声笔拼音里可以变成<code>je qong xang</code>。</li>
+<li>韵母可以不完全输入，这比传统拼音的后鼻音模糊的码长缩减效果更加明显；例如，传统拼音里的<code>qiong xiang</code>在声笔拼音里可以变成<code>qo xa</code>。</li>
+</ul>
+<p>以下是声笔拼音的一些输入实例，与搜狗拼音的输入方式进行了对比。</p>
+<p><img src="/images/sbpylizi2.webp" alt="声笔拼音例子2"></p>
+<p>(3) 重码过滤</p>
+<p>在中文里，单字和二字词的同音现象特别严重，为了避免过多翻页，传统拼音通过按Tab后加辅助码的方法来快速过滤重码，称之为间接辅助码，因为不加Tab的话，就会发生歧义。在声笔拼音中，由于采用v表示零声母，基本上解决了音节歧义的问题，同时以不与声母重叠的元音字母aeuio表示折横撇竖捺五种笔画，所以可以不用Tab引导而直接加笔画辅助码，这不仅少用了编码字母，缩短了码长，还使得操作更加容易。以下举几个例子来对比一下声笔拼音和搜狗拼音的输入情况。</p>
+<p>例1：采用拼音加笔画辅助码输入「疫」字。声笔拼音可以直接加笔画，而搜狗拼音必须用Tab引导。</p>
+<p><img src="/images/sbpylizi3.webp" alt="声笔拼音例子3"></p>
+<p>例2：采用拼音加笔画辅助码输入「质子」一词。声笔拼音可以在第一个字后面加笔画，再接着输入第二个字，而搜狗拼音必须在输入完两字的拼音后按Tab再添加第一个字的笔画。</p>
+<p><img src="/images/sbpylizi4.webp" alt="声笔拼音例子4"></p>
+<p>(4) 回改定位</p>
+<p>在发生输入错误而需要定位修改时，一般拼音输入法是通过用箭头键移动光标或者Ctrl+音节首字母来定位的，但是这些方法效率低、操作难度大。声笔拼音提供了一种快速、方便的定位方法，可以利用数字 1234 将光标一次性地定位到待定的第 1 至 4 个音节之前，用 5 将光标定位到最后，而 TAB 可以快速从当前位置向前逐个音节移动。</p>
+<p>(5) 重码选择</p>
+<p>声笔拼音选择重码时，使用 67890，这一点与传统拼音输入法是不一样的。之所以这么设计，是因为 12345 已经用于快速定位， 也因为在声笔拼音输入时左手的负担已经很重，改用 67890 后，让右手承担重码选择的任务，可以平衡用键。在传统拼音输入法中，67890一般是闲置未用的，造成了按键资源的浪费。</p>
+<p>(6) 简码固定</p>
+<p>搜狗、百度等拼音输入法是全动态的，连简码字也完全不固定，不利于用户对高频字形成条件反射，用户必须通过自定义短语来固定所需的字。声笔拼音的一简字是固定不变的，便于用户盲打它们，以便提高键速，从而提高输入效率。例如，在单字输入时，「和」的简码始终为h，「就」的简码始终为j，不会发生变化。</p>
+<h3 id="2-声笔顶拼"><a href="#2-声笔顶拼" class="headerlink" title="2. 声笔顶拼"></a>2. 声笔顶拼</h3><p>声笔顶拼的目的是在声笔拼音的基础上进一步提高拼音输入的效率。它通过对汉语拼音的简化和巧妙的字词编码，在保持易学的前提下，既能充分利用简拼来缩短词组的码长，又能通过追加韵母来延长编码，还能用 a、e、u、i、o 代表折、横、撇、竖、捺直接追加笔画来筛选重码字词。</p>
+<p>(1) 精简拼式</p>
+<p>为了支持顶功和缩短码长，在声笔顶拼中，拼音形式的所有简化都是强制性的，这与整句模式的声笔拼音是不一样的，后者只有零声母的表示和翘舌音的简化是必须的。而且更重要的是，各种类型的字词都必须遵循固定的编码格式，以强制用户使用最高效的输入方式，避免用户养成不良的输入习惯。</p>
+<p>a. 单字的编码是拼音加笔画直。例如，「汉」为han，「字」为zioo，前者无须加笔画，后者加了前两笔。</p>
+<p><img src="/images/sbpylizi5.webp" alt="声笔拼音例子5"></p>
+<p>b. 二字词的编码是首字的声母加次字的拼音再加首字的笔画。例如，「汉字」为hzio，「输入」为sru，前者加了「汉」的首笔，后者无须加笔画。</p>
+<p><img src="/images/sbpylizi6.webp" alt="声笔拼音例子6"></p>
+<p>c. 三字词的编码是各字的声母加末字韵母的首字母再加首字的笔画。例如，「军事家」为jsja，「中学生」为zxse，前者的「家」必须采用ja而不能用jia，后者的「生」只能用se而不能用seng。不过，常用的三字词往往只需要三码，如「计算机」可能为jsj。</p>
+<p><img src="/images/sbpylizi7.webp" alt="声笔拼音例子7"></p>
+<p>d. 四字及以上词（多字词）的编码是前三字和末字的声母再加首字的笔画。例如，「欢天喜地」为htxd，「中华人民共和国」为zhrg，这一点和传统的四码输入法类似。</p>
+<p><img src="/images/sbpylizi8.webp" alt="声笔拼音例子8"></p>
+<p>(2) 续码顶屏</p>
+<p>声笔顶拼的字词编码自带了明确的边界，当后接声母时，可以将前面的字词顶上屏幕而省略空格，从而大大提高输入效率，这也是声笔顶拼中顶字的由来。</p>
+<p>例如，「声笔顶拼」用单字输入时的编码为sengbiudingpine，前三个字都是不需要空格上屏的，只有最后一个字因为没有后续输入了才需要用空格上屏。</p>
+<p>再如，若连续输入<code>汉字</code>和<code>输入法</code>，使用声笔顶拼时输入码为<code>hziosrf</code>，使用拼音整句时输入码可能为<code>hanzi srf</code>。也就是说，即使<code>汉字</code>通过调频而处在重码的首选，也是需要用空格上屏的，而声笔顶拼是不需要空格的。</p>
+<p>连续顶屛的例外情况主要有一简单字和三简三字词。例如，「我」w，「计算机」jsj，在后续声母时，无法顶屛，必须先用空格上屏。</p>
+<p>还有一种需要特别注意的例外情况是声笔顶拼中残留的音节歧义。例如，<code>jan</code>可能是<code>jan件</code>，也可能是<code>ja家n你</code>；<code>sjin</code>可能是<code>sjin神经</code>，也可能是<code>sji世纪n你</code>。在忘记使用空格上屏的时候，如果用退格键删除n，再用空格键上屏「家」或「世纪」，然后再输入n的话，就非常低效。为此，声笔定制程序专门提供了快捷键<code>Shift+BackSpace</code>来一键完成前述三个动作。在手机上，用左滑<code>BackSpace</code>键来代替<code>Shift+BackSpace</code>即可。另一种歧义的情况是n后接g。例如，<code>jang</code>可能是<code>jan件g个</code>，也可能是<code>jang将</code>。这时， 同样可以用以上快捷方法来快速更正。</p>
+<p>(3) 动态码长</p>
+<p>例如，<code>之</code>的初始输入码为<code>zio</code>，在读音后附加了一个笔画。如果输入了与<code>之</code>前三码相同的字，比如<code>字</code>，那么<code>zio</code>这个输入码上的字就可能变为<code>字</code>，而<code>之</code>的输入码可能被动态地调整为<code>zioa</code>。</p>
+<p>再如，<code>真是</code>的初始输入码为<code>zsi</code>，没有附加笔画。如果输入了与<code>真是</code>前三码相同的词，比如<code>正式</code>，那么<code>zsi</code>这个输入码上的词就可能变为<code>正式</code>，而<code>真是</code>的输入码可能被动态地调整为<code>zsie</code>。</p>
+<p>又如，<code>计算机</code>的初始输入码为<code>jsj</code>。如果输入了与<code>计算机</code>前四码相同的词，比如<code>接收机</code>，那么<code>jsj</code>这个输入码上的字就可能变为<code>接收机</code>，而<code>计算机</code>的输入码被动态地调整为<code>jsji</code>。</p>
+<p>还如，<code>将计就计</code>的初始输入码为<code>jjjj</code>。如果输入了与<code>将计就计</code>前四码相同的词，比如<code>斤斤计较</code>，那么<code>jjjj</code>这个输入码上的字就可能变为<code>斤斤计较</code>，而<code>将计就计</code>的输入码被动态地调整为<code>jjjju</code>。</p>
+<p>(4) 字母选重</p>
+<p>声笔顶拼字词编码的最大码长为6，在输入六码后如果有重码，那么可以用<code>aeuio</code>来进行选择，比搜狗拼音等传统输入法用数字键选择更方便、快捷。这时，<code>aeuio</code>不再表示笔画，纯粹是一种无理选重。</p>
+<p>例如，在输入<code>ssieie</code>后，其候选窗的状态可能会如下图所示，可以用e选择「扫视」，用i选择「誓死」。</p>
+<p><img src="/images/dphx.png" alt="顶拼候选"></p>
+<p>如果重码超过一页，则用Tab和Enter键进行翻页。这种翻页方式与传统输入法是不一样的，一定要注意。为什么要这么设计呢？是为了能够不占用逗号和句号这样的常用标点符号键，使它们能够快速输入。声笔顶拼需要翻页的情况很少，所以采用这种翻页方式不会影响其输入效率。</p>
+<p>(5) 自动词组</p>
+<p>声笔顶拼自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，而且对于不满意的词组可能还想删除，因而具有智能特性。</p>
+<p>a. 自动造词</p>
+<p>顶拼的造词是在输入过程中自动进行的。例如：输入<code>声seng 笔biu</code>后，下次输入<code>声笔sbieie</code>时就会有该词了，只是如果有重码的话，新造的词会排在后面。如果重码太多，可以用Tab一次性地跳到最后，以避免多次翻页；前提是你还没有进行过翻页操作，否则会被当作向前翻页处理。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。另外，如果之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
+<p>b. 词组的删除</p>
+<p>顶拼能够将用户几乎不使用的新造词组自动清除。对于少量暂时还未被清理的废词，用户不必理会，到时限后就会被自动删除。在必要的时候，如用户错误地确认了临时词组，系统也提供了手动删除的手段，方法是先将光标移动到该词上面，再按 Control + Delete 键来删除。注意，如果是非临时词组，需要删除两次才能删除。第一次删除时只是把它变成了临时词组。在安卓手机上的删除方法是，用左右滑动空格定位词组，再用删词键来删除。</p>
+<p>(6) 简码固定</p>
+<p>在码长短的时候采用静态编码，易于让常见字词的输入形成条件反射。声笔顶拼的一、二简字和二简词都是固定不变的。</p>
+<p>一简单字有21个：<code>b不 p平 m没 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而</code>，一般需要用空格上屏。一简单字在声笔系列码的所有输入法中都是一模一样的。</p>
+<p>二简单字有98个，其常用程度仅次于一简单字，一般可被顶上屏幕而节约空格。二简单字的例子有<code>ku快 re任 fu夫 te特 xa小 je接</code>等。值得注意的是，二简单字的拼音并不一定是完整的，这样有利于缩短码长。在上述例子中，<code>快</code>的输入码是<code>ku</code>而不是<code>kuai</code>，<code>任</code>的输入码是<code>re</code>而不是<code>ren</code>。用户在开始使用声笔顶拼的时候，遇到这类字常常会打过头，需要注意观察提示行。</p>
+<p>声笔顶拼的二简词有441个，都是二字词，如：<code>bb并不 pj平静 mn美女 fx发现</code>等，一般需要空格上屏。</p>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>技巧</tag>
+        <tag>声笔</tag>
+        <tag>拼音</tag>
+        <tag>顶拼</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>汉字编码输入法综述</title>
+    <url>/2020/11/18/hzbmsrfzs/</url>
+    <content><![CDATA[<blockquote>
+<p>本文是本人于2003年做的研究生论文综述，权当作一个遥远的输入法历史回顾吧。这次重新整理成HTML格式的同时，修改了个别的错别字和语法错误。当我重温此文的时候，仍然觉得收获不小，希望对读者也有所裨益。</p>
+<p>现在是2020年末，汉字输入技术已经发生了巨大变化，人工智能技术的应用使得文字识别和语音识别这些非编码输入方式日益成熟、实用，基于键盘编码的汉字输入也取得长足的进步。互联网和智能手机的普及，使中文输入产品及其用户的格局发生了深刻的变化，形成了搜狗输入法、百度输入法和讯飞输入法三大头部产品。输入法的商业模式更是焕然一新，输入法均是免费提供，变现则是通过其它方式实现。中文顶功编码理论和输入技术从2005年诞生，经过10多年的发展，到逐步为输入法爱好者接受，口碑相传，亲自动手，尝试用顶功技术对音码、形码、音形码进行改造，对字词模式和整句模式进行优化，取得了丰硕成果，最著名的有声笔系列和星空系列的顶功输入法方案，另外还有一码起顶的左飞 1811，二码起顶的西风瘦码、小兮码、灵形速影、左飞双拼、顶功雅歌，三码起顶的左飞三码、听雨三码，二四顶屏的顶功希码，星空学系列的星空两笔、星空键道及其变种，采用四二顶的 C42，采用五二顶的徐码五二顶等等。</p>
+<p>至于本文所述输入法历史之后的进展情况，本人打算另外撰文加以回顾。</p>
+</blockquote>
+<a id="more"></a>
+<p>1978年7月9日上海《文汇报》在第一版以标题为“汉字进入了计算机”长篇文章详细报道了支秉彝先生完成“见字识码”的小键盘输入汉字的设计方案和编码码本，掀开了“编码潮”的序幕，越来越多的人卷入到汉字与电脑碰撞的旋涡，形成了陈力为先生所形容为“史无前例的规模巨大的群众性科研活动”。</p>
+<p>1978年12月，张其睿、支秉彝等汉字编码先行者在青岛召开了我国首次“汉字编码研究会”。会后，科学技术文献出版社出版了《汉字编码方案汇编》，这是第一本关于编码方案的专著。1979年夏，陈明远主持了第一个中文信息研讨班，进行了为时两个月信息处理汉字的基础理论和编码方案研究，张普等将研究成果连续发表在《语文现代化》杂志上，这是第一批研究汉字特征信息的论文。1981年，以钱伟长为理事长的中国中文信息学会成立。中文信息学会及所属的汉字编码专业委员会、《中文信息学报》、《中文信息》等杂志成为组织交流汉字编码及理论的场所和媒介。1981年至今中文信息学会、汉字编码委员会召开国际性、全国性学术会议几十次。在上述学术会议和全国性杂志、报刊、专利公告上发表的国内外论文和公布编码方案约在数千种以上，已上机运行的也超千种。</p>
+<p>汉字编码输入利用计算机的标准配置实现，通过编码对汉字信息进行压缩，既经济又快速，因而一直是汉字信息处理领域中参与人数最多、研究得最多、讨论得最热烈、产品竞争最激烈的领域。随着手机在中国的普及，手机短信量急剧增加，又促进了数字键盘汉字编码输入法的发展。</p>
+<p>虽然目前的汉字编码输入法已有成千上万，然而对它的研究热潮仍然一浪高过一浪。纵观为数众多的汉字编码输入法，大多为低水平的重复设计和开发，技术上的突破很少，理论上的创新就更为罕见了，造成了巨大的人力、物力和财力的浪费。同时，虚假的广告宣传、恶性的商业竞争、猖狂的盗版使用，既使得广大的用户无所适从，又损害了汉字编码输入法开发者的利益。</p>
+<p>本文打算分基础工作、理论研究和实用系统三个方面来对汉字编码输入技术的历史和现状进行综合评述，最后指出现有技术中存在的问题并预测今后技术的发展趋势。基础工作包括国家标准和规范的制定和推行，语料库建设，字、词和汉字特征信息使用频度统计；理论研究包括汉字各阶信息熵计算，字词编码最短极限码长的计算，汉字编码输入模型的建立，输入法评测方法的讨论；实用系统包括至今为止已投入使用的典型汉字编码输入系统的发展状况，它们在编码技术、反馈技术、接口技术等方面的特点。</p>
+<h2 id="1-基础工作"><a href="#1-基础工作" class="headerlink" title="1 基础工作"></a>1 基础工作</h2><p>1974年8月，我国开始了第一个大型汉字信息处理工程项目“748工程”，其主要成果之一是《汉字频度表》，它首先为汉字信息处理提供了重要的基础数据。1980年前后，陈明远、盛谏等人分别公布汉语音节、声母、韵母、声调和字母频度统计。1980年，经过对《汉字频度表》和其它字表的统计分析，国家标准总局颁布了汉字信息处理领域的第一个国家标准《信息交换用汉字编码字符集·基本集》（GB2312-80）。这是一个在中国的汉字信息处理历史上划时代的、具有深远影响的标准。1981年，武汉大学、复旦大学等公布了在《新华字典》字集范围内的字根频度统计结果。1984年，国家文字改革委员会与武汉大学公布了《辞海》字集范围内汉字笔画、部件、结构的动态统计分析结果。1985年，国家文字改革委员会与山西大学公布了人命姓氏用字的抽样统计分析结果。1986年，北京航空学院、新华社利用计算机技术分别公布了基于大型语料库的新的汉字使用频度统计和流通频度统计<sup>[5]</sup>。1985年后，还有北京师范大学、上海交通大学、北京语言学院等分别使用各具特色的自动分词技术公布了大型语料库的现代汉语词语使用频度统计<sup>[8]</sup>。</p>
+<p>武汉大学、上海交通大学、陕西大学、中国人民大学、北京语言学院、北京信息工程学院、北京师范大学、深圳大学、北京航天航空大学和新华社等单位分别建立了具有使用侧重面的大型汉语语料库。今年来我国学者提出在语料库语言学指导下建立语料库，使语料库建设走上更加科学化和规范化的道路。上海交通大学、北京图书馆、国家语委陆续推出规模越来越大、属性越来越全，数据越来越精确的大型汉字属性库。北京大学计算机语言研究所还建立了以汉语语法为中心的“现代汉语语法信息词典” <sup>[9]</sup>。内容全面、翔实、使用方便的汉语语料库、字词属性库对推动汉字编码键盘输入技术的发展无疑会起到重大作用。</p>
+<p>九十年代后公布的与汉字键盘输入系统有关的国家标准有GB13000.1《信息技术多八位编码字符（UCS）》、GB18030 《信息技术 信息交换用汉字编码字符集 基本集的扩充》、GB18031 《信息技术 数字键盘汉字输入通用要求》、GB15834 《标点符号用法》和即将公布的有GB/T18220-2000《信息技术 通用键盘汉字输入通用要求》。语委颁布的规范有GF3001 《信息处理 GB13000.1字符汉字部件规范》、GF3002 《GB13000.1字符集汉字笔顺规范》、GF3003 《信息处理用汉语拼音方案表示规范通用键盘》。</p>
+<p>GB2312-80包含6763个字，GB13000.1包含20902个字，GB18030包含27533个字。关于编码字符集，GB/T 18031要求数字键盘编码应包括GB2312或GB13000.1或GB18030中定义的全部汉字字符，GB/T18220-2003要求通用键盘编码应包括GB18030中定义的全部汉字符号和现代汉语标点符号。</p>
+<p>关于键位设置，GB/T 18031对数字键盘规定输入汉字的编码元素要设定在0～9的数字键范围内，并对五种基本笔画和汉语拼音符号的键位作了规定。多笔画部件及笔画组合可以自由设定。GB/T18220-2003对通用键盘规定‘A’到‘Z’26个字母键输入汉字和词语的特征编码信息。‘0’到‘9’10个数字键，除用来输入阿拉伯数字外，还可用来输入汉字和词语的特征编码信息的辅助信息，包括汉语声调、重码字选择等。另外，还对GB/T 15834定义的23个标点符号的键位进行了规定。<br>关于部件规范，GF 3001对GB 13000.1的20902个汉字进行逐个拆分、归纳与统计后给出了560个基础部件，并规定：基础部件（也称末级部件）为最小的不可拆分的部件；基础部件可以组合成成字部件使用，但不得组合成非字部件；汉字拆分为部件时，应遵循“相离、相接可拆，交重不拆（可拆成笔画）”的原则。</p>
+<p>关于笔画规范，GF 3002明确了汉字的基本笔形是五种，其排列顺序为一（横）、丨（竖）、丿（撇）、丶（点）、乛（折），分别用符号1、2、3、4、5表示。GF 3002还给出了GB 13000.1的20902字的规范笔顺。</p>
+<h2 id="2-理论研究"><a href="#2-理论研究" class="headerlink" title="2 理论研究"></a>2 理论研究</h2><h3 id="2-1字熵、最短码长和极限速度"><a href="#2-1字熵、最短码长和极限速度" class="headerlink" title="2.1字熵、最短码长和极限速度"></a>2.1字熵、最短码长和极限速度</h3><p>早在50年代，钱文浩先生开始从信息论的角度研究汉字，并计算汉字的熵值。这项工作一直延续了三十年，陈文熙、王世宁、李公宜、刘源等将汉字熵值的研究从字熵推进到词熵，从零阶熵推进到高阶熵值。中文的熵值研究对包括键盘输入技术在内的中文信息处理具有重要的理论价值，并对汉字编码具有指导作用。</p>
+<p>李公宜等按照信息论原理，计算出汉字的零阶熵 为9.66比特。他们根据不同语言的句子具有等价的语义信息这一基本前提，推出汉字的极限熵H∞在5.2比特到5.5比特之间<sup>[10]</sup>。他们同时还从中文信息熵得出了在码元数不大于36时以句子为编码对象前提下汉字编码的最短平均码长为1.25， 从而驳斥了某些编码自称能一键一字、输入速度达到每分钟300字的神话。虽然码元数大于36后，在理论上可以进一步缩短平均码长，但是由于手指移动速度会受到影响，反而会使输入速度下降，因而继续增加码元是不可取的。不能突破1.25键/字的结论是针对汉字信源总体作出的，与个别或某些词语或句子能够实现一键一字的实际情况并不矛盾。</p>
+<p>冯志伟根据他自己建立的“汉字容量局限定理”，在汉字的字种数为12370的范围内，计算出汉字的零阶熵 为9.65比特<sup>[11]</sup>。他还利用英汉双语语料库，间接推算出汉字的极限熵H∞处于3.0212比特到5.0713比特之间，其平均值为4.0462。</p>
+<p>王晓龙等直接用概率论的方法，在180万字的样本数据内，计算了N元字词编码的最短码长<sup>[12]</sup>。当N等于26时，字输入最短码长为2.081087，词输入最短码长为1.731010。当N等于36时，词输入最短码长为1.588347。他根据日本打字员的平均每分钟击键数（N=26时为450击，N=50时为250击，N=2000时为50击）给出了录入员的平均速度上限（N=26时为260字/分，N=50时为170字/分），再次说明了码元数的过度增加虽然可以缩短码长但却会降低输入速度的道理。他同时还指出，当N增大时，最短码长和汉字（词）熵的差距随之增加，编码效率逐步降低。</p>
+<p>陈一凡认为“由于汉语字、词的熵值高于拼音文字和汉语的冗余度较低、组词方式灵活，使汉字小键盘输入的效率远远高于拼音文字” <sup>[5]</sup>。他在这里忽视了一个问题，那就是汉字是通过编码以后输入的，拼音文字的输入则是没有经过编码而直接进行的。根据信息论原理，编码是可以对作为信源的汉字信息进行压缩的。因此，汉字的编码输入和拼音文字的直接输入没有什么可比性。</p>
+<h3 id="2-2-输入模型"><a href="#2-2-输入模型" class="headerlink" title="2.2 输入模型"></a>2.2 输入模型</h3><p>整个汉字编码输入过程涉及到人、机、文、码等多种对象，包含了一系列人和机的活动。弄清各种对象和活动之间的相互关系和影响，从而建立起汉字编码输入的概念模型和数学模型，对汉字编码输入法的研究具有重要的理论指导意义。不幸的是，输入模型并没有得到足够的重视。在现有的出版物中，对输入模型的探讨是很少的。</p>
+<p>不过，陈一凡等的《汉字键盘输入技术与理论基础》一书对输入模型做了相当深入的研究<sup>[5]</sup>。他们分析了汉字键盘输入流程，提出了“理想的汉字特征信息键盘输入的数学模型”和“实际的汉字特征信息键盘输入的数学模型” 。他们的数学模型以集合论为工具，说明了汉字、汉字特征信息、键元、汉字内码之间的映射关系及重码的处理办法。</p>
+<p>张侃等按照人的视听感觉、认知和动作对整个汉字键盘输入过程进行分界和说明，得到了一个汉字键盘输入的认知模型<sup>[14]</sup>。该模型的三个不同层次的加工过程和容量限制分别为评测汉字输入方法的三个主要素质提供理论依据：即长期记忆量与易学性，短期记忆量与心理负荷和易学性，认知、动作加工与易用性和输入速度。</p>
+<p>何克杭分析了人类识别汉字的认知模型，并将认知心理学的理论方法系统地应用于汉字编码的形码方案设计，以解决快速性和易学性的矛盾<sup>[15]</sup>。</p>
+<h3 id="2-3-输入法评测"><a href="#2-3-输入法评测" class="headerlink" title="2.3 输入法评测"></a>2.3 输入法评测</h3><p>面对80年代初“编码潮”涌现出的数百种方案和上百种上机运行的汉字键盘输入系统，对它们的内在素质和使用效果的优劣评估提到议事日程。上海交通大学、北京信息工程学院、中国标准化与信息分类编码研究所、中国科学院心理研究所等单位不断探索评估理论和设计评测软件。评估对象由80年代初的编码方案发展为八十年代末的包含“编码层次”和“软件层次”的整个输入系统；评测内容由表象测定深入到与认知心理结合的内在素质测定；评测手段由定性到定量；评测方法由主观因素起作用逐渐过渡到计算机客观评测；九十年代则将评测内容和指标写进了国家标准。</p>
+<p>从1980年起，中国开始进行过几次民间组织的评测工作。由上海交通大学牵头起草了一个评测试行草案。1983年4月，台湾中文电脑研析室主持了对汉字输入方法的调查评估，参加测试的方案有7个。1984年夏，中国中文信息研究会汉字编码委员会、上海交通大学、中国福利会少年宫组织了有5个方案参加的计算机定量测试工作，为评测的理论和实践打下了初步基础。1985年在国务院振兴办公室、国家科委和国家标准局的领导下，挂靠在国家标准局信息分类编码研究所的全国汉字输入方案评测办公室组织各方面有关专家，在对评测试行规则草案进行了全面修改和补充又先后经过三次专家评审，于1985年12月形成了汉字键盘输入方法评测规则草案<sup>[16]</sup>。</p>
+<p>1986年3月至5月，由国务院电子振兴办公室、国家科委和国家标准化总局、中国中文信息学会联合组织的首届全国性评测历时38天，报名方案51个。经静态参数测试和资格审查，确定34个方案进入动态测试。其中，有形码20个、音码3个、音形码8个、形音码1个、形字音词码1个、整字键盘方案1个。按照测试规定和成绩评选出了11个A类方案和19个B类方案。11个A类方案是：陈代于的大众编码，张国防的五十字元多能汉字输入法，唐懋宽的中文声数编码，钱伟长的宏观字形编码，陈国斌的层次四角编码，万仁芳的前三末一拼形方案，刘书泽的部形码，李金凯的笔形编码，由中文信息学会汉字编码专业委员会组织协调、公安部十二局负责牵头的公关项目联合45-3输入法，欧阳松的CK码，李公宜的JDL无间隔输入法。以上A类方案的平均速率为43.16字/分，平均错码率为3.14%，最高平均速率为52.52字/分，最低平均速率为34.83字/分，操作员最短学习期（包括教学）时间为38小时。此次评测工作有力地推动了汉字编码输入技术的发展。</p>
+<p>1987年在大连举办了中华杯中文电脑公开赛，探索将汉字编码输入作为计算机系统的一个子系统来进行评测，同时电子工业部向上海交通大学和北京信息工程学院下达了“汉字键盘输入评测技术”研究课题，推动了评测工作向“的客观、公证、科学”的方向发展。</p>
+<p>进入九十年代后，汉字能否输入计算机的问题已得到解决。但随着计算机的普及，汉字编码输入者中专业打字员的比例越来越少，并且中小学生也都普遍的开始学习汉字编码输入。汉字编码的规范性问题、与语文教学的关系问题、易学性问题等日益尖锐地显现了出来。王力德就普及型汉字编码的易学性目标体系和效率目标体系进行了有益的探索<sup>[17]</sup>。文献<sup>[18]</sup>-<sup>[26]</sup>围绕认知码和五笔字型的规范性问题进行了激烈的讨论。华绍和等指出适应中小学教学用的汉字编码应具备的特点有：编码应符合国家语言文字有关标准和规范；编码实现应使用通用设备，键位设置应符合有关规定；编码以计算机输入为基础，与识字、写字、查字相结合；编码应把汉字全息输入与非全息输入有机结合起来；为基础教育服务，与语文教学紧密结合<sup>[27]</sup>。</p>
+<p>九十年代的国家标准将编码层次和软件层次视为统一的键盘输入系统进行性能考核。《数字键盘汉字输入通用要求》和《通用键盘汉字输入通用要求》规定的系统性能指标有三个：易学性、汉字输入平均码长和重码字词键选率，给出了应当达到的最低要求。值得注意的是，这些标准用键选率取代了传统上使用的重码率。易学性指标要求“学会使用汉字编码输入系统的时间尽量短，并应符合使用汉语作为母语的使用者的思维习惯”，对数字编码则更进一步要求“做到上手能用”。平均码长指标对通用键盘汉字输入要求小于3.2键/字（汉语拼音、笔画为主的简易编码）或小于2.2键/字（部件码、音形码、形音码、双拼）；平均码长指标对数字键盘汉字输入要求小于6键/字（逐字字段输入）或小于4键/字（字词混合输入）。键选率指标对通用键盘汉字输入要求小于6%（汉语拼音、笔画为主的简易编码）或小于1.5%（部件码、音形码、形音码、双拼）；键选率指标对数字键盘汉字输入要求小于8%（逐字字段笔画、部件码输入）或小于10（字词混合笔画、部件码输入）或小于13（10键位逐字字段拼音输入）或小于14（8键位逐字字段拼音输入）或小于12（10键位字词混合拼音输入）或小于14（8键位字词混合拼音输入）。</p>
+<h2 id="3-实用系统"><a href="#3-实用系统" class="headerlink" title="3 实用系统"></a>3 实用系统</h2><h3 id="3-1-实用系统分类"><a href="#3-1-实用系统分类" class="headerlink" title="3.1 实用系统分类"></a>3.1 实用系统分类</h3><p>最常见的分类法是按编码时使用的特征信息元（或称字元）将汉字编码输入法分为音码、形码、音形码和形音码。音码又可以细分为全拼码、双拼码、简拼码。形码又可以细分为部件码和笔画码。部件码需要将汉字拆分为部件或字根，再将它们通过音托、位托、形托等方式映射到键盘字符。音形码以音为主以形为辅。形音码以形为主以音为辅。</p>
+<p>另外，按处理对象大小来分，汉字编码输入法可以采用单字型、字词型和语句型；按适用的输入者来分，汉字编码输入法可以分为普及型与专业型；按编码时使用的字符来分，汉字编码输入法可以分为字母码和数字码；按软件的适应性来分，汉字编码输入法可以分为通用输入法平台（又称码表输入法）和专用输入法（或称定制输入法）；按使用的键盘来分，汉字编码输入法可以分为通用键盘输入法和数字键盘输入法。</p>
+<p>最后，还可以按照汉字编码输入的发展历程将其分代。目前，分代方法并没有形成共识。汉字编码输入法究竟分为几代？每一代的特征是什么？这些问题都有不同的看法。吴越将汉字编码输入法分为三代。其断代标志为：第一代，以单音节的字为单位输入；第二代，以词语（包括单音节和多音节）为单位输入；第三代，除了有固定词库可以用通用词输入外，还可以根据用户的需要自造词语，并具有人工智能，可以自动选择区分重码（同音）词<sup>[28]</sup>。单波也将汉字编码分为三代，但是各代的特征与吴越所描述的大不一样<sup>[29]</sup>。</p>
+<p>本文在叙述时，按历史发展进程把汉字编码输入法分为第一代、第二代、第三代，各代的特征与单波和吴越描述的都不一样，在具体论述时会加以说明。由于除第一代外，各代的汉字编码输入法的数量都很多，因此本文只能选择具有代表型的和具有较大影响的作比较详细的介绍。数字键盘编码输入法，作为目前大家的研究热点，单列出来进行评述。最后，单独介绍一下比较常见的通用输入法平台。</p>
+<h3 id="3-2-第一代汉字编码输入法"><a href="#3-2-第一代汉字编码输入法" class="headerlink" title="3.2 第一代汉字编码输入法"></a>3.2 第一代汉字编码输入法</h3><p>电子工业部第六所于1983年正式公布了我国第一个中文磁盘操作系统CC-DOS，这在我国中文信息处理历史上具有划时代的意义。CC-DOS是在PC-DOS的基础上扩充、修改而成。在广泛使用的CC-DOS 2.1版中，有简拼、首尾码、快速码和区位码输入法，已经涵盖了包括音码、形码、音形码和数字码这些主要类型的输入法，对我国计算机应用的普及起到了开路先锋的作用。</p>
+<p>当时使用得最广泛的输入法是简拼和首尾码。简拼是纯音码，使用的是介于全拼和双拼之间的一种拼音方法，对三个及三个字母以上的韵母进行了压缩。首尾码是一种纯形码，包含97个部件，分为52类；部件到键盘字母的映射没有太多的规律可循，记忆量很大；编码时只取字首和字尾各一个部件，对于未列出的变形部件需要输入者自己去猜测其应归属的键位。这两种方法都不支持联想，也不支持词组，都有很多重码。因此，在输入时选择、翻页操作很频繁，眼睛需要不断地扫描提示行以便在众多的重码中找寻所需的字，输得又累又慢，更不可能实现盲打。</p>
+<p>快速码是通过压缩拼音加码方法实现的，可以在一定的程度上离散重码。由于快速码的加码方法没有规律可循，因此没有得到真正的应用。区位码需要完全要靠死记6763个汉字和符号的数字编码来输入，因此除了用于输入当时还没有其它办法输入的特殊符号外，基本上没有人实际使用。尽管如此，快速码仍然为后来的音、形结合编码指出了方向，区位码仍然为后来的数字码提供了一条线索，它们的理论指导意义大于实用意义。</p>
+<p>另一个早期的汉字编码输入法是电报码。电报码最初并不是用于汉字输入的，而是用于拍发电报的，是最早的汉字数码方案。电报码由丹麦人设计，早在清光绪六年（1880年）就已经在我国使用了。电报码为4位等长码方案，使用的码字从0000到9999，可以代表一万个字符（包括汉字、字母、符号）。电报码没有重码，但编码的规律性不强，十分难记。因此，它完全是为了邮电部门那些已经熟悉电报码的人的需要而移植进计算机的，对一般的汉字输入者没有什么意义。</p>
+<p>1986年，联想集团在推出联想汉卡的同时推出了联想式汉字环境，首先使用了联想方法来加快汉字的输入。那时还没有词组输入方法，联想技术让人耳目一新。汉字输入过程由原来的编码-&gt;翻页-&gt;选择-&gt;编码…变成了编码-&gt;选择-&gt;选择…，因此稍后的很多输入法都采用了这种技术。不过，按照现代汉字编码输入技术的标准来看，联想技术仍然存在两个致命的弱点。一个弱点是，如果后续要输入的字与前面已输入的字不能构成词组的话，则联想就会失败。另一个弱点是，联想选择时人机交互过于平凡，虽然平均码长缩短了，但是实际的输入速度反而会下降。</p>
+<p>总之，第一代汉字编码输入法是在汉字操作系统建立的同时诞生的。在西文操作系统上实现汉字操作系统有许多工作要做，例如汉字字模的设计、汉字的显示、打印等等，汉字的输入仅仅是其中的一个部分。那时，汉字操作系统是由计算机专家完成的，汉字编码专家几乎未能参与其中，虽然当时已有一些人在专门搞汉字编码了。由于计算机的价格还很昂贵，汉字系统的用户很少。汉字编码输入法使得汉字能够输入计算机了，但几乎还没有考虑易学、易用和快速的问题。</p>
+<p>第一代汉字编码输入法的特点是：在DOS环境下，以单字为单位进行输入，在屏幕底部提供专门的提示行显示数量众多的重码字，翻页、选择操作频繁；用数字键选择重码字，用ALT+数字键可重复选择出现在提示行中的重码字；连极为常用的标点符号的输入需要使用区位码，很不方便；联想技术的采用使输入效率有所改善，但其作用是相当有限的；各种输入法间的切换（包括切换到英文）都是通过复合功能键ALT+Fn(F1-F12)来进行的；支持全角和半角方式，但不支持中文标点方式；不支持词组输入，更不支持自定义词组。</p>
+<h3 id="3-3-第二代汉字编码输入法"><a href="#3-3-第二代汉字编码输入法" class="headerlink" title="3.3 第二代汉字编码输入法"></a>3.3 第二代汉字编码输入法</h3><p>1986年，四通公司与日本三井物业合作，推出了四通MS-2400中文电子打字机，宣告了中国专业电子打字时代的到来。由于当时微型计算机的价格还很昂贵，一般的个人用户根本买不起。而单位用户主要希望解决办公打字的问题，并非必须使用微机不可。四通打字机既比较便宜又能适应输入汉字和编辑打印的要求，正好迎合了市场的需要。另外，为了适应没有四通打字机的个人和单位的需要，采用四通打字机的商业打字店也应运而生。随着四通打字机的广泛使用，首先捆绑在四通打字机上的五笔字型输入法也在其发明人王永民的极力推广下流传开来，以培训专业打字员为目标的遍布全国的商业电脑培训机构更加速的五笔字型的推广，造就了几十万使用五笔字型的打字员。后来捆绑到四通打字机上的由刘卫民发明的双音输入法也在当时得到比较广泛的使用。</p>
+<p>九十年代初，一方面由于四通公司的内部运作出现问题，另一方面也由于微机的价格迅速的下降，四通打字机逐步的被微机取代。由于在微机的汉字操作系统上汉字编码输入法是可扩展的，这就为其它非四通打字机输入法提供了发展空间。但是，与五笔字型类似的以拆分汉字为基础的部件类输入法，如表形码、郑码，虽然比五笔字型相对易学且输入速度也差不了多少，发明人的名气也比较大，然而面对已在专职打字员输入法市场上占尽先机的五笔字型，最终没能广泛被用户采用。更具有讽刺意义的是，曾在86年的首届汉字输入方案评测中被评为A类的11个汉字编码方案没有一个得到了广泛的使用。倒是面向一般使用人员的自然码脱颖而出，在克服了双音输入法在速度上的缺陷后，在日益扩大的非职业打字领域得到了广泛采纳。这样便形成了以王永民的五笔字型、刘卫民的双音输入法和周志农的自然码为代表的第二代汉字编码输入法格局。</p>
+<p>五笔字型是最典型的纯形码部件类方案。在五笔字型中，一般将部件称为字根。五笔字型采用了130个基本字根。基本字根按起笔分为五类，对应通用键盘上的五个区。每类又细分为五组，每组对应一个键盘字母。在一个汉字中，字根间的关系被归纳为“单、散、连、交”四种。在汉字拆分时，遵循“取大优先，兼顾直观，能连不交，能散不连”的原则。</p>
+<p>五笔字型将汉字被分为键名汉字、成字字根汉字和键外汉字三种，分别服从不同的编码规则。键名汉字有25个，其编码是重复其所在键上的字母四次。成字字根汉字有近一百个，其编码规则为“键名码+首笔码+次笔码+末笔码”，不足三笔时按“键名码+首笔码+末笔码”编码。键外汉字数量最多，其编码规则为顺序取字的第一、二、三、末字根码，不足四个字根的需补加一个交叉识别码。交叉识别码根据字的末笔（横、竖、撇、点、折）和字型（左右型、上下型、杂合型）而定。另外，字的编码还有一、二、三级简码，其形成方法是取相应全码的前一、二、三个字母。</p>
+<p>五笔字型将词组也分为二字词、三字词和多字词三种。二字词按顺序取各字的前两个字根来编码。三字词按顺序取头两个字的第一个字根和末字的前二个字根来编码。多字词按顺序取第一、二、三、末字的第一个字根来编码。</p>
+<p>职业打字员打字时的一个重要特征是看稿进行录入，并且要求很快的输入速度。所以他应尽量少地去观察提示行和已输入的内容，否则当他回头看稿时再次定位应输入的汉字就会非常吃力，从而极大地影响录入速度。只看稿件进行打字就是平常所说的盲打。绝对的盲打实际上是不可能的。可能的是尽量不将视线离开稿件。职业打字的另一个特征是录入的内容比较广泛，承接商业打字业务时更是如此。这就需要他记住各级简码，知道哪些字应该使用简码输入，哪些字应该用全码输入，哪些词是输入法有的，哪些词是输入法没有的。由于词组的数量巨大，收录过多的词组一方面会加大重码率，另一方面也会增加记忆量，因此职业打字员多以单字输入为主，辅以常用的词组。这也暗示着自定义词组在职业打字中起的作用是十分有限的。鉴于以上原因，要成为一个合格的职业打字员，除了具有灵敏的手指外，没有数月的专门的系统的打字培训是不可能的。</p>
+<p>五笔字型以非常复杂的编码规则换来了在GB2312-80字符集内较低的重码率。当采用强制简码时，还可进一步将低重码率。词组编码被放进全码字的剩余编码空间中，实现了字词混合编码。只要收录的词组量不大，发生重码的可能性是比较小的。一般的五笔字型也不具备自造词的功能。五笔字型拥有的这些特点，正好适应了职业打字的需要，成为它在职业打字时代非常流行的重要原因之一。</p>
+<p>虽然五笔字型在市场上取得了巨大的成功，但它存在的问题也是不容忽视的。首先，五笔字型是非常难学的，而且容易遗忘。它除了有非常复杂的编码规则而外，还有很多例外需要记忆。五笔字型打字员在打字时对一些常见字出现“卡壳”的现象是很普遍的事情。这时就需要临时换用拼音输入法来输入“卡壳”的字。其次，五笔字型的扩展性差。当字符集从GB2312-80到GBK和GB18030过渡时，当词组量增大时，五笔字型在码长为4的码位上会出现大量的重码，使其丧失重码率低的优势。五笔字型采用的是4码无重码自动上屏的策略，4码重码增多就迫使打字员的视线更多地离开稿件来观察提示行以确认自己的输入，从而减低录入速度。最后，五笔字型最致命的弱点是规范性差。张孝存等就此提出了言辞激烈的批评<sup>[25]</sup>。“五笔字型违反语言文字规范。它对汉字的拆分具有相当大的随意性，对国民基础文化素质具有不可忽视的负面影响。它对规范的汉字教育的冲击同其应用范围的扩大成正比。”所以，五笔字型不能适应一般汉字输入者的需要，更不能适应中小学汉字输入教学的需要。</p>
+<p>双音输入法是一种比较巧妙的纯音码，曾经是四通打字机和西山DOS的必备汉字输入法之一<sup>[28]</sup><sup>[30]</sup>。双音输入法支持全拼、简拼和双拼三种拼音方式。对于全拼来讲，除了用v代替ü而外，音节的拼写形式和标准汉语拼音完全一致，非常简单，会拼音的人基本上不用学习就会，但效率最低。简拼是为兼容早期CCDOS而设立的。双拼用两个字母代表一个音节，是效率最高的拼音方法，但学习时的记忆量也最大。在双拼双音中，可以选择采用刘氏双拼，也可以选择采用四通双拼。</p>
+<p>双音输入法最大的特点就是“以词定字、反向联想”，以缓解纯音码方式下单字重码过多的问题。因为二字词的数量很多，所以一般情况下总可以找到某个二字词，它的第一个字就是你想要输入的字。如果该二字词处于提示行的第一候选位置，则可以省略选择键；否则需要用数字键进行选择。如果整个二字词都是你需要的，你可以加一个空格键输入第二个字。也就是说，如果采用双拼的话，利用“以词定字”技术可以使得常用字输入时的平均击键数为2.5，而且基本上避免了传统拼音+联想方式下过多地扫视提示行和翻页、选择的毛病。联想方式仅仅作为一个选项，并不怎么推荐使用它。</p>
+<p>在双音输入法中，对于三字词和四字词，取各字的声母作为编码来输入，必要时加空格结束。对于不认识的字，可以打入“\”调用“手写模拟”，其规则是：首末两笔打代码，中间笔画用空格代替；如果事先计算出应输入的空格数，也可以用数字键代替应输入的空格数。虽然可以自定义词组，但它不支持在线造词。造词时需要用外部文本编辑器按照它定义的格式输入编码和对应的词组。</p>
+<p>双音输入法是拼音汉字输入历史上的一大进步，在当时受到了许多非职业打字员的欢迎。但是，它也存在一些比较严重的不足，以至于现在几乎没有人再使用它了。首先，虽然在输入效率上它较传统的拼音有很大的提升，但是它与后来的语句级拼音输入法如智能ABC相比，还有相当的差距。另外，“以词定字”时很多字可以采用多个词来确定，而有的字难以找到词来确定，用户常常感到不知所措。虽然双音输入法中提供了很多其它的方法来解决单字的录入问题。例如，邓、郭、姚等姓氏用字的输入就有6条辅助规则。要记住这些方法并判断何时采用何种方法可不是一件容易的事情。由于只能离线造词，所以词组的自定义也很不方便。</p>
+<p>自然码是最具代表性的音形码<sup>[31]</sup>。吴越在1993年对自然码作出了极高的评价<sup>[28]</sup>。他说自然码输入法“是目前以拼音为基础的普及型汉字输入系统中最先进、最好学、最方便、最快捷、具有最大人工智能容量的一种方案”。这种评价在当时来说，除了“最好学”这一点是言过其实了（因为它显然没有全拼或笔顺输入法简单）而外，其它的优点自然码都是具有的。自然码在拼音部分采用了在CCDOS简拼的基础上修改而来的双拼，以方便CCDOS用户向自然码过渡。自然双拼与刘氏双拼和四通双拼都是不一样的。</p>
+<p>为了解决拼音输入中普遍存在的同音字问题，自然码采用了与双音输入法完全不同的策略。它通过在双拼后附加形码，大大减少了单字的重码。其形码部分采用“近义部部首分类”法，最多可有两码，用部首读音的声母作代码，取码时坚持“义部优先”的原则，以便减少记忆量和增加形码对重码字的离散能力。采用附加的形码来区分同音字还可以避免双音输入法中一个字可以利用多个词组来确定的不确定性。对于不认识的字，可以用单纯使用形码部分输入，但需要以“/”键开头进行引导。</p>
+<p>自然码的简码字也很有特色，除了传统上用“声母+空格”输入的高频简码字而外，还有用“声母+;”输入的次级简码字和用“声母+’”输入的附加简码字。自然码还设置了用“声母+声母+’”输入的简码二字词，以加快高频二字词的录入。输入一般的二字词时，词组作为一个整体上屏，比双音输入法的“以词定字”每输入一个二字词就少用了一个空格键。三字词用各字的声母+“’”输入，单独享有编码空间。</p>
+<p>自然码还设计了“中文标点状态”，使得常用标点符号的输入和半角字母、数字的输入可以不加切换的进行。自然码的外挂技术使得它可以不加改变地挂接于所有常见的中文DOS系统上。考虑到南方人普通话不准的现实，自然码还提供了南方音选项。设置南方音选项后，用户可以不区分声母z和zh、c和ch、s和sh，也可以不区分en和eng、in和ing，还可以不区分wang和huang、n和l。当然，这时的重码就增多了。联想方式在自然码中也仅仅是作为一个选项提供的，但由于人机交互过于频繁，严重影响输入速度，因而熟练的用户是不会使用的。自然码还对中文数字、日期、时间、制表符等提供了编码式的快速输入手段；对字词的叠加操作也相当方便，可以用于输入“想想”、“思考思考”、“试一试”等。</p>
+<p>智能相关处理是自然码宣传得很多的一项技术。它实际上是一种扩展的联想技术，即把联想用到了词组与词组之间。例如，输入“知名”以后再输入“rfui”（标准拼音为“renshi”）后会把“人士”作为默认选择，而输入“不久”以后再输入“rfui”则会把“人事”作为默认选择。</p>
+<p>在线造词是自然码自誉的另一特色。在汉字输入过程中，如果敲完某个词的拼音以后发现这个词不存在，立即敲空格键，系统便进入“自动加词状态”；这时，连续输入的字、词都作为新词的内容，在送到屏幕上的同时便被纪录到自造词库中；当再敲空格键或回车键时，系统结束自造词操作。如果想造词的编码正好与其他词的编码重复，这时就要按Shift+Tab复合键进行强制造词，此后的操作与前面相同。对于已自定义的词，还可以将其删除。删除的方法是，在输入词的编码且词还未上屏时，按Ctrl+回车复合键；此时，如果无重码则那个唯一的词被删除掉，如果有重码则还需要选择想删除的是哪个词。需要说明的是，系统自带的词是不能删除的。在进行了增、删词组的操作后，在关机或重新启动计算机之前，必须先将自造词库保存到磁盘中，否则关机后所作的修改就无效了。</p>
+<p>总之，第二代汉字编码输入法都是在CCDOS 2.1的原始输入法的基础上发展起来的，以提高汉字的输入速度为主要目标，增加了词组的输入，单字输入时的重码也减少了，出现了中文标点状态，多数都能自定义词组。第二代汉字编码输入法非常多，除了上面介绍的而外，在大陆影响较大的还有陈爱文先生的表形码、郑易里先生的郑码、钱玉趾先生设计的未来码、肖水清先生的肖码、萧启宏先生的启宏全息码等<sup>[55]</sup> <sup>[56]</sup>，在港台影响较大的还有朱邦复先生的仓颉输入法、王赞杰先生的大易输入法、廖明德先生的行列输入法、陈华伟先生的华象中文输入法、刘重次先生的呒虾米中文输入法、戚桐欣先生的中易系统、黄金富先生的唯物输入法等，另外还有美籍华人饶达先生的饶氏笔形输入法和美国王安电脑公司开发的王安三角编码法等。</p>
+<h3 id="3-4-第三代汉字编码输入法"><a href="#3-4-第三代汉字编码输入法" class="headerlink" title="3.4 第三代汉字编码输入法"></a>3.4 第三代汉字编码输入法</h3><p>到了九十年代末，随着微微机价格的进一步降低、存储处理能力的进一步增强、Windows图形操作系统的流行和国际互联网的兴起，用户界面变得非常友好，微机才大面积地进入中国的普通百姓家庭，进入了中小学教育中，真正实现了微机在中国的大普及。</p>
+<p>微机的大普及使得打字成为每个接受过基本教育的人的基本技能，就像会写汉字一样；需要别人打字就像需要别人代笔一样，实际上是文盲的标志。这样就造就了一个庞大的一般计算机用户群体他们都是非职业的打字员。这就意味着，打字员作为一个职业正在快速消失。一般用户在打字时的操作方式是“想打”，和职业打字员的“盲打”方式完全不同。“盲打”要求操作者尽量少看屏幕，输入法提供的反馈信息只有在操作不能“盲打”时才偶尔派上用场；而“想打”时操作者始终是看着屏幕的，输入法所提供反馈的方式和反馈信息量的大小都会对操作者的输入活动产生巨大影响。Windows图形操作系统也为人机界面的丰富化提供了前提条件，可以满足反馈信息多样化的需求。</p>
+<p>现代微机强大的存储处理能力为新型的存储密集型和处理密集型输入法的诞生提供了物质基础。输入法程序不再局限于DOS时代64KB的驻留内存中。千兆级的运算速度使得复杂的智能算法得以投入运行。硬盘容量不仅从兆级扩大到千兆级，访问硬盘的速度也比DOS时代大大提高。将巨型的词库存储在硬盘上并进行快速搜索已不成问题。</p>
+<p>计算机教育日益广泛地在中小学开展后，学生们从小就开始学习打字了。汉字编码与语言文字教育的关系问题被尖锐地提了出来。起码的要求是，汉字编码不能与语言文字知识相冲突。理想的情况是，把汉字编码输入与语言文字知识的学习结合起来，起到相互促进的作用。</p>
+<p>在上述背景下，第三代汉字编码输入法应运而生，其指导思想是：规范、易学、易用并且尽量保持输入速度。这一时期智能化拼音输入法的研究高潮迭起<sup>[32]</sup>-<sup>[51]</sup>，也出现了以笔画或笔对为输入单位的纯形码，还出现了以声母和笔画（或笔对）为基础的音形码。</p>
+<h4 id="1-智能化拼音输入法"><a href="#1-智能化拼音输入法" class="headerlink" title="(1) 智能化拼音输入法"></a>(1) 智能化拼音输入法</h4><p>智能化拼音输入法按其实现原理可以分为四种：基于理解的、基于语用统计的、基于模板匹配的和基于上下文关联的。</p>
+<p>基于理解的智能输入主要利用汉语语法知识来消化同音字词，化解分词歧义，是出现得最早的智能拼音输入方式。它通常表述为计算机能够识别和处理的一系列固定搭配、公式和规则，属于人工智能中的自然语言理解领域。根据自动分词得到同音字词的候选集，查找知识库获得相关规则，再经过规约推理，得出转换结果。利用句内编辑实时修改转换错误，驱动系统知识不断完善和充实。这类系统的优点是：转换的正确率比较稳定，软件的开销视知识库的规模可大可小。缺点是：连续拼音整句输入时，平均码长较长，而采用简拼时键选率很高；偏重于整句处理，当出现转换错误时，需要使用者回头去进行繁琐的矫正，干扰了正常的思维；建立知识库时，汉语知识表达困难；自动分词过程中切分歧义等影响了分词精度。这类系统中最有影响的是北京大学朱守涛研制的智能ABC，其它还有哈尔滨工业大学王晓龙等研制的InSun拼音语句输入系统、张普负责的“七五”公关项目PJS/TLS汉字输入系统、北京大学的北大CW系统、香港陈经纶的经纶系统、加拿大陈岱的天马系统和广州林才松的汉语无编码输入系统。</p>
+<p>基于语用统计的智能输入主要利用语用统计的数据来消化同音字词和化解分词歧义，属于运筹学领域。使用概率统计运筹决策的方案很多。可以通过统计字字相关的同现概率矩阵来完成汉语语用统计库结构，这个矩阵的大小是固定不变的，只与字符集的大小有关。也可以采用基于理解和基于语用统计相结合的设计。该设计根据分词后的输入语句查找知识库，用句法、词法、语义和自定义的规则作为制约对文章进行解析推理，当存在同音词时，采用最优评价法来确定最佳选择作为转换结果。同音词的评价值，需要考虑词性、同现概率、近期使用状况等因素。具有最优评价值的选择即为转换结果。当具有最优评价值的第一选择并非目标选择时，可选用次优选择或用手工方式进行修正，候补修正或人工修正均被记录，作为下次转换时修改计算评价值因素的依据，也就是自学习功能。这类系统的优点是：对于已经进行过语用统计或者具有相同类型的领域，系统的转换正确率比较高；对于每一个用户而言，在使用过程中，语用统计库将会从最初的通用型逐渐改变为符合这个用户语用习惯的专用型；软件开销不大。缺点是：作为一个整体的同现概率矩阵，不能做到模块化、积木化；偏重于整句处理，当出现转换错误时，需要使用者回头去纠正，干扰了正常的思维；目前的自动分词准确度只能达到98％左右，使键选率的降低受到限制。这类系统中最有影响的是微软公司的微软拼音输入法，其它还有蔡榕先生的最优评价函数法拼音汉字转换系统、蒋子龙先生的Autoway、清华大学人工只能实验室夏莹等的智能输入软件。</p>
+<p>基于模板匹配的智能输入将汉语语法知识寓于巨量的模板词中，进而利用这些模板词来消化同音字、词，以及化解歧义分词。系统通过模板词搜索引擎来完成汉语语法体系的组织。由于需要搜索巨量的语料，获取巨量的模板词，才有可能大体上包容汉语语法知识，例如，智能狂拼搜索了100亿字语料，模板词库最大时需要约540MB存储空间。根据分词后的输入语句查找模板词库和句法规则库，然后进行匹配处理。如果匹配结果唯一，则不必再用概率推理；若存在两个以上的候选结果时，则根据句法规则或概率推断进一步判定，选出一个最有希望的可能结果作为输出。这类系统的优点是：对于已经搜索过模板词的或者具有相同类型的领域，系统的转换正确率比较高；对于每一个用户而言，在使用过程中，模板词库将会从最初的通用型逐渐改变为符合这个用户语用习惯的专用型。其缺点是：由于模板词数量巨大，对电脑硬件有一定的要求；注重连续和完整的音节输入，平均码长较长，采用简化拼音输入时键选率较高；偏重于整句处理，当出现匹配错误时，需要使用者回头去纠正，干扰了正常的思维；目前的自动分词准确度只能达到98％，使键选率的降低受到限制。这类系统中最有影响的是中文之星数码科技有限公司推出的智能狂拼，其它还有黑马电子新技术公司推出的黑马智能输入软件和大自然软件开发有限责任公司推出的自然码2000（句输入版）。</p>
+<p>基于上下文关联的智能输入利用上下文关联的语用环境来智能选择重码字、词,属于自动控制分支非线性控制范畴。它将自然语言看成是一个模糊的集合，将汉字输入系统作为一个基于非线性控制范畴的模糊控制系统来对待。预学习工具或者转换出现错误时的手工键选信号相当于一个传感器。算法程序、汉语知识库和动态语用统计库作为非线性调节器，使得系统的键选率和平均码长逐渐趋于最优。这类系统的优点是：对于已经预学习过或者具有相同类型的语料，键选率比较低；对于每一个用户而言，在使用过程中，汉语知识库将会从最初的通用型逐渐改变为符合这个用户语用习惯的专用型；采用字段输入，不使用语句级输入，使语法规则简约化，易于知识表达，不但降低了键选率，还大大缓解了输入过程中“回头看”的问题；在拼音输入时，采用人工分词，在形式上与英文接轨，既可以避免3％的歧义分词错误，大幅度降低键选率。其缺点是：字段输入还未能完全根治输入过程中“回头看”的问题，当终选字词有错时，仍然需要近距离的即时修改；对于“上下文关联”机制中的“下文关联”人机界面，用户需要一个熟悉的过程。这类系统中比较典型的有青月亮科技开发有限公司推出的青月亮汉字通智能输入软件平台GM3.1、二笔软件有限公司推出的二笔智能输入软件和字原科技有限公司推出的101智能输入软件TZ8.2/9.1/2000。</p>
+<p>智能ABC是目前Windows操作系统上使用得最为广泛的准语句级拼音输入法，因为它是以词组和短语为单位而不是以全句为单位进行转换的。它早在DOS时代就产生了，当时使用得并不广泛。它之所以在Windows时代大肆流行，一方面是因为Windows预装了它，另一方面是因为大多数新的计算机用户都是学过汉语拼音的年轻人，他们不需要学习就可以使用智能ABC。虽然输入速度没有五笔字型那样快，但是也能基本上满足他们的需要了，同时节约了长达数月的学习时间。</p>
+<p>智能ABC支持全拼、简拼、混拼、双拼、笔形和音形多种输入方式。全拼使用标准汉语拼音，但需用v表示韵母ü。简拼仅需输入各字的声母。混拼介于全拼和简拼之，可以不同程度地省略拼音字母。笔形输入方式将笔画归为横、竖、撇、点、折、弯、叉、方八类，分别用1、2、3、4、5、6、7、9代表，按笔画顺序为汉字编码。音形方式是在拼音（全拼、混拼、简拼）后面加笔画。智能ABC有标准和双拼两种状态。在标准状态下，可以不加切换地使用除双拼以外的输入方式，为用户提供了极大的灵活性。简拼和混拼主要是为了减少击键数。在双拼状态下，不能使用全拼、简拼和混拼。使用双拼是为了提高输入速度。笔形方式用于用户不认识的字的输入。音形方式则是为了在输入单字时减少重码。</p>
+<p>智能ABC最大的特色是能够非常方便地自定义词组和调整重码字词的顺序。用户只需按自己的想法进行输入，输入时可以不进行手工分词，系统会从前到后逐个进行自动分词。在没有词组时，系统自动按单字显示重码字供用户选择；一旦用户选定并组成新词后，系统就可以记住它。在系统分词不正确或系统提供的词不是用户需要的词时，用户也可以加以修改，系统也能记住用户所作的修改。通过较长时间的使用后，如果用户没有发生变化，系统逐步适应该用户的使用习惯，使用户的输入过程变得自如起来。</p>
+<p>智能ABC也有很多值得改进的地方。首先，在输入时可以随意使用全拼、简拼、混拼，输入者可以在任何时候进行音字转换，过多的方式让用户不知哪种是最好的。看似非常灵活，但却实际上是把优化输入的任务交给了用户。但大多数用户不是这方面的专家，不可能很好的完成这项任务，从而导致用户走很多弯路或形成不好的、低效的输入习惯。其次，音字转换的准确率不高，句内修改很频繁，导致输入速度不理想，即使使用双拼也没有自然码的效率高。</p>
+<p>微软拼音是真正意义上的语句级音字转换智能输入法，是微软自然语言处理技术多年科研成果的结晶。借助于微软操作系统的优势，加上微软拼音本身的较优异的性能，它的用户群体正在逐步扩大，出现了取代智能ABC地位的趋势。</p>
+<p>微软拼音采用拼音作为汉字的录入方式，用户不需要经过专门的学习和培训，就可以方便使用并熟练掌握这种汉字输入技术。微软拼音采用基于语句的整句转换方式，用户连续输入整句话的拼音，不必人工分词、挑选候选词语，这样既保证了用户的思维流畅，又大大提高了输入的效率。</p>
+<p>微软拼音还为用户提供了许多特性，比如自学习和自造词功能。经过一段时间与用户交流，微软拼音能够学会用户的专业术语和用词习惯，从而提高转换准确率，使用户用得更加得心应手。为了适应方言地区用户的需要，它还提供了模糊音设置。另外，微软拼音还支持繁体字的输入。</p>
+<p>微软拼音提供的人机界面非常具有特色。组字窗口可以嵌入正在输入的文本的插入光标处，减少用户在输入时视线的移动频率，使得输入法的易用性得到了很大提高。逐键变换提示并提示转换结果，使得用户不必自己做合适进行转换的决策。用户可以输入的输入码长度没有限制，当超过系统的长度上限或遇到句号时系统会自动进行转换，以便用户能继续不间断地输入。由于考虑的上下文较广，微软拼音能够达到很高的转换准确率。微软拼音在默认情况下拒绝用户输入简拼和混拼，引导用户养成良好的输入习惯。</p>
+<p>微软拼音也存在一些问题。首先，在编码输入出错或转换不正确时进行句内编辑的操作很繁琐和低效。其次，逐键变换时往往会把已经转换正确的内容又修改错了，用户不得不随时监视输入内容的正确性，当已转换的内容较多是非常劳心的。另外，微软拼音没有提供方法加速单字的录入，也没提供方法来输入不认识的字，是不完备的输入法。</p>
+<h4 id="2-基于笔画（或笔对）和-或声母的输入法"><a href="#2-基于笔画（或笔对）和-或声母的输入法" class="headerlink" title="(2) 基于笔画（或笔对）和/或声母的输入法"></a>(2) 基于笔画（或笔对）和/或声母的输入法</h4><p>所有智能化的拼音输入法都存在两个共同的问题。一个问题是，音字转换正确率不可能达到100%，且因输入文本不同而有很大差异，另外输入的句子越长击键出错的概率越大，因此繁琐的句内修改编辑不可避免，导致易用性和输入速度下降。还有一个问题是，对于普通话或拼音不好的人学习难度很大。</p>
+<p>所有基于部件的输入法，如五笔字型、表形码等，虽然速度都比较快，但是都存在记忆量大、编码规则复杂、规范性差等比较严重的问题。</p>
+<p>基于笔画（或笔对）和/或声母的输入法正是为了克服以上两类输入法的缺点并且尽量保持它们的优点而提出来的。采用笔画、声母这两个最简单的汉字特征信息来进行编码，可以极大地提高输入法的易学性<sup>[17]</sup>。但是，汉字的笔画一般归为五种。笔画种类太少，势必增加编码的长度，从而影响输入速度。于是，如何缩短码长、提高录入效率成了这类输入法成功与否的关键问题。</p>
+<p>福建双笔码软件开发有限公司研制的双笔码是一种基于笔画的纯形码。为了克服笔画种类过少的问题，双笔码引入了一种新的笔画类型“叉”，从而将笔画种类扩大六种，取码时按顺序每取两笔构成一个笔对，共可形成36种不同的笔对，并在键盘上有序的将键位分为八个区，然后在相应的键位区内选择键位输入。另外，双笔码还规定病字旁、“口”、提手旁和“日”应作为一个整体取码。病字旁和提手旁均用其头两笔代表，“口”用竖代表，“日”用横代表。</p>
+<p>根据汉字不同构造的组合形状，双笔码把汉字划为三类基本字型即左右型、上下型和综合型。不论哪种类型的汉字，均按四码进行编码。</p>
+<p>左右有明显的空间分割，左右有边旁且左边先起笔的字，确定为左右型。在输入时，左右型字的左边最多用两个笔画，右边不限，即左边笔画仅为一笔，则按汉字先左后右的书写顺序，左边笔画与右边笔画一起，按顺序每两个笔画合为一对，在相应的键位区内选取。</p>
+<p>对上部和下部明显分开，且有一方是基本汉字构成或上部是部首字头的确定为上下型。还规定如最下部是某一汉字构成，则以上的都归为上部。在输入时，按汉字书写从上到下的顺序，每两个笔画合为一对，在相应的键位区内选取。但是对上部笔画多于四笔的，有如下规定：上部笔画多于四笔，则仅用前四笔的笔画，然后与下部笔画一起，按顺序每两笔合为一对，在相应的键位区内选取。<br>所有的独体字，和所有不能分为上下，左右型的汉字都是综合型的。输入时，按汉字书写顺序，每两个笔画合为一对，在相应的键位区内选取。注意，辶字底的字都规定为综合型的。</p>
+<p>在汉字中近半数字为奇数笔画，双笔码为此设立了单笔画区，该区与横区和竖区有重叠。对于奇数笔画的字有可能输入的末笔为单笔画，这时只要在单笔区输入单笔画就可以了。在汉字中还有许多字的笔画较少，这类字有可能仅一键或两键就把笔画输入完了，这时还可能需要继续进行输入。继续输入时可以使用汉语拼音，也可以重复使用基本笔画，但不能使用叉笔和特殊记忆部件进行重复。<br>双笔码词组的输入方法为：二字词输入每个字的头两码；三字词输入前两个字的头一码和末字打头两码，四字及四字以上词输入一、二、三、末字的头一码。</p>
+<p>双笔码的优点是：与传统的部件类输入法相比，记忆量减少了许多；采用笔对和36键编码后平均码长也相当短；如果不按笔对而按单笔画输入，就可以非常容易地向数字键盘移植双笔码。但是双笔码的缺点也非常明显：作为基于笔画的输入法，它的取码和编码规则十分复杂，另外也不少，学习难度仍然很大；采用了上排数字键进行编码，击打不方便，且与常用数字的输入相冲突，影响了实际输入速度。</p>
+<p>陈劲松先生发明的二笔输入法是目前使用得比较广泛的输入法之一，已有多家公司和个人推出了该输入法软件。它是一种基于声母和笔画的输入法，也可以单纯基于笔画进行输入。</p>
+<p>二笔输入法用30个字符给汉字编码，即26个英文字母和4个非字母符号“,./;”，分别代表23个汉语拼音首字母、5种单笔画、25种双笔画和10个设定部首，共63个编码要素。26个英文字母中除了I、U、V三个，其余的23个都可以成为汉语拼音的首字母。5种单笔画为横（一）、竖（丨）、撇（丿）、点（丶）、折（┐）五种基本笔画。25种双笔画是横、竖、撇、点、折五种单笔画两两组合而成的25种笔对。10个偏旁部首是为了提高输入速度、减少重码而设置的使用频率最高的偏旁部首，包括“钅、木、氵、土、艹、日（曰）、月、人（亻）、口、扌”。 打字时遇设定部首不能拆分，直接按其代码键。</p>
+<p>二笔输入法30个编码在通用键盘上分布于六个区：五个双笔画区和一个单笔画区。区内再根据双笔画的第二笔或根据单笔画，按横、竖、撇、点、折的顺序定位。但10个设定偏旁部首的键位需要记忆。</p>
+<p>二笔输入法将汉字按字形结构分为独体字和合体字。输入汉字时，第一码取汉字拼音首字母，从第二码起取笔画，最多取四码，不足四码应全取，不能取双笔画时就取单笔画。独体字不必拆分；第一码取拼音首字母，第二码起按笔顺取笔画的代码，最多取四码。合体字应拆分成两半，按汉字笔顺规则，先写的部分定为前半，后写部分为后半；第一码取取拼音首字母，第二码取前半的第一、二笔，第三码取后半的第一、二笔，第四码取后半的第三、四笔。</p>
+<p>二笔输入法词组的编码规则为：二字词取每个字的前二码，三字词取第一字的前二码和最后两个字的第一码，四字及四字以上词取前三字和最后一字的第一码。</p>
+<p>使用二笔输入法时，遇到会写不会读的字可以用“;+字的全形”来输入。遇到会读不会写的字可以用“;+全拼码”来输入。</p>
+<p>二笔输入法的优点是：编码规则比双笔码更加简单，使用的编码字符也仅有30个；通过使用声母和笔画两种汉字特征信息编码，区分同码字词的能力得到了增强，取得了较高的输入效率；对于不认识的字还可以按全形方式输入；如果不按笔对而按单笔画输入，也可以非常容易地向数字键盘移植。但是二笔输入法也还存在问题：由于使用了笔对、设定部首并需区分独体字和合体字进行不同的编码，因而学习难度和使用难度仍然较大。</p>
+<h3 id="3-5-数字键盘编码输入法"><a href="#3-5-数字键盘编码输入法" class="headerlink" title="3.5 数字键盘编码输入法"></a>3.5 数字键盘编码输入法</h3><p>迄今为止，全国手机拥有量已超过3亿。估计有15亿人用手机短信息通信。手机短信息的产值将超过50亿人民币。手机拥有量超过PC机用户，手机数字键输入汉字的人群远远超过通用大键盘输入汉字的人群。</p>
+<p>目前，美国特捷公司的T9拼音和T9笔画输入法、加拿大字源公司的字能笔画输入法和Motorola公司的iTap输入法垄断了中国大陆和港台的手机输入法市场。仅中国大陆每年手机的产量，含GSM、CDMA、小灵通，据不完全统计约在1亿部以上。如果每台输入法的LICENSE费用按2元计算，加上价格不菲的使用许可费用，也就是说，手机厂商每年需向手机输入法厂商支付上数亿元的费用。这就给国产手机输入法占领市场提供了一种必要性和紧迫性。</p>
+<p>同时，国外的手机数字键盘输入法也很不尽人意。以笔画输入为例，iTap用9个笔画，字能用8个笔画，T9用5个笔画。相同的一个笔画不同的手机可以放在不同的位置上，输入速度也不理想。</p>
+<p>为了打破外国手机输入法垄断中国手机市场和手机输入法不规范的尴尬局面。由中国中文信息学会、中国新闻技术工作者联合会、中国计算机学会中文信息技术专委会主办，由黄金码出版社(香港)有限公司、北京汉王科技公司协办，中国中文信息学会汉字编码专委会、中国广播网等单位承办，于2004年11月21日，在人民大会堂举行了为期三天的中国首届手机中文输入大赛暨汉字数字码输入技术应用高峰论坛。在32支参赛队伍中，有23支参加模拟手机汉字数字码输入比赛，9支参加手机中文输入比赛。</p>
+<p>在手机中文输入比赛中，香港黄金码出版社（香港）有限公司代表队以黄金码输入平台手机码输入法和黄金码输入获得冠亚军，北京必胜电脑有限公司代表队以笔顺码输入法获得第三名；计算机模拟手机汉字数字码输入比赛则由浙江象山县科协罗康宁代表队的“大众数字码输入法”夺魁，来自南京的“纵横数字数码双拼输入法”获得亚军，必胜电脑公司的“笔顺码输入法”再次获得第三名；经过专家评委的严格评估，汉字数字码输入方案质量定性评估和输入速度综合优秀名次奖中，大众数字码输入法再次夺冠，来自广东国笔科技公司的“国笔数码智能文字输入系统”和来自广州至微数码科技公司的“两笔数码汉字输入法”分获第二名和第三名。</p>
+<p>除了已参赛的数字编码方案外，比较引人注意的还有王永民先生的五笔数码<sup>[52]</sup>、郑岩松先生的左右数码<sup>[53]</sup>等。以下仅对当前使用得最为广泛的T9拼音、T9笔画和首届手机中文输入大赛中获得冠军的黄金码、大众数字码进行介绍。</p>
+<p>T9拼音和T9笔画合称为T9智能中文输入法，字库容量九千多个，是由成立于1995年的美国特捷通讯(Tegic Communications)软件公司研制的。该公司总部设在美国西雅图，1999年12月被美国在线(AOL)收购后成为其全资子公司，专门致力于开发用于小型电子设备的产品和技术。T9输入法就是它的核心产品，该输入法解决了小型掌上设备的包括中文在内的文字输入问题，已经成为全球手机文字输入的标准之一。</p>
+<p>T9拼音本质上采用的是一种全拼单字加联想的早期通用键盘输入技术。其最重要的创新是可以根据手机键盘上按键的组合情况判断是否能组合成合法的普通话音节，从而避免了传统上通过多次按键来输入一个拼音字母的弊端。但是，当按键组合适合多个合法的普通话音节，而且默认选择的普通话音节又不是用户所需要的时，用户还是得进行手动选择。另外，全拼的拼式过长、需要按1键进入选择状态和联想造成的过度人机交互都使得T9拼音的输入效率很低，而且全拼对普通话不好的人难度很大。</p>
+<p>T9笔画采用目前多数输入法对笔画的归类方法将汉字笔画归为横、竖、撇、点、折五类，分别用1、2、3、4、5表示。录汉字时，按笔顺进行输入，逐键提示，每屏数个，高频优先，最长可输入12划，并支持联想。由于分别使用五个键表示五种笔画，因此不需要像T9拼音一样对组合情况进行智能判断，内部处理逻辑很简单。然而，因为T9笔画充分利用了丰富的笔画信息和不等长码的短码位，并可以直接键选重码字，所以它的实际输入效率比T9拼音还高，只可惜很多用户还不知道这一点。使用笔画输入存在的问题是，有个别的字的笔顺不易掌握。好在国家已有成熟的笔顺标准可以作为输入这类字时的依据。</p>
+<p>大众数字码用10个数字对字词进行编码。除了用1、2、3、4、5分别表示横、竖、撇、点、折五种笔画外，还用6、7、8、9、0分别表示交、插、八、小、口五类部件<sup>[54]</sup>。单字按笔顺取第一、二、三、四、末五个代码、不足时按实际码长。对于可按左右、上下或内外分成首部和尾部二部分的汉字，取码规则还可以变更为“首2尾3”或“首2尾2”。词组的码长均为6位。这样，单字和词组可以各字拥有独立的编码空间。单字输入时需要用非数字键作为结束键，词组输入时不需要专门的结束键。大众数字码使用了相当多的笔画组合作为部件，但由于归类清晰，记忆起来比很多同类的输入法要容易些，加上精心的编码规则降低了重码率，使得它在比赛中脱颖而出。不过，应当看到它使用的部件相当多，编码规则也并不简单，学习难度还是相当大的。同时，除了汉字特征信息的选取和字词编码规则外，它在其它方面还没有什么引人注目的独特之处。</p>
+<p>黄金码用9个数字对字词进行编码。除了用1、2、3、4、5分别表示横、竖、撇、点、折五种笔画外，还用6、7、8、9分别表示“口”、“十”、“八”、“亠”四类部件。编码时分字首和字尾，也区分独体字与合体字的不同。在提示行不为空时，0、*和#用做选择键。黄金码最大的特色是，在输入时若用于编码的数字与已输入的编码一起不能构成另外的字词编码时，该数字键就可以用于选择同码字词，这样就大大地增加的输入法的键选能力，缩短的动态平均码长；结合高频先见的不等长码的使用，在输入时基本上不用翻页，进一步提高了输入效率。不过，字首与字尾的区分没有标准可循，常常因人而异；动态地使用剩余编码键选择重码字词也造成选择键位置变化太大，加重了人机交互的负担。</p>
+<h3 id="3-6-通用输入法平台"><a href="#3-6-通用输入法平台" class="headerlink" title="3.6 通用输入法平台"></a>3.6 通用输入法平台</h3><p>发明和设计汉字编码的人很多，而真正能够编写汉字输入法软件的是很少的，因此一个功能强大的通用汉字输入法平台会对汉字编码的研究、试验和制作产生巨大的促进作用。通用输入法平台来源于对各种输入法的共性抽象，反过来又对输入法的制作有不可忽视的限制。</p>
+<p>早在DOS时代就有人从事通用输入法平台的研究了<sup>[57]</sup>。但是，输入法平台的广泛使用还是在Windows操作系统普及以后的事。</p>
+<p>微软公司和北京中易电子公司合作开发的码表输入法生成器（Imegen.exe）是WINDOWS操作系统上最早的也是使用得最广泛的输入法平台。汉字编码人员只需要提供一张按规定格式制作的码表，并对输入法的名称、最大码长、使用的码元集和构词规则等进行描述，就可以生成自己的输入法了。以最近的Windows 2000内置的码表输入法生成器为例，向它提供的码表需要满足的条件是：码元集合是键盘可键入键的子集；输入法能够定制的最大编码长度的限度为 12；信息元为单符或多符代码的形码或音码。这里所说的键盘可键入键共 47 键，包括26个字母键、上排10个数字键和“,./;’[]-=`”这11个符号键，但不包括小键盘上的数字键。码表输入法生成器所生成的输入法存在着很多缺陷，已经难以满足许多现代汉字编码输入法制作的需要。首先，它硬性规定重码字词的选择只能使用10个数字键按顺序选择，翻页键只能使用“+”和“-”，同时空格键也可以选择第一重码字词；这样就限制了一些优秀的输入法希望采用更易于操作的键作为翻页键和重码字词的选择键的自由，也使得采用了10数字键作为编码键的输入法在选择重码字词时不得不用更加难以操作的复合键（Shift+数字键）。其次，它的词组管理功能非常弱，在线造词时只能增加词组而不能删除和修改词组，造词过程中出现输入错误时只能放弃已造好的部分而不能修改继续。另外，输入状态的切换不方便，对码表容量的限制，没有提供输入法的可控性发布和安装手段等都妨碍了它的进一步广泛使用。</p>
+<p>杜志民先生开发的极点中文通用输入平台是目前影响最大的输入法生成器，与Windows内置的输入法生成器相比输入功能上有了长足的进步，但是没有考虑与应用程序的接口问题。该软件于2001年9月10日最初发布时名称叫“五笔拼音1.0”。由于可以在互联网上免费下载和使用该软件，还由于有一批热心的五笔爱好者支持和参与，更由于杜先生一直坚持不断更新和加强软件的功能并维持免费软件的局面，该软件便得以迅速地流行起来。2003年3月31日在发布3.1版时，该软件正式更名为“极点中文通用输入平台”，以反映杜先生将该软件作为输入法生成器而不单纯是五笔拼音输入法的初衷。现就2004年8月26日最新发布的4.0版作一介绍。与传统输入法生成器相比它的优点是：可以使用小键盘数字；对于纯数字输入法也采用3重码选择方式（即用空格选第1重码，左Shift选第2重码，右Shift选第3重码）；提供了灵活多变的、漂亮别致的用户界面风格供用户选择；可以使用Shift或Ctrl键进行中英文状态键的单键切换；支持自动或手动地调整重码字词的顺序；支持不等长码在编码对应的字词唯一时自动上屏；支持自动造词；可以将生成的输入法打包成安装软件；提高大量的设置选项供熟练用户对输入法进行调整和避免与操作系统或应用软件间的冲突。</p>
+<p>在功能上与极点中文通用输入平台类似软件还有龙文输入平台和青月亮平台。它们也都是基于Windows操作系统的，但不是免费软件而是商业软件，流行得不是很广。</p>
+<p>总之，虽然通用输入法平台取得了不小的进展，已能适应制作常规的基于字词的输入法的需要了，但是对于语句级输入法和许多有特殊要求的字词型输入法还是必须专门编程才能取得最好的效果。毕竟，搞输入法的人是极少数，而仅仅使用输入法的人才是绝大多数，因此包括编码层次和软件层次在内的汉字输入法的总体性能才是最为重要的。</p>
+<p>通用输入法平台是在软件层面使用输入法的制作自动化。但是，一个输入法制作在编码层面也有大量的工作要做，如何利用计算机来辅助汉字编码也引起了一些研究者的兴趣，这方面的研究情况请参阅文献<sup>[58]</sup>-<sup>[63]</sup>。</p>
+<h2 id="4-面临的形势与存在的问题"><a href="#4-面临的形势与存在的问题" class="headerlink" title="4 面临的形势与存在的问题"></a>4 面临的形势与存在的问题</h2><p>虽然在汉字编码输入方面已经取得了不少进展，汉字能否输入计算机的问题已经解决，但是汉字编码输入理论一直是一个薄弱环节，迄今为止仅有的一本理论性较强的汉字键盘输入专著<sup>[5]</sup>并没有引起输入法实践者足够的重视。由于没有科学而系统的输入法理论指导，在汉字编码输入法研制时往往片面地强调某一方面、某一个指标，从而出现了很多误区，再加上商业运作上的夸大其词，就产生了诸如低重码率神话、速度神话、大词库神话、编码决定论、程序决定论、形码优越论、音码优越论之类的奇特论调<sup>[70]</sup><sup>[71]</sup>。</p>
+<p>同时，在实用性方面，人们对汉字编码输入的现状仍然十分不满意，新的汉字编码输入法还在不断地涌现，以期克服现有输入法存在的诸多问题。不同时代问题，有着不同的背景，从而决定了问题的性质和解决问题的不同方法。汉字编码输入技术问题的性质和解决思路主要取决于人、机、文、码四个方面的因素，以下结合当前的背景进行论述。</p>
+<p>在人方面，计算机的普及造就了巨大的用户群体，而且非职业字员用户占绝大多数，其中还包括了大量的中小学生,中国已进入了非专业打字时代<sup>[72]</sup>。非职业打字员一般都没有经过专业的打字培训，知识背景也大不相同。因此，如何使输入法易学易用和保持一定的速度是问题的关键。最好是，输入法在入门时基本上不用学习，熟悉后又有提升速度的手段，甚至达到或超过传统职业打字员的速度。但是当前的输入法往往是易学易用的输不快，如五笔字型，而输得快的难学难用，如智能ABC。非职业打字员的另一特征是根据腹稿录入，即边思考边看着屏幕打字。因此，如何利用好用户看屏输入这一点来进行反馈设计是极为重要的，它直接影响着输入法的质量。但是，目前的输入法对反馈设计没有引起足够的重视，有的过于强调盲打而丧失了易学易用性，有的又过于依赖人机交互而丧失了易用性和输入速度。另外，因为现在大多数用户都独自拥有计算机，所以输入法一般为某个用户专用，可以针对特定用户建立个性化的字词编码库，以提高用户的输入效率。但是，现在的输入法往往只有一个通用编码库，随着编码字词条目的增加就会出现大量的重码，无用词的比例也增大，进而影响输入法的性能。最后，在中小学进行打字教育时，汉字编码的规范化问题和汉字编码与语文教育的结合问题变得十分重要。在这一点上，目前很多流行的输入法都是不合格的。很多人批评五笔字型对汉字不合规范地乱拆分会导致语文教学和写字的混乱，五笔字型也因此未能进入中小学教育<sup>[25]</sup><sup>[26]</sup>。即使是教育部推荐的认知码也有许多人对其规范性提出异议<sup>[20]</sup><sup>[21]</sup>。</p>
+<p>在机方面，计算机处理能力已相当强大，手机、PDA等手持智能设备已广泛使用，数据库技术已非常成熟。当今微型计算机强大处理能力对于个人用户来说有很多富余，使得我们可以增大程序的时间和空间复杂度来提高输入法的性能。手持智能设备的流行要求输入法在通用键盘和数字键盘上的操作方式尽量统一，以减少用户的学习和使用负担。大型的数据库，如SQL SERVER,在微机上的运行速度完全可以满足输入法检索字词的要求，所以我们可以采用数据库来存储海量字词及其属性，甚至扩展输入法的功能到学习、查询和辅助翻译等领域。目前，除了语句型输入法充分地利用的富余的计算机资源外，其他的字词型输入法在资源利用上还停留的第二代输入法的水平上；数字键盘输入法一般自成体系，与通用键盘输入法缺乏衔接；数据库技术没有在输入法里得到应有的应用。</p>
+<p>在文方面，对于非职业打字员而言，输入文本以常用字构成的连续真实文本占绝大多数，而且对某个用户来说文本一般局限于特定的领域。因此，这类文本的冗余度比汉字文本整体的冗余度要高，可以动态地调整码长，给常用字词以短的编码，实时地、自动地创建新词组，从而充分地压缩冗余度，提高输入速度。对于离散文本和罕见字的处理，输入速度不是关键，关键是要有简单的手段实现输入。目前的输入法往往对输入文本的性质不加区别地对待，结果使得输入法的整体效率收到了影响。</p>
+<p>在码方面，目前流行的各类编码都存在各自的问题。字词型输入模式僵化，缺乏创新。空格键作为简码字词的结束键减低了编码效率；看打方式的设计被错误地用到了想打方式上，强调盲打而忽视了反馈信息的作用；对码长的过度限制（通常为4）导致重率上升，限制重码又使可使用的词组量受限，不限制重码也会增加人机交互而影响输入速度；未能充分地利用汉字丰富的笔画信息。语句型输入模式不太适合中文，其转换正确率不高，效率不高，编码识读性差。</p>
+<p>1) 音字转换短语或语句输入。与普及语句输入的日本不同，汉语拼音还不是文字，识读性差，输入时反馈信息需要依赖于及时的转换结果，否则不易判断输入错误，输入的编码越长越能提供更多的语境但击键出错的概率也越大，因此转换的正确率是有极限的；而日语假名是文字的一部分，容易识读。中文的汉字常用汉字使用量比日语大得多，而且没有日语一样的假名和丰富的助词帮助，转换的正确率有限。汉语拼音直接作为编码，其本身的冗余度太大，输入效率很低；而采用双拼音又会增加学习负担。中国方言区人口众多，他们的普通话不太准，使用全拼难度仍然很大。用于手持设备时，资源消耗太大，而且没有足够大的显示空间和操作按键。离散文本的输入（包括本文错误的修改）不方便。</p>
+<p>2) 各种五笔字型输入法。学习难度太大，仅适合已会五笔的人。对中小学生还存在规范性问题。向手持设备的移植也存在同样的问题，而且其输入效率也并不高。</p>
+<p>3) 各种二笔输入法。虽然普及程度不如五笔，但易学性提高较大，而且速度与五笔相当。向手持设备的移植也容易一些。但是，由于使用了笔对，并需要区分字型和使用一些部件，其易学性和易用性还是不令人满意的。</p>
+<h2 id="5-参考文献"><a href="#5-参考文献" class="headerlink" title="5 参考文献"></a>5 参考文献</h2><ol>
+<li>倪海曙. 注音识字简史. 语文现代化[J]. 1983. (6). 130</li>
+<li>胡瑞昌. 文字改革与语言文字工作答客问（上）[J]. 语文与信息. 1995. (5). 13-14</li>
+<li>汉语拼音与输入法论坛. <a href="http://sh.netsh.com/bbs/1951/" target="_blank" rel="noopener">http://sh.netsh.com/bbs/1951/</a></li>
+<li>周强. 计算机科学[J]. 1995. (4). 36-40</li>
+<li>陈一凡，胡宣华. 汉字键盘输入技术与理论基础[M]. 清华大学出版社，广西科学技术出版社. 1994.6.</li>
+<li>《微机办公自动化丛书》编委会. 中国微机办公自动化软件大全[M]. 北京经济学院出版社. 1993.7.</li>
+<li>Lawrence Rabiner, Biing-Hwang Juang, Fundamentals of Speech Recognition[M]. 清华大学出版社, Prentice Hall. 1999.9.</li>
+<li>北京语言学院语言教学研究所. 现代汉语频率词典[M]. 北京语言学院出版社. 1986.6.</li>
+<li>俞士汶, 朱学锋, 郭锐. 现代汉语语法电子词典的概要与设计[J]. Proceedings Of ICCIP92. 1992.</li>
+<li>李公宜, 李海飚. 论汉字编码的最短极限码长[J]. 中文信息. 1992.(1).</li>
+<li>冯志伟. 再谈汉字的熵值[J]. 语文与信息. 1996.(2).</li>
+<li>王晓龙, 王轩. N元汉字字词编码输入的最短码长和速度上限[J]. 中文信息学报. 1993. 7(4).</li>
+<li>Robert Kruse, C.L. Tondo, Bruce Leung. Data Structures &amp; Program Design in C[M]. 2nd Edition. Prentice Hall, Inc. 1997.</li>
+<li>张侃, 陈一凡. 汉字键盘输入的认知模型[J]. 中文信息学报. 1991.5(4).</li>
+<li>何克杭. 汉字认知模型与形码方案设计[J]. 中文信息学报. 1994.9(3).</li>
+<li>周冰洋, 刘植婷, 姚世全. 常用汉字编码字典[M]. 宇航出版社. 1990.9.</li>
+<li>王力德. 汉字编码的普及目标体系与编码实例[J]. 中文信息学报. 1993.8(4).</li>
+<li>刘爱莲. 什么样的输入法才能为大众接受[J]. 语文与信息. 1995.(6).</li>
+<li>卫至上. 电脑如何普及：教委走错了方向！[J]. 语文与信息. 1995.(3).</li>
+<li>周宪. “认知码”规范性探讨[J]. 语文与信息. 1995.(5).</li>
+<li>宁基. 从“认知码”谈推荐什么样的汉字编码[J]. 语文与信息. 1995.(6).</li>
+<li>王相东. “万码奔腾”可以休矣[J]. 语文与信息. 1995.(4).</li>
+<li>潘骑, 潘德孚. 编码的“速度误区”[J]. 语文与信息. 1996.(2).</li>
+<li>潘德孚. 汉字编码与识字教育[J]. 中文信息. 1997.(1).</li>
+<li>张孝存, 王梅. 从“邱氏鼠药案”想到“五笔字型”编码[J]. 语文与信息. 1995.(4).</li>
+<li>张在云. 谈谈’98规范王码的得失[J]. 安徽广播电视大学学报, 2001, (2).</li>
+<li>华绍和, 肖金卯, 蒋顺炳. 适应中小学教学用的汉字编码的特点[A]. 中国中文信息学会汉字编码专业委员会第八届年会、中国计算机学会中文信息技术专业委员会第六届年会暨汉字输入技术与应用研讨会文集[C]. 2002.</li>
+<li>吴越. 电脑打字普及教材[M]. 北京群言出版社. 1993.5.</li>
+<li>单波. 论汉字编码的分代与第三代汉字编码[J]. 中文信息. 1989.(2).</li>
+<li>金山电脑有限公司. WPS桌面印刷系统用户大全[M]. 1991.6. 17-23.</li>
+<li>周山芙. 自然码实用教程[M]. 清华大学出版社. 1994.12.</li>
+<li>章森, 宗成庆, 孙建军. 新一代中文输入系统面临的问题[J]. 中文信息. 1997.(1).</li>
+<li>赵以宝, 孙圣和. 一种基于单字统计二元文法的自组词音字转换算法[J]. 电子学报. 1998. 26(10).</li>
+<li>刘来旸, 瞿有利, 樊孝忠. 汉语智能输入系统的设计[J]. 北京理工大学学报. 2001. 21(3).</li>
+<li>陈正, 李开复. 拼写纠正在拼音输入法中的应用[J]. 计算机学报. 2001. 24(7).</li>
+<li>仲兴国. 多词组一次性拼音·汉字变换[J]. 中文信息学报. 1990.4(2).</li>
+<li>王晓龙, 王开铸, 白小华. 自然语言理解中的音字流自动分词[J]. 中文信息学报. 1990.5(3).</li>
+<li>万建成. 拼音 – 汉字转换输入中的结构识别方法[J]. 中文信息学报. 1991.6(1).</li>
+<li>万建成. 可分隔动词及其在拼音 – 汉字输入中同音词识别的应用[J]. 中文信息学报. 1991.6(4).</li>
+<li>万建成. 语音代码 – 汉字智能转换研究[J]. 中文信息学报. 1993.8(2).</li>
+<li>章森, 宗成庆, 陈肇雄, 黄河燕. 语句拼音 – 汉字转换的智能处理机制分析[J]. 中文信息学报. 1997.12(2).</li>
+<li>郭进. 统计语言模型及汉语音字转换的一些新结果[J]. 中文信息学报. 1992.7(1).</li>
+<li>徐进霈, 高枚. 汉语文本读入中音字转换的知识集成模型和时间同步搜索算法[J]. 中文信息学报. 1993.8(1).</li>
+<li>高升, 王晓龙. 语句级汉字输入系统中语义规则研究[J]. 计算机工程与应用. 2003.</li>
+<li>王锡龙, 黄希琛, 邹志刚. 汉字输入中的重码自动区分理论[J]. 中文信息学报. 1990.4(1).</li>
+<li>吕强, 钱德培. 基于词组的智能化汉字输入系统CIIIS/2的设计[J]. 中文信息学报. 1991.6(1).</li>
+<li>赵雷, 吕强, 杨季文, 朱巧明. 汉字输入法类的设计与实现[J]. 中文信息学报. 1995.10(4).</li>
+<li>陈一凡, 朱亮. 汉字键盘输入智能处理软件综述[J]. 中文信息学报. 2002.17(2).</li>
+<li>刘长松, 伍振军, 乔春雷, 李元祥. 用统计方法实现汉字输入的智能联想[J]. 中文信息学报. 1999.14(1).</li>
+<li>Zheng Chen, and Kai-Fu Lee. A new statistical approach to Chinese pinyin input[A]. ACL-2000[C]. Hong Kong. 2000.10.</li>
+<li>Jianfeng Gao, Hai-Feng Wang, Mingjing Li, and Kai-Fu Lee. A unified approach to statistical language modeling for Chinese[A]. ICASSP2000[C]. Istanbul, Turkey. June 5 - 9, 2000.</li>
+<li>王永民. 五笔数码形声输入法及其键盘[P]. 中国. G06F3/023. 00124781.6. 2000-9-14.</li>
+<li>郑岩松. 左右数码汉字电脑输入法及其键盘[P]. 中国. G06F3/023. 02102272. 2002-2-1.</li>
+<li>罗康宁. 一种数码汉字输入法及其键盘[P]. 中国. G06F3/023. 03129316.6. 2003-12-10.</li>
+<li>肖水清. 汉字输入一日通[M]. 北京经济学院出版社. 1993.1.</li>
+<li>萧启宏. 全汉字编码输入系统启宏全息码[M]. 电子工业出版社. 1993.3.</li>
+<li>孟凯, 万国银, 许惠山. 汉字输入支持系统的设计特点[J]. 中文信息. 1992.(1).</li>
+<li>张玉华, 周克兰. 输入法码本前期处理工具的实现[J]. 微机发展. 2003.13(4).</li>
+<li>舒展羽, 胡勇新. 汉字编码辅助设计环境HCCAD[J]. 中文信息. 1992.(2).</li>
+<li>陈玉龙. 中文自动编码原理[J]. 中文信息学报. 1997.12(1).</li>
+<li>钱德培, 杨季文, 吕强, 朱巧明. 一个基于C/S模式的汉字词属性分析和重组系统的设计[J]. 中文信息学报. 1998.13(1).</li>
+<li>陆剑江, 钱培德. 汉字输入法码本自动更正设计研究[J]. 中文信息学报. 2001.16(6).</li>
+<li>吴娴, 吕相, 杨涛, 杨季文, 钱德培. 论汉字码本数据库管理技术[J]. 中文信息学报. 2002.17(2).</li>
+<li>John G. Proakis. Digital Communications[M]. 3. 北京. 电子工业出版社. 1998.9.</li>
+<li>C. E. Shannon. A Mathematical Theory of Communication[J]. The Bell System Technical Journal. 1984. (27).</li>
+<li>Hyman e.Stimulus. Information as a Determinant of Reaction Time[J]. Journal of Experimental Psychology. Vol.45. No.3. 1953.</li>
+<li>丘菏生. 汉语双拼的标准键盘设计[J]. 中文信息. 1992.(2).</li>
+<li>杨道沅, 董小国, 董红, 陈丹. 《自然码》双拼键盘设计合理的研究[J]. 中文信息学报. 1992.8(1).</li>
+<li>杨道沅, 李棣. 汉字输入键盘设计方法的研究 – 兼论标准汉字双拼键盘的设计[J]. 中文信息学报. 1996.8(3).</li>
+<li>子厚. “全息码”风波的演变[J]. 中文信息. 1992.(2).</li>
+<li>余克艰. 戳穿电脑打字的“速度神话”[J]. 语文与信息. 1995.(6).</li>
+<li>陈和利. 专业录入员终究有一天会消失（转载）[J]. 语文与信息. 1995.(4).</li>
+<li>戴石麟. 文字式音形汉字输入法[P]. 中国: G06F, ZL 95111380.1, 1995.</li>
+<li>陈一凡, 张鹿, 周志农. 键位相关速度当量的研究[J]. 中文信息学报. 1990.4(4).</li>
+<li>陈一凡, 张鹿. 键位分布合理指数与动态平均码长综合指标的自动测定[J]. 中文信息学报. 1991.5(1).</li>
+<li>Microsoft Corp. Microsoft Win32 Multilingual IME Overview for IME Development, Windows  DDK[R]. </li>
+<li>Microsoft Corp. Microsoft Win32 Multilingual IME Application Programming Interface for IME Development, Windows DDK[R].</li>
+<li>Thomas Scovel. Psycholinguistics[M]. New York: Oxford University Press. 1998.</li>
+<li>John Sinclair. Corpus, Concordance, Collocation[M]. New York: Oxford University Press. 1991.</li>
+<li>Douglas, Susan Conrad, Randi Reppen. Corpus Linguistics[M]. Cambridge: Cambridge University Press. 1998.</li>
+<li>Jeffrey D.Ullman, Jennifer Widom. A First Course in Database System[M]. Prentice Hall, Inc. 1997.</li>
+<li>Ronald J. Norman. Object-Oriented Systems Analysis and Design[M]. Prentice Hall, Inc. 1996.</li>
+<li>Bernard Kolman, Robert C. Busby, Sharon Ross. Discrete Mathematical Structure[M]. 3rd Edition. Prentice Hall, Inc. 1996.</li>
+<li>Harry R. Lewis, Christos H. Papadimitriou. Elements of the Theory of Computation[M]. 2nd Edition. Prentice Hall, Inc. 1998.</li>
+<li>William Ford, William Topp. Data Structures with C++[M]. Prentice Hall, Inc. 1996.</li>
+<li>William Stallings. Operating Systems[M]. Prentice Hall, Inc. 1998.</li>
+<li>Brian W. Kernighan, Dennis M. Ritche. The C Programming Language[M]. 2nd Edition. Prentice Hall, Inc. 1998.</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>输入法</tag>
+        <tag>汉字编码</tag>
+        <tag>综述</tag>
+      </tags>
+  </entry>
+</search>
