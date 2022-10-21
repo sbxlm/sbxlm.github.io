@@ -145,9 +145,10 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/rjxzwz3.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel5.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel6.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220102122924508.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220305100028445.png">
-<meta property="og:updated_time" content="2022-04-28T02:14:06.561Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221009040031133.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221009035148008.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221009041443673.png">
+<meta property="og:updated_time" content="2022-10-21T08:51:22.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="声笔系列码是基于著名的开源输入法平台Rime进行二次开发的，其安装配置比较复杂。这一方面有Rime的原因，因为它没有提供丰富的图形界面，对普通用户不太友好。另一方面的原因是，声笔系列的方案众多，体系庞大，使用前需要用户做出选择，仅仅安装自己需要的部分。 在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式">
@@ -499,7 +500,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">68</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">70</span></a>
 
   </li>
         
@@ -752,7 +753,7 @@ var _hmt = _hmt || [];
 <p>在输入界面按F4可以打开方案选单，默认只启用声笔简码和声笔拼音两个方案，可以通过在rime配置目录（还是默认为~/.local/share/fcitx5/rime）建立default.custom.yaml，并配置如下内容定制方案选单。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line"> schema_list:</span><br><span class="line">  - &#123;schema: sbjm&#125; # 声笔简码</span><br><span class="line">  - &#123;schema: sbdp&#125; # 声笔拼音</span><br><span class="line">  - &#123;schema: sbfm&#125; # 声笔飞码</span><br><span class="line">  - &#123;schema: sbkm&#125; # 声笔快码</span><br><span class="line">  - &#123;schema: sbzr&#125; # 声笔自然</span><br><span class="line">  - &#123;schema: sbxh&#125; # 声笔小鹤</span><br></pre></td></tr></table></figure>
 <p>如果要启用标点简词，可以在rime配置目录下建立patch，如声笔飞码可以建立sbfm.custom.yaml，并配置如下内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line"> engine&#x2F;translators&#x2F;@after 2: table_translator@sf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line"> engine/translators/@after 2: table_translator@sf</span><br></pre></td></tr></table></figure>
 <h3 id="2-4-卸载"><a href="#2-4-卸载" class="headerlink" title="2.4 卸载"></a>2.4 卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
 <p>如果遇到卸载不了或者卸载不干净的输入法，可以下载使用群文件软件工具里的「输入法删除工具」来解决。此工具无需安装，直接运行就可以了。</p>
 <h2 id="3-配置与定制"><a href="#3-配置与定制" class="headerlink" title="3 配置与定制"></a>3 配置与定制</h2><p>Rime的图形界面能做的事情是有限的，在Rime的世界里是文本为王，通过编辑适当的yaml文件可以配置和定制输入法的方方面面，比传统输入法灵活和强大得多。要编辑yaml文件就需要有一个好的编辑器。在Windows上建议使用Notepad++或者Vscode，千万不要用记事本，更不要用Word。在安卓上使用时，建议使用MT管理器。</p>
@@ -761,9 +762,11 @@ var _hmt = _hmt || [];
 <p>下面列出配色的预览图，以便用户直观地查看和选择，在每个图下文件名的最后一个下划线后的部分就是配色的名称，可用于替换weasel.yaml文件里的默认配色。</p>
 <p><img src="/images/Sbxlm4Weasel6.png" alt="修改小狼毫的配色"></p>
 <h3 id="3-2-修改同文的主题和配色"><a href="#3-2-修改同文的主题和配色" class="headerlink" title="3.2 修改同文的主题和配色"></a>3.2 修改同文的主题和配色</h3><p>在使用声笔同文版时，上滑右下角的「主题配色」键，就可以切换主题，而长按此键则可以选择主题所提供的配色。建议用户使用默认主题，因为它是针对声笔系列码优化过的，为各种声笔方案提供了助记，还有众多的配色。特别感谢空白、白焕等群友在默认主题上的无私贡献，默认主题的完善是在他们作品基础上进行的。</p>
-<p><img src="/images/image-20220102122924508.png" alt="image-20220102122924508"></p>
-<p>以下是几个默认主题的配色实例。如果用户还需要定制的话，可以进一步修改sbxlm文件夹下的trime.yaml文件。</p>
-<p><img src="/images/image-20220305100028445.png" alt="image-20220305100028445"></p>
+<p><img src="/images/image-20221009040031133.png" alt="image-20221009040031133"></p>
+<p>以下是几个默认主题的配色实例。如果用户还需要定制的话，可以进一步修改sbxlm文件夹下的trime.yaml文件。无滑动大写是在默认主题基础上取消了通过上滑或者下滑来输入大写字母的主题。</p>
+<p><img src="/images/image-20221009035148008.png" alt="image-20221009035148008"></p>
+<p>声笔35键和声笔33键是两个大键主题，供那些因拇指大而容易误触的人使用，如下所示。</p>
+<p><img src="/images/image-20221009041443673.png" alt="image-20221009041443673"></p>
 
         
       </div>
@@ -870,6 +873,10 @@ var _hmt = _hmt || [];
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     

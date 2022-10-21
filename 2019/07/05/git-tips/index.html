@@ -480,7 +480,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">68</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">70</span></a>
 
   </li>
         
@@ -750,7 +750,7 @@ var _hmt = _hmt || [];
 <p>步骤二：创建config文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ touch config</span><br><span class="line">$ vim config</span><br></pre></td></tr></table></figure>
 <p>config文件的内容如下。其中，第一个确定了默认的Host，后面的必须另外命名。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~&#x2F;.ssh&#x2F;git_first</span><br><span class="line">Host git_second</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~&#x2F;.ssh&#x2F;git_second</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_first</span><br><span class="line">Host git_second</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/git_second</span><br></pre></td></tr></table></figure>
 <p>步骤三、Github仓库repo1和repo2设置要使用的密钥。注意，@之后跟随的Host名称就是上面的config中设置的。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:first/repo1.git</span><br><span class="line">$ git remote add origin git@git_second:second/repo2.git</span><br></pre></td></tr></table></figure>
 <h2 id="同步上游仓库的更新"><a href="#同步上游仓库的更新" class="headerlink" title="同步上游仓库的更新"></a>同步上游仓库的更新</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your/repo</span><br><span class="line">$ git remote add upstream http://github.com/your-account/upstream-repo.git</span><br><span class="line">$ git fetch upstream</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
@@ -943,6 +943,10 @@ var _hmt = _hmt || [];
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     
