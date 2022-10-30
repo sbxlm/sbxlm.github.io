@@ -139,16 +139,13 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/WmdpKm.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbkmZyzy.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbkmZyzyoe.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714061653392.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714062014384.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714063351656.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkm_pro_char.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220718013835344.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220116113825700.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkz1.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbkz2.gif">
-<meta property="og:updated_time" content="2022-10-08T20:03:51.037Z">
+<meta property="og:updated_time" content="2022-10-29T22:57:28.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔快码">
 <meta name="twitter:description" content="1 快码概述声笔快码，简称快码，是一款类双拼输入法，它采用了一种特殊的双拼加笔画编码，同时又融合的105个高频声笔字，通过顶功实现了比一般双拼类音形码高的效率。建议学习双拼的新用户直接学习快码，而不是其它双拼方案。 1.1 发展历史快码的历史可以追溯到2004年，与声笔码（现已演化为声笔简码）同时产生，当时称为音笔码。在2005年声笔飞码出现后，就同声笔飞码一同演进，采用与其相同的编码模式，直至今">
@@ -500,7 +497,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">68</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">69</span></a>
 
   </li>
         
@@ -538,7 +535,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">35</span></a>
 
   </li>
 
@@ -778,23 +775,7 @@ var _hmt = _hmt || [];
 <p>需要注意的是，在进行枚举自动造词的时候，是以编码对应的字、词为单位来进行组合的，并不是以单字为单位的。例如，在输入<code>声笔sdby 系列xylj 码mbe</code>后，生成的词组为「声笔系列码」「声笔系列」「系列码」，而不会生成「声笔系」「笔系列」「列码」等。另外，如果之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
 <p>(2) 词组删除</p>
 <p>由于快码是采用的自动造词策略，在提供方便的同时也会产生大量的废词，所以系统提供了废词清理功能，能够将用户几乎不使用的新造临时词组自动清除。对于少量暂时还未被清理的废词，用户不必理会，到时限后就会被自动删除。在必要的时候，如用户错误地确认了临时词组，系统也提供了手动删除的手段，方法是先将光标移动到该词上面，再按<code>Control + Delete</code>键来删除。注意，如果是非临时词组，需要删除两次才能删除。第一次删除时只是把它变成了临时词组。</p>
-<h3 id="6-5-增强模式"><a href="#6-5-增强模式" class="headerlink" title="6.5 增强模式"></a>6.5 增强模式</h3><p>为了缩短常用词组的码长，提高输入效率，特为快码提供了一些备用的数选简词，在增强模式下使用。</p>
-<p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbkm.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
-<p>(1) 编码方式</p>
-<p>数选简词的编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些简词进行了提示，第二组默认需要用Tab翻页才能显示，如下所示。</p>
-<p><img src="/images/image-20220714061653392.png" alt="image-20220714061653392"></p>
-<p><img src="/images/image-20220714062014384.png" alt="image-20220714062014384"></p>
-<p>建议用户在初学数选简词的时候，仅练习和使用第一组就行了，否则难度太大。待第一组数选简词完全掌握后，再学习第二组。此时，可以修改一下方案的schema文件，将sn2的initial_quality调整为12，高于sn1的10，这样第二组就会在第一页显示。</p>
-<p><img src="/images/image-20220714063351656.png" alt="image-20220714063351656"></p>
-<p>(2) 数选顶屏</p>
-<p>数选简词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
-<p>例如，在输入w7后，「我们」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「我们」就会被顶上屏幕。</p>
-<p>另一方面，当数选简词接在其它字词后面时，还可以通过延迟顶屏来省略空格。</p>
-<p>例如，在输入「我今天」时，通常是用w<em>j3（其中</em>表示空格），但是由于有了延迟顶屏，其中的空格是可以省略的，即只用wj3就可以输入「我今天」了。</p>
-<p>再如，在输入「要考虑」时，通常得用yt_k8，但是由于有了延迟顶屏，就只用ytk8就可以输入「要考虑」了。</p>
-<p>(3) 修改定制</p>
-<p>如果用户觉得系统提供的数选简词不理想，还可以对它们进行定制。定制的方法是，将相应的词典文件（在声笔可定制词典扩展包里）复制到用户文件夹中，对其进行所需的修改，重新部署一下就可以生效。在修改的时候，一定要按照词典的格式进行，首列为词条，第二列为编码，两者之间以制表符分隔。</p>
-<h3 id="6-6-单字模式"><a href="#6-6-单字模式" class="headerlink" title="6.6 单字模式"></a>6.6 单字模式</h3><p>如果在输入的时候，突然遇到离散大的文字，需要以单字为主来输入，那么在电脑上可以按Ctrl+~或者F4快速切换到单字模式，在手机上则简单地点击状态栏的相应状态即可，如下图所示。此时，若第三码用大写，则仍然可以输入常规四码词组。</p>
+<h3 id="6-5-单字模式"><a href="#6-5-单字模式" class="headerlink" title="6.5 单字模式"></a>6.5 单字模式</h3><p>如果在输入的时候，突然遇到离散大的文字，需要以单字为主来输入，那么在电脑上可以按Ctrl+~或者F4快速切换到单字模式，在手机上则简单地点击状态栏的相应状态即可，如下图所示。此时，若第三码用大写，则仍然可以输入常规四码词组。</p>
 <p><img src="/images/sbkm_pro_char.png" alt="单字模式切换"></p>
 <p>如果用户想打开快码时默认为单字模式，那么可以修改其schema文件，将pro_char项下的reset设置为1，如下图所示。</p>
 <p><img src="/images/image-20220718013835344.png" alt="image-20220718013835344"></p>
@@ -824,7 +805,7 @@ var _hmt = _hmt || [];
 <p><img src="/images/sbkz2.gif" alt="快整例子2"></p>
 <p>在例2中，<code>dngr</code>转换的结果并不是<code>顶功</code>而是<code>定工</code>，需要连续按两次7将<code>声笔</code>、<code>系列</code>确定，按一次9将<code>码的</code>确定，然后按2定位在尚未确定的第二个音节<code>gr</code>之前来选择第一个音节<code>dn</code>的重码，亦即用按7选择<code>顶</code>，再按8选择<code>功</code>，最后按空格或者6上屏<code>特色</code>两字。在这个例子中，需要修改的内容位于一句话的中间，必须先选择确定前面的内容，定位要修改的字，然后才能修改。</p>
 <p>在需要回改时，声笔快整提供了一种快速定位的手段，可以利用数字<code>1234</code>将光标一次性地定位到待定的第1至4个音节之前，用<code>5</code>将光标定位到最后。对于声韵字，还可以追加一至两个笔画来筛选重码，提高转换的准确率。同时，在以声笔结尾时，在两码后就可以用<code>aeuio</code>代替<code>67890</code>进行重码选择，在操作上更加便捷。</p>
-<h2 id="附录一：快码的编码格式"><a href="#附录一：快码的编码格式" class="headerlink" title="附录一：快码的编码格式"></a>附录一：快码的编码格式</h2><p>在后面各方案的编码格式中，采用了一下表达方式。</p>
+<h2 id="附录：快码的编码格式"><a href="#附录：快码的编码格式" class="headerlink" title="附录：快码的编码格式"></a>附录：快码的编码格式</h2><p>在后面各方案的编码格式中，采用了一下表达方式。</p>
 <ul>
 <li>z = <code>y|b</code></li>
 <li>s = y = [qwrtsdfgzxcvbyphjklnm]</li>
@@ -847,19 +828,6 @@ var _hmt = _hmt || [];
 <li>三字词 <code>s1s2s3b3b3^&#39;b1b1</code></li>
 <li>多字词 <code>s1s2s3b0b0^&#39;b1b1|s1s2s3S0</code></li>
 </ul>
-<h2 id="附录二：快码的强化训练"><a href="#附录二：快码的强化训练" class="headerlink" title="附录二：快码的强化训练"></a>附录二：快码的强化训练</h2><p>快码子系列的定位是专业型的双拼输入法，它们不仅用于一般的工作和生活中，而且也适用于竞速和打字比赛。快码是主词的，而快讯是主单的，可以根据不同的应用场景来使用。为了提高打字速度，在比赛中取得好的成绩，往往需要高强度的训练，对常用字词的输入形成条件反射。为了配合这种训练，特准备了强化训练文本，供打字训练软件使用。强化练习文本可在声笔系列码QQ群445906697的共享文件夹下载。</p>
-<p>强化训练可以按以下步骤进行。</p>
-<ol>
-<li>126高频单字：包括21个一简字和105个声笔字。</li>
-<li>335声韵单字：即335个由声母和双拼韵母编码的两码字。</li>
-<li>210个数选简词：含105个有理数选和105个无理数选。</li>
-<li>最高频500字：即现代中文里出现频率最高的500个字。</li>
-<li>次高频500字：即现代中文里出现频率次高的500个字。</li>
-<li>最高频800词：即现代中文里出现频率最高的800个词组。</li>
-<li>次高频800词：即现代中文里出现频率次高的800个词组。</li>
-<li>单字编码提示：用于打字练习时在打字软件中提示单字的编码。</li>
-<li>去跟打群实战：即各大QQ跟打群和网络打字平台。</li>
-</ol>
 
         
       </div>
@@ -925,7 +893,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -966,6 +934,8 @@ var _hmt = _hmt || [];
                     
                   
                     
+                    
+                      
                     
                       
                     
@@ -1222,7 +1192,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-快码概述"><span class="nav-text">1 快码概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-发展历史"><span class="nav-text">1.1 发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2  比较优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-主要内容"><span class="nav-text">1.3 主要内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-快码初阶"><span class="nav-text">2 快码初阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-快速入门"><span class="nav-text">2.1 快速入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码反查"><span class="nav-text">2.2 编码反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单字的输入"><span class="nav-text">3 单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-声笔字"><span class="nav-text">3.1 声笔字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-普通字"><span class="nav-text">3.2 普通字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词组的输入"><span class="nav-text">4 词组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-二字词"><span class="nav-text">4.1 二字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-三字词"><span class="nav-text">4.2 三字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-多字词"><span class="nav-text">4.3 多字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-空位词"><span class="nav-text">4.4 空位词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-输入技巧"><span class="nav-text">5 输入技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-条件顶屏"><span class="nav-text">5.1 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-巧用大写"><span class="nav-text">5.2 巧用大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-编码变换"><span class="nav-text">5.3 编码变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-高级特性"><span class="nav-text">6 高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-字词分流"><span class="nav-text">6.1 字词分流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-扩展编码"><span class="nav-text">6.2 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-动态码长"><span class="nav-text">6.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-自动词组"><span class="nav-text">6.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-增强模式"><span class="nav-text">6.5 增强模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-单字模式"><span class="nav-text">6.6 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-衍生方案"><span class="nav-text">7 衍生方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-声笔快讯"><span class="nav-text">7.1 声笔快讯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-声笔快整"><span class="nav-text">7.2 声笔快整</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：快码的编码格式"><span class="nav-text">附录一：快码的编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：快码的强化训练"><span class="nav-text">附录二：快码的强化训练</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-快码概述"><span class="nav-text">1 快码概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-发展历史"><span class="nav-text">1.1 发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2  比较优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-主要内容"><span class="nav-text">1.3 主要内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-快码初阶"><span class="nav-text">2 快码初阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-快速入门"><span class="nav-text">2.1 快速入门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码反查"><span class="nav-text">2.2 编码反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单字的输入"><span class="nav-text">3 单字的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-声笔字"><span class="nav-text">3.1 声笔字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-普通字"><span class="nav-text">3.2 普通字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词组的输入"><span class="nav-text">4 词组的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-二字词"><span class="nav-text">4.1 二字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-三字词"><span class="nav-text">4.2 三字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-多字词"><span class="nav-text">4.3 多字词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-空位词"><span class="nav-text">4.4 空位词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-输入技巧"><span class="nav-text">5 输入技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-条件顶屏"><span class="nav-text">5.1 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-巧用大写"><span class="nav-text">5.2 巧用大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-编码变换"><span class="nav-text">5.3 编码变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-高级特性"><span class="nav-text">6 高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-字词分流"><span class="nav-text">6.1 字词分流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-扩展编码"><span class="nav-text">6.2 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-动态码长"><span class="nav-text">6.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-自动词组"><span class="nav-text">6.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-单字模式"><span class="nav-text">6.5 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-衍生方案"><span class="nav-text">7 衍生方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-声笔快讯"><span class="nav-text">7.1 声笔快讯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-声笔快整"><span class="nav-text">7.2 声笔快整</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：快码的编码格式"><span class="nav-text">附录：快码的编码格式</span></a></li></ol></div>
             
 
           </div>
