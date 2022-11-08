@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-11-02T09:14:22.141Z">
+<meta property="og:updated_time" content="2022-11-08T09:01:31.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零">
@@ -684,7 +684,7 @@ var _hmt = _hmt || [];
 <p>在声笔系列码中，声母的编码就是拼音的首字母，但若拼音的首字母为a、e或o，则用v作为其声母，因为此时没有声母，即所谓的零声母，要用v代表。例如，<code>jiang</code>的声母为<code>j</code>，<code>wen</code>的声母为<code>w</code>，而<code>ao</code>的声母则为<code>v</code>。</p>
 <p>在声笔系列的所有方案中，一简字都是固定不变的，它们是：<code>b不 p平 m没 f发 d的 t他 n你 l了 g个 k可 h和 j就 q去 x下 z在 c出 s是 r人 y一 w我 v而</code>。声笔QQ群友们七嘴八舌将它们编成了一个口诀：可不平的是，我一个人没在，而你和他出去下就发了。这个口诀对初学者记忆一简字还是有帮助的。当然，对熟练者来说，已经形成了条件反射，就无所谓了。</p>
 <p>在使用笔画的时候要注意，横竖撇捺折五种笔画中，每种笔画都包括了变形笔画。横包括提，如「打」的第三笔。竖包括竖左钩，如「打」的第二笔，但不包括其它带钩的笔画，如「长」的第四笔。撇有横撇，如「人」；有平撇，如「毛」；有竖撇，如「用」。捺还包括各种点，如「下」「办」「不」等。折的变笔就更多了，如「口」「又」「买」「凹」「朵」等等。</p>
-<p>汉字的笔画和笔顺是固定不变的，国家有相关的规范。声笔系列码是完全遵循国家规范的。本文的附录一是有关笔画的国家规范，附录二列出了笔画易错的汉字和部首。对于笔画和笔顺不太规范的人来说，学习声笔输入法还可以对他们的坏习惯起到纠正的作用，对于小学生来说，更有利于他们学习和巩固语文知识。</p>
+<p>汉字的笔画和笔顺是固定不变的，国家有相关的规范。声笔系列码是完全遵循国家规范的。本文的<a href="#附录一、笔画的国家规范">附录一</a>是有关笔画的国家规范，<a href="#附录二、笔画易错的汉字和部首">附录二</a>列出了笔画易错的汉字和部首。对于笔画和笔顺不太规范的人来说，学习声笔输入法还可以对他们的坏习惯起到纠正的作用，对于小学生来说，更有利于他们学习和巩固语文知识。</p>
 <h2 id="2-翻页方法"><a href="#2-翻页方法" class="headerlink" title="2 翻页方法"></a>2 翻页方法</h2><p>重码字词超过一页时，声笔用Tab正向翻页，用Shift+Tab反向翻页。而且，翻页操作在电脑上和手机上都是一样的。不过，手机上的Tab位于键盘的左下角，仅在有编码时起作用，上滑该键则相当于Shift+Tab。</p>
 <p>在定位新造词的时候，可以在没有进行过翻页时，用Shift+Tab直接跳到最后一页，这在重码很多时特别有用。如果只用Tab的话，就需要按顺序多次翻页，因为新造的词都是排在重码词中尾部的位置。</p>
 <p>注意，声笔系列码没有像一般输入法那样用逗号和句号来翻页，这是因为声笔系列码使用翻页键的情况是比较少或者很少的，无需占用常用的逗号键和句号键而使它们丧失顶屏的能力。</p>
@@ -1086,12 +1086,13 @@ var _hmt = _hmt || [];
 <p>除了u引导的自定义词典外，其它可定制词典都是无需引导的。以下罗列出所有可定制的词典，说明其适用的子系列或者方案。具体的用法，会在相应的方案里详细论述。</p>
 <ol>
 <li>sbzdy: 用 u 引导的自定义词典，共用于声笔的所有方案；</li>
-<li>sbfd: 可完全定制的声笔飞单（含sbb字）；</li>
-<li>kmsbbtz：快码的sbb字调整词典；</li>
-<li>fmsbbtz：飞码的sbb字调整词典。</li>
+<li>sbfd: 可完全定制的声笔飞单（含缩减码）；</li>
+<li>kmsbbtz：快码的缩减码调整词典；</li>
+<li>fmsbbtz：飞码的缩减码调整词典。</li>
 </ol>
-<h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2><p>声笔定制程序能够支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。实现过滤器和其它功能的脚本，请自行添加。</p>
-<h2 id="8-设置选项"><a href="#8-设置选项" class="headerlink" title="8 设置选项"></a>8 设置选项</h2><p>声笔系列码也有传统输入法的中英文输入状态、中英文标点状态、简繁体状态，但是取消了现在已经没有意义的全半角状态。同时，增加了增强与常规状态，词组与单字状态，三顶与四顶状态等。另外，还有一些没有界面，只能通过修改配置文件的设置选项。这里只讲述比较声笔特有的、各方案通用的设置选项，方案特有的设置选项会在具体方案中讲述。</p>
+<h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2><p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
+<p>通过LUA脚本能够实现的功能是非常多的，网上也有不少现成的脚本可以下载，请自行添加。有能力的用户也可自己动手编写脚本来实现特定的功能。</p>
+<h2 id="8-设置选项"><a href="#8-设置选项" class="headerlink" title="8 设置选项"></a>8 设置选项</h2><p>声笔系列码也有传统输入法的中英文输入状态、中英文标点状态、简繁体状态，但是取消了现在已经没有意义的全半角状态。同时，增加了词组与单字状态，三顶与四顶状态等。另外，还有一些没有界面，只能通过修改配置文件的设置选项。这里只讲述比较声笔特有的、各方案通用的设置选项，方案特有的设置选项会在具体方案中讲述。</p>
 <p>(1) 停止调频与造词</p>
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
@@ -1103,39 +1104,65 @@ var _hmt = _hmt || [];
 <p>(4) 临时英文选项</p>
 <p>所有声笔方案都有auto_inline选项，用于控制在中文状态下首字母大写是否进入临时英文状态。默认是进入，想改为不进入的话，需要将该项下的1改为0。</p>
 <p><img src="/images/auto_inline.png" alt="临时英文选项"></p>
-<h2 id="9-打字训练"><a href="#9-打字训练" class="headerlink" title="9 打字训练"></a>9 打字训练</h2><h3 id="9-1-训练软件"><a href="#9-1-训练软件" class="headerlink" title="9.1 训练软件"></a>9.1 训练软件</h3><p>现在的打字训练软件和网站很多，最有名的可能是金山打字通了。它用于练习基本指法和英文输入是非常好的，但是用于中文打字训练并不好，因为它只统计了每分钟多少字这个数据，对分析打字用户的操作行为和找出可能存在的问题帮助不大。所以，建议使用更加专业的打字软件。这里推荐在电脑上使用极速跟打器，而在手机上使用极速云跟打。这两款软件可在其官网下载，也可以在声笔QQ群下载，它们都是免费软件，可以离线使用，也可以注册用户后联网使用，以便上传练打字成绩，还有各种打字社群和成绩排行榜。</p>
-<h3 id="9-2-打字速度"><a href="#9-2-打字速度" class="headerlink" title="9.2 打字速度"></a>9.2 打字速度</h3><p>在码长一定的情况下，影响打字速度的决定性因素就是击键了。打字速度的计算公式如下：</p>
+<h2 id="9-打字训练"><a href="#9-打字训练" class="headerlink" title="9 打字训练"></a>9 打字训练</h2><p>什么是打字？从广义上来讲，一切输入文字的活动都是打字。广义的打字包括语音识别输入、手写识别输入、鼠标点击输入等非键盘输入方式。但是，我们这里讲的是键盘输入，而且要排除速录机和并击方式，这两者需要更加专门的训练，速录机还需要专门的设备支持，不是大众需要的。</p>
+<p>虽然语音输入已经比较成熟，对日常用语识别的准确率已经相当高了，识别速度也很快。但是，它的使用受到环境、噪声、方言等诸多因素的限制，只能在有些的场景中使用。手写识别则是因为书写速度的限制而无法满足人们的要求。所以，在目前和可以预见的将来，键盘输入仍将是文字输入的主要方式。</p>
+<p>在国内普遍采用的是标准英文键盘，即QWERTY键盘。在手机上的26键布局稍有变化，不过作为主体的字母键位置是相对固定的，与电脑键盘有明显的对应关系，便于习惯的迁移。手机上的9键布局主要是为了适应功能机时代的习惯，在大触碰时代已经没有必要，会逐步淡出历史。</p>
+<p>打字训练对于想快速提高打字能力的人是非常重要的。从一开始就进行严格的训练，有利于养成好的打字习惯。在初始阶段付出短期的训练成本，可以获得长期的收益，提高效率，节约时间。</p>
+<h3 id="9-1-训练目的"><a href="#9-1-训练目的" class="headerlink" title="9.1 训练目的"></a>9.1 训练目的</h3><p>在进行打字训练前，首先要明确自己的训练目的。必须要结合所选择的输入方案及其使用场景来设定训练目标和制定训练计划。</p>
+<p>输入方案可能是普及型的，也可能是中庸型或者专业型的。虽然绝大多数人使用的都是普及型方案，然而最需要强化训练的却是少数人使用的专业型方案。在传统输入法中，五笔的训练量肯定比拼音要大得多。在声笔系列中，按照训练量从小到大排序的话，方案的顺序为：声笔拼音→声笔简码→声笔自然或声笔小鹤→声笔快码→声笔飞码。</p>
+<p>输入场景可能是想打、看打或者听打。虽然现在绝大多数人的使用场景都是想打，然而一般的打字训练软件却只能提供看打的训练手段，有的打字训练软件能够提供听打的训练手段。</p>
+<p>输入场景还可能涉及到不同的文本类型。训练的文本和今后实际输入的文本类型差异太大，也会造成问题。比如，训练的时候，采用大量的建筑类文章，而实际使用的时候却是面对大量医学类的文本，这对动态调频的词库会造成很大的伤害，不利于调教词库。</p>
+<p>如何克服使用场景和训练场景之间的这种不匹配是一个非常重要的问题。如果在训练的时候能够取得很好的成绩，而在使用的时候效果不佳甚至出现误导，那就失去了专门训练的意义，浪费了宝贵的时间。</p>
+<p>打字的效率体现在打字速度上。因此，打字速度是许多人练打字的重要目标之一，甚至是唯一目标。为了简便，我们这里将打字速度简称为速度，在当前的语境下是不会产生歧义的。</p>
+<h4 id="9-1-1-速度"><a href="#9-1-1-速度" class="headerlink" title="9.1.1 速度"></a>9.1.1 速度</h4><p>对许多人来说，速度是个迷。这里的迷有三层意思：迷信、迷惑、迷失！迷信者盲目崇拜打字飞快的高手，希望有朝一日也取得同样的成就。迷惑者觉得有些人演示的速度太离谱、不可信，但又不知道是为什么。迷失者对自己感到失望，觉得自己是个笨蛋，怀疑自己的能力，为什么我同排行榜上的打字高手差距那么大？</p>
+<p>这个迷怎么破？让我慢慢道来。首先，我们要弄清速度究竟是什么。怎么定义速度呢？速度的计算公式如下：</p>
 <blockquote>
 <p>速度 = 击键 × 60 ÷ 码长</p>
 </blockquote>
 <p>其中，速度是指每分钟输入的字数，包括标点符号、英文字母和数字等；击键是指每秒钟的击键次数，所以要乘以60，以便换算成以分钟为单位的速度；码长是指平均每个字的码长，包括空格、选择键、翻页键等。 </p>
-<p>首打速度、重打速度</p>
-<p>瞬时速度、短时速度、持久速度</p>
+<p>从速度的计算公式可以看出，打字速度取决于击键和码长两个因素。在码长一定的情况下，影响打字速度的决定性因素就是击键。在击键一定的情况下，决定打字速度的因素就是码长。然而，击键和码长都受很多因素的影响，情况相当复杂，将在接下来的两节详细论述。</p>
+<p>所处阶段：学习速度、使用速度、遗忘速度</p>
+<p>打字方式：想打速度、看打速度、听打速度。新的方式？默打速度：尽量背下来打，背不住时训练软件提示一下，只提示下一个字。这种方式应该对人们背诵文章很有好处，可以实验一下。现在的打字训练软件好像都不支持这种训练方式。</p>
+<p>反复次数：首打速度、重打速度</p>
+<p>持续时间：瞬时速度、短时速度、持久速度</p>
+<h4 id="9-1-2-击键"><a href="#9-1-2-击键" class="headerlink" title="9.1.2 击键"></a>9.1.2 击键</h4><p>编码方式和码元集大小都会影响击键。编码尽量采用易于击打的组合，码元集尽量小，都有利于加快击键，有利于提高打字速度，但却会增加码长，又同时会降低打字速度。偏面强调一方面都是不行的，如何平衡两者才是最关键的。</p>
+<p>击键与操作者密切相关。</p>
+<p>比特率、码元率、编码率、采样率</p>
+<h4 id="9-1-3-码长"><a href="#9-1-3-码长" class="headerlink" title="9.1.3 码长"></a>9.1.3 码长</h4><p>码长是衡量输入方案效率最重要的指标。但是，不同的方案用于编码的码元集大小是不一样的，所以直接比较码长并不科学。最好的办法是将码长折算为二进制，以比特为单位来比较，才有共同的基准。折算方法很简单，将码长乘以一个系数即可，这个系数是log2|K|，其中|K|为码元集的大小。</p>
+<p>15.32 -11.46 </p>
+<p>log(27) = 4.75</p>
+<p>码长与输入法密切相关</p>
 <p>实际码长、折合码长</p>
-<p>看打、听打、想打</p>
-<p>速录、并击、语音识别</p>
-<h3 id="9-3-训练目的"><a href="#9-3-训练目的" class="headerlink" title="9.3 训练目的"></a>9.3 训练目的</h3><p>需要特别注意的是，要正确看待自己的打字成绩和在中文极速网排行榜中的名次，不要让它们带偏了节奏，迷失了方向。首先要明确自己通过这种方式来练习打字的目的。绝大多数人打字的应用场景不是为了在这类打字比赛中取得最好的成绩，也不可能做到这一点，因为就如同百米短跑一样，取得世界冠亚军和前几名的人仅仅靠刻苦训练是不够的，往往需要天赋才行。</p>
+<h3 id="9-2-训练软件"><a href="#9-2-训练软件" class="headerlink" title="9.2 训练软件"></a>9.2 训练软件</h3><p>现在的打字训练软件和网站很多，最有名的可能是金山打字通了。它用于练习基本指法和英文输入是非常好的，但是用于中文打字训练并不好，因为它只统计了每分钟多少字这个数据，对分析打字用户的操作行为和找出可能存在的问题帮助不大。</p>
+<p>所以，建议使用更加专业的打字软件。这里推荐在电脑上使用极速跟打器，而在手机上使用极速云跟打。这两款软件可在其官网下载，也可以在声笔QQ群下载，它们都是免费软件，可以离线使用，也可以注册用户后联网使用，以便上传练打字成绩，还有各种打字社群和成绩排行榜。</p>
+<p>需要特别注意的是，要正确看待自己的打字成绩和在中文极速网排行榜中的名次，不要让它们带偏了节奏，迷失了方向。</p>
+<p>绝大多数人打字的应用场景不是为了在这类打字比赛中取得最好的成绩，也不可能做到这一点，因为就如同百米短跑一样，取得世界冠亚军和前几名的人仅仅靠刻苦训练是不够的，往往需要天赋才行。</p>
+<p>需要注意的是，在竞速看打赛文的时候，需要有一个预读的过程。当然，绝大多数人并没有竞速看打这种应用场景，所以并不会成为一个问题。即使是看打，如果不是首打的话，由于人可以利用自己的短时记忆，就可以大大加速预读的过程。</p>
 <p>提高击键：对静态字词的输入形成条件反射，从而提高击键的速度。</p>
 <p>缩短码长：调教动态的字词库，以适配用户的使用习惯，使得用户越常用的字词优先级别越高，从而减少用键数量。</p>
 <p>如何训练想打？背下训练文本，才能避免看到字形，在一定程度上模拟出想打的场景。</p>
-<h3 id="9-4-高频单字"><a href="#9-4-高频单字" class="headerlink" title="9.4 高频单字"></a>9.4 高频单字</h3><h4 id="9-4-1-一简字"><a href="#9-4-1-一简字" class="headerlink" title="9.4.1 一简字"></a>9.4.1 一简字</h4><p>一简字有21个，只需输入声母，然后空格上屏。一简字的使用频率是最高的。为了便于记住一简字，可以采用以下口诀：</p>
+<h4 id="9-2-1-金山打字通"><a href="#9-2-1-金山打字通" class="headerlink" title="9.2.1 金山打字通"></a>9.2.1 金山打字通</h4><h4 id="9-2-2-极速跟打器"><a href="#9-2-2-极速跟打器" class="headerlink" title="9.2.2 极速跟打器"></a>9.2.2 极速跟打器</h4><h4 id="9-2-3-极速云跟打"><a href="#9-2-3-极速云跟打" class="headerlink" title="9.2.3 极速云跟打"></a>9.2.3 极速云跟打</h4><h3 id="9-3-训练资料"><a href="#9-3-训练资料" class="headerlink" title="9.3 训练资料"></a>9.3 训练资料</h3><p>熟练掌握英文打字是练好中文打字的前提条件。我们这里假设用户已经具备了这个条件。具体的训练方法因输入方案而异，会在讲述方案的篇章里介绍。此处只是列出和说明可能用到的基本资料，方案特有的资料会放在自己的篇章里。</p>
+<h4 id="9-3-1-一简字"><a href="#9-3-1-一简字" class="headerlink" title="9.3.1 一简字"></a>9.3.1 一简字</h4><p>一简字有21个，只需输入声母，然后空格上屏。一简字的使用频率是最高的，占单字频率的17.73%。所有声笔方案都会用到。为了便于记住一简字，可以采用以下口诀：</p>
 <blockquote>
 <p>可不平的是，<br>我一个人没在，<br>而你和他出去下就发了。</p>
 </blockquote>
-<h4 id="9-4-2-声笔字"><a href="#9-4-2-声笔字" class="headerlink" title="9.4.2  声笔字"></a>9.4.2  声笔字</h4><blockquote>
-<p>如同孔明自快话，<br>开口正道无怕经，<br>二双公民来前线，<br>年内安然回南国，<br>若说阿维当农夫，<br>片上方家暗笑她，<br>进得高中好体面，<br>心想事成且大为，<br>别看晚儿那小子，<br>强力对手也头破，<br>从此把着全日用，<br>除非白天会给还，<br>部分次品立飞过，<br>让利几起眼皮边，<br>名门里外有意见。</p>
+<h4 id="9-3-2-声笔字"><a href="#9-3-2-声笔字" class="headerlink" title="9.3.2  声笔字"></a>9.3.2  声笔字</h4><p>声笔字有105个，只需声母和首笔，使用频率仅次于一简字，占单字频率的22.28%，加上一简字后占40.01%的累计频率，对输入效率的影响相当大，可以说是声笔原创方案的精髓之一。声笔字为声笔简码、声笔快码和声笔飞码所共用，也有一个口诀：</p>
+<blockquote>
+<p>如同孔明自快话，<br>开口正道无怕经，<br>二双公民来前线，<br>年内安然回南国；<br>若说阿维当农夫，<br>片上方家暗笑她，<br>进得高中好体面，<br>心想事成且大为；<br>别看晚儿那小子，<br>强力对手也头破，<br>从此把着全日用，<br>除非白天会给还；<br>部分次品立飞过，<br>让利几起眼皮边，<br>名门里外有意见。</p>
 </blockquote>
-<h3 id="9-5-降频单字"><a href="#9-5-降频单字" class="headerlink" title="9.5 降频单字"></a>9.5 降频单字</h3><p>以下是按使用频率从高到低排列的前、中、后500字。</p>
-<h4 id="9-5-1-前-500-字"><a href="#9-5-1-前-500-字" class="headerlink" title="9.5.1  前 500 字"></a>9.5.1  前 500 字</h4><blockquote>
+<h4 id="9-3-3-前-500-字"><a href="#9-3-3-前-500-字" class="headerlink" title="9.3.3  前 500 字"></a>9.3.3  前 500 字</h4><p>以下是字频表前500字，累计频率约占76%，是单字训练的重中之重。对于飞码和快码等单字静态编码的方案，这500字是应该最先形成条件反射的，对于打字提速的帮助很大。</p>
+<blockquote>
 <p>的一是了不在有个人这上中大为来我到出要以时和地们得可下对生也子就过能他会多发说而于自之用年行家方后作成开面事好小心前所道法如进着同经分定都然与本还其当起动已两点从问里主实天高去现长此三将无国全文理明日些看只公等十意正外想间把情者没重相那向知因样学应又手但信关使种见力名二处门并口么先位头回话很再由身入内第平被给次别几月真立新通少机打水果最部何安接报声才体今合性西你放表目加常做己老四件解路更走比总金管光工结提任东原便美及教难世至气神山数利书代直色场变记张必受交非服化求风度太万各算边王什快许连五活思该步海指物则女或完马强言条特命感清带认保望转传儿制干计民白住字它义车像反象题却流且即深近形取往系量论告息让决未花收满每华业南觉电空眼听远师元请容她军士百办语期北林识半夫客战院城候单音台死视领失司亲始极双令改功程爱德复切随李员离轻观青足落叫根怎持精送众影八首包准兴红达早尽故房引火站似找备调断设格消拉照布友整术石展紧据终周式举飞片虽易运笑云建谈界务写钱商乐推注越千微若约英集示呢待坐议乎留称品志黑存六造低江念产刻节尔吃势依图共曾响底装具喜严九况跟罗须显热病证刚治绝群市阳确究久除闻答段官政类黄武七支费父统</p>
 </blockquote>
-<h4 id="9-5-2-中-500-字"><a href="#9-5-2-中-500-字" class="headerlink" title="9.5.2  中 500 字"></a>9.5.2  中 500 字</h4><blockquote>
+<h4 id="9-3-4-中-500-字"><a href="#9-3-4-中-500-字" class="headerlink" title="9.3.4  中 500 字"></a>9.3.4  中 500 字</h4><p>中500字是字频表第501至第1000字，占字频约14%，加上前500字累计频率约占90%。这500字对提速有一定帮助，有能力的人可以量力而行的练一下。</p>
+<blockquote>
 <p>府查般斯倒突号树拿克初广奇愿欢希母香破谁致线急古既句京甚仍晚争游龙余护另器细木权星哪苦孩试朝阿队居害独讲错局男差参社换选止际假汉够诉资密案史较环投静宝专修室区料帮衣竟模脸善兵考规联团冷玉施派纪采历顾春责夜画惊银负续吗简章左块索酒值态按陈河巴冲阵境助角户乱呼灵脚继楼景怕停铁异谢否伤兰置医良承福科属围需退基右速适药怀击买素背岁土忙充排价质遇端列印贵疑露哥杀标招血礼弟亮齐穿脑委州某顺省讨尚维板散项状追笔副层沙养读习永草胡济执察归富座雨堂威忽苏船罪敢妇村著食导免温莫掌激慢托胜险寻守波雷沉秀职验靠楚略族藏丽渐刘仅肯担扬盘唐钟级毛营坚松皮供店饭范哈赶吧雪斗效临农味恶烟园烈配杂短卫跳孙曲封抓移顿律卖艺旧朋救防脱翻划迎痛校窗宣乡杨叶警限湖软掉财词压挥超屋秋跑忘馆暗班党宗坏技困登姐预耳席梦朱组旁份禁套亚益探康增诗戏伯晓含劳恩顶君庄谓付田毕纸研虚怪宁替犯灯优您姓例丝盖误架幸隐股毒娘占智佛床米凡介征彩演射祖欲束获舞圣伙梅普借私源镇睡缓升纳织歌宫概野醒夏互积街牌休摇洋败监骨批兄刀网率庭熟创访硬仁菜丁绿牛避阴拍雄秘缺卷姑尼油恐玩释遍握球降虑荣策肉妈迷检伸欧攻练育危厅啊睛摆茶勇判材抱亦妻吸喝趣嘴逐操午吉浪轮默毫冰</p>
 </blockquote>
-<h4 id="9-5-3-后500-字"><a href="#9-5-3-后500-字" class="headerlink" title="9.5.3  后500 字"></a>9.5.3  后500 字</h4><blockquote>
+<h4 id="9-3-5-后500-字"><a href="#9-3-5-后500-字" class="headerlink" title="9.3.5  后500 字"></a>9.3.5  后500 字</h4><p>后500字是字频表第1001至第1500字，占字频约5%，加上前500字和中500字累计频率约占95%。这500字对提速虽然还是有点作用，但是相对于练习的付出可能就有点不值了，而且无意义的非高频字练习起来难度大而枯燥，除非极有毅力的人是难以坚持下来的。</p>
+<blockquote>
 <p>珠鼓阶孔徐固偏陆诸遗爷述帝闭补编巨透弄尤鲁拥录吴墙货弱敌挑宽迹抽忍折输稳皇桌献蒙纷麻洗评挂童尊舍唯博剧乃混弹附迟敬杯鱼控塞剑厚佳测训牙洞淡盛县芳雅革款横累择乘刺载猛逃构赵杜庆途奔虎巧抗针徒圆闪谷绍聚额健诚鲜泪闲均序震仿缘戴婚篇亡奶忠烦赛闹协杰残懂丹柳妹映桥叹愈旅授享暴偷蓝氏寒宜弃丰延辈抢颜赞典冒眉烧厂唱径库川辞伴怒型纯贝票隔穷拜审伦悲柔启减页纵扫伟迫振瑞丈梁洲枪央触予孤缩洛损促番罢宋奋销幕犹锁珍抬陪妙摸峰劲镜沈夺昨哭讯貌谋泰侧贫扶阻贴申岸彼赏版抵泽插迅凭伊潮咱仙符宇肩尝递燕洁拒郎凝净遭仪薄卡末勒乌森诺呀壮忧沿惯丢季企壁惜婆袋朗零辛忆努舒枝凤灭韩胆灰旦孟陷俗绕疾瞧洪甲帐糊泛皆碰吹码奉箱倾胸堆狂仲圈冬餐厉腿尖括佩鬼欣垂跃港骗融撞塔紫荡敏郑赖滑允鸟课暂瓦祥染滚浮粗刑辆狗扑稍秦扎魂岛腾臣琴悉络摩措域冠竹殊豪呆萨旋喊寄悄倍祝剩督旗返召彻宾甘吐乔腰拔幅违详臂尺饮颗涉逼竞培惠亏叔伏唤鸡邻池怨奥侯骑漫拖俊尾恨贯凌兼询碎晨罚铺浓伍宿泉井繁粉绪筑恢匹尘辉魔仰董描距盗渡勤劝莲坦搭挺踪幽截荒恰慧邦颇焦醉废掩签丧灾鼻侵陶肃裁俱磨析奖匆瓶泥拾凉麦钢涌潜隆津搞蛋奈扰耐傅锦播墨偶捕惑飘屈鸣挤毁斜啦污赤慰饰锋覆汤寿跨羊</p>
 </blockquote>
-<h3 id="9-6-综合训练"><a href="#9-6-综合训练" class="headerlink" title="9.6 综合训练"></a>9.6 综合训练</h3><p>(1) 系统赛文</p>
+<h4 id="9-3-6-综合训练"><a href="#9-3-6-综合训练" class="headerlink" title="9.3.6 综合训练"></a>9.3.6 综合训练</h4><p>(1) 系统赛文</p>
 <p>(2) 自选文本</p>
 <h2 id="附录一、笔画的国家规范"><a href="#附录一、笔画的国家规范" class="headerlink" title="附录一、笔画的国家规范"></a>附录一、笔画的国家规范</h2><p>声笔系列码对笔画的使用完全遵从国家的有关规范，这对纠正使用者的错误笔顺和识别正确的笔画类型是很有帮助的。</p>
 <h3 id="1-笔顺规则"><a href="#1-笔顺规则" class="headerlink" title="1. 笔顺规则"></a>1. 笔顺规则</h3><p><img src="/images/bsgz.jpg" alt="笔顺规则"></p>
@@ -1508,7 +1535,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-翻页方法"><span class="nav-text">2 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标点符号"><span class="nav-text">3 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英混输"><span class="nav-text">4 中英混输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-特殊符号"><span class="nav-text">5 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自定词典"><span class="nav-text">6 自定词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LUA脚本"><span class="nav-text">7 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置选项"><span class="nav-text">8 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打字训练"><span class="nav-text">9 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-训练软件"><span class="nav-text">9.1 训练软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-打字速度"><span class="nav-text">9.2 打字速度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-训练目的"><span class="nav-text">9.3 训练目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-高频单字"><span class="nav-text">9.4 高频单字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-一简字"><span class="nav-text">9.4.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-声笔字"><span class="nav-text">9.4.2  声笔字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-降频单字"><span class="nav-text">9.5 降频单字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-5-1-前-500-字"><span class="nav-text">9.5.1  前 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-5-2-中-500-字"><span class="nav-text">9.5.2  中 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-5-3-后500-字"><span class="nav-text">9.5.3  后500 字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-综合训练"><span class="nav-text">9.6 综合训练</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-翻页方法"><span class="nav-text">2 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标点符号"><span class="nav-text">3 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英混输"><span class="nav-text">4 中英混输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-特殊符号"><span class="nav-text">5 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自定词典"><span class="nav-text">6 自定词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LUA脚本"><span class="nav-text">7 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置选项"><span class="nav-text">8 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打字训练"><span class="nav-text">9 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-训练目的"><span class="nav-text">9.1 训练目的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-速度"><span class="nav-text">9.1.1 速度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-击键"><span class="nav-text">9.1.2 击键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-3-码长"><span class="nav-text">9.1.3 码长</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-训练软件"><span class="nav-text">9.2 训练软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-金山打字通"><span class="nav-text">9.2.1 金山打字通</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-2-极速跟打器"><span class="nav-text">9.2.2 极速跟打器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-3-极速云跟打"><span class="nav-text">9.2.3 极速云跟打</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-训练资料"><span class="nav-text">9.3 训练资料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-1-一简字"><span class="nav-text">9.3.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-2-声笔字"><span class="nav-text">9.3.2  声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-3-前-500-字"><span class="nav-text">9.3.3  前 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-4-中-500-字"><span class="nav-text">9.3.4  中 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-5-后500-字"><span class="nav-text">9.3.5  后500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-6-综合训练"><span class="nav-text">9.3.6 综合训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
             
 
           </div>
