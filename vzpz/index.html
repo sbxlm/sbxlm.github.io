@@ -133,8 +133,6 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/rjxzwz2.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel2.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220312082144602.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220312083440984.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220312084206660.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220312084513571.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall07.png">
@@ -142,13 +140,12 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall09.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall10.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall11.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/rjxzwz3.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel5.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel6.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221009040031133.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221108152301080.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221108152502471.png">
-<meta property="og:updated_time" content="2022-11-08T07:25:18.134Z">
+<meta property="og:updated_time" content="2022-11-10T00:44:22.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="声笔系列码是基于著名的开源输入法平台Rime进行二次开发的，其安装配置比较复杂。这一方面有Rime的原因，因为它没有提供丰富的图形界面，对普通用户不太友好。另一方面的原因是，声笔系列的方案众多，体系庞大，使用前需要用户做出选择，仅仅安装自己需要的部分。 在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式">
@@ -697,38 +694,19 @@ var _hmt = _hmt || [];
 <p>目前，声笔系列码官方只提供了 Windows和Android的定制安装程序。Windows 版本至少要求Win7。安卓版本至少要求 8.0，而华为的鸿蒙是兼容安卓的，也没有问题。至于Linux、MacOS和iOS的用户，则需要自己通过声笔定制的Librime源程序进行编译。对于Linux，声笔爱好者有编译打包声笔librime的，可以想法借此编译使用，具体可参见<a href="https://noodlefighter.com/posts/d400/" target="_blank" rel="noopener">编译参考</a>。</p>
 <p>安装包和扩展包文件名称后的日期为发布日期。你下载的文件日期可能是不一样的，不要紧，是正常的，因为软件是可能会不断更新的。</p>
 <p><img src="/images/rjxzwz2.png" alt="QQ群下载位置2"></p>
-<h3 id="1-2-软件构成"><a href="#1-2-软件构成" class="headerlink" title="1.2 软件构成"></a>1.2 软件构成</h3><p>新版声笔系列码的实现是建立在 RIME 输入法平台之上的。但是，为了支持声笔系列码的特殊功能，如续码顶屏、字母选重、扩展编码、自动码长等，对官方的 RIME 程序进行了特别的定制。不过，声笔定制程序可以兼容相同版本的官方程序，仍然可以在定制程序上使用其它的 RIME 输入法方案。所以，无需安装两套软件，也可能根本就安装不了两套软件，因为两者可能是冲突的。软件的构成如下所示。</p>
-<ul>
-<li>主程序：是必需。里面除安装程序外，还内置了声笔简码和声笔拼音。<ul>
-<li>声笔系列WIN版</li>
-<li>声笔系列安卓版</li>
-</ul>
-</li>
-<li>扩展包：不是必需的，可以根据自己的需要来选择，得在以上安装包的基础上使用。<ul>
-<li>声笔自然扩展包</li>
-<li>声笔小鹤扩展包</li>
-<li>声笔快码扩展包</li>
-<li>声笔飞码扩展包</li>
-</ul>
-</li>
-<li>全家桶：包含了主程序和所有扩展包，可以简化安装过程，但是占用空间增加了近两倍。全家桶的安装方式和主程序完全一样，所以不再专门讲解，参见主程序的安装方法即可。</li>
-</ul>
+<h3 id="1-2-软件构成"><a href="#1-2-软件构成" class="headerlink" title="1.2 软件构成"></a>1.2 软件构成</h3><p>新版声笔系列码的实现是建立在 RIME 输入法平台之上的。但是，为了支持声笔系列码的特殊功能，如续码顶屏、字母选重、扩展编码、自动码长等，对官方的 RIME 程序进行了特别的定制。不过，声笔定制程序可以兼容相同版本的官方程序，仍然可以在定制程序上使用其它的 RIME 输入法方案。</p>
+<p>目前仅提供声笔小狼毫（Windows版）和声笔同文版（安卓笔）的一键安装包，其中声笔同文可以和原版同文并行安装，但是声笔小狼毫不能与原版小狼毫共存。Mac、Linux和iOS版没有一键安装包，需要用户自己用声笔定制的librime源程序进行编译。</p>
 <h2 id="2-安装与更新"><a href="#2-安装与更新" class="headerlink" title="2 安装与更新"></a>2 安装与更新</h2><h3 id="2-1-WIN版的安装"><a href="#2-1-WIN版的安装" class="headerlink" title="2.1 WIN版的安装"></a>2.1 WIN版的安装</h3><p><a href="https://www.bilibili.com/video/BV1Gq4y1c7PL/" target="_blank" rel="noopener">点这里观看声笔输入法WIN版安装演示</a>。</p>
-<p>(1) 安装主程序</p>
-<p>在Windows上，把您下载的声笔系列WIN版压缩包解压，在解压后的文件夹中找到安装程序Weasel4sbxlm，以管理员权限进行安装。</p>
+<p>(1) 安装方法</p>
+<p>在Windows上，把您下载的声笔输入法WIN版压缩包解压，在解压后的文件夹中找到安装程序Weasel4sbxlm，以管理员权限进行安装。</p>
 <p><img src="/images/Sbxlm4Weasel2.png" alt="小狼毫声笔定制版安装"></p>
 <p>点击「我接受」，然后按默认步骤安装即可，建议不要改变默认的安装路径，更不要使用含有中文的路径，以免出现不可预知的问题。</p>
 <p><img src="/images/Sbxlm4Weasel.png" alt="小狼毫声笔定制版安装"></p>
-<p>(2) 安装扩展包</p>
-<p>首先确认已经安装好了主程序，然后将包解压，把相应输入方案复制到小狼毫输入法的用户文件夹（注意不是程序文件夹）中。</p>
-<p><img src="/images/image-20220312082144602.png" alt="image-20220312082144602"></p>
-<p>在输入法设定中启用新的方案，并重新部署一下即可用F4或者Ctrl+~来切换使用新方案了。</p>
-<p><img src="/images/image-20220312083440984.png" alt="image-20220312083440984"></p>
-<p>(3) 安装错误处理</p>
+<p>(2) 错误处理</p>
 <p>安装后无法使用一般都是由于没有删除以前的版本或者安装不全造成的。最简单的办法就是将用户文件夹Rime更名后重新安装一下主程序，然后再把需要的数据从备份中复制过来。遇到用户文件夹无法更名时，可以停用小狼毫算法服务以后再更名，但是要记住更名后重新启动小狼毫算法服务，否则是不能打中文的。</p>
 <p><img src="/images/image-20220312084206660.png" alt="image-20220312084206660"><img src="/images/image-20220312084513571.png" alt="image-20220312084513571"> </p>
-<h3 id="2-2-安卓版的安装"><a href="#2-2-安卓版的安装" class="headerlink" title="2.2 安卓版的安装"></a>2.2 安卓版的安装</h3><p>(1) 安装主程序</p>
-<p>在Android手机上，则可以用声笔系列安卓版一键安装包进行安装。步骤如下：</p>
+<h3 id="2-2-安卓版的安装"><a href="#2-2-安卓版的安装" class="headerlink" title="2.2 安卓版的安装"></a>2.2 安卓版的安装</h3><p>(1) 安装方法</p>
+<p>在Android手机上，则可以用声笔输入法安卓版一键安装包进行安装。步骤如下：</p>
 <ol>
 <li>运行安装程序后，出现以下安装界面。<img src="/images/SbjmInstall07.png" alt="声笔系列码的安装"></li>
 <li>点击上图的安装按钮，开始安装。<img src="/images/SbjmInstall08.png" alt="声笔系列码的安装"></li>
@@ -736,26 +714,9 @@ var _hmt = _hmt || [];
 <li>允许上图中的在其他应用上层显示。<img src="/images/SbjmInstall10.png" alt="声笔系列码的安装"></li>
 <li>依次执行上图中打红色圈的项目，就安装完成了。安装成功后，您会在手机上见到以下的声笔系列码APP图标。今后，在改变方案设置后，需要重新部署时，您就要用它。<img src="/images/SbjmInstall11.png" alt="声笔系列码的安装"></li>
 </ol>
-<p>(2) 安装扩展包</p>
-<p>建议使用MT管理器（在群文件里可以下载）来安装扩展包。注意，用QQ下载扩展包下载后，其位置可能因安卓的版本而已，这里的截图是安卓10的。</p>
-<p>在MT管理器的一边打开主程序安装的文件夹（/storage/emulated/0/sbxlm），在另一边打开下载的扩展包（位于/storage/emulated/0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/中），选择所有的文件复制到右边。打开声笔系列码APP重新部署一下，选择输入，再选择方案。</p>
-<p><img src="/images/rjxzwz3.png" alt="QQ群下载位置"></p>
-<p>要在使用过程中切换不同的声笔方案，如声笔简码切换到声笔飞码，只需要上滑左下角的「方案选单」键进行选择即可。</p>
-<p>(3) 安装错误处理</p>
+<p>(2) 错误处理</p>
 <p>安装后无法使用一般都是由于没有删除以前的版本或者安装不全造成的。最简单的办法就是将用户文件夹sbxlm更名后重新安装一下主程序，必要时可以把需要的数据从备份中复制过来。</p>
-<h3 id="2-3-Linux上的安装"><a href="#2-3-Linux上的安装" class="headerlink" title="2.3 Linux上的安装"></a>2.3 Linux上的安装</h3><p>有群友写了一篇在<a href="https://noodlefighter.com/posts/d400/" target="_blank" rel="noopener">Linux下使用声笔系列码</a>的文章，介绍了他编译和安装声笔定制程序的方法。他在 ibus 框架下尝试过，会有各种奇怪的小毛病（比如设置为“所有程序共享输入法”时，切换窗口会出现“Invalid UTF-8”这样的提示；HOME、END 键工作不正常 … 等等）。于是，推荐用 fcitx5 输入法框架，而且体验完美。不过，另一位群友指出，按照以上方法还不能使用LUA，有点遗憾。</p>
-<p>我利用2021年的国庆长假，搭建Linux测试环境，验证了群友所说的问题，并找到了问题的根源，从而解决了ibus下的毛病和使用LUA的问题。前者是通过修改源代码解决的，后者只需要用make merged-plugins来做即可。</p>
-<p>对使用Arch Linux的用户来说，现在安装声笔输入法就非常简单了。有位群友已经把全套声笔输入法打包好了，用户可以简单地按下列方式来安装。</p>
-<p><strong>安装方式1：</strong>通过archlinuxcn源，（需要先添加archlinuxcn源，参考<a href="https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/）。" target="_blank" rel="noopener">https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/）。</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pacman -S sbxlm # 安装声笔系列全部方案</span><br><span class="line">pacman -S librime-sbxlm-git rime-sbxlm    # 声笔简码及声笔拼音用户</span><br><span class="line">pacman -S librime-sbxlm-git rime-sbxlm-sbfm  # 声笔飞码用户</span><br><span class="line">pacman -S librime-sbxlm-git rime-sbxlm-sbkm  # 声笔快码用户</span><br><span class="line">pacman -S librime-sbxlm-git rime-sbxlm-sbzr  # 声笔自然用户</span><br><span class="line">pacman -S librime-sbxlm-git rime-sbxlm-sbxh  # 声笔小鹤用户</span><br></pre></td></tr></table></figure>
-<p><strong>安装方式2：</strong>通过AUR，您可以手动安装或者使用AUR helper，这里以yay为例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yay -S librime-sbxlm-git rime-sbxlm    # 声笔简码及声笔拼音用户</span><br><span class="line">yay -S librime-sbxlm-git rime-sbxlm-sbfm  # 声笔飞码用户</span><br><span class="line">yay -S librime-sbxlm-git rime-sbxlm-sbkm  # 声笔快码用户</span><br><span class="line">yay -S librime-sbxlm-git rime-sbxlm-sbzr  # 声笔自然用户</span><br><span class="line">yay -S librime-sbxlm-git rime-sbxlm-sbxh  # 声笔小鹤用户</span><br></pre></td></tr></table></figure>
-<p>安装完成后，执行命令 sbxlm-init 会在rime配置目录（默认为~/.local/share/fcitx5/rime）初始化userdb，然后重启fcitx5即可使用。 若非首次安装可能还要执行rime的重新部署。</p>
-<p>在输入界面按F4可以打开方案选单，默认只启用声笔简码和声笔拼音两个方案，可以通过在rime配置目录（还是默认为~/.local/share/fcitx5/rime）建立default.custom.yaml，并配置如下内容定制方案选单。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line"> schema_list:</span><br><span class="line">  - &#123;schema: sbjm&#125; # 声笔简码</span><br><span class="line">  - &#123;schema: sbdp&#125; # 声笔拼音</span><br><span class="line">  - &#123;schema: sbfm&#125; # 声笔飞码</span><br><span class="line">  - &#123;schema: sbkm&#125; # 声笔快码</span><br><span class="line">  - &#123;schema: sbzr&#125; # 声笔自然</span><br><span class="line">  - &#123;schema: sbxh&#125; # 声笔小鹤</span><br></pre></td></tr></table></figure>
-<p>如果要启用标点简词，可以在rime配置目录下建立patch，如声笔飞码可以建立sbfm.custom.yaml，并配置如下内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">patch:</span><br><span class="line"> engine/translators/@after 2: table_translator@sf</span><br></pre></td></tr></table></figure>
-<h3 id="2-4-卸载"><a href="#2-4-卸载" class="headerlink" title="2.4 卸载"></a>2.4 卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
+<h3 id="2-3-卸载"><a href="#2-3-卸载" class="headerlink" title="2.3 卸载"></a>2.3 卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
 <p>如果遇到卸载不了或者卸载不干净的输入法，可以下载使用群文件软件工具里的「输入法删除工具」来解决。此工具无需安装，直接运行就可以了。</p>
 <h2 id="3-配置与定制"><a href="#3-配置与定制" class="headerlink" title="3 配置与定制"></a>3 配置与定制</h2><p>Rime的图形界面能做的事情是有限的，在Rime的世界里是文本为王，通过编辑适当的yaml文件可以配置和定制输入法的方方面面，比传统输入法灵活和强大得多。要编辑yaml文件就需要有一个好的编辑器。在Windows上建议使用Notepad++或者Vscode，千万不要用记事本，更不要用Word。在安卓上使用时，建议使用MT管理器。</p>
 <h3 id="3-1-修改小狼毫的配色"><a href="#3-1-修改小狼毫的配色" class="headerlink" title="3.1 修改小狼毫的配色"></a>3.1 修改小狼毫的配色</h3><p>打开用户文件夹里的weasel.yaml文件， 将配色的名称改为你所需要的，默认为aqua。在weasel.yaml里还列出了所有支持的配色，如azure和luna等。如果你有兴趣和能力，你甚至可以对配色进行修改。另一个常常需要更改的选项是决定候选项采用横向还是纵向显示，默认是横向显示；将horizontal的值改为false就可以变成纵向显示。</p>
@@ -1132,7 +1093,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-软件与资源"><span class="nav-text">1 软件与资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-获取软件"><span class="nav-text">1.1 获取软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-软件构成"><span class="nav-text">1.2 软件构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装与更新"><span class="nav-text">2 安装与更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-WIN版的安装"><span class="nav-text">2.1 WIN版的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安卓版的安装"><span class="nav-text">2.2 安卓版的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Linux上的安装"><span class="nav-text">2.3 Linux上的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-卸载"><span class="nav-text">2.4 卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置与定制"><span class="nav-text">3 配置与定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-修改小狼毫的配色"><span class="nav-text">3.1 修改小狼毫的配色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-修改同文的主题和配色"><span class="nav-text">3.2 修改同文的主题和配色</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-软件与资源"><span class="nav-text">1 软件与资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-获取软件"><span class="nav-text">1.1 获取软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-软件构成"><span class="nav-text">1.2 软件构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装与更新"><span class="nav-text">2 安装与更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-WIN版的安装"><span class="nav-text">2.1 WIN版的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安卓版的安装"><span class="nav-text">2.2 安卓版的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-卸载"><span class="nav-text">2.3 卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置与定制"><span class="nav-text">3 配置与定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-修改小狼毫的配色"><span class="nav-text">3.1 修改小狼毫的配色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-修改同文的主题和配色"><span class="nav-text">3.2 修改同文的主题和配色</span></a></li></ol></li></ol></div>
             
 
           </div>

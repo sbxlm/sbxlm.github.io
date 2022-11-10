@@ -137,9 +137,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbzrYiyh.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZizi.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZiziuu.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbzz1.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbzz2.gif">
-<meta property="og:updated_time" content="2022-11-08T07:39:39.778Z">
+<meta property="og:updated_time" content="2022-11-10T00:29:32.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔自然">
 <meta name="twitter:description" content="1 一般概述1.2 引言自然码是中文输入历史上影响最大的双拼音形输入法，不少后来的双拼都或多或少地受到它的影响。但是，由于需要同时掌握双音和双形，学习难度还是相当大的。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让自然码用户也享受顶功技术带来的红利。声笔自然就是对自然码的顶功改造，并且取得了非常好的效果。 对">
@@ -683,7 +681,6 @@ var _hmt = _hmt || [];
           <h2 id="1-一般概述"><a href="#1-一般概述" class="headerlink" title="1 一般概述"></a>1 一般概述</h2><h3 id="1-2-引言"><a href="#1-2-引言" class="headerlink" title="1.2 引言"></a>1.2 引言</h3><p>自然码是中文输入历史上影响最大的双拼音形输入法，不少后来的双拼都或多或少地受到它的影响。但是，由于需要同时掌握双音和双形，学习难度还是相当大的。</p>
 <p>有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让自然码用户也享受顶功技术带来的红利。声笔自然就是对自然码的顶功改造，并且取得了非常好的效果。</p>
 <p>对于自然码用户来说，学习声笔自然的成本是非常低的，只需要了解一下双拼的细微变化并掌握笔画即可，其基本内容是：声母不分平翘舌，零声母用v表示，韵母没有变化；双形用顺序笔画代替，用<code>aeuio</code>分别表示折、横、撇、竖、点五种笔画；重码用<code>aeuio</code>兼作选择键；重码太多时，可以追加首字前两笔来快速筛选重码。</p>
-<p>本文将详细讲解声笔自然，然后在此基础上，花一节的篇幅来讲解声笔自整，只讲有区别的地方，以免重复、罗嗦。</p>
 <h3 id="1-2-优势"><a href="#1-2-优势" class="headerlink" title="1.2 优势"></a>1.2 优势</h3><p>声笔自然相比自然码的优势可以总结为：更简单、更高效和更强大。</p>
 <p>更简单是因为：首先，声笔自然用v表示零声母，简化了零声母音节的编码方式。其次，声笔自然不区分平翘舌；再次，词组没有强制性简码；最后，也是最重要的是，声笔自然用aeuio代表笔画，代替了复杂的辅助码。</p>
 <p>更高效是因为：首先，单字三码起顶，码长更短；其次，字词四码时用aeuio选择重码，比原来的数字键好按，可以实现快速选重；最后，词组支持动态调频，可以减少击键次数。</p>
@@ -754,14 +751,6 @@ var _hmt = _hmt || [];
 <p>对于不需要的词组，可以先将光标移动到该词上面，再按<code>Control + Delete</code>键来删除。注意，如果是非临时词组，需要删除两次才能彻底删除。第一次删除时只是把它变成了临时词组。在安卓手机上，声笔自然的删除方法是：用左右滑动空格定位词组，再用删词键来删除。</p>
 <h3 id="4-6-单字模式"><a href="#4-6-单字模式" class="headerlink" title="4.6 单字模式"></a>4.6 单字模式</h3><p>如果在输入的时候，突然遇到离散大的文字，需要以单字为主来输入，那么在电脑上可以按Ctrl+~或者F4快速切换到单字模式，在手机上则简单地点击状态栏的相应状态即可，如下图所示。此时，若第三码用大写，则仍然可以输入常规四码词组。</p>
 <p>如果用户想默认为单字状态，那么可以修改schema文件，将pro_char项下的reset设置为1，并重新部署一下。</p>
-<h2 id="5-声笔自整"><a href="#5-声笔自整" class="headerlink" title="5 声笔自整"></a>5 声笔自整</h2><p>声笔自整是声笔自然的整句模式。它不需要考虑单字、二字词、三字词和多字词的不同编码规则，只需要知道单字的编码就可以进行中文输入了。但是，它的缺点是，在输入发生错误后回改的成本高，离散程度高的文本尤其如此。所以，声笔自整仅适合录入简单的连续文本，或者供声笔自然的初学者使用，熟练的用户应当使用声笔自然。</p>
-<p>下面举例说明一下声笔自整的输入方法。</p>
-<p><strong>例1:</strong><code>我们大家都喜欢研究输入法</code></p>
-<p><img src="/images/sbzz1.png" alt="自整例子1"></p>
-<p>这个例子按照规则输入后就完全正确了，不用任何回改，这时的输入过程是非常流畅和舒服的。但是，并不总是这么幸运的，如下例动画所示。</p>
-<p><strong>例2:</strong><code>声笔系列码的顶功特色</code></p>
-<p><img src="/images/sbzz2.gif" alt="自整例子2"></p>
-<p>对于这类转换不正确的情况，声笔自整提供了一种快速定位的手段，可以利用数字<code>1234</code>将光标一次性地定位到待定的第1至4个音节之前，用<code>5</code>将光标定位到最后。在定位后，还可以追加一至两个笔画来筛选重码，提高转换的准确率，尽量避免翻页。在追加两个笔画后，还可以用<code>aeuio</code>代替<code>67890</code>进行重码选择，在操作上更加便捷。</p>
 <h2 id="附录一：编码格式"><a href="#附录一：编码格式" class="headerlink" title="附录一：编码格式"></a>附录一：编码格式</h2><p>在后面各方案的编码格式中，采用了一下表达方式。</p>
 <ul>
 <li>s = [qwrtsdfgzxcvbyphjklnm]</li>
@@ -1162,7 +1151,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-一般概述"><span class="nav-text">1 一般概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-引言"><span class="nav-text">1.2 引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-优势"><span class="nav-text">1.2 优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-快速入门"><span class="nav-text">2 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-编码规则"><span class="nav-text">2.1 编码规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码反查"><span class="nav-text">2.2 编码反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-输入技巧"><span class="nav-text">3 输入技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-续码顶屏"><span class="nav-text">3.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-条件顶屏"><span class="nav-text">3.2 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-巧用大写"><span class="nav-text">3.3 巧用大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码变换"><span class="nav-text">3.4 编码变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-高级特性"><span class="nav-text">4 高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-字词分流"><span class="nav-text">4.1 字词分流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-扩展编码"><span class="nav-text">4.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-动态码长"><span class="nav-text">4.4 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-词组管理"><span class="nav-text">4.5 词组管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-单字模式"><span class="nav-text">4.6 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-声笔自整"><span class="nav-text">5 声笔自整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-一般概述"><span class="nav-text">1 一般概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-引言"><span class="nav-text">1.2 引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-优势"><span class="nav-text">1.2 优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-快速入门"><span class="nav-text">2 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-编码规则"><span class="nav-text">2.1 编码规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码反查"><span class="nav-text">2.2 编码反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-输入技巧"><span class="nav-text">3 输入技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-续码顶屏"><span class="nav-text">3.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-条件顶屏"><span class="nav-text">3.2 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-巧用大写"><span class="nav-text">3.3 巧用大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码变换"><span class="nav-text">3.4 编码变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-高级特性"><span class="nav-text">4 高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-字词分流"><span class="nav-text">4.1 字词分流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-扩展编码"><span class="nav-text">4.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-动态码长"><span class="nav-text">4.4 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-词组管理"><span class="nav-text">4.5 词组管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-单字模式"><span class="nav-text">4.6 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
             
 
           </div>
