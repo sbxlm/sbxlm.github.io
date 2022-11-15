@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-11-10T05:26:30.039Z">
+<meta property="og:updated_time" content="2022-11-14T01:49:10.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零">
@@ -799,7 +799,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>在临时英文状态下，可以接收空格和标点。完成后，用回车或者右<code>Shift</code>上屏原样英文；若用<code>Shift+回车</code>则改变首字母的大小写状态后上屏，若用<code>Control+回车</code>则会把所有字母都转换为大写后上屏，并会切换回中文状态。</p>
-<h3 id="4-2-在手机上"><a href="#4-2-在手机上" class="headerlink" title="4.2 在手机上"></a>4.2 在手机上</h3><p>短按上排状态栏的左边第一个键，或者左下角第二个键，就可以切换中英文输入状态。</p>
+<h3 id="4-2-在手机上"><a href="#4-2-在手机上" class="headerlink" title="4.2 在手机上"></a>4.2 在手机上</h3><p>短按上排状态栏的左边第一个键，就可以切换中英文输入状态。</p>
 <p>在中文状态下，没有输入编码时，</p>
 <ul>
 <li>单按<code>Shift</code>后，则输入的首个字母为大写，且自动切换到临时英文状态；</li>
@@ -822,11 +822,10 @@ var _hmt = _hmt || [];
 </ul>
 <p>另外，</p>
 <ul>
-<li>长按B可以切换是否显示状态栏；</li>
+<li>长按空格可以切换是否显示状态栏；</li>
 <li>下滑退格键可以删除选中词组，但是简词是不能删除的；</li>
 <li>长按右下角Enter键选择配色；</li>
 <li>长按左下角123键则进入选单，可以完成切换主题、切换方案、切换输入法和重新部署等；</li>
-<li>长按左下角第二个键（中文键）可以快速切换输入方案；</li>
 <li>其它的特殊操作，如全选、剪切、复制、粘贴、键盘、助记、编辑等，在键面上已经写得很明确，就不再赘述。</li>
 </ul>
 <h2 id="5-特殊符号"><a href="#5-特殊符号" class="headerlink" title="5 特殊符号"></a>5 特殊符号</h2><p>另外，通过<code>\</code>引导，还可以输入各类特殊符号，输入习惯源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的编码改为<code>v</code>或者省略，以便支持用<code>aeuio</code>选择重目，具体符号类别大致如下：</p>
@@ -1125,37 +1124,12 @@ var _hmt = _hmt || [];
 <h4 id="9-1-2-实用场景"><a href="#9-1-2-实用场景" class="headerlink" title="9.1.2 实用场景"></a>9.1.2 实用场景</h4><p>目前，在实际使用中的输入法，几乎无一例外地都是在各种应用程序中进行想打。在想打的时候，根据所写的内容和个人偏好，可以采用主词输入方式，也可以采用主单或纯单输入方式，还有可能根据具体情况切换不同的方式来使用。</p>
 <p>就一般情况来说，人们写的都是现代文，而现代文是以词组为主的，所以大多数人在多数时候都会采用主词的输入方式。当然，有时可能是写仿古文，或者文风特别，导致单字输入居多，这时采用主单模式的效果就更好。还有个别死心塌地的单字派，可能就不分场合，一律用主单甚至纯单方式了。</p>
 <p>由于人们在现实中输入的东西，从文本类型的角度来讲，都是相对固定的。所以，字词的频率和编码的动态调整，还有词组的自动增删，能够缩短码长和减少打空的概率，从而提高打字速度。</p>
-<p>在动态、主词的情况下，有没有办法进行打字训练，而且取得好的效果呢？</p>
-<h3 id="9-2-打字速度"><a href="#9-2-打字速度" class="headerlink" title="9.2 打字速度"></a>9.2 打字速度</h3><p>为了简便，我们这里将打字速度简称为速度，在当前的语境下是不会产生歧义的。</p>
-<p>对许多人来说，速度是个谜。这里的谜有三层意思：迷信、迷惑、迷失！迷信者盲目崇拜打字飞快的高手，希望有朝一日也取得同样的成就。迷惑者觉得有些人演示的速度太离谱、不可信，但又不知道是为什么。迷失者对自己感到失望，怀疑自己的能力，甚至觉得自己是个笨蛋，为什么我同排行榜上的打字高手差距那么大？</p>
-<p>这个迷怎么破？让我慢慢道来。首先，我们要弄清速度究竟是什么。怎么定义速度呢？速度的计算公式如下：</p>
-<blockquote>
-<p>速度 = 击键 × 60 ÷ 码长</p>
-</blockquote>
-<p>其中，速度是指每分钟输入的字数，包括标点符号、英文字母和数字等；击键是指每秒钟的击键次数，所以要乘以60，以便换算成以分钟为单位的速度；码长是指平均每个字的码长，包括空格、选择键、翻页键等。 </p>
-<p>从速度的计算公式可以看出，打字速度取决于击键和码长两个因素。在码长一定的情况下，影响打字速度的决定性因素就是击键。在击键一定的情况下，决定打字速度的因素就是码长。然而，击键和码长都受很多因素的影响，情况相当复杂，将在接下来的两节详细论述。</p>
-<p>所处阶段：学习速度、使用速度、遗忘速度</p>
-<p>打字方式：想打速度、看打速度、听打速度。新的方式？默打速度：尽量背下来打，背不住时训练软件提示一下，只提示下一个字。这种方式应该对人们背诵文章很有好处，可以实验一下。现在的打字训练软件好像都不支持这种训练方式。</p>
-<p>反复次数：首打速度、重打速度</p>
-<p>持续时间：瞬时速度、短时速度、持久速度</p>
-<h4 id="9-2-1-击键"><a href="#9-2-1-击键" class="headerlink" title="9.2.1 击键"></a>9.2.1 击键</h4><p>编码方式和码元集大小都会影响击键。编码尽量采用易于击打的组合，码元集尽量小，都有利于加快击键，有利于提高打字速度，但却会增加码长，又同时会降低打字速度。偏面强调一方面都是不行的，如何平衡两者才是最关键的。</p>
-<p>击键与操作者密切相关。</p>
-<p>编码时间、击打时间、选择时间、回改时间</p>
-<p>比特率、码元率、编码率、采样率</p>
-<h4 id="9-2-2-码长"><a href="#9-2-2-码长" class="headerlink" title="9.2.2 码长"></a>9.2.2 码长</h4><p>码长是衡量输入方案效率最重要的指标。但是，不同的方案用于编码的码元集大小是不一样的，所以直接比较码长并不科学。最好的办法是将码长折算为二进制，以比特为单位来比较，才有共同的基准。折算方法很简单，将码长乘以一个系数即可，这个系数是log2|K|，其中|K|为码元集的大小。</p>
-<p>15.32 -11.46 </p>
-<p>log(27) = 4.75</p>
-<p>码长与输入法密切相关</p>
-<p>实际码长、折合码长</p>
-<h3 id="9-3-训练软件"><a href="#9-3-训练软件" class="headerlink" title="9.3 训练软件"></a>9.3 训练软件</h3><p>现在的打字训练软件和网站很多，最有名的可能是金山打字通了。它用于练习基本指法和英文输入是非常好的，但是用于中文打字训练并不好，因为它只统计了每分钟多少字这个数据，对分析打字用户的操作行为和找出可能存在的问题帮助不大。</p>
+<p>在动态、主词的情况下，有没有办法进行打字训练，而且取得好的效果呢？答案是肯定的。不过，需要分为两种不同的情况。一种情况是，在初学的时候，单纯为了学习输入法。另一种情况是，在基本学成以后，为了调教输入法的字词频率。单纯为了学习的话，跟着打字软件提供的赛文打或者选择自己感兴趣的任何文本来打都无所谓。如果是为了调教的话，那就必须严格挑选用作练习的文本了，而且用户库要单独出来，不要被学习库和竞速库污染了。在不同的情况下，要使用不同的用户库。</p>
+<h3 id="9-2-训练软件"><a href="#9-2-训练软件" class="headerlink" title="9.2 训练软件"></a>9.2 训练软件</h3><p>现在的打字训练软件和网站很多，最有名的可能是金山打字通了。它用于练习基本指法和英文输入是非常好的，但是用于中文打字训练并不好，因为它只统计了每分钟多少字这个数据，对分析打字用户的操作行为和找出可能存在的问题帮助不大。</p>
 <p>所以，建议使用更加专业的打字软件。这里推荐在电脑上使用极速跟打器，而在手机上使用极速云跟打。这两款软件可在其官网下载，也可以在声笔QQ群下载，它们都是免费软件，可以离线使用，也可以注册用户后联网使用，以便上传练打字成绩，还有各种打字社群和成绩排行榜。</p>
-<p>需要特别注意的是，要正确看待自己的打字成绩和在中文极速网排行榜中的名次，不要让它们带偏了节奏，迷失了方向。</p>
-<p>绝大多数人打字的应用场景不是为了在这类打字比赛中取得最好的成绩，也不可能做到这一点，因为就如同百米短跑一样，取得世界冠亚军和前几名的人仅仅靠刻苦训练是不够的，往往需要天赋才行。</p>
-<p>需要注意的是，在竞速看打赛文的时候，需要有一个预读的过程。当然，绝大多数人并没有竞速看打这种应用场景，所以并不会成为一个问题。即使是看打，如果不是首打的话，由于人可以利用自己的短时记忆，就可以大大加速预读的过程。</p>
-<p>提高击键：对静态字词的输入形成条件反射，从而提高击键的速度。</p>
-<p>缩短码长：调教动态的字词库，以适配用户的使用习惯，使得用户越常用的字词优先级别越高，从而减少用键数量。</p>
-<p>如何训练想打？背下训练文本，才能避免看到字形，在一定程度上模拟出想打的场景。</p>
-<h4 id="9-3-1-金山打字通"><a href="#9-3-1-金山打字通" class="headerlink" title="9.3.1 金山打字通"></a>9.3.1 金山打字通</h4><h4 id="9-3-2-极速跟打器"><a href="#9-3-2-极速跟打器" class="headerlink" title="9.3.2 极速跟打器"></a>9.3.2 极速跟打器</h4><h4 id="9-3-3-极速云跟打"><a href="#9-3-3-极速云跟打" class="headerlink" title="9.3.3 极速云跟打"></a>9.3.3 极速云跟打</h4><h3 id="9-4-训练资料"><a href="#9-4-训练资料" class="headerlink" title="9.4 训练资料"></a>9.4 训练资料</h3><p>熟练掌握英文打字是练好中文打字的前提条件。我们这里假设用户已经具备了这个条件。具体的训练方法因输入方案而异，会在讲述方案的篇章里介绍。此处只是列出和说明可能用到的基本资料，方案特有的资料会放在自己的篇章里。</p>
+<h3 id="9-3-训练方法"><a href="#9-3-训练方法" class="headerlink" title="9.3 训练方法"></a>9.3 训练方法</h3><p>需要特别注意的是，要正确看待自己的打字成绩和在中文极速网排行榜中的名次，不要让它们带偏了节奏，迷失了方向。绝大多数人打字的应用场景不是为了在竞速比赛中取得最好的成绩，也不可能做到这一点，因为就如同百米短跑一样，取得世界冠亚军和前几名的人仅仅靠刻苦训练是不够的，往往需要天赋才行。</p>
+<p>对于一般的练习者来说，更多地要同自己的过去比较，看到自己通过训练而取得的进步，而不是同排行榜的前几名比较，试图去追赶他们，那样的话心态往往会变得很坏，急躁冒进，得不偿失，失去了打字练习的本意。当然，对个别就是针对竞速的人来说，如果确实有那种天赋和毅力，那是例外，可以他们为目标去追赶！</p>
+<h3 id="9-4-训练资料"><a href="#9-4-训练资料" class="headerlink" title="9.4 训练资料"></a>9.4 训练资料</h3><p>熟练掌握英文打字是练好中文打字的前提条件。我们这里假设用户已经具备了这个条件。具体的训练方法因输入方案而异，会在讲述方案的篇章里介绍。此处只是列出和说明可能用到的基本资料，方案特有的资料会放在自己的篇章里。</p>
 <h4 id="9-4-1-一简字"><a href="#9-4-1-一简字" class="headerlink" title="9.4.1 一简字"></a>9.4.1 一简字</h4><p>一简字有21个，只需输入声母，然后空格上屏。一简字的使用频率是最高的，占单字频率的17.73%。所有声笔方案都会用到。为了便于记住一简字，可以采用以下口诀：</p>
 <blockquote>
 <p>可不平的是，<br>我一个人没在，<br>而你和他出去下就发了。</p>
@@ -1549,7 +1523,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-翻页方法"><span class="nav-text">2 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标点符号"><span class="nav-text">3 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英混输"><span class="nav-text">4 中英混输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-特殊符号"><span class="nav-text">5 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自定词典"><span class="nav-text">6 自定词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LUA脚本"><span class="nav-text">7 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置选项"><span class="nav-text">8 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打字训练"><span class="nav-text">9 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-训练目的"><span class="nav-text">9.1 训练目的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-竞速场景"><span class="nav-text">9.1.1 竞速场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-1-看打模式"><span class="nav-text">9.1.1.1 看打模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-2-赛文变化"><span class="nav-text">9.1.1.2 赛文变化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-实用场景"><span class="nav-text">9.1.2 实用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-打字速度"><span class="nav-text">9.2 打字速度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-1-击键"><span class="nav-text">9.2.1 击键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-2-码长"><span class="nav-text">9.2.2 码长</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-训练软件"><span class="nav-text">9.3 训练软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-1-金山打字通"><span class="nav-text">9.3.1 金山打字通</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-2-极速跟打器"><span class="nav-text">9.3.2 极速跟打器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-3-极速云跟打"><span class="nav-text">9.3.3 极速云跟打</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-训练资料"><span class="nav-text">9.4 训练资料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-一简字"><span class="nav-text">9.4.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-声笔字"><span class="nav-text">9.4.2  声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-前-500-字"><span class="nav-text">9.4.3  前 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-4-中-500-字"><span class="nav-text">9.4.4  中 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-5-后500-字"><span class="nav-text">9.4.5  后500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-6-综合训练"><span class="nav-text">9.4.6 综合训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-翻页方法"><span class="nav-text">2 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标点符号"><span class="nav-text">3 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英混输"><span class="nav-text">4 中英混输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-特殊符号"><span class="nav-text">5 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自定词典"><span class="nav-text">6 自定词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LUA脚本"><span class="nav-text">7 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置选项"><span class="nav-text">8 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打字训练"><span class="nav-text">9 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-训练目的"><span class="nav-text">9.1 训练目的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-竞速场景"><span class="nav-text">9.1.1 竞速场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-1-看打模式"><span class="nav-text">9.1.1.1 看打模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-2-赛文变化"><span class="nav-text">9.1.1.2 赛文变化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-实用场景"><span class="nav-text">9.1.2 实用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-训练软件"><span class="nav-text">9.2 训练软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-训练方法"><span class="nav-text">9.3 训练方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-训练资料"><span class="nav-text">9.4 训练资料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-一简字"><span class="nav-text">9.4.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-声笔字"><span class="nav-text">9.4.2  声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-前-500-字"><span class="nav-text">9.4.3  前 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-4-中-500-字"><span class="nav-text">9.4.4  中 500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-5-后500-字"><span class="nav-text">9.4.5  后500 字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-6-综合训练"><span class="nav-text">9.4.6 综合训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
             
 
           </div>
