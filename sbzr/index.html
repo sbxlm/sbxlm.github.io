@@ -130,14 +130,20 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="1 一般概述1.2 引言自然码是中文输入历史上影响最大的双拼音形输入法，不少后来的双拼都或多或少地受到它的影响。但是，由于需要同时掌握双音和双形，学习难度还是相当大的。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让自然码用户也享受顶功技术带来的红利。声笔自然就是对自然码的顶功改造，并且取得了非常好的效果。 对">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/1A4897397AE0DCCEBFF10116A321B198.jpg">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/sbzrfc.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220124141919593.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116093442880.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116093542384.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116095052679.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116094518431.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116095153491.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116095226710.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116100005648.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116100024923.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbzrJcoo.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbzrYiyh.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZizi.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/ZrxhZiziuu.png">
-<meta property="og:updated_time" content="2022-11-11T05:17:28.507Z">
+<meta property="og:updated_time" content="2022-11-16T02:00:46.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔自然">
 <meta name="twitter:description" content="1 一般概述1.2 引言自然码是中文输入历史上影响最大的双拼音形输入法，不少后来的双拼都或多或少地受到它的影响。但是，由于需要同时掌握双音和双形，学习难度还是相当大的。 有没有什么办法降低它的学习难度，同时提高它的效率，还增强它的功能呢？有这种好事吗？答案是肯定的。秘诀就是采用顶功编码技术！这样，可以让自然码用户也享受顶功技术带来的红利。声笔自然就是对自然码的顶功改造，并且取得了非常好的效果。 对">
@@ -700,12 +706,26 @@ var _hmt = _hmt || [];
 <p>对于非成字偏旁部首，一般取其名称首字的声母作为它的声母进行编码。例如，「亻」的名称为单人旁，取「单」字的声母d作为「亻」的声母，可以用<code>djui</code>输入「亻」。不知道非成字偏旁部首的名称也没有关系，因始终可以用纯笔画的方式输入。比如，「亻」可以用<code>uiiii</code>输入。</p>
 <p>另外，声笔自然利用了单字的空码位安排了一些词组，分为声笔词、声声词、声声笔词。声笔词只有21个，如<code>人民ra 发现fe 今天je 情况qo 现在xe</code>，它们的编码方式是首字的声母+次字的首笔。声声词有166个，如<code>出现cx_ 完全wq_ 认为rw_ 结果jg_ 什么sm_</code>，它们的编码方式是首字的声母+次字的声母。声声笔词有约1000个，如<code>并非bfi 附属fsa 到底ddo 赣南gne</code>，它们的编码方式是首字的声母+次字的声母+第二字的首笔，在紧接后续字词的声母时可以被顶上屏幕，因此一般只需要三键。</p>
 <p>再有，声笔自然三简码位上设置是二简字词和一简字的组合，而不一定是真正的词，例如：<code>挂是gws 时是sis 反应就fyj 微笑发wxf</code>等等。这种组合一般需要空格上屏，不管是否构成词组，是绝对没有重码的，可以放心大胆的盲打。</p>
-<h3 id="2-2-编码反查"><a href="#2-2-编码反查" class="headerlink" title="2.2 编码反查"></a>2.2 编码反查</h3><p>在学习声笔自然之初，往往会遇到不会打的字。怎么办呢？系统提供了用笔画或拼音来反查编码的手段。在完全不知道读音的时候直接用<code>aeuio</code>按顺序输入笔画进行反查，在不知道笔画时用a引导拼音反查（注意零声母要用v）。</p>
-<p>以下是几个反查的例子。左边是笔画反查的例子，右边是拼音反查的例子。在笔画反查的例子中，直接输入uuao后，出现了以这四个笔画开头的字；第一项是<code>反fj</code>，表示「反」字的编码为fj；第二项为<code>般bju bo pjuu</code>，说明「般」是个多音字，有三个编码。在拼音反查的例子中，是用字母a引导的，所以实际的输入为afang和avan，只是没有显示引导字母而已，其中an前还加了v，因为an是零声母音。</p>
-<p><img src="/images/sbzrfc.png" alt="声笔自然反查"></p>
-<p>另外，通过a引导的拼音还支持用字海两分法来进行反查， 支持查找八万多汉字，一般用于难读而易于两分的字进行反查或者GBK以外字的输入。GBK以外的字，声笔自然不提供正常编码，不能按正常方式输入，只能在两分查找到后选择输入。</p>
-<p>下面是字海两分法查找的例子。第一个例子是想通过输入两个long来反查或者输入「龖」字。第二个例子，是通过输入「尸」和「水」的拼音来反查「尿」的编码。</p>
-<p><img src="/images/image-20220124141919593.png" alt="image-20220124141919593"></p>
+<h3 id="2-2-编码反查"><a href="#2-2-编码反查" class="headerlink" title="2.2 编码反查"></a>2.2 编码反查</h3><p>在使用声笔自然的时候，特别是在学习声笔自然之初，不可避免地会遇到不会打的字。怎么办呢？程序提供了丰富的反查手段，可以通过笔画和拼音来反查编码，还可以采用字海两分来反查和输入非 GBK 汉字。另外，还通过反查提供了临时拼音输入法。</p>
+<h4 id="2-2-1-拼音反查"><a href="#2-2-1-拼音反查" class="headerlink" title="2.2.1 拼音反查"></a>2.2.1 拼音反查</h4><p>在知道拼音而不知道字形时用 i 引导拼音反查，注意零声母要用 v 充当。</p>
+<p>例如，要反查「访」字的编码，就在输入 i 之后再输入它的拼音 fang，所以实际的输入为 ifang，结果如下图所示。反查出「访」字的编码为 fhoa。如果是多音字，那么就会有多个编码，如图中的「房」字就有 fho 和 phoa 两个编码。</p>
+<p><img src="/images/image-20221116093442880.png" alt="image-20221116093442880"></p>
+<p>对于零声母字，如「案」字，在反查时除了用 i 引导还需要在正常拼音的前面加 v，因为 an 是零声母音，所以实际的输入为 ivan。在图中提示出的<code>案vjoo</code>，表示「案」字的编码为 vjoo。</p>
+<p><img src="/images/image-20221116093542384.png" alt="image-20221116093542384"></p>
+<h4 id="2-2-2-笔画反查"><a href="#2-2-2-笔画反查" class="headerlink" title="2.2.2 笔画反查"></a>2.2.2 笔画反查</h4><p>在完全不知道读音的时候，直接用 <code>aeuio</code> 按顺序输入笔画进行反查，无需引导。</p>
+<p>在下面的笔画反查的例子中，不用引导而直接输入 uuao 后，出现了以这四个笔画开头的字。第一项是<code>反fluu</code>，表示「反」字的编码为 fluu。第二项为<code>般bjuu bouu pjuu</code>，说明「般」是个多音字，有三个编码。</p>
+<p><img src="/images/image-20221116095052679.png" alt="image-20221116095052679"></p>
+<h4 id="2-2-3-两分反查"><a href="#2-2-3-两分反查" class="headerlink" title="2.2.3 两分反查"></a>2.2.3 两分反查</h4><p>通过 i 引导的拼音还支持用字海两分法来进行反查， 支持查找八万多汉字，一般用于反查难读而易于两分的字或者输入 GBK 以外字。GBK 以外的字，声笔自然不提供正常编码，不能按正常方式输入，只能在两分查找到后选择输入。</p>
+<p>下面是字海两分法查找的例子。第一个例子是反查「龖」字的编码，在输入到第二部分拼音的第一码时就出来了。第二个例子是通过输入「尸」和「水」的拼音来反查「尿」的编码，输入了两部分完整的拼音。</p>
+<p><img src="/images/image-20221116094518431.png" alt="image-20221116094518431"></p>
+<p><img src="/images/image-20221116095153491.png" alt="image-20221116095153491"></p>
+<p>对于非 GBK 字集里的「㕛」字，它是没有编码的，只能用两分法来输入，如下所示。此时，需要移动光标选中该字，然后再用空格上屏。</p>
+<p><img src="/images/image-20221116095226710.png" alt="image-20221116095226710"></p>
+<h4 id="2-2-4-临时拼音"><a href="#2-2-4-临时拼音" class="headerlink" title="2.2.4 临时拼音"></a>2.2.4 临时拼音</h4><p>在一时半会想不起某个词中某个字的笔画，而这个字因为不常见又不方便用单字进行反查时，可以用 a 引导临时拼音来以变相地输入词组或者查到该字的写法。但是，对于反查出来的词组是不会显示编码的。 </p>
+<p>例如，「饕餮」可以用 ataotie 来查找和输入，而「耄耋」可以用 amaodie 来查找和输入。注意，用于引导的字母 a 是不会显示的。</p>
+<p><img src="/images/image-20221116100005648.png" alt="image-20221116100005648"></p>
+<p><img src="/images/image-20221116100024923.png" alt="image-20221116100024923"></p>
+<p>从以上结果可以看出，临时拼音也兼具有拼音反查和两分反查的能力，但是并不推荐这么做，而应该用 i 来引导拼音反查和两分反查，这是因为用 a 引导时需要两次 Esc 键才能清除编码。之所以现在还保留着 a 引导的这种单字反查编码的能力，是为了兼容历史版本。</p>
 <h2 id="3-输入技巧"><a href="#3-输入技巧" class="headerlink" title="3 输入技巧"></a>3 输入技巧</h2><h3 id="3-1-续码顶屏"><a href="#3-1-续码顶屏" class="headerlink" title="3.1 续码顶屏"></a>3.1 续码顶屏</h3><p>在自然码中，当单字的码长不足四码且后接下一字词的首码时，必须要用空格上屏。在声笔自然中，三码字在后接其它字词时，空格是可以省略的。</p>
 <p>例如，自然码都是需要空格上屏的，而声笔自然的三码字如<code>节jpe 未wwe 凝nko 管gru</code>，在连续输入时都不需要空格上屏。</p>
 <p>由于声笔自然的三码字数量庞大，高达1600多个，而且不乏常见字，所以对单字输入效率的提升有很大帮助。这就是为什么声笔自然用极其简单的五个笔画代替自然码的大量辅助码后，单字的平均码长反而下降的原因。</p>
@@ -714,11 +734,11 @@ var _hmt = _hmt || [];
 <p>例如，在输入「快码」的时候，发现系统没有该词，但是「码」的第三码e已经被重码「快吗」占用，所以使用条件顶是不行的，这时就可以用大写的E来将「快」顶上屏，输入法将E转换为小写e后留下三码mae，可以接着输入后面的编码，没有丝毫浪费。</p>
 <p>大写后续字词的声母也可以进行顶屏操作，但使用场景不一样，一般使用在二简字后忘记加空格的时候。例如，在输入「有断点」时，输入了yz但忘记了加空格上屏，接着输入了dm，这时出来的是「右端」。不管是用ESC清除后重新输入，还是用退格键修改，成本都非常高。然而，接着用大写输入「点」的首码D，「有」字就会被顶上屏幕，剩下drd三码，再输入「点」的第二码m即可输入「断点」了。</p>
 <p>另外，在一、二、三码后，用大写后续字词的首码也可以将首选字词顶上屏幕。「那是不行的」可以用<code>nasBXkD</code>来输入。</p>
-<p>不过，需要注意的是，大写顶屏在大写作为编码的时候是无效的。在声笔小鹤的单字模式下，第三码大写是作为编码用来输入词组的，此时不能顶前面的两码。</p>
+<p>不过，需要注意的是，大写顶屏在大写作为编码的时候是无效的。在声笔自然的单字模式下，第三码大写是作为编码用来输入词组的，此时不能顶前面的两码。</p>
 <h3 id="3-4-编码变换"><a href="#3-4-编码变换" class="headerlink" title="3.4 编码变换"></a>3.4 编码变换</h3><p>除了顶屏之外，编码变换也是节约用键的重要手段。一、二简字的组合，不管是不是词组，都可以通过这种方式来进行输入，从而有效地利用编码空间。注意，这个时候是没有提示的，需要用户对简字非常熟习才行。编码变换通过回车键触发，在没有重码的时候，也支持用Tab触发。</p>
 <p>例如，「个人」一词，可以按词组的方式用<code>gerf</code>来输入。更好的方式是当成两个一简字用<code>g_r_</code>来输入，其中下划线表示空格，可以离散重码。然而最好的方式是采用编码变换，用<code>gr↓</code>来输入，其中下箭头表示回车，可以节约一次用键。</p>
 <p>又如，「一会」可以用<code>yhv↓</code>来输入，虽然不能节约用键，但是输入变得确定了，而且可以将<code>yihv</code>的首选让给「议会」，就起到了离散重码的作用。</p>
-<p>再如，「比快」在声笔小鹤默认词库中是没有的，然而用户可能会误以为它是个库里有的词，于是就输入编码<code>biky</code>，但是发现为空码。这时，如果用退格键删除后面两码，加空格上屏「比」字，再输入「快」字，代价是相当高昂的。幸好，有了编码变换的手段，加个回车就可以变为「比快」，并且也自动造好了这个词，下次就可以用词组来输入「比快」了。</p>
+<p>再如，「比快」在声笔自然默认词库中是没有的，然而用户可能会误以为它是个库里有的词，于是就输入编码<code>biky</code>，但是发现为空码。这时，如果用退格键删除后面两码，加空格上屏「比」字，再输入「快」字，代价是相当高昂的。幸好，有了编码变换的手段，加个回车就可以变为「比快」，并且也自动造好了这个词，下次就可以用词组来输入「比快」了。</p>
 <h2 id="4-高级特性"><a href="#4-高级特性" class="headerlink" title="4 高级特性"></a>4 高级特性</h2><h3 id="4-1-字词分流"><a href="#4-1-字词分流" class="headerlink" title="4.1 字词分流"></a>4.1 字词分流</h3><p>在自然码中，四码的字、词是混合编码的，它们共享同一个编码空间。在发生重码时，究竟把单字排在前面，还是把词组排在前面，面临艰难的决策。当收录的单字和词组数量增大时，这个问题会变得更加突出。</p>
 <p>在声笔自然中，单字和词组各自有不同的编码格式，它们享有不同的编码空间，不会发生冲突，不存在单字和词组那个优先的问题。单字肯定是用<code>sybb</code>格式，其第三码是笔画，而词组的编码第三码肯定是声母，笔画和声母所用的编码字母集合是不相交的。</p>
 <p>例如，单字<code>觉jnoo 钱qmue 貌mcuo 缘yraa</code>，和词组<code>关系grxi 参加cjjx 示范区sfqu 想不到xbdc 人民共和国rmgg 声东击西sdjx</code>，它们之间是不可能重码的。</p>
@@ -1151,7 +1171,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-一般概述"><span class="nav-text">1 一般概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-引言"><span class="nav-text">1.2 引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-优势"><span class="nav-text">1.2 优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-快速入门"><span class="nav-text">2 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-编码规则"><span class="nav-text">2.1 编码规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码反查"><span class="nav-text">2.2 编码反查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-输入技巧"><span class="nav-text">3 输入技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-续码顶屏"><span class="nav-text">3.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-条件顶屏"><span class="nav-text">3.2 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-巧用大写"><span class="nav-text">3.3 巧用大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码变换"><span class="nav-text">3.4 编码变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-高级特性"><span class="nav-text">4 高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-字词分流"><span class="nav-text">4.1 字词分流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-扩展编码"><span class="nav-text">4.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-动态码长"><span class="nav-text">4.4 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-词组管理"><span class="nav-text">4.5 词组管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-单字模式"><span class="nav-text">4.6 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-一般概述"><span class="nav-text">1 一般概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-引言"><span class="nav-text">1.2 引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-优势"><span class="nav-text">1.2 优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-快速入门"><span class="nav-text">2 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-编码规则"><span class="nav-text">2.1 编码规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码反查"><span class="nav-text">2.2 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-拼音反查"><span class="nav-text">2.2.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-笔画反查"><span class="nav-text">2.2.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-两分反查"><span class="nav-text">2.2.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-临时拼音"><span class="nav-text">2.2.4 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-输入技巧"><span class="nav-text">3 输入技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-续码顶屏"><span class="nav-text">3.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-条件顶屏"><span class="nav-text">3.2 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-巧用大写"><span class="nav-text">3.3 巧用大写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码变换"><span class="nav-text">3.4 编码变换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-高级特性"><span class="nav-text">4 高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-字词分流"><span class="nav-text">4.1 字词分流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-扩展编码"><span class="nav-text">4.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-动态码长"><span class="nav-text">4.4 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-词组管理"><span class="nav-text">4.5 词组管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-单字模式"><span class="nav-text">4.6 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
             
 
           </div>
