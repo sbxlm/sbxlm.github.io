@@ -131,12 +131,15 @@ var _hmt = _hmt || [];
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbicon.svg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220326081847746.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100100623.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100122408.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100151474.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-11-18T01:35:52.343Z">
+<meta property="og:updated_time" content="2022-11-25T02:09:08.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零">
@@ -1090,7 +1093,10 @@ var _hmt = _hmt || [];
 <li>fmsbbtz：飞码的缩减码调整词典。</li>
 </ol>
 <h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2><p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
-<p>通过LUA脚本能够实现的功能是非常多的，网上也有不少现成的脚本可以下载，请自行添加。有能力的用户也可自己动手编写脚本来实现特定的功能。</p>
+<p><img src="/images/image-20221125100100623.png" alt="image-20221125100100623"></p>
+<p><img src="/images/image-20221125100122408.png" alt="image-20221125100122408"></p>
+<p><img src="/images/image-20221125100151474.png" alt="image-20221125100151474"></p>
+<p> 通过LUA脚本能够实现的功能是非常多的，网上也有不少现成的脚本可以下载，请自行添加。有能力的用户也可自己动手编写脚本来实现特定的功能。</p>
 <h2 id="8-设置选项"><a href="#8-设置选项" class="headerlink" title="8 设置选项"></a>8 设置选项</h2><p>声笔系列码也有传统输入法的中英文输入状态、中英文标点状态、简繁体状态，但是取消了现在已经没有意义的全半角状态。同时，增加了词组与单字状态，三顶与四顶状态等。另外，还有一些没有界面，只能通过修改配置文件的设置选项。这里只讲述比较声笔特有的、各方案通用的设置选项，方案特有的设置选项会在具体方案中讲述。</p>
 <p>(1) 停止调频与造词</p>
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
