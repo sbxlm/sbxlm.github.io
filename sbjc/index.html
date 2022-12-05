@@ -130,7 +130,7 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbicon.svg">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220326081847746.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221205135148257.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100100623.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100122408.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100151474.png">
@@ -139,7 +139,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-12-05T03:01:09.593Z">
+<meta property="og:updated_time" content="2022-12-05T05:52:08.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各子系列和输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零">
@@ -1039,14 +1039,13 @@ var _hmt = _hmt || [];
 <p>(1) 用u引导的自定义词典</p>
 <p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求。</p>
 <p>由于声笔系列码在不少情况下是不允许重码的，所以用户自定义的词组不能放在系统词组的编码空间里，否则可能造成冲突而影响输入法的正常使用。经过仔细考量，决定采用<code>u</code>引导来解决用户自定义词组的输入问题，此处的<code>u</code>意为「用户」，因为它是英语的<code>user</code>的首字母，而声笔系列码的各种方案都不会使用<code>u</code>作为正常中文编码的首码，不会产生编码冲突。</p>
-<p><img src="/images/image-20220326081847746.png" alt="image-20220326081847746"></p>
+<p><img src="/images/image-20221205135148257.png" alt="image-20221205135148257"></p>
 <p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间的分隔符必须是制表符TAB，不能是空格，否则会导致自定义词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。有的编辑器如Sublime默认时会将TAB转换为几个空格，需要修改它的设置才能保留TAB。</p>
 <p>(2) 可定制的词典列表</p>
 <p>除了u引导的自定义词典外，其它可定制词典都是无需引导的。以下罗列出所有可定制的词典，说明其适用的子系列或者方案。具体的用法，会在相应的方案里详细论述。</p>
 <ol>
 <li>sbzdy: 用 u 引导的自定义词典，共用于声笔的所有方案；</li>
 <li>sbfd: 可完全定制的声笔飞单（含缩减码）；</li>
-<li>kmsbbtz：快码的缩减码调整词典；</li>
 <li>fmsbbtz：飞码的缩减码调整词典。</li>
 </ol>
 <h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2><p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
