@@ -143,10 +143,9 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185646867.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714061653392.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221207150219710.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714063351656.png">
-<meta property="og:updated_time" content="2022-12-29T00:33:17.500Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230114102545969.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230114141640233.png">
+<meta property="og:updated_time" content="2023-01-16T00:23:46.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔双拼">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -744,11 +743,10 @@ var _hmt = _hmt || [];
 <p>注意，有的编辑器默认会自动将制表符转换为空格，那样就会失败。如果是个别的条目，可以复制一条合规的来改。如果条目很多，就需要在编辑器设置中禁止自动将制表符转换为空格。</p>
 <h3 id="4-9-增强模式"><a href="#4-9-增强模式" class="headerlink" title="4.9 增强模式"></a>4.9 增强模式</h3><p>为了缩短常用词组的码长，提高输入效率，特为声笔双拼提供了210高频数选简词，可以在增强模式下使用。这210数选简词是与声笔飞码共用的。</p>
 <p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbsp.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
-<h4 id="4-9-1-编码方式"><a href="#4-9-1-编码方式" class="headerlink" title="4.9.1 编码方式"></a>4.9.1 编码方式</h4><p>数选简词的编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些简词进行了提示，第二组默认需要用Tab翻页才能显示，如下所示。</p>
-<p><img src="/images/image-20220714061653392.png" alt="image-20220714061653392"></p>
-<p><img src="/images/image-20221207150219710.png" alt="image-20221207150219710"></p>
-<p>建议用户在开始使用数选简词的时候，仅使用第一组就行了，否则难度太大。待第一组数选简词完全掌握后，再用第二组。此时，可以修改一下方案的schema文件，将sn2的initial_quality调整为12，高于sn1的10，这样第二组就会在第一页显示。</p>
-<p><img src="/images/image-20220714063351656.png" alt="image-20220714063351656"></p>
+<h4 id="4-9-1-编码方式"><a href="#4-9-1-编码方式" class="headerlink" title="4.9.1 编码方式"></a>4.9.1 编码方式</h4><p>数选简词的编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些简词进行了提示，如下所示。</p>
+<p><img src="/images/image-20230114102545969.png" alt="image-20230114102545969"></p>
+<p>如果觉得数选提示太多，显得拥挤，干扰视线的话，对于熟练的人，可以切换为隐藏状态。这样，既可以使用数选词，又不会进行提示了。</p>
+<p><img src="/images/image-20230114141640233.png" alt="image-20230114141640233"></p>
 <h4 id="4-9-2-数选顶屏"><a href="#4-9-2-数选顶屏" class="headerlink" title="4.9.2 数选顶屏"></a>4.9.2 数选顶屏</h4><p>数选简词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
 <p>例如，在输入w7后，「我们」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「我们」就会被顶上屏幕。</p>
 <p>另一方面，当数选简词接在其它字词后面时，还可以通过延迟顶屏来省略空格。</p>
@@ -1188,7 +1186,7 @@ var _hmt = _hmt || [];
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2022</span>
+        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2023</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
