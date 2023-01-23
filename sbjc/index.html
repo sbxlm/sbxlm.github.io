@@ -139,7 +139,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2022-12-11T03:11:48.389Z">
+<meta property="og:updated_time" content="2023-01-23T05:55:05.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声母和用">
@@ -327,25 +327,6 @@ var _hmt = _hmt || [];
         
         
           
-          <li class="menu-item menu-item-sbjm">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-sbpy">
 
     
@@ -384,6 +365,25 @@ var _hmt = _hmt || [];
         
         
           
+          <li class="menu-item menu-item-sbjm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-sbfm">
 
     
@@ -397,63 +397,6 @@ var _hmt = _hmt || [];
     
 
     <a href="/sbfm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞码</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbzr">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbzr/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔自然</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbxh">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbxh/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔小鹤</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbkm">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbkm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔快码</a>
 
   </li>
         
@@ -548,7 +491,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
 
   </li>
 
@@ -617,15 +560,6 @@ var _hmt = _hmt || [];
             
 
     
-    
-      
-      
-    
-      
-      
-    
-      
-      
     
       
       
@@ -1110,14 +1044,14 @@ var _hmt = _hmt || [];
 <p>(2) 可定制的词典列表</p>
 <p>除了u引导的自定义词典外，其它可定制词典都是无需引导的。以下罗列出所有可定制的词典，说明其适用的方案。具体的用法，会在相应的方案里详细论述。</p>
 <ul>
-<li>sbzdy: 用 u 引导的自定义词典；</li>
-<li>jmzdy: 声笔简码自定义词典；</li>
-<li>pyzdy: 声笔拼音自定义词典；</li>
-<li>spzdy: 声笔双拼自定义词典；</li>
-<li>fmzdy: 声笔飞码自定义词典；</li>
-<li>sbfd: 声笔飞单全自定义码表。</li>
+<li>sbzdy: 用 u 引导的自定义词典</li>
+<li>jmzdy: 声笔简码自定义词典</li>
+<li>spzdy: 声笔双拼自定义词典</li>
+<li>fmzdy: 声笔飞码自定义词典</li>
+<li>sbfj: 声笔飞竞单字码表</li>
+<li>fjcz: 声笔飞竞词组码表<h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2></li>
 </ul>
-<h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2><p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
+<p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
 <p><img src="/images/image-20221125100100623.png" alt="image-20221125100100623"></p>
 <p><img src="/images/image-20221125100122408.png" alt="image-20221125100122408"></p>
 <p><img src="/images/image-20221125100151474.png" alt="image-20221125100151474"></p>
@@ -1256,7 +1190,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1583,7 +1517,7 @@ var _hmt = _hmt || [];
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2022</span>
+        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2023</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

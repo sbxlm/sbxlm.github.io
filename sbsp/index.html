@@ -143,10 +143,9 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185646867.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714061653392.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221207150219710.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220714063351656.png">
-<meta property="og:updated_time" content="2022-12-11T08:30:33.705Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230114102545969.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230114141640233.png">
+<meta property="og:updated_time" content="2023-01-15T02:29:37.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔双拼">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -334,25 +333,6 @@ var _hmt = _hmt || [];
         
         
           
-          <li class="menu-item menu-item-sbjm">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-sbpy">
 
     
@@ -391,6 +371,25 @@ var _hmt = _hmt || [];
         
         
           
+          <li class="menu-item menu-item-sbjm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-sbfm">
 
     
@@ -404,63 +403,6 @@ var _hmt = _hmt || [];
     
 
     <a href="/sbfm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞码</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbzr">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbzr/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔自然</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbxh">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbxh/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔小鹤</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbkm">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbkm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔快码</a>
 
   </li>
         
@@ -555,7 +497,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
 
   </li>
 
@@ -624,15 +566,6 @@ var _hmt = _hmt || [];
             
 
     
-    
-      
-      
-    
-      
-      
-    
-      
-      
     
       
       
@@ -797,10 +730,10 @@ var _hmt = _hmt || [];
 <p>例如，在输入「快顶」的时候，发现系统没有该词，而且「顶」字的第三码e又没有被重码词占用，那么在输入e的时候就会将「快」字顶上屏幕，留下「dye」，对应的字正是「顶」。这样，就不必用退格键来清除「ky」两码，用空格先上屏「快」字，再输入「顶」字了。</p>
 <p>注意，被顶上屏的字始终是前两码对应的二简字，而不一定是当前显示的第一个字。</p>
 <p>例如，假设你想输入「见代」，发现打jmdl后出来的首选是「肩带」，「代」的第三码u没被重码占用，那么在输入o的时候，被顶上屏的是「见」而不是「肩」，因为「见」才是二简字。 </p>
-<h3 id="4-6-编码变换"><a href="#4-6-编码变换" class="headerlink" title="4.6 编码变换"></a>4.6 编码变换</h3><p>除了顶屏之外，编码变换也是节约用键的重要手段。一、二简字的组合，不管是不是词组，都可以通过这种方式来进行输入，从而有效地利用编码空间。注意，这个时候是没有提示的，需要用户对简字非常熟习才行。编码变换通过回车键触发，在没有重码的时候，也支持用Tab触发。</p>
-<p>例如，「个人」一词，可以按词组的方式用<code>gerf</code>来输入。更好的方式是当成两个一简字用<code>g_r_</code>来输入，其中下划线表示空格，可以离散重码。然而最好的方式是采用编码变换，用<code>gr↓</code>来输入，其中下箭头表示回车，可以节约一次用键。</p>
-<p>又如，「一会」可以用<code>yhv↓</code>来输入，虽然不能节约用键，但是输入变得确定了，而且可以将<code>yihv</code>的首选让给「议会」，就起到了离散重码的作用。</p>
-<p>再如，「比快」在声笔双拼默认词库中是没有的，然而用户可能会误以为它是个库里有的词，于是就输入编码<code>biky</code>，但是发现为空码。这时，如果用退格键删除后面两码，加空格上屏「比」字，再输入「快」字，代价是相当高昂的。幸好，有了编码变换的手段，加个回车就可以变为「比快」，并且也自动造好了这个词，下次就可以用词组来输入「比快」了。</p>
+<h3 id="4-6-编码变换"><a href="#4-6-编码变换" class="headerlink" title="4.6 编码变换"></a>4.6 编码变换</h3><p>除了顶屏之外，编码变换也是节约用键的重要手段。一、二简字的组合，不管是不是词组，都可以通过这种方式来进行输入，从而有效地利用编码空间。注意，这个时候是没有提示的，需要用户对简字非常熟习才行。编码变换通过分号键触发，在没有重码的时候，也支持用Tab触发。</p>
+<p>例如，「个人」一词，可以按词组的方式用<code>gerf</code>来输入。更好的方式是当成两个一简字用<code>g_r_</code>来输入，其中下划线表示空格，可以离散重码。然而最好的方式是采用编码变换，用<code>gr;</code>来输入，可以节约一次用键。</p>
+<p>又如，「一会」可以用<code>yhv;</code>来输入，虽然不能节约用键，但是输入变得确定了，而且可以将<code>yihv</code>的首选让给「议会」，就起到了离散重码的作用。</p>
+<p>再如，「比快」在声笔双拼默认词库中是没有的，然而用户可能会误以为它是个库里有的词，于是就输入编码<code>biky</code>，但是发现为空码。这时，如果用退格键删除后面两码，加空格上屏「比」字，再输入「快」字，代价是相当高昂的。幸好，有了编码变换的手段，加个分号就可以变为「比快」，并且也自动造好了这个词，下次就可以用词组来输入「比快」了。</p>
 <h3 id="4-7-大写顶屏"><a href="#4-7-大写顶屏" class="headerlink" title="4.7 大写顶屏"></a>4.7 大写顶屏</h3><p>在使用条件顶的时候，如果第三码被选重键占用，那么就无法顶前两码对应的二简字上屏，需要退格删除两码，上屏二简字然后再重新输入第二字的编码，非常浪费。通过大写第二字的第三码则可以无条件地把二简字顶上屏而留下三个编码，可以使输入过程更加流畅，且不浪费已经输入的编码。</p>
 <p>例如，在输入「快码」的时候，发现系统没有该词，但是「码」的第三码e已经被重码「快吗」占用，所以使用条件顶是不行的，这时就可以用大写的E来将「快」顶上屏，输入法将E转换为小写e后留下三码mae，可以接着输入后面的编码，没有丝毫浪费。</p>
 <p>大写后续字词的声母也可以进行顶屏操作，但使用场景不一样，一般使用在二简字后忘记加空格的时候。例如，在输入「有断点」时，输入了yb但忘记了加空格上屏，接着输入了dr，这时出来的是「右端」。不管是用ESC清除后重新输入，还是用退格键修改，成本都非常高。然而，接着用大写输入「点」的首码D，「有」字就会被顶上屏幕，剩下drd三码，再输入「点」的第二码m即可输入「断点」了。</p>
@@ -810,11 +743,10 @@ var _hmt = _hmt || [];
 <p>注意，有的编辑器默认会自动将制表符转换为空格，那样就会失败。如果是个别的条目，可以复制一条合规的来改。如果条目很多，就需要在编辑器设置中禁止自动将制表符转换为空格。</p>
 <h3 id="4-9-增强模式"><a href="#4-9-增强模式" class="headerlink" title="4.9 增强模式"></a>4.9 增强模式</h3><p>为了缩短常用词组的码长，提高输入效率，特为声笔双拼提供了210高频数选简词，可以在增强模式下使用。这210数选简词是与声笔飞码共用的。</p>
 <p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbsp.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
-<h4 id="4-9-1-编码方式"><a href="#4-9-1-编码方式" class="headerlink" title="4.9.1 编码方式"></a>4.9.1 编码方式</h4><p>数选简词的编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些简词进行了提示，第二组默认需要用Tab翻页才能显示，如下所示。</p>
-<p><img src="/images/image-20220714061653392.png" alt="image-20220714061653392"></p>
-<p><img src="/images/image-20221207150219710.png" alt="image-20221207150219710"></p>
-<p>建议用户在开始使用数选简词的时候，仅使用第一组就行了，否则难度太大。待第一组数选简词完全掌握后，再用第二组。此时，可以修改一下方案的schema文件，将sn2的initial_quality调整为12，高于sn1的10，这样第二组就会在第一页显示。</p>
-<p><img src="/images/image-20220714063351656.png" alt="image-20220714063351656"></p>
+<h4 id="4-9-1-编码方式"><a href="#4-9-1-编码方式" class="headerlink" title="4.9.1 编码方式"></a>4.9.1 编码方式</h4><p>数选简词的编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些简词进行了提示，如下所示。</p>
+<p><img src="/images/image-20230114102545969.png" alt="image-20230114102545969"></p>
+<p>如果觉得数选提示太多，显得拥挤，干扰视线的话，对于熟练的人，可以切换为隐藏状态。这样，既可以使用数选词，又不会进行提示了。</p>
+<p><img src="/images/image-20230114141640233.png" alt="image-20230114141640233"></p>
 <h4 id="4-9-2-数选顶屏"><a href="#4-9-2-数选顶屏" class="headerlink" title="4.9.2 数选顶屏"></a>4.9.2 数选顶屏</h4><p>数选简词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
 <p>例如，在输入w7后，「我们」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「我们」就会被顶上屏幕。</p>
 <p>另一方面，当数选简词接在其它字词后面时，还可以通过延迟顶屏来省略空格。</p>
@@ -927,7 +859,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1254,7 +1186,7 @@ var _hmt = _hmt || [];
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2022</span>
+        <div class="copyright">&copy; 2005 – <span itemprop="copyrightYear">2023</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
