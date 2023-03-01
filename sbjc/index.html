@@ -135,11 +135,10 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100122408.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100151474.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230302063054708.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2023-02-22T12:00:45.557Z">
+<meta property="og:updated_time" content="2023-03-01T22:35:44.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声母和用">
@@ -746,7 +745,6 @@ var _hmt = _hmt || [];
 <ul>
 <li>按<code>CAPSLOCK</code>则可以锁定大写来输入英文，此前若编码窗口已有输入则会被清空；</li>
 <li>当编码窗口没有输入时，可以单击左或右<code>Shift</code>来切换中英文输入状态；</li>
-<li>当编码窗口没有输入时，首码用大写字母则自动切换到临时英文状态；</li>
 <li>当编码窗口已经有输入时，<ul>
 <li>若码长为1时按回车，则进入临时英文状态；</li>
 <li>若要上屏编码且保持在中文状态，则按<code>Shift+回车</code>；</li>
@@ -761,8 +759,7 @@ var _hmt = _hmt || [];
 <h3 id="4-2-在手机上"><a href="#4-2-在手机上" class="headerlink" title="4.2 在手机上"></a>4.2 在手机上</h3><p>短按上排状态栏的左边第一个键或者上滑Shift键，就可以切换中英文输入状态。</p>
 <p>在中文状态下，没有输入编码时，</p>
 <ul>
-<li>单按<code>Shift</code>后，则输入的首个字母为大写，且自动切换到临时英文状态；</li>
-<li>首码上滑或者下滑则输入大写字母，且自动切换到临时英文状态；</li>
+<li>单按<code>Shift</code>后，则输入的首个字母为大写；</li>
 <li>首码后按回车，则进入临时英文状态；</li>
 <li>长按<code>Shift</code>锁定大写，在提示行上输入大写字母，然后用Enter上屏。</li>
 </ul>
@@ -773,7 +770,7 @@ var _hmt = _hmt || [];
 <li>若要保留编码并进入临时英文状态，则按<code>中文</code>键或者上滑<code>Esc</code>键；</li>
 <li>当有重码时，左右滑动空格可以定位重码，然后用单击空格上屏。</li>
 </ul>
-<p>在临时英文状态下，可以接收空格和标点，按下述方式上屏。不过，如果首字母大写进入临时英文的，则会切换到中文状态；而如果是已经有编码时按中文键切换到临时英文的，则会切换到英文状态。</p>
+<p>在临时英文状态下，可以接收空格和标点，按下述方式上屏。</p>
 <ul>
 <li>若要原样上屏临时英文，则单击Enter键；</li>
 <li>若改变首字母的大小写状态后上屏，则上滑Enter键；</li>
@@ -1061,13 +1058,10 @@ var _hmt = _hmt || [];
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>(2) 自动删词阈值</p>
-<p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于10000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你输入了多少个字词。该选项也能用于非声笔系列的方案。</p>
+<p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于5000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你输入了多少个字词。该选项也能用于非声笔系列的方案。</p>
 <p>(3) 多字词过滤</p>
 <p>声笔系列中的简码和飞讯有一个开启多字词过滤的选项enable_filtering。这个选项默认的情况下为false，即未开启。未开启多字词过滤时，飞讯的szsbb编码或简码在三码时会将多字词也查找出来，而开启（即将enable_filtering设置为true）的时候则会过滤掉多字词，这时多字词就只能采用sssS的形式来输入。</p>
-<p><img src="/images/SbfxFilter.png" alt="多字词过滤"></p>
-<p>(4) 临时英文选项</p>
-<p>所有声笔方案都有auto_inline选项，用于控制在中文状态下首字母大写是否进入临时英文状态。默认是进入，想改为不进入的话，需要将该项下的1改为0。</p>
-<p><img src="/images/auto_inline.png" alt="临时英文选项"></p>
+<p><img src="/images/image-20230302063054708.png" alt="image-20230302063054708"></p>
 <h2 id="9-打字训练"><a href="#9-打字训练" class="headerlink" title="9 打字训练"></a>9 打字训练</h2><p>什么是打字？从广义上来讲，一切输入文字的活动都是打字。广义的打字包括语音识别输入、手写识别输入、鼠标点击输入等非键盘输入方式。但是，我们这里讲的是键盘输入，而且要排除速录机和并击方式，这两者需要更加专门的训练，速录机还需要专门的设备支持，不是大众需要的。</p>
 <p>虽然语音输入已经比较成熟，对日常用语识别的准确率已经相当高了，识别速度也很快。但是，它的使用受到噪声、隐私、礼貌、方言、设备等诸多因素的限制，只能在非常有限的场景中使用。手写识别则是因为书写速度的限制而无法满足人们的要求。所以，在目前和可以预见的将来，键盘输入仍将是文字输入的主要方式。</p>
 <p>在国内普遍采用的是标准英文键盘，即QWERTY键盘。在手机上的26键布局稍有变化，不过作为主体的字母键位置是相对固定的，与电脑键盘有明显的对应关系，便于习惯的迁移。手机上的9键布局主要是为了适应功能机时代的习惯，在大触碰时代已经没有必要，会逐步淡出历史。</p>
