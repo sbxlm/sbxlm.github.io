@@ -138,7 +138,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall09.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbjmInstall10.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230223082952594.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230126172823440.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311123852327.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230126173307207.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116145918708.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel5.png">
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221108152502471.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230223090018406.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230223083757560.png">
-<meta property="og:updated_time" content="2023-03-01T23:05:16.336Z">
+<meta property="og:updated_time" content="2023-03-11T04:39:50.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="声笔系列码是基于著名的开源输入法平台Rime进行二次开发的，其安装配置比较复杂。这一方面有Rime的原因，因为它没有提供丰富的图形界面，对普通用户不太友好。 在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式的强大和灵活。闯过这一关，就会如鱼得水，就能随心所欲！本文就是帮助用户克服困难，过关斩将的。 点">
@@ -412,6 +412,25 @@ var _hmt = _hmt || [];
         
         
           
+          <li class="menu-item menu-item-sbfx">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbfx/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞讯</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-fzlc">
 
     
@@ -609,6 +628,9 @@ var _hmt = _hmt || [];
       
       
     
+      
+      
+    
     
 
   
@@ -670,9 +692,9 @@ var _hmt = _hmt || [];
 <h3 id="2-3-Mac版安装"><a href="#2-3-Mac版安装" class="headerlink" title="2.3 Mac版安装"></a>2.3 Mac版安装</h3><p>声笔输入法Mac版没有包含输入方案，所以需要同时用到Win版安装包中的方案文件。在安装主程序后，通过输入法菜单打开用户设定文件夹，把Mac版安装包里的opencc文件夹（含文件夹本身）、squirrel.custom.yaml文件和Win版安装包里sbxlm文件夹（但不包含该文件夹本身）中的内容都复制进去，再重新部署一下就算安装好了。</p>
 <p><img src="/images/image-20230223082952594.png" alt="image-20230223082952594"></p>
 <h3 id="2-4-方案选择"><a href="#2-4-方案选择" class="headerlink" title="2.4 方案选择"></a>2.4 方案选择</h3><p>在安装好声笔软件后，默认使用的输入方案为声笔拼音。如果要使用声笔输入法的其它方案，在电脑上可用F4或者Ctrl+~进行切换，在手机上则长按左下角标有的「选单」的按键，然后选择「方案」，再从弹出窗口里选择你需要的方案即可。</p>
-<p><img src="/images/image-20230126172823440.png" alt="image-20230126172823440"></p>
+<p><img src="/images/image-20230311123852327.png" alt="image-20230311123852327"></p>
 <p><img src="/images/image-20230126173307207.png" alt="image-20230126173307207"></p>
-<h3 id="2-5-错误处理"><a href="#2-5-错误处理" class="headerlink" title="2.5 错误处理"></a>2.5 错误处理</h3><p>安装后无法使用一般都是由于安装不全造成的。最简单的办法就是打用户文件夹，删除其中的所有文件，然后将安装包里sbxlm目录里的所有东西（包括文件和子目录，但不包括sbxlm目录本身）手动复制进去，再重新部署一下就行了。注意，用户文件夹在电脑上的名称是rime，而手机上的名称是sbxlm。</p>
+<h3 id="2-5-错误处理"><a href="#2-5-错误处理" class="headerlink" title="2.5 错误处理"></a>2.5 错误处理</h3><p>安装后无法使用一般都是由于安装不全造成的。最简单的办法就是打用户文件夹，删除其中的所有文件，然后将安装包里sbxlm目录里的所有东西（包括文件和子目录，但不包括sbxlm目录本身）手动复制进去，再重新部署一下就行了。</p>
 <p>电脑上遇到无法删除文件时，可以停用小狼毫算法服务以后再删除，但是要记住更名后重新启动小狼毫算法服务，否则是不能打中文的。如果要保留原来的文件，则请先做一个备份。</p>
 <p><img src="/images/image-20221116145918708.png" alt="image-20221116145918708"></p>
 <h3 id="2-6-软件卸载"><a href="#2-6-软件卸载" class="headerlink" title="2.6 软件卸载"></a>2.6 软件卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
