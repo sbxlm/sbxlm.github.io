@@ -130,16 +130,15 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="声笔系列码作为一个庞大而严密的体系，其各输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声母和用">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/sbicon.svg">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221205143410412.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230313142742077.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100100623.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100122408.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221125100151474.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/SbfxFilter.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/auto_inline.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311135409355.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2023-01-31T09:14:58.113Z">
+<meta property="og:updated_time" content="2023-03-13T07:11:34.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声母和用">
@@ -403,6 +402,25 @@ var _hmt = _hmt || [];
         
         
           
+          <li class="menu-item menu-item-sbfx">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbfx/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞讯</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-fzlc">
 
     
@@ -600,6 +618,9 @@ var _hmt = _hmt || [];
       
       
     
+      
+      
+    
     
 
   
@@ -742,51 +763,25 @@ var _hmt = _hmt || [];
 </div>
 <p>上表中没有列出按键和标点完全一致的，如<code># %</code>等。在全角状态下，标点符号的定义几乎与半角状态下相同，只是有的半角字符变成了对应的全角字符，如<code>＆ ＠</code>等。</p>
 <h2 id="4-中英混输"><a href="#4-中英混输" class="headerlink" title="4 中英混输"></a>4 中英混输</h2><p>许多用户不仅仅需要方便、快速地输入中文，而且需要混合输入大量的英文。由于键盘及其布局的差异，声笔中英文混输时，在电脑上和在手机上的操作方法是不一样，而且随各输入方案的设置而定。下面介绍的是声笔系列码默认设置情况下的使用方法，要特别注意在电脑上和在手机上的差异。</p>
-<h3 id="4-1-在电脑上"><a href="#4-1-在电脑上" class="headerlink" title="4.1 在电脑上"></a>4.1 在电脑上</h3><p>若目前处于小狼毫的中文状态下，</p>
-<ul>
-<li>按<code>CAPSLOCK</code>则可以锁定大写来输入英文，此前若编码窗口已有输入则会被清空；</li>
-<li>当编码窗口没有输入时，可以单击左或右<code>Shift</code>来切换中英文输入状态；</li>
-<li>当编码窗口没有输入时，首码用大写字母则自动切换到临时英文状态；</li>
-<li>当编码窗口已经有输入时，<ul>
-<li>若码长为1时按回车，则进入临时英文状态；</li>
-<li>若要上屏编码且保持在中文状态，则按<code>Shift+回车</code>；</li>
-<li>若要将编码转换为大写后上屏，则按<code>Control+回车</code>；</li>
-<li>若要上屏编码且并切换到英文状态，则单按左<code>Control</code>键；</li>
-<li>若要保留编码并进入临时英文状态，则单按左<code>Shift</code>键；</li>
-<li>若要上屏中文并切换到英文状态，则单按右<code>Shift</code>键。</li>
-</ul>
-</li>
-</ul>
-<p>在临时英文状态下，可以接收空格和标点。完成后，用回车或者右<code>Shift</code>上屏原样英文；若用<code>Shift+回车</code>则改变首字母的大小写状态后上屏，若用<code>Control+回车</code>则会把所有字母都转换为大写后上屏，并会切换回中文状态。</p>
-<h3 id="4-2-在手机上"><a href="#4-2-在手机上" class="headerlink" title="4.2 在手机上"></a>4.2 在手机上</h3><p>短按上排状态栏的左边第一个键或者上滑Shift键，就可以切换中英文输入状态。</p>
-<p>在中文状态下，没有输入编码时，</p>
-<ul>
-<li>单按<code>Shift</code>后，则输入的首个字母为大写，且自动切换到临时英文状态；</li>
-<li>首码上滑或者下滑则输入大写字母，且自动切换到临时英文状态；</li>
-<li>首码后按回车，则进入临时英文状态；</li>
-<li>长按<code>Shift</code>锁定大写，在提示行上输入大写字母，然后用Enter上屏。</li>
-</ul>
-<p>在中文状态下，已经有编码输入时，<code>Shift</code>的显示会变为<code>Esc</code></p>
-<ul>
-<li>若要清除已经输入的编码，则单按<code>Esc</code>；</li>
-<li>若要直接上屏编码，则按上滑Enter键或者退格键；</li>
-<li>若要保留编码并进入临时英文状态，则按<code>中文</code>键或者上滑<code>Esc</code>键；</li>
-<li>当有重码时，左右滑动空格可以定位重码，然后用单击空格上屏。</li>
-</ul>
-<p>在临时英文状态下，可以接收空格和标点，按下述方式上屏。不过，如果首字母大写进入临时英文的，则会切换到中文状态；而如果是已经有编码时按中文键切换到临时英文的，则会切换到英文状态。</p>
-<ul>
-<li>若要原样上屏临时英文，则单击Enter键；</li>
-<li>若改变首字母的大小写状态后上屏，则上滑Enter键；</li>
-<li>若将所有英文转换为大写后上屏，则上滑退格键。</li>
-</ul>
-<p>另外，</p>
+<p>声笔支持Rime的三种中英文输入状态：中文状态、英文状态和临时英文。在中文状态下，输入的编码字符显示在专门的编码窗口中或者嵌入显示在宿主程序的光标处，并对其进行中文转换，转换有多个结果时则列出候选项等待选择。在英文状态下，任何输入的字符都会立刻上屏。在临时英文时，输入的英文大小写字母、符号和空格会在编码窗口中缓存，回车时一起上屏。</p>
+<p>如果当前处于英文状态，若要切换为中文状态，那么在电脑上可单按左Shift或者右Shift即可，在手机上则短按状态栏左边第一项切换为中文。</p>
+<p>如果当前处于中文状态，且还未输入任何编码，若要切换为英文状态，那么在电脑上可单按左Shift或者右Shift即可，在手机上则短按状态栏左边第一项切换为英文。</p>
+<p>如果当前处于中文状态，已经打开auto_inline选项，且还未输入任何编码，那么首字母大写就会自动进入临时英文状态。</p>
+<p>如果当前处于中文状态，且已经输入了一位且仅有一位编码，在电脑和手机上都可以用Tab来切换到临时英文状态。在电脑上，不管输入了几位编码，还可单按左Shift切换到临时英文状态，且再按时还可切换回中文状态。 </p>
+<p>如果当前处于中文状态，且已经输入有编码，若要上屏首选项并切换为英文状态，那么在电脑上单按右Shift即可,在手机上则上滑空格。</p>
+<p>如果当前处于中文状态，且已经输入有编码，若要上屏编码（字母）并保持中文状态，那么在电脑和手机上都通过按回车将编码原样上屏。若要反转首字母的大小写状态，那么在电脑上用Shfit加回车，在手机上通过上滑退格键实现。若要将编码全部转换为大写字母，那么在电脑上用Control加回车，在手机上通过上滑回车即可。</p>
+<p>如果当前处于中文状态，且已经输入有编码，若要上屏编码（字母）并切换到英文状态，那么在电脑上可单按左<code>Control</code>键，在手机上还无法实现。</p>
+<p>如果当前处于中文状态，要锁定大写来输入英文，那么在电脑上单按<code>CAPSLOCK</code>即可，在手机上则长按Shift来实现。</p>
+<p>如果当前处于中文状态，且已经输入有编码，若要清除已经输入的编码，在电脑和手机上都可则单按<code>Esc</code>键，在手机上还可左滑退格键。</p>
+<p>如果当前处于中文状态，且已经输入有编码，当有重码字词时，在电脑上可通过上下箭头键来定位重码项，在手机上则通过左右滑动空格定位，然后均单击空格上屏定位的重码项。</p>
+<p>另外，在手机上，还适用以下操作：</p>
 <ul>
 <li>上滑对应的字母键输入大写字母；</li>
 <li>长按空格可以切换是否显示状态栏；</li>
 <li>下滑退格键可以删除选中词组，但是简词是不能删除的；</li>
 <li>长按右下角Enter键选择配色；</li>
 <li>长按左下角123键则进入选单，可以完成切换主题、切换方案、切换输入法和重新部署等；</li>
-<li>其它的特殊操作，如全选、剪切、复制、粘贴、键盘、助记、编辑等，在键面上已经写得很明确，就不再赘述。</li>
+<li>其它的特殊操作，如全选、剪切、复制、粘贴、键盘、助记、剪贴板等，在键面上已经写得很明确，就不再赘述。</li>
 </ul>
 <h2 id="5-特殊符号"><a href="#5-特殊符号" class="headerlink" title="5 特殊符号"></a>5 特殊符号</h2><p>另外，通过<code>\</code>引导，还可以输入各类特殊符号，输入习惯源自同文风，但是改<code>/</code>为<code>\</code>，同时将以非首码为<code>aeuio</code>的编码改为<code>v</code>或者省略，以便支持用<code>aeuio</code>选择重目，具体符号类别大致如下：</p>
 <div class="table-container">
@@ -1035,23 +1030,28 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 </div>
-<h2 id="6-自定词典"><a href="#6-自定词典" class="headerlink" title="6 自定词典"></a>6 自定词典</h2><p>声笔提供了多种可定制的词典，作为扩展包发布，以满足不同用户的个性化需求。有一个可定制词典是声笔的所有方案共用的，而其它的是某个方案专用的。用户将需要的自定词典复制到用户文件夹，按一定的规范进行修改后，重新部署一下就生效了。</p>
+<h2 id="6-自定词典"><a href="#6-自定词典" class="headerlink" title="6 自定词典"></a>6 自定词典</h2><p>声笔提供了多种可定制的词典，以满足不同用户的个性化需求。用户按一定的规范进行修改后，重新部署一下就生效了。</p>
 <p>(1) 用u引导的自定义词典</p>
-<p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求。</p>
+<p>不少用户需要的一些特殊词组是方案本身不能或者不便于造出来的，比如带数字或/和字母的词组、特别长的词组等。声笔系列码提供了一个共享的自定义词典来满足这种需求，文件名为sbzdy（声笔自定义）。</p>
 <p>由于声笔系列码在不少情况下是不允许重码的，所以用户自定义的词组不能放在系统词组的编码空间里，否则可能造成冲突而影响输入法的正常使用。经过仔细考量，决定采用<code>u</code>引导来解决用户自定义词组的输入问题，此处的<code>u</code>意为「用户」，因为它是英语的<code>user</code>的首字母，而声笔系列码的各种方案都不会使用<code>u</code>作为正常中文编码的首码，不会产生编码冲突。</p>
-<p><img src="/images/image-20221205143410412.png" alt="image-20221205143410412"></p>
-<p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为小写字母和数字，最好不要有重码，因为重码字词需要通过移动光标来选择，很不方便。同时还要强调，词组和编码之间，编码和权重（如果有的话）之间的分隔符必须是制表符TAB，不能是空格，否则会导致自定义词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。有的编辑器如Sublime默认时会将TAB转换为几个空格，需要修改它的设置才能保留TAB。</p>
-<p>(2) 可定制的词典列表</p>
-<p>除了u引导的自定义词典外，其它可定制词典都是无需引导的。以下罗列出所有可定制的词典，说明其适用的方案。具体的用法，会在相应的方案里详细论述。</p>
+<p><img src="/images/image-20230313142742077.png" alt="image-20230313142742077"></p>
+<p>上图所示就是自定义词典文件。在该文件开始的注释部分，说明了编码格式和注意事项。需要特别注意的是，自定义词组不能以<code>aeuio</code>作为首码，非首码可以为非aeuio的小写字母和数字，这样可以保证能用aeuio选择重码，否则重码字词需要通过移动光标来选择，很不方便。重码时，可通过权重来控制顺序，权重越大越靠前。同时，还要强调，词组和编码之间，编码和权重（如果有的话）之间的分隔符必须是制表符TAB，不能是空格，否则会导致自定义词典编译失败，所以最好要找一个支持制表符的编辑器来编辑自定义词典。有的编辑器如Sublime默认时会将TAB转换为几个空格，需要修改它的设置才能保留TAB。</p>
+<p>(2) 可定制的专用词典列表</p>
+<p>以下列出专用的可定制词典，说明其适用的方案。具体的用法，会在相应的方案里详细论述。</p>
 <ul>
-<li>sbzdy: 用 u 引导的自定义词典</li>
 <li>jmzdy: 声笔简码自定义词典</li>
 <li>spzdy: 声笔双拼自定义词典</li>
 <li>fmzdy: 声笔飞码自定义词典</li>
-<li>sbfj: 声笔飞竞单字码表</li>
-<li>fjcz: 声笔飞竞词组码表<h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2></li>
+<li>fxzdy: 声笔飞讯自定义词典</li>
 </ul>
-<p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
+<p>(3) 可修改的数选词典列表</p>
+<p>声笔对数选词典的自定义是有更大限制条件的，即不能增减编码，只能改变编码上的字词。若要得到正确提示，则还需修改对应的提示词典。声笔目前开放的数选词典如下。</p>
+<ul>
+<li>spn和spnts: 声笔双拼的数选词典和数选提示词典</li>
+<li>fmn和fmnts: 声笔飞码的数选词典和数选提示词典，与声笔飞讯共享</li>
+<li>fxn: 专供声笔飞讯使用的三级数选词典，无需数选提示词典</li>
+</ul>
+<h2 id="7-LUA脚本"><a href="#7-LUA脚本" class="headerlink" title="7 LUA脚本"></a>7 LUA脚本</h2><p>声笔程序可支持LUA脚本，但是在方案中的用法与官方有所不同。在声笔的所有方案中，都是统一用o来引导的，其正则表达式为<code>o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*</code>。默认用<code>orq</code>来输入日期，用<code>osj</code>来输入时间，用<code>o[0-9]+</code>来输入中文数字。</p>
 <p><img src="/images/image-20221125100100623.png" alt="image-20221125100100623"></p>
 <p><img src="/images/image-20221125100122408.png" alt="image-20221125100122408"></p>
 <p><img src="/images/image-20221125100151474.png" alt="image-20221125100151474"></p>
@@ -1061,13 +1061,10 @@ var _hmt = _hmt || [];
 <p>声笔系列的所有字词方案默认都是开启自动调频与自动造词的，这适合大多数人的习惯。但是，仍然有些用户不喜欢词库的动态变化，或者喜欢在一段时间的动态调整后就不再变化。为此，声笔定制程序专门针对Table Translator提供了一个stop_change选项，用于停止或者开启自动调频与自动造词，停止为true，开启为false。用户修改schema中的这个选项后，需要重新部署才能生效。该选项的位置如下图所示。该选项也能用于非声笔系列的方案。</p>
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>(2) 自动删词阈值</p>
-<p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于10000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你输入了多少个字词。该选项也能用于非声笔系列的方案。</p>
+<p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于5000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你输入了多少个字词。该选项也能用于非声笔系列的方案。</p>
 <p>(3) 多字词过滤</p>
 <p>声笔系列中的简码和飞讯有一个开启多字词过滤的选项enable_filtering。这个选项默认的情况下为false，即未开启。未开启多字词过滤时，飞讯的szsbb编码或简码在三码时会将多字词也查找出来，而开启（即将enable_filtering设置为true）的时候则会过滤掉多字词，这时多字词就只能采用sssS的形式来输入。</p>
-<p><img src="/images/SbfxFilter.png" alt="多字词过滤"></p>
-<p>(4) 临时英文选项</p>
-<p>所有声笔方案都有auto_inline选项，用于控制在中文状态下首字母大写是否进入临时英文状态。默认是进入，想改为不进入的话，需要将该项下的1改为0。</p>
-<p><img src="/images/auto_inline.png" alt="临时英文选项"></p>
+<p><img src="/images/image-20230311135409355.png" alt="image-20230311135409355"></p>
 <h2 id="9-打字训练"><a href="#9-打字训练" class="headerlink" title="9 打字训练"></a>9 打字训练</h2><p>什么是打字？从广义上来讲，一切输入文字的活动都是打字。广义的打字包括语音识别输入、手写识别输入、鼠标点击输入等非键盘输入方式。但是，我们这里讲的是键盘输入，而且要排除速录机和并击方式，这两者需要更加专门的训练，速录机还需要专门的设备支持，不是大众需要的。</p>
 <p>虽然语音输入已经比较成熟，对日常用语识别的准确率已经相当高了，识别速度也很快。但是，它的使用受到噪声、隐私、礼貌、方言、设备等诸多因素的限制，只能在非常有限的场景中使用。手写识别则是因为书写速度的限制而无法满足人们的要求。所以，在目前和可以预见的将来，键盘输入仍将是文字输入的主要方式。</p>
 <p>在国内普遍采用的是标准英文键盘，即QWERTY键盘。在手机上的26键布局稍有变化，不过作为主体的字母键位置是相对固定的，与电脑键盘有明显的对应关系，便于习惯的迁移。手机上的9键布局主要是为了适应功能机时代的习惯，在大触碰时代已经没有必要，会逐步淡出历史。</p>
@@ -1489,7 +1486,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-翻页方法"><span class="nav-text">2 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标点符号"><span class="nav-text">3 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英混输"><span class="nav-text">4 中英混输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在电脑上"><span class="nav-text">4.1 在电脑上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在手机上"><span class="nav-text">4.2 在手机上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-特殊符号"><span class="nav-text">5 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自定词典"><span class="nav-text">6 自定词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LUA脚本"><span class="nav-text">7 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置选项"><span class="nav-text">8 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打字训练"><span class="nav-text">9 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-训练目的"><span class="nav-text">9.1 训练目的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-竞速场景"><span class="nav-text">9.1.1 竞速场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-1-看打模式"><span class="nav-text">9.1.1.1 看打模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-2-赛文变化"><span class="nav-text">9.1.1.2 赛文变化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-实用场景"><span class="nav-text">9.1.2 实用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-训练软件"><span class="nav-text">9.2 训练软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-训练方法"><span class="nav-text">9.3 训练方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-训练资料"><span class="nav-text">9.4 训练资料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-一简字"><span class="nav-text">9.4.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-声笔字"><span class="nav-text">9.4.2  声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-降序字"><span class="nav-text">9.4.3  降序字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-1-前-500-字"><span class="nav-text">9.4.3.1 前 500 字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-2-中-500-字"><span class="nav-text">9.4.3.2  中 500 字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-3-后-500-字"><span class="nav-text">9.4.3.3  后 500 字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-4-综合训练"><span class="nav-text">9.4.4 综合训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-声母和笔画"><span class="nav-text">1 声母和笔画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-翻页方法"><span class="nav-text">2 翻页方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-标点符号"><span class="nav-text">3 标点符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-中英混输"><span class="nav-text">4 中英混输</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-特殊符号"><span class="nav-text">5 特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-自定词典"><span class="nav-text">6 自定词典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LUA脚本"><span class="nav-text">7 LUA脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置选项"><span class="nav-text">8 设置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-打字训练"><span class="nav-text">9 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-训练目的"><span class="nav-text">9.1 训练目的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-1-竞速场景"><span class="nav-text">9.1.1 竞速场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-1-看打模式"><span class="nav-text">9.1.1.1 看打模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-1-1-2-赛文变化"><span class="nav-text">9.1.1.2 赛文变化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-2-实用场景"><span class="nav-text">9.1.2 实用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-训练软件"><span class="nav-text">9.2 训练软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-训练方法"><span class="nav-text">9.3 训练方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-训练资料"><span class="nav-text">9.4 训练资料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-1-一简字"><span class="nav-text">9.4.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-2-声笔字"><span class="nav-text">9.4.2  声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-3-降序字"><span class="nav-text">9.4.3  降序字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-1-前-500-字"><span class="nav-text">9.4.3.1 前 500 字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-2-中-500-字"><span class="nav-text">9.4.3.2  中 500 字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-4-3-3-后-500-字"><span class="nav-text">9.4.3.3  后 500 字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-4-4-综合训练"><span class="nav-text">9.4.4 综合训练</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一、笔画的国家规范"><span class="nav-text">附录一、笔画的国家规范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-笔顺规则"><span class="nav-text">1. 笔顺规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-笔画类型"><span class="nav-text">2. 笔画类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二、笔画易错的汉字和部首"><span class="nav-text">附录二、笔画易错的汉字和部首</span></a></li></ol></div>
             
 
           </div>

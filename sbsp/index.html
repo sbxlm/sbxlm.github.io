@@ -143,10 +143,9 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185646867.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230114102545969.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230209100151493.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230114141640233.png">
-<meta property="og:updated_time" content="2023-02-10T01:07:51.973Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308162440155.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308162534416.png">
+<meta property="og:updated_time" content="2023-03-08T08:30:09.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔双拼">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -410,6 +409,25 @@ var _hmt = _hmt || [];
         
         
           
+          <li class="menu-item menu-item-sbfx">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbfx/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔飞讯</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-fzlc">
 
     
@@ -607,6 +625,9 @@ var _hmt = _hmt || [];
       
       
     
+      
+      
+    
     
 
   
@@ -720,7 +741,7 @@ var _hmt = _hmt || [];
 <p>例如，第一次输入<code>jiei</code>时，「吉」可能不是排在第五位的，用<code>i</code>选择上屏后，下次输入就可能排在首位了，于是可以利用顶屏节约一次选择键。</p>
 <p>再如，第一次输入<code>suss</code> 时，如果「输送」排在第二位，用<code>a</code>选择上屏后，下次输入就可能排在首位了。</p>
 <p>如果在输入的时候采用了扩展编码，比如用<code>zizioa</code>输入了「之志」，那么在下次输入的时候一般就只需要<code>zizi</code>就可以了，码长得到了缩短。</p>
-<h3 id="4-4-自动词组"><a href="#4-4-自动词组" class="headerlink" title="4.4 自动词组"></a>4.4 自动词组</h3><p>声笔双拼目前自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，需要添加新的词组，而且对于不满意的词组可能还想删除。</p>
+<h3 id="4-4-自动词组"><a href="#4-4-自动词组" class="headerlink" title="4.4 自动词组"></a>4.4 自动词组</h3><p>声笔双拼目前自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，需要添加新的词组，而且对于不满意的词组可能还想删除。为了避免产生大量不需要的废词，在单字模式时是不进行自动造词的。</p>
 <p>(1) 自动造词</p>
 <p>声笔双拼的造词是在输入过程中自动进行的。例如：输入<code>声sge 笔biu</code>后，下次输入<code>sgbi</code>时就会有该词了，只是如果有重码的话，新造的词会排在后面。如果重码太多，可以追加首字前两笔或者用Shift+Tab一次性地跳到最后，以避免多次翻页。自动造的词组是临时词组，带有太极标志，优先级别低，只有在选择使用一次以后，才会成为正式词组，并提高优先级别。</p>
 <p>需要注意的是，在进行枚举自动造词的时候，是以编码对应的字、词为单位来进行组合的，并不是以单字为单位的。例如，在输入<code>声笔sgbi 系列xilx 码mae</code>后，生成的词组为「声笔系列码」「声笔系列」「系列码」，而不会生成「声笔系」「笔系列」「列码」等。另外，如果之后马上使用了退格键，系统就会自动删除所造的词组；中间夹杂有非汉字的话，也会中断造词。</p>
@@ -742,19 +763,16 @@ var _hmt = _hmt || [];
 <p>不过，需要注意的是，大写顶屏在大写作为编码的时候是无效的。在声笔双拼的单字模式下，第三码大写是作为编码用来输入词组的，此时不能顶前面的两码。</p>
 <h3 id="4-8-自定词典"><a href="#4-8-自定词典" class="headerlink" title="4.8 自定词典"></a>4.8 自定词典</h3><p>除了声笔系列码公用的<a href="https://sbxlm.gitee.io/sbjc/#6-自定词典">自定词典</a>sbzdy.dict外，声笔双拼还提供了手动调整词典spzdy.dict。如果用户觉得系统提供的sbb字和数选词不理想，还可以对它们进行调整和定制，甚至增加其它类型的字词。字词的编码可以是有理的，也可以是无理的，但是务必符合声笔双拼的输入逻辑，否则可能影响顶功或造成无法预料的情况。修改的方法是，用编辑器修改spzdy.dict文件，保存后重新部署一下就可以生效。在修改的时候，一定要按照词典的格式进行，首列为词条，第二列为编码，两者之间以制表符分隔。</p>
 <p>注意，有的编辑器默认会自动将制表符转换为空格，那样就会失败。如果是个别的条目，可以复制一条合规的来改。如果条目很多，就需要在编辑器设置中禁止自动将制表符转换为空格。</p>
-<h3 id="4-9-增强模式"><a href="#4-9-增强模式" class="headerlink" title="4.9 增强模式"></a>4.9 增强模式</h3><p>为了缩短词组码长和增加输入确定性，提高输入效率，特为声笔双拼了提供数选词，可以在增强模式下使用。</p>
+<h3 id="4-9-增强模式"><a href="#4-9-增强模式" class="headerlink" title="4.9 增强模式"></a>4.9 增强模式</h3><p>为了缩短词组码长和增加输入确定性，提高输入效率，特为声笔双拼了提供数选字和数选词，可以在增强模式下使用。</p>
 <p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbsp.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
-<h4 id="4-9-1-编码方式"><a href="#4-9-1-编码方式" class="headerlink" title="4.9.1 编码方式"></a>4.9.1 编码方式</h4><p>声笔双拼的数选词分为两级，分别称为一级数选词和二级数选词，均收录的二字词。</p>
-<p>一级数选词只有210个，其编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些词组进行了提示，如下所示。</p>
-<p><img src="/images/image-20230114102545969.png" alt="image-20230114102545969"></p>
-<p>二级数选词多达4405个，其编码方式为两字的声母加数字。当数字为23789时，表示第二字的首笔，当数字为14560时，为无理编码。在输入两字声母后，也进行了提示。</p>
-<p><img src="/images/image-20230209100151493.png" alt="image-20230209100151493"></p>
-<p>如果觉得数选提示太多，显得拥挤，干扰视线的话，对于熟练的人，可以切换为隐藏状态。这样，既可以使用数选词，又不会进行提示了。</p>
-<p><img src="/images/image-20230114141640233.png" alt="image-20230114141640233"></p>
+<h4 id="4-9-1-数选字词"><a href="#4-9-1-数选字词" class="headerlink" title="4.9.1 数选字词"></a>4.9.1 数选字词</h4><p>声笔双拼的数选字只有210个，其编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在QWERTY键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些词组进行了提示，如下所示。</p>
+<p><img src="/images/image-20230308162440155.png" alt="image-20230308162440155"></p>
+<p>声笔双拼的数选词多达4405个，其编码方式为两字的声母加数字。当数字为23789时，表示第二字的首笔，当数字为14560时，为无理编码。在输入两字声母后，也进行了提示。</p>
+<p><img src="/images/image-20230308162534416.png" alt="image-20230308162534416"></p>
 <h4 id="4-9-2-数选顶屏"><a href="#4-9-2-数选顶屏" class="headerlink" title="4.9.2 数选顶屏"></a>4.9.2 数选顶屏</h4><p>数选词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
-<p>例如，在输入w7后，「我们」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「我们」就会被顶上屏幕。</p>
-<p>另一方面，当数选词接在其它字词后面时，还可以通过延迟顶屏来省略空格。</p>
-<p>例如，在输入「要考虑」时，通常得用yk_k8，但是由于有了延迟顶屏，就只用ykk8就可以输入「要考虑」了。</p>
+<p>例如，在输入wm7后，「未免」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「未免」就会被顶上屏幕；若再后续数字，也能将「未免」顶上屏幕。</p>
+<p>另一方面，当数选字接在其它字词后面时，还可以通过延迟顶屏来省略空格。</p>
+<p>例如，在输入「愿赌」时，通常得用 yx_d8，但是由于有了延迟顶屏，就只用 yxd8 就可以输入「要读」了。</p>
 <h3 id="4-10-单字模式"><a href="#4-10-单字模式" class="headerlink" title="4.10 单字模式"></a>4.10 单字模式</h3><p>如果在输入的时候，突然遇到离散大的文字，需要以单字为主来输入，那么在电脑上可以按Ctrl+~或者F4快速切换到单字模式，在手机上则简单地点击状态栏的相应状态即可。此时，若第三码用大写，则仍然可以输入常规四码词组。</p>
 <p>如果用户想默认为单字状态，那么可以修改schema文件，将pro_char项下的reset设置为1，并重新部署一下。</p>
 <h2 id="附录一：编码格式"><a href="#附录一：编码格式" class="headerlink" title="附录一：编码格式"></a>附录一：编码格式</h2><p>在后面各方案的编码格式中，采用了一下表达方式。</p>
@@ -1161,7 +1179,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本编码"><span class="nav-text">3.1 基本编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-缩减编码"><span class="nav-text">3.2 缩减编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-扩展编码"><span class="nav-text">3.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码反查"><span class="nav-text">3.4 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-拼音反查"><span class="nav-text">3.4.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-笔画反查"><span class="nav-text">3.4.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-两分反查"><span class="nav-text">3.4.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4-临时拼音"><span class="nav-text">3.4.4 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-技能提升"><span class="nav-text">4 技能提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-续码顶屏"><span class="nav-text">4.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-动态码长"><span class="nav-text">4.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-自动词组"><span class="nav-text">4.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-条件顶屏"><span class="nav-text">4.5 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-编码变换"><span class="nav-text">4.6 编码变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-大写顶屏"><span class="nav-text">4.7 大写顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-自定词典"><span class="nav-text">4.8 自定词典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-增强模式"><span class="nav-text">4.9 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-1-编码方式"><span class="nav-text">4.9.1 编码方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-2-数选顶屏"><span class="nav-text">4.9.2 数选顶屏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-单字模式"><span class="nav-text">4.10 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本编码"><span class="nav-text">3.1 基本编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-缩减编码"><span class="nav-text">3.2 缩减编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-扩展编码"><span class="nav-text">3.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码反查"><span class="nav-text">3.4 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-拼音反查"><span class="nav-text">3.4.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-笔画反查"><span class="nav-text">3.4.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-两分反查"><span class="nav-text">3.4.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4-临时拼音"><span class="nav-text">3.4.4 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-技能提升"><span class="nav-text">4 技能提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-续码顶屏"><span class="nav-text">4.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-动态码长"><span class="nav-text">4.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-自动词组"><span class="nav-text">4.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-条件顶屏"><span class="nav-text">4.5 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-编码变换"><span class="nav-text">4.6 编码变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-大写顶屏"><span class="nav-text">4.7 大写顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-自定词典"><span class="nav-text">4.8 自定词典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-增强模式"><span class="nav-text">4.9 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-1-数选字词"><span class="nav-text">4.9.1 数选字词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9-2-数选顶屏"><span class="nav-text">4.9.2 数选顶屏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-单字模式"><span class="nav-text">4.10 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
             
 
           </div>
