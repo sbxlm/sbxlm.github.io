@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311120915960.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311004856118.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230313095017657.png">
-<meta property="og:updated_time" content="2023-03-13T01:53:29.313Z">
+<meta property="og:updated_time" content="2023-03-15T05:03:59.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞讯">
 <meta name="twitter:description" content="1 飞讯概述声笔飞讯，简称飞讯，是从著名顶功输入方案声笔飞码衍生出来的主单顶功方案，随着其词组能力的不断加强，几乎到达了字词双全的地步，对用户越来越有吸引力，特别是对追求极致效率的人更是如此。所以也自然而然地成长为一个独树一帜的方案，有太多的内容需要特别地讲解，值得独立出来专门进行论述了。 飞讯一直就具有出色的单字能力，它在纯单盲打方面大放异彩，以超短的平均码长取得极高的输入效率，适用于冗余度小的">
@@ -734,6 +734,7 @@ var _hmt = _hmt || [];
 <h3 id="2-5-偏好设置"><a href="#2-5-偏好设置" class="headerlink" title="2.5 偏好设置"></a>2.5 偏好设置</h3><p>如果用户习惯一直用第四码大写来输入多字词，那么就可以将飞讯schema文件中Translator下的enable_filtering选项设置为true，以过滤掉<code>szsbb</code>上的多字词，以减少重码。还可以进一步将forced_selection选项设置为true，以便强制在<code>szsbb</code>上选择重码，从而减少扩展编码时的重码。这样设置对操作熟练的高级用户来说是非常有用的，可以减少很多重码，如下图所示。</p>
 <p><img src="/images/image-20230311000814969.png" alt="image-20230311000814969"></p>
 <h2 id="3-增强模式"><a href="#3-增强模式" class="headerlink" title="3 增强模式"></a>3 增强模式</h2><p>飞讯的词组状态下的增强模式是飞讯的最新发展，具有极其重要的意义，不仅仅是增加了大量的三级数选词而已，更重要的是实现了二码顶字、四码顶词的理想目标，使飞讯从一个主单的方案蝉变为一个字词双全的方案，不但保持了单字的高效率，克服了缩减词冲突问题，提高了顶屏的及时性，而且还大大提升了词组的效率。</p>
+<p>飞讯默认是常规模式，要使用增强模式的话，需要进行切换。如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbfx.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
 <h3 id="3-1-顶屏优化"><a href="#3-1-顶屏优化" class="headerlink" title="3.1 顶屏优化"></a>3.1 顶屏优化</h3><h4 id="3-1-1-缩短码长"><a href="#3-1-1-缩短码长" class="headerlink" title="3.1.1 缩短码长"></a>3.1.1 缩短码长</h4><p>飞讯常规模式下，最大的不足就是词组需要五码才能输入，这就增加了平均码长，在一定程度上抵消了飞讯在单字输入方面的优势。有没有办法使飞讯的词组也只需要四码呢？有！飞讯通过换码操作实现了这个目标。换码的原理是，将词组编码第四位上的笔画<code>aeuio</code>改用<code>23789</code>来编码输入，使得起始顶屏位和码长调整位都从第五位移动到第四位。</p>
 <p>例如，「奔驰」在常规模式下输入用的是<code>bdcaa</code>，而在增强模式下则用<code>bdc2</code>。</p>
 <p><img src="/images/image-20230311113452486.png" alt="image-20230311113452486"></p>
