@@ -137,6 +137,9 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311123852327.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230126173307207.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221116145918708.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230418095648512.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230418100137006.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230418095804338.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230315143434492.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/Sbxlm4Weasel6.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221009040031133.png">
@@ -144,7 +147,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221108152502471.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230313103002849.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230223083757560.png">
-<meta property="og:updated_time" content="2023-03-17T23:19:13.015Z">
+<meta property="og:updated_time" content="2023-04-20T12:27:08.008Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="声笔系列码是基于著名的开源输入法平台Rime进行二次开发的，其安装配置比较复杂。这一方面有Rime的原因，因为它没有提供丰富的图形界面，对普通用户不太友好。 在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式的强大和灵活。闯过这一关，就会如鱼得水，就能随心所欲！本文就是帮助用户克服困难，过关斩将的。 点">
@@ -711,7 +714,13 @@ var _hmt = _hmt || [];
 <h3 id="2-6-软件卸载"><a href="#2-6-软件卸载" class="headerlink" title="2.6 软件卸载"></a>2.6 软件卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
 <p>如果遇到卸载不了或者卸载不干净的输入法，可以下载使用群文件软件工具里的「输入法删除工具」来解决。此工具无需安装，直接运行就可以了。</p>
 <h2 id="3-配置与定制"><a href="#3-配置与定制" class="headerlink" title="3 配置与定制"></a>3 配置与定制</h2><p>Rime的图形界面能做的事情是有限的，在Rime的世界里是文本为王，通过编辑适当的yaml文件可以配置和定制输入法的方方面面，比传统输入法灵活和强大得多。要编辑yaml文件就需要有一个好的编辑器。在Windows上建议使用Notepad++或者Vscode，千万不要用记事本，更不要用Word。在安卓上使用时，建议使用MT管理器。</p>
-<h3 id="3-1-修改小狼毫的主题"><a href="#3-1-修改小狼毫的主题" class="headerlink" title="3.1 修改小狼毫的主题"></a>3.1 修改小狼毫的主题</h3><p>在用户文件夹中创建weasel.custom.yaml文件，对weasel.yaml（在build文件夹中）打补丁进行修改， 将配色的名称改为你所需要的，默认为aqua。在weasel.yaml里还列出了所有支持的配色，如azure和luna等。另一个常常需要更改的选项是决定候选项采用横向还是纵向显示，默认是横向显示；将horizontal的值改为false就可以变成纵向显示。是否采用嵌入模式是由<code>inline_preedit</code>来指定的，声笔建议采用非嵌入的方式。</p>
+<h3 id="3-1-修改小狼毫的主题"><a href="#3-1-修改小狼毫的主题" class="headerlink" title="3.1 修改小狼毫的主题"></a>3.1 修改小狼毫的主题</h3><p>从Windows左下角的开始菜单找到小狼毫输入法，进入输入法设定。</p>
+<p><img src="/images/image-20230418095648512.png" alt="image-20230418095648512"></p>
+<p>在弹出的方案选单设定对话框中，点击「中」按钮。</p>
+<p><img src="/images/image-20230418100137006.png" alt="image-20230418100137006"></p>
+<p>进入下面的介面风格设定对话框，选择喜欢的配色进行预览，找到满意的配色时，点击「确定」按钮」即可。</p>
+<p><img src="/images/image-20230418095804338.png" alt="image-20230418095804338"></p>
+<p>如果想手动修改主题，可用文本编辑器编辑用户文件夹中的weasel.custom.yaml文件，将配色的名称改为你所需要的，默认是aqua。另一个常常需要更改的选项是决定候选项采用横向还是纵向显示，默认是横向显示；将horizontal的值改为false就可以变成纵向显示。是否采用嵌入模式是由<code>inline_preedit</code>来指定的，声笔建议采用非嵌入的方式，否则在有的应用程序中可能出现莫名其妙的异常现象，因为宿主程序对编码的处理方式可能是千奇百怪的。</p>
 <p><img src="/images/image-20230315143434492.png" alt="image-20230315143434492"></p>
 <p>下面列出配色的预览图，以便用户直观地查看和选择，在每个图下文件名的最后一个下划线后的部分就是配色的名称，可用于确定weasel.custom.yaml文件里的<code>style/color_schema</code>。</p>
 <p><img src="/images/Sbxlm4Weasel6.png" alt="修改小狼毫的配色"></p>
