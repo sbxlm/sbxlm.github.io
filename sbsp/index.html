@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308162440155.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308162534416.png">
-<meta property="og:updated_time" content="2023-04-22T05:03:46.878Z">
+<meta property="og:updated_time" content="2023-04-28T23:45:20.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔双拼">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -536,7 +536,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">35</span></a>
 
   </li>
 
@@ -709,7 +709,7 @@ var _hmt = _hmt || [];
 <p>当一个字有多种不同的读音且声母不同时，则可以用多种方法输入该字。例如，「盛」对应的拼音有<code>cheng</code>和<code>sheng</code>，对应了c和s两个不同的声母，因而它在声笔双拼中也会有两个编码，分别是<code>cgeu</code>和<code>sgeu</code>。</p>
 <p>对于非成字偏旁部首，一般取其名称首字的声母作为它的声母进行编码。例如，「亻」的名称为单人旁，取「单」字的声母d作为「亻」的声母，可以用<code>djui</code>输入「亻」。不知道非成字偏旁部首的名称也没有关系，因始终可以用纯笔画的方式输入。比如，「亻」可以用<code>uiiii</code>输入。</p>
 <p>在声笔双拼中，单字和词组各自有不同的编码格式，它们享有不同的编码空间，不会发生冲突，不存在单字和词组那个优先的问题。单字肯定是用<code>sybb</code>格式，其第三码是笔画，而词组的编码第三码肯定是声母，笔画和声母所用的编码字母集合是不相交的。</p>
-<p>例如，单字<code>觉jnoo 钱qmue 貌mcuo 缘yraa</code>，和词组<code>关系grxi 参加cjjx 示范区sfqu 想不到xbdc 人民共和国rmgg 声东击西sdjx</code>，它们之间是不可能重码的。</p>
+<p>例如，单字<code>觉jcoo 钱qmue 貌mcuo 缘yraa</code>，和词组<code>关系grxi 参加cjjx 示范区sfqu 想不到xbdc 人民共和国rmgg 声东击西sdjx</code>，它们之间是不可能重码的。</p>
 <p>在新版的声笔双拼中，还有一种二字简词，是直接从声笔简码拿过来的，对于熟悉声笔简码的人来说，可能已经记住了。这些二字简词都是取两字声母作为编码的高频词，例如：「没有」「管理」「看见」等等，输入两码时会提示在单字之后作为次选，可用Tab键上屏。</p>
 <p><img src="/images/image-20230314143635440.png" alt="image-20230314143635440"></p>
 <p>二字简词在声笔简码中称为声声词，共有441个，详见<a href="https://sbxlm.gitee.io/sbjm/#6-1-3-声声词">声声词</a>。</p>
@@ -915,7 +915,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
