@@ -138,7 +138,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308154853109.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308154537199.png">
-<meta property="og:updated_time" content="2023-04-23T08:24:33.587Z">
+<meta property="og:updated_time" content="2023-05-05T01:03:12.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="1 飞码概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。 飞码是一种词组输入为主的顶功编码输入方案。它通过单字三码顶来提高单字录入效率，具有字词分离、互不冲突的特点，并且通过扩展编码来支持巨型词库，能够轻松、高效地应对具有大量词组的高冗余度文本，如政经、科技和医学类文章。在遇到离散程度高的古文等时，还可以快速切换到单字模式，采">
@@ -799,7 +799,7 @@ var _hmt = _hmt || [];
 <h3 id="5-2-综合训练"><a href="#5-2-综合训练" class="headerlink" title="5.2 综合训练"></a>5.2 综合训练</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-4-综合训练">综合训练</a></p>
 <h2 id="附录：编码格式"><a href="#附录：编码格式" class="headerlink" title="附录：编码格式"></a>附录：编码格式</h2><p>为了便于用户总结和记忆飞码的基本内容，现将飞码字词编码格式总结一下，编码格式采用了以下精简的表达方式。</p>
 <blockquote>
-<p>单字 <code>sb, spb^b</code><br>二字词 <code>s1z1s2z2^&#39;b1b1</code><br>三字词 <code>s1s2s3z3^&#39;b1b1</code><br>多字词 <code>s1s2s3s0^&#39;b1b1</code></p>
+<p>单字 <code>sb, spb^bx</code><br>二字词 <code>s1z1s2z2^&#39;b1b1x</code><br>三字词 <code>s1s2s3z3^&#39;b1b1x</code><br>多字词 <code>s1s2s3s0^&#39;b1b1x</code></p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">z = p|b</span><br><span class="line">s = p = [qwrtsdfgzxcvbyphjklnm]</span><br><span class="line">b|x = [aeuio]</span><br></pre></td></tr></table></figure>
 <p>其中：<code>^</code>表示起始顶屏码位，字母后的数字表示词组中的第几个字，0特别地表示末字；<code>&#39;</code>表示码长调整位；s表示声母（大写时表示用大写字母输入），p表示偏旁部首，b表示笔画，x表示选择键，<code>|</code>表示或者，z表示p或b。s 和 p 均采用 aeuio 以外的 21 个英文字母，b和x均采用 aeuio 这几个元音字母。</p>
