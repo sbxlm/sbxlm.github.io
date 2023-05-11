@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308162440155.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308162534416.png">
-<meta property="og:updated_time" content="2023-04-28T23:45:20.230Z">
+<meta property="og:updated_time" content="2023-05-11T16:35:02.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔双拼">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -334,6 +334,25 @@ var _hmt = _hmt || [];
         
         
           
+          <li class="menu-item menu-item-sbjm">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-sbpy">
 
     
@@ -366,25 +385,6 @@ var _hmt = _hmt || [];
     
 
     <a href="/sbsp/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔双拼</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sbjm">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/sbjm/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔简码</a>
 
   </li>
         
@@ -764,7 +764,7 @@ var _hmt = _hmt || [];
 <p><img src="/images/image-20221204185724325.png" alt="image-20221204185724325"></p>
 <h3 id="4-3-动态码长"><a href="#4-3-动态码长" class="headerlink" title="4.3 动态码长"></a>4.3 动态码长</h3><p>动态码长是指在输入的过程中，字词的码长会适应用户的使用习惯而发生变化，越常用的字词码长会变得越短，而不常用的字词码长会变长，从而在总体上提高输入效率。动态码长不仅是码长的调整，也包括重码顺序的调整，实际上都是因为对频率的调整而引起的。</p>
 <p>当四码字词有重码的时候，如果选择了某个非首位的字词，那么它的频率权重就会提高，在下次输入的时候，其排序就会提前。一般通过一、两次选择就可以提前到首位，从而就能利用顶屏来节约一次按键。</p>
-<p>例如，第一次输入<code>jiei</code>时，「吉」可能不是排在第五位的，用<code>i</code>选择上屏后，下次输入就可能排在首位了，于是可以利用顶屏节约一次选择键。</p>
+<p>例如，第一次输入<code>jiei</code>时，「吉」可能是排在第五位的，那么用<code>i</code>选择上屏后，下次输入就可能排在首位了，于是可以利用顶屏节约一次选择键。</p>
 <p>再如，第一次输入<code>suss</code> 时，如果「输送」排在第二位，用<code>a</code>选择上屏后，下次输入就可能排在首位了。</p>
 <p>如果在输入的时候采用了扩展编码，比如用<code>zizioa</code>输入了「之志」，那么在下次输入的时候一般就只需要<code>zizi</code>就可以了，码长得到了缩短。</p>
 <h3 id="4-4-自动词组"><a href="#4-4-自动词组" class="headerlink" title="4.4 自动词组"></a>4.4 自动词组</h3><p>声笔双拼目前自带48万多词组，覆盖的面已经很广。但是，用户在使用过程中不可避免地还会遇到缺词的情况，需要添加新的词组，而且对于不满意的词组可能还想删除。为了避免产生大量不需要的废词，在单字模式时是不进行自动造词的。</p>
