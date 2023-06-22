@@ -163,7 +163,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230314143635440.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308154853109.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308154537199.png">
-<meta property="og:updated_time" content="2023-05-26T23:21:12.208Z">
+<meta property="og:updated_time" content="2023-06-18T04:03:02.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞单">
 <meta name="twitter:description" content="1 飞单概述声笔飞单，简称飞单，实际上只是飞码的单字模式。由于单字的输入在飞码和飞讯里是完全一样的，所以把它单独出来进行讲解，以避免重复。 1.1 适用场景飞单特别适合于单字派用户，其单字平均码长很短，记忆单元少，完全静态编码，更容易在短期内做到快速盲打，而且打字速度稳定，受文本类型的影响小。 在学习飞码和飞讯的单字输入时，也建议采用飞单来练习，这一方面可以减少按键，另一方面也能避免多余信息的干扰">
@@ -389,7 +389,7 @@ var _hmt = _hmt || [];
         
         
           
-          <li class="menu-item menu-item-sbsp">
+          <li class="menu-item menu-item-sbzr">
 
     
     
@@ -401,7 +401,26 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/sbsp/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔双拼</a>
+    <a href="/sbzr/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔自然</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbxh">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbxh/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔小鹤</a>
 
   </li>
         
@@ -553,7 +572,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">40</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">42</span></a>
 
   </li>
 
@@ -622,6 +641,9 @@ var _hmt = _hmt || [];
             
 
     
+    
+      
+      
     
       
       
@@ -879,25 +901,31 @@ var _hmt = _hmt || [];
 <h3 id="4-2-声声词组"><a href="#4-2-声声词组" class="headerlink" title="4.2 声声词组"></a>4.2 声声词组</h3><p>飞单支持一种是直接从声笔简码拿过来的二字简词，对于熟悉声笔简码的人来说，可能已经记住了。这些二字简词都是取两字声母作为编码的高频词，例如：「没有」「管理」「看见」等等，输入两码时会提示在单字之后作为次选，可用Tab键上屏。</p>
 <p><img src="/images/image-20230314143635440.png" alt="image-20230314143635440"></p>
 <p>这种二字简词在声笔简码中称为声声词，共有441个，详见<a href="https://sbxlm.gitee.io/sbjm/#6-1-3-声声词">声声词</a>。</p>
-<h3 id="4-3-数选字词"><a href="#4-3-数选字词" class="headerlink" title="4.3 数选字词"></a>4.3 数选字词</h3><p>为了缩短词组码长和增加输入确定性，提高输入效率，特为飞单提供了数选字和数选词，可以在增强模式下使用。</p>
+<h3 id="4-3-空位词组"><a href="#4-3-空位词组" class="headerlink" title="4.3 空位词组"></a>4.3 空位词组</h3><p>飞单的单字编码有62个空码位。为了把这些空码位充分利用起来，在上面尽量安排了常用的二字词，其编码格式为两字的声母加次字的首笔，只需三键就可以输入，例如：能够ngu，大纲dga，吩咐ffi。以下把这些二字词尽数列出。</p>
+<blockquote>
+<p>能够分类任务按照不好同学房屋放心容量内心那天让她空中曝光拿着覆盖安慰访客风光考验爱心认同吩咐批量大纲无意爱国难忘毛病容器爱问瑞星日用安宁日照暗恋认购反响咆哮案子软盘那片那般日日那晚二线鼻孔热评条纹废品乳品旁观体弱阿婆如虹矮胖快如关隘入编姮娥鞍辔二姑</p>
+</blockquote>
+<h3 id="4-4-飞码词组"><a href="#4-4-飞码词组" class="headerlink" title="4.4 飞码词组"></a>4.4 飞码词组</h3><p>飞单实际上只是<a href="https://sbxlm.gitee.io/sbfm">飞码</a>的单字模式而已，所以它可以通过大写第三码来支持常规的飞码词组。这在输入那些不知道或者想不起部首的复杂成语时非常有用，也可以用来缩短码长而提高输入速度，例如：「魑魅魍魉」「风驰电掣」「螳螂」「蜿蜒」等。</p>
+<h2 id="5-增强模式"><a href="#5-增强模式" class="headerlink" title="5 增强模式"></a>5 增强模式</h2><p>为了缩短词组码长和增加输入确定性，提高输入效率，特为飞单提供了数选字和数选词，可以在增强模式下使用。</p>
 <p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbfm.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了。</p>
-<p>飞单的数选字只有210个，其编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在Qwerty键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些字进行了提示，如下所示。</p>
+<h3 id="5-1-数选单字"><a href="#5-1-数选单字" class="headerlink" title="5.1 数选单字"></a>5.1 数选单字</h3><p>飞单的数选字只有210个，其编码方式为声母加数字。当数字为23789时，表示第二字的首笔，在Qwerty键盘上的位置与aeuio依次对应，便于记忆，且容易击打，此为第一组。当数字为14560时，为无理编码，与笔画没有任何关系，此为第二组。为了便于用户使用，在输入声母后，对这些字进行了提示，如下所示。</p>
 <p><img src="/images/image-20230308154853109.png" alt="image-20230308154853109"></p>
-<p>飞单的数选词多达4405个，均为二字词，其编码方式为两字的声母加数字。当数字为23789时，表示第二字的首笔，当数字为14560时，为无理编码。在输入两字声母后，也进行了提示。为了提高编码空间的利用效率，数选词没有收录一简字构成的二字词。 </p>
+<h3 id="5-2-数选词组"><a href="#5-2-数选词组" class="headerlink" title="5.2 数选词组"></a>5.2 数选词组</h3><p>飞单的数选词多达4405个，均为二字词，其编码方式为两字的声母加数字。当数字为23789时，表示第二字的首笔，当数字为14560时，为无理编码。在输入两字声母后，也进行了提示。为了提高编码空间的利用效率，数选词没有收录一简字构成的二字词。 </p>
 <p><img src="/images/image-20230308154537199.png" alt="image-20230308154537199"></p>
 <p>注意，次选「建设」需要用Tab来选择，用数字是选择不了的。</p>
-<h2 id="5-强化训练"><a href="#5-强化训练" class="headerlink" title="5 强化训练"></a>5 强化训练</h2><p>关于打字的训练软件、训练目和打字速度的一般性讨论详见声笔基础中的<a href="https://sbxlm.gitee.io/sbjc/#9-打字训练">打字训练</a>一节。这里只讨论飞码打字的具体训练方法。在单字训练的时候，建议使用单字模式，以减少冗余提示对练习者的干扰，加速单字编码条件反射的形成。</p>
-<h3 id="5-1-单字训练"><a href="#5-1-单字训练" class="headerlink" title="5.1 单字训练"></a>5.1 单字训练</h3><p>需要强化训练的内容包括以下单字，并且要以所列的顺序进行：</p>
+<h2 id="6-强化训练"><a href="#6-强化训练" class="headerlink" title="6 强化训练"></a>6 强化训练</h2><p>关于打字的训练软件、训练目和打字速度的一般性讨论详见声笔基础中的<a href="https://sbxlm.gitee.io/sbjc/#9-打字训练">打字训练</a>一节。这里只讨论飞码打字的具体训练方法。在单字训练的时候，建议使用单字模式，以减少冗余提示对练习者的干扰，加速单字编码条件反射的形成。</p>
+<h3 id="6-1-单字训练"><a href="#6-1-单字训练" class="headerlink" title="6.1 单字训练"></a>6.1 单字训练</h3><p>需要强化训练的内容包括以下单字，并且要以所列的顺序进行：</p>
 <p>(1) 一简字：21个，详见<a href="https://sbxlm.gitee.io/sbjc/#9-4-1-一简字">一简字</a></p>
 <p>(2) 声笔字：105个，详见<a href="https://sbxlm.gitee.io/sbjc/#9-4-2-声笔字">声笔字</a></p>
-<p>(3) 声偏字：441个，详见<a href="#2-2-2-2-声偏字">声偏字</a></p>
-<p>(4) 降频字：按字频降序排列的前500字、中500字和后500字，详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-3-降序字">降序字</a></p>
-<h3 id="5-2-综合训练"><a href="#5-2-综合训练" class="headerlink" title="5.2 综合训练"></a>5.2 综合训练</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-4-综合训练">综合训练</a></p>
-<h3 id="5-3-强制盲打"><a href="#5-3-强制盲打" class="headerlink" title="5.3 强制盲打"></a>5.3 强制盲打</h3><h4 id="5-3-1-隐藏提示"><a href="#5-3-1-隐藏提示" class="headerlink" title="5.3.1 隐藏提示"></a>5.3.1 隐藏提示</h4><p>为了有意识地训练盲打能力，在学习到一定阶段后，可以关闭声笔字和数选字词的提示。</p>
+<p>(3) 声声词：441个，详见<a href="https://sbxlm.gitee.io/sbjc/#9-4-3-声声词">声声词</a></p>
+<p>(4) 声偏字：441个，详见<a href="#2-2-2-2-声偏字">声偏字</a></p>
+<p>(5) 降频字：按字频降序排列的前500字、中500字和后500字，详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-3-降序字">降序字</a></p>
+<h3 id="6-2-综合训练"><a href="#6-2-综合训练" class="headerlink" title="6.2 综合训练"></a>6.2 综合训练</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-4-综合训练">综合训练</a></p>
+<h3 id="6-3-强制盲打"><a href="#6-3-强制盲打" class="headerlink" title="6.3 强制盲打"></a>6.3 强制盲打</h3><h4 id="6-3-1-隐藏提示"><a href="#6-3-1-隐藏提示" class="headerlink" title="6.3.1 隐藏提示"></a>6.3.1 隐藏提示</h4><p>为了有意识地训练盲打能力，在学习到一定阶段后，可以关闭声笔字和数选字词的提示。</p>
 <p>声笔字的盲打能力在飞单中有着举足轻重的作用，也是初学者要过的重要关口。关闭声笔字的提示有助于用户尽快摆脱在输入过程中不自觉地查看声笔字候选项的习惯，实现声笔字的盲打。</p>
 <p>数选字的数量比较大，实现盲打的过程比较漫长。数选词的数量更大，更加难以盲打。但是，对于有心练习的人，也是可以进行专门训练的。</p>
 <p>要隐藏提示，需要修改schema文件，将其中is_hidden项的reset值改为1，重新部署一下，使新的设置生效。</p>
-<h4 id="5-3-2-隐藏窗口"><a href="#5-3-2-隐藏窗口" class="headerlink" title="5.3.2 隐藏窗口"></a>5.3.2 隐藏窗口</h4><p>如何把编码、首选连同编码和候选窗口都隐藏掉，实现真正意义上的盲打？</p>
+<h4 id="6-3-2-隐藏窗口"><a href="#6-3-2-隐藏窗口" class="headerlink" title="6.3.2 隐藏窗口"></a>6.3.2 隐藏窗口</h4><p>如何把编码、首选连同编码和候选窗口都隐藏掉，实现真正意义上的盲打？</p>
 <p>目前，只有在声笔安卓上有办法实现。首先，在键盘设置的显示悬浮窗一项关闭。其次，在键盘设置中把视图里的嵌入式编辑模式设置为「无」。最后，长按空格把状态栏隐藏。这样，就可以开始享受真盲打的快乐了！</p>
 
         
@@ -964,7 +992,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1295,7 +1323,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-飞单概述"><span class="nav-text">1 飞单概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-适用场景"><span class="nav-text">1.1 适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2 比较优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码方法"><span class="nav-text">2 编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-特征信息"><span class="nav-text">2.1 特征信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-声母笔画"><span class="nav-text">2.1.1 声母笔画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-偏旁部首"><span class="nav-text">2.1.2 偏旁部首</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-1-部首类型"><span class="nav-text">2.1.2.1 部首类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-2-助记方法"><span class="nav-text">2.1.2.2 助记方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-3-部首位置"><span class="nav-text">2.1.2.3 部首位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码规则"><span class="nav-text">2.2 编码规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-一简字"><span class="nav-text">2.2.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-二简字"><span class="nav-text">2.2.2 二简字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-1-声笔字"><span class="nav-text">2.2.2.1 声笔字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-2-声偏字"><span class="nav-text">2.2.2.2 声偏字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-三简字"><span class="nav-text">2.2.3 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-全码字"><span class="nav-text">2.2.4 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-缩减码"><span class="nav-text">2.2.5 缩减码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-部首编码"><span class="nav-text">2.2.6 部首编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-特取字"><span class="nav-text">2.2.7 特取字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-编码反查"><span class="nav-text">2.3 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-拼音反查"><span class="nav-text">2.3.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-声笔反查"><span class="nav-text">2.3.2 声笔反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-笔画反查"><span class="nav-text">2.3.3 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-两分反查"><span class="nav-text">2.3.4 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-临时拼音"><span class="nav-text">2.3.5 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单字输入"><span class="nav-text">3 单字输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-模式调整"><span class="nav-text">3.1 模式调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-输入方法"><span class="nav-text">3.2 输入方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词组输入"><span class="nav-text">4 词组输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-一简组合"><span class="nav-text">4.1 一简组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-声声词组"><span class="nav-text">4.2 声声词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-数选字词"><span class="nav-text">4.3 数选字词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-强化训练"><span class="nav-text">5 强化训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-单字训练"><span class="nav-text">5.1 单字训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-综合训练"><span class="nav-text">5.2 综合训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-强制盲打"><span class="nav-text">5.3 强制盲打</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-1-隐藏提示"><span class="nav-text">5.3.1 隐藏提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-2-隐藏窗口"><span class="nav-text">5.3.2 隐藏窗口</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-飞单概述"><span class="nav-text">1 飞单概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-适用场景"><span class="nav-text">1.1 适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2 比较优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码方法"><span class="nav-text">2 编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-特征信息"><span class="nav-text">2.1 特征信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-声母笔画"><span class="nav-text">2.1.1 声母笔画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-偏旁部首"><span class="nav-text">2.1.2 偏旁部首</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-1-部首类型"><span class="nav-text">2.1.2.1 部首类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-2-助记方法"><span class="nav-text">2.1.2.2 助记方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-3-部首位置"><span class="nav-text">2.1.2.3 部首位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码规则"><span class="nav-text">2.2 编码规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-一简字"><span class="nav-text">2.2.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-二简字"><span class="nav-text">2.2.2 二简字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-1-声笔字"><span class="nav-text">2.2.2.1 声笔字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-2-声偏字"><span class="nav-text">2.2.2.2 声偏字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-三简字"><span class="nav-text">2.2.3 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-全码字"><span class="nav-text">2.2.4 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-缩减码"><span class="nav-text">2.2.5 缩减码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-部首编码"><span class="nav-text">2.2.6 部首编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-特取字"><span class="nav-text">2.2.7 特取字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-编码反查"><span class="nav-text">2.3 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-拼音反查"><span class="nav-text">2.3.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-声笔反查"><span class="nav-text">2.3.2 声笔反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-笔画反查"><span class="nav-text">2.3.3 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-两分反查"><span class="nav-text">2.3.4 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-临时拼音"><span class="nav-text">2.3.5 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单字输入"><span class="nav-text">3 单字输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-模式调整"><span class="nav-text">3.1 模式调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-输入方法"><span class="nav-text">3.2 输入方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词组输入"><span class="nav-text">4 词组输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-一简组合"><span class="nav-text">4.1 一简组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-声声词组"><span class="nav-text">4.2 声声词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-空位词组"><span class="nav-text">4.3 空位词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-飞码词组"><span class="nav-text">4.4 飞码词组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-增强模式"><span class="nav-text">5 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-数选单字"><span class="nav-text">5.1 数选单字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-数选词组"><span class="nav-text">5.2 数选词组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-强化训练"><span class="nav-text">6 强化训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-单字训练"><span class="nav-text">6.1 单字训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-综合训练"><span class="nav-text">6.2 综合训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-强制盲打"><span class="nav-text">6.3 强制盲打</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-1-隐藏提示"><span class="nav-text">6.3.1 隐藏提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-2-隐藏窗口"><span class="nav-text">6.3.2 隐藏窗口</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -151,12 +151,10 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230322093302213.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230322093406259.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230322094450775.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20220206095909817.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230301102629096.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230301102844265.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230301103015146.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230301103103088.png">
-<meta property="og:updated_time" content="2023-05-11T17:50:51.617Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230618105408424.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230619091710272.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230619093351922.png">
+<meta property="og:updated_time" content="2023-06-20T12:58:37.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔简码">
 <meta name="twitter:description" content="1 概述声笔简码是独特的普及型顶功输入方案，是广大普通用户输入中文的最佳选择，比现在流行的所谓智能拼音输入法更加具有优势。 2 优势声笔简码的优势可以总结为：简单性、高效性和知识性。它比拼音更简单，比五笔更高效，还有利于人们巩固语文知识。 2.1 比拼音更简单声笔简码非常简单，具有易学、易用的优点，只需要知道用v表示零声母，用aeuio分别表示折、横、撇、竖、捺五种笔画，便可以上手使用了。与搜狗拼">
@@ -382,7 +380,7 @@ var _hmt = _hmt || [];
         
         
           
-          <li class="menu-item menu-item-sbsp">
+          <li class="menu-item menu-item-sbzr">
 
     
     
@@ -394,7 +392,26 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/sbsp/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔双拼</a>
+    <a href="/sbzr/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔自然</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sbxh">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/sbxh/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i> <br>声笔小鹤</a>
 
   </li>
         
@@ -546,7 +563,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">40</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">42</span></a>
 
   </li>
 
@@ -615,6 +632,9 @@ var _hmt = _hmt || [];
             
 
     
+    
+      
+      
     
       
       
@@ -906,35 +926,39 @@ var _hmt = _hmt || [];
 <p>在四码之后，可以用大写将前两码对应的二简词上屏，并与后两码一起形成新的三码。这一方面可以节约空格，另一方面，也可以避免回改。例如，在<code>dsky</code>后输入<code>S</code>时，会将<code>ds</code>对应的二简词「但是」顶上屏幕，同时剩下<code>kys</code>三码。同样，在<code>wmsh</code>后输入<code>O</code>，会将<code>wm</code>对应的二简词「我们」顶上屏幕，同时留下<code>sho</code>三码。在不用大写顶屏的时候，就需要先在<code>ds</code>后用空格将「但是」上屏，而若忘记了输入空格，在没有大写顶屏时就得先用退格键删除<code>ky</code>，再补上空格，回改的成本非常高。</p>
 <h3 id="4-8-自定词典"><a href="#4-8-自定词典" class="headerlink" title="4.8 自定词典"></a>4.8 自定词典</h3><p>除了声笔系列码公用的<a href="https://sbxlm.gitee.io/sbjc/#6-自定词典">自定词典</a>sbzdy.dict外，声笔简码的特殊缩减码词典jmzdy.dict也是可以手动修改的。如果用户觉得系统提供静态字词不理想，还可以对它们进行调整和定制，甚至增加其它类型的字词。字词的编码可以是有理的，也可以是无理的，但是务必符合声笔简码的输入逻辑，否则可能影响顶功或造成无法预料的情况。修改的方法是，用编辑器修改jmzdy.dict文件，保存后重新部署一下就可以生效。在修改的时候，一定要按照词典的格式进行，首列为词条，第二列为编码，两者之间以制表符分隔。</p>
 <p>注意，有的编辑器默认会自动将制表符转换为空格，那样就会失败。如果是个别的条目，可以复制一条合规的来改。如果条目很多，就需要在编辑器设置中禁止自动将制表符转换为空格。</p>
-<h2 id="5-增强模式"><a href="#5-增强模式" class="headerlink" title="5 增强模式"></a>5 增强模式</h2><p>在用户对简码非常熟悉以后，可能会觉得动态字的变化过于频繁，使得一些常用的字都不能形成条件反射，过多的提示行查看对提高击键速度有不利的影响。究其原因，是因为简码的单字三码编码空间很小，而单字的数量很大。简码的增强模式就是为高级用户解决这个问题的，其思路是增加高频静态字的数量。</p>
-<p>如果要临时使用增强模式，在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的「常规/增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将sbjm.schema.yaml文件中的is_enhanced开关项的reset值由0改为1，并重新部署一下就可以了，如下图所示。</p>
-<p><img src="/images/image-20220206095909817.png" alt="image-20220206095909817"></p>
-<h3 id="5-1-数选字词"><a href="#5-1-数选字词" class="headerlink" title="5.1 数选字词"></a>5.1 数选字词</h3><p>在增强模式下，简码提供了额外的静态字词，在它们的编码中都以数字结尾，所以又称为数选字词。在进行数字选择的时候，默认是有提示信息的。如果觉得数选提示太多，显得拥挤，干扰视线的话，对于熟练的人，可以切换为隐藏状态。这样，既可以使用数选词，又不会进行提示了。 </p>
-<p><img src="/images/image-20230301102629096.png" alt="image-20230301102629096"></p>
-<p>数选字词有利于提高击键速度和缩短平均码长，但是也会增加用户的记忆量和操作难度，同时让简码在数码的位置丧失了数字顶屏的能力。所以，不建议初学者使用增强模式，而且熟练者也需要循序渐进、量力而行，不要一上来就想把数选字词全部用起来，否则可能会适得其反。</p>
-<h4 id="5-1-1-数选字"><a href="#5-1-1-数选字" class="headerlink" title="5.1.1 数选字"></a>5.1.1 数选字</h4><p>简码的数选字有两码的，也有三和四码的。对于两码的数选字，数字<code>23789</code>为有理编码，它们与<code>aeuio</code>一一对应，代表五个笔画，而数字<code>14560</code>为无理选择，不与笔画对应。对于三码的数选字，所有的数字都是无理的，不与笔画对应。</p>
-<p>简码两码数选字有210个，都是使用频率很高的字，其编码格式为sn，即声母加数字，输入声母后就有提示。</p>
-<p><img src="/images/image-20230301102844265.png" alt="image-20230301102844265"></p>
-<p>简码三码数选字有1050个，其中大多数是常用字，其编码格式为sbn，即声母加首笔加数字，输入声母和首笔后就有提示。</p>
-<p><img src="/images/image-20230301103015146.png" alt="image-20230301103015146"></p>
-<h4 id="5-1-2-数选词"><a href="#5-1-2-数选词" class="headerlink" title="5.1.2 数选词"></a>5.1.2 数选词</h4><p>简码的数选词格式为ssn，均为二字词，总数高达4397，大部分都是常见词。ss代表两字的声母，数字<code>23789</code>为有理编码，它们与<code>aeuio</code>一一对应，代表第二字首笔画，而数字<code>14560</code>为无理选择，不与笔画对应。</p>
-<p><img src="/images/image-20230301103103088.png" alt="image-20230301103103088"></p>
-<h3 id="5-2-数选顶屏"><a href="#5-2-数选顶屏" class="headerlink" title="5.2 数选顶屏"></a>5.2 数选顶屏</h3><p>数选字词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
-<p>例如，在输入j7后，「金」并不会立刻上屏。这时，如果后面要输入「银」字，那么在输入y时，「金」就会被顶上屏幕；若再后续数字，也能将「金」顶上屏幕。</p>
-<p>另一方面，当数选词接在一简字和二简词后面时，还可以通过延迟顶屏来省略空格。</p>
-<p>例如，在输入「的精神」时，通常得用 d_js9，但是由于有了延迟顶屏，就只用 djs9 就可以输入了。</p>
-<p>再如，在输入「我们接受」时，通常得用 wm_js7，但是由于有了延迟顶屏，就只用 wmjs7 就可以了。</p>
+<h2 id="5-高级设置"><a href="#5-高级设置" class="headerlink" title="5 高级设置"></a>5 高级设置</h2><p>声笔简码的默认模式为快调和四顶，根据使用场景和用户的使用习惯不同，可能需要对模式进行调整。在电脑上可以用Ctrl+~或F4，在手机上直接点击状态栏的相应选项，就可以切换模式了。如果要将某种模式设置为默认状态，只要修改sbjm.schema.yaml文件中相应状态开关项的reset值，并重新部署一下就可以了，如下图所示。</p>
+<p><img src="/images/image-20230618105408424.png" alt="image-20230618105408424"></p>
+<h3 id="5-1-慢调模式"><a href="#5-1-慢调模式" class="headerlink" title="5.1 慢调模式"></a>5.1 慢调模式</h3><p>在默认的快调模式下，声笔简码的单字和二字词是从第三码开始就进行频率调整的。如果用户的使用场景比较复杂，或者用户希望能够盲打三简字词，那么就需要调整为慢调模式来固定三简上的字词。这样，所有的字词都是从第四码起调频了。</p>
+<p>为了高效地利用三简字空间，有少部分三简字的第三码采用了无理编码，成为特殊编码。常规编码的三简字共有400个，例如：<code>地dei 法foo 完woo</code>，它们的编码方式都是声母加前两笔。现将这类三简字全部列举如下。</p>
+<blockquote>
+<p>到地要这时以之生后能只们身多已知声作两于法点动所行现情但定三本向实问女气将与走些理己间其等才工学业相关因文何听少吗神被新便月先位机应加么处太光入并合风表死长今展色果放马感觉美总叫比连市数解原步轻系王特提通万产结任电脸常路受各记冷转爱命花活度亲五件变该管认往吧完书许务干反近物龙呢条它义青区车容统红满吃黑尔空传领改流战办收请百字火房弟论紧科克达德语司坐每院父刻兄掌党怪精八姑队组企谈孩际始般刀忽导宝约沉曾欢观周复拿爷阵备广群啊巴热静模依希左费存痛类灵雷需参环专派尚退银否器细质停乱旁闪调妹较陈副采威案游户朋忍初您眉鬼险网划堂春妇耳脑简份防肯船尼层习柔跑排屋律震狂卫逃寻魔虎婚练困毫雄姓替归欧宁普临买劲弄陆徒谷软邪圣盘避纳例登笔肉姊评奥牛凝输偏爹烦尖峰弱误纷编贫拳闭孤虑叔厚闹诺碰陪妖骑丰闲纯餐尘瑞谋码阁灭贯绕奈骗篇霍麦亏颇倾课哀羞劝雾闷辉娃霸霜扭劈贤陶御闯夹欠频辱锐迈燃阔戈耀弥矮瓜饶矿削翁卜奇逆劣阅纹</p>
+</blockquote>
+<p>三简字的码位实际上有21×5×5=525个，减去常规编码的三简字400个，剩下的115个就是特殊编码的三简字码位。特殊三简字的例子有<code>北bii 背biu 幅fio 最zii</code>，它们的编码方式为声母加声笔再加一位无理码。以下就是全部115个特殊三简字。</p>
+<blockquote>
+<p>臂北背承场财邓都瞪督单附范封罚幅咐府更刚跟缓哈喝海具界纩尻骒垦苦考颗卡哭客靠筷侃绿量离骂默冒目猛难耐聂喃暖男哪念屁配批帕盼喷婆纤屈却瞧岂曲晴清千刃荣嚅嚷冉蠕润染仍山推投团图题突唐妸婀媪嫒恶按岸哦呆恩澳愕额俄慰味吴唯围样员由张最早主姥婷敖斐省霹秽炜隘隗</p>
+</blockquote>
+<p>三简词共有2200个，都是二字词，其编码方式都是取全码的前三位，即两字的声母加次字的首笔。以下列出了一些常见的三简词。</p>
+<blockquote>
+<p>中国这么那么一点只有心中社会世界声音之间技术眼睛生活一起以为有些然后宝贝想到男人国际所有本报研究过来一阵公司对方真是决定信息组织有关心里合作继续只见于是解决感觉精神提高她们由于以及之中思想母亲会议回答生产群众也许江湖不想人们干部兄弟甚至无关立刻经过处理最后机会对于目光似的科技不见不禁除了能够电话中央多少了解不断提供众人政治数据整个有的努力农民网络高兴举行到底之下不再具有来到哪里以前不少是否罢工主席计划一边如今早已接着还要双手刚才坚持进来既然使用找到否则真正容易以来注意双方方式奇怪学习愿意投资作用回到见到政策或者设计不必增加答应任务原因对象农业过程师父和尚接受</p>
+</blockquote>
+<h3 id="5-2-三顶模式"><a href="#5-2-三顶模式" class="headerlink" title="5.2 三顶模式"></a>5.2 三顶模式</h3><p>在默认的四顶模式下，声笔简码的三字词和多字词都是从第四码才开始顶屏的。如果用户的使用场景单一而简单，那么可以调整为三顶模式，使得大多数三字词和多字词都只要三键就可以输入了。实际上，大多数普通用户使用输入法的场景属于这种情况。</p>
+<p>例如，在三顶模式下，输入「计算机」可能只需要<code>jsj</code>就行了，而在四顶模式下则至少需要<code>jsje</code>。</p>
+<p>再如，输入「爱因斯坦」，在三顶模式下，一般只需要<code>vys</code>即可，而在四顶模式时需要<code>vyst</code>。</p>
+<p>在声笔简码的schema中，有一个参数enable_filtering来控制在输入三个声母时是否将多字词过滤掉。该参数的值默认为false，意味着不过滤，如下所示。如果将它改为true，那么在三个声母时就只有三字词而不会有多字词。</p>
+<p><img src="/images/image-20230619091710272.png" alt="image-20230619091710272"></p>
+<p>注意上图红框中还有个参数lower_case，默认为false。这时，在三顶模式下，若采用一二三末字的声母来输入多字词，则第四码必须用大写字母。例如，「爱因斯坦」就需要用<code>vysT</code>来输入才行。</p>
+<p>但是，有的人很不习惯用输入大写字母，怎么办呢？办法是将lower_case参数值改为true。这样的话，末字的声母改用末字的首笔来输入也可以。比如，「爱因斯坦」就可以用<code>vyse</code>来输入。</p>
+<p><img src="/images/image-20230619093351922.png" alt="image-20230619093351922"></p>
+<p>在遇到不知道末字首笔的多字词时，仍然可以用大写末字声母的办法来输入，例如：<code>魑魅魍魉cmwL</code>。两种输入方式都是支持的。</p>
+<p>另外，在三顶模式下，二简词加一简字的组合一般不再能用空格上屏，需要改用Tab上屏，因为三个声母的码位基本上被三字词和多字词占完了。比如，<code>wms</code>被「文明史」占用了，要用此码位输入「我们是」就得用空格上屏了。</p>
 <h2 id="6-打字训练"><a href="#6-打字训练" class="headerlink" title="6 打字训练"></a>6 打字训练</h2><p>关于打字的训练软件、训练目和打字速度的一般性讨论详见声笔基础中的<a href="https://sbxlm.gitee.io/sbjc/#9-打字训练">打字训练</a>一节。这里只讨论简码打字的具体训练方法。</p>
 <p>简码的定位是普通型的输入方案，主要用于一般的工作和生活中，不太适用于竞速和打字比赛中的首打。若用于有大量词组的赛文进行重打，效果可能会出奇地好，但是要注意与您的实际应用场景相匹配，否则会对扰乱用户词库的调频信息，除非您把两种应用场景的用户词库分开后切换使用。</p>
 <p>简码的一、二简单字和二字词以及数选字词都是静态编码的，熟习后可以不看提示进行输入。若要迅速熟习缩减码，建议进行一些强化训练。</p>
-<h3 id="6-1-字词训练"><a href="#6-1-字词训练" class="headerlink" title="6.1 字词训练"></a>6.1 字词训练</h3><p>常规模式下需要强化训练的内容包括一简字、声笔字、声声词。如果要使用增强模式，则还要训练常见的数选字词。</p>
+<h3 id="6-1-字词训练"><a href="#6-1-字词训练" class="headerlink" title="6.1 字词训练"></a>6.1 字词训练</h3><p>常规模式下需要强化训练的内容包括一简字、声笔字、声声词。如果使用四顶模式，则可能还要训练常见的三简字词（声笔笔字和声声笔词）。</p>
 <h4 id="6-1-1-一简字"><a href="#6-1-1-一简字" class="headerlink" title="6.1.1 一简字"></a>6.1.1 一简字</h4><p>一简字共计21个，详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-1-一简字">一简字</a></p>
 <h4 id="6-1-2-声笔字"><a href="#6-1-2-声笔字" class="headerlink" title="6.1.2 声笔字"></a>6.1.2 声笔字</h4><p>声笔字共计105个，详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-2-声笔字">声笔字</a></p>
-<h4 id="6-1-3-声声词"><a href="#6-1-3-声声词" class="headerlink" title="6.1.3 声声词"></a>6.1.3 声声词</h4><p>声声词，又称二简词，共有以下441个：</p>
-<blockquote>
-<p>没有我们他们什么自己知道可以这个起来这样已经发展因为现在怎么你们工作问题经济还是出来如果只是不过这些国家企业时候所以说道一定这里并不如此还有关系进行可能也是但是而且今天地方觉得建设时间虽然一样那个的话姑娘第一为了女人一些如何突然之后告诉记者不要市场开始看到爱人全国同时过去东西政府系统当然发现下来希望孩子一切一直身上认为人民十分先生回来管理原来必须不住那些表示应该无法忽然许多情况需要明白因此改革事情相信得到朋友喜欢感到第二北京出现完全通过看见我国发生离开美国其中大家方面领导正在实现不同活动成为根本一般特别服务教育问道非常方法父亲夫人以后提出目前那里几乎一面代表别人文化其他清楚身子部门小姐加强听到老人难道作为建立自然结果今年环境人员人家不错女子看看其实历史不得立即认识工程然而地区参加女儿同志看来支持准备回去开发那样条件利用口气基础点头此时香港仍然想起产品身边天下微笑进入儿子存在才能微微两国果然理论去年衣服轻轻控制只能马上基本这儿单位科学之前取得成功名字日本保护冷笑完成缓缓少女此刻关于身体项目表情农村不肯前面办法法律大哥水平形成全部晚上痛苦摇头本来共同后面露出里面房间弟子年轻分别日子总统而已安危厉害恢复充满显然另外采取目的慢慢发挥上来一块耳边回头明天打开看出恐怕唯一统一传统反而毫无很快台湾产业美丽功夫带来门口模型太太充分只怕调查女孩多年讨论情形反应那时温柔来自依然人类好不承认文件年纪法国头发麻烦不怕客人害怕漂亮多么幸福一旁或许旁边加快安排革命反对所谓出版片刻期间程度不安宣布位置人口见面妇女平静召开无比澳门那边可爱黑暗常常男女千万离去热情人大老板谈话从而无奈时刻普通因而极为老头公开暗藏提起暗暗破坏名称面积把握规划放开儿童气氛谈判念头案件耳朵热闹何处美人各位恶心脾气胸口培训分配批准拼命两岸老婆如同人心客厅模糊偏偏送给平常解放恐怖公安平日回归昂首公平平时性能情人佩服客户判断大批开门前后渴望浪费美女头脑能否骄傲金牌若非半年难看窗户颇为而后儿女喜爱平安屁股客观河南强迫案犯发帖门派一年我看无派理念而来芯片我爱是啊那位门外图案哪怕而过陪你请按名额人品安康</p>
-</blockquote>
-<h3 id="6-2-综合训练"><a href="#6-2-综合训练" class="headerlink" title="6.2 综合训练"></a>6.2 综合训练</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-4-综合训练">综合训练</a></p>
+<h4 id="6-1-3-声声词"><a href="#6-1-3-声声词" class="headerlink" title="6.1.3 声声词"></a>6.1.3 声声词</h4><p>声声词共有441个，详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-3-声声词">声声词</a></p>
+<h3 id="6-2-综合训练"><a href="#6-2-综合训练" class="headerlink" title="6.2 综合训练"></a>6.2 综合训练</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#9-4-5-综合训练">综合训练</a></p>
 <h2 id="附录：声笔简码的编码格式"><a href="#附录：声笔简码的编码格式" class="headerlink" title="附录：声笔简码的编码格式"></a>附录：声笔简码的编码格式</h2><p>为了便于用户总结和记忆声笔简码的基本内容，现将在默认设置时的字词编码格式以浓缩的表达式方式总结如下。</p>
 <ul>
 <li>单字：<code>sb^b&#39;b(bb)</code>，即声母加前三个笔画，可选地加第四、五笔。</li>
@@ -1008,7 +1032,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1339,7 +1363,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-比拼音更简单"><span class="nav-text">2.1 比拼音更简单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-比五笔更高效"><span class="nav-text">2.2 比五笔更高效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-便于巩固中文"><span class="nav-text">2.3 便于巩固中文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本编码"><span class="nav-text">3.1 基本编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-缩减编码"><span class="nav-text">3.2 缩减编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-扩展编码"><span class="nav-text">3.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码反查"><span class="nav-text">3.4 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-拼音反查"><span class="nav-text">3.4.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-笔画反查"><span class="nav-text">3.4.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-两分反查"><span class="nav-text">3.4.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4-临时拼音"><span class="nav-text">3.4.4 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-技能提升"><span class="nav-text">4 技能提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-续码顶屏"><span class="nav-text">4.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-动态码长"><span class="nav-text">4.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-自动词组"><span class="nav-text">4.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-以字代词"><span class="nav-text">4.5 以字代词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-组合变换"><span class="nav-text">4.6 组合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-特殊顶屏"><span class="nav-text">4.7 特殊顶屏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-1-条件顶屏"><span class="nav-text">4.7.1 条件顶屏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-2-大写顶屏"><span class="nav-text">4.7.2 大写顶屏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-自定词典"><span class="nav-text">4.8 自定词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-增强模式"><span class="nav-text">5 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-数选字词"><span class="nav-text">5.1 数选字词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-数选字"><span class="nav-text">5.1.1 数选字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-数选词"><span class="nav-text">5.1.2 数选词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-数选顶屏"><span class="nav-text">5.2 数选顶屏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-打字训练"><span class="nav-text">6 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-字词训练"><span class="nav-text">6.1 字词训练</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1-一简字"><span class="nav-text">6.1.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2-声笔字"><span class="nav-text">6.1.2 声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3-声声词"><span class="nav-text">6.1.3 声声词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-综合训练"><span class="nav-text">6.2 综合训练</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：声笔简码的编码格式"><span class="nav-text">附录：声笔简码的编码格式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-比拼音更简单"><span class="nav-text">2.1 比拼音更简单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-比五笔更高效"><span class="nav-text">2.2 比五笔更高效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-便于巩固中文"><span class="nav-text">2.3 便于巩固中文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本编码"><span class="nav-text">3.1 基本编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-缩减编码"><span class="nav-text">3.2 缩减编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-扩展编码"><span class="nav-text">3.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码反查"><span class="nav-text">3.4 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-拼音反查"><span class="nav-text">3.4.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-笔画反查"><span class="nav-text">3.4.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-两分反查"><span class="nav-text">3.4.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4-临时拼音"><span class="nav-text">3.4.4 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-技能提升"><span class="nav-text">4 技能提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-续码顶屏"><span class="nav-text">4.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-动态码长"><span class="nav-text">4.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-自动词组"><span class="nav-text">4.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-以字代词"><span class="nav-text">4.5 以字代词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-组合变换"><span class="nav-text">4.6 组合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-特殊顶屏"><span class="nav-text">4.7 特殊顶屏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-1-条件顶屏"><span class="nav-text">4.7.1 条件顶屏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-2-大写顶屏"><span class="nav-text">4.7.2 大写顶屏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-自定词典"><span class="nav-text">4.8 自定词典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-高级设置"><span class="nav-text">5 高级设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-慢调模式"><span class="nav-text">5.1 慢调模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-三顶模式"><span class="nav-text">5.2 三顶模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-打字训练"><span class="nav-text">6 打字训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-字词训练"><span class="nav-text">6.1 字词训练</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-1-一简字"><span class="nav-text">6.1.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-2-声笔字"><span class="nav-text">6.1.2 声笔字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-3-声声词"><span class="nav-text">6.1.3 声声词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-综合训练"><span class="nav-text">6.2 综合训练</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：声笔简码的编码格式"><span class="nav-text">附录：声笔简码的编码格式</span></a></li></ol></div>
             
 
           </div>
