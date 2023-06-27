@@ -154,7 +154,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230618105408424.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230619091710272.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230619093351922.png">
-<meta property="og:updated_time" content="2023-06-20T01:25:06.099Z">
+<meta property="og:updated_time" content="2023-06-27T02:01:22.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔简码">
 <meta name="twitter:description" content="1 概述声笔简码是独特的普及型顶功输入方案，是广大普通用户输入中文的最佳选择，比现在流行的所谓智能拼音输入法更加具有优势。 2 优势声笔简码的优势可以总结为：简单性、高效性和知识性。它比拼音更简单，比五笔更高效，还有利于人们巩固语文知识。 2.1 比拼音更简单声笔简码非常简单，具有易学、易用的优点，只需要知道用v表示零声母，用aeuio分别表示折、横、撇、竖、捺五种笔画，便可以上手使用了。与搜狗拼">
@@ -821,7 +821,7 @@ var _hmt = _hmt || [];
 <h2 id="3-快速入门"><a href="#3-快速入门" class="headerlink" title="3 快速入门"></a>3 快速入门</h2><p>声笔简码极其简单，没有什么学习门坎，可以用一句话概括它的内容：用v表示零声母，用<code>aeuio</code>分别表示折、横、撇、竖、点五种笔画，采用简拼加笔画编码。</p>
 <p>虽然声笔简码已经非常简单了，但是为了进一步减轻初学者的记忆负担，在手机上提供了助记皮肤，可以长按<code>N</code>键打开或者关闭助记。在打开时，给出了笔画和零声母用键（<code>aeuio</code>和<code>v</code>）的提示，如下图所示。如果是在电脑上，则可以把该图放在电脑桌面上，在打字的时候帮助记忆，一般几分钟就记住了。</p>
 <p><img src="/images/827025C9119CAF7BA62C2FDCC7792129.jpg" alt="img"></p>
-<h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔简码的编码规则和示例如下。其中，s表示声母（不区分平翘舌），b表示笔画。b为元音字母<code>aeuio</code>，s为剩下的21个辅音字母。</p>
+<h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔简码的编码规则和示例如下。其中，s表示声母（不区分平翘舌），b表示笔画。b为元音字母<code>aeuio</code>，s为剩下的21个辅音字母。笔画不足时，则重复末笔。</p>
 <ul>
 <li>单字：<code>sbbb</code>，即声母加前三个笔画。例如，<code>就joei 从cuou 机jeiu 接jeie 源yooe</code>。</li>
 <li>二字词：<code>ssbb</code>，即各字的声母加第二字的前两个笔画。例如，<code>关系gxua 高兴gxoo 导演dyoo 理想lxei</code>。</li>
@@ -966,7 +966,7 @@ var _hmt = _hmt || [];
 <li>三字词：<code>s1s2s3b3^&#39;(b1b1)</code>，即三字的声母加第三字的首笔，可选地加首字的第一、二笔。</li>
 <li>多字词：<code>s1s2s3s0^&#39;(b1b1)</code>，即前三字的声母加末字的声母，可选地加首字的第一、二笔，然后选择重码。</li>
 </ul>
-<p>其中，s表示声母（不区分平翘舌），b表示笔画。b用元音字母<code>aeuio</code>表示，s用21个辅音字母字母表示。数字表示第几字（其中0表示末字），^表示起始顶屏码位，’表示起始码长调整位。</p>
+<p>其中，s表示声母（不区分平翘舌），b表示笔画。b用元音字母<code>aeuio</code>表示，s用21个辅音字母字母表示。数字表示第几字（其中0表示末字），^表示起始顶屏码位，’表示起始码长调整位。笔画不足时，则重复末笔。</p>
 
         
       </div>
