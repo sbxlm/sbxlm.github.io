@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185646867.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:updated_time" content="2023-06-20T12:58:37.023Z">
+<meta property="og:updated_time" content="2023-07-01T00:18:38.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔自然">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -730,7 +730,7 @@ var _hmt = _hmt || [];
 <h2 id="3-快速入门"><a href="#3-快速入门" class="headerlink" title="3 快速入门"></a>3 快速入门</h2><p>为了减轻初学者的记忆负担，在手机上提供了助记皮肤，可以长按<code>N</code>键打开或者关闭助记。在打开时，给出了韵母、笔画和零声母用键的提示，如下图所示。如果是在电脑上，则可以把该图并放在电脑桌面上，在打字的时候帮助记忆。</p>
 <p><img src="/images/06773E478BED40E0FF9501744D551595.jpg" alt="img"></p>
 <p>注意，「嗯n」[呣m」「嘸m」「呒m」这几个字是没有韵母的，这时用v作为韵母，称为零韵母。</p>
-<h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔自然的编码规则和示例如下。其中，s表示声母，不区分平翘舌；y表示韵母；b表示笔画。b为<code>aeuio</code>，s为b之外的21个英文字母，数字表示第几字（其中0表示末字），<code>_</code>表示空格。注意，您输入时，四码字词的候选顺序可能有变化，这是因为动态码长调整的缘故（后面在动态码长一节会专门讲这一点）。</p>
+<h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔自然的编码规则和示例如下。其中，s表示声母，不区分平翘舌；y表示韵母；b表示笔画。b为<code>aeuio</code>，s为b之外的21个英文字母，数字表示第几字（其中0表示末字），<code>_</code>表示空格。笔画不足时，则重复末笔。注意，您输入时，四码字词的候选顺序可能有变化，这是因为动态码长调整的缘故（后面在动态码长一节会专门讲这一点）。</p>
 <ul>
 <li>单字：<code>sybb</code>，即声母加韵母再加前两个笔画。例如，<code>就jqoe 从csuo 觉jcoo 钱qmue 貌mkuo 缘yraa 源yroo 简jmue</code>。注意，单字的后两码都是采用的顺序单笔画，而不是自然码里复杂的双形，学习难度大大降低。</li>
 <li>二字词：<code>s1y1s2y2</code>，即第一字的声母韵母加第二字的声母韵母。二字词的例子有<code>关系grxi 参加cjjw 正确zgqt 模范mofj 答应dayy</code>。注意，这里的<code>正zg</code>是没有区分平翘舌的，与自然码的<code>正vg</code>不同。</li>
@@ -777,7 +777,6 @@ var _hmt = _hmt || [];
 <p><img src="/images/ZrxhZiziuu.png" alt="自然小鹤Ziziuu"></p>
 <p>可见，在输入重码太多的二字词时，通过追加首字头两个笔画，会大大地提高输入效率。</p>
 <p>三字词和多字词也可以类似地使用扩展编码。比如，「旧石器」一词在第一次输入时，在输入<code>jsqi</code>后需要按多次翻页键，然后再进行选择，效率比较低，但是在追加首字的前两笔<code>ii</code>后它就出现在第一页上了。再如，「结绳记事」在第一次输入时，输入<code>jsjs</code>后需要按多次翻页键才能找到，而在加上首字的前两笔<code>aa</code>后就出现在第一页上了。</p>
-<p>需要注意的是，声笔自然的单字没有设计扩展编码，因为对于常用字来说，其重码现象并不严重。另外，扩展编码需要在你有任何翻页操作前使用，否在输入第五码时就会直接选择重码上屏了。</p>
 <h3 id="3-4-编码反查"><a href="#3-4-编码反查" class="headerlink" title="3.4 编码反查"></a>3.4 编码反查</h3><p>在使用声笔自然的时候，特别是在学习声笔自然之初，不可避免地会遇到不会打的字。怎么办呢？程序提供了丰富的反查手段，可以通过笔画和拼音来反查编码，还可以采用字海两分来反查和输入非 GBK 汉字。另外，还通过反查提供了临时拼音输入法。</p>
 <h4 id="3-4-1-拼音反查"><a href="#3-4-1-拼音反查" class="headerlink" title="3.4.1 拼音反查"></a>3.4.1 拼音反查</h4><p>在知道拼音而不知道字形时用 i 引导拼音反查，注意零声母要用 v 充当。</p>
 <p>例如，要反查「访」字的编码，就在输入 i 之后再输入它的拼音 fang，所以实际的输入为 ifang，结果如下图所示。反查出「访」字的编码为 fhoaoe。如果是多音字，那么就会有多个编码，如图中的「房」字就有 fhoaeu 和 phoaeu 两个编码。</p>
@@ -851,10 +850,10 @@ var _hmt = _hmt || [];
 <li>y = [qwertasdfgzxcvbyuiophjklnm]</li>
 <li>b = [aeuio]</li>
 </ul>
-<p><code>^</code>表示起始顶屏码位，字母后的数字表示词组中的第几个字，0特别地表示末字；<code>&#39;</code>表示码长调整位；s表示声母（大写时表示用大写字母输入），y表示双拼，b表示笔画。s采用 aeuio 以外的 21 个英文字母，y采用所有26个字母，b采用 aeuio 这几个元音字母。</p>
+<p><code>^</code>表示起始顶屏码位，字母后的数字表示词组中的第几个字，0特别地表示末字；<code>&#39;</code>表示码长调整位；s表示声母（大写时表示用大写字母输入），y表示双拼，b表示笔画。s采用 aeuio 以外的 21 个英文字母，y采用所有26个字母，b采用 aeuio 这几个元音字母。注意，笔画不足时，则重复末笔。</p>
 <p>为了便于用户总结和记忆声笔自然的基本内容，现将其字词的编码格式以浓缩的表达式方式总结如下。</p>
 <ul>
-<li>单字 <code>syb^b</code></li>
+<li>单字 <code>syb^b&#39;bb</code></li>
 <li>二字词 <code>s1y1s2y2^&#39;b1b1</code></li>
 <li>三字词 <code>s1s2s3y3^&#39;b1b1</code></li>
 <li>多字词 <code>s1s2s3s0^&#39;b1b1</code></li>

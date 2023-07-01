@@ -155,7 +155,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230617091027173.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:updated_time" content="2023-06-20T12:58:37.023Z">
+<meta property="og:updated_time" content="2023-07-01T00:18:38.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔小鹤">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -729,7 +729,7 @@ var _hmt = _hmt || [];
 <h2 id="3-快速入门"><a href="#3-快速入门" class="headerlink" title="3 快速入门"></a>3 快速入门</h2><p>为了减轻初学者的记忆负担，在手机上提供了助记皮肤，可以长按<code>N</code>键打开或者关闭助记。在打开时，给出了韵母、笔画和零声母用键的提示，如下图所示。如果是在电脑上，则可以把该图并放在电脑桌面上，在打字的时候帮助记忆。</p>
 <p><img src="/images/5EC6D6404DE187DFA48CA749E141FCA7.jpg" alt="img"></p>
 <p>注意，「嗯n」[呣m」「嘸m」「呒m」这几个字是没有韵母的，这时用v作为韵母，称为零韵母。</p>
-<h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔小鹤的编码规则和示例如下。其中，s表示声母，不区分平翘舌；y表示韵母；b表示笔画。b为<code>aeuio</code>，s为b之外的21个英文字母，数字表示第几字（其中0表示末字），<code>_</code>表示空格。注意，您输入时，四码字词的候选顺序可能有变化，这是因为动态码长调整的缘故（后面在动态码长一节会专门讲这一点）。</p>
+<h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔小鹤的编码规则和示例如下。其中，s表示声母，不区分平翘舌；y表示韵母；b表示笔画。b为<code>aeuio</code>，s为b之外的21个英文字母，数字表示第几字（其中0表示末字），<code>_</code>表示空格。笔画不足时，则重复末笔。注意，您输入时，四码字词的候选顺序可能有变化，这是因为动态码长调整的缘故（后面在动态码长一节会专门讲这一点）。</p>
 <ul>
 <li>单字：<code>sybb</code>，即声母加韵母再加前两个笔画。例如，<code>就jqoe 从csuo 觉jnoo 钱qmue 貌mcuo 缘yraa 源yroo 简jmue</code>。注意，单字的后两码都是采用的顺序单笔画，而不是小鹤音形里复杂的双形，学习难度大大降低。</li>
 <li>二字词：<code>s1y1s2y2</code>，即第一字的声母韵母加第二字的声母韵母。二字词的例子有<code>关系grxi 参加cjjx 正确zgqt 模范mofj 答应dayk</code>。注意，这里的<code>正zg</code>是没有区分平翘舌的，与小鹤音形的<code>正vg</code>不同。</li>
@@ -848,10 +848,10 @@ var _hmt = _hmt || [];
 <li>y = [qwertasdfgzxcvbyuiophjklnm]</li>
 <li>b = [aeuio]</li>
 </ul>
-<p><code>^</code>表示起始顶屏码位，字母后的数字表示词组中的第几个字，0特别地表示末字；<code>&#39;</code>表示码长调整位；s表示声母（大写时表示用大写字母输入），y表示双拼，b表示笔画。s采用 aeuio 以外的 21 个英文字母，y采用所有26个字母，b采用 aeuio 这几个元音字母。</p>
+<p><code>^</code>表示起始顶屏码位，字母后的数字表示词组中的第几个字，0特别地表示末字；<code>&#39;</code>表示码长调整位；s表示声母（大写时表示用大写字母输入），y表示双拼，b表示笔画。s采用 aeuio 以外的 21 个英文字母，y采用所有26个字母，b采用 aeuio 这几个元音字母。注意，笔画不足时，则重复末笔。</p>
 <p>为了便于用户总结和记忆声笔小鹤的基本内容，现将其字词的编码格式以浓缩的表达式方式总结如下。</p>
 <ul>
-<li>单字 <code>syb^b</code></li>
+<li>单字 <code>syb^b&#39;bb</code></li>
 <li>二字词 <code>s1y1s2y2^&#39;b1b1</code></li>
 <li>三字词 <code>s1s2s3y3^&#39;b1b1</code></li>
 <li>多字词 <code>s1s2s3s0^&#39;b1b1</code></li>
