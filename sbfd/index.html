@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308154853109.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230308154537199.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230702172757226.png">
-<meta property="og:updated_time" content="2023-07-02T09:33:04.769Z">
+<meta property="og:updated_time" content="2023-07-04T22:24:14.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞单">
 <meta name="twitter:description" content="1 飞单概述声笔飞单，简称飞单，实际上只是飞码的单字模式。由于单字的输入在飞码和飞讯里是完全一样的，所以把它单独出来进行讲解，以避免重复。 1.1 适用场景飞单特别适合于单字派用户，其单字平均码长很短，记忆单元少，完全静态编码，更容易在短期内做到快速盲打，而且打字速度稳定，受文本类型的影响小。 在学习飞码和飞讯的单字输入时，也建议采用飞单来练习，这一方面可以减少按键，另一方面也能避免多余信息的干扰">
@@ -573,7 +573,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">42</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">43</span></a>
 
   </li>
 
@@ -737,10 +737,1074 @@ var _hmt = _hmt || [];
 <h2 id="2-编码方法"><a href="#2-编码方法" class="headerlink" title="2 编码方法"></a>2 编码方法</h2><h3 id="2-1-特征信息"><a href="#2-1-特征信息" class="headerlink" title="2.1 特征信息"></a>2.1 特征信息</h3><p>飞单采用声母、笔画和部首这几种汉字特征信息为单字进行编码。所以，需要首先了解这些特征信息。</p>
 <h4 id="2-1-1-声母笔画"><a href="#2-1-1-声母笔画" class="headerlink" title="2.1.1 声母笔画"></a>2.1.1 声母笔画</h4><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#1-声母和笔画">声母和笔画</a></p>
 <h4 id="2-1-2-偏旁部首"><a href="#2-1-2-偏旁部首" class="headerlink" title="2.1.2 偏旁部首"></a>2.1.2 偏旁部首</h4><p>飞码使用的偏旁部首，简称部首，一般就是查字典时用的偏旁部首，以音托为主，辅之以形托等手段来确定其代码，从而映射到标准键盘上，所以记忆难度比五笔字型小得多。</p>
-<h5 id="2-1-2-1-部首类型"><a href="#2-1-2-1-部首类型" class="headerlink" title="2.1.2.1 部首类型"></a>2.1.2.1 部首类型</h5><p>部首分为成字部首和非成字部首两种。</p>
+<h5 id="2-1-2-1-部首解释"><a href="#2-1-2-1-部首解释" class="headerlink" title="2.1.2.1 部首解释"></a>2.1.2.1 部首解释</h5><p>部首分为成字部首和非成字部首两种。</p>
 <p>成字部首取其拼音的声母作为代码，如：气 q、韦 w、人 r、田 t、又 y、疋 y（音为 ya）、片 p、镸 z（张字音）。但是，为了增强离散重码的能力，个别成字部首采用了形托，如：日和曰均为q，因为它们像大写的Q；再如：止n，算是有点无理的安排。飞码的部首大多数为成字部首。</p>
 <p>非成字部首一般取其名称拼音的声母作为代码，如：勹 b（包字头）、灬 l（烈字底）、廾 n（弄字底）、攴 q（敲字旁）、攵夂 夊 w（反文旁）、亠 w（文字头）、彐 x（寻字头）、罒 z（置字头）、巛 z（甾字头）。但是，有的非成字部首取其起笔名称拼音的声母作为代码，如：丶冫氵 d（点起笔）、<code> 丿彡</code> p（撇起笔）；有的非成字部首按照形状相似来确定代码，如：忄（像小写字母 l）、廴辶（像 L）、衤礻（形状勉强像 N）。</p>
-<h5 id="2-1-2-2-助记方法"><a href="#2-1-2-2-助记方法" class="headerlink" title="2.1.2.2 助记方法"></a>2.1.2.2 助记方法</h5><p>为了减轻初学者的记忆负担，手机上提供了助记皮肤，如下图所示，可以长按上<code>N</code>键打开或者关闭助记。如果是在电脑上，则可以把该图并放在电脑桌面上，在打字的时候帮助记忆。</p>
+<p>部首的命名和代码是学习的关键之一，能够深刻理解的话，对初学者帮助很大，以下给出一个完整的部首表，包含其代码、名称和备注。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">部首</th>
+<th style="text-align:left">代码</th>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">八</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">八 (含单字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">白</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">白</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">勹</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">包 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">贝</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">贝</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">鼻</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">鼻</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">比</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">比</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">灬</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">烈 (字底)</td>
+<td style="text-align:left">与 “火” 的读音不一致</td>
+</tr>
+<tr>
+<td style="text-align:left">髟</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">髟 (音 biao)</td>
+<td style="text-align:left">难字</td>
+</tr>
+<tr>
+<td style="text-align:left">冫</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">(两) 点 (水)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">卜</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">卜 (含占字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">艹</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">草 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">厂</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">厂</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">车</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">车</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">辰</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">辰</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">齿</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">齿</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">彳</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">彳 (音 chi)</td>
+<td style="text-align:left">本身是一个成字</td>
+</tr>
+<tr>
+<td style="text-align:left">赤</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">赤</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">虫</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">虫</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">辶</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">(形似 L)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">寸</td>
+<td style="text-align:left">c</td>
+<td style="text-align:left">寸</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">大</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">大</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">歹</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">歹</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">刀</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">刀</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">刂</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">立 (刀旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">斗</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">斗</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">豆</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">豆</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">儿</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">儿</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">耳</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">耳</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">二</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">二</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">匚</td>
+<td style="text-align:left">k</td>
+<td style="text-align:left">(框形)</td>
+<td style="text-align:left">分离部件</td>
+</tr>
+<tr>
+<td style="text-align:left">方</td>
+<td style="text-align:left">f</td>
+<td style="text-align:left">方</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">风</td>
+<td style="text-align:left">f</td>
+<td style="text-align:left">风</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">缶</td>
+<td style="text-align:left">f</td>
+<td style="text-align:left">缶 (音 fou)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">阝</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">形似 P</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">父</td>
+<td style="text-align:left">f</td>
+<td style="text-align:left">父</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">戈</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">戈</td>
+<td style="text-align:left">可穿插部件</td>
+</tr>
+<tr>
+<td style="text-align:left">革</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">革</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">艮</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">艮 (音 gen)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">工</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">工</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">弓</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">弓</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">廾</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">弄 (字底)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">骨</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">骨</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">瓜</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">瓜</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">广</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">广</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">鬼</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">鬼</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">丨</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">竖 (笔画名，含竖左钩)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">禾</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">禾</td>
+<td style="text-align:left">可穿插部件</td>
+</tr>
+<tr>
+<td style="text-align:left">黑</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">黑</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">虍</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">虎 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">户</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">户</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">火</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">火</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">几</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">几</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">己</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">己 (含已字和巳字)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">彐</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">寻 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">见</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">见</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">角</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">角</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">卩</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">形似 P</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">巾</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">巾</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">斤</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">斤</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">钅</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">金 (字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">金</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">金</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">冂</td>
+<td style="text-align:left">k</td>
+<td style="text-align:left">(框形)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">臼</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">臼</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">口</td>
+<td style="text-align:left">k</td>
+<td style="text-align:left">口</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">耒</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">耒 (音 lei)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">里</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">里</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">力</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">力</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">立</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">立</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">龙</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">龙</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">鹿</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">鹿</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">麻</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">麻</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">马</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">马</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">毛</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">毛</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">门</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">门</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">米</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">米</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">冖</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">冠 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">糸</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">(形似乡，系字底)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">宀</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">宫 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">皿</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">皿</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">木</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">木</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">目</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">目</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">疒</td>
+<td style="text-align:left">b</td>
+<td style="text-align:left">病 (字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">鸟</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">鸟</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">肀</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">(同聿音)</td>
+<td style="text-align:left">可穿插部件</td>
+</tr>
+<tr>
+<td style="text-align:left">牛</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">牛 (含告字头和牺字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">女</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">女</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">爿</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">类似丬</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">皮</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">皮</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">片</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">片</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">丿</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">撇 (笔画名)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">攵</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">(反) 文 (旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">其</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">其</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">气</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">气</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">凵</td>
+<td style="text-align:left">k</td>
+<td style="text-align:left">(框形)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">欠</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">欠</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">青</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">青</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">犭</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">犬 (字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">犬</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">犬</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">人</td>
+<td style="text-align:left">r</td>
+<td style="text-align:left">人</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">亻</td>
+<td style="text-align:left">r</td>
+<td style="text-align:left">人 (字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">日</td>
+<td style="text-align:left">q</td>
+<td style="text-align:left">(形似 Q)(含曰字)</td>
+<td style="text-align:left">形似的说法比较勉强</td>
+</tr>
+<tr>
+<td style="text-align:left">山</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">山</td>
+<td style="text-align:left">可穿插部件</td>
+</tr>
+<tr>
+<td style="text-align:left">彡</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">(撇起笔)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">舌</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">舌</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">身</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">身</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">尸</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">尸</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">十</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">十</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">饣</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">食旁</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">石</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">石</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">食</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">食</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">矢</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">矢</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">豕</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">豕 (音 shi)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">士</td>
+<td style="text-align:left">t</td>
+<td style="text-align:left">(形似土)</td>
+<td style="text-align:left">与 “士” 的读音不一致</td>
+</tr>
+<tr>
+<td style="text-align:left">礻</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">(形似 N)</td>
+<td style="text-align:left">与 “示” 的读音不一致</td>
+</tr>
+<tr>
+<td style="text-align:left">示</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">示</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">手</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">手</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">扌</td>
+<td style="text-align:left">f</td>
+<td style="text-align:left">扶 (手旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">殳</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">殳 (音 shu)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">鼠</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">鼠</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">氵</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">(三) 点 (水)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">水</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">水</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">厶</td>
+<td style="text-align:left">s</td>
+<td style="text-align:left">私 (字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">纟</td>
+<td style="text-align:left">j</td>
+<td style="text-align:left">绞 (丝旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">四</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">(置字头)</td>
+<td style="text-align:left">代替置字头，本身不是偏旁</td>
+</tr>
+<tr>
+<td style="text-align:left">田</td>
+<td style="text-align:left">t</td>
+<td style="text-align:left">田</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">亠</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">文 (字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">土</td>
+<td style="text-align:left">t</td>
+<td style="text-align:left">土</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">瓦</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">瓦</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">王</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">王</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">囗</td>
+<td style="text-align:left">k</td>
+<td style="text-align:left">(框形)</td>
+<td style="text-align:left">可穿插部件</td>
+</tr>
+<tr>
+<td style="text-align:left">韦</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">韦</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">文</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">文</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">毋</td>
+<td style="text-align:left">m</td>
+<td style="text-align:left">(形似母)</td>
+<td style="text-align:left">“毋” 音 wu</td>
+</tr>
+<tr>
+<td style="text-align:left">夕</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">夕</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">西</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">西</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">小</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">小 (含兴字头和尝字头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">忄</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">立 (心旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">心</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">心 (含恭字底)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">辛</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">辛</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">穴</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">穴</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">血</td>
+<td style="text-align:left">x</td>
+<td style="text-align:left">血</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">疋</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">疋 (音 ya)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">讠</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">言旁</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">言</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">言</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">羊</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">羊</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">业</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">业</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">页</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">页</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">一</td>
+<td style="text-align:left">h</td>
+<td style="text-align:left">横 (笔画名，含提笔)</td>
+<td style="text-align:left">与 “一” 的读音不一致</td>
+</tr>
+<tr>
+<td style="text-align:left">衤</td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">(形似 N)</td>
+<td style="text-align:left">与 “衣” 的读音不一致</td>
+</tr>
+<tr>
+<td style="text-align:left">衣</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">衣</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">乙</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">折 (笔画名，含变笔)</td>
+<td style="text-align:left">与 “乙” 的读音不一致</td>
+</tr>
+<tr>
+<td style="text-align:left">音</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">音</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">廴</td>
+<td style="text-align:left">l</td>
+<td style="text-align:left">(形似 L)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">用</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">用</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">尢</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">尤 (字底)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">酉</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">酉 (音 you)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">又</td>
+<td style="text-align:left">y</td>
+<td style="text-align:left">又</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">鱼</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">v (音 yu，含 ü)</td>
+<td style="text-align:left">带韵头 ü，故用 v 表示</td>
+</tr>
+<tr>
+<td style="text-align:left">羽</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">v (音 yu，含 ü)</td>
+<td style="text-align:left">带韵头 ü，故用 v 表示</td>
+</tr>
+<tr>
+<td style="text-align:left">雨</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">v (音 yu，含 ü)</td>
+<td style="text-align:left">带韵头 ü，故用 v 表示</td>
+</tr>
+<tr>
+<td style="text-align:left">聿</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">聿字旁</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">月</td>
+<td style="text-align:left">v</td>
+<td style="text-align:left">v (音 yue，含 ü)</td>
+<td style="text-align:left">带韵头 ü，故用 v 表示</td>
+</tr>
+<tr>
+<td style="text-align:left">夂</td>
+<td style="text-align:left">w</td>
+<td style="text-align:left">(反) 文 (头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">止</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">止</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">豸</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">豸 (音 zhi)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">舟</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">舟</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">竹</td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">(撇起笔，含竹头)</td>
+<td style="text-align:left">代替筑字头，本身不是偏旁</td>
+</tr>
+<tr>
+<td style="text-align:left">丶</td>
+<td style="text-align:left">d</td>
+<td style="text-align:left">点 (笔画名，含捺笔)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">爪</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">爪 (含爪头)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">丬</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">状 (字旁)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">隹</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">隹 (音 zhui)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">子</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">子</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">自</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">自</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">走</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">走</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">足</td>
+<td style="text-align:left">z</td>
+<td style="text-align:left">足 (含足旁)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="2-1-2-2-键盘助记"><a href="#2-1-2-2-键盘助记" class="headerlink" title="2.1.2.2 键盘助记"></a>2.1.2.2 键盘助记</h5><p>为了减轻初学者的记忆负担，手机上提供了助记皮肤，如下图所示，可以长按上<code>N</code>键打开或者关闭助记。如果是在电脑上，则可以把该图并放在电脑桌面上，在打字的时候帮助记忆。</p>
 <p><img src="/images/36AA9F674320EB2662E5DAD4D6BB700F.jpg" alt="img"></p>
 <h5 id="2-1-2-3-部首位置"><a href="#2-1-2-3-部首位置" class="headerlink" title="2.1.2.3 部首位置"></a>2.1.2.3 部首位置</h5><p>与字典的部首类似，飞单所取的部首可能在前面也可能在后面，例如「墓募慕蓦暮謩摹」这些字如果均取「艹」作为部首就会产生大量重码，而取「莫」以下的部分作为部首则可以有效地区分重码，同时也与语文知识相符合。但是，这么做给学习过其它并不规范的形码如五笔的飞码初学者带来了一定的困难，然而这是为了获得强大离散能力必须作出的牺牲。</p>
 <p>不过，只要掌握了一般的拆分原则，举一反三，绝大多数困难都会迎刃而解。这个拆分原则是：将汉字尽量直观地拆分为左右或者上下两个部分，再按先后顺序取部首，前面部分优先，前面部分不是部首就取后面部分，但是单笔画的优先级别更低；若前后两部分都不是部首，则继续按上述原则拆分。注意，为了尽量离散重码，存在个别例外。若偏旁部首本身是一个成字，那么就取它的第一个笔画作为部首。</p>
@@ -828,7 +1892,7 @@ var _hmt = _hmt || [];
 <p>「敌」字的部首没有按顺序取「舌」而取了「攵」</p>
 <p>「或」字的部首没有取「戈」而取了「一」</p>
 <p>「重」「 垂」取的是最下面的「二」而不是首笔撇</p>
-<p>「奏」「三」取的是上面的「二」</p>
+<p>「奏」「三」「表」取的是上面的「二」</p>
 <p>「某」取的「艹」而不是「木」</p>
 <p>「世」和「甘」取的「艹」而不是「一」</p>
 <p>「半」取的「丶」而不是「八」</p>
@@ -915,6 +1979,8 @@ var _hmt = _hmt || [];
 <p><img src="/images/image-20230308154537199.png" alt="image-20230308154537199"></p>
 <p>注意，上图中次选「建设」一般的声声词，不属于数选词，需要用Tab来选择，用数字是选择不了的。</p>
 <p><img src="/images/image-20230702172757226.png" alt="image-20230702172757226"></p>
+<h3 id="5-3-数选顶屏"><a href="#5-3-数选顶屏" class="headerlink" title="5.3 数选顶屏"></a>5.3 数选顶屏</h3><p>数选词在输入数字后并不会立刻上屏，但是可以在后接其它字词时被顶上屏幕。因此，除了在需要立刻上屏时，是不会有用键损失的。这种延迟上屏的设计是为了便于在误顶屏的时候进行修改，毕竟数字键距离远，按错的概率要大些；同时，也与顶功编码延迟上屏的习惯一脉相承。</p>
+<p>例如，在输入wm7后，「未免」并不会立刻上屏。这时，如果后面要输入「要」字，那么在输入y时，「未免」就会被顶上屏幕；若再后续数字，也能将「未免」顶上屏幕。</p>
 <h2 id="6-强化训练"><a href="#6-强化训练" class="headerlink" title="6 强化训练"></a>6 强化训练</h2><p>关于打字的训练软件、训练目和打字速度的一般性讨论详见声笔基础中的<a href="https://sbxlm.gitee.io/sbjc/#9-打字训练">打字训练</a>一节。这里只讨论飞码打字的具体训练方法。在单字训练的时候，建议使用单字模式，以减少冗余提示对练习者的干扰，加速单字编码条件反射的形成。</p>
 <h3 id="6-1-单字训练"><a href="#6-1-单字训练" class="headerlink" title="6.1 单字训练"></a>6.1 单字训练</h3><p>需要强化训练的内容包括以下单字，并且要以所列的顺序进行：</p>
 <p>(1) 一简字：21个，详见<a href="https://sbxlm.gitee.io/sbjc/#9-4-1-一简字">一简字</a></p>
@@ -994,7 +2060,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1325,7 +2391,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-飞单概述"><span class="nav-text">1 飞单概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-适用场景"><span class="nav-text">1.1 适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2 比较优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码方法"><span class="nav-text">2 编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-特征信息"><span class="nav-text">2.1 特征信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-声母笔画"><span class="nav-text">2.1.1 声母笔画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-偏旁部首"><span class="nav-text">2.1.2 偏旁部首</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-1-部首类型"><span class="nav-text">2.1.2.1 部首类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-2-助记方法"><span class="nav-text">2.1.2.2 助记方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-3-部首位置"><span class="nav-text">2.1.2.3 部首位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码规则"><span class="nav-text">2.2 编码规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-一简字"><span class="nav-text">2.2.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-二简字"><span class="nav-text">2.2.2 二简字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-1-声笔字"><span class="nav-text">2.2.2.1 声笔字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-2-声偏字"><span class="nav-text">2.2.2.2 声偏字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-三简字"><span class="nav-text">2.2.3 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-全码字"><span class="nav-text">2.2.4 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-缩减码"><span class="nav-text">2.2.5 缩减码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-部首编码"><span class="nav-text">2.2.6 部首编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-特取字"><span class="nav-text">2.2.7 特取字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-编码反查"><span class="nav-text">2.3 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-拼音反查"><span class="nav-text">2.3.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-声笔反查"><span class="nav-text">2.3.2 声笔反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-笔画反查"><span class="nav-text">2.3.3 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-两分反查"><span class="nav-text">2.3.4 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-临时拼音"><span class="nav-text">2.3.5 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单字输入"><span class="nav-text">3 单字输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-模式调整"><span class="nav-text">3.1 模式调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-输入方法"><span class="nav-text">3.2 输入方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词组输入"><span class="nav-text">4 词组输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-一简组合"><span class="nav-text">4.1 一简组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-声声词组"><span class="nav-text">4.2 声声词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-空位词组"><span class="nav-text">4.3 空位词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-飞码词组"><span class="nav-text">4.4 飞码词组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-增强模式"><span class="nav-text">5 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-数选单字"><span class="nav-text">5.1 数选单字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-数选词组"><span class="nav-text">5.2 数选词组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-强化训练"><span class="nav-text">6 强化训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-单字训练"><span class="nav-text">6.1 单字训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-综合训练"><span class="nav-text">6.2 综合训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-强制盲打"><span class="nav-text">6.3 强制盲打</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-1-隐藏提示"><span class="nav-text">6.3.1 隐藏提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-2-隐藏窗口"><span class="nav-text">6.3.2 隐藏窗口</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-飞单概述"><span class="nav-text">1 飞单概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-适用场景"><span class="nav-text">1.1 适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-比较优势"><span class="nav-text">1.2 比较优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码方法"><span class="nav-text">2 编码方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-特征信息"><span class="nav-text">2.1 特征信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-声母笔画"><span class="nav-text">2.1.1 声母笔画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-偏旁部首"><span class="nav-text">2.1.2 偏旁部首</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-1-部首解释"><span class="nav-text">2.1.2.1 部首解释</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-2-键盘助记"><span class="nav-text">2.1.2.2 键盘助记</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-2-3-部首位置"><span class="nav-text">2.1.2.3 部首位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编码规则"><span class="nav-text">2.2 编码规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-一简字"><span class="nav-text">2.2.1 一简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-二简字"><span class="nav-text">2.2.2 二简字</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-1-声笔字"><span class="nav-text">2.2.2.1 声笔字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-2-2-声偏字"><span class="nav-text">2.2.2.2 声偏字</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-三简字"><span class="nav-text">2.2.3 三简字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-全码字"><span class="nav-text">2.2.4 全码字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-缩减码"><span class="nav-text">2.2.5 缩减码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-6-部首编码"><span class="nav-text">2.2.6 部首编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-7-特取字"><span class="nav-text">2.2.7 特取字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-编码反查"><span class="nav-text">2.3 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-拼音反查"><span class="nav-text">2.3.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-声笔反查"><span class="nav-text">2.3.2 声笔反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-笔画反查"><span class="nav-text">2.3.3 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-两分反查"><span class="nav-text">2.3.4 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-5-临时拼音"><span class="nav-text">2.3.5 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单字输入"><span class="nav-text">3 单字输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-模式调整"><span class="nav-text">3.1 模式调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-输入方法"><span class="nav-text">3.2 输入方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-词组输入"><span class="nav-text">4 词组输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-一简组合"><span class="nav-text">4.1 一简组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-声声词组"><span class="nav-text">4.2 声声词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-空位词组"><span class="nav-text">4.3 空位词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-飞码词组"><span class="nav-text">4.4 飞码词组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-增强模式"><span class="nav-text">5 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-数选单字"><span class="nav-text">5.1 数选单字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-数选词组"><span class="nav-text">5.2 数选词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-数选顶屏"><span class="nav-text">5.3 数选顶屏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-强化训练"><span class="nav-text">6 强化训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-单字训练"><span class="nav-text">6.1 单字训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-综合训练"><span class="nav-text">6.2 综合训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-强制盲打"><span class="nav-text">6.3 强制盲打</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-1-隐藏提示"><span class="nav-text">6.3.1 隐藏提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-2-隐藏窗口"><span class="nav-text">6.3.2 隐藏窗口</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

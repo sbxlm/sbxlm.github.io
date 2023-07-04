@@ -147,7 +147,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221108152502471.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230313103002849.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230223083757560.png">
-<meta property="og:updated_time" content="2023-07-01T09:36:50.313Z">
+<meta property="og:updated_time" content="2023-07-04T21:55:56.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="声笔系列码是基于著名的开源输入法平台Rime进行二次开发的，其安装配置比较复杂。这一方面有Rime的原因，因为它没有提供丰富的图形界面，对普通用户不太友好。 在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式的强大和灵活。闯过这一关，就会如鱼得水，就能随心所欲！本文就是帮助用户克服困难，过关斩将的。 点">
@@ -556,7 +556,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">42</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">43</span></a>
 
   </li>
 
@@ -727,14 +727,20 @@ var _hmt = _hmt || [];
 <h3 id="2-2-安卓版安装"><a href="#2-2-安卓版安装" class="headerlink" title="2.2 安卓版安装"></a>2.2 安卓版安装</h3><p>声笔输入法安卓版没有包含输入方案，所以需要同时用到Win版安装包（需另行下载）中的方案文件。在安装主程序后，打开用户文件夹rime（其路径一般是/storage/emulated/0/rime），将声笔Win版安装包里sbxlm文件夹（但不包含该文件夹本身）中的内容都复制进去，再重新部署一下就算安装好了。如果发生闪退，就请重启一下系统后使用就没问题了。</p>
 <h3 id="2-3-Mac版安装"><a href="#2-3-Mac版安装" class="headerlink" title="2.3 Mac版安装"></a>2.3 Mac版安装</h3><p>声笔输入法Mac版没有包含输入方案，所以需要同时用到Win版安装包（需另行下载）中的方案文件。在安装主程序后（一般会重启系统），打开用户设定文件夹，将声笔Win版安装包里sbxlm文件夹（但不包含该文件夹本身）中的内容都复制进去，再重新部署一下就算安装好了。</p>
 <p><img src="/images/image-20230223082952594.png" alt="image-20230223082952594"></p>
-<h3 id="2-4-方案选择"><a href="#2-4-方案选择" class="headerlink" title="2.4 方案选择"></a>2.4 方案选择</h3><p>在安装好声笔软件后，默认使用的输入方案为声笔简码。如果要使用声笔输入法的其它方案，在电脑上可用F4或者Ctrl+~进行切换。</p>
+<h3 id="2-4-Linux上安装"><a href="#2-4-Linux上安装" class="headerlink" title="2.4 Linux上安装"></a>2.4 Linux上安装</h3><p>在linux上安装声笔软件，请参见以下链接。</p>
+<p><a href="https://aur.archlinux.org/packages/rime-sbxlm" target="_blank" rel="noopener">https://aur.archlinux.org/packages/rime-sbxlm</a><br><a href="https://aur.archlinux.org/packages/librime-sbxlm-git" target="_blank" rel="noopener">https://aur.archlinux.org/packages/librime-sbxlm-git</a></p>
+<p>如果是arch系的发行版，直接从archlinux-cn的社区源中安装librime-sbxlm-git和rime-sbxlm：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S librime-sbxlm-git rime-sbxlm</span><br></pre></td></tr></table></figure>
+<p>完成后执行命令 sbxlm-init 即可。</p>
+<p>如果是其他发行版，可以参考archlinux的打包脚本。</p>
+<h3 id="2-5-方案选择"><a href="#2-5-方案选择" class="headerlink" title="2.5 方案选择"></a>2.5 方案选择</h3><p>在安装好声笔软件后，默认使用的输入方案为声笔简码。如果要使用声笔输入法的其它方案，在电脑上可用F4或者Ctrl+~进行切换。</p>
 <p><img src="/images/image-20230620083317643.png" alt="image-20230620083317643"></p>
 <p>在手机上则长按左下角标有的「选单」的按键，然后选择「方案」，再从弹出窗口里选择你需要的方案即可。</p>
 <p><img src="/images/image-20230620084548537.png" alt="image-20230620084548537"></p>
-<h3 id="2-5-错误处理"><a href="#2-5-错误处理" class="headerlink" title="2.5 错误处理"></a>2.5 错误处理</h3><p>安装后无法使用一般都是由于安装不全造成的。最简单的办法就是打用户文件夹，删除其中的所有文件，然后将安装包里sbxlm目录里的所有东西（包括文件和子目录，但不包括sbxlm目录本身）手动复制进去，再重新部署一下就行了。</p>
+<h3 id="2-6-错误处理"><a href="#2-6-错误处理" class="headerlink" title="2.6 错误处理"></a>2.6 错误处理</h3><p>安装后无法使用一般都是由于安装不全造成的。最简单的办法就是打用户文件夹，删除其中的所有文件，然后将安装包里sbxlm目录里的所有东西（包括文件和子目录，但不包括sbxlm目录本身）手动复制进去，再重新部署一下就行了。</p>
 <p>电脑上遇到无法删除文件时，可以停用小狼毫算法服务以后再删除，但是要记住更名后重新启动小狼毫算法服务，否则是不能打中文的。如果要保留原来的文件，则请先做一个备份。</p>
 <p><img src="/images/image-20230620085710163.png" alt="image-20230620085710163"></p>
-<h3 id="2-6-软件卸载"><a href="#2-6-软件卸载" class="headerlink" title="2.6 软件卸载"></a>2.6 软件卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
+<h3 id="2-7-软件卸载"><a href="#2-7-软件卸载" class="headerlink" title="2.7 软件卸载"></a>2.7 软件卸载</h3><p>声笔系列码的卸载很简单。在Windows上，通过控制面板里的<code>卸载程序</code>功能，找到小狼毫程序将其卸载就行了。在Android手机上，通过系统自身的应用程序管理功能就能方便地卸载。MAC版和Linux下声笔的卸载方法与原版的相同，请参见相关资料。</p>
 <p>如果遇到卸载不了或者卸载不干净的输入法，可以下载使用群文件软件工具里的「输入法删除工具」来解决。此工具无需安装，直接运行就可以了。</p>
 <h2 id="3-配置与定制"><a href="#3-配置与定制" class="headerlink" title="3 配置与定制"></a>3 配置与定制</h2><p>Rime的图形界面能做的事情是有限的，在Rime的世界里是文本为王，通过编辑适当的yaml文件可以配置和定制输入法的方方面面，比传统输入法灵活和强大得多。要编辑yaml文件就需要有一个好的编辑器。在Windows上建议使用Notepad++或者Vscode，千万不要用记事本，更不要用Word。在安卓上使用时，建议使用MT管理器。</p>
 <h3 id="3-1-修改小狼毫的主题"><a href="#3-1-修改小狼毫的主题" class="headerlink" title="3.1 修改小狼毫的主题"></a>3.1 修改小狼毫的主题</h3><p>从Windows左下角的开始菜单找到小狼毫输入法，进入输入法设定。</p>
@@ -822,7 +828,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1153,7 +1159,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-软件与资源"><span class="nav-text">1 软件与资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-获取软件"><span class="nav-text">1.1 获取软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-软件构成"><span class="nav-text">1.2 软件构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装与更新"><span class="nav-text">2 安装与更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-WIN版安装"><span class="nav-text">2.1 WIN版安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安卓版安装"><span class="nav-text">2.2 安卓版安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Mac版安装"><span class="nav-text">2.3 Mac版安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-方案选择"><span class="nav-text">2.4 方案选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-错误处理"><span class="nav-text">2.5 错误处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-软件卸载"><span class="nav-text">2.6 软件卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置与定制"><span class="nav-text">3 配置与定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-修改小狼毫的主题"><span class="nav-text">3.1 修改小狼毫的主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-修改同文的主题和配色"><span class="nav-text">3.2 修改同文的主题和配色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-修改鼠须管的配色"><span class="nav-text">3.3 修改鼠须管的配色</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-软件与资源"><span class="nav-text">1 软件与资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-获取软件"><span class="nav-text">1.1 获取软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-软件构成"><span class="nav-text">1.2 软件构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装与更新"><span class="nav-text">2 安装与更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-WIN版安装"><span class="nav-text">2.1 WIN版安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安卓版安装"><span class="nav-text">2.2 安卓版安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Mac版安装"><span class="nav-text">2.3 Mac版安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Linux上安装"><span class="nav-text">2.4 Linux上安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-方案选择"><span class="nav-text">2.5 方案选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-错误处理"><span class="nav-text">2.6 错误处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-软件卸载"><span class="nav-text">2.7 软件卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置与定制"><span class="nav-text">3 配置与定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-修改小狼毫的主题"><span class="nav-text">3.1 修改小狼毫的主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-修改同文的主题和配色"><span class="nav-text">3.2 修改同文的主题和配色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-修改鼠须管的配色"><span class="nav-text">3.3 修改鼠须管的配色</span></a></li></ol></li></ol></div>
             
 
           </div>
