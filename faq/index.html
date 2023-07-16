@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="声笔输入法">
 <meta property="og:description" content="声笔系列码是什么？声笔系列码是一种独特的顶功输入法。不仅如此，它更是顶功输入的缔造者和引领者。以声笔系列码为首的顶功输入法是自成一体的，在输入法研究者和爱好者中自发地衍生出了一个庞大的体系。除声笔外，顶功输入法还有基于早期声笔飞码发展起来的西风瘦码，及后来出现的其它顶功方案，如一码起顶的左飞 1811，二码起顶的小兮码、灵形速影、左飞双拼、顶功雅歌，三码起顶的左飞三码、听雨三码，二四顶屏的顶功希码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2023-06-22T00:30:02.302Z">
+<meta property="og:updated_time" content="2023-07-07T22:36:38.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见问题">
 <meta name="twitter:description" content="声笔系列码是什么？声笔系列码是一种独特的顶功输入法。不仅如此，它更是顶功输入的缔造者和引领者。以声笔系列码为首的顶功输入法是自成一体的，在输入法研究者和爱好者中自发地衍生出了一个庞大的体系。除声笔外，顶功输入法还有基于早期声笔飞码发展起来的西风瘦码，及后来出现的其它顶功方案，如一码起顶的左飞 1811，二码起顶的小兮码、灵形速影、左飞双拼、顶功雅歌，三码起顶的左飞三码、听雨三码，二四顶屏的顶功希码">
@@ -499,7 +499,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">85</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">83</span></a>
 
   </li>
         
@@ -732,7 +732,21 @@ var _hmt = _hmt || [];
 <p>在可盲打性上，飞单优于飞讯，飞讯优于飞码。但是，在平均码长上，则相反，飞码优于飞讯，飞讯优于飞单。</p>
 <p>总之，飞系的三个输入方案是紧密相关的，但是又各有特色，适用于不同的输入场景，用户可以选择只用其中的一个，也可以根据不同的场景切换使用，发挥各自的优势。</p>
 <h2 id="声笔小狼毫可以在win7和winxp上使用吗？"><a href="#声笔小狼毫可以在win7和winxp上使用吗？" class="headerlink" title="声笔小狼毫可以在win7和winxp上使用吗？"></a>声笔小狼毫可以在win7和winxp上使用吗？</h2><p>声笔小狼毫从20230608版开始基于官方小狼毫的0.15.0进行了升级，因此只能支持win8.1以上的Windows操作系统了。想在win7和winxp上使用声笔的用户能够使用的最后一个声笔小狼毫是230528版。</p>
-<h2 id="声笔输入法待解决的问题"><a href="#声笔输入法待解决的问题" class="headerlink" title="声笔输入法待解决的问题"></a>声笔输入法待解决的问题</h2>
+<h2 id="如何使用专用自定词典？"><a href="#如何使用专用自定词典？" class="headerlink" title="如何使用专用自定词典？"></a>如何使用专用自定词典？</h2><p>飞码收录词组的数量高达48万多条，默认是进行动态调频的，以便在使用的过程中自动地调教词库，不断适配用户的打字习惯。但是，在遇到重码词都很常用时，就会发生候选位置频繁变化的问题，大大影响打字的确定性。怎么办呢？</p>
+<p>这时，可将其中一个或者几个词组在fmzdy.dict.yaml文件中用<code>s;b</code>格式的自定义词固定下来，例如：「制度z;o 到达d; 妹妹m;」，以便与四码时重码的「制定 达到 妈妈」区分开来。</p>
+<p>在格式<code>s;b</code>中，s表示声母，b表示笔画或者缺如。这种编码方式不会影响顶屏，而且码长短，效率高，空间虽然不大，但是用来区分飞码中不多的常见词重码基本上够用了。</p>
+<p>另外，对于一些非生僻字的重码和打时别手的字，也可用此类码位来设置简码，例如：「早z; 鸭y;」。</p>
+<p>实际上，这种词库调教方式，也可以用于声笔输入法的其它字词型输入方案。</p>
+<h2 id="如何创建长词？"><a href="#如何创建长词？" class="headerlink" title="如何创建长词？"></a>如何创建长词？</h2><p>在默认情况下，声笔会自动进行造词，但其长度限制为5个汉字，用户可以通过修改方案的schema改变此值，但是一般不建议修改此值，因为中文里超过5个汉字的词是很少的。改大以后产生的废词数量大增，会影响输入法性能，导致输入法卡顿。</p>
+<p>在确实需要超过5个汉字的长词时，可以通过用首码后用<code>Shift + Tab</code>切换为缓冲模式来创建。在长词上屏后，会自动退出缓冲模式。</p>
+<h2 id="飞码打字如何省略更多的空格？"><a href="#飞码打字如何省略更多的空格？" class="headerlink" title="飞码打字如何省略更多的空格？"></a>飞码打字如何省略更多的空格？</h2><ul>
+<li>组合上屏</li>
+<li>组合变换</li>
+<li>条件顶屏</li>
+<li>大写顶屏</li>
+</ul>
+<p>这类省键方法同时可以增加输入的确定性。</p>
+<h2 id="飞码打字如何尽量减少回改？"><a href="#飞码打字如何尽量减少回改？" class="headerlink" title="飞码打字如何尽量减少回改？"></a>飞码打字如何尽量减少回改？</h2><h2 id="声笔输入法待解决的问题"><a href="#声笔输入法待解决的问题" class="headerlink" title="声笔输入法待解决的问题"></a>声笔输入法待解决的问题</h2>
         
       </div>
       
@@ -842,10 +856,6 @@ var _hmt = _hmt || [];
                     
                   
                     
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1132,7 +1142,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码是什么？"><span class="nav-text">声笔系列码是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码不是什么？"><span class="nav-text">声笔系列码不是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码与Rime是什么关系？"><span class="nav-text">声笔系列码与Rime是什么关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码为什么还没有成为主流？"><span class="nav-text">声笔系列码为什么还没有成为主流？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决词库丢失的问题？"><span class="nav-text">如何解决词库丢失的问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔拼音还是声笔简码？"><span class="nav-text">选择声笔拼音还是声笔简码？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔双拼还是声笔飞系？"><span class="nav-text">选择声笔双拼还是声笔飞系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔飞单、声笔飞码还是声笔飞讯？"><span class="nav-text">选择声笔飞单、声笔飞码还是声笔飞讯？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案要设计声笔字？"><span class="nav-text">为什么飞系方案要设计声笔字？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案的部首前后不定？"><span class="nav-text">为什么飞系方案的部首前后不定？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何避免修改的同文主题被重置？"><span class="nav-text">如何避免修改的同文主题被重置？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#觉得声笔安卓版皮肤的按键太小怎么办？"><span class="nav-text">觉得声笔安卓版皮肤的按键太小怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞单、飞码和飞讯之间有何关系？"><span class="nav-text">飞单、飞码和飞讯之间有何关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔小狼毫可以在win7和winxp上使用吗？"><span class="nav-text">声笔小狼毫可以在win7和winxp上使用吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔输入法待解决的问题"><span class="nav-text">声笔输入法待解决的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码是什么？"><span class="nav-text">声笔系列码是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码不是什么？"><span class="nav-text">声笔系列码不是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码与Rime是什么关系？"><span class="nav-text">声笔系列码与Rime是什么关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码为什么还没有成为主流？"><span class="nav-text">声笔系列码为什么还没有成为主流？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决词库丢失的问题？"><span class="nav-text">如何解决词库丢失的问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔拼音还是声笔简码？"><span class="nav-text">选择声笔拼音还是声笔简码？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔双拼还是声笔飞系？"><span class="nav-text">选择声笔双拼还是声笔飞系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔飞单、声笔飞码还是声笔飞讯？"><span class="nav-text">选择声笔飞单、声笔飞码还是声笔飞讯？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案要设计声笔字？"><span class="nav-text">为什么飞系方案要设计声笔字？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案的部首前后不定？"><span class="nav-text">为什么飞系方案的部首前后不定？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何避免修改的同文主题被重置？"><span class="nav-text">如何避免修改的同文主题被重置？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#觉得声笔安卓版皮肤的按键太小怎么办？"><span class="nav-text">觉得声笔安卓版皮肤的按键太小怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞单、飞码和飞讯之间有何关系？"><span class="nav-text">飞单、飞码和飞讯之间有何关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔小狼毫可以在win7和winxp上使用吗？"><span class="nav-text">声笔小狼毫可以在win7和winxp上使用吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用专用自定词典？"><span class="nav-text">如何使用专用自定词典？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何创建长词？"><span class="nav-text">如何创建长词？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞码打字如何省略更多的空格？"><span class="nav-text">飞码打字如何省略更多的空格？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞码打字如何尽量减少回改？"><span class="nav-text">飞码打字如何尽量减少回改？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔输入法待解决的问题"><span class="nav-text">声笔输入法待解决的问题</span></a></li></ol></div>
             
 
           </div>
