@@ -137,7 +137,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2023-07-30T13:37:16.942Z">
+<meta property="og:updated_time" content="2023-08-02T22:39:23.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项，还有附有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声母和用">
@@ -711,7 +711,7 @@ var _hmt = _hmt || [];
 <h2 id="2-翻页方法"><a href="#2-翻页方法" class="headerlink" title="2 翻页方法"></a>2 翻页方法</h2><p>重码字词超过一页时，声笔用Tab正向翻页，用Shift+Tab反向翻页。而且，翻页操作在电脑上和手机上都是一样的。不过，手机上的Tab位于键盘的左下角，仅在有编码时起作用，上滑该键则相当于Shift+Tab。</p>
 <p>在定位新造词的时候，可以在没有进行过翻页时，用Shift+Tab直接跳到最后一页，这在重码很多时特别有用。如果只用Tab的话，就需要按顺序多次翻页，因为新造的词都是排在重码词中尾部的位置。</p>
 <p>注意，声笔系列码没有像一般输入法那样用逗号和句号来翻页，这是因为声笔系列码使用翻页键的情况是比较少或者很少的，无需占用常用的逗号键和句号键而使它们丧失顶屏的能力。</p>
-<h2 id="3-标点符号"><a href="#3-标点符号" class="headerlink" title="3 标点符号"></a>3 标点符号</h2><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在半角状态下的定义如下：</p>
+<h2 id="3-标点符号"><a href="#3-标点符号" class="headerlink" title="3 标点符号"></a>3 标点符号</h2><p>声笔系列码对标点符号的输入方法进行了统一和规范，以RIME的设计为基础，有少量修改，可以用<code>aeuio</code>来选择重码，更加方便、快捷。在中文标点状态下的定义如下：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -754,7 +754,7 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td style="text-align:center">&#124;</td>
-<td style="text-align:center">·, &#124;, ｜, §, ¦, ‖,・</td>
+<td style="text-align:center">·, &#124;, ｜, §, ¦, ‖</td>
 <td style="text-align:center"></td>
 <td style="text-align:center">&#96;</td>
 <td style="text-align:center">&#96;， ′, ″, ‴, ‵, ‶, ‷, ⁗</td>
@@ -777,12 +777,12 @@ var _hmt = _hmt || [];
 <td style="text-align:center">^</td>
 <td style="text-align:center">……, ^</td>
 <td style="text-align:center"></td>
-<td style="text-align:center">_</td>
-<td style="text-align:center">——, _</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-, －, ——, —, -</td>
 </tr>
 <tr>
 <td style="text-align:center">=</td>
-<td style="text-align:center">=, 々, 〃,＝</td>
+<td style="text-align:center">=, ≠, ≡, 〃, 々, ＝</td>
 <td style="text-align:center"></td>
 <td style="text-align:center">*</td>
 <td style="text-align:center">*, ＊, ·, ×, ※, ❂, ⁂, ☮, ☯, ☣, ・</td>
@@ -804,7 +804,7 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 </div>
-<p>上表中没有列出按键和标点完全一致的，如<code># %</code>等。在全角状态下，标点符号的定义几乎与半角状态下相同，只是有的半角字符变成了对应的全角字符，如<code>＆ ＠</code>等。</p>
+<p>声笔取消了全角状态，因为现在已经不再使用全角的英文字母和阿拉伯数字，而全角的符号是在中文标点状态下输入的。</p>
 <h2 id="4-中英混输"><a href="#4-中英混输" class="headerlink" title="4 中英混输"></a>4 中英混输</h2><p>许多用户不仅仅需要方便、快速地输入中文，而且需要混合输入大量的英文。由于键盘及其布局的差异，声笔中英文混输时，在电脑上和在手机上的操作方法是不一样，而且随各输入方案的设置而定。下面介绍的是声笔系列码默认设置情况下的使用方法，要特别注意在电脑上和在手机上的差异。</p>
 <p>声笔支持Rime的三种中英文输入状态：中文状态、英文状态和临时英文。在中文状态下，输入的编码字符显示在专门的编码窗口中或者嵌入显示在宿主程序的光标处，并对其进行中文转换，转换有多个结果时则列出候选项等待选择。在英文状态下，任何输入的字符都会立刻上屏。在临时英文时，输入的英文大小写字母、符号和空格会在编码窗口中缓存，回车时一起上屏。</p>
 <p>如果当前处于英文状态，若要切换为中文状态，那么在电脑上可单按左Shift或者右Shift即可，在手机上则短按状态栏左边第一项切换为中文。</p>
