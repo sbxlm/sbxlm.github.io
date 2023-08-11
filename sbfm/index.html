@@ -135,7 +135,8 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230719100636428.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221106102912202.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221106104220533.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/WmdpFm.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230805153146774.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230805153209157.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230720105949533.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230720110024765.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221029164134590.png">
@@ -144,7 +145,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxx.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SbfmYyxxoe.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230727140759102.png">
-<meta property="og:updated_time" content="2023-08-03T10:53:09.829Z">
+<meta property="og:updated_time" content="2023-08-05T07:32:38.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞码">
 <meta name="twitter:description" content="1 飞码概述声笔飞码，简称飞码，是在输入法界影响最大的顶功输入法，可以说是它直接或者间接地激发了其它非声笔系列顶功输入法的产生。 飞码是一种词组输入为主的顶功编码输入方案。它通过单字三码顶来提高单字录入效率，具有字词分离、互不冲突的特点，并且通过扩展编码来支持巨型词库，能够轻松、高效地应对具有大量词组的高冗余度文本，如政经、科技和医学类文章。在遇到离散程度高的古文等时，还可以快速切换到单字模式，采">
@@ -741,7 +742,8 @@ var _hmt = _hmt || [];
 <p>传统输入法，如五笔字型，在这些情况下，只能清除所有编码或者回退删除两码，造成了很大的浪费，而且影响了输入的连贯性。</p>
 <h3 id="3-3-大写巧用"><a href="#3-3-大写巧用" class="headerlink" title="3.3 大写巧用"></a>3.3 大写巧用</h3><p>在使用条件顶的时候，如果第三码被选重键占用，那么就无法顶前两码对应的二简字上屏，而需要退格删除两码，用空格上屏二简字，然后再重新输入第二字的编码，非常浪费。这时，可以通过大写第二字的第三码可以无条件地把二简字顶上屏而留下三个编码，不浪费已经输入的编码。</p>
 <p>例如，在输入「飞码」的时候，发现系统没有该词，但是「码」的第三码a已经被重码「飞么」占用，所以使用条件顶是不行的，这时就可以用大写的A来将「飞」顶上屏，输入法将A转换为小写a后留下三码msa，可以接着输入后面的编码，没有丝毫浪费。</p>
-<p><img src="/images/WmdpFm.png" alt="五码顶屏飞码"></p>
+<p><img src="/images/image-20230805153146774.png" alt="image-20230805153146774"></p>
+<p><img src="/images/image-20230805153209157.png" alt="image-20230805153209157"></p>
 <p>后续字词的声母，若用大写，也可以进行顶屏操作，但使用场景不一样，一般使用在二简字后忘记加空格的时候。例如，在输入「有东西」时，输入了ye但忘记了加空格上屏，接着输入了dh，这时出来的是「有灯」。不管是用ESC清除后重新输入，还是用退格键修改，成本都非常高。然而，接着用大写输入「西」的首码X，「有」字就会被顶上屏幕，剩下dhx三码，再输入「西」的第二码h即可输入「东西」了。</p>
 <p>另外，在一、二、三码后，用大写后续字词的首码也可以将首选字词顶上屏幕。「这是不行的」可以用<code>zlsBXcD</code>来输入。</p>
 <p>不过，需要注意的是，大写顶屏在大写作为编码的时候是无效的。例如，在飞码的单字状态下，第三码大写是作为编码用来输入词组的，此时不能顶前面的两码。</p>
@@ -762,8 +764,8 @@ var _hmt = _hmt || [];
 <p>二简字与三简字可以组合起来通过分号一起上屏，虽然并不能节约用键，但可以避免回改。例如，假设想用户以为「都顶」是个系统有的词组，然而输入<code>dvdy</code>后发现没有该词，同时又知道「都」是二简字、「顶」是三简字，于是就可追加「顶」的第三码<code>e</code>后，再用分号变换来上屏「都顶」。</p>
 <p><img src="/images/image-20230720105949533.png" alt="image-20230720105949533"></p>
 <p><img src="/images/image-20230720110024765.png" alt="image-20230720110024765"></p>
-<p>(8) 三个一简字的组合，可以用Shift+空格来输入。例如，「一个人」「就是了」「是不是」「不是不」等都可以这样输入。</p>
-<p>(9) 二简字加两个一简字的组合，可以用Shift+空格来输入。例如，「有一个」「这个人」「那不是」「走下去」等都可以这样输入。</p>
+<p>(8) 三个一简字的组合，可以用Shift+空格来输入，手机上可下滑空格。例如，「一个人」「就是了」「是不是」「不是不」等都可以这样输入。</p>
+<p>(9) 二简字加两个一简字的组合，可以用Shift+空格来输入，手机上可下滑空格。例如，「有一个」「这个人」「那不是」「走下去」等都可以这样输入。</p>
 <h3 id="3-5-自定词典"><a href="#3-5-自定词典" class="headerlink" title="3.5 自定词典"></a>3.5 自定词典</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#6-自定词典">自定词典</a></p>
 <h3 id="3-6-LUA脚本"><a href="#3-6-LUA脚本" class="headerlink" title="3.6 LUA脚本"></a>3.6 LUA脚本</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#7-LUA脚本">LUA脚本</a></p>
 <h3 id="3-7-设置选项"><a href="#3-7-设置选项" class="headerlink" title="3.7 设置选项"></a>3.7 设置选项</h3><p>详见：<a href="https://sbxlm.gitee.io/sbjc/#8-设置选项">设置选项</a></p>
