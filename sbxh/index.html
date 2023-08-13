@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="声笔输入法">
 <meta property="og:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/_1229368280__576a8168b7839e72a52a64e07c9fb5c1_-1626806636_Screenshot_20230813_143145_0_wifi_0.jpg">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230813150341672.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230606101410129.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230617082848989.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230617083203372.png">
@@ -155,11 +155,11 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230617091027173.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:updated_time" content="2023-08-13T06:39:14.883Z">
+<meta property="og:updated_time" content="2023-08-13T07:03:52.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔小鹤">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
-<meta name="twitter:image" content="http://sbxlm.gitee.io/images/_1229368280__576a8168b7839e72a52a64e07c9fb5c1_-1626806636_Screenshot_20230813_143145_0_wifi_0.jpg">
+<meta name="twitter:image" content="http://sbxlm.gitee.io/images/image-20230813150341672.png">
 
 
 
@@ -727,7 +727,7 @@ var _hmt = _hmt || [];
 <p>更高效是因为：首先，单字三码起顶，码长更短；其次，字词四码时用aeuio选择重码，比原来的数字键好按，可以实现快速选重；最后，字词支持动态调频，可以减少击键次数。</p>
 <p>更强大是因为：首先，声笔小鹤实现了字词分离，不再纠结是字优先还是词优先，可以支持GBK字符集超两万的汉字；其次，词组支持扩展编码，可以支持48万词组并快速离散重码；最后，具有自动词组功能，没有的词组拆开打过一次后就能自动造好。</p>
 <h2 id="3-快速入门"><a href="#3-快速入门" class="headerlink" title="3 快速入门"></a>3 快速入门</h2><p>为了减轻初学者的记忆负担，在手机上提供了助记皮肤，可以长按<code>N</code>键打开或者关闭助记。在打开时，给出了韵母、笔画和零声母用键的提示，如下图所示。如果是在电脑上，则可以把该图并放在电脑桌面上，在打字的时候帮助记忆。</p>
-<p><img src="/images/_1229368280__576a8168b7839e72a52a64e07c9fb5c1_-1626806636_Screenshot_20230813_143145_0_wifi_0.jpg" alt="img"></p>
+<p><img src="/images/image-20230813150341672.png" alt="image-20230813150341672"></p>
 <p>注意，「嗯n」[呣m」「嘸m」「呒m」这几个字是没有韵母的，这时用v作为韵母，称为零韵母。</p>
 <h3 id="3-1-基本编码"><a href="#3-1-基本编码" class="headerlink" title="3.1 基本编码"></a>3.1 基本编码</h3><p>声笔小鹤的编码规则和示例如下。其中，s表示声母，不区分平翘舌；y表示韵母；b表示笔画。b为<code>aeuio</code>，s为b之外的21个英文字母，数字表示第几字（其中0表示末字），<code>_</code>表示空格。笔画不足时，则重复末笔。注意，您输入时，四码字词的候选顺序可能有变化，这是因为动态码长调整的缘故。本文在后面的动态码长一节，会专门讲动态码长调整。</p>
 <ul>
