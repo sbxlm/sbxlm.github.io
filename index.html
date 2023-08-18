@@ -667,7 +667,7 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="创建时间：2023-08-18 10:52:28 / 修改时间：11:17:34" itemprop="dateCreated datePublished" datetime="2023-08-18T10:52:28+08:00">2023-08-18</time>
+              <time title="创建时间：2023-08-18 10:52:28 / 修改时间：11:46:02" itemprop="dateCreated datePublished" datetime="2023-08-18T10:52:28+08:00">2023-08-18</time>
             
 
             
@@ -707,8 +707,7 @@ var _hmt = _hmt || [];
 
       
         
-          
-            <h3 id="一、-更新内容："><a href="#一、-更新内容：" class="headerlink" title="一、 更新内容："></a>一、 更新内容：</h3><ol>
+          <h3 id="一、-更新内容："><a href="#一、-更新内容：" class="headerlink" title="一、 更新内容："></a>一、 更新内容：</h3><ol>
 <li><em>增加sbfm_delayed.lua脚本，以优化飞码主单延顶时的提示信息；</em></li>
 <li>优化飞系的声笔字提示与顺序；</li>
 <li>声笔简码和声笔拼音支持用四个字的声母加单引号来输入一个二简词加两个二简字的组合；</li>
@@ -720,25 +719,15 @@ var _hmt = _hmt || [];
 <li>声笔Win版sbxlm目录中增加backgrounds子目录，并在其中增加.nomedia文件。</li>
 </ol>
 <p><strong>更新方法：</strong>运行安装程序后，把除用户词典外的所有文件和文件夹复盖一下，这样可以保留已有的调频和造词。</p>
-<p>在更新的项目中，第一项和第七项（即斜体部分）需要特别说明一下。</p>
-<h3 id="二、优化飞码主单延顶时的提示信息"><a href="#二、优化飞码主单延顶时的提示信息" class="headerlink" title="二、优化飞码主单延顶时的提示信息"></a>二、优化飞码主单延顶时的提示信息</h3><p>飞码主单的延顶模式不仅有利于尽量避免使用大写，而且输入词组时使用的编码与词组模式完全一样，如下所示。</p>
-<blockquote>
-<p>蝴蝶 hcdc 饕餮 tsts 耄耋 mtdt 黑黢黢 hqqh 汹涌澎湃 xypp 中华人民共和国 zhrg</p>
-</blockquote>
-<p>在词组码长为四时，需要注意观察，若其后将发生非编码顶屏，且首选不是两个二简字时，而想输入的又是两个二简字时，则需先用分号将其作为二简组合上屏，否则会误将首选词上屏。例如，输入「选重后，」时，在输到「重后」时，结果如下。</p>
-<p><img src="https://sbxlm.gitee.io/images/image-20230817161455921.png" alt="image-20230817161455921"></p>
-<p>此时，如果用逗号顶屏，那么会将「垂饵虎口」顶上屏幕，并同时上屏逗号，这不是期望的结果。若想上屏「重后」，则必须先用分号将「重后」作为两个二简字的组合上屏，然后再输入逗号。这是在初始使用主单延顶时非常容易犯的错误，请务必注意。</p>
-<p>延顶时首选词组不能被后续的字词顶上屏幕，必须先用空格上屏，而且词组的重码还得用大写的 AEUIO 来选择。如果不习惯输入大写字母，可以修改一下 schema 文件，通过删除行前的 #号来解开下图中被注释掉的五项，用 23789 来代替大写选重键。</p>
-<p><img src="https://sbxlm.gitee.io/images/image-20230727140759102.png" alt="image-20230727140759102"></p>
-<p>需要注意的是，在用 23789 来选重后，对数字顶屏有点影响。若要同时使用增强模式，则可能与数选词发生冲突。还有，单字在四码时首选仍然是可顶屏的，单字的四码重码仍然是用小写的 aeuio 来选择的。</p>
-<p>相比即顶模式，延顶还有个好处，那就是可以像词组模式那样用组合变换，将一二简字词组合起来，通过 Tab、分号或者单引号一起上屏，从而节约用键。</p>
-<h3 id="三、e-引导的脚本"><a href="#三、e-引导的脚本" class="headerlink" title="三、e 引导的脚本"></a>三、e 引导的脚本</h3><p>用 e 加表达式来完成各种计算功能，相当于一个强大的快速计算器，例子如下。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">e1+1 輸出 2</span><br><span class="line">efloor(9^(8/7)*cos(deg(6))) 輸出 -3</span><br><span class="line">ee^pi&gt;pi^e 輸出 true</span><br><span class="line">emax(&#123;1,7,2&#125;) 輸出 7</span><br><span class="line">emap(&#123;1,2,3&#125;,\x.x^2|) 輸出 &#123;1, 4, 9&#125;</span><br><span class="line">emap(range(-5,5),\x.x*pi/4|,deriv(sin)) 輸出 &#123;-0.7071, -1, -0.7071, 0, 0.7071, 1, 0.7071, 0, -0.7071, -1&#125;</span><br><span class="line">e$(range(-5,5,0.01))(map,\x.-60*x^2-16*x+20|)(max)() 輸出 21.066</span><br><span class="line">etest(\x.trunc(sin(x),1e-3)==trunc(deriv(cos)(x),1e-3)|,range(-2,2,0.1)) 輸出 true</span><br></pre></td></tr></table></figure>
-<p><img src="https://sbxlm.gitee.io/images/image-20230817161333742.png" alt="image-20230817161333742"></p>
-<p>除了一般的 lua 表达式外，该脚本还支持下列函数，按字母顺序排列。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">abs = math.abs</span><br><span class="line">acos = math.acos</span><br><span class="line">arev = function (arr)</span><br><span class="line">array = function (...)</span><br><span class="line">asin = math.asin</span><br><span class="line">atan = math.atan</span><br><span class="line">avg = function (t)</span><br><span class="line">ceil = math.ceil</span><br><span class="line">chain = function (t)</span><br><span class="line">cos = math.cos</span><br><span class="line">date = os.date</span><br><span class="line">deg = math.deg</span><br><span class="line">deriv = function (f, delta, dc)</span><br><span class="line">e = exp(1)</span><br><span class="line">exp = math.exp</span><br><span class="line">fac = function (n)</span><br><span class="line">filter = function (t, ...)</span><br><span class="line">floor = math.floor</span><br><span class="line">foldl = function (t, f, acc)</span><br><span class="line">foldr = function (t, f, acc)</span><br><span class="line">inf = math.huge</span><br><span class="line">integ = function (f, delta, dc)</span><br><span class="line">irange = function (from, to, step)</span><br><span class="line">irev = function (arr)</span><br><span class="line">isinteger = function (x)</span><br><span class="line">lapproxd = function (f, delta)</span><br><span class="line">ln = math.log</span><br><span class="line">log = function (x, base)</span><br><span class="line">map = function (t, ...)</span><br><span class="line">max = function (arr)</span><br><span class="line">MAX_INT = math.maxinteger</span><br><span class="line">min = function (arr)</span><br><span class="line">MIN_INT = math.mininteger</span><br><span class="line">mod = math.fmod</span><br><span class="line">MSE = function (t)</span><br><span class="line">nCr = function (n, r)</span><br><span class="line">nPr = function (n, r)</span><br><span class="line">path = function ()</span><br><span class="line">pi = math.pi</span><br><span class="line">rad = math.rad</span><br><span class="line">random = math.random</span><br><span class="line">randomseed = math.randomseed</span><br><span class="line">range = function (from, to, step)</span><br><span class="line">rk4 = function (f, timestep)</span><br><span class="line">round = function (x, dc)</span><br><span class="line">sapproxd = function (f, delta)</span><br><span class="line">sin = math.sin</span><br><span class="line">sqrt = math.sqrt</span><br><span class="line">sum = function (t)</span><br><span class="line">tan = math.tan</span><br><span class="line">test = function (f, t)</span><br><span class="line">time = os.time</span><br><span class="line">trapzo = function (f, a, b, n)</span><br><span class="line">trunc = function (x, dc)</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2023/08/18/声笔2023年8月18日更纪要/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
