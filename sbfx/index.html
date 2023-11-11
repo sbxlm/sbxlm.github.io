@@ -159,12 +159,13 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311114033001.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311114614209.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311114820652.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230311004856118.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230313095017657.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230602111657890.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230805152938877.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230602112043761.png">
-<meta property="og:updated_time" content="2023-08-05T07:33:33.281Z">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231028115818977.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231028115845923.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231108113218125.png">
+<meta property="og:updated_time" content="2023-11-08T03:35:56.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔飞讯">
 <meta name="twitter:description" content="1 飞讯概述声笔飞讯，简称飞讯，是从著名顶功输入方案声笔飞码衍生出来的主单顶功方案，随着其词组能力的不断加强，几乎到达了字词双全的地步，对用户越来越有吸引力，特别是对追求极致效率的人更是如此。所以也自然而然地成长为一个独树一帜的方案，有太多的内容需要特别地讲解，值得独立出来专门进行论述了。 飞讯一直就具有出色的单字能力，它在纯单盲打方面大放异彩，以超短的平均码长取得极高的输入效率，适用于冗余度小的">
@@ -535,7 +536,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">87</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">93</span></a>
 
   </li>
         
@@ -573,7 +574,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
 
   </li>
 
@@ -789,34 +790,35 @@ var _hmt = _hmt || [];
 <p>(5) 三个一简字的组合，可以用Shift+空格来输入，手机上可下滑空格。例如，「一个人」「就是了」「是不是」「不是不」等都可以这样输入。</p>
 <h3 id="2-7-词组过滤"><a href="#2-7-词组过滤" class="headerlink" title="2.7 词组过滤"></a>2.7 词组过滤</h3><p>如果用户习惯一直用第四码大写来输入多字词，那么就可以将飞讯schema文件中Translator下的enable_filtering选项设置为true，以过滤掉<code>szsbb</code>上的多字词，以减少重码。但是，不会过滤增强词组模式下szsnb上的多字词，这有助于动态缩短码长。默认的forced_selection选项为true，还可强制在<code>szsbb</code>上选择重码，从而减少扩展编码时的重码。这样设置对操作熟练的高级用户来说是非常有用的，可以减少很多重码，提高可盲打性，如下图所示。</p>
 <p><img src="/images/image-20230311000814969.png" alt="image-20230311000814969"></p>
-<h2 id="3-增强模式"><a href="#3-增强模式" class="headerlink" title="3 增强模式"></a>3 增强模式</h2><p>飞讯的词组模式可通过数字来增强而形成增强模式。此模式在增强单字模式的基础上，不但增加了大量三级数选词，更重要的是同时具备了词组的四码顶能力，输入的方式变得极为灵活多样，可以实现取长补短。四码顶词能力是飞讯的最新发展，具有极其重要的意义，它在飞讯二码顶字的基础上实现了四码顶词的理想目标，使飞讯从一个主单的方案蝉变为一个字词双全的方案，不但保持了单字的高效率，而且还大大提升了词组的效率，同时还基本上保持了数字的顶屏能力。</p>
-<p>数选字词的基本用法请参见<a href="https://sbxlm.gitee.io/sbfd/#5-%E5%A2%9E%E5%BC%BA%E6%A8%A1%E5%BC%8F">飞单增强模式</a>。这里只讲飞讯特有的情况。</p>
-<h3 id="3-1-缩短码长"><a href="#3-1-缩短码长" class="headerlink" title="3.1 缩短码长"></a>3.1 缩短码长</h3><p>飞讯常规模式下，最大的不足就是词组需要五码才能输入，这就增加了平均码长，在一定程度上抵消了飞讯在单字输入方面的优势。有没有办法使飞讯的词组也只需要四码呢？有！飞讯在增强模式下通过换码操作实现了这个目标。换码的原理是，将词组编码第四位上的笔画<code>aeuio</code>改用<code>23789</code>来编码输入，使得起始顶屏位和码长调整位都从第五位移动到第四位。</p>
-<p>例如，「奔驰」在常规模式下输入用的是<code>bdcaa</code>，而在增强模式下则用<code>bdc2</code>。</p>
+<h2 id="3-快顶模式"><a href="#3-快顶模式" class="headerlink" title="3 快顶模式"></a>3 快顶模式</h2><h3 id="3-1-缩短码长"><a href="#3-1-缩短码长" class="headerlink" title="3.1 缩短码长"></a>3.1 缩短码长</h3><p>飞讯在默认的慢顶模式下，最大的不足就是词组需要五码才能输入，这就增加了平均码长，在一定程度上抵消了飞讯在单字输入方面的优势。有没有办法使飞讯的词组也只需要四码呢？有！飞讯在增强模式下通过换码操作实现了这个目标。换码的原理是，将词组编码第四位上的笔画 <code>aeuio</code> 改用 <code>23789</code> 来编码输入，使得起始顶屏位和码长调整位都从第五位移动到第四位。</p>
+<p>例如，「奔驰」在常规模式下输入用的是 <code>bdcaa</code>，而在增强模式下则用 <code>bdc2</code>。</p>
 <p><img src="/images/image-20230311113452486.png" alt="image-20230311113452486"></p>
-<p>如果接着输入「到」字的首码<code>d</code>，「奔驰」就会被顶上屏幕。如果输入<code>bdc2</code>后，并不是想要的「奔驰」，那么就按正常的编码输入第五码。比如，若想输入的是「奔出」，那么就接着追加「出」字的第二笔。</p>
+<p>如果接着输入「到」字的首码 <code>d</code>，「奔驰」就会被顶上屏幕。如果输入 <code>bdc2</code> 后，并不是想要的「奔驰」，那么就按正常的编码输入第五码。比如，若想输入的是「奔出」，那么就接着追加「出」字的第二笔。</p>
 <p><img src="/images/image-20230311114033001.png" alt="image-20230311114033001"></p>
-<p>接下来的重码选择和扩展编码就和常规模式一模一样了。如果这时用<code>a</code>选择了「 表达出」，则「表达出」成为六时的首选。  </p>
+<p>接下来的重码选择和扩展编码就和常规模式一模一样了。如果这时用 <code>a</code> 选择了「 表达出」，则「表达出」成为六时的首选。</p>
 <p><img src="/images/image-20230311114614209.png" alt="image-20230311114614209"></p>
 <p>再次输入「表达出」时，可能就只需要四码了。</p>
 <p><img src="/images/image-20230311114820652.png" alt="image-20230311114820652"></p>
-<p>由于少加了一个笔画，飞讯在四码顶屏时的编码空间只有飞码在五码顶屏时空间的五分之一，能容纳的四码词数量也就少得多，虽然缩短了码长，但会增加飞讯词组的动态性，增强查看候选项的时间，从而降低其可盲打性。所以，在对盲打要求比较高时，对于拿不准的词组，在首次输入的时候，建议采用五码。如果接着再出现同一词组，就可以采用四码的格式来缩短码长，这样就能充分利用两者的优势而规避它们的缺点。 </p>
-<h3 id="3-2-三级数选"><a href="#3-2-三级数选" class="headerlink" title="3.2 三级数选"></a>3.2 三级数选</h3><p>为了进一步减少飞讯词组的动态性和离散重码，还为飞讯增加了三级数选词。在输入三码后，一般就会提示类似下面的五个数选词。</p>
-<p><img src="/images/image-20230311004856118.png" alt="image-20230311004856118"></p>
-<p>因为这些数选词是在三码后进行选择的，所以就称为三级数选词。又因为它们是不会发生变化的，所以就称为静态数选词。静态数选词在记住位置后是可以不看提示而进行盲打的。仔细观察候选词，可以发现一个有趣的现象，即456分别选择的二三四字词组。这不是偶然的巧合，而是一种精心的有意设计。</p>
-<p>由于三级数选词数量庞大，有五万多个，完全无理安排是很难记住的，而规定456分别选择二三四字词后，就可以大大减轻记忆负担。只有0和1上的词才是完全无理安排的，可以是二字词、三字词或者四字词，但是不会安排五字及以上的词组。优先为456安排更常用的词组，然后再为1和0安排。</p>
-<p>不过，由于sbsz型码位无法安排三字词和四字词，所以在56上仍然安排的是二字词，算是例外吧。</p>
-<p><img src="/images/image-20230313095017657.png" alt="image-20230313095017657"></p>
-<p>另外，收录三级数选词时还排除了二简词、二级数选词，以及一、二简字组成的二字词，因为它们拆成单字输入也只需要四码，而且不会用到数字，效率更高。 例如，「大人」「大小」「来到」「了解」等都是不收录的。</p>
-<p>掌握了以上规律，用户就比较容易判断哪些词可能出现在三级数选的候选项中，从而加快选择速度和记忆速度。当然，并不建议用户去大量记忆三级数选词。三级数选字的主要是用来离散四码顶词时的常用重码词，这种重码词可能因人而异。当发现这种情况时，三级数选词就派上大用场了。</p>
-<h2 id="4-快顶模式"><a href="#4-快顶模式" class="headerlink" title="4 快顶模式"></a>4 快顶模式</h2><p>在前面章节中讲解的都是飞讯的慢顶模式。在慢顶模式下，当词组第四位上的笔画用<code>aeuio</code>来编码，同时又在使用单字的缩减码时，就可能会发生冲突。在设置为快顶模式时，就可以避免这类冲突，从而毫无顾忌地使用缩减码，因为此时的单字均是四二顶，在第四码时就一定会把二简字顶上屏。</p>
+<p>由于少加了一个笔画，飞讯在四码顶屏时的编码空间只有飞码在五码顶屏时空间的五分之一，能容纳的四码词数量也就少得多，虽然缩短了码长，但会增加飞讯词组的动态性，增强查看候选项的时间，从而降低其可盲打性。所以，在竞速打赛文时，对词组的盲打要求比较高时，就不适合采用快顶。然而，在实际码字时，用户的应用场景比较狭窄，四码时词组的命中率会非常高，码长明显缩短，那么采用快顶就非常适合了。</p>
+<h3 id="3-2-避免冲突"><a href="#3-2-避免冲突" class="headerlink" title="3.2 避免冲突"></a>3.2 避免冲突</h3><p>飞讯在默认的慢顶模式下，当词组第四位上的笔画用<code>aeuio</code>来编码，同时又在使用单字的缩减码时，就可能会发生冲突。在设置为快顶模式时，就可以避免这类冲突，从而毫无顾忌地使用缩减码，因为此时的单字均是四二顶，在第四码时就一定会把二简字顶上屏。</p>
 <p>例如，在慢顶模式下，输入<code>jyjua</code>时，会提示下面的词组。</p>
 <p><img src="/images/image-20230602111657890.png" alt="image-20230602111657890"></p>
 <p>然而，在快顶模式下，在<code>jyj</code>后接着输入时u就将「记」顶上屏幕了，留下<code>ju</code>。</p>
 <p><img src="/images/image-20230805152938877.png" alt="image-20230805152938877"></p>
 <p><img src="/images/image-20230602112043761.png" alt="image-20230602112043761"></p>
-<p>所以，飞讯的快顶模式除了输入二简字输入比声笔飞单延迟一码外，是完全兼容声笔飞单的，同时会强制用户采用词组的四码起顶方式，只是常规词组第四码必须用23789，对用户的操作技能要求很高。不过，一旦掌握，就真正能够进入无冲突地实现二码顶字和四码顶词的理想境界。在应用场景相对固定时，输入词组的效果特别好，码长明显缩短。</p>
-<p>快顶模式可以在常规模式下使用，也可以与增强模式一起并用。在常规模式下使用快顶，基本上不会影响数字顶屏，但是不能使用数选字词。</p>
+<p>所以，飞讯的快顶模式除了输入二简字输入比声笔飞单延迟一码外，是完全兼容声笔飞单的，同时会强制用户采用词组的四码起顶方式，只是常规词组第四码必须用23789，对用户的操作技能要求很高。不过，一旦掌握，就真正能够进入无冲突地实现二码顶字和四码顶词的理想境界。</p>
+<h2 id="4-增强模式"><a href="#4-增强模式" class="headerlink" title="4 增强模式"></a>4 增强模式</h2><p>为了缩短词组码长和增加输入确定性，提高输入效率，特为飞讯提供了数选字和数选词，可以在增强模式下使用。</p>
+<p>如果要临时使用增强模式，在电脑上可以用 Ctrl+~ 或 F4，在手机上直接点击状态栏的「常规 / 增强」项，就可以切换状态了。如果要将增强模式设置为默认状态，只要将 sbfx.schema.yaml 文件中的 is_enhanced 开关项的 reset 值由 0 改为 1，并重新部署一下就可以了。</p>
+<p>数选字词的基本用法请参见<a href="https://sbxlm.gitee.io/sbfd/#5-增强模式">飞单增强模式</a>。这里只讲飞讯特有的情况，也就是在第三码后接数字的情况。</p>
+<p>例如，在输入「两极」时，在输入lhj后，如果接着输入3，那么就会顶二简字「两」上屏，而留下「极j3」。</p>
+<p><img src="/images/image-20231028115818977.png" alt="image-20231028115818977"></p>
+<p><img src="/images/image-20231028115845923.png" alt="image-20231028115845923"></p>
+<p>由于在三码后没有提示数选字，所以要求用户记住了数选字才能这么操作。</p>
+<h2 id="5-快顶增强"><a href="#5-快顶增强" class="headerlink" title="5 快顶增强"></a>5 快顶增强</h2><p>快顶模式和增强模式在默认时都没有打开，用户可以单独打开一项，也可以两者同时打开，结合起来使用，进一步提高飞讯的输入上限。</p>
+<p>不过，在快顶增强模式下，<code>szsn</code>输入词组与输入二简字加数选单字有冲突，这时可采用分号进行组合变换来上屏两个单字，从而解决冲突。</p>
+<p>例如，在想用单字输入「两」「极」两个字时，输入编码lhj3后，提示行出现的可能是「老虎机」这个二字词。</p>
+<p><img src="/images/image-20231108113218125.png" alt="image-20231108113218125"></p>
+<p>这时，可按分号变为上屏「两极」，就能够避免回改，不必删除后重新输入。</p>
 <h2 id="附录：编码格式"><a href="#附录：编码格式" class="headerlink" title="附录：编码格式"></a>附录：编码格式</h2><p>为了便于用户总结和记忆飞讯的基本内容，现将飞讯的字词编码格式总结一下，编码格式采用了以下精简的表达方式。</p>
 <blockquote>
 <p>单字 <code>sb, sp^bbx</code><br>二字词 <code>s1z1s2b2b2^&#39;b1b1x</code><br>三字词 <code>s1s2s3b3b3^&#39;b1b1x</code><br>多字词 <code>s1s2s3b0b0^&#39;b1b1x|s1s2s3S0x</code></p>
@@ -893,7 +895,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1109,7 +1111,19 @@ var _hmt = _hmt || [];
                     
                       
                     
-                    <span class="site-state-item-count">74</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">79</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1228,7 +1242,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-飞讯概述"><span class="nav-text">1 飞讯概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-词组模式"><span class="nav-text">2 词组模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-单字输入"><span class="nav-text">2.1 单字输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-词组输入"><span class="nav-text">2.2 词组输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-扩展编码"><span class="nav-text">2.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-冲突解决"><span class="nav-text">2.4 冲突解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-大写巧用"><span class="nav-text">2.5 大写巧用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-组合变换"><span class="nav-text">2.6 组合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-词组过滤"><span class="nav-text">2.7 词组过滤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-增强模式"><span class="nav-text">3 增强模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-缩短码长"><span class="nav-text">3.1 缩短码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-三级数选"><span class="nav-text">3.2 三级数选</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-快顶模式"><span class="nav-text">4 快顶模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：编码格式"><span class="nav-text">附录：编码格式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-飞讯概述"><span class="nav-text">1 飞讯概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-词组模式"><span class="nav-text">2 词组模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-单字输入"><span class="nav-text">2.1 单字输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-词组输入"><span class="nav-text">2.2 词组输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-扩展编码"><span class="nav-text">2.3 扩展编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-冲突解决"><span class="nav-text">2.4 冲突解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-大写巧用"><span class="nav-text">2.5 大写巧用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-组合变换"><span class="nav-text">2.6 组合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-词组过滤"><span class="nav-text">2.7 词组过滤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快顶模式"><span class="nav-text">3 快顶模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-缩短码长"><span class="nav-text">3.1 缩短码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-避免冲突"><span class="nav-text">3.2 避免冲突</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-增强模式"><span class="nav-text">4 增强模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-快顶增强"><span class="nav-text">5 快顶增强</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录：编码格式"><span class="nav-text">附录：编码格式</span></a></li></ol></div>
             
 
           </div>

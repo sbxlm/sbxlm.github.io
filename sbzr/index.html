@@ -130,12 +130,12 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230813150417384.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230606101410129.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231110070345540.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230606102815800.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230606101717689.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230606101634106.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230606101757809.png">
-<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230719134243801.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231110070419195.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230719112301408.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230620142534239.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230620142601041.png">
@@ -153,10 +153,13 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230620144426843.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230620144506008.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230620144523312.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231029053746616.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231029053810712.png">
+<meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231029053723342.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/SgJiao.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185646867.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221204185724325.png">
-<meta property="og:updated_time" content="2023-09-06T06:11:50.177Z">
+<meta property="og:updated_time" content="2023-11-09T23:35:58.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔自然">
 <meta name="twitter:description" content="1 概述目前的双拼一般是在智能拼音输入法的基础上增加一个声母和韵母对应表来实现的。这样的好处是，可以同时支持多种双拼，并能共享字词库。但是，这种整句模式的智能双拼不便于兼容简拼，因此其缩减码长的效果被不能使用简拼大大削弱。强行兼容的话，又会极大损害音字转换的准确性，而且影响了两码一字的输入节奏。同时，单字的重码问题依然没有得到解决，回改选重非常麻烦，严重降低输入效率。有的输入法，如手心输入法，可以">
@@ -527,7 +530,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">87</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">93</span></a>
 
   </li>
         
@@ -565,7 +568,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
 
   </li>
 
@@ -746,8 +749,8 @@ var _hmt = _hmt || [];
 <p>在使用声笔自然时，要尽量使用单字的缩减编码，对输入效率的提升帮助很大，因为缩减码的码长短，而且是缩减码是静态编码，不会发生改变，便于形成条件反射。</p>
 <h4 id="3-2-2-空位简码"><a href="#3-2-2-空位简码" class="headerlink" title="3.2.2 空位简码"></a>3.2.2 空位简码</h4><p>由于双拼的离散能力比较差，所以声笔自然的单字编码空间存在大量的空位，如果不加以利用就会造成很大的浪费。为此，利用单字的空码位安排了一些具有特殊编码的常见单字和二字词，分为声笔字、声笔笔词、声声词和声声笔词（详见本文后的附录）。</p>
 <p>声笔字的编码方式是声母+首笔，如<code>刃ra 扶fe 极je 请qo 项xe</code>。为了便于用户使用，这些字在输入声母后会有如下提示。</p>
-<p><img src="/images/image-20230606101410129.png" alt="image-20230606101410129"></p>
-<p>上述简码字在后接二简字时，会形成无重码的二字组合，可以利用这种特性进行盲打输入，比如：「极好」「扶手」「项项」等。</p>
+<p><img src="/images/image-20231110070345540.png" alt="image-20231110070345540"></p>
+<p> 上述简码字在后接二简字时，会形成无重码的二字组合，可以利用这种特性进行盲打输入，比如：「极好」「扶手」「项项」等。</p>
 <p><img src="/images/image-20230606102815800.png" alt="image-20230606102815800"></p>
 <p>声笔笔词的编码方式是首字声母+次字的首笔和次笔，如<code>比较bea 幸好xau 技术jei 激动jee</code>。声声词的编码方式是两个字的声母，如<code>重新cx 舞曲wq 结构jg 双目sm</code>。声声笔词的编码方式是首字的声母+次字的声母和首笔，如<code>并非bfi 到底ddo 赣南gne</code>。声笔笔词和声声笔词在紧接后续字词的声母时可以被顶上屏幕，因此一般只需要三键。</p>
 <p>为了便于用户使用，上述二字词在输入全码后会有如下提示。</p>
@@ -755,8 +758,8 @@ var _hmt = _hmt || [];
 <p><img src="/images/image-20230606101634106.png" alt="image-20230606101634106"></p>
 <p><img src="/images/image-20230606101757809.png" alt="image-20230606101757809"></p>
 <h4 id="3-2-3-组合简码"><a href="#3-2-3-组合简码" class="headerlink" title="3.2.3 组合简码"></a>3.2.3 组合简码</h4><p>声笔自然三简码位上设置是二简字词和一简字的组合，而不一定是真正的词，例如：<code>挂是gws 时是sis 富有就fyj 无限发wxf</code>等等。这种组合一般需要空格上屏，不管是否构成词组，是绝对没有重码的，可以放心大胆的盲打。</p>
-<h4 id="3-2-4-高频简词"><a href="#3-2-4-高频简词" class="headerlink" title="3.2.4 高频简词"></a>3.2.4 高频简词</h4><p>在声笔自然中，还有一种二字简词，是直接从声笔简码拿过来的，对于熟悉声笔简码的人来说，可能已经记住了。这些二字简词都是取两字声母作为编码的高频词，例如：「美元」「管理」「科技」等等，输入两码时会提示在单字之后作为次选，可用Tab键或者单引号上屏。</p>
-<p><img src="/images/image-20230719134243801.png" alt="image-20230719134243801"></p>
+<h4 id="3-2-4-高频简词"><a href="#3-2-4-高频简词" class="headerlink" title="3.2.4 高频简词"></a>3.2.4 高频简词</h4><p>在声笔自然中，还有一种二字简词，是直接从声笔简码拿过来的，对于熟悉声笔简码的人来说，可能已经记住了。这些二字简词都是取两字声母作为编码的高频词，例如：「美元」「管理」「科技」等等，输入两码时会提示在单字之后作为次选，可用单引号上屏。</p>
+<p><img src="/images/image-20231110070419195.png" alt="image-20231110070419195"></p>
 <p>二字简词在声笔简码中称为声声词，共有441个，详见<a href="https://sbxlm.gitee.io/sbjc/#9-4-3-声声词">声声词</a>。为了便于用户使用，这些词在输入全码后会有如下提示。</p>
 <p><img src="/images/image-20230719112301408.png" alt="image-20230719112301408"></p>
 <h3 id="3-3-扩展编码"><a href="#3-3-扩展编码" class="headerlink" title="3.3 扩展编码"></a>3.3 扩展编码</h3><h4 id="3-3-1-单字扩展编码"><a href="#3-3-1-单字扩展编码" class="headerlink" title="3.3.1 单字扩展编码"></a>3.3.1 单字扩展编码</h4><p>由于汉语声母和韵母组合规则的限制，双拼编码对同音字的离散能力比较弱。声笔自然可以通过增加字的前两个笔画来快速地离散重码，这和传统的双音双形输入法类似。</p>
@@ -797,6 +800,13 @@ var _hmt = _hmt || [];
 <p><img src="/images/image-20230620144506008.png" alt="image-20230620144506008"></p>
 <p><img src="/images/image-20230620144523312.png" alt="image-20230620144523312"></p>
 <p>从以上结果可以看出，临时拼音也兼具有拼音反查和两分反查的能力，但是并不推荐这么做，而应该用 i 来引导拼音反查和两分反查，这是因为用 a 引导时需要两次 Esc 键才能清除编码。之所以现在还保留着 a 引导的这种单字反查编码的能力，是为了兼容历史版本。</p>
+<h4 id="3-4-5-模糊查找"><a href="#3-4-5-模糊查找" class="headerlink" title="3.4.5 模糊查找"></a>3.4.5 模糊查找</h4><p>在回想不起字形时，可以在输入声母和韵母后翻页查找所需的字。看到字后，自然就知道笔画了。</p>
+<p>例如，假设你回想不起「氓」的字形，无法补充笔画，那么可以按Tab翻页。</p>
+<p><img src="/images/image-20231029053746616.png" alt="image-20231029053746616"></p>
+<p>在第二页便找到了「氓」字。这时，不要用移动光标的方式来选择该字。</p>
+<p><img src="/images/image-20231029053810712.png" alt="image-20231029053810712"></p>
+<p>应该根据字形判断「氓」的前两笔为点横，追加这两个笔画，此字就出来了。这相当于有了一个克服提笔忘字的好手段。</p>
+<p><img src="/images/image-20231029053723342.png" alt="image-20231029053723342"></p>
 <h2 id="4-技能提升"><a href="#4-技能提升" class="headerlink" title="4 技能提升"></a>4 技能提升</h2><h3 id="4-1-续码顶屏"><a href="#4-1-续码顶屏" class="headerlink" title="4.1 续码顶屏"></a>4.1 续码顶屏</h3><p>在自然码中，当字词的码长不足四时，需要用空格上屏，只有码长为四时的首选字词才能省略空格。在声笔自然中，三简字在后接其它字词时，空格是可以省略的。</p>
 <p>例如，声笔自然的三简字如<code>节jxe 未wze 凝nyo 管gru</code>，在连续输入时都不需要空格上屏。</p>
 <p>再如，用纯单字输入「中国人民站起来了。」这句话，声笔自然输入时的用键为 <code>zs_go_r_mn_zjoqi_ll_l.</code>。若切换到单字状态，那么二简字的空格还可省略，能少用5键，进一步提升效率。</p>
@@ -956,7 +966,7 @@ var _hmt = _hmt || [];
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1172,7 +1182,19 @@ var _hmt = _hmt || [];
                     
                       
                     
-                    <span class="site-state-item-count">74</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">79</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1291,7 +1313,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本编码"><span class="nav-text">3.1 基本编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-缩减编码"><span class="nav-text">3.2 缩减编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-常规简码"><span class="nav-text">3.2.1 常规简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-空位简码"><span class="nav-text">3.2.2 空位简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-组合简码"><span class="nav-text">3.2.3 组合简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-4-高频简词"><span class="nav-text">3.2.4 高频简词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-扩展编码"><span class="nav-text">3.3 扩展编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-单字扩展编码"><span class="nav-text">3.3.1 单字扩展编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-词组扩展编码"><span class="nav-text">3.3.2 词组扩展编码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码反查"><span class="nav-text">3.4 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-拼音反查"><span class="nav-text">3.4.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-笔画反查"><span class="nav-text">3.4.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-两分反查"><span class="nav-text">3.4.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4-临时拼音"><span class="nav-text">3.4.4 临时拼音</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-技能提升"><span class="nav-text">4 技能提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-续码顶屏"><span class="nav-text">4.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-动态码长"><span class="nav-text">4.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-自动词组"><span class="nav-text">4.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-条件顶屏"><span class="nav-text">4.5 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-大写顶屏"><span class="nav-text">4.6 大写顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-组合变换"><span class="nav-text">4.7 组合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-自定词典"><span class="nav-text">4.8 自定词典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-单字模式"><span class="nav-text">4.9 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述"><span class="nav-text">1 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-优势"><span class="nav-text">2 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-快速入门"><span class="nav-text">3 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-基本编码"><span class="nav-text">3.1 基本编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-缩减编码"><span class="nav-text">3.2 缩减编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-常规简码"><span class="nav-text">3.2.1 常规简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-空位简码"><span class="nav-text">3.2.2 空位简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-组合简码"><span class="nav-text">3.2.3 组合简码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-4-高频简词"><span class="nav-text">3.2.4 高频简词</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-扩展编码"><span class="nav-text">3.3 扩展编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-单字扩展编码"><span class="nav-text">3.3.1 单字扩展编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-词组扩展编码"><span class="nav-text">3.3.2 词组扩展编码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-编码反查"><span class="nav-text">3.4 编码反查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-拼音反查"><span class="nav-text">3.4.1 拼音反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-笔画反查"><span class="nav-text">3.4.2 笔画反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-两分反查"><span class="nav-text">3.4.3 两分反查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-4-临时拼音"><span class="nav-text">3.4.4 临时拼音</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-5-模糊查找"><span class="nav-text">3.4.5 模糊查找</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-技能提升"><span class="nav-text">4 技能提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-续码顶屏"><span class="nav-text">4.1 续码顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-字母选重"><span class="nav-text">4.2 字母选重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-动态码长"><span class="nav-text">4.3 动态码长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-自动词组"><span class="nav-text">4.4 自动词组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-条件顶屏"><span class="nav-text">4.5 条件顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-大写顶屏"><span class="nav-text">4.6 大写顶屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-组合变换"><span class="nav-text">4.7 组合变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-自定词典"><span class="nav-text">4.8 自定词典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-单字模式"><span class="nav-text">4.9 单字模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录一：编码格式"><span class="nav-text">附录一：编码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录二：简码字词"><span class="nav-text">附录二：简码字词</span></a></li></ol></div>
             
 
           </div>
