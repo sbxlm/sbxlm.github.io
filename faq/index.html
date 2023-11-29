@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="声笔输入法">
 <meta property="og:description" content="声笔系列码是什么？声笔系列码是一种独特的顶功输入法。不仅如此，它更是顶功输入的缔造者和引领者。以声笔系列码为首的顶功输入法是自成一体的，在输入法研究者和爱好者中自发地衍生出了一个庞大的体系。除声笔外，顶功输入法还有基于早期声笔飞码发展起来的西风瘦码，及后来出现的其它顶功方案，如一码起顶的左飞 1811，二码起顶的小兮码、灵形速影、左飞双拼、顶功雅歌，三码起顶的左飞三码、听雨三码，二四顶屏的顶功希码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2023-10-29T23:44:56.745Z">
+<meta property="og:updated_time" content="2023-11-13T13:55:25.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见问题">
 <meta name="twitter:description" content="声笔系列码是什么？声笔系列码是一种独特的顶功输入法。不仅如此，它更是顶功输入的缔造者和引领者。以声笔系列码为首的顶功输入法是自成一体的，在输入法研究者和爱好者中自发地衍生出了一个庞大的体系。除声笔外，顶功输入法还有基于早期声笔飞码发展起来的西风瘦码，及后来出现的其它顶功方案，如一码起顶的左飞 1811，二码起顶的小兮码、灵形速影、左飞双拼、顶功雅歌，三码起顶的左飞三码、听雨三码，二四顶屏的顶功希码">
@@ -499,7 +499,7 @@ var _hmt = _hmt || [];
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">93</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">95</span></a>
 
   </li>
         
@@ -732,6 +732,13 @@ var _hmt = _hmt || [];
 <p>在可盲打性上，飞单优于飞讯，飞讯优于飞码。但是，在平均码长上，则相反，飞码优于飞讯，飞讯优于飞单。</p>
 <p>总之，飞系的三个输入方案是紧密相关的，但是又各有特色，适用于不同的输入场景，用户可以选择只用其中的一个，也可以根据不同的场景切换使用，发挥各自的优势。</p>
 <h2 id="声笔小狼毫可以在win7和winxp上使用吗？"><a href="#声笔小狼毫可以在win7和winxp上使用吗？" class="headerlink" title="声笔小狼毫可以在win7和winxp上使用吗？"></a>声笔小狼毫可以在win7和winxp上使用吗？</h2><p>声笔小狼毫从20230608版开始基于官方小狼毫的0.15.0进行了升级，因此只能支持win8.1以上的Windows操作系统了。想在win7和winxp上使用声笔的用户能够使用的最后一个声笔小狼毫是230528版。</p>
+<h2 id="关于声笔造词与调频的问题"><a href="#关于声笔造词与调频的问题" class="headerlink" title="关于声笔造词与调频的问题"></a>关于声笔造词与调频的问题</h2><p>除飞系的单字外，声笔默认是要进行自动调频和自动造词的，那么如何在必要时有选择地禁用这两项功能呢？</p>
+<p>(1) 声笔怎么做到只手动造词而不自动造词？</p>
+<p>将方案的schema中translator里的max_phrase_length设置为1，这样就不会自动造词了。但是，用户仍然可以在首码后用Shift+Tab进入缓冲模式来手动造词，以便用户完全控制新造词组，避免产生用户不想要的临时词组。</p>
+<p>(2) 声笔怎么做到只调频而不自动造词？</p>
+<p>将方案的schema中translator里的enable_encoder设置为false，系统就不会自动造词，同时也不支持缓冲模式造词。但是，仍然会自动调频。</p>
+<p>(3) 声笔怎么做到同时禁止调频和禁止自动造词？</p>
+<p>将方案的schema中translator里的stop_change设置为true就能禁止调频，同时也禁止自动造词了。</p>
 <h2 id="声笔输入法待解决的问题"><a href="#声笔输入法待解决的问题" class="headerlink" title="声笔输入法待解决的问题"></a>声笔输入法待解决的问题</h2>
         
       </div>
@@ -842,6 +849,10 @@ var _hmt = _hmt || [];
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -1148,7 +1159,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码是什么？"><span class="nav-text">声笔系列码是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码不是什么？"><span class="nav-text">声笔系列码不是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码与Rime是什么关系？"><span class="nav-text">声笔系列码与Rime是什么关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码为什么还没有成为主流？"><span class="nav-text">声笔系列码为什么还没有成为主流？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决词库丢失的问题？"><span class="nav-text">如何解决词库丢失的问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔拼音还是声笔简码？"><span class="nav-text">选择声笔拼音还是声笔简码？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔双拼还是声笔飞系？"><span class="nav-text">选择声笔双拼还是声笔飞系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔飞单、声笔飞码还是声笔飞讯？"><span class="nav-text">选择声笔飞单、声笔飞码还是声笔飞讯？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案要设计声笔字？"><span class="nav-text">为什么飞系方案要设计声笔字？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案的部首前后不定？"><span class="nav-text">为什么飞系方案的部首前后不定？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何避免修改的同文主题被重置？"><span class="nav-text">如何避免修改的同文主题被重置？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#觉得声笔安卓版皮肤的按键太小怎么办？"><span class="nav-text">觉得声笔安卓版皮肤的按键太小怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞单、飞码和飞讯之间有何关系？"><span class="nav-text">飞单、飞码和飞讯之间有何关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔小狼毫可以在win7和winxp上使用吗？"><span class="nav-text">声笔小狼毫可以在win7和winxp上使用吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔输入法待解决的问题"><span class="nav-text">声笔输入法待解决的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码是什么？"><span class="nav-text">声笔系列码是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码不是什么？"><span class="nav-text">声笔系列码不是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码与Rime是什么关系？"><span class="nav-text">声笔系列码与Rime是什么关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔系列码为什么还没有成为主流？"><span class="nav-text">声笔系列码为什么还没有成为主流？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何解决词库丢失的问题？"><span class="nav-text">如何解决词库丢失的问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔拼音还是声笔简码？"><span class="nav-text">选择声笔拼音还是声笔简码？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔双拼还是声笔飞系？"><span class="nav-text">选择声笔双拼还是声笔飞系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择声笔飞单、声笔飞码还是声笔飞讯？"><span class="nav-text">选择声笔飞单、声笔飞码还是声笔飞讯？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案要设计声笔字？"><span class="nav-text">为什么飞系方案要设计声笔字？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么飞系方案的部首前后不定？"><span class="nav-text">为什么飞系方案的部首前后不定？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何避免修改的同文主题被重置？"><span class="nav-text">如何避免修改的同文主题被重置？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#觉得声笔安卓版皮肤的按键太小怎么办？"><span class="nav-text">觉得声笔安卓版皮肤的按键太小怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞单、飞码和飞讯之间有何关系？"><span class="nav-text">飞单、飞码和飞讯之间有何关系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔小狼毫可以在win7和winxp上使用吗？"><span class="nav-text">声笔小狼毫可以在win7和winxp上使用吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于声笔造词与调频的问题"><span class="nav-text">关于声笔造词与调频的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声笔输入法待解决的问题"><span class="nav-text">声笔输入法待解决的问题</span></a></li></ol></div>
             
 
           </div>
