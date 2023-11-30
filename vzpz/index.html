@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20221108152502471.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230313103002849.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20230223083757560.png">
-<meta property="og:updated_time" content="2023-11-29T04:15:33.983Z">
+<meta property="og:updated_time" content="2023-11-30T00:56:48.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置">
 <meta name="twitter:description" content="声笔系列码是基于著名的开源输入法平台Rime进行二次开发的，其安装配置比较复杂。这一方面有Rime的原因，因为它没有提供丰富的图形界面，对普通用户不太友好。 在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式的强大和灵活。闯过这一关，就会如鱼得水，就能随心所欲！本文就是帮助用户克服困难，过关斩将的。 点">
@@ -715,9 +715,9 @@ var _hmt = _hmt || [];
 <p>在配置方面，声笔系列码主要是基于YAML文件来进行的，对于只习惯于图形界面的用户来可能是一个挑战。不过，一旦学会用文本来做配置，就会感觉到这种方式的强大和灵活。闯过这一关，就会如鱼得水，就能随心所欲！本文就是帮助用户克服困难，过关斩将的。</p>
 <p><a href="https://www.bilibili.com/video/BV1er4y1h7G2/" target="_blank" rel="noopener">点这里观看声笔输入法安装讲解</a>。</p>
 <p>Poto也特别做了一个<a href="https://zhuanlan.zhihu.com/p/646712384" target="_blank" rel="noopener">声笔安装教程</a>，可以交叉参考。另外，Poto还做了为声笔做了一个<a href="https://ispoto.github.io/SingbitDict/" target="_blank" rel="noopener">查字软件</a>，需要的用户可下载使用。</p>
-<h2 id="1-软件与资源"><a href="#1-软件与资源" class="headerlink" title="1 软件与资源"></a>1 软件与资源</h2><h3 id="1-1-获取软件"><a href="#1-1-获取软件" class="headerlink" title="1.1 获取软件"></a>1.1 获取软件</h3><p>为了便于用户下载使用，声笔系列码已经发布在了网上，可以通过<a href="https://github.com/sbxlm/sbxlm.github.io/releases" target="_blank" rel="noopener">github</a>或者<a href="https://gitee.com/sbxlm/sbxlm/releases" target="_blank" rel="noopener">码云</a>下载，也可以在声笔QQ交流群（780510469、783734487和445906697，）的共享文件夹里下载，下载位置如下图所示。网上其它地方查找到的版本太陈旧，下载站点转载太多，也不一定安全，不建议使用。</p>
+<h2 id="1-软件与资源"><a href="#1-软件与资源" class="headerlink" title="1 软件与资源"></a>1 软件与资源</h2><h3 id="1-1-获取软件"><a href="#1-1-获取软件" class="headerlink" title="1.1 获取软件"></a>1.1 获取软件</h3><p>为了便于用户下载使用，声笔系列码已经发布在了网上，可以通过<a href="https://github.com/sbxlm/sbxlm.github.io/releases" target="_blank" rel="noopener">github</a>或者<a href="https://gitee.com/sbxlm/sbxlm/releases" target="_blank" rel="noopener">码云</a>下载，也可以在声笔QQ交流群（780510469、783734487、445906697和728093309）的共享文件夹里下载，下载位置如下图所示。对于使用iOS的用户，可以直接在苹果应用商店下载仓输入法，其中已经专门内置了声笔。网上其它地方查找到的版本太陈旧，下载站点转载太多，也不一定安全，不建议使用。</p>
 <p><img src="/images/image-20230222102454915.png" alt="image-20230222102454915"></p>
-<p>目前，声笔系列码官方只提供了 Windows、Android和MacOS的定制安装程序。Windows 版本至少要求Windows 10。安卓版本至少要求 8.0，而华为的鸿蒙是兼容安卓的，也没有问题。MacOS采用较新的版本即可。至于Linux和iOS的用户，则需要自己通过声笔定制的librime源程序进行编译。对于Linux，声笔爱好者有编译打包声笔librime的，可以想法借此编译使用，具体可参见<a href="https://noodlefighter.com/posts/d400/" target="_blank" rel="noopener">编译参考</a>。</p>
+<p>Windows 版本至少要求Windows 10。安卓版本至少要求 8.0，而华为的鸿蒙是兼容安卓的，也没有问题。MacOS采用较新的版本即可，iOS版根据仓输入法的要求而定。至于Linux的用户，则需要自己通过声笔定制的librime源程序进行编译，声笔爱好者有编译打包声笔librime的，可以想法借此编译使用，具体可参见<a href="https://noodlefighter.com/posts/d400/" target="_blank" rel="noopener">编译参考</a>。</p>
 <p>安装包文件名称后的日期为发布日期。你下载的文件日期可能是不一样的，不要紧，是正常的，因为软件是可能会不断更新的。</p>
 <p><img src="/images/image-20230222102324607.png" alt="image-20230222102324607"></p>
 <h3 id="1-2-软件构成"><a href="#1-2-软件构成" class="headerlink" title="1.2 软件构成"></a>1.2 软件构成</h3><p>新版声笔系列码的实现是建立在 RIME 输入法平台之上的。但是，为了支持声笔系列码的特殊功能，如续码顶屏、字母选重、扩展编码、自动码长等，对官方的 RIME 程序进行了特别的定制，所不保证可以在定制程序上使用其它的 RIME 输入法方案。</p>
