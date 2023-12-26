@@ -139,7 +139,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/stop_change.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bsgz.jpg">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/bhlx.jpg">
-<meta property="og:updated_time" content="2023-12-17T03:58:59.862Z">
+<meta property="og:updated_time" content="2023-12-20T23:33:00.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔基础">
 <meta name="twitter:description" content="声笔系列码作为一个庞大而严密的体系，其各输入方案有着许多共性，如果放在不同的地方重复讲解就会显得十分累赘，所以单列此声笔基础一章，把具有共性的内容都讲述清楚，读者要引起重视，不要忽略。这些内容包括声母和笔画、翻页方法、标点符号、中英混输、特殊符号、词库同步、自定义词典、LUA脚本、设置选项。本章附录中还有笔画规范和笔画易错的汉字和部首。 1 声母和笔画声母和笔画是声笔系列码的共同基础，用v表示零声">
@@ -1109,7 +1109,7 @@ var _hmt = _hmt || [];
 <p><img src="/images/stop_change.png" alt="开停调频与造词"></p>
 <p>如果想仅仅停止造词而不停止调频，那么可以保持stop_change为false，而将enable_encoder改为false。</p>
 <h3 id="8-2-自动删词阈值"><a href="#8-2-自动删词阈值" class="headerlink" title="8.2 自动删词阈值"></a>8.2 自动删词阈值</h3><p>声笔系列的所有字词方案默认都能自动删除过时的临时词组。默认的删除规则是，若在输入时检索到某个临时词组的tick值与最新的全局tick值之差的绝对值大于等于5000时，则将该临时词组删除。这个绝对值称为delete_threshold，可以在Translator中修改。当它小于等于0时，则不会删除临时词组，否则就按该值规定的tick差值来删除。该值的通俗含义就是，检索到某个临时词组前你一共输入了多少个字词。</p>
-<h3 id="8-3-自动造词长度"><a href="#8-3-自动造词长度" class="headerlink" title="8.3 自动造词长度"></a>8.3 自动造词长度</h3><p>在默认情况下，自动组词的长度限制为5个汉字，用户可以通过修改方案的schema改变此值，但是一般不建议修改此值，因为中文里超过5个汉字的词是很少的。在确实需要超过5个汉字的长词时，可以通过用首码后用<code>Shift + Tab</code>切换为缓冲模式来创建。在长词上屏后，会自动退出缓冲模式。缓冲模式下造词的长度为12个汉字。超过12个汉字的长词，可以在sbzdy.dict中定义。</p>
+<h3 id="8-3-自动造词长度"><a href="#8-3-自动造词长度" class="headerlink" title="8.3 自动造词长度"></a>8.3 自动造词长度</h3><p>在默认情况下，自动组词的长度限制为5个汉字，用户可以通过修改方案的schema改变此值，但是一般不建议修改此值，因为中文里超过5个汉字的词是很少的。在确实需要超过5个汉字的长词时，可以通过用首码后用<code>Shift + Tab</code>切换为缓冲模式来创建。在长词上屏后，会自动退出缓冲模式。缓冲模式下造词的长度为12个汉字。超过12个汉字的长词，可以在sbzdy.dict中定义。如果想停止自动造词而仅仅保留缓冲造词，那么可以保持可以将schema中translator里的max_phrase_length设置为1。</p>
 <h2 id="9-打字训练"><a href="#9-打字训练" class="headerlink" title="9 打字训练"></a>9 打字训练</h2><p>中文打字普遍采用的是标准英文键盘，即QWERTY键盘。在手机上的26键布局稍有变化，不过作为主体的字母键位置是相对固定的，与电脑键盘有明显的对应关系，便于习惯的迁移。手机上的9键布局主要是为了适应功能机时代的习惯，在大触碰时代已经没有必要，会逐步淡出历史。</p>
 <p>打字训练对于想快速提高打字能力的人是非常重要的。从一开始就进行严格的训练，有利于养成好的打字习惯。在初始阶段付出短期的训练成本，可以获得长期的收益，提高效率，节约时间。</p>
 <h3 id="9-1-训练目的"><a href="#9-1-训练目的" class="headerlink" title="9.1 训练目的"></a>9.1 训练目的</h3><p>在进行打字训练前，首先要明确自己的训练目的。必须要结合所选择的输入方案及其使用场景来设定训练目标和制定训练计划。</p>
