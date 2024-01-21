@@ -317,7 +317,7 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231110064859143.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231110065001002.png">
 <meta property="og:image" content="http://sbxlm.gitee.io/images/image-20231110065036172.png">
-<meta property="og:updated_time" content="2023-12-17T00:21:12.368Z">
+<meta property="og:updated_time" content="2024-01-21T10:47:56.385Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声笔拼音">
 <meta name="twitter:description" content="1  引言拼音输入法是中国大陆目前使用得最为广泛的输入方案，其用户比例至少在96%以上，甚至可能高达99%。确切地说，这里的拼音输入法是全拼输入，不包括双拼，因为后者使用的人非常少，相比全拼可以说是微乎其微。 在中国大陆，任何需要输入中文的设备或者操作系统，不论电脑、手机还是平板、电视，也不论Windows、MacOS、Android还是iOS，全拼输入方案都是必备的，而且是默认的中文输入方式。不">
@@ -936,7 +936,7 @@ var _hmt = _hmt || [];
 <ol>
 <li>冠零声：用v表示零声母，即作为以<code>a e o</code>开头的音节在形式上的声母。例如，<code>ai ei ou</code>就变成了<code>vai vei vou</code>。</li>
 <li>去翘舌：不区分平、翘舌音，即省略<code>zh ch sh</code>中的<code>h</code>。例如，<code>zhou chao shi</code>就变成了<code>zou cao si</code>。</li>
-<li>省韵腹：在声韵相拼的时候，声母<code>j q x</code>后接以<code>ia ie io</code>开头的韵母如 <code>ia ie iao ian iang iong</code> 时，要省略<code>i</code>。例如，传统拼音里的 <code>jie qiong xiang</code> 在声笔拼音里则变成 <code>je qon xan</code>。</li>
+<li>省介音：在声韵相拼的时候，声母<code>j q x</code>后接以<code>ia ie io</code>开头的韵母如 <code>ia ie iao ian iang iong</code> 时，要省略<code>i</code>。例如，传统拼音里的 <code>jie qiong xiang</code> 在声笔拼音里则变成 <code>je qon xan</code>。</li>
 <li>截韵尾：音节长度超过3时，则截断为3。例如，<code>biao</code>变成<code>bia</code>，而<code>guan</code>变成<code>gua</code>。这也导致了不区分前后鼻音，即省略<code>ng</code>中的<code>g</code>。例如，<code>bang zong</code>就变成了<code>ban zon</code>。</li>
 <li>去鼻音：将末尾的n置换成其前面的元音字母。例如，<code>bin</code>变成<code>bii</code>，而<code>xan</code>变成<code>xaa</code>。</li>
 <li>理特例：将韵母 <code>er</code> 合并到 <code>e</code>，<code>ü</code> 合并到 <code>u</code>，<code>ê</code> 合并到<code>e</code>。例如，<code>er</code> 变成<code>ve</code>，<code>nü</code> 变成<code>nu</code>，而<code>ê</code>变成<code>ve</code>。特别注意，<code>ü</code> 没有像传统拼音输入法那样用 <code>v</code> 来代替。</li>
@@ -951,9 +951,9 @@ var _hmt = _hmt || [];
 </ul>
 <p>下面我们通过一些例子来熟悉一下上述7条编码规则，对于每个字，依次加以运用这些规则就是了。当然，在熟悉以后，是不必每个规则都去用一下的，因为直觉会告诉你哪个或者哪些规则是适用的。</p>
 <ol>
-<li>声sheng：不是零声母音，不适用规则1；用规则2去除翘舌后，拼式变成seng；没有韵腹，不适用规则3；用规则4截去韵尾后，拼式变成sen；用规则5去掉鼻音后，拼式变成see；不是特例，不适用规则6；用规则7补充笔画后，拼式变成seeei。</li>
-<li>将jiang：不是零声母音，不适用规则1；不是翘舌音，不适用规则2；用规则3去掉韵腹后，拼式变成jang；用规则4截去韵尾后，拼式变成jan；用规则5去掉鼻音后，拼式变成jaa；不是特例，不适用规则6；用规则7补充笔画后，拼式变成jaaoe。</li>
-<li>快kuai：不是零声母音，不适用规则1；不是翘舌音，不适用规则2；没有韵腹，不适用规则3；用规则4截去韵尾后，拼式变成kua；没鼻音，不适用规则5；不是特例，不适用规则6；用规则7补充笔画后，拼式变成kuaoo。</li>
+<li>声sheng：不是零声母音，不适用规则1；用规则2去除翘舌后，拼式变成seng；没有介音，不适用规则3；用规则4截去韵尾后，拼式变成sen；用规则5去掉鼻音后，拼式变成see；不是特例，不适用规则6；用规则7补充笔画后，拼式变成seeei。</li>
+<li>将jiang：不是零声母音，不适用规则1；不是翘舌音，不适用规则2；用规则3去掉介音后，拼式变成jang；用规则4截去韵尾后，拼式变成jan；用规则5去掉鼻音后，拼式变成jaa；不是特例，不适用规则6；用规则7补充笔画后，拼式变成jaaoe。</li>
+<li>快kuai：不是零声母音，不适用规则1；不是翘舌音，不适用规则2；没有介音，不适用规则3；用规则4截去韵尾后，拼式变成kua；没鼻音，不适用规则5；不是特例，不适用规则6；用规则7补充笔画后，拼式变成kuaoo。</li>
 <li>儿er：用规则1添加零声母后，拼式变成ver；规则2、3、4、5都不适用；用规则6后，拼式变成ve；用规则7后，拼式变成veuaa。</li>
 <li>虐nüe：规则1、2、3、4、5都不适用；用规则6后，拼式变成nue；用规则7后，拼式变成nueie。</li>
 <li>创chuang：用规则1后，拼式变成cuang；用规则4后，拼式变成cua；用规则7后，拼式变成cuauo。</li>
@@ -1233,15 +1233,13 @@ var _hmt = _hmt || [];
 <p>二简词中不包含一简字的组合，因为它们可以通过两字的声母加分号进行变换来实现快捷输入，例如：<code>一个yg; 就是js; 下去xq;</code>等。同时，<code>可发kf; 没下mx; 不你bn;</code>等根本不是词，但仍可以按固定组合的方式用分号变换上屏。</p>
 <p>输入三个声母时，在首选项安排了二简字和一简字的组合，绝大多数不是真正词，例如：<code>应该的ygd 知道了zdl</code>，可以用空格上屏。若是一简字加二简字的组合，则通过加分号变换来输入，例如：<code>的时候dsh; 不一样byy;</code>。这一点和传统拼音输入法是大不相同的，其好处是一方面可以利用三码空间来安排固定组合，另一方面又不会增加三字词的码长，却增加了输入的确定性。</p>
 <p><img src="/images/image-20231109215036607.png" alt="image-20231109215036607"></p>
-<p>分号变换还用于二简词的组合，如<code>怎么发生zmfs; 经济建设jjjs;</code>，一简字和二简字的组合，如<code>一车yce; 发三fsa; 现的xad; 穷了qol;</code>，二简字之间的组合如<code>生三sesa;空五kowu;</code>。</p>
-<p>另外，分号变换也用于三码字和一简字或者二简字的组合，如<code>高的gaod; 心了xiil; 高得gaode; 心冷xiile;</code>。这时，三码字并不是固定的。</p>
+<p>分号变换还用于二简词的组合，如<code>怎么发生zmfs; 经济建设jjjs;</code>，一简字和二简字的组合，如<code>一车yce; 发三fsa;</code>。</p>
 <p>还有，在输入三个声母后，可以用单引号变换来输入三个一简字，如<code>是不是sbs&#39; 一个人ygr&#39;</code>。一个二简词加两个二简字的组合，可以用四个字的声母加单引号来输入。例如，「我们就是」「这个不是」等可以这样输入。</p>
 <p>分号和单引号变换不仅增加了确定性，而且相比分别输入还能节约按键，有利于提高输入效率，应该充分地加以利用。</p>
 <h3 id="3-5-固定运用"><a href="#3-5-固定运用" class="headerlink" title="3.5 固定运用"></a>3.5 固定运用</h3><p>使用固定字词，需要循序渐进、逐步引入，不要试图在极短的时间内把所有固定字词都用起来。要根据自己的熟练程度逐步增加使用固定字词，首先把最有利于缩短码长和离散重码的固定字词用起来，再添加其它的固定字词，否则学习曲线会很陡峭。想在尽量短的时间内快速掌握尽量多的固定字词，则需要专门对它们进行练习，不然使用的过程是比较痛苦的，会影响正常输入的效率。 </p>
 <p>建议的熟习顺序如下：</p>
 <ol>
 <li>一简字及其组合</li>
-<li>二简字及其组合</li>
 <li>一简字与二简字的组合</li>
 <li>一简字与二简词的组合</li>
 <li>二简词及一二简字的组合</li>
