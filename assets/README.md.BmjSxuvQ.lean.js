@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as e,a5 as i}from"./chunks/framework.DO_HxD7r.js";const b=JSON.parse('{"title":"声笔输入法主页","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),t={name:"README.md"},l=i("",14),o=[l];function h(n,d,c,p,r,u){return e(),s("div",null,o)}const g=a(t,[["render",h]]);export{b as __pageData,g as default};
