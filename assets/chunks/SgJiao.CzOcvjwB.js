@@ -1,1 +1,1 @@
-const o="/images/SgJiao.png";export{o as _};
+const o="/images/SgJiao.webp";export{o as _};
