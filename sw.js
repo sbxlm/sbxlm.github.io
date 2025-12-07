@@ -3465,6 +3465,9 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "url": "images/zhpywt3.webp",
     "revision": "d6c40275d150a7b310b4130a0a6c945e"
   }, {
+    "url": "images/声笔猛码大字根8K.svg",
+    "revision": "28a2b75b10dd8bb4e60c2a9d2ebac7c8"
+  }, {
     "url": "images/声笔飞.svg",
     "revision": "87f1f97076220269e6c720aec731d3ce"
   }, {
@@ -3733,7 +3736,7 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "0bc1be52dc2124b82b825e7a28c27e05"
   }, {
     "url": "sbsp/index.html",
-    "revision": "0081416d1aba79891d9736084aef0f76"
+    "revision": "f10c5e3b6d18b90b0ae5a9257268ec17"
   }, {
     "url": "sbtf/index.html",
     "revision": "11f48c31f4c594b1b2ae7fb108c9c95a"
