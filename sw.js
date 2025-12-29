@@ -3577,7 +3577,7 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "d6c40275d150a7b310b4130a0a6c945e"
   }, {
     "url": "images/声笔猛码大字根8K.svg",
-    "revision": "28a2b75b10dd8bb4e60c2a9d2ebac7c8"
+    "revision": "710772f1c5b8abed5fa83c1d6c7df822"
   }, {
     "url": "images/声笔象码字根键位表8K.svg",
     "revision": "a11b57ef71afd952cf544273d62ae84d"
@@ -3853,7 +3853,7 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "c4660c8771bc0064b07897d41bf4c50c"
   }, {
     "url": "sbsp/index.html",
-    "revision": "f4ff53884b1d06bc2044d2b266983cd8"
+    "revision": "9c8583c00fe30366fded3dea4a69b2e8"
   }, {
     "url": "sbtf/index.html",
     "revision": "bb18c910646eb71a47849ff450e9dfab"
