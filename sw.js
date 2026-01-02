@@ -3591,6 +3591,9 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "url": "images/zhpywt3.webp",
     "revision": "d6c40275d150a7b310b4130a0a6c945e"
   }, {
+    "url": "images/声笔猛码大字根8K.png",
+    "revision": "9e29ddc3b23053dded44014ad5837aeb"
+  }, {
     "url": "images/声笔猛码大字根8K.svg",
     "revision": "710772f1c5b8abed5fa83c1d6c7df822"
   }, {
@@ -3880,7 +3883,7 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "bdc32e95937cd644ad3ffb6133143103"
   }, {
     "url": "sbsp/index.html",
-    "revision": "5e59751dfe986e3b8d88ae8679ec3b13"
+    "revision": "34324f6bedc5dde539815fca891393cf"
   }, {
     "url": "sbtf/index.html",
     "revision": "81de2e2029ce8cd556538e63f06f93b0"
