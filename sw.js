@@ -3615,6 +3615,9 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "url": "images/声笔飞.svg",
     "revision": "87f1f97076220269e6c720aec731d3ce"
   }, {
+    "url": "images/声笔飞部首键位表初代.png",
+    "revision": "e16890f2b4e229ea02982f650f9c5565"
+  }, {
     "url": "images/猛码字根.png",
     "revision": "0a2805dfd2a03f0d61bfc3b9f67cbbee"
   }, {
@@ -3883,7 +3886,7 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "f6b3dfb236a19156c9d92cd122ee1b0e"
   }, {
     "url": "sbsp/index.html",
-    "revision": "b43c5e9f11c158b817807ba9af5002e9"
+    "revision": "88043f5e1254910c63324b25ec815ec9"
   }, {
     "url": "sbtf/index.html",
     "revision": "5fadf9e2d06a73fa0c98b2d35d103979"
