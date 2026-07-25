@@ -79,10 +79,10 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
    */
   workbox.precacheAndRoute([{
     "url": "404.html",
-    "revision": "6c19621dd61df1f71774a4b97fea107a"
+    "revision": "fb1a4cce03fa594195b983c32a4501cc"
   }, {
     "url": "about/index.html",
-    "revision": "e7e0f3066a08a5ee35170971751f100e"
+    "revision": "3a16b9e1f33cac4d4d74aed75ca125ab"
   }, {
     "url": "apple-splash-landscape-dark-2048x1536.png",
     "revision": "5d73e65fc9b9f50cacbd5e1eb32a7057"
@@ -126,10 +126,10 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "url": "assets/book_chapter3_index.md.NguoefYF.lean.js",
     "revision": null
   }, {
-    "url": "assets/book_chapter4_index.md.D90MBZMm.js",
+    "url": "assets/book_chapter4_index.md.DJlrdNt_.js",
     "revision": null
   }, {
-    "url": "assets/book_chapter4_index.md.D90MBZMm.lean.js",
+    "url": "assets/book_chapter4_index.md.DJlrdNt_.lean.js",
     "revision": null
   }, {
     "url": "assets/book_chapter5_index.md.CEO8JYJd.js",
@@ -714,10 +714,10 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "url": "assets/sbsp_index.md.BgCk28tg.lean.js",
     "revision": null
   }, {
-    "url": "assets/sbtf_index.md.B27xv9ze.js",
+    "url": "assets/sbtf_index.md.ChKm-B5W.js",
     "revision": null
   }, {
-    "url": "assets/sbtf_index.md.B27xv9ze.lean.js",
+    "url": "assets/sbtf_index.md.ChKm-B5W.lean.js",
     "revision": null
   }, {
     "url": "assets/sbx_index.md.q9_rOI3x.js",
@@ -766,37 +766,37 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": null
   }, {
     "url": "book/chapter1/index.html",
-    "revision": "6770889e9e088d7c6d2ce33571fb7d58"
+    "revision": "82aebfc68e36d6e66070c7f5b02928e2"
   }, {
     "url": "book/chapter2/index.html",
-    "revision": "facf2fc0bcb856c9cc9f5b5563a74dd1"
+    "revision": "0b43d4a82997cc1ce949df13549f5916"
   }, {
     "url": "book/chapter3/index.html",
-    "revision": "b1bdb0d299b3657a4784e0557209cf17"
+    "revision": "75129c09f5671bcc55d01c056df10ca5"
   }, {
     "url": "book/chapter4/index.html",
-    "revision": "2c7d2f5f46179525afcb897f46fdfa15"
+    "revision": "9244fa70fb6aee7d975609d316b9b714"
   }, {
     "url": "book/chapter5/index.html",
-    "revision": "beb5395d0dd0c6b2f25678f0b97790b0"
+    "revision": "6d98cea28e5108451cdeac5a4c3e4cf9"
   }, {
     "url": "book/chapter6/index.html",
-    "revision": "a95cc33537f030251cfb8522bc679798"
+    "revision": "a7154a39758519b0c50f91cb3c34a26b"
   }, {
     "url": "book/index.html",
-    "revision": "3e37594f458ca7399da1bebde28233ad"
+    "revision": "dee9cfc7c9898d195e23b8a1954098f1"
   }, {
     "url": "faq/index.html",
-    "revision": "f921f0c3581a186a6d8215d855acc2fa"
+    "revision": "dce9b8cc1a65f345770c55b249a2c7cc"
   }, {
     "url": "favicon.ico",
     "revision": "98cfef6ff7f1782f86ea2d7202d37c15"
   }, {
     "url": "fzlc/index.html",
-    "revision": "d085a1bb8a1d50caf3a50def342a8aec"
+    "revision": "c5f06cf156a74bc44ef2420976b0db32"
   }, {
     "url": "gdfw/index.html",
-    "revision": "4c3f41d15897f7eb297f810298cbf56e"
+    "revision": "8271da77149755efd0b31817b7e39b61"
   }, {
     "url": "images/35034d008c2efcf5500db21b7c7a25c7.webp",
     "revision": "35034d008c2efcf5500db21b7c7a25c7"
@@ -3706,7 +3706,7 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "0a2805dfd2a03f0d61bfc3b9f67cbbee"
   }, {
     "url": "index.html",
-    "revision": "2a2e8a9b55549954c091d03291a30dbc"
+    "revision": "1b5a53e613f2779e3980ddf82c551f5c"
   }, {
     "url": "logo.svg",
     "revision": "334600e067de0ba7d03f1aa03c0050a4"
@@ -3715,184 +3715,184 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "f30dae89dae9a82858b9cf506ecd19b6"
   }, {
     "url": "posts/2023年6月22日声笔更新.html",
-    "revision": "f3f36edad5b5e3e06596f8e33b6b6107"
+    "revision": "30356e052acc01690a1eeea01e816356"
   }, {
     "url": "posts/AddModeW.html",
-    "revision": "c1a605e0d1ad0b0534bd5797151aaeab"
+    "revision": "1cdbb1cfe2af45e437ccd90503bf3112"
   }, {
     "url": "posts/blogpost20200808.html",
-    "revision": "93d10d4a4a3c5bc22c4c31470ad0db39"
+    "revision": "36a0416230bb26c3cfdbbe45ec055a4b"
   }, {
     "url": "posts/cikuyh.html",
-    "revision": "b6fdb4ce2b79be392c14d7b6814c5aa0"
+    "revision": "888a320da48317e26de8a70f16c377b9"
   }, {
     "url": "posts/disable-redirect.html",
-    "revision": "85679d228edbc1b3a235e7982e00fc22"
+    "revision": "a9864339493b0b7406393a0d21d2ef50"
   }, {
     "url": "posts/fmkmyh.html",
-    "revision": "e55567c774ee8c69779e4fe1ed6b55e6"
+    "revision": "c1ddc414b6fdde3af970e48a9b2eebf9"
   }, {
     "url": "posts/git-tips.html",
-    "revision": "aaccfaf166fc96ee6b091cd60974eeaa"
+    "revision": "c0919fdaa1616a0f66333086ef51f344"
   }, {
     "url": "posts/HowToDebugLibrimeOnWindows.html",
-    "revision": "ef587d34e87d9e66ec3446a52b7248ed"
+    "revision": "95c809618ed0d6a40cdde7b0c2184573"
   }, {
     "url": "posts/hzbmsrfzs.html",
-    "revision": "873d821a52bcfa0fb4d490632519315c"
+    "revision": "d357ce453b8fd4e90a64a1bf56591cbb"
   }, {
     "url": "posts/hzsrcj.html",
-    "revision": "c368fae1c70558341ebf2285a9b6c3c5"
+    "revision": "c14e00933c929225275566d3bf207734"
   }, {
     "url": "posts/index.html",
-    "revision": "9a5ee0e81a5af87edb64f45d7a33a5e4"
+    "revision": "3254c244d1c0ac18f42eca636b3cd338"
   }, {
     "url": "posts/jmkzmsyh.html",
-    "revision": "4a5c627ac2b21df36e78c5f3f83d5308"
+    "revision": "02dc13676ae7716edc92954c95f7aabf"
   }, {
     "url": "posts/key-articles.html",
-    "revision": "e32a7a83ea784e16f2cd2bd8a109f316"
+    "revision": "2aa51aa82d8a269f95b560d13d7b3ddc"
   }, {
     "url": "posts/main-imes.html",
-    "revision": "797e6ab1a6a6baa2f679d5e3cb668dae"
+    "revision": "009b38a56aa6775bbeec438731b1b2b9"
   }, {
     "url": "posts/pywtjj.html",
-    "revision": "84c69629e9f7c4ca2d33ec6625c765b7"
+    "revision": "0c8b2976863c191b75ab9b4bc2cd9d75"
   }, {
     "url": "posts/qzdzc.html",
-    "revision": "f21dfe11f9cbf95bafd015a442e58203"
+    "revision": "6100781d3b4d915ea49fc399e6eeaaba"
   }, {
     "url": "posts/ReleaseSbjm.html",
-    "revision": "d7c385582b04b18f2c303e226dcae8c0"
+    "revision": "3edce6d05075caae2178acd17f683c87"
   }, {
     "url": "posts/rime4sbxlm.html",
-    "revision": "531fdb68bb956b9e9f5c20b410aeb32a"
+    "revision": "864c4147a551ca6562bfcd0a25135ae5"
   }, {
     "url": "posts/Rime用户数据同步方法.html",
-    "revision": "8ba502aeff690917a51ff860492551d7"
+    "revision": "0d84b90277a3dc3ccb336c81b5270ff8"
   }, {
     "url": "posts/Rime的废词自动清理.html",
-    "revision": "20887d3ba312b0547a2afb659afae130"
+    "revision": "2a79b1c48258e7311f51d11a8dd3696a"
   }, {
     "url": "posts/sbdp.html",
-    "revision": "eb653024be03dd272d03bd81355c6122"
+    "revision": "fa911e7f893a26b5e23ea6cc0cb50ff4"
   }, {
     "url": "posts/sbjmzdsj.html",
-    "revision": "f0dccf5efcdcf055172184ae0d77b6d7"
+    "revision": "df9bd1863bf0ddb1050535c0e2d6126a"
   }, {
     "url": "posts/sbspyh.html",
-    "revision": "07d90cf2f2544c3954ce1a26e51fa417"
+    "revision": "e646bc91209aa8ea83bca21b992bf75f"
   }, {
     "url": "posts/sbxlm9-0.html",
-    "revision": "26a0a52c3ad798d56582d26e9cfbbcff"
+    "revision": "9c0dcdf279e77c41664ac3739144b82c"
   }, {
     "url": "posts/SbxlmRevamp.html",
-    "revision": "4b90d2f56a69a56103631a0e1a1bf853"
+    "revision": "7f057807400ea1a3e8546e1bfa3f38e5"
   }, {
     "url": "posts/sbxlmxg.html",
-    "revision": "0faadd8be7f0f90419276a09f6c3e1af"
+    "revision": "0eaa90dda765516c393ee66f77361f9a"
   }, {
     "url": "posts/sbxlzj.html",
-    "revision": "ffb8512685f767e05035bc1b9986f5f9"
+    "revision": "90dbb491c3b2214845fff48eccabee6d"
   }, {
     "url": "posts/sbxmtxxg.html",
-    "revision": "5af801df5baa47bc43609223a3215514"
+    "revision": "abaf6733b9802aa71dee0e083a60fb0f"
   }, {
     "url": "posts/SentenceModes.html",
-    "revision": "83025cfb2d09767eccf4d025dba13cfa"
+    "revision": "08e296f64b4a218eed6861f22d6c97f1"
   }, {
     "url": "posts/shared-dict.html",
-    "revision": "3cedee9b6d7eb6dc3f599b003e5e84bd"
+    "revision": "822931f6cc5e57390422bef95f683035"
   }, {
     "url": "posts/site-build.html",
-    "revision": "d11fa2e12ea7931760f333e234d341f1"
+    "revision": "48c19399c4d741bc7fbd148ec53188b0"
   }, {
     "url": "posts/spfs.html",
-    "revision": "2c50e83b589cfd2d885181381950ed9b"
+    "revision": "c01f96273155c39ac05b1dcb8b26639e"
   }, {
     "url": "posts/srfgsm.html",
-    "revision": "5f9334fb107aa6ae979fbcf3c9c2401a"
+    "revision": "125c0f8e7b4d882280e3fb4fb0f53079"
   }, {
     "url": "posts/update191108.html",
-    "revision": "0ec98383ba824893ac2b60751531fc53"
+    "revision": "e9c6b8ee90abc88af89deca4de375b8b"
   }, {
     "url": "posts/upgrade8-5.html",
-    "revision": "c965da509a4e89c927f10a50ac0ad8eb"
+    "revision": "39e8f0f6c6336f3adea127fec86dab92"
   }, {
     "url": "posts/weasel4sbxlm-0-14-3-0.html",
-    "revision": "8e38f2f6938028a6708ce52c008432f1"
+    "revision": "261f277c49da3d24317257097ddbbe43"
   }, {
     "url": "posts/win32or64.html",
-    "revision": "2febc5974b97c9bd1c371b526c6409ac"
+    "revision": "1effc6a6dab0df461ed7c948c129e6d6"
   }, {
     "url": "posts/xlhyjbs.html",
-    "revision": "2bed9602cc9cd8fde27a4f7e17bf6dd7"
+    "revision": "8a3bfa11211623891b9f36d6f8e7b397"
   }, {
     "url": "posts/个体词汇与全体词汇关系猜想.html",
-    "revision": "4b286c52ed69e6fb75995d1a3afe84b4"
+    "revision": "c52a9b72dfd91e07029747b16b693f7d"
   }, {
     "url": "posts/中文盲打分级.html",
-    "revision": "bb08cd0a7fad1bf803a1beb18d6ce8ec"
+    "revision": "83f3b38c09114988b6f9ce3bb041e455"
   }, {
     "url": "posts/中文输入模式.html",
-    "revision": "4d28b09577a2285342606c5d5bfaeae3"
+    "revision": "9ee5cd9c49460194a15a803365729e02"
   }, {
     "url": "posts/几个输入方案单字前1500数据对比.html",
-    "revision": "a7e1805ae1aca8a675b44358f0d80f5b"
+    "revision": "d9c283f468b440b0537e9aa9cc5c6b65"
   }, {
     "url": "posts/声笔2023年8月18日更新纪要.html",
-    "revision": "11adb207fd99de7da1e94f715928fdd3"
+    "revision": "3365bc93554b9eb059b5becc5eb30e5d"
   }, {
     "url": "posts/声笔SQL脚本整理.html",
-    "revision": "55ea1b38c9f49dcd8643925ddb6a2c48"
+    "revision": "1e23b86727bdf6aa6ed67937c1b6ad64"
   }, {
     "url": "posts/声笔码引起的反响摘录.html",
-    "revision": "71ec6c3c6a6816e2893f0b4307ca0945"
+    "revision": "cb22de51a7b533296c7684f262feade1"
   }, {
     "url": "posts/声笔输入法9x的安装与配置.html",
-    "revision": "f4594743fc8291c655d52fe1b9424c9f"
+    "revision": "9d9aa969859143a6fbcccc22ce755f41"
   }, {
     "url": "posts/声笔飞系部首解释.html",
-    "revision": "2f8454f52305e461964b1bacd083908f"
+    "revision": "68f4225d65e86242fe9f620b78866796"
   }, {
     "url": "posts/声笔飞讯的个性化定制.html",
-    "revision": "cb499a82280227b5bd86132b3c22b8dc"
+    "revision": "09d85052a3037293439fb58af98c29de"
   }, {
     "url": "posts/声笔飞讯竞速怎么设置好.html",
-    "revision": "ab3b556009a535ba102ac175dbe550d5"
+    "revision": "bbac5f1871492b3c9eac0f501009c59c"
   }, {
     "url": "posts/如何优化声笔输入法的提示效果.html",
-    "revision": "00bc3c68a12abb4b84c734829aba9c14"
+    "revision": "ed11eed063be6b58a5a4719a290a7aef"
   }, {
     "url": "posts/如何在Deepin上安装声笔输入法.html",
-    "revision": "dd9fb7aeb7c598d184c1fff6c2d0e4e2"
+    "revision": "32f102aa85127c4b2b58bb4097db7d7d"
   }, {
     "url": "posts/如何根除流氓输入法.html",
-    "revision": "5cc559e62c71595a5d00fa2789e9058e"
+    "revision": "e643eca7978cfbeb462ca681e53aad8a"
   }, {
     "url": "posts/如何用好简拼.html",
-    "revision": "0d2f668dd8e5abaf13d0c4f03ab8aa99"
+    "revision": "5f66c6510fa506914ea16f13dde30f6b"
   }, {
     "url": "posts/小狼毫的可视化配置工具.html",
-    "revision": "7e21e6be9392bc154cc5ec3ddb55698a"
+    "revision": "e82abafdaa9a2d412b7864889341dc29"
   }, {
     "url": "posts/拼音输入宝典.html",
-    "revision": "d89b5049b09c8956dc2bfdb399f3cd3d"
+    "revision": "93d36984a952e670d8350a8448afbe37"
   }, {
     "url": "posts/编码中频率的作用.html",
-    "revision": "40219a7b74f2691aeda23f05391b813c"
+    "revision": "53ae0e63ed2dfe488394511246168fed"
   }, {
     "url": "posts/解密打字速度.html",
-    "revision": "ae802d03113dc80a29c81c06840a6043"
+    "revision": "0c929b1aa66a8d7d161c0b0b480ad791"
   }, {
     "url": "posts/输入对比之一.html",
-    "revision": "230ba6e37a365812ea5c6bc7733689fa"
+    "revision": "4fe83b123bae6af7287e8013de40199c"
   }, {
     "url": "posts/输入法词库转换工具.html",
-    "revision": "edd216aa47b94f3127821fdca1a9f56e"
+    "revision": "cb48068a00a0227e5b439cd8dd1dacee"
   }, {
     "url": "public/README.html",
-    "revision": "3320e3bcc6605c25999298b452208eef"
+    "revision": "fc471d6fbc60303840fda6a938b92060"
   }, {
     "url": "pwa-192x192.png",
     "revision": "ff36b02742827c01308f72e14a8369aa"
@@ -3907,82 +3907,82 @@ define(['./workbox-b6f36ad0'], (function (workbox) { 'use strict';
     "revision": "1872c500de691dce40960bb85481de07"
   }, {
     "url": "sbf/index.html",
-    "revision": "ec8ee9186d9507f839125d44ab3dd101"
+    "revision": "410d96ae0fb2f10bf44784b2ee32b102"
   }, {
     "url": "sbfd/index.html",
-    "revision": "417ea53461557551e0578800d9857770"
+    "revision": "5585f8cd9e4316e6b8a848ec5f690288"
   }, {
     "url": "sbfj/index.html",
-    "revision": "6558d55dda73a89b8f66b9f0edc45f9c"
+    "revision": "64f55e0d6c0d2f04ac1ac8590f6e0fbc"
   }, {
     "url": "sbfm/index.html",
-    "revision": "becbd87d69be2ce67c199c671f9aeb70"
+    "revision": "09e38e077666fafbaacbe47e7236e718"
   }, {
     "url": "sbft/index.html",
-    "revision": "4ff4e52b2d652992d2cefabe0e5f462e"
+    "revision": "f40b2cab6d849beb9110e303382a5635"
   }, {
     "url": "sbfx/index.html",
-    "revision": "f392349d39a00c08c6033f401e115626"
+    "revision": "4fefb634e5b9c492f5acc33513d2cb8d"
   }, {
     "url": "sbfy/index.html",
-    "revision": "eed9977fd784c941a7703a5368a48e0c"
+    "revision": "268a5f711c3ffc54071d6d761aad6aaa"
   }, {
     "url": "sbh/index.html",
-    "revision": "12933d6711146a9e9b1cfa55ab2d3100"
+    "revision": "6c247a8e18bba46ad86d01b30e260e51"
   }, {
     "url": "sbhz/index.html",
-    "revision": "5ad173a4f1183e2c05d05de3ec20fcba"
+    "revision": "159d17f76062c95d2e19e2a2ce768683"
   }, {
     "url": "sbj/index.html",
-    "revision": "2e1d39ce5d74d5883f3065b57f6154fc"
+    "revision": "3442191834cd8bf0704119896c7bbd84"
   }, {
     "url": "sbjc/index.html",
-    "revision": "1af390920b13fe73c3af7642172e0ce4"
+    "revision": "247011ca332650a6aa7f1a250b73adae"
   }, {
     "url": "sbjm/index.html",
-    "revision": "ddec6e0fd3763965a9b4664a84f900da"
+    "revision": "9930ea6178688eab55cf225a54edb081"
   }, {
     "url": "sbjp/index.html",
-    "revision": "cf3b54bcfcff5777f091af36426c15d8"
+    "revision": "9d155312e92179df0faa29c4560d5b73"
   }, {
     "url": "sbmm/index.html",
-    "revision": "bc4a924d787ed59917eae5d1e549d3b7"
+    "revision": "011162dad7b6a0eb6eb6d67434ff251c"
   }, {
     "url": "sbpy/index.html",
-    "revision": "af3687a0ec61465518ea67c3d0b347b9"
+    "revision": "7ba98bb0304f5d205d0acddcc4ad510b"
   }, {
     "url": "sbs/index.html",
-    "revision": "fe26cfc7e4b62521971b63c9e873f9dc"
+    "revision": "8c3bdaebe25e3c7a280fb6536c8900d9"
   }, {
     "url": "sbsp/index.html",
-    "revision": "53bbc5282be78c2e5d438c63ac05eb0b"
+    "revision": "b1eedbd157a38a3d432b6f2fc6686b13"
   }, {
     "url": "sbtf/index.html",
-    "revision": "4620ce15b132174edde24d29c4463897"
+    "revision": "2b98ab3c69d3f4161f0c2ba4ca3f0c71"
   }, {
     "url": "sbx/index.html",
-    "revision": "4d18fe7e95b1abc2fbb55cd5da3249f2"
+    "revision": "45a22f093571e77eaac64b649c70523a"
   }, {
     "url": "sbxh/index.html",
-    "revision": "ace6f575f7c3ed5dfb231a2a689dad25"
+    "revision": "1f8a044552a1342164bbbb7d875a4e75"
   }, {
     "url": "sbxm/index.html",
-    "revision": "6a62f8479378d6f43a2dd856747cd479"
+    "revision": "973061fef6802ba2283c84c507524427"
   }, {
     "url": "sbyp/index.html",
-    "revision": "767f90621d0e92f619a67bae53db3119"
+    "revision": "857198a5f48a12cc7ba668a719e15652"
   }, {
     "url": "sbzr/index.html",
-    "revision": "6873d97219bee630498a3afd9dab5384"
+    "revision": "ec563f438bc0a506d09720531c1a53a9"
   }, {
     "url": "sbzz/index.html",
-    "revision": "66a7e708851cff21c22f9249b081c79a"
+    "revision": "9722ccdd7f7167f871a46e6c80d8aced"
   }, {
     "url": "vp-icons.css",
     "revision": "b48bd2583e99520b89808afc6043b6bb"
   }, {
     "url": "vzpz/index.html",
-    "revision": "1f9bfc33eb19b83dc5524fd03850c684"
+    "revision": "4b3b0c11f6f6b3e30c6767cf81e719e2"
   }, {
     "url": "logo.svg",
     "revision": "334600e067de0ba7d03f1aa03c0050a4"
